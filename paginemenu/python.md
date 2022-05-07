@@ -1,9 +1,10 @@
 ---
+title: Python
 layout: page
 name: Home
 ---
 
-# In questa pagina troverete l’elenco delle esercitazioni di python:
+## In questa pagina troverete l’elenco delle esercitazioni di python:
 
 Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseurl}}/python/come-installare-python-su-windows">come installare python sui sistemi windows</a>.
 
@@ -15,7 +16,6 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * <a href="{{site.baseurl}}/python/input">Input</a>
 * <a href="{{site.baseurl}}/python/la-condizione">Condizione</a>
 * <a href="{{site.baseurl}}/python/operatori-logici">Operatori logici</a>
-
 * <a href="{{site.baseurl}}/python/il-ciclo-while">Il ciclo While</a>
 * <a href="{{site.baseurl}}/python/il-ciclo-for">Il ciclo for</a>
 * <a href="{{site.baseurl}}/python/esercizi-sulle-liste">Liste</a>
