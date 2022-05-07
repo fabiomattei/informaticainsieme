@@ -9,6 +9,9 @@ name: Home
 Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseurl}}/python/come-installare-python-su-windows">come installare python sui sistemi windows</a>.
 
 * {% post_url /_python/introduzione %}
+* [introduzione aa]({% link _python/introduzione %})
+* ({% link _python/introduzione %})
+
 * <a href="{{site.baseurl}}/_python/introduzione">Introduzione</a>
 * <a href="{{site.baseurl}}/_python/variabili">Variabili</a>
 * <a href="{{site.baseurl}}/_python/tipi-di-variabile">Tipi di variabile</a>
