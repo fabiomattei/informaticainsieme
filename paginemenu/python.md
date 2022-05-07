@@ -8,7 +8,7 @@ name: Home
 
 Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseurl}}/python/come-installare-python-su-windows">come installare python sui sistemi windows</a>.
 
-* <a href="{{site.baseurl}}/python/introduzione">Introduzione</a>
+* [Introduzione]({{ site.baseurl }}{% link _python/introduzione.md %})
 * <a href="{{site.baseurl}}/python/variabili">Variabili</a>
 * <a href="{{site.baseurl}}/python/tipi-di-variabile">Tipi di variabile</a>
 * <a href="{{site.baseurl}}/python/conversioni-di-tipo">Conversioni di tipo</a>
@@ -24,3 +24,5 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * <a href="{{site.baseurl}}/python/funzioni">Funzioni</a>
 * <a href="{{site.baseurl}}/python/la-ricorsione">Ricorsione</a>
 * <a href="{{site.baseurl}}/python/la-programmazione-ad-oggetti">La programmazione ad oggetti</a>
+
+
