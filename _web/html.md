@@ -17,23 +17,23 @@ Il linguaggio HTML si fonda su una idea semplice: etichettare sezioni di testo i
 
 #### Paragrafi
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><p>Un paragrafo in HTML è una sezione di testo 
 circondata dal tag p</p>
-```
+{% endhighlight %}
 
 </div>Possiamo notare che il testo nel paragrafo è circondato dalle etichette &lt;p&gt; e &lt;/p&gt;. Queste etichette determinano l’inizio e la fine del paragrafo.
 
 #### Titoli
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><h1>Titolo di livello più alto</h1>
 <h2>Titolo di livello due</h2>
 <h3>Titolo di livello tre</h3>
 <h4>Titolo di livello quattro</h4>
 <h5>Titolo di livello cinque</h5>
 <h6>Titolo di livello più basso</h6>
-```
+{% endhighlight %}
 
 </div>I tag che vanno da H1 ad H6 permettono di scrivere i titoli. Ci sono 6 diversi livelli di titoli che permettono allo scrittore di sottolineare l’importanza che ciascuno di questi riveste all’interno del testo.
 
@@ -53,29 +53,29 @@ Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
 
 Elenco puntato
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><ul>
   <li>primo elemento</li>
   <li>secondo elemento</li>
   <li>terzo elemento</li>
 </ul>
-```
+{% endhighlight %}
 
 </div>Elenco numerato
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><ol>
   <li>primo elemento</li>
   <li>secondo elemento</li>
   <li>terzo elemento</li>
 </ol>
-```
+{% endhighlight %}
 
 </div>#### Le tabelle 
 
 La tabella è utile quando si vogliono inserire in una pagina web dati di qualsiasi genere.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><table>
     <caption>
         <p>I miei dati</p>
@@ -92,7 +92,7 @@ La tabella è utile quando si vogliono inserire in una pagina web dati di qualsi
         <tr><td>Totale 1</td><td>Totale 2</td></tr>
     </tfoot>
 </table>
-```
+{% endhighlight %}
 
 </div>Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. Normalmente questo si scrive all’interno di un paragrafo.
 

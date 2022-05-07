@@ -9,7 +9,7 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=635'
 
 Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in effetti ogni documento contiene una pagina completa e ciascuna pagina ha la struttura che vedete in alto contraddistinta dal titolo dalla testata (head) e dal corpo (body).
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">
 <html lang="id">
 <head>
@@ -20,11 +20,11 @@ Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in 
   
 </body>
 </html>
-```
+{% endhighlight %}
 
 </div>I tag H1..H6, P, UL ecc compongono il contenuto della pagina e vanno nella sezione body.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">
 <html lang="id">
 <head>
@@ -37,11 +37,11 @@ Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in 
   <p>Ogni elettrone segue una determinata traiettoria circolare, chiamata orbita stazionaria.</p>
 </body>
 </html>
-```
+{% endhighlight %}
 
 </div>Nella sezionie head invece vanno definite cose come il titolo della pagina, l’autore, la data di scadenza.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">
 <html lang="id">
 <head>
@@ -59,11 +59,11 @@ Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in 
   <p>Ogni elettrone segue una determinata traiettoria circolare, chiamata orbita stazionaria.</p>
 </body>
 </html>
-```
+{% endhighlight %}
 
 </div>All’interno della sezione head posso definire gli stili CSS all’interno del tag **style**.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">
 <html lang="id">
 <head>
@@ -77,7 +77,7 @@ Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in 
   <p>Ogni elettrone segue una determinata traiettoria circolare, chiamata orbita stazionaria.</p>
 </body>
 </html>
-```
+{% endhighlight %}
 
 </div>Ma è più opportuno definire gli stili in un file esterno in modo da poter utilizzare gli stessi stili su più file HTML.
 
@@ -85,7 +85,7 @@ Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in 
 
 Dato che per un sito web, il CSS è comune a più pagine, è bene metterlo in un file esterno in modo da poterlo riutilizzare e non essere cotretti a ripeterlo per ogni pagina.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">
 <html lang="id">
 <head>
@@ -99,7 +99,7 @@ Dato che per un sito web, il CSS è comune a più pagine, è bene metterlo in un
   <p>Ogni elettrone segue una determinata traiettoria circolare, chiamata orbita stazionaria.</p>
 </body>
 </html>
-```
+{% endhighlight %}
 
 </div>A questo proposito creiamo il file miostile.css e mettiamolo nella root del sito web.
 

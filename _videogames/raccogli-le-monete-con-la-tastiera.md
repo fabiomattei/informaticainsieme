@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=33'
 
 Il seguente script crea un piccolo videogioco in cui il nostro personaggio, controllato con la tastiera, deve raccogliere le monete.
 
-```
-<pre class="wp-block-code">```
+{% endhighlight %}
+<pre class="wp-block-code">{% endhighlight %}
 """
 Lo sprite raccoglie le monete
 """
@@ -185,5 +185,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-```
-```
+{% endhighlight %}
+{% endhighlight %}

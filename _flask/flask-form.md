@@ -15,7 +15,7 @@ Abbiamo già visto la chiamata GET che consiste nel passare le informazioni attr
 
 Una chiamata **POST** si verifica quando mi trovo di fronte ad una form che ha al suo interni diversi campi e un bottone per spedire i dati:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><html>
    <body>
       <form action = "http://localhost:5000/login" method = "post">
@@ -26,7 +26,7 @@ Una chiamata **POST** si verifica quando mi trovo di fronte ad una form che ha a
       </form>   
    </body>
 </html>
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flasklogin.png)</figure>Questa pagina contiene una form HTML che punta alla pagina route login del controller e utilizza il metodo POST come specificato alla riga 3.
 
@@ -38,8 +38,8 @@ Alla fine compare un submit button, che permette di inviare i dati al server.
 
 #### Il lato controller
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">@app.route('/login', methods=['POST', 'GET'])
+{% highlight python %}
+@app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
         error = None
@@ -51,7 +51,7 @@ def login():
             error = 'Nome utente o password non valida'
             return render_template('login.html', error=error)
         
-```
+{% endhighlight %}
 
 </div>Proviamo a realizzare la logica che dal lato controller si occupa del log in.
 

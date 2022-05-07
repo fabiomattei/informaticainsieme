@@ -15,8 +15,8 @@ Per approcciare questo problema introduciamo la funzione sigmoide:
 
 Questa funzione ci è comoda perchè ci permette di mettere in relazione valori appartenenti ad un insieme continuo a valori booleani 0, 1. In pratica ci permette di passare dal continuo al binario. Si presta dunque a rispondere alla domanda fondamentale del problema della classificazione: il campione x appartiene all’insieme?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Un classificatore binario
+{% highlight python %}
+# Un classificatore binario
 
 import numpy as np
 
@@ -85,6 +85,6 @@ print('pesi calcolati', w)
 
 # Vediamo quanto e' efficace
 test(X, Y, w)
-```
+{% endhighlight %}
 
 </div>

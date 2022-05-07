@@ -9,13 +9,13 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=134'
 
 ###### Iniziamo tracciando una linea
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from turtle import Turtle, Screen
+{% highlight python %}
+from turtle import Turtle, Screen
 
 tartaruga = Turtle()
 sfondo = Screen()
 tartaruga.forward(100)
-```
+{% endhighlight %}
 
 </div>La prima righa di codice permette a Python di **estendere le sue conoscenze** caricando la **libreria Turtle**. Le righe 3 e 4 attivano la libreria, la riga 5 disegna una linea orizzontale.
 
@@ -23,10 +23,10 @@ tartaruga.forward(100)
 
 Aggiungi le seguenti due righe allo script precedente
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">tartaruga.right(90)
+{% highlight python %}
+tartaruga.right(90)
 tartaruga.forward(100)
-```
+{% endhighlight %}
 
 </div>Noterai che la tartaruga ha creato un angolo e aggiunto un secondo lato al quadrato. Questo perché il comando right fa girare la tartaruga a destra di 90 gradi.
 
@@ -43,8 +43,8 @@ Svolgi i seguenti esercizi:
 
 Facciamo una lista di tutti i comandi turtle
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">tartaruga.forward(100)     # va avanti di 100 pixel
+{% highlight python %}
+tartaruga.forward(100)     # va avanti di 100 pixel
 tartaruga.backward(100)    # va indietro di 100 pixel
 tartaruga.right(90)        # gira a destra di 90 gradi
 tartaruga.left(90)         # gira a siinistra di 90 gradi
@@ -54,7 +54,7 @@ tartaruga.color("red")     # cambia colore linea tracciata
 tartaruga.pensize(5)       # cambia spessore linea tracciata
 tartaruga.setpos(60,30)    # cambia la posizione della tartaruga
 tartaruga.shape("turtle")  # calbia la forma della tartaruga
-```
+{% endhighlight %}
 
 </div>Le possibile forme per la tartaruga sono:
 
@@ -69,8 +69,8 @@ tartaruga.shape("turtle")  # calbia la forma della tartaruga
 
 Un esempio di come si utilizza la libreria Turtle
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import turtle                   # attiva la libreria turtle
+{% highlight python %}
+import turtle                   # attiva la libreria turtle
 #---------------------
 turtle.shape('turtle')          # inizializza la forma del cursore
 turtle.pensize(5)               # inizializza lo spessore della traccia
@@ -81,7 +81,7 @@ for j in range(10):
    turtle.forward(80)           # si muove in avanti di 80 pixel
    turtle.right(36)             # ruota verso destra di 36 gradi
 turtle.done()                   # comunica alla libreria il fine programma
-```
+{% endhighlight %}
 
 </div>La tartaruga all’inizio si trova al centro dello schermo (posizione 0, 0) inclinata verso est (destra). Attraverso i comandi forward(int x), backward(int x), left(int angle) e right(int angle), facciamo muovere la tartaruga. Nota come è stato utilizzato un ciclo per evitare di ripetere tediosi comandi. Il comando goToPoint(int x, int y) indica alla tartaruga di andare nel punto di coordinate x, y.  
 Quando si muove la tartaruga lascia una traccia, questa funzione ci permette di creare dei disegni. Se vogliamo far interrompere la traccia diamo il comando penUP(), se vogliamo riattivare la traccia diamo il comando penDown().

@@ -15,11 +15,11 @@ SQLite memorizza un intero schema relazionale in un unico file. Questo significa
 
 Per potersi collegare ad un file bisogna collegarsi a questo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor() 
-```
+{% endhighlight %}
 
 </div>Nell’esempio in alto ci siamo collegati al file dati/ilmiodatabase.db
 
@@ -29,8 +29,8 @@ Ritroveremo queste righe in tutti gli esempi seguenti
 
 #### Creiamo una tabella con SQLite e Python
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor() 
 
@@ -39,14 +39,14 @@ CREATE TABLE studenti(id INTEGER PRIMARY KEY, nome TEXT,
 telefono TEXT, email TEXT unique, password TEXT)
 ''') 
 db.commit()   # rende il comando persistente
-```
+{% endhighlight %}
 
 </div>I comandi inseriti sopra creano una tabella chiamata studenti con i campi: id, nome, telefono, email e password.
 
 #### Inseriamo dei dati nel database 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db')
 cursor = db.cursor()
 
@@ -73,12 +73,12 @@ INSERT INTO studenti(nome, telefono, email, password) VALUES(?,?,?,?)
 print('Secondo utente inserito')
 
 db.commit()    # rende il comando persistente
-```
+{% endhighlight %}
 
 </div>Così facendo ho inserito i dati utilizzando delle tuple, ma posso anche utilizzare un dizionario:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -87,12 +87,12 @@ INSERT INTO studenti(nome, telefono, email, password) VALUES(:nome,:telefono, :e
 ''', {'nome':nome1, 'telefono':telefono1,'email':email1, 'password':password1})
 
 db.commit()    # rende il comando persistente
-```
+{% endhighlight %}
 
 </div>Oppure posso utilizzare una lista di tuple:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -103,22 +103,22 @@ INSERT INTO studenti(nome, telefono, email, password) VALUES(?,?,?,?)
 
 db.commit()    # rende il comando persistente
 
-```
+{% endhighlight %}
 
 </div>Se hai bisogno di sapere l’id dell’ultima riga inserita:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">id = cursor.lastrowid 
+{% highlight python %}
+id = cursor.lastrowid 
 print('Last row id: %d' % id)
 
-```
+{% endhighlight %}
 
 </div>#### Accedere ai dati contenuti in un database
 
 Se hai bisogno di caricare i dati dal database:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -131,12 +131,12 @@ for row in all_rows:
     # row[0] ritorna la prima colonna (nome), row[1] ritorna la colonna email. 
     print('{0} : {1}, {2}'.format(row[0], row[1], row[2]))
     
-```
+{% endhighlight %}
 
 </div>Se hai bisogno di caricare dei dati dal database passando dei parametri per la query:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -145,7 +145,7 @@ cursor.execute('''
 SELECT nome, email, telefono FROM studenti WHERE id=?
 ''',(user_id,)) 
 user = cursor.fetchone()
-```
+{% endhighlight %}
 
 </div>#### Aggiornare i dati nel database: 
 
@@ -155,8 +155,8 @@ I parametri da passare alla query vengono prima memorizzati in due variabili: *n
 
 la funzione cursor.execute si aspetta di ricevere due parametri: una stringa che contiene la query SQL e una tupla che contiene tutti i parametri che la query attende inseriti nell’ordine in cui questa li attende.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -168,7 +168,7 @@ UPDATE studenti SET telefono = ? WHERE id = ?
 ''', (nuovotelefono, userid) )
 
 db.commit()    # rende il comando persistente
-```
+{% endhighlight %}
 
 </div>#### Cancellare i dati dal database:
 
@@ -176,8 +176,8 @@ Vediamo ora come passare a SQLite una query di tipo DELETE. Notiamo che la inser
 
 La query richiede il passaggio di un parametro id di tipo numerico, questo parametro viene passato attraverso una tupla: *(iddacancellare,)*. Fate attenzione a questa scrittura, la virgola che segue la variabile *iddacancellare* è necessaria, senza di questa la tupla viene cambiata automaticamente di tipo a *int* e la chiamata a *cursor.excecute* fallisce.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
@@ -188,6 +188,6 @@ DELETE FROM studenti WHERE id = ?
 ''', (iddacancellare,) ) 
 
 db.commit()    # rende il comando persistente
-```
+{% endhighlight %}
 
 </div>

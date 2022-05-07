@@ -21,8 +21,8 @@ Questa forma di URL è stata specificata da Tim Berners Lee nell’[RFC 1738](ht
 
 Flask associa una funzione ad ogni URL e fa questo utilizzando la direttiva @app.route.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from flask import Flask, request, render_template
+{% highlight python %}
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -41,7 +41,7 @@ def seconda_pagina():
     tupla = ("giovanni", "pasquale", "mirko")
     return render_template('secondapagina.html', miatupla=tupla)
 
-```
+{% endhighlight %}
 
 </div>In questo esempio vengono esplicitate tre URL. La prima è composta da un semplice / e per convenzione punta alla risorsa richiesta quando non viene specificata alcuna risorsa. Di solito questa coincide con il file index.html.
 
@@ -57,8 +57,8 @@ La sintassi per specificare una variabile è la seguente:
 
 Guardiamo un esempio
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from markupsafe import escape
+{% highlight python %}
+from markupsafe import escape
 
 @app.route('/utente/<nomeutente>')
 def mostra_profilo_utente(nomeutente):
@@ -72,7 +72,7 @@ def mostra_post(post_id):
 def mostra_subpath(subpath):
     return 'Subpath '+escape(subpath)
 
-```
+{% endhighlight %}
 
 </div>La prima funzione è associata ad una URL del tipo: *http://www.lamiaapplicazioneweb.com/utente/mariorossi*. Se questa URL viene richiesta al server che ospita la mia applicazione viene chiamata la funzione *mostra\_profilo\_utente* passando come argomento *mariorossi* associato al parametro *nomeutente*. Viene quindi mostrata nel browser la scritta: User mariorossi.
 

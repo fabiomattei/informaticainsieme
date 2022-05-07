@@ -15,13 +15,13 @@ Il vocabolario di Python non è fisso ma estensibile possiamo cioè definire nuo
 
 Iniziamo con un esempio, definiamo una funzione hello che si limita a scrivere sul display alcune stringhe di testo:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def hello():
+{% highlight python %}
+def hello():
     print('Ciao!')
     print('Ciao!!!')
     print('Ciao a te!')
     
-```
+{% endhighlight %}
 
 </div>L’istruzione def ci permette di definire una nuova funzione. Questa viene seguita dalla parola che vogliamo utilizzare come nome per la funzione, in questo caso hello. La parola hello viene seguita da una coppia di parentesi che si aprono e subito dopo si chiudono, vedremo in seguito qual’è il loro scopo.
 
@@ -29,15 +29,15 @@ Dato che, come abbiamo detto in precedenza, una funzione raggruppa al suo intern
 
 A questo punto l’interprete sa che quando incontra l’invocazione della funzione hello deve eseguire le istruzioni in essa contenute.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print('Precede la chiamata a funzione')
+{% highlight python %}
+print('Precede la chiamata a funzione')
 hello()
 print('Segue la chiamata a funzione')
-```
+{% endhighlight %}
 
 </div>Output:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Precede le chiamate a funzione Ciao!
 Ciao!!!
 Ciao a te!
@@ -48,12 +48,12 @@ Ciao!
 Ciao!!!
 Ciao a te!
 Segue le chiamate a funzione
-```
+{% endhighlight %}
 
 </div>Una delle finalità principali delle funzioni è quella di raggruppare istru- zioni che vengono utilizzate molte volte. Se non fosse stata definita una funzione avreste dovuto copiare e incollare il codice al suo interno molte volte e lo script avrebbe avuto questo aspetto:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print('Precede le chiamate a funzione')
+{% highlight python %}
+print('Precede le chiamate a funzione')
 print('Ciao!')
 print('Ciao!!!')
 print('Ciao a te!')
@@ -64,7 +64,7 @@ print('Ciao!')
 print('Ciao!!!')
 print('Ciao a te!')
 print('Segue le chiamate a funzione')
-```
+{% endhighlight %}
 
 </div>Definire funzioni aiuta ad essere più efficaci nella scrittura di codice dato che aiuta a tenere gli script più brevi.
 
@@ -72,60 +72,60 @@ print('Segue le chiamate a funzione')
 
 Molte delle istruzoni Python viste in precedenza sono a loro volta delle funzioni. Per esempio la funzione print() è una di queste. Quando chiamate la funzione print(), le passate dei valori chiamati argomenti scrivendoli tra parentesi.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print('Io sono un argomento')
+{% highlight python %}
+print('Io sono un argomento')
 
 
-```
+{% endhighlight %}
 
 </div>Ad esempio in questo script viene invocata la funzione print() passan- dole, come argomento, la stringa di testo ’Io sono un argomento’.
 
 Proviamo a definire la funzione hello in questo modo:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def hello(nome):
+{% highlight python %}
+def hello(nome):
   print('Ciao ' + nome)
-```
+{% endhighlight %}
 
 </div>La definizione della funzione hello in questo programma ha un para- metro chiamato nome. Un parametro è una variabile in cui viene memorizzato un argomento nel momento in cui viene chiamata la funzione. La prima volta che la funzione viene chiamata le viene passata la stringa Alice come argomento, l’esecuzione del programma entra nella fun- zione e la variabile nome viene impostata ad “Alice”. L’istruzione print va dunque a stampare la stringa Ciao Alice. L’argomento, memorizzato nel parametro, viene dimenticato al terminare dell’esecuzione della funzione. È un po’ come quello che succede alle variabili di un programma che vengono dimenticate una volta giunto a conclusione.
 
 #### I valori di ritorno 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">lunghezza = len('Ciao')
+{% highlight python %}
+lunghezza = len('Ciao')
 
-```
+{% endhighlight %}
 
 </div>Nell’esempio in alto, si utilizza la funzione len, passandole come argo- mento la stringa ’Ciao’ al fine di far calcolare la lunghezza della stringa pas- sata. Il valore calcolato viene restituito al chiamante e da questi memorizzato nella variabile lunghezza.
 
 Quando chiamate la funzione len e le passate un argomento come ’Ciao’ la funzione calcola come valore l’intero 4, la lunghezza della stringa. In generale il valore che una funzione calcola viene chiamato valore di ritorno. Quando si crea una funzione è possibile specificare quale sia il valore di ritorno attraverso l’istruzione return. Facciamo un esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def raddoppia(numero):
+{% highlight python %}
+def raddoppia(numero):
   return numero * 2
-```
+{% endhighlight %}
 
 </div>La funzione raddoppia accetta un parametro e restituisce il doppio dell’argomento che le viene passato.
 
 Facciamo un secondo esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def pariodispari(numero):
+{% highlight python %}
+def pariodispari(numero):
   if numero%2:
     return 'Pari'
   else:
     return 'Dispari'
-```
+{% endhighlight %}
 
 </div>La funzione pariodispari accetta un parametro e restituisce la stringa ’Pari’ se l’argomento passato è pari e la stringa ’Dispari’ in caso contrario. È possibile inserire due o più istruzioni di return in una funzione. Duran- te l’esecuzione del programma (a runtime) una di questa prima poi verrà eseguita. Quando questo accade il computer esce dalla funzione e torna al programma chiamante portando con se il valore di ritorno.
 
 Notate che quando l’interprete incontra l’istruzione return esce dall’am- bito della funzione e torna nel programma da cui questa era stata chiamata. Nessuna istruzione all’interno della funzione viene eseguita dopo il return.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">primonumero = pariodispari(4)   # var primonumero = 'Pari' 
+{% highlight python %}
+primonumero = pariodispari(4)   # var primonumero = 'Pari' 
 secondonumero = pariodispari(7) # var secondonumero = 'Dispari'
 
-```
+{% endhighlight %}
 
 </div>#### Parametri facoltativi 
 
@@ -133,30 +133,30 @@ secondonumero = pariodispari(7) # var secondonumero = 'Dispari'
 
 Facciamo un esempio
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def moltiplica(fattore1, fattore2 = 2):
+{% highlight python %}
+def moltiplica(fattore1, fattore2 = 2):
     return fattore1 * fattore2
     
     
-```
+{% endhighlight %}
 
 </div>Il parametro fattore2 viene inizializzato a 2 se non specificato diversamente dal chiamante.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">prodotto = moltiplica(3) 
+{% highlight python %}
+prodotto = moltiplica(3) 
 print(prodotto) # stampa il valore 6 
 prodotto = moltiplica(3, 3) 
 print(prodotto) # stampa il valore 9
-```
+{% endhighlight %}
 
 </div>Notate che i parametri facoltativi vanno sempre specificati dopo aver specificato tutti i parametri ordinari dunque se si definisce una funzione come nell’esempio seguente l’interprete restituisce un messaggio di errore di sintassi.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def moltiplica(fattore1 = 2, fattore2): 
+{% highlight python %}
+def moltiplica(fattore1 = 2, fattore2): 
     return fattore1 * fattore2
     
     
-```
+{% endhighlight %}
 
 </div>#### Ambito locale e ambito globale 
 
@@ -175,19 +175,19 @@ Un ambito locale viene creato ogni volta che si chiama una funzione. Qualsiasi v
 
 #### Le varabili locali non possono essere utilizzate nell’ambito globale 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def pollaio(): 
+{% highlight python %}
+def pollaio(): 
     uova = 32765
 pollaio()
 print(uova) # NameError: name 'uova' is not defined
-```
+{% endhighlight %}
 
 </div>Come potete notare la variabile uova appartiene all’ambito delle funzione pollaio. La funzione viene invocata, ma una volta terminata la variabile locale uova viene distrutta, non può dunque essere utilizzata dal flusso di programma principale.
 
 #### Gli ambiti locali non possono usare variabili di altri ambiti locali 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def pollaio():
+{% highlight python %}
+def pollaio():
     uova = 32765
     print(uova) # corretto
 
@@ -195,25 +195,25 @@ def allevamento():
     pecore = 1234567
     print(pecore) # corretto
     print(uova)   # NameError:'uova' not defined
-```
+{% endhighlight %}
 
 </div>Come potete vedere la funzione allevamento tenta di accedere alla variabile uova che appartiene all’ambito della funzione pollaio. Questo non è legale.
 
 #### Le variabili globali possono essere lette da un ambito locale 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">uova = 1234567 
+{% highlight python %}
+uova = 1234567 
 def pollaio():
     print(uova) # corretto 
 pollaio()
-```
+{% endhighlight %}
 
 </div>La funzione pollaio riesce ad accedere alla variabile uova definita in ambito globale.
 
 #### Variabili locali e globali con lo stesso nome 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">uova = 7 # variabile globale
+{% highlight python %}
+uova = 7 # variabile globale
 def pollaio():
     uova = 32765
     print(uova) # corretto, stampa 32765
@@ -221,7 +221,7 @@ def allevamento():
     uova = 1234567
     print(uova) # corretto, stampa 1234567
 print(uova) # corretto, stampa 7
-```
+{% endhighlight %}
 
 </div>La variabile uova viene definita sia nell’ambito globale, che nell’ambito della funzione pollaio che nell’ambito della funzione allevamento. Ciascun ambito riesce però ad accedere alla variabile ivi definita.
 
@@ -237,13 +237,13 @@ Dato che dobbiamo sviluppare questa importante funzione matematica diventa tedio
 
 Assert accetta due argomenti: il primo è una proposizione booleana che può essere vera o falsa (True o False) e nel caso questa non lo sia stampa il messaggio che segue la virgola.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def trasfCelsInFahr(temp):
+{% highlight python %}
+def trasfCelsInFahr(temp):
     return (temp*9/5)+32
 assert trasfCelsInFahr(0) == 32.0, "Errore per 0" 
 assert trasfCelsInFahr(20) == 68.0, "Errore per 20" 
 assert trasfCelsInFahr(30) == 86.0, "Errore per 30"
-```
+{% endhighlight %}
 
 </div>Quando vado a lanciare il programma questo manderà in esecuzione tutti i test e nel caso uno di questi non funzioni, cioè se la mia implementazione non è corretta, visualizza un messaggio di errore. Questo espediente mi consente di correggere l’implementazione della funzione dato che è molto rapido eseguire i test per vedere se tutto funziona come atteso.
 
@@ -255,14 +255,14 @@ Ultimo vantaggio un test mi permette di fare refactoring del codice. Questo sign
 
 È molto importante lasciare traccia su quanto viene calcolato da una funzione. Ciò che appare scontato durante il processo di scrittura di una funzione potrebbe non esserlo più quando la si va a riutilizzare un anno più tardi. Bisogna poi imparare ad essere buoni cittadini del mondo digitale e pensare che altri potrebbero utilizzare le funzioni che scriviamo e dunque è buona norma descriverne in maniera puntuale il funzionamento.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def trasfCelsInFahr(temp):
+{% highlight python %}
+def trasfCelsInFahr(temp):
     """ This function trasforms the temperature provided in parameter temp from Fahrenheit scale to Celsius scale
     temp: float
     return: float
     """
     return (Temperature*9/5)+32
-```
+{% endhighlight %}
 
 </div>#### Organizza il tuo codice in moduli 
 
@@ -274,8 +274,8 @@ Quando si scrive il codice è bene scriverlo in modo che questo sia facile da te
 
 La cartella progettodifisica contiene un file principale.py il quale contiene la sezione principale del codice, quello cioè che mando in esecuzione quando ho necessità di utilizzare il software.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># principale.py
+{% highlight python %}
+# principale.py
 
 # importa il modulo conversioni.py
 from grandezze.conversioni import *
@@ -290,7 +290,7 @@ def main():
 # questo if viene eseguito
 if __name__ == '__main__':
     main()
-```
+{% endhighlight %}
 
 </div>La funzione main contiene il flusso principale del programma.
 
@@ -300,8 +300,8 @@ from nomercartella.nomefile import nomefunzione
 
 Qualora la variabile di sistema \_\_name\_\_ corrisponda alla stringa \_\_main\_\_ si innesca la chiamata alla funzione main(). Questa riga consente al nostro codice di capire se sta venendo eseguito come script a se stante, o se è invece stato richiamato come modulo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># grandezze/conversioni.py
+{% highlight python %}
+# grandezze/conversioni.py
 
 def trasfCelsInFahr(Temp):
   return Temp*9/5+32
@@ -317,7 +317,7 @@ if __name__ == '__main__':
     assert trasfCelsInFahr(20) == 68.0, "Err. per 20" 
     assert trasfCelsInFahr(30) == 86.0, "Err. per 30" 
     print("Tutto ok!")
-```
+{% endhighlight %}
 
 </div>In seguito troviamo un file di libreria in cui abbiamo precedentemente scritto l’implementazione delle funzioni che mi occorrono per fare conversioni tra grandezze. Questo file è contenuto nella cartella grandezze e si chiama conversioni.py. Questo file contiene due funzioni la prima trasforma i gradi Celsius in Fahrenheit, la seconda fa il contrario trasforma i gradi Fahrenheit in gradi Celsius. Notare che nella parte finale dentro l’if ci sono i test che si occupano di assicurarci la buona qualità della libreria. Se mando in run il file conversioni.py e visualizzo la scritta “tutto ok” vuol dire che la libreria funziona come ci si aspetta.
 
@@ -343,8 +343,8 @@ Exercise 5:
 
 Riorganizza il seguente codice Python in funzioni. Bisogna soddividere l’algoritmo in algoritmi piú piccoli e semplici da capire in modo da rendere il codice più leggibile.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print('La mia calcolatrice') 
+{% highlight python %}
+print('La mia calcolatrice') 
 finito = False
 while finito == False:
     op = input('Operatore (+ - * /): ') 
@@ -364,7 +364,7 @@ while finito == False:
     if risp == 'S':
         finito = True
 print('Grazie! Alla prossima volta')
-```
+{% endhighlight %}
 
 </div>Exercise 6:
 
@@ -374,24 +374,24 @@ Exercise 7:
 
 Cosa fa il seguente script?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">biciclette = 123
+{% highlight python %}
+biciclette = 123
 def scrivi_biciclette(): 
     print(biciclette)
 scrivi_biciclette()
-```
+{% endhighlight %}
 
 </div>Exercise 8:
 
 Cosa fa il seguente script?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">biciclette = 123
+{% highlight python %}
+biciclette = 123
 def scrivi_biciclette(): 
     biciclette = 321 
     print(biciclette)
 scrivi_biciclette()
-```
+{% endhighlight %}
 
 </div>Esercizio 9:
 

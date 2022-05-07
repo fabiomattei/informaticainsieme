@@ -18,8 +18,8 @@ Introduciamo la funzione *render\_template()*. Questa funzione si accompagna di 
 1. una stringa di testo contenente il nome di un file html
 2. una o più variabili da passare al file html
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from flask import Flask, request, render_template
+{% highlight python %}
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -28,7 +28,7 @@ def hello_world():
     miavariabile = "Anna Bolena"
     return render_template('home.html', nomeutente=miavariabile)
 
-```
+{% endhighlight %}
 
 </div>In questo esempio andiamo a definire come pagina, contenente la maschera da riempire, il file chiamato *home.html* e passiamo quindi una variabile a cui assegnamo il contenuto della variabile *miavariabile*.
 
@@ -36,7 +36,7 @@ def hello_world():
 
 Andiamo a vedere come è fatto il file *home.html*. Per convenzione tutti i file html sono posti all’interno della cartella **templates** dentro la cartella del progetto.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">{% extends 'base.html' %}
 
 {% block header %}
@@ -47,7 +47,7 @@ Andiamo a vedere come è fatto il file *home.html*. Per convenzione tutti i file
   <p>Il mio contenuto</p>
 {% endblock %}
 
-```
+{% endhighlight %}
 
 </div>Il file va ad estendere un file di nome *base.html* che vedremo più in avanti. Al suo interno si definiscono due blocchi: *header* e *content*. I blocchi contengono il primo un tag h1 specificante un titolo e il secondo un tag p specificante un paragrafo.
 
@@ -57,7 +57,7 @@ All’interno del blocco header troviamo un segnaposto di variabile: *{{ nomeute
 
 Il file base contiene i buchi da riempire con i blocchi definiti in precedenza. Notiamo che questo contiene lo scheletro di una pagina html. All’interno della sezione header è contenuto il segnaposto pronto a contenere il blocco denominato header. In seguito è contenuto il segnaposto pronto ad accogliere un blocco content.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><!doctype html>
 <title>{% block title %}{% endblock %} - la mia applicazione web</title>
 <section class="content">
@@ -66,6 +66,6 @@ Il file base contiene i buchi da riempire con i blocchi definiti in precedenza. 
   </header>
   {% block content %}{% endblock %}
 </section>
-```
+{% endhighlight %}
 
 </div>Abbiamo visto oggi come creare una struttura che ci permette di lavorare ad una applicazione web in modo più ordinato.

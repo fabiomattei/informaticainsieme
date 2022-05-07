@@ -11,38 +11,38 @@ La funzione **input** viene usata per consentire all’utente di immettere dati 
 
 **input** accetta un singolo argomento opzionale: una *stringa di testo* che viene mostrata a video prima di leggere il valore digitato. Questa ha la funzione di dare una indicazione all’utente sull’informazione che si vuole ottenere da lui. Una volta che l’utente abbia digitato un valore e premuto il tasto *Invio*, la funzione input restituisce il valore come *stringa*, come mostra il seguente esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">nome = input('Inserisci il tuo nome: ')
+{% highlight python %}
+nome = input('Inserisci il tuo nome: ')
 # Il computer scrive sul video "Inserisci il tuo nome: "
 # quindi rimane in attesa che l'utente scriva qualcosa.
 # Supponiamo che l'utente scriva la stringa "Ezio"
 print(nome) # stampa 'Ezio'
-```
+{% endhighlight %}
 
 </div>Esercizio 1: copia il seguente codice nell’editor. Una volta finito fallo eseguire dal computer premendo F5 oppure dando il comando RUN
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">nome = input("scrivi il tuo nome: ")
+{% highlight python %}
+nome = input("scrivi il tuo nome: ")
 print("Ciao ", nome)
-```
+{% endhighlight %}
 
 </div>Esercizio 2: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">nome = input("scrivi il tuo nome: ")
+{% highlight python %}
+nome = input("scrivi il tuo nome: ")
 cognome = input("scrivi il tuo cognome: ")
 print("Nome: ", nome, " cognome: ", cognome)
-```
+{% endhighlight %}
 
 </div>Abbiamo detto che per conservare le informazioni che l’utente digita il computer ha bisogno di [varabili](https://www.esercizidiinformatica.it/variabili/). Nell’esercizio precedente abbiamo richiesto all’utente due informazioni, la prima l’abbiamo conservata all’interno della variabile *nome*, la seconda all’interno della variabile *cognome*.
 
 Esercizio 3: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">nome = input("scrivi il tuo nome: ")
+{% highlight python %}
+nome = input("scrivi il tuo nome: ")
 lunghezza = len(nome)
 print("Il tuo nome e’ lungo ", lunghezza, " caratteri")
-```
+{% endhighlight %}
 
 </div>La funzione input, abbiamo detto restituisce il valore come una stringa di testo.
 
@@ -50,12 +50,12 @@ Nel caso in cui vogliamo chiedere all’utente un valore numerico abbiamo bisogn
 
 Esercizio 4: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">valorestringa = input("scrivi la lughezza del lato: ")
+{% highlight python %}
+valorestringa = input("scrivi la lughezza del lato: ")
 lato = int(valorestringa)
 area = lato * lato
 print("L’area del quadrato di lato ", lato, " vale ", area)
-```
+{% endhighlight %}
 
 </div>Esercizio 5: scrivi un programma che letta una variabile intera calcoli l’area del cerchio che ha per raggio il valore appena richiesto.
 
@@ -69,12 +69,12 @@ Qualche volta bisogna richiedere in input dei valori in virgola mobile in quel c
 
 Esercizio 9: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">valorestringa = input("scrivi la lughezza del lato: ")
+{% highlight python %}
+valorestringa = input("scrivi la lughezza del lato: ")
 lato = float(valorestringa)
 area = lato * lato
 print("L’area del quadrato di lato ", lato, " vale ", area)
-```
+{% endhighlight %}
 
 </div>####  Operatori matematici:
 
@@ -86,14 +86,14 @@ Esercizio 11: scrivi un programma che letti due valori a virgola mobile calcoli 
 
  Esercizio 12: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">capitaleiniziale = int(input("Capitale iniziale: "))
+{% highlight python %}
+capitaleiniziale = int(input("Capitale iniziale: "))
 tasso = int(input("Tasso: "))
 anni = int(input("Anni: "))
 capitalefinale = capitaleiniziale * (1+ tasso) ** anni
 print("Dopo  ", anni, " anni il capitale e’ ", capitalefinale)
 print("Dopo  ", anni, " anni il capitale e’ ", round(capitalefinale, 2))
-```
+{% endhighlight %}
 
 </div>La funzione **round(valore, cifra)** arrotonda un valore ad una certa cifra decimale.
 

@@ -21,8 +21,8 @@ Sappiamo tutti che quando c’è una bella serata è bello andare a mangiare una
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-23-alle-06.02.51-1024x626.png)</figure>Quelli che andiamo a rappresentare sono punti nello spazio dato che la temperatura e il numero di prenotazioni rappresentano le nostre variabili di ingresso mentre il numero di pizze rappresenta la grandezza calcolata.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
@@ -58,12 +58,12 @@ ax.plot_surface(xs, ys, zs.reshape((2, 2)), alpha=0.2)
 
 plt.show()
 
-```
+{% endhighlight %}
 
 </div>Lo script utilizzato per calcolare fare l’allenameno e calcolare i pesi è il seguente:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 def predici(X, w):
     return np.matmul(X, w)
@@ -91,11 +91,11 @@ print("\nPesi: %s" % w.T)
 print("\nAlcune predizioni:")
 for i in range(5):
     print("X[%d] -> %.4f (label: %d)" % (i, predici(X[i], w), Y[i]))
-```
+{% endhighlight %}
 
 </div>I dati sono stati separati iinerendoli all’interno di un file txt il cui contenuto è il seguente.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="text" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Prenotazioni  Temperature  Pizze
 13            26           44
 2             14           23
@@ -127,6 +127,6 @@ for i in range(5):
 6             14           38
 13            19           30
 13            20           28
-```
+{% endhighlight %}
 
 </div>

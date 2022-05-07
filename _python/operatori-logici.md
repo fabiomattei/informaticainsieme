@@ -31,15 +31,15 @@ E’ possibile combinare tra loro le espressioni logiche attraverso gli operator
 </figure>**Esempio:**  
 Scrivere in programma Python che letta la temperatura dell’acqua scriva lo stato in cui questa si trova: solida, liquida, gassosa
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">temperatura = int( input("Scrivi la temperatura dell'acqua: ")
+{% highlight python %}
+temperatura = int( input("Scrivi la temperatura dell'acqua: ")
 if temperatura <= 0:
    print("Stato solido")
 if temperatura >0 and temperatura <=100:
    print("Stato liquido")
 if temperatura > 100:
    print("Stato Gassoso")
-```
+{% endhighlight %}
 
 </div>Notiamo che la stringa di testo “Stato liquido” viene scritta se, e soltanto se, la temperatura è sia maggiore di 0 sia minore o uguale a 100. Devono essere verificate entrambe le espressioni affinché l’espressione totale sia verificata.
 

@@ -19,11 +19,11 @@ Una informazione, conservata in una variabile, ha sempre un tipo associato. **Il
 
 Per assegnare un numero ad una variabile basta utilizzare l’operatore = come visto nella pagina dedicata alle [variabili](https://www.esercizidiinformatica.it/variabili/).
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">M = 3          # assegna ad M il numero intero 3 
+{% highlight python %}
+M = 3          # assegna ad M il numero intero 3 
 M = 3.0        # assegna ad M il numero razionale (float) 3.0  
 M = ( 3 + 1j ) # assegna ad M il numero complesso 3 + 1i
-```
+{% endhighlight %}
 
 </div>Le operazioni possibili su di una variabile di tipo **int**, **float** o **complex** sono:
 
@@ -36,23 +36,23 @@ M = ( 3 + 1j ) # assegna ad M il numero complesso 3 + 1i
 
 Esercizio 1: copia il seguente codice nell’editor. Una volta finito fallo eseguire premendo F5 oppure dando il comando RUN → RUN MODULE.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a=2
+{% highlight python %}
+a=2
 b=3
 area=a∗b
 perimetro=a∗2+b∗2
 print(area,perimetro)
-```
+{% endhighlight %}
 
 </div>#### Operazioni sulle stringhe di testo
 
 In informatica una stringa di testo è **una sequenza di caratteri con un ordine stabilito**. Facciamo qualche esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">M = "Prova" 
+{% highlight python %}
+M = "Prova" 
 N = "casa" 
 
-```
+{% endhighlight %}
 
 </div>Le operazioni possibili su di una variabile stringa sono:
 
@@ -61,33 +61,33 @@ N = "casa"
 - len(M) → restituisce la lunghezza di M (es. 5)
 - M\[0\],···M\[len(M)-1\] → restituisce i singoli caratteri della stringa. es: (M\[0\]→P)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">nome = "Giacomo"              # assegnamento
+{% highlight python %}
+nome = "Giacomo"              # assegnamento
 cognome = "Leopardi"          # assegnamento
 nome_cognome = nome + cognome # concatenazione "GiacomoLeopardi"
 nome_ripatuto = nome * 3      # ripetizione "GiacomoGiacomoGiacomo"
 lunghezza = len(nome)         # lunghezza 7
 iniziale = nome[0]            # carattere G
-```
+{% endhighlight %}
 
 </div>Esercizio 2: copia il seguente codice nell’editor e fallo eseguire
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a=2
+{% highlight python %}
+a=2
 b=3
 area=a∗b
 perimetro=a∗2+b∗2
 print(area,perimetro)
-```
+{% endhighlight %}
 
 </div>Esercizio 3: copia il seguente codice nell’editor e fallo eseguire
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a = " c i a o "
+{% highlight python %}
+a = " c i a o "
 b = " mondo "
 stringaconcatenata = a + b
 print( stringaconcatenata )
-```
+{% endhighlight %}
 
 </div>In questi esempi incontriamo per la prima volta l’istruzione [print](https://www.esercizidiinformatica.it/print/) che ci permette di stampare sul video il valore di una variabile.
 

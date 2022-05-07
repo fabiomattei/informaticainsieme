@@ -11,25 +11,25 @@ Per seguire questa lezione scarica il [file contenente gli script](https://www.e
 
 Apriamo il nostro editor python preferito e digitiamo il seguente script chiamandolo **hello.py**. E’ bene salvare questo script in una cartella che chiameremo **sitoweb** e che posizioneremo sulla scrivania desktop.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from flask import Flask
+{% highlight python %}
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/10/editorflask.png)</figure>Apriamo l’interprete dei comandi **CMD** e posizionamoci nella cartella appena creata utlizzando il comando **cd**. Il comando cd rappresenta l’acronimo delle parole *change directory* che significa cambia cartella e ci permette di muoverci nel file system del computer.
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/10/cambiadirectory-1024x596.png)</figure>Ora digitiamo i comandi:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">set FLASK_APP=hello
 set FLASK_ENV=development
 flask run
-```
+{% endhighlight %}
 
 </div>I primi due comandi ci permettono di assegnare dei valori alle variabili di ambiente FLASK\_APP e FLASK\_ENV. Attraverso queste comunichiamo a flask il nome del file che contiene l’applicazione e il fatto che stiamo sviluppando l’applicazione e siamo in modalità sviluppatori. Il comando **flask run** avvia l’applicazione. Il server viene avviato e si mette in ascolto sulla porta 5000 del computer locale. Ogni computer identifica se stesso attraverso l’indirizzo 127.0.0.1 chiamato per convenzione *local host*.
 
@@ -41,8 +41,8 @@ flask run
 
 Estendiamo il nostro script aggiungendo una seconda pagina.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from flask import Flask
+{% highlight python %}
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -53,7 +53,7 @@ def hello_world():
 @app.route("/citta")
 def mia_citta():
     return "<p>Sono a Castel Di Sangro</p>"
-```
+{% endhighlight %}
 
 </div>Ora salviamo il file, passiamo di nuovo al nostro browser scriviamo nella barra degli indirizzi: **127.0.0.1/citta**
 

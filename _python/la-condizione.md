@@ -14,21 +14,21 @@ Il costrutto **if** ci consente di cambiare la sequenza logica di istruzioni da 
 
 **Esercizio 1:** copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a = 33
+{% highlight python %}
+a = 33
 b = 200
 if b > a:
    print("b e' maggiore di a")
-```
+{% endhighlight %}
 
 </div>**Esercizio 2:** copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a = 33
+{% highlight python %}
+a = 33
 b = 200
 if b > a:
 print("b e' maggiore di a") # questo codice è errato dato che manca l'indentazione
-```
+{% endhighlight %}
 
 </div>In Python l’indentazione (gli spazi che nell’esempio 1 precedono l’istruzione print) indica l’appartenenza di un codice ad un blocco di codice. Dato che bisogna distinguere tra quali istruzioni eseguire in caso la condizione venga verificata oppure no, chi ha inventato il linguaggio ha deciso di utilizzare l’indentazione a tale scopo. Dunque nel primo esempio è chiaro per il computer che deve eseguire l’istruzione print() se b &gt; a, nel secondo esempio, mancando indentazione non è chiaro, quindi il computer ci dà errore.
 
@@ -49,14 +49,14 @@ Importante per dare una alternativa in caso la proposizione contenuta nel primo 
 
 **Esercizio 3:** copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a = 33
+{% highlight python %}
+a = 33
 b = 33
 if b > a:
     print("b e' piu' grande di a")
 elif a == b:
     print("a e b sono uguali")
-```
+{% endhighlight %}
 
 </div>#### Il costrutto else
 
@@ -64,8 +64,8 @@ Nel caso nessuna delle proposizione contenute nelle condizioni precedenti sia st
 
 **Esercizio 4:** copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">a = 33
+{% highlight python %}
+a = 33
 b = 33
 if b > a:
     print("b e' piu' grande di a")
@@ -73,7 +73,7 @@ elif a == b:
     print("a e b sono uguali")
 else:
     print("a e' piu' grande di b")
-```
+{% endhighlight %}
 
 </div>**Esercizio 5:** scrivi un programma che lette due stringhe di testo ne scriva la prima in ordine alfabetico
 

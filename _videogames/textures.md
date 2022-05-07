@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=37'
 
 Aggiungiamo due diverse textures (immagini) per il nostro personaggio, una rivolta a destra ed una a sinistra, per seguire la direzione del movimento.
 
-```
-<pre class="wp-block-code">```
+{% endhighlight %}
+<pre class="wp-block-code">{% endhighlight %}
 """
 Lo sprite raccoglie le monete
 """
@@ -203,5 +203,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-```
-```
+{% endhighlight %}
+{% endhighlight %}

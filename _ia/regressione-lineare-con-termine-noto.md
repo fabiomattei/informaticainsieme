@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=945'
 ---
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">"""
+{% highlight python %}
+"""
 Prenotazioni  Pizze
 13            33
 2             16
@@ -89,7 +89,7 @@ prenotazioni = int(input("Scrivi il numero di prenotazioni di questa sera: "))
 pizze = predici(prenotazioni, w, b)
 
 print("Predico che venderai", pizze, "stasera")
-```
+{% endhighlight %}
 
 </div>Ora modifichiamo l’algortmo in modo da tener conto del temine noto. Aggiungere il termine noto alla funzione lineare permette di ottenere una retta che simula molto meglio il fenomeno.
 
@@ -103,8 +103,8 @@ b e w sono gli **iperparametri** del modello che stiamo costruendo.
 
 Come spesso accade il programma si semplifica molto utilizzando una liibreria. Numpy è una librera sviluppata per fare calcolo e attraverso questa il codice si snellisce molto e aumenta molto in prestazioni
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 
 def predici(X, w, b):
@@ -161,6 +161,6 @@ plt.plot([0, x_edge], [b, predici(x_edge, w, b)], linewidth=1.0, color="g")
 plt.show()
 
 
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.43.33-1024x843.png)</figure>

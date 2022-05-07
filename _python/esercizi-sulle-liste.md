@@ -11,19 +11,19 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=124'
 
 Come per le variabili a ciascuna lista viene assegnato un nome, in modo da potersi riferire a questa durante la scrittura del programma. È possibile creare una lista vuota usando le parentesi quadre. In questo modo si viene a creare una struttura dati che non contiene elementi al suo interno ma è pronta a riceverne.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">vuota = [] # nuova lista vuota di nome: vuota
-```
+{% highlight python %}
+vuota = [] # nuova lista vuota di nome: vuota
+{% endhighlight %}
 
 </div>.
 
 Se ho bisogno di creare una lista cui intendo inserire dei valori al momento stesso della sua creazione è sufficiente che io elenchi tra parentesi quadre questi valori separati da virgole.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numeri = [0, 1, 2, 3] # lista di 4 elementi di tipo int 
+{% highlight python %}
+numeri = [0, 1, 2, 3] # lista di 4 elementi di tipo int 
 lettere = ['a', 'b', 'c', 'd', 'e'] # lista di 5 elementi di tipo char 
 parole = ['mattina', 'pomeriggio'] # lista di 2 elementi di tipo str
-```
+{% endhighlight %}
 
 </div>Gli esempi in alto creano tre liste: la prima si chiama numeri e contiene i quattro numeri: 0, 1, 2, 3; la seconda si chiama lettere e contiene i caratteri: ’a’, ’b’, ’c’, ’d’ ed ’e’; la terza si chiama parole e contiene le stringhe di testo: ’mattina’ e ’pomeriggio’.
 
@@ -38,18 +38,18 @@ Una volta immagazzinate le informazioni in una lista come le posso uti- lizzare?
 
 </figure>Dunque sono sintatticamente corrette le seguenti assegnazioni:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">prima_lettera = lettere[0] # la variabile prima_lettera viene ad assumere il valore 'a' 
+{% highlight python %}
+prima_lettera = lettere[0] # la variabile prima_lettera viene ad assumere il valore 'a' 
 seconda_lettera = lettere[1] # la variabile seconda_lettera viene ad assumere il valore 'b' 
 ultima_lettera = lettere[-1] # la variabile ultima_lettera viene ad assumere il valore 'e'
-```
+{% endhighlight %}
 
 </div>Le cose funzionano anche al contrario per esempio se eseguo le istuzioni:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">lettere[0] = 'u' 
+{% highlight python %}
+lettere[0] = 'u' 
 lettere[-2] = 'k'
-```
+{% endhighlight %}
 
 </div>.
 
@@ -67,21 +67,21 @@ Gli operatori matematici + e \* possono essere utilizzati sulle liste, vediamo q
 - + concatenazione: crea una nuova lista formata dall’unione degli elementi che sono all’interno della prima lista con gli elementi che sono all’interno della seconda lista
 - \* ripetizione: ripete gli elementi della lista tante volte quanto indi- cato
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># operatori:
+{% highlight python %}
+# operatori:
 vocali = ['a', 'e'] + ['i', 'o', 'u'] 
 # risultato ['a', 'e', 'i', 'o', 'u'] 
 ripetute = ['a', 'e'] * 3 
 # risultato ['a', 'e', 'a', 'e', 'a', 'e']
-```
+{% endhighlight %}
 
 </div>Cosa fa secondo te il seguente programma python?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">classe = ['Gino', 'Sandra']
+{% highlight python %}
+classe = ['Gino', 'Sandra']
 nuovo_alunno = input('Digita il tuo nome: ') 
 classe = classe + [nuovo_alunno]
-```
+{% endhighlight %}
 
 </div>Il programma nalla prima istruzione crea una lista di nome classe che contiene gli elemementi ’Gino’ e ’Sandra’. La seconda istruzione consiste nel- la lettura del nome di un nuovo alunno. La terza istruzione è una istruzione complessa:
 
@@ -93,11 +93,11 @@ classe = classe + [nuovo_alunno]
 
 Attraverso l’operatore **:** si può prendere una fetta di una lista, in inglese si usa la parola slicing. La sintassi è la seguente:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># slicing:
+{% highlight python %}
+# slicing:
 lettere = ['a', 'b', 'c', 'd', 'e'] 
 lettere_al_centro = lettere[1:4] # ['b', 'c', 'd']
-```
+{% endhighlight %}
 
 </div>L’istruzione lettere\[1:4\] estrae dalla lista una sua sottosezione composta dagli elementi di indice 1, 2, 3. Nota bene: l’elemento di indice 4 viene escluso. Il comando dunque nomelista\[n, m\] estrae da una lista una sottolista che va dall’elemento di indice n all’elemento di indice m-1.
 
@@ -105,8 +105,8 @@ lettere_al_centro = lettere[1:4] # ['b', 'c', 'd']
 
 Ci sono operatori che mi permettono di controllare se un elemento è contenuto in una lista oppure no. Sono gli operatori **in** e **not in**. Chiariamoci le idee con un esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">lettere = ['a', 'b', 'c', 'd', 'e'] 
+{% highlight python %}
+lettere = ['a', 'b', 'c', 'd', 'e'] 
 # Operatori di contenimento in e not in
 if 'c' in lettere:
     # operazioni da effettuare se il carattere 'a' \`e contenuto
@@ -114,7 +114,7 @@ if 'c' in lettere:
 if 'k' not in lettere:
     # operazioni da effettuare se il carattere 'k' non \`e contenuto
     print('Il carattere k NON e\' contenuto nella lista chiamata lettere')
-```
+{% endhighlight %}
 
 </div>Nel primo esempio viene controllato se il carattere *‘c’* appare nella lista *lettere*. Il controllo restituisce True dato che *‘c’* appare all’interno della lista. Nel secondo esempio viene controllato se il carattere *‘k’* non è parte della lista lettere. Anche in questo caso il controllo restituisce True dato che *‘k’* non appare all’interno della lista.
 
@@ -130,39 +130,39 @@ Le liste supportano anche altre funzioni:
 
 <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/UR4HOGpNwY8?feature=oembed" title="Le liste in Python, seconda parte" width="580"></iframe></div></figure>Visitare o percorrere la lista, significa **prendere ad uno ad uno ciascuno degli elementi che la compongono e applicare dei comandi a ciascuno di questi**. Volendo ad esempio stampare gli elementi che compongono una lista posso scrivere il seguente codice:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">lettere = ['a', 'b', 'c', 'd', 'e']
+{% highlight python %}
+lettere = ['a', 'b', 'c', 'd', 'e']
 for x in lettere:
     print(x)
-```
+{% endhighlight %}
 
 </div>Ad ogni iterazione x assumerà il valore di uno dei caratteri contenuto nella lista lettere e lo scriverà sullo schermo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numeri = [1, 2, 3, 4, 5, 6] 
+{% highlight python %}
+numeri = [1, 2, 3, 4, 5, 6] 
 for x in numeri:
     if x % 2 == 0:
         print(x)
-```
+{% endhighlight %}
 
 </div>In questo secondo esempio **percorro** la lista numeri prendendo un numero per volta ed assegnandolo ad x, quindi applica l’operatore modulo (resto della divisione intera) per vedere se il numero selezionato é pari e se ciò risulta vero lo scrivo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># stampa il quadrato di ogni numero di seq
+{% highlight python %}
+# stampa il quadrato di ogni numero di seq
 seq = [1, 2, 3, 4, 5]
 for n in seq:
     print('Il quadrato di ', n, ' e\' ', n**2)
-```
+{% endhighlight %}
 
 </div>E’ possibile visitare la lista anche utilizzando un ciclo **while**
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numeri = [1, 2, 3, 4, 5, 6]
+{% highlight python %}
+numeri = [1, 2, 3, 4, 5, 6]
 indice = 0
 while indice < len(numeri):
     print(numeri[indice])
     indice = indice + 1
-```
+{% endhighlight %}
 
 </div>## Esercizi sulle liste
 

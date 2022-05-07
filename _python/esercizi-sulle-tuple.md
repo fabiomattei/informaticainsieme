@@ -11,31 +11,31 @@ Le tuple sono strutture dati analoghe alle liste. La differenza tra tuple e list
 
 Viene spontaneo chiedersi che senso abbiamo per un linguaggio definire due strutture dati analoghe ma una con meno potenzialità dell’altra. La risposta risiede nel bisogno di prestazioni, una struttura che ha meno po- tenzialità risulta molto più snella per un elaboratore dunque occupa meno memoria ed offre prestazioni migliori in termini di computabilità.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numeri = (0, 1, 2, 3) # tupla di 4 elementi di tipo int 
+{% highlight python %}
+numeri = (0, 1, 2, 3) # tupla di 4 elementi di tipo int 
 lettere = ('a', 'b', 'c', 'd', 'e') # tupla di 5 elementi di tipo char 
 parole = ('mattina', 'pomeriggio') # tupla di 2 elementi di tipo str
-```
+{% endhighlight %}
 
 </div>Le tuple vengono definite attraverso le parentesi tonde. Cosa fa secondo te il seguente algoritmo?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">vowels = ('a', 'e', 'i', 'o', 'u') 
+{% highlight python %}
+vowels = ('a', 'e', 'i', 'o', 'u') 
 letters = ('a', 'b', 'c', 'd', 'e') 
 for x in letters:
     if x in vowels:
         print( x + " is a vowel ")
     else:
         print( x + " is a consonant ")
-```
+{% endhighlight %}
 
 </div>Il seguente frammento di codice stampa il quadrato di ogni numero di seq.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">seq = (1, 2, 3, 4, 5)
+{% highlight python %}
+seq = (1, 2, 3, 4, 5)
 for n in seq:
     print('Il quadrato di ', n, ' e\' ', n**2)
-```
+{% endhighlight %}
 
 </div>**Esercizio 1:** Scrivi un programma Python che crei una tupla con 10 numeri interi e li stampi sul video con un ciclo for (print)
 
@@ -51,21 +51,21 @@ for n in seq:
 
 Ricorda che:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># posso suddividere una tupla
+{% highlight python %}
+# posso suddividere una tupla
 tuplex = 4, 8, 3 
 n1, n2, n3 = tuplex
-```
+{% endhighlight %}
 
 </div>**Esercizio 7:** Scrivi un programma Python che suddivida una tupla costituita da 10 interi e li mostri a video
 
 Ricorda che:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># lunghezza di una tupla
+{% highlight python %}
+# lunghezza di una tupla
 tuplex = 4, 8, 3 
 len(tuplex)  # ritorna 3
-```
+{% endhighlight %}
 
 </div>**Esercizio 8:** Scrivi un programma Python che prenda da una tupla il secondo elemento e il penultimo e li scriva a monitor
 

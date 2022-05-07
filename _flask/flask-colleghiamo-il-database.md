@@ -13,8 +13,8 @@ Una applicazione web ha bisogno di un database per poter salvare/reperire i dati
 
 Creiamo un database che salviamo nel file **database.db** e creiamo una tabella al suo interno.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import sqlite3
+{% highlight python %}
+import sqlite3
 
 conn = sqlite3.connect('database.db')
 print "Opened database successfully";
@@ -22,7 +22,7 @@ print "Opened database successfully";
 conn.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, pin TEXT)')
 print "Table created successfully";
 conn.close()
-```
+{% endhighlight %}
 
 </div>Il file va lanciato digitando: python creadb.py
 
@@ -32,16 +32,16 @@ La nostra applicazione Flask ha tre funzioni all’interno del controller.
 
 La prima si chiama **new\_student()** e si collega alla regola URL **(‘/addnew’)**. La funzione mostra un template che si chiama student.html.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">@app.route('/enternew')
+{% highlight python %}
+@app.route('/enternew')
 def new_student():
    return render_template('student.html')
    
-```
+{% endhighlight %}
 
 </div>Il contenuto del file **student.html**
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><html>
    <body>
       <form action = "{{ url_for('addrec') }}" method = "POST">
@@ -59,14 +59,14 @@ def new_student():
       </form>
    </body>
 </html>
-```
+{% endhighlight %}
 
 </div>Come si nota i dati della form vengono inviati in POST alla URL **/addrec** che è collegata alla funzione **addrec()**.
 
 Questa funzione **addrec()** raccoglie le informazioni inviate in **POST** ed inserisce uno studente nella tabella. Se l’operazione va a buon fine fiene mostrato il messaggio “studente inserito con successo” in caso contrario viene mostrato il messaggio “errore nell’inserimento”.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">@app.route('/addrec',methods = ['POST', 'GET'])
+{% highlight python %}
+@app.route('/addrec',methods = ['POST', 'GET'])
 def addrec():
    if request.method == 'POST':
       try:
@@ -90,11 +90,11 @@ def addrec():
          return render_template("result.html",msg = msg)
          con.close()
          
-```
+{% endhighlight %}
 
 </div>Il template HTML che si chiama **result.html** mostra il contenuto della variabile **{{msg}}** che mostrail risultato dell’operazione di inserimento.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/aggiungistudente-1024x683.png)</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/aggiungistudente-1024x683.png)</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><!doctype html>
 <html>
    <body>
@@ -102,14 +102,14 @@ def addrec():
       <h2><a href = "\">go back to home page</a></h2>
    </body>
 </html>
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/studenteaggiunto-1024x687.png)</figure>#### Mostra tutti gli studenti contenuti nel database
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/listastudenti-1024x299.png)</figure>L’applicazione contiene un’altra funzione che si chiama **list()** che si collega alla URL **/list**. Questa interroga il database e carica i risultati in **rows** che saranno contenuti in una istanza di **MultiDict**. Questo conterrà tutti i record nella tabella students. Questo oggetto è passato al template **list.html**.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">@app.route('/list')
+{% highlight python %}
+@app.route('/list')
 def list():
    con = sql.connect("database.db")
    con.row_factory = sql.Row
@@ -120,11 +120,11 @@ def list():
    rows = cur.fetchall(); 
    return render_template("list.html",rows = rows)
    
-```
+{% endhighlight %}
 
 </div>Il template **list.html** contiene una iterazione sui questi records e inserisce i dati degli studenti in una tabella HTML.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><!doctype html>
 <html>
    <body>
@@ -149,18 +149,18 @@ def list():
       <a href = "/">Go back to home page</a>
    </body>
 </html>
-```
+{% endhighlight %}
 
 </div>#### La home del progetto
 
 <figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/studentihome.png)</figure>In fine la URL **/** renderizza un file **‘home.html’** che agisce da punto di accesso all’intera applicazione.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">@app.route('/')
+{% highlight python %}
+@app.route('/')
 def home():
    return render_template('home.html')
    
-```
+{% endhighlight %}
 
 </div>#### Modifica le informazioni di uno studente
 
@@ -168,8 +168,8 @@ def home():
 
 <figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/cancellastudente.png)</figure>Ecco il codice completo del controller.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">from flask import Flask, render_template, request
+{% highlight python %}
+from flask import Flask, render_template, request
 import sqlite3 as sql
 app = Flask(__name__)
 
@@ -220,7 +220,7 @@ def list():
 if __name__ == '__main__':
    app.run(debug = True)
    
-```
+{% endhighlight %}
 
 </div>Lancia questo script dalla shell di python quindi visita la URL **http://localhost:5000/** nella barra degli indirizzi del browser per vedere l’applicazione funzionare.
 

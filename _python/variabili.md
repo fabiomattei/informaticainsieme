@@ -9,11 +9,11 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=202'
 
 Le variabili sono **contenitori di informazioni**. Al fine di creare o inizializzare una variabile Python si avvale dell’operatore di assegnamento indicato dal simbolo **=** in questo modo:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">x = 5
+{% highlight python %}
+x = 5
 y = "John"
 z = 3.564
-```
+{% endhighlight %}
 
 </div>L’operando alla sinistra del simbolo = è il **nome della variabile**, l’operando alla destra è il **valore da conservare** all’interno della variabile.
 
@@ -41,11 +41,11 @@ E’ possibile utilizzare le variabili per memorizzare i risultati di un calcolo
 Esempio:  
 Patrizio va al mercato e compra 6 panini. Ciascun panino costa 2€. Quanto spenderà Patrizio?
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numero_panini = 6
+{% highlight python %}
+numero_panini = 6
 costo_panino = 2
 costo_totale = numero_panini * costo_panino
-```
+{% endhighlight %}
 
 </div>Osserviamo che:
 

@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=720'
 
 L’algoritmo Bubble Sort
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def bubbleSort(arr):
+{% highlight python %}
+def bubbleSort(arr):
     n = len(arr)
     # Si scandisce la lista elemento per elemento
     for i in range(n):
@@ -28,6 +28,6 @@ bubbleSort(arr)
 print ("Lista ordinata:")
 for i in range(len(arr)):
     print ("%d" %arr[i]),
-```
+{% endhighlight %}
 
 </div>

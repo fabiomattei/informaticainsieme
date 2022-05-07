@@ -9,22 +9,22 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=118'
 
 <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/9ZTyZnUvYqM?feature=oembed" title="Il ciclo for in python: variabile contatore e variabile accumulatore" width="580"></iframe></div></figure>Il ciclo for ci permette di iterare su tutti gli elementi di una lista ed eseguire un determinato blocco di codice.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">for variabile in lista:
+{% highlight python %}
+for variabile in lista:
     #elabora su variabile
     
     
-```
+{% endhighlight %}
 
-</div><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#Esempio 1:
+</div>{% highlight python %}
+#Esempio 1:
 for a in [5,10,15,20,25]:
     print(a)
     
-```
+{% endhighlight %}
 
-</div><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#Esempio 2:
+</div>{% highlight python %}
+#Esempio 2:
 seq = [1, 2, 3, 4, 5]
 for n in seq:
     print('Il numero ', n, ' e\' ', end=' ')
@@ -32,25 +32,25 @@ for n in seq:
         print('pari')
     else:
         print('dispari')
-```
+{% endhighlight %}
 
 </div>#### **range**
 
 Dato che spesso accade di voler lavorare su sequenze di numeri, Python fornisce una funzione chiamata **range** che permette di specificare uno valore iniziale o ***start*** (incluso), un valore finale o ***stop*** (escluso), e una lunghezza di passo ***step***, e che ritorna una sequenza di numeri interi:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Esempio di uso di range con start, stop e step
+{% highlight python %}
+# Esempio di uso di range con start, stop e step
 
 for x in range(1, 7, 1):
     print(x)
 # scrive la sequenza di numeri: 1, 2, 3, 4, 5, 6
 # notare che il valore 7 viene escluso
-```
+{% endhighlight %}
 
 </div>Posso utilizzare range con due soli argomenti
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Esempio di uso di range con start e stop
+{% highlight python %}
+# Esempio di uso di range con start e stop
 # Step viene implicitamente posto a 1
 for x in range(1, 5):
     print('Quadrato di ', x, ': ', x**2)
@@ -60,51 +60,51 @@ for x in range(1, 5):
 # Quadrato di 3: 9
 # Quadrato di 4: 16
 # Notare che 5 viene escluso ed il passo (step) vale 1
-```
+{% endhighlight %}
 
 </div>Posso utilizzare range anche con un solo argomento
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Esempio di uso di range con stop
+{% highlight python %}
+# Esempio di uso di range con stop
 # Start e Step vengono implicitamente posti a 1
 for x in range(7):
     print(x)
 # scrive la sequenza di numeri: 1, 2, 3, 4, 5, 6
 # notare che il valore 7 viene escluso e il passo vale 1
-```
+{% endhighlight %}
 
 </div>#### Variabili accumulatori e ciclo for
 
 Utilizzare il ciclo for con una variabile accumulatore è molto semplice. Nel seguente esempio si vede come si usa l’accumulatore per sommare 6 numeri.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Esempio di uso di range con start, stop e step
+{% highlight python %}
+# Esempio di uso di range con start, stop e step
 # Esempio di uso di accumulatore per la somma
 acc = 0
 for x in range(1, 7, 1):
     acc = acc + x
 
 print(x) # nota che questa istruzione e' fuori dal ciclo
-```
+{% endhighlight %}
 
 </div>Nel seguente esempio si vede come si usa l’accumulatore per moltiplicare 6 numeri.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Esempio di uso di range con start, stop e step
+{% highlight python %}
+# Esempio di uso di range con start, stop e step
 # Esempio di uso di accumulatore per la moltiplicazione
 acc = 1
 for x in range(1, 7, 1):
     acc = acc * x
 
 print(x) # nota che questa istruzione e' fuori dal ciclo
-```
+{% endhighlight %}
 
 </div>#### Istruzioni di lettura ripetute
 
 Lo scopo fondamentale per cui esistono i cicli è quello di ripetere un certo numero di operazioni. Se devo per esempio leggere 10 numeri e sommarli tra loro, potrei fare così:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">acc = 0
+{% highlight python %}
+acc = 0
 acc = acc + int(input("Numero: "))
 acc = acc + int(input("Numero: "))
 acc = acc + int(input("Numero: "))
@@ -117,17 +117,17 @@ acc = acc + int(input("Numero: "))
 acc = acc + int(input("Numero: "))
 
 print(acc)
-```
+{% endhighlight %}
 
 </div>Oppure potrei fare così:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">acc = 0
+{% highlight python %}
+acc = 0
 for x in range(11):
     acc = acc + int(input("Numero: "))
     
 print(acc)
-```
+{% endhighlight %}
 
 </div>Notate come il ciclo for mi ha permesso di ridurre molto le istruzioni che ho scritto. Cosa sarebbe successo se avessi dovuto leggere 100 numeri?
 
@@ -135,15 +135,15 @@ print(acc)
 
 Può capitare di dover leggere una sequenza di numeri e trovare il più grande. In questo caso utilizzo una variabile **campione** che ciclo dopo ciclo conterrà il valore migliore trovato. Potrò utilizzare una condizione per confrontare ad ogni iterazione il valore letto con il campione ottenuto fino a quel momento.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">massimo = 0
+{% highlight python %}
+massimo = 0
 for x in range(11):
     num = int(input("Numero: "))
     if num > massimo:
         massimo = num
 
 print(massimo)
-```
+{% endhighlight %}
 
 </div>#### Esercizi
 

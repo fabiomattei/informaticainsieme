@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=39'
 
 Le monete si muovono nel campo di gioco rimblazando sullo schermo. Fai presto a raccoglierle tutte.
 
-```
-<pre class="wp-block-code">```
+{% endhighlight %}
+<pre class="wp-block-code">{% endhighlight %}
 """
 Lo sprite raccoglie le monete
 """
@@ -225,5 +225,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-```
-```
+{% endhighlight %}
+{% endhighlight %}

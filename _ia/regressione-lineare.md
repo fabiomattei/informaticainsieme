@@ -13,8 +13,8 @@ La matematica ci insegna che per due punti passa una sola retta. Ma se il numero
 
 Dato che i punti nel nostro grafico approssimano una regola lineare possiamo provare a cercare una retta che in buona approssimazione definisca il legame che intercorre tra l’input e l’output.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">"""
+{% highlight python %}
+"""
 Prenotazioni  Pizze
 13            33
 2             16
@@ -91,14 +91,14 @@ pizze = predici(prenotazioni, w)
 
 print("Predico che venderai", pizze, "stasera")
 
-```
+{% endhighlight %}
 
 </div>La funzione **predici**, realizza la vera e propria predizione che in questo caso consiste nell’applicare una legge lineare. Dato un certo numero di prenotazioni, la funzione predici cerca di indovinare il numero di pizze che verranno vendute quella sera.
 
 Utlizziamo ora la libreria numpy per rendere i calcoli più veloce e la libreria seaborn per visualizzare il grafico contenente dati e retta trovata.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 
 def predici(X, w):
@@ -149,6 +149,6 @@ x_edge, y_edge = 50, 50
 plt.axis([0, x_edge, 0, y_edge])
 plt.plot([0, x_edge], [0, predici(x_edge, w)], linewidth=1.0, color="g")
 plt.show()
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.34.23-1-1024x810.png)</figure>

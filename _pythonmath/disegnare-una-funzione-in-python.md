@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=922'
 ---
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Importa le librerie
+{% highlight python %}
+# Importa le librerie
 import matplotlib.pyplot as plt
 import numpy as np
  
@@ -22,7 +22,7 @@ plt.plot(x, y)
  
 # mostra il grafico
 plt.show()
-```
+{% endhighlight %}
 
 </div>Python è un linguaggio molto versatile che può essere utilizzato per generare il grafico di una funzione.
 
@@ -71,8 +71,8 @@ Markers
 
 #### Un esempio più complesso
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Import libraries
+{% highlight python %}
+# Import libraries
 import matplotlib.pyplot as plt
 import numpy as np
  
@@ -109,12 +109,12 @@ plt.legend()
  
 # Show the plot
 plt.show()
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-02-alle-15.12.41-1024x634.png)<figcaption>un grafico più complesso</figcaption></figure>#### Un esempio con più di una funzione in un grafico
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Import libraries
+{% highlight python %}
+# Import libraries
 import matplotlib.pyplot as plt
 import numpy as np
  
@@ -146,6 +146,6 @@ plt.ylabel('asse y')
  
 # Show plot
 plt.show()
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-02-alle-15.16.44-1024x612.png)</figure>

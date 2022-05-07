@@ -17,8 +17,8 @@ I dizionari sono un tipo **mutabile** e **non ordinato** che contiene elementi f
 
 I dizionari vengono definiti elencando tra **parentesi graffe** una serie di elementi separati da **virgole**, dove ciascun elemento è formato da una chiave e un valore separati dal simbolo **due punti**. È possibile creare un dizionario vuoto usando le parentesi graffe senza alcun elemento al suo interno.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">d1 = {}                       # dizionario vuoto
+{% highlight python %}
+d1 = {}                       # dizionario vuoto
 d2 = {'a': 1}                 # contenente un elemento 
 d3 = {'a': 1, 'b': 2, 'c': 3} # contenente 3 elementi
 
@@ -29,12 +29,12 @@ Ilmiodiz = {
   "area": 4.3,
   13: "Panino",
 }
-```
+{% endhighlight %}
 
 </div>In questo esempio possiamo vedere che d3 è un dizionario che contiene 3 elementi formati da una chiave e un valore. ’a’, ’b’ e ’c’ sono le chiavi, mentre 1, 2 e 3 sono i valori. Le chiavi di un dizionario sono solitamente stringhe, ma è possibile usare anche altri tipi. I valori possono essere di qualsiasi tipo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># tipo int per la chiave, tipo list per il valore
+{% highlight python %}
+# tipo int per la chiave, tipo list per il valore
 d = {20: ['Jack', 'Jane'], 28: ['John', 'Mary']} 
 
 # non posso utilizzare il tipo list come chiave
@@ -42,14 +42,14 @@ d = {[0, 10]: 'primo intervallo'} # ERRORE!!!!
 
 # il tipo tupla è ammissibile per la chiave
 d = {(0, 10): 'primo intervallo'}
-```
+{% endhighlight %}
 
 </div>#### Accedere agli elementi conservati in un dizionario 
 
 Una volta creato un dizionario, è possibile ottenere il valore associato a una chiave usando la sintassi **nome\_dizionario\[chiave\]**:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># definisco un dizionario di esempio
+{% highlight python %}
+# definisco un dizionario di esempio
 d = {
     'a': 1, 
     'b': 2, 
@@ -62,17 +62,17 @@ d['a'] # ritorna il valore associato alla chiave 'a': 1
 d['c'] # ritorna il valore associato alla chiave 'c': 3
 d['campana'] # ritorna 'rumorosa'
 d[10] # ritorna 'automobili'
-```
+{% endhighlight %}
 
 </div>Se viene specificata una chiave inesistente, Python restituisce un *KeyError*. È però possibile usare l’operatore in (o not in) per verificare se una chiave è presente nel dizionario:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">d = {'a': 1, 'b': 2, 'c': 3}
+{% highlight python %}
+d = {'a': 1, 'b': 2, 'c': 3}
 d['x'] 
 
 # se la chiave non esiste restituisce un:
 # KeyError Traceback (most recent call last):
-```
+{% endhighlight %}
 
 </div>#### Operatori in e not in
 
@@ -80,8 +80,8 @@ Gli operatori booleani **in** e **not in** mi permettono di controllare se una s
 
 *Attenzione: questi operatori monitorano la presenza di una chiave ma non monitorano in alcun modo i valori associati alle chiavi stesse.*
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">if 'x' in d: # la chiave 'x' è presente in d 
+{% highlight python %}
+if 'x' in d: # la chiave 'x' è presente in d 
     print('Chiave x definita')
     
 if 'x' not in d # la chiave 'x' non è presente in d 
@@ -89,14 +89,14 @@ if 'x' not in d # la chiave 'x' non è presente in d
     
 if 'b' in d: # la chiave 'b' è presente
     print(d['b']) # il valore associato alla chiave 'b' è 2
-```
+{% endhighlight %}
 
 </div>#### Aggiungere e modificare gli elementi di un dizionario
 
 È possibile aggiungere o modificare elementi in un dizionario usando la sintassi **dizionario\[chiave\] = valore**.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># definisco un dizionario che contiene 3 elementi
+{% highlight python %}
+# definisco un dizionario che contiene 3 elementi
 ilmiodizionario = {'a': 1, 'b': 2, 'c': 3}
 
 # aggiungo un elemento
@@ -106,20 +106,20 @@ print(d)      # scrive {'a': 1, 'b': 2, 'c': 3, 'k': 2020}
 # modifico un elemento 
 d['a'] = 123 
 print(d)      # scrive {'a': 123, 'b': 2, 'c': 3, 'k': 2020}
-```
+{% endhighlight %}
 
 </div>#### Rimuovere un elemento da un dizionario
 
 E’ possibile rimuovere un elemento dal dizionario usando il comando usando la sintassi: **del nome\_dizionario\[chiave\]**:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># definisco un dizionario
+{% highlight python %}
+# definisco un dizionario
 d = {'a': 1, 'b': 2, 'c': 3}
 
 # rimuove l'elemento (chiave e valore) con chiave 'a'
 del d['a']    
 print(d)      # scrive {'b': 2, 'c': 3}
-```
+{% endhighlight %}
 
 </div>#### Visita di un dizionario
 
@@ -127,8 +127,8 @@ Visitare un dizionario signigica utilizzare un ciclo per scandire tutti gli elem
 
 Di solito per visitare un dizionario si utilizza un ciclo for, guardiamo l’esempio in basso:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">stati_e_capitali = {
+{% highlight python %}
+stati_e_capitali = {
     'Gujarat' : 'Gandhinagar',
     'Maharashtra' : 'Mumbai',
     'Rajasthan' : 'Jaipur',
@@ -141,21 +141,21 @@ print('Lista degli stati:')
 for stato in stati_e_capitali:
     print(stato) # scrive Gujarat, Maharashtra, Rajasthan, Bihar
     
-```
+{% endhighlight %}
 
 </div>Nell’esempio mi sono limitato a scrivere (print) le chiavi definite all’interno del dizionario. Avrei però potuto applicare su queste qualsiasi funzione python.
 
 Se volessi utilizzare, all’interno del ciclo, non solo le chiavi ma anche i valori a queste associate utilizzo la notazione che fa uso delle parentesi quadre per accedere al singolo elemento.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print('Lista degli stati e delle relative capitali:')
+{% highlight python %}
+print('Lista degli stati e delle relative capitali:')
 
 # Visito la lista prendendo chiavi e valori
 # e scrivo sia gli uni sia gli altri
 for stato in stati_e_capitali: 
     print(stato, ":", stati_e_capitali[stato])
     
-```
+{% endhighlight %}
 
 </div>## Esercizi
 

@@ -13,11 +13,11 @@ Il linguaggio SQL permette al database administrator di operare sui database. Il
 
 Le **entità** e le **relazioni** si concretizzano in tabelle e campi contenute all’interno di un database. Il comando create table consente di creare una tabella in un database. Sintassi:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">CREATE TABLE nome_tabella 
 (<nome_colonna><tipo_dato>[attributi],
 <nome_colonna><tipo_dato>[attributi],...);
-```
+{% endhighlight %}
 
 </div>Gli attributi sono di inserimento facoltativo e i più frequentemente usati sono:
 
@@ -35,50 +35,50 @@ Nel comando per creare una tabella abbiamo visto che occorre indicare, per ciasc
 
  Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">CREATE TABLE alunni (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 nome TEXT,
 cognome TEXT);
-```
+{% endhighlight %}
 
 </div>#### DROP TABLE 
 
 Il comando consente di cancellare una tabella dal database.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DROP TABLE nome_tabella;
 
 
-```
+{% endhighlight %}
 
 </div>Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DROP TABLE alunni;
 
 
-```
+{% endhighlight %}
 
 </div>#### INSERT 
 
 Il comando consente di inserire dati in una tabella esistente
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">INSERT INTO nome_tabella
 (colonna1, colonna2, colonna3) 
 VALUES (valore1, valore2, valore3);
-```
+{% endhighlight %}
 
 </div>Attenzione: i valori da inserire vanno elencati nello stesso ordine delle colonne. I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">INSERT INTO alunni 
 (nome, cognome) 
 VALUES ("Annalisa", "De Pamphilis");
-```
+{% endhighlight %}
 
 </div>A questo punto la tabella alunni conterrà una tupla avente id = 1, il campo nome conterrà la stringa “Annalisa” e il campo cognome conterrà la stringa “De Pamphilis”. Dato che l’id non è stato specificato all’interno del comando INSERT e che questo è stato inizializzato come autoincrement questo viene posto automaticamente a 1.
 
@@ -88,51 +88,51 @@ VALUES ("Annalisa", "De Pamphilis");
 
 </figure>#### UPDATE 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">UPDATE nome_tabella
 SET colonna1=valore1, colonna2=valore2, ... 
 WHERE predicato;
-```
+{% endhighlight %}
 
 </div>I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">UPDATE alunni SET nome = "Annabella" WHERE id = 1;
 
 
-```
+{% endhighlight %}
 
 </div>#### DELETE 
 
 Il comando consente di cancellare i dati da una tabella
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DELETE FROM nome_tabella WHERE predicato;
 
 
-```
+{% endhighlight %}
 
 </div>I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DELETE FROM alunni WHERE id = 1;
 
 
-```
+{% endhighlight %}
 
 </div>#### SELECT 
 
 Il comando consente di andare a leggere i dati dalle tabelle del database
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">SELECT colonna1, colonna2, ... 
 FROM nome_tabella
 WHERE predicato;
-```
+{% endhighlight %}
 
 </div>Questo comando permette di reperire dati da una o più tabelle.
 
@@ -147,7 +147,7 @@ WHERE predicato;
 
  I predicati si combinano tra loro utilizzando gli operatori logici AND, OR, NOT.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Esempio di uso di AND 
 SELECT colonna1, colonna2, ...
 FROM nome_tabella
@@ -163,7 +163,7 @@ Esempio di uso di NOT
 SELECT colonna1, colonna2, ...
 FROM nome_tabella
 WHERE NOT predicato;
-```
+{% endhighlight %}
 
 </div>#### L’istruzione JOIN in SQL 
 
@@ -187,11 +187,11 @@ Vediamo un esempio:
 | 10309 | 1 | 13/04/2019 |
 | 10310 | 3 | 18/04/2019 |
 
-</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">SELECT Ordini.IdOrdine, Clienti.NomeCliente, Ordini.DataOrdine 
 FROM Ordini
 JOIN Clienti ON Ordini.IdCliente=Clienti.IdCliente;
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-table">| IdOrdine | NomeCliente | DataOrdine |
 |---|---|---|

@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=41'
 
 Guarda come si fa a creare un labirinto
 
-```
-<pre class="wp-block-code">```
+{% endhighlight %}
+<pre class="wp-block-code">{% endhighlight %}
 
 import arcade
 import os
@@ -153,5 +153,5 @@ def main():
 if __name__ == "__main__":
     main()
     
-```
-```
+{% endhighlight %}
+{% endhighlight %}

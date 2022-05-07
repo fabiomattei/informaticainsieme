@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=962'
 
 Ritorniamo al problema senza tenere conto del termine noto e andiamo a disegnare la funzione di costo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Plot the loss on a dataset with a single input variable.
+{% highlight python %}
+# Plot the loss on a dataset with a single input variable.
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -48,7 +48,7 @@ min_index = np.argmin(losses)
 plt.plot(weights[min_index], losses[min_index], "gX", markersize=26)
 
 plt.show()
-```
+{% endhighlight %}
 
 </div>Se andiamo a disegnare il grafico della funzione costo, ci accorgiamo che la forma che otteniamo è quella di una parabola, in effetti questo non è inaspettato dato che stiamo facendo una somma di quadrati delle distanze.
 
@@ -58,8 +58,8 @@ Questo ci permette di esplorare il territorio delle soluzioni in molto meno temp
 
 Lo script seguente calcola la retta passante peere l’origine avente il minimo costo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 
 def predici(X, w, b):
@@ -87,12 +87,12 @@ Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,
 
 w = allena(X, Y, iterations=100, lr=0.001)
 print("\nw=%.10f" % w)
-```
+{% endhighlight %}
 
 </div>Volendo inserire anche il termine noto andiamo a scrivere:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 
 def predici(X, w, b):
@@ -126,6 +126,6 @@ w, b = allena(X, Y, iterations=20000, lr=0.001)
 print("\nw=%.10f, b=%.10f" % (w, b))
 print("Predizione: x=%d => y=%.2f" % (20, predici(20, w, b)))
 
-```
+{% endhighlight %}
 
 </div>

@@ -35,13 +35,13 @@ Come abbiamo ragionato? Abbiamo lavorato sulla definizione stessa della funzione
 
 Questa relazione è valida fintantoché n &gt; 0. Parafrasando in Python:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def sommainteri(n):
+{% highlight python %}
+def sommainteri(n):
     if n > 0:
         return n + sommainteri(n-1) 
     else:
         return 0
-```
+{% endhighlight %}
 
 </div>La soluzione appena trovata presenta un aspetto interessante: per risolvere il problema ci siamo basati sul poter risolvere lo stesso problema per un numero più piccolo. Questo approccio viene definito ricorsivo.
 
@@ -65,13 +65,13 @@ Quindi la definizione induttiva del fattoriale è:
 - (passo base) 0! = 1
 - (passoricorsivo)n!=n∗(n−1)!(sen&gt;0).
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def fattoriale(n): 
+{% highlight python %}
+def fattoriale(n): 
     if n == 0:
         return 1
     else:
         return n * fattoriale(n-1)
-```
+{% endhighlight %}
 
 </div>Condizioni come (n == 1) si chiamano clausole di chiusura perché garantiscono che la ricorsione termini.
 
@@ -82,15 +82,15 @@ Esistono due requisiti che sono basilari per essere sicuri che la ricorsione fun
 
 Occorre però fare molta attenzione: cosa succede se si calcola il fattoriale di -1? La clausola di chiusura non sarebbe mai verificata e il sistema andrebbe in un loop infinito. Per evitare che ciò accada facciamo una piccola modifica.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def fattoriale(n): 
+{% highlight python %}
+def fattoriale(n): 
     if n == 0:
         return 1
     elif n < 1:
         print("Errore nell'input")
     else:
         return n * fattoriale(n-1)
-```
+{% endhighlight %}
 
 </div>In questo modo la funzione fattoriale riesce sempre a concludere la propria elaborazione.
 
@@ -100,8 +100,8 @@ Si parla di ricorsione indiretta quando nella definizione di un metodo compare l
 
 Un esempio di ricorsione indiretta
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def numero_pari(n): 
+{% highlight python %}
+def numero_pari(n): 
     if x == 0:
         return True
     else:
@@ -109,7 +109,7 @@ Un esempio di ricorsione indiretta
 
 def numero_dispari(x):
     return not numero_pari(n)
-```
+{% endhighlight %}
 
 </div>Possiamo notare come la funzione numero\_pari abbia al suo interno la clausola di chiusura e la chiamata alla funzione numero\_dispari. Quest’ultima ha al suo interno la chiamata alla funzione numero\_pari.
 
@@ -123,8 +123,8 @@ Un classico esempio di ricorsione multipla è l’implementazione dei numeri di 
 - fib(1)=1
 - fib(n)=fib(n−1)+fib(n−2) (se n&gt;1)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def fib(n):
+{% highlight python %}
+def fib(n):
     if n<0:
         print("Errore nell'input") 
     elif n==0:
@@ -133,7 +133,7 @@ Un classico esempio di ricorsione multipla è l’implementazione dei numeri di 
         return 1
     else:
         return fib(n-1)+fib(n-2)
-```
+{% endhighlight %}
 
 </div>Notare che, come per il fattoriale, la funzione è definita solo su interi non negativi.
 
@@ -141,27 +141,27 @@ Un classico esempio di ricorsione multipla è l’implementazione dei numeri di 
 
 È possibile utilizzare algoritmi ricorsivi per operare sulle liste. Se per esempio volessimo sommare tutti gli i numeri contenuti in una lista potremmo operare nel seguente modo:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">numeri = [6, 1, 7, 3]
+{% highlight python %}
+numeri = [6, 1, 7, 3]
 def s_lista(lista): 
     if len(lista)==0:
         return 0
     else:
         return lista[0] + s_lista(lista[1:])
-```
+{% endhighlight %}
 
 </div>- passo base: se la lista è vuota la somma dei numeri al suo interno è 0;
 - passo ricorsivo: se la lista non è vuota la somma dei numeri al suo interno è pari al primo numero in lista cui va sommata il risultato della somma della sottolista ottenuta togliendo alla lista il primo numero.
 
 Dato che una stringa altro non è che una lista di caratteri, è possibile operare su questa allo stesso modo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">def reverse(string): 
+{% highlight python %}
+def reverse(string): 
     if len(string) == 0:
         return string
     else:
         return reverse(string[1:]) + string[0]
-```
+{% endhighlight %}
 
 </div>### Esercizi 
 
@@ -183,14 +183,14 @@ Definizione ricorsiva di palindromicità:
 
 Scrivere una funzione ricorsiva che analizzando una stringa in modo ricorsivo ne estragga, scrivendole in output (print), le sole lettere vocali.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">analizzanda = input("Digita la stringa da analizzare: ")
+{% highlight python %}
+analizzanda = input("Digita la stringa da analizzare: ")
 vocali = ['a', 'e', 'i', 'o', 'u']
 
 def estrai_vocali(analizzanda, vocali):
     pass
     # scrivi tu questa funzione
-```
+{% endhighlight %}
 
 </div>**Esercizio 3:**
 

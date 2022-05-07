@@ -24,18 +24,18 @@ Quando il codice diventa molto ampio si aprono problematiche come:
 
 La classe più semplice che possiamo definire in Python è:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Test:
+{% highlight python %}
+class Test:
     pass
 
-```
+{% endhighlight %}
 
 </div>Come possiamo vedere dall’esempio, per definire una classe basta usare la parola chiave class, seguita dal nome che vogliamo dare alla classe (in questo caso Test), seguita dai due punti (:), seguita infine da un blocco di codice indentato (in questo caso c’è solo il pass) che è il codice appartenente alla classe stessa.
 
 Proviamo ora a definire una classe Cerchio.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Cerchio: 
+{% highlight python %}
+class Cerchio: 
 
     pigreco = 3.14
     
@@ -56,7 +56,7 @@ Proviamo ora a definire una classe Cerchio.
         return float
         """ 
         return 2 * self.pigreco * self.raggio
-```
+{% endhighlight %}
 
 </div>La classe Cerchio ha un **attributo di classe** chiamato *pigreco*. È un attributo di classe perchè ha lo stesso valore per tutte le istanze della classe.
 
@@ -72,8 +72,8 @@ Nota che mentre gli attributi di classe sono targhette per identificare le infor
 
 La classe è un costrutto che ci permette di definire la base per creare oggetti. All’interno di una classe si definisce la strutture delle informazioni su cui questa lavorerà e gli algoritmi che opereranno sulle informazioni stesse. **Le classi sono costrutti astratti non si riferiscono a nessun oggetto specifico**. Ad esempio posso definire la classe *Alunno* che al suo interno conterrà le stringhe nome e cognome senza entrare nella specificità dell’alunno che si chiama Mario Rossi.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Alunno:
+{% highlight python %}
+class Alunno:
     
     def __init__(self, nome, cognome):
     """ Costruttore
@@ -87,20 +87,20 @@ La classe è un costrutto che ci permette di definire la base per creare oggetti
     return string 
     """
     return "Ciao, mi chiamo " + self.nome + " " + self.cognome
-```
+{% endhighlight %}
 
 </div>#### Istanze 
 
 Le istanze sono oggetti creati a partire da una classe. Sono le materializzazione della classe stessa. Al fine di creare una istanza si utilizza il nome con cui è stata definita la classe e tra parentesi si forniscono gli argomenti esplicitati in via di definizione del costruttore \_\_init\_\_.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">mario = Alunno("Mario", "Rossi") 
+{% highlight python %}
+mario = Alunno("Mario", "Rossi") 
 print(mario.saluta())
 rita = Alunno("Rita", "Morelli") 
 print(rita.saluta())
 cerchio5 = Cerchio(5.5) 
 print(cerchio5.calcola_circonferenza())
-```
+{% endhighlight %}
 
 </div>#### Attributi 
 
@@ -143,8 +143,8 @@ La particolarità della programmazione ad oggetti consiste nel creare gerarchie 
 
 Ad esempio potrei generalizzare la classe Alunno definita in precedenza nella sua classe padre Persona.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Persona:
+{% highlight python %}
+class Persona:
     def __init__(self, nome, cognome):
         """ Costruttore 
         parametro nome string 
@@ -158,12 +158,12 @@ Ad esempio potrei generalizzare la classe Alunno definita in precedenza nella su
         return string
         """
     return "Ciao, mi chiamo " + self.nome + " " + self.cognome
-```
+{% endhighlight %}
 
 </div>A questo punto definisco la classe Studente in maniera più semplice, ereditando i metodi \_\_init\_\_ e saluta dalla classe padre. Per lo studente definisco il solo metodo lavora.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Studente(Persona):
+{% highlight python %}
+class Studente(Persona):
     def lavora(self):
         print("Sto studiando")
         
@@ -171,18 +171,18 @@ class Professore(Persona):
     def lavora(self):
         print("Sto spiegando")
     
-```
+{% endhighlight %}
 
 </div>#### Polimorfismo 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">scuola = []
+{% highlight python %}
+scuola = []
 scuola.append(Alunno("Mario", "Rossi")) 
 scuola.append(Alunno("Rita", "Morelli")) 
 scuola.append(Professore("Antonino", "Anile"))
 for persona in scuola: 
     persona.lavora()
-```
+{% endhighlight %}
 
 </div>Il polimorfismo entra in atto quando ho oggetti di tipo differente (che appartengono a classi diverse) che hanno la stessa interfaccia. Le istanze di una sottoclasse possono essere utilizzate al posto delle istanze della superclasse. L’overriding dei metodi o delle proprietà permette che gli oggetti appartenenti alle sottoclassi di una stessa classe rispondano diversamente agli stessi utilizzi.
 
@@ -197,8 +197,8 @@ oggetti.
 
 Creiamo una classe scuola che contenga al suo interno una lista di studenti, una lista di professori, una lista di persone che compongono il personale ATA ed un preside.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Scuola:
+{% highlight python %}
+class Scuola:
     def __init__(self):
         self.preside = None
         self.alunni = []
@@ -223,21 +223,21 @@ Creiamo una classe scuola che contenga al suo interno una lista di studenti, una
     def conta_professori(self):
         return len(self.professori)
         
-```
+{% endhighlight %}
 
 </div>La classe appena definita contiene anche alcuni metodi che lavorano sugli oggetti contenuti. I metodi *conta\_studenti* e *conta\_professori* reestituiscono il numero di studenti e di professori che sono contenuti nelle rispettive liste.
 
 A questo punto è possibile utilizzare la classe appena definita come segue:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">patiniliberatore = Scuola()         
+{% highlight python %}
+patiniliberatore = Scuola()         
         
 patiniliberatore.aggiungi_studente(Alunno("Mario", "Rossi")) 
 patiniliberatore.aggiungi_studente(Alunno("Rita", "Morelli")) 
 patiniliberatore.aggiungi_professore(Professore("Antonino", "Anile"))
 
 print("Nel Patini studiano", patiniliberatore.conta_studenti(), "studenti")
-```
+{% endhighlight %}
 
 </div>Notiamo che alla riga 1 creiamo una nuova istanza della classe scuola. Dalla riga 3 alla 5 popoliamo la scuola con due studenti ed un professore. In fine alla riga 7 utilizziamo il metodo *conta\_studenti* per contare il numero di studenti nella scuola.
 
@@ -249,8 +249,8 @@ Dato che dobbiamo sviluppare questa importante funzione matematica diventa tedio
 
 Assert accetta due argomenti: il primo è una proposizione booleana che può essere vera o falsa (True o False) e nel caso questa non lo sia stampa il messaggio che segue la virgola.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Conversioni:
+{% highlight python %}
+class Conversioni:
     def trasfCelsInFahr(Temp):
         return Temp*9/5+32
     def trasfFahrInCels(Temp):
@@ -263,7 +263,7 @@ if __name__ == '__main__':
     assert conv.trasfCelsInFahr(20) == 68.0, "Err. per 20" 
     assert conv.trasfCelsInFahr(30) == 86.0, "Err. per 30" 
     print("Tutto ok!")
-```
+{% endhighlight %}
 
 </div>Quando vado a lanciare il file questo manderà in esecuzione tutti i test e nel caso uno di questi non funzioni, cioè se la mia implementazione non è
 
@@ -277,8 +277,8 @@ Ultimo vantaggio: un test mi permette di fare refactoring del codice. Questo sig
 
 È molto importante lasciare traccia su quanto viene implementato. Ciò che appare scontato durante il processo di scrittura potrebbe non esserlo più quando si va a rileggere quel codice un anno più tardi. Bisogna poi imparare ad essere buoni cittadini del mondo digitale e pensare che altri potrebbero utilizzare le funzioni che scriviamo e dunque è buona norma descriverne in maniera puntuale il funzionamento.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">class Conversioni:
+{% highlight python %}
+class Conversioni:
     """ Questa classe implementa alcune trasformazioni 
     tra diverse scale di temperatura 
     """
@@ -295,7 +295,7 @@ Ultimo vantaggio: un test mi permette di fare refactoring del codice. Questo sig
     def trasfFahrInCels(Temp):
         pass
     
-```
+{% endhighlight %}
 
 </div>#### Organizza il tuo codice in moduli 
 
@@ -307,8 +307,8 @@ Quando si scrive il codice è bene scriverlo in modo che questo sia facile da te
 
 La cartella progettodifisica contiene un file principale.py il quale contiene la sezione principale del codice, quello cioè che mando in esecuzione quando ho necessità di utilizzare il software.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># file: principale.py
+{% highlight python %}
+# file: principale.py
 
 # importa il modulo conversioni.py
 from grandezze.conversioni import *
@@ -325,7 +325,7 @@ def main():
 if __name__ == '__main__':
     main()
     
-```
+{% endhighlight %}
 
 </div>La funzione main contiene il flusso principale del programma.
 
@@ -335,8 +335,8 @@ L’istruzione **from** dà indicazioni all’interprete di caricare la libreria
 
 Qualora la variabile di sistema \_\_name\_\_ corrisponda alla stringa \_\_main\_\_ si innesca la chiamata alla funzione main(). Questa riga consente al nostro codice di capire se sta venendo eseguito come script a se stante, o se è invece stato richiamato come modulo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># file: grandezze/conversioni.py
+{% highlight python %}
+# file: grandezze/conversioni.py
 
 class Conversioni:
     
@@ -356,7 +356,7 @@ if __name__ == '__main__':
     assert conv.trasfCelsInFahr(30) == 86.0, "Err. per 30" 
     print("Tutto ok!")
     
-```
+{% endhighlight %}
 
 </div>In seguito troviamo un file di libreria in cui abbiamo precedentemente scritto l’implementazione delle funzioni che mi occorrono per fare conversioni tra grandezze. Questo file è contenuto nella cartella grandezze e si chiama conversioni.py. Questo file contiene due funzioni la prima trasforma i gradi Celsius in Fahrenheit, la seconda fa il contrario trasforma i gradi Fahrenheit in gradi Celsius. Notare che nella parte finale dentro l’if ci sono i test che si occupano di assicurarci la buona qualità della libreria. Se mando in run il file conversioni.py e visualizzo la scritta “tutto ok” vuol dire che la libreria funziona come ci si aspetta.
 

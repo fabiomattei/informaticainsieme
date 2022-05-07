@@ -21,11 +21,11 @@ Installare Python avendo l’accortezza di selezionare “Add Python3.8 to PATH�
 
 Assicurarsi che siano presenti le diciture:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">C:\Users\burat\AppData\Local\Programs\Python\Python38\Scripts\
 C:\Users\burat\AppData\Local\Programs\Python\Python38\
 
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Picture-4.png)</figure># Per installare i pacchetti python necessari:
 
@@ -33,18 +33,18 @@ Accedere all prompt dei comandi come amministratore, a tal fine cliccare con il 
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Picture-5.png)</figure>Digitare il comando:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">pip install arcade
 
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Picture-6.png)</figure>Il sistema provvederà a scaricare i pacchetti da internet ed installarli nel sistema.
 
 Se si dispone di python 3.7 o precedende digitare il comando:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">pip install dataclasses
 
-```
+{% endhighlight %}
 
 </div>

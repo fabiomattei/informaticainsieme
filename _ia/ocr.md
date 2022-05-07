@@ -17,8 +17,8 @@ Ciascun carattere è descritto da una matrice di 28×28 pixel ognuno dei quali d
 
 <figure class="wp-block-image size-full is-resized">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/04/tensorflow-neural-network-schema-tensorflow-mnist-tutorial-italiano-esempio-guida-tensorflow-italia-tensorflow-classification-hello-world-single-digit.png)</figure>Dal punto di vista del codice vedremo che l’algoritmo è analogo ai precedenti.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import numpy as np
+{% highlight python %}
+import numpy as np
 
 def sigmoide(z):
     return 1 / (1 + np.exp(-z))
@@ -66,6 +66,6 @@ for digit in range(10):
     test(data.X_test, data.Y_test[digit], w, digit)
 
 
-```
+{% endhighlight %}
 
 </div>

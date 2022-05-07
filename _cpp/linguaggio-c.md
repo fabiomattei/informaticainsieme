@@ -15,7 +15,7 @@ Per esercitarci con il C++ utilizzeremo un [compilatore on line reperibile qui](
 
 Ecco un primo esempio di codice:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#include <iostream>
 
 using namespace std;
@@ -34,7 +34,7 @@ int main() {
     cout << "altezza: " << altezza << "\n";
     cout << "ha come area: " << area << "\n";
 }
-```
+{% endhighlight %}
 
 </div>Notiamo come la sintassi sia diversa dal Python ma non la logica.
 
@@ -46,7 +46,7 @@ Il comando per mandare le informazioni in output è: **cout**. cout va utilizzat
 
 **Introduciamo l’input**
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#include <iostream>
 
 using namespace std;
@@ -65,7 +65,7 @@ int main() {
     cout << "altezza: " << altezza << "\n";
     cout << "ha come area: " << area << "\n";
 }
-```
+{% endhighlight %}
 
 </div>Utilizziamo lo stream di input **cin** per chiedere informazioni all’utente. cin va seguito dai caratteri **&gt;&gt;** seguiti dalla **variabile** che andrà a contenere l’informazione.
 
@@ -73,7 +73,7 @@ int main() {
 
 La sintassi della condizione in C++ non è molto diversa dal Python. La parola chiave da utilizzare è **if**. All’interno delle parentesi tonde si specifica l’espressione booleana da valutare. All’interno delle parentesi graffe si specifica il blocco di codice da eseguire.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#include <iostream>
 
 using namespace std;
@@ -88,13 +88,13 @@ int main() {
     }
     return 0;
 }
-```
+{% endhighlight %}
 
 </div>**L’iterazione**
 
 L’iterazione in C++ può essere definita con la sintassi for. In questo caso inizializziamo un contatore **i** a zero. Al centro va definita la condizione che verrà valutata a ogni inizio iterazione; se l’esito della condizione è positivo vengono eseguite le istruzioni all’interno del blocco di codice definito dalle parentesi graffe.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#include <iostream>
 
 using namespace std;
@@ -108,13 +108,13 @@ int main() {
 
     return 0;
 }
-```
+{% endhighlight %}
 
 </div>**Il ciclo while**
 
 L’iterazione in C++ può essere definita anche con la sintassi while. In questo caso inizializziamo un contatore **cont** a zero. Al centro va definita la condizione che verrà valutata a ogni inizio iterazione; se l’esito della condizione è positivo vengono eseguite le istruzioni all’interno del blocco di codice definito dalle parentesi graffe.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
+<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#include <iostream>
 
 using namespace std;
@@ -131,6 +131,6 @@ int main() {
 
     return 0;
 }
-```
+{% endhighlight %}
 
 </div>

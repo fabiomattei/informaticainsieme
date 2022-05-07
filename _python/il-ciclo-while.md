@@ -11,12 +11,12 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=92'
 
 La sintassi è la seguente:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">while <espressione booleana>:
+{% highlight python %}
+while <espressione booleana>:
     <comando 1>
     <comando 2>
     <comando 3>
-```
+{% endhighlight %}
 
 </div>While è un ciclo con **controllo in testa** questo significa che *il controllo sull’espressione booleana viene fatto prima di entrare nel ciclo*.
 
@@ -24,12 +24,12 @@ Le istruzioni all’interno del ciclo vengono eseguite se il risultato dell’es
 
 Scrivi ed esegui il seguente programma:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">cont = 0
+{% highlight python %}
+cont = 0
 while cont < 10:
    cont = cont + 1
    print(cont)
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-table">| cont | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -38,37 +38,37 @@ while cont < 10:
 
 Facciamo un secondo esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">cont = 0
+{% highlight python %}
+cont = 0
 while cont < 10:
    cont = cont + 1
 print(cont)
-```
+{% endhighlight %}
 
 </div>Noterai che l’istruzione print(cont) non è posta all’interno del ciclo (non è contenuta) dato che la sua indentazione è allineata alla parola while che definisce il ciclo e non più a destra di questa. Questo ciclo scriverà sulla console il solo numero 10.
 
 Ricorda che l’indentazione in Python è molto importante!
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">cont = 0
+{% highlight python %}
+cont = 0
 while cont < 10:
     cont = cont + 1
     print(cont, end = ' ') 
-```
+{% endhighlight %}
 
 </div>Cosa noti?
 
 Scriviamo ora un programma che calcoli la somma dei primi 10 numeri interi
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">n = 10
+{% highlight python %}
+n = 10
 cont = 1             # variabile contatore
 acc = 0              # variabile accumulatore
 while cont <= n:
     acc = acc + cont # incremento l'accumulatore di cont
     cont= cont + 1   # incremento il contatore di 1
 print(acc)           # al termine del ciclo scrivo il valore di acc
-```
+{% endhighlight %}
 
 </div>Nel precedente esempio abbiamo introdotto il concetto di **accumulatore**. Si dice accumulatore una variabile che *accumula dopo ciascuna esecuzione delle istruzioni all’interno del ciclo i risultati di un calcolo*. Nell’esempio ad acc viene sommato di volta in volta il contento della variabile contatore. Possiamo vedere come le variabili si comportano in una tabella di tracciamento:
 
@@ -77,8 +77,8 @@ print(acc)           # al termine del ciclo scrivo il valore di acc
 | **cont** | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 | **acc** | 0 | 1 | 3 | 6 | 10 | 15 | 21 | 28 | 36 | 45 | 55 |
 
-</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Questo programma calcola la sequenza di Fibonacci.
+</figure>{% highlight python %}
+# Questo programma calcola la sequenza di Fibonacci.
 acc_a = 0
 acc_b = 1
 cont = 0
@@ -94,12 +94,12 @@ while cont < max_cont:
   # prosegue la stampa sulla stessa linea.
   print(vecchio_acc_a)
 print()
-```
+{% endhighlight %}
 
 </div>L’algoritmo di Fibonacci funziona su di un gioco di due variabili accumulatori: acc\_a e acc\_b.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"># Attende sino a quando non viene inserita la giusta password.
+{% highlight python %}
+# Attende sino a quando non viene inserita la giusta password.
 # Usate Control-C per fermare il programma senza password.
 # Notate che se non viene inserita la giusta password, il ciclo
 # while prosegue all’infinito.
@@ -108,7 +108,7 @@ password = "foobar"
 while password != "unicorn":
    password = input("Password:")
 print "Benvenuto"
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"></iframe></div></figure>**Esercizio 1:**
 

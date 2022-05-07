@@ -9,10 +9,10 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=216'
 
 La funzione print stampa un messaggio sulla console sullo schermo.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print("Hello World")
+{% highlight python %}
+print("Hello World")
 
-```
+{% endhighlight %}
 
 </div>La funzione print() stampa un messaggio specifico sullo schermo.
 
@@ -20,10 +20,10 @@ Il messaggio può essere una stringa di testo o un qualsiasi altro tipo di varia
 
 #### Sintassi
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print(oggetto(i), sep=separatore, end=fine)
+{% highlight python %}
+print(oggetto(i), sep=separatore, end=fine)
 
-```
+{% endhighlight %}
 
 </div><figure class="wp-block-table">| Parametro | Descrizione |
 |---|---|
@@ -35,12 +35,12 @@ Il messaggio può essere una stringa di testo o un qualsiasi altro tipo di varia
 
 Digita e manda in esecuzione le seguenti istruzioni:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"> print("Ciao", "Come stai?") 
+{% highlight python %}
+ print("Ciao", "Come stai?") 
  print("Mela", "Ciliegia", "Pesca", sep="---")
  print("Trota", "Salmone", "Tonno", end=" ")
  print("Aquila", "Falco", "Cardellino", sep="#", end="@")
  
-```
+{% endhighlight %}
 
 </div>Leggi cosa viene scritto nella console e mettilo in relazione con i comandi che hai digitato.

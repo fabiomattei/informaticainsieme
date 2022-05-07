@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=138'
 ---
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/frattalistella-1024x992.png)</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import turtle
+<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/frattalistella-1024x992.png)</figure>{% highlight python %}
+import turtle
 turtle.hideturtle()
 turtle.pencolor('red')
 turtle.speed(0)
@@ -34,10 +34,10 @@ for i in range(1,RICORSIONE+1):
    koch(i,DISTANZA); turtle.right(120)
    koch(i,DISTANZA); turtle.right(120)
 turtle.done()
-```
+{% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/frattalialbero-1024x975.png)</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import turtle
+</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/frattalialbero-1024x975.png)</figure>{% highlight python %}
+import turtle
 #--------------------------
 turtle.shape('turtle')
 turtle.pencolor('red')
@@ -64,6 +64,6 @@ DISTANZA=250
 RATIO=1.65
 albero(RICORSIONE,DISTANZA)
 turtle.done()
-```
+{% endhighlight %}
 
 </div>
