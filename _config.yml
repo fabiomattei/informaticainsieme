@@ -27,6 +27,44 @@ url: "https://fabiomattei.github.io" # the base hostname & protocol for your sit
 twitter_username: fabiomattei
 github_username:  fabiomattei
 
+collections:
+  algoritmi:
+    output: true
+    permalink: /algoritmi/:path
+  codifica:
+    output: true
+    permalink: /codifica/:path
+  cpp:
+    output: true
+    permalink: /cpp/:path	
+  database:
+    output: true
+    permalink: /database/:path
+  flask:
+    output: true
+    permalink: /flask/:path
+  ia:
+    output: true
+    permalink: /ia/:path	
+  pandas:
+    output: true
+    permalink: /pandas/:path
+  problemsolving:
+    output: true
+    permalink: /problemsolving/:path
+  python:
+    output: true
+    permalink: /python/:path	
+  pythonmath:
+    output: true
+    permalink: /pythonmath/:path
+  videogames:
+    output: true
+    permalink: /videogames/:path
+  web:
+    output: true
+    permalink: /web/:path
+	
 # Build settings
 theme: minima
 plugins:
