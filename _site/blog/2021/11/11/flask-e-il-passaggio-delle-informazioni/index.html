@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Flask e il passaggio delle informazioni | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Flask e il passaggio delle informazioni" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: GET e POST." />
+<meta property="og:description" content="Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: GET e POST." />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-11T05:52:06+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Flask e il passaggio delle informazioni" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2021-11-11T05:52:06+01:00","datePublished":"2021-11-11T05:52:06+01:00","description":"Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: GET e POST.","headline":"Flask e il passaggio delle informazioni","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/"},"url":"http://localhost:4000/informaticainsieme/blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Flask e il passaggio delle informazioni</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-11-11T05:52:06+01:00" itemprop="datePublished">Nov 11, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">fabio</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: <strong>GET</strong> e <strong>POST</strong>.</p>
+
+<p>Abbiamo già visto la chiamata GET che consiste nel passare le informazioni attraverso la URL ora vediamo le chiamate POST.</p>
+
+<p>Una chiamata <strong>POST</strong> si verifica quando mi trovo di fronte ad una form che ha al suo interni diversi campi e un bottone per spedire i dati:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">action = </span><span class="s">"http://localhost:5000/login"</span> <span class="na">method = </span><span class="s">"post"</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;p&gt;</span>Inserisci le credenziali:<span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type = </span><span class="s">"text"</span> <span class="na">name = </span><span class="s">"name"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+         <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type = </span><span class="s">"password"</span> <span class="na">name = </span><span class="s">"password"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+         <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type = </span><span class="s">"submit"</span> <span class="na">value = </span><span class="s">"submit"</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>   
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>&lt;/div&gt;Questa pagina contiene una form HTML che punta alla pagina route login del controller e utilizza il metodo POST come specificato alla riga 3.</p>
+
+<p>Nelle riga 5 compare un input field, che corrisponde ad uno spazio nella pagina in cui l’utente può inserire dei dati.</p>
+
+<p>Nella riga 6 compare un password field, il cui funzionamento è analogo all’input field, ma a differenza di questo non va a mostrare all’utente quanto digitato.</p>
+
+<p>Alla fine compare un submit button, che permette di inviare i dati al server.</p>
+
+<h4 id="il-lato-controller">Il lato controller</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/login'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s">'POST'</span><span class="p">,</span> <span class="s">'GET'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">'GET'</span><span class="p">:</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'login.html'</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>   <span class="c1"># significa request method = POST
+</span>        <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">'username'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'gino'</span> <span class="ow">and</span> <span class="n">request</span><span class="p">.</span><span class="n">form</span><span class="p">[</span><span class="s">'password'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'gino'</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'paginasegreta.html'</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="s">'Invalid username/password'</span>
+            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'login.html'</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+        </code></pre></figure>
+
+<p>&lt;/div&gt;Proviamo a realizzare la logica che dal lato controller si occupa del log in.</p>
+
+<p>Vediamo che dal lato controller viene specificato nella direttiva @app.route nella riga 1 che la funzione login() risponde alle chiamate GET e POST alla route /login.</p>
+
+<p>Se il metodo richiesto è GET viene mostrata la pagina che ha al suo interno la form per il login.</p>
+
+<p>Se il metodo richiesto è POST vuol dire che la form è stata precedentemente mostrata e l’utente ha mandato dei dati. I dati sono contenuti nel <strong>dizionario request.form</strong>. Le chiavi del dizionario corrispondono agli <strong>attributi name</strong> che abbiamo specificato nella definizione dell’html della form.</p>
+
+<p>Se le informazioni inviate corrispondono agli username e password che il sistema conosce viene visualizzata paginasegreta.html in caso contrario viene mostrato un messaggio di errore e si torna alla pagina di login.</p>
+
+<p>&lt;/body&gt;&lt;/html&gt;</p>
+
+  </div><a class="u-url" href="/informaticainsieme/blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

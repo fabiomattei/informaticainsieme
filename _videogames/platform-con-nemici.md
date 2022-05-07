@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=68'
 ---
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/01/sprite_enemies_in_platformer1-1024x808.png)</figure>{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/01/sprite_enemies_in_platformer1-1024x808.png)</figure>{% highlight shell %}
+
 """
 Mostra come aggiungere nemici in un gioco platform
 """
@@ -203,5 +203,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-{% endhighlight %}
 {% endhighlight %}

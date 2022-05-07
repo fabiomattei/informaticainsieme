@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Palla controllata dal mouse | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Palla controllata dal mouse" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="fare cosa gradita." />
+<meta property="og:description" content="fare cosa gradita." />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/videogames/quadrato-mouse" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/videogames/quadrato-mouse" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-20T13:03:52+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Palla controllata dal mouse" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2020-01-20T13:03:52+01:00","datePublished":"2020-01-20T13:03:52+01:00","description":"fare cosa gradita.","headline":"Palla controllata dal mouse","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/videogames/quadrato-mouse"},"url":"http://localhost:4000/informaticainsieme/videogames/quadrato-mouse"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Palla controllata dal mouse</h1>
+  </header>
+
+  <div class="post-content">
+    
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="s2">"""
+Questa semplice animazione mostra come muovere uno sprite utilizzando il mouse e gestire il click del mouse.
+"""</span>
+
+import arcade
+
+SCREEN_WIDTH <span class="o">=</span> 640
+SCREEN_HEIGHT <span class="o">=</span> 480
+SCREEN_TITLE <span class="o">=</span> <span class="s2">"Move Mouse Example"</span>
+
+
+
+class Ball:
+    <span class="s2">"""
+    Questa classe gestisce lo sprite Ball.
+    E' bene creare una classe per ogni tipo di sprite che si vuole includere nel videogioco
+    """</span>
+    def __init__<span class="o">(</span>self, position_x, position_y, radius, color<span class="o">)</span>:
+        <span class="c"># Costruttore prende i parametri che gli sono passati e crea una istanza della classe</span>
+        self.position_x <span class="o">=</span> position_x
+        self.position_y <span class="o">=</span> position_y
+        self.radius <span class="o">=</span> radius
+        self.color <span class="o">=</span> color
+
+    def draw<span class="o">(</span>self<span class="o">)</span>:
+        <span class="s2">""" Disegna lo sprite utilizzando le informazioni passate al costruttore. """</span>
+        arcade.draw_circle_filled<span class="o">(</span>self.position_x, self.position_y, self.radius, self.color<span class="o">)</span>
+
+
+class MyGame<span class="o">(</span>arcade.Window<span class="o">)</span>:
+
+    def __init__<span class="o">(</span>self, width, height, title<span class="o">)</span>:
+        <span class="c"># Chiama il costruttore della classe padre</span>
+        super<span class="o">()</span>.__init__<span class="o">(</span>width, height, title<span class="o">)</span>
+
+        <span class="c"># Fa sparire il mouse quando è dentro la finestra del videogioco.</span>
+        <span class="c"># Così vediamo solo il nostro sprite e non il puntatore.</span>
+        self.set_mouse_visible<span class="o">(</span>False<span class="o">)</span>
+
+        arcade.set_background_color<span class="o">(</span>arcade.color.ASH_GREY<span class="o">)</span>
+
+        <span class="c"># Crea una istanza della classe Ball</span>
+        self.ball <span class="o">=</span> Ball<span class="o">(</span>50, 50, 15, arcade.color.AUBURN<span class="o">)</span>
+
+    def on_draw<span class="o">(</span>self<span class="o">)</span>:
+        <span class="s2">""" Disegna (Render) la schermata grafica """</span>
+        arcade.start_render<span class="o">()</span>
+        <span class="c"># viene chiamato il metodo draw di tutti gli sprite</span>
+        self.ball.draw<span class="o">()</span>
+
+    def on_mouse_motion<span class="o">(</span>self, x, y, dx, dy<span class="o">)</span>:
+        <span class="s2">""" Chiamato per aggiornare le nostre istanze. Chiamato approssimativamente 60 volte al secondo."""</span>
+        self.ball.position_x <span class="o">=</span> x
+        self.ball.position_y <span class="o">=</span> y
+
+    def on_mouse_press<span class="o">(</span>self, x, y, button, modifiers<span class="o">)</span>:
+        <span class="s2">"""
+        Chiamato quando viene premuto un bottone sul mouse
+        """</span>
+        print<span class="o">(</span>f<span class="s2">"You clicked button number: {button}"</span><span class="o">)</span>
+        <span class="k">if </span>button <span class="o">==</span> arcade.MOUSE_BUTTON_LEFT:
+            self.ball.color <span class="o">=</span> arcade.color.BLACK
+
+    def on_mouse_release<span class="o">(</span>self, x, y, button, modifiers<span class="o">)</span>:
+        <span class="s2">"""
+        Chiamato quanto viene rilasciato un bottone sul mouse
+        """</span>
+        <span class="k">if </span>button <span class="o">==</span> arcade.MOUSE_BUTTON_LEFT:
+            self.ball.color <span class="o">=</span> arcade.color.AUBURN
+
+
+def main<span class="o">()</span>:
+    MyGame<span class="o">(</span>SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE<span class="o">)</span>
+    arcade.run<span class="o">()</span>
+
+
+<span class="k">if </span>__name__ <span class="o">==</span> <span class="s2">"__main__"</span>:
+    main<span class="o">()</span>
+    
+    </code></pre></figure>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

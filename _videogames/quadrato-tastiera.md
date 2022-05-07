@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=17'
 ---
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 """
 Questa semplice animazione mostra come muovere uno sprite utilizzando la tastiera
 """
@@ -108,5 +108,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-{% endhighlight %}
 {% endhighlight %}

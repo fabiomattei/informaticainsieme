@@ -11,8 +11,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=74'
 
 [Per un tutorial completo in inglese clicca qui](http://arcade.academy/examples/platform_tutorial/index.html).
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 """
 Platformer Game
 """
@@ -236,5 +236,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-{% endhighlight %}
 {% endhighlight %}

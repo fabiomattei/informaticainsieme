@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Funzioni | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Funzioni" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python è un linguaggio e in quanto tale è costituito da un vocabolario che comprente molte parole, tra queste ricordiamo input, print, if, while e for. Attraverso queste parole il programmatore comunica all’interprete, e quest’ultimo al computer, le operazioni da svolgere." />
+<meta property="og:description" content="Python è un linguaggio e in quanto tale è costituito da un vocabolario che comprente molte parole, tra queste ricordiamo input, print, if, while e for. Attraverso queste parole il programmatore comunica all’interprete, e quest’ultimo al computer, le operazioni da svolgere." />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/python/funzioni" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/python/funzioni" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-08T11:59:27+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Funzioni" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2020-02-08T11:59:27+01:00","datePublished":"2020-02-08T11:59:27+01:00","description":"Python è un linguaggio e in quanto tale è costituito da un vocabolario che comprente molte parole, tra queste ricordiamo input, print, if, while e for. Attraverso queste parole il programmatore comunica all’interprete, e quest’ultimo al computer, le operazioni da svolgere.","headline":"Funzioni","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/python/funzioni"},"url":"http://localhost:4000/informaticainsieme/python/funzioni"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Funzioni</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Python è un linguaggio e in quanto tale è costituito da un vocabolario che comprente molte parole, tra queste ricordiamo input, print, if, while e for. Attraverso queste parole il programmatore comunica all’interprete, e quest’ultimo al computer, le operazioni da svolgere.</p>
+
+<p>Il vocabolario di Python non è fisso ma estensibile possiamo cioè definire nuove parole con nuovi significati. Queste vengono chiamte funzioni e raggruppano al loro interno una sequenza di istruzioni ordinata (algoritmo) da eseguire quando vengono invocate.</p>
+
+<h4 id="la-mia-prima-funzione">La mia prima funzione</h4>
+
+<p>Iniziamo con un esempio, definiamo una funzione hello che si limita a scrivere sul display alcune stringhe di testo:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Ciao!'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Ciao!!!'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Ciao a te!'</span><span class="p">)</span>
+    </code></pre></figure>
+
+<p>&lt;/div&gt;L’istruzione def ci permette di definire una nuova funzione. Questa viene seguita dalla parola che vogliamo utilizzare come nome per la funzione, in questo caso hello. La parola hello viene seguita da una coppia di parentesi che si aprono e subito dopo si chiudono, vedremo in seguito qual’è il loro scopo.</p>
+
+<p>Dato che, come abbiamo detto in precedenza, una funzione raggruppa al suo interno una sequenza di istruzioni da eseguire quando questa viene invocata, troviamo, al chiudersi delle parentesi, il simbolo : e sotto di questi il blocco di istruzioni da eseguire.</p>
+
+<p>A questo punto l’interprete sa che quando incontra l’invocazione della funzione hello deve eseguire le istruzioni in essa contenute.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">'Precede la chiamata a funzione'</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Segue la chiamata a funzione'</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Output:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">Precede le chiamate a funzione Ciao!
+Ciao!!!
+Ciao a te!
+Ciao!
+Ciao!!!
+Ciao a te!
+Ciao!
+Ciao!!!
+Ciao a te!
+Segue le chiamate a funzione</code></pre></figure>
+
+<p>&lt;/div&gt;Una delle finalità principali delle funzioni è quella di raggruppare istru- zioni che vengono utilizzate molte volte. Se non fosse stata definita una funzione avreste dovuto copiare e incollare il codice al suo interno molte volte e lo script avrebbe avuto questo aspetto:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">'Precede le chiamate a funzione'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!!!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao a te!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!!!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao a te!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao!!!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Ciao a te!'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Segue le chiamate a funzione'</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Definire funzioni aiuta ad essere più efficaci nella scrittura di codice dato che aiuta a tenere gli script più brevi.</p>
+
+<h4 id="parametri-e-argomenti">Parametri e argomenti</h4>
+
+<p>Molte delle istruzoni Python viste in precedenza sono a loro volta delle funzioni. Per esempio la funzione print() è una di queste. Quando chiamate la funzione print(), le passate dei valori chiamati argomenti scrivendoli tra parentesi.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">'Io sono un argomento'</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Ad esempio in questo script viene invocata la funzione print() passan- dole, come argomento, la stringa di testo ’Io sono un argomento’.</p>
+
+<p>Proviamo a definire la funzione hello in questo modo:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'Ciao '</span> <span class="o">+</span> <span class="n">nome</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;La definizione della funzione hello in questo programma ha un para- metro chiamato nome. Un parametro è una variabile in cui viene memorizzato un argomento nel momento in cui viene chiamata la funzione. La prima volta che la funzione viene chiamata le viene passata la stringa Alice come argomento, l’esecuzione del programma entra nella fun- zione e la variabile nome viene impostata ad “Alice”. L’istruzione print va dunque a stampare la stringa Ciao Alice. L’argomento, memorizzato nel parametro, viene dimenticato al terminare dell’esecuzione della funzione. È un po’ come quello che succede alle variabili di un programma che vengono dimenticate una volta giunto a conclusione.</p>
+
+<h4 id="i-valori-di-ritorno">I valori di ritorno</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">lunghezza</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="s">'Ciao'</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Nell’esempio in alto, si utilizza la funzione len, passandole come argo- mento la stringa ’Ciao’ al fine di far calcolare la lunghezza della stringa pas- sata. Il valore calcolato viene restituito al chiamante e da questi memorizzato nella variabile lunghezza.</p>
+
+<p>Quando chiamate la funzione len e le passate un argomento come ’Ciao’ la funzione calcola come valore l’intero 4, la lunghezza della stringa. In generale il valore che una funzione calcola viene chiamato valore di ritorno. Quando si crea una funzione è possibile specificare quale sia il valore di ritorno attraverso l’istruzione return. Facciamo un esempio:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">raddoppia</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">numero</span> <span class="o">*</span> <span class="mi">2</span></code></pre></figure>
+
+<p>&lt;/div&gt;La funzione raddoppia accetta un parametro e restituisce il doppio dell’argomento che le viene passato.</p>
+
+<p>Facciamo un secondo esempio:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">pariodispari</span><span class="p">(</span><span class="n">numero</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">numero</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">'Pari'</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s">'Dispari'</span></code></pre></figure>
+
+<p>&lt;/div&gt;La funzione pariodispari accetta un parametro e restituisce la stringa ’Pari’ se l’argomento passato è pari e la stringa ’Dispari’ in caso contrario. È possibile inserire due o più istruzioni di return in una funzione. Duran- te l’esecuzione del programma (a runtime) una di questa prima poi verrà eseguita. Quando questo accade il computer esce dalla funzione e torna al programma chiamante portando con se il valore di ritorno.</p>
+
+<p>Notate che quando l’interprete incontra l’istruzione return esce dall’am- bito della funzione e torna nel programma da cui questa era stata chiamata. Nessuna istruzione all’interno della funzione viene eseguita dopo il return.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">primonumero</span> <span class="o">=</span> <span class="n">pariodispari</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>   <span class="c1"># var primonumero = 'Pari' 
+</span><span class="n">secondonumero</span> <span class="o">=</span> <span class="n">pariodispari</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1"># var secondonumero = 'Dispari'</span></code></pre></figure>
+
+<p>&lt;/div&gt;#### Parametri facoltativi</p>
+
+<p>È possibile definire delle funzioni con dei parametri facoltativi, parametri cioè per cui viene specificato un argomento di default che viene utilizzato a meno che non specificato diversamente dal chiamante.</p>
+
+<p>Facciamo un esempio</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">fattore1</span><span class="p">,</span> <span class="n">fattore2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">fattore1</span> <span class="o">*</span> <span class="n">fattore2</span>
+    
+    </code></pre></figure>
+
+<p>&lt;/div&gt;Il parametro fattore2 viene inizializzato a 2 se non specificato diversamente dal chiamante.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">prodotto</span> <span class="o">=</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">prodotto</span><span class="p">)</span> <span class="c1"># stampa il valore 6 
+</span><span class="n">prodotto</span> <span class="o">=</span> <span class="n">moltiplica</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">prodotto</span><span class="p">)</span> <span class="c1"># stampa il valore 9</span></code></pre></figure>
+
+<p>&lt;/div&gt;Notate che i parametri facoltativi vanno sempre specificati dopo aver specificato tutti i parametri ordinari dunque se si definisce una funzione come nell’esempio seguente l’interprete restituisce un messaggio di errore di sintassi.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">moltiplica</span><span class="p">(</span><span class="n">fattore1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">fattore2</span><span class="p">):</span> 
+    <span class="k">return</span> <span class="n">fattore1</span> <span class="o">*</span> <span class="n">fattore2</span>
+    
+    </code></pre></figure>
+
+<p>&lt;/div&gt;#### Ambito locale e ambito globale</p>
+
+<p>Parametri e variabili definiti all’atto della definizione di una funzione hanno un ambito (o raggio d’azione, in inglese scope) locale alla funzione stessa. Le variabili assegnate all’esterno di tutte le funzioni hanno invece un ambito globale. Una variabile non può essere contemporaneamente locale e globale.</p>
+
+<p>Pensate ad un ambito come ad una sorta di contenitore di variabili. Quando un ambito viene distrutto tutti i valori conservati nelle variabili di quell’ambito vengono dimenticati. Esiste un solo ambito globale e viene creato quando inizia il programma. Esistono tanti ambiti locali quante sono le funzioni che definiamo.</p>
+
+<p>Un ambito locale viene creato ogni volta che si chiama una funzione. Qualsiasi variabile che riceva assegnazione in quella funzione esiste solo nel- l’ambito locale. Quando la funzione ritorna al chiamante l’ambito locale viene distutto e quelle variabili vengono dimenticate. Alla seguente chia- mata della stessa funzione le variabili locali non ricorderanno i valori che vi erano memorizzati nella precedente chiamata. Valgono le seguenti proprietà:</p>
+
+<ul>
+  <li>istruzioni nell’ambito globale non possono usare variabili che appartengono ad un ambito locale;</li>
+  <li>istruzioni nell’ambito locale possono liberamente accedere a variabili definite in ambito globale;</li>
+  <li>istruzioni contenute all’interno di un ambito locale non possono accedere a variabili appartenenti ad un diverso ambito locale;</li>
+  <li>è possibile utilizzare lo stesso nome per variabili diverse se si trovano in ambiti diversi.</li>
+</ul>
+
+<p>È considerata buona norma non modificare il valore di una variabile globale all’interno di una funzione (effetto collaterale o in inglese side effect)</p>
+
+<h4 id="le-varabili-locali-non-possono-essere-utilizzate-nellambito-globale">Le varabili locali non possono essere utilizzate nell’ambito globale</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">pollaio</span><span class="p">():</span> 
+    <span class="n">uova</span> <span class="o">=</span> <span class="mi">32765</span>
+<span class="n">pollaio</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># NameError: name 'uova' is not defined</span></code></pre></figure>
+
+<p>&lt;/div&gt;Come potete notare la variabile uova appartiene all’ambito delle funzione pollaio. La funzione viene invocata, ma una volta terminata la variabile locale uova viene distrutta, non può dunque essere utilizzata dal flusso di programma principale.</p>
+
+<h4 id="gli-ambiti-locali-non-possono-usare-variabili-di-altri-ambiti-locali">Gli ambiti locali non possono usare variabili di altri ambiti locali</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">pollaio</span><span class="p">():</span>
+    <span class="n">uova</span> <span class="o">=</span> <span class="mi">32765</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># corretto
+</span>
+<span class="k">def</span> <span class="nf">allevamento</span><span class="p">():</span>
+    <span class="n">pecore</span> <span class="o">=</span> <span class="mi">1234567</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">pecore</span><span class="p">)</span> <span class="c1"># corretto
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span>   <span class="c1"># NameError:'uova' not defined</span></code></pre></figure>
+
+<p>&lt;/div&gt;Come potete vedere la funzione allevamento tenta di accedere alla variabile uova che appartiene all’ambito della funzione pollaio. Questo non è legale.</p>
+
+<h4 id="le-variabili-globali-possono-essere-lette-da-un-ambito-locale">Le variabili globali possono essere lette da un ambito locale</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">uova</span> <span class="o">=</span> <span class="mi">1234567</span> 
+<span class="k">def</span> <span class="nf">pollaio</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># corretto 
+</span><span class="n">pollaio</span><span class="p">()</span></code></pre></figure>
+
+<p>&lt;/div&gt;La funzione pollaio riesce ad accedere alla variabile uova definita in ambito globale.</p>
+
+<h4 id="variabili-locali-e-globali-con-lo-stesso-nome">Variabili locali e globali con lo stesso nome</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">uova</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># variabile globale
+</span><span class="k">def</span> <span class="nf">pollaio</span><span class="p">():</span>
+    <span class="n">uova</span> <span class="o">=</span> <span class="mi">32765</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># corretto, stampa 32765
+</span><span class="k">def</span> <span class="nf">allevamento</span><span class="p">():</span> 
+    <span class="n">uova</span> <span class="o">=</span> <span class="mi">1234567</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># corretto, stampa 1234567
+</span><span class="k">print</span><span class="p">(</span><span class="n">uova</span><span class="p">)</span> <span class="c1"># corretto, stampa 7</span></code></pre></figure>
+
+<p>&lt;/div&gt;La variabile uova viene definita sia nell’ambito globale, che nell’ambito della funzione pollaio che nell’ambito della funzione allevamento. Ciascun ambito riesce però ad accedere alla variabile ivi definita.</p>
+
+<h4 id="collaborare-attraverso-le-funzioni">Collaborare attraverso le funzioni</h4>
+
+<p>Quando un gruppo di sviluppatori lavora ad un software un aspetto mol- to delicato è quello della divisione dei compiti e del lavoro. Un approccio che spesso viene utilizzato è quello di strutturare il software identificando- ne le varie caratteristiche quindi organizzare queste ultime all’interno delle varie funzioni. Se per esempio la classe 3C volesse creare un software per la gestione della biblioteca della scuola, potrebbe dividere il lavoro in varie sezioni (interfaccia utente, salvataggio dati, regole per l’utilizzo del servi- zio, servizi di notifiche, servizi di calendario). A questo punto il gruppo stabilisce un linguaggio comune per la comunicazione esplicitando la firma di tutte le funzioni. Questo consiste nell’esplicitare il nome delle funzioni che andranno a costituire il software, i parametri che queste accettano e i valori che queste riportano al chiamante. Tutto ciò va fatto prima dell’implementazione delle funzioni stesse. In questo modo gli sviluppatori possono lavorare in modo indipendente sapendo esattamente come il loro lavoro andrà a integrarsi nel resto del sistema software che si sta creando.</p>
+
+<h4 id="inizia-scrivendo-un-test">Inizia scrivendo un test</h4>
+
+<p>Supponiamo di voler scrivere una funzione che deve fare la trasformazione di gradi Celsius in gradi Fahrenheit. Noi tutti sappiamo che: Tf = Tc * 9 / 5 + 32.</p>
+
+<p>Dato che dobbiamo sviluppare questa importante funzione matematica diventa tedioso iniziare a scrivere il codice e poi inserire l’input per controllare che la funzione si comporti come atteso. Ci serviamo dunque dell’istruzione assert.</p>
+
+<p>Assert accetta due argomenti: il primo è una proposizione booleana che può essere vera o falsa (True o False) e nel caso questa non lo sia stampa il messaggio che segue la virgola.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">trasfCelsInFahr</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">temp</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">+</span><span class="mi">32</span>
+<span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">32.0</span><span class="p">,</span> <span class="s">"Errore per 0"</span> 
+<span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mf">68.0</span><span class="p">,</span> <span class="s">"Errore per 20"</span> 
+<span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">==</span> <span class="mf">86.0</span><span class="p">,</span> <span class="s">"Errore per 30"</span></code></pre></figure>
+
+<p>&lt;/div&gt;Quando vado a lanciare il programma questo manderà in esecuzione tutti i test e nel caso uno di questi non funzioni, cioè se la mia implementazione non è corretta, visualizza un messaggio di errore. Questo espediente mi consente di correggere l’implementazione della funzione dato che è molto rapido eseguire i test per vedere se tutto funziona come atteso.</p>
+
+<p>Un test rappresenta anche una forma di contratto tra programmato- ri. Quando due programmatori collaborano su di una applicazione possono accordarsi sulla firma delle funzioni e su alcuni esempio che scrivono sotto forma di test. In questo modo sarà chiaro per entrambi quando la funzione è ben implementata.</p>
+
+<p>Ultimo vantaggio un test mi permette di fare refactoring del codice. Questo significa che posso lavorare sull’implementazione della funzione per migliorarla dal punto di visto delle prestazioni per esempio, essendo sicuro di non introdurre bugs nel codice dato che di volta in volta controllo che tutti i test diano esito positivo.</p>
+
+<h4 id="scrivere-la-documentazione-per-ciascuna-funzione">Scrivere la documentazione per ciascuna funzione</h4>
+
+<p>È molto importante lasciare traccia su quanto viene calcolato da una funzione. Ciò che appare scontato durante il processo di scrittura di una funzione potrebbe non esserlo più quando la si va a riutilizzare un anno più tardi. Bisogna poi imparare ad essere buoni cittadini del mondo digitale e pensare che altri potrebbero utilizzare le funzioni che scriviamo e dunque è buona norma descriverne in maniera puntuale il funzionamento.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">trasfCelsInFahr</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span>
+    <span class="s">""" This function trasforms the temperature provided in parameter temp from Fahrenheit scale to Celsius scale
+    temp: float
+    return: float
+    """</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">Temperature</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">+</span><span class="mi">32</span></code></pre></figure>
+
+<p>&lt;/div&gt;#### Organizza il tuo codice in moduli</p>
+
+<p>Quando si scrive il codice è bene scriverlo in modo che questo sia facile da tenere sotto controllo con i test e che questo sia riutilizzabile in una o più applicazioni. Per questo è importante organizzare il codice in moduli. Immaginiamo di lavorare su di un progetto di fisica. Saggiamente decidiamo di creare una cartella che conterrà tutti i file del nostro progetto e, senza sforzare troppo la nosrta fantasia la chiameremo progettodifisica.</p>
+
+<ul>
+  <li>progettodifisica/</li>
+  <li>progettodifisica/principale.py</li>
+  <li>progettodifisica/grandezze/conversioni.py</li>
+</ul>
+
+<p>La cartella progettodifisica contiene un file principale.py il quale contiene la sezione principale del codice, quello cioè che mando in esecuzione quando ho necessità di utilizzare il software.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># principale.py
+</span>
+<span class="c1"># importa il modulo conversioni.py
+</span><span class="kn">from</span> <span class="nn">grandezze.conversioni</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'Temp Celsius: '</span><span class="p">))</span> 
+    <span class="n">fahr</span> <span class="o">=</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> 
+    <span class="k">print</span><span class="p">(</span><span class="s">'Temp. Fahrenheit = '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">fahr</span><span class="p">))</span>
+
+<span class="c1"># se lo script viene mandato in 
+# esecuzione quanto contenuto in 
+# questo if viene eseguito
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
+<p>&lt;/div&gt;La funzione main contiene il flusso principale del programma.</p>
+
+<p>L’istruzione from dà indicazioni all’interprete di caricare la libreria che abbiamo appena definito. È buona norma metterla in alto, all’inizio del file. La sua sintassi è:</p>
+
+<p>from nomercartella.nomefile import nomefunzione</p>
+
+<p>Qualora la variabile di sistema __name__ corrisponda alla stringa __main__ si innesca la chiamata alla funzione main(). Questa riga consente al nostro codice di capire se sta venendo eseguito come script a se stante, o se è invece stato richiamato come modulo.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># grandezze/conversioni.py
+</span>
+<span class="k">def</span> <span class="nf">trasfCelsInFahr</span><span class="p">(</span><span class="n">Temp</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">Temp</span><span class="o">*</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="o">+</span><span class="mi">32</span>
+
+<span class="k">def</span> <span class="nf">trasfFahrInCels</span><span class="p">(</span><span class="n">Temp</span><span class="p">):</span>
+  <span class="k">pass</span>
+  
+<span class="c1"># se lo script viene mandato in 
+# esecuzione quanto contenuto in 
+# questo if viene eseguito
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">32.0</span><span class="p">,</span> <span class="s">"Err. per 0"</span> 
+    <span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="mf">68.0</span><span class="p">,</span> <span class="s">"Err. per 20"</span> 
+    <span class="k">assert</span> <span class="n">trasfCelsInFahr</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="o">==</span> <span class="mf">86.0</span><span class="p">,</span> <span class="s">"Err. per 30"</span> 
+    <span class="k">print</span><span class="p">(</span><span class="s">"Tutto ok!"</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;In seguito troviamo un file di libreria in cui abbiamo precedentemente scritto l’implementazione delle funzioni che mi occorrono per fare conversioni tra grandezze. Questo file è contenuto nella cartella grandezze e si chiama conversioni.py. Questo file contiene due funzioni la prima trasforma i gradi Celsius in Fahrenheit, la seconda fa il contrario trasforma i gradi Fahrenheit in gradi Celsius. Notare che nella parte finale dentro l’if ci sono i test che si occupano di assicurarci la buona qualità della libreria. Se mando in run il file conversioni.py e visualizzo la scritta “tutto ok” vuol dire che la libreria funziona come ci si aspetta.</p>
+
+<h3 id="esercizi">Esercizi</h3>
+
+<p>Exercise 1:</p>
+
+<p>Scrivi una funzione saluta che prenda la stringa nome come parametro e restituisca al chiamate la stringa composta da ’Ciao ’ + nome.</p>
+
+<p>Exercise 2:</p>
+
+<p>Scrivi una funzione calcolamaggiore che prenda due numeri come parametro (num1 e num2) e restituisca al chiamante il più grande tra i due.</p>
+
+<p>Exercise 3:</p>
+
+<p>Scrivi una funzione calcolamaggiore che prenda tre numeri come parametro (num1, num2 e num3) e restituisca al chiamante il più grande tra i tre.</p>
+
+<p>Exercise 4:</p>
+
+<p>Scrivi una funzione a cui viene passato un carattere come parametro, e che restituisca al chiamante la stringa ’vocale’ se il carattere è una vocale o la stringa ’consonante’ in caso contrario.</p>
+
+<p>Exercise 5:</p>
+
+<p>Riorganizza il seguente codice Python in funzioni. Bisogna soddividere l’algoritmo in algoritmi piú piccoli e semplici da capire in modo da rendere il codice più leggibile.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s">'La mia calcolatrice'</span><span class="p">)</span> 
+<span class="n">finito</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">while</span> <span class="n">finito</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Operatore (+ - * /): '</span><span class="p">)</span> 
+    <span class="n">num1</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Primo numero: '</span><span class="p">)</span>
+    <span class="n">num2</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Secondo numero: '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">op</span> <span class="o">==</span> <span class="s">'+'</span><span class="p">:</span>
+        <span class="n">risultato</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span> 
+    <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s">'-'</span><span class="p">:</span>
+        <span class="n">risultato</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">-</span> <span class="n">num2</span> 
+    <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s">'*'</span><span class="p">:</span>
+        <span class="n">risultato</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span> 
+    <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s">'/'</span><span class="p">:</span>
+        <span class="n">risultato</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">/</span> <span class="n">num2</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">risultato</span> <span class="o">=</span> <span class="s">'Operatore sconosciuto'</span> 
+    <span class="n">risp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Finito? (S, N): '</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">risp</span> <span class="o">==</span> <span class="s">'S'</span><span class="p">:</span>
+        <span class="n">finito</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'Grazie! Alla prossima volta'</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Exercise 6:</p>
+
+<p>Implementa una funzione che preso come parametro un numero intero restituisca al chiamante il corrispondente numero di Fibonacci.</p>
+
+<p>Exercise 7:</p>
+
+<p>Cosa fa il seguente script?</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">biciclette</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="k">def</span> <span class="nf">scrivi_biciclette</span><span class="p">():</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">biciclette</span><span class="p">)</span>
+<span class="n">scrivi_biciclette</span><span class="p">()</span></code></pre></figure>
+
+<p>&lt;/div&gt;Exercise 8:</p>
+
+<p>Cosa fa il seguente script?</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">biciclette</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="k">def</span> <span class="nf">scrivi_biciclette</span><span class="p">():</span> 
+    <span class="n">biciclette</span> <span class="o">=</span> <span class="mi">321</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">biciclette</span><span class="p">)</span>
+<span class="n">scrivi_biciclette</span><span class="p">()</span></code></pre></figure>
+
+<p>&lt;/div&gt;Esercizio 9:</p>
+
+<p>Crea una funzione <strong>divisibile_per</strong> che prenda come parametro due numeri e che restituisca True se il primo numero è divisibile per il secondo e False in caso contrario</p>
+
+<p>Esercizio 10:</p>
+
+<p>Scrivi una funzione in python chiamata calcola stipendio che prende come parametro il numero di ore lavorate in una settimana e la paga oraria.</p>
+
+<p>def calcolastipendio(ore, paga):</p>
+
+<p>La funzione se il numero di ore è minore o uguale a 40 “ritorna” il prodotto tra il primo numero e il secondo. Se è maggiore: per le prima 40 ora ritorna il primo numero per il secondo per le ore di straordinario rotorna il primo numero per il secondo maggiorato del 50%.</p>
+
+<p>Esempi:<br />
+calcolastipendio(20, 20) =&gt; 400 <br />
+calcolastipendio(40, 20) =&gt; 800 <br />
+calcolastipendio(50, 20) =&gt; 1100</p>
+
+<p>Esercizio 11:</p>
+
+<p>Utilizziamo le funzioni per calcolare delle spese di viaggio: Definisci una funzione chiamata <strong>costo_hotel</strong> che prende come parametro il numero delle notti. L’hotel costa 140 per notte. La funzione deve calcolare il costo totale dell’hotel. Definisci una funziona chiamata <strong>costo_aereo</strong> questa prende come parametro il nome della città in cui si vola e ritorna a seconda della destinazione: “Charlotte”: 183 “Tampa”: 220 “Pittsburgh”: 222 “Los Angeles”: 475. Definisci una funziona <strong>noleggio_macchina</strong> che prenda come parametro il numero di giorni. Ogni giorno di noleggio macchina costa 40. Se si noleggia la macchina per più di 7 giorni si ottiene uno sconto di 50. Se si noleggia la macchina per più di 10 giorni si ottiene uno sconto di 10 al giorno. In fine crea una funzione <strong>costo_viaggio</strong> che prenda come parametro una stringa rappresentante la destinazione e il numero di giorni di viaggio e chiamando le funzioni prima definite calcoli il costo totale del viaggio.</p>
+
+<p>Esercizio 12:</p>
+
+<p>Crea una funzione <strong>tipo_stringa</strong> che prenda come parametro una stringa di testo e restituisca: <br />
+* la stringa “solo lettere” se il parametro è costitutito completamente da lettere <br />
+* la stringa “solo numeri” se il parametro è costitutito completamente da numeri <br />
+* la stringa “mista” se il parametro è costitutito completamente sia da lettere sia da numeri</p>
+
+<p>Esempi:<br />
+tipo_stringa(“1322132”) =&gt; “solo numeri”<br />
+print(tipo_stringa(“acbac”)) =&gt; “solo lettere”<br />
+print(tipo_stringa(“132acbac12”)) =&gt; “mista”</p>
+
+<p>Esercizio 13:</p>
+
+<p>Scrivi una funzione <strong>esprimi_giudizio(voto)</strong> che preso come parametro il voto di uno studente restituisca una stringa di testo con giudizio secondo la seguente tabella:</p>
+
+<figure class="wp-block-table">| 1, 2, 3, 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|
+| Gravemente insufficiente | Insufficiente | Sufficiente | Discreto | Buono | Distinto | Ottimo |
+
+</figure>
+<p>Esercizio 14</p>
+
+<p>Scrivi una funzione python somma_numeri che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri compresi tra a e b con a e b compresi <br />
+Esempio: <br />
+somma_numeri(4, 6) restituisce 15 <br />
+somma_numeri(1, 4) restituisce 10</p>
+
+<p>Esercizio 15</p>
+
+<p>Scrivi una funzione python somma_pari che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri pari compresi tra a e b con a e b compresi <br />
+Esempio: <br />
+somma_numeri(4, 6) restituisce 10 <br />
+somma_numeri(1, 5) restituisce 6</p>
+
+<p>Esercizio 16</p>
+
+<p>Scrivi una funzione python is_prime che prenda come parametro un numero interi a e restituisca True se a è primo e False in caso contrario Esempio: <br />
+is_prime(11) restituisce True <br />
+is_prime(4) restituisce False</p>
+
+<p>Esercizio 17</p>
+
+<p>Crea una libreria di funzioni turtle che disegnino figure geometriche. Le firme delle funzioni da scrivere sono: def quadrato(lato): def rettangono(base, altezza): def cerchio(raggio) def esagono(lato) Crea in fine una funzione main() che richiami le quattro funzioni appena descritte con dei valori dati in input dall’utente.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -38,7 +38,8 @@ print('Segue la chiamata a funzione')
 </div>Output:
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Precede le chiamate a funzione Ciao!
+{% highlight shell %}
+Precede le chiamate a funzione Ciao!
 Ciao!!!
 Ciao a te!
 Ciao!

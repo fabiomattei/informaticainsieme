@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=20'
 
 Il seguente codice è un template vuoto, un modello da riempire nella costruzione di un videogioco. Rimedia alla fase tediosa di cercare nella libreria le basi per partire e toglie il programmatore dal empasse della pagine bianca
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 """
 Starting Template
 
@@ -108,5 +108,4 @@ def main():
 if __name__ == "__main__":
     main()
     
-{% endhighlight %}
 {% endhighlight %}

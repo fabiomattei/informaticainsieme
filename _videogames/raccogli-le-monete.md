@@ -9,8 +9,8 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=31'
 
 Il seguente script presenta uno sprite, controllato dal mouse che deve raccogliere tutte le monete.
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 """
 Lo sprite raccoglie le monete
 """
@@ -152,5 +152,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-{% endhighlight %}
 {% endhighlight %}

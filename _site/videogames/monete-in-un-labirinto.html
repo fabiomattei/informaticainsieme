@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Monete in un labirinto | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Monete in un labirinto" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Guarda come si fa a creare un labirinto" />
+<meta property="og:description" content="Guarda come si fa a creare un labirinto" />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/videogames/monete-in-un-labirinto" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/videogames/monete-in-un-labirinto" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-20T18:02:04+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Monete in un labirinto" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2020-01-20T18:02:04+01:00","datePublished":"2020-01-20T18:02:04+01:00","description":"Guarda come si fa a creare un labirinto","headline":"Monete in un labirinto","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/videogames/monete-in-un-labirinto"},"url":"http://localhost:4000/informaticainsieme/videogames/monete-in-un-labirinto"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Monete in un labirinto</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Guarda come si fa a creare un labirinto</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">import arcade
+import os
+import random
+
+SPRITE_SCALING <span class="o">=</span> 0.5
+
+SCREEN_WIDTH <span class="o">=</span> 832
+SCREEN_HEIGHT <span class="o">=</span> 632
+SCREEN_TITLE <span class="o">=</span> <span class="s2">"Sprite Bouncing Coins"</span>
+
+MOVEMENT_SPEED <span class="o">=</span> 5
+
+
+class MyGame<span class="o">(</span>arcade.Window<span class="o">)</span>:
+    <span class="s2">""" Main application class. """</span>
+
+    def __init__<span class="o">(</span>self, width, height, title<span class="o">)</span>:
+        <span class="s2">"""
+        Initializer
+        """</span>
+        super<span class="o">()</span>.__init__<span class="o">(</span>width, height, title<span class="o">)</span>
+
+        <span class="c"># Set the working directory (where we expect to find files) to the same</span>
+        <span class="c"># directory this .py file is in. You can leave this out of your own</span>
+        <span class="c"># code, but it is needed to easily run the examples using "python -m"</span>
+        <span class="c"># as mentioned at the top of this program.</span>
+        file_path <span class="o">=</span> os.path.dirname<span class="o">(</span>os.path.abspath<span class="o">(</span>__file__<span class="o">))</span>
+        os.chdir<span class="o">(</span>file_path<span class="o">)</span>
+
+        <span class="c"># Sprite lists</span>
+        self.coin_list <span class="o">=</span> None
+        self.wall_list <span class="o">=</span> None
+
+    def setup<span class="o">(</span>self<span class="o">)</span>:
+        <span class="s2">""" Set up the game and initialize the variables. """</span>
+
+        <span class="c"># Sprite lists</span>
+        self.wall_list <span class="o">=</span> arcade.SpriteList<span class="o">()</span>
+        self.coin_list <span class="o">=</span> arcade.SpriteList<span class="o">()</span>
+
+        <span class="c"># -- Set up the walls</span>
+
+        <span class="c"># Create horizontal rows of boxes</span>
+        <span class="k">for </span>x <span class="k">in </span>range<span class="o">(</span>32, SCREEN_WIDTH, 64<span class="o">)</span>:
+            <span class="c"># Bottom edge</span>
+            wall <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/tiles/boxCrate_double.png"</span>, SPRITE_SCALING<span class="o">)</span>
+            wall.center_x <span class="o">=</span> x
+            wall.center_y <span class="o">=</span> 32
+            self.wall_list.append<span class="o">(</span>wall<span class="o">)</span>
+
+            <span class="c"># Top edge</span>
+            wall <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/tiles/boxCrate_double.png"</span>, SPRITE_SCALING<span class="o">)</span>
+            wall.center_x <span class="o">=</span> x
+            wall.center_y <span class="o">=</span> SCREEN_HEIGHT - 32
+            self.wall_list.append<span class="o">(</span>wall<span class="o">)</span>
+
+        <span class="c"># Create vertical columns of boxes</span>
+        <span class="k">for </span>y <span class="k">in </span>range<span class="o">(</span>96, SCREEN_HEIGHT, 64<span class="o">)</span>:
+            <span class="c"># Left</span>
+            wall <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/tiles/boxCrate_double.png"</span>, SPRITE_SCALING<span class="o">)</span>
+            wall.center_x <span class="o">=</span> 32
+            wall.center_y <span class="o">=</span> y
+            self.wall_list.append<span class="o">(</span>wall<span class="o">)</span>
+
+            <span class="c"># Right</span>
+            wall <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/tiles/boxCrate_double.png"</span>, SPRITE_SCALING<span class="o">)</span>
+            wall.center_x <span class="o">=</span> SCREEN_WIDTH - 32
+            wall.center_y <span class="o">=</span> y
+            self.wall_list.append<span class="o">(</span>wall<span class="o">)</span>
+
+        <span class="c"># Create boxes in the middle</span>
+        <span class="k">for </span>x <span class="k">in </span>range<span class="o">(</span>128, SCREEN_WIDTH, 196<span class="o">)</span>:
+            <span class="k">for </span>y <span class="k">in </span>range<span class="o">(</span>128, SCREEN_HEIGHT, 196<span class="o">)</span>:
+                wall <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/tiles/boxCrate_double.png"</span>, SPRITE_SCALING<span class="o">)</span>
+                wall.center_x <span class="o">=</span> x
+                wall.center_y <span class="o">=</span> y
+                <span class="c"># wall.angle = 45</span>
+                self.wall_list.append<span class="o">(</span>wall<span class="o">)</span>
+
+        <span class="c"># Create coins</span>
+        <span class="k">for </span>i <span class="k">in </span>range<span class="o">(</span>10<span class="o">)</span>:
+            coin <span class="o">=</span> arcade.Sprite<span class="o">(</span><span class="s2">":resources:images/items/coinGold.png"</span>, 0.25<span class="o">)</span>
+            coin.center_x <span class="o">=</span> random.randrange<span class="o">(</span>100, 700<span class="o">)</span>
+            coin.center_y <span class="o">=</span> random.randrange<span class="o">(</span>100, 500<span class="o">)</span>
+            <span class="k">while </span>coin.change_x <span class="o">==</span> 0 and coin.change_y <span class="o">==</span> 0:
+                coin.change_x <span class="o">=</span> random.randrange<span class="o">(</span><span class="nt">-4</span>, 5<span class="o">)</span>
+                coin.change_y <span class="o">=</span> random.randrange<span class="o">(</span><span class="nt">-4</span>, 5<span class="o">)</span>
+
+            self.coin_list.append<span class="o">(</span>coin<span class="o">)</span>
+
+        <span class="c"># Set the background color</span>
+        arcade.set_background_color<span class="o">(</span>arcade.color.AMAZON<span class="o">)</span>
+
+    def on_draw<span class="o">(</span>self<span class="o">)</span>:
+        <span class="s2">"""
+        Render the screen.
+        """</span>
+
+        <span class="c"># This command has to happen before we start drawing</span>
+        arcade.start_render<span class="o">()</span>
+
+        <span class="c"># Draw all the sprites.</span>
+        self.wall_list.draw<span class="o">()</span>
+        self.coin_list.draw<span class="o">()</span>
+
+    def on_update<span class="o">(</span>self, delta_time<span class="o">)</span>:
+        <span class="s2">""" Movement and game logic """</span>
+
+        <span class="k">for </span>coin <span class="k">in </span>self.coin_list:
+
+            coin.center_x +<span class="o">=</span> coin.change_x
+            walls_hit <span class="o">=</span> arcade.check_for_collision_with_list<span class="o">(</span>coin, self.wall_list<span class="o">)</span>
+            <span class="k">for </span>wall <span class="k">in </span>walls_hit:
+                <span class="k">if </span>coin.change_x <span class="o">&gt;</span> 0:
+                    coin.right <span class="o">=</span> wall.left
+                <span class="k">elif </span>coin.change_x &lt; 0:
+                    coin.left <span class="o">=</span> wall.right
+            <span class="k">if </span>len<span class="o">(</span>walls_hit<span class="o">)</span> <span class="o">&gt;</span> 0:
+                coin.change_x <span class="k">*</span><span class="o">=</span> <span class="nt">-1</span>
+
+            coin.center_y +<span class="o">=</span> coin.change_y
+            walls_hit <span class="o">=</span> arcade.check_for_collision_with_list<span class="o">(</span>coin, self.wall_list<span class="o">)</span>
+            <span class="k">for </span>wall <span class="k">in </span>walls_hit:
+                <span class="k">if </span>coin.change_y <span class="o">&gt;</span> 0:
+                    coin.top <span class="o">=</span> wall.bottom
+                <span class="k">elif </span>coin.change_y &lt; 0:
+                    coin.bottom <span class="o">=</span> wall.top
+            <span class="k">if </span>len<span class="o">(</span>walls_hit<span class="o">)</span> <span class="o">&gt;</span> 0:
+                coin.change_y <span class="k">*</span><span class="o">=</span> <span class="nt">-1</span>
+
+
+def main<span class="o">()</span>:
+    <span class="s2">""" Main method """</span>
+    window <span class="o">=</span> MyGame<span class="o">(</span>SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE<span class="o">)</span>
+    window.setup<span class="o">()</span>
+    arcade.run<span class="o">()</span>
+
+
+<span class="k">if </span>__name__ <span class="o">==</span> <span class="s2">"__main__"</span>:
+    main<span class="o">()</span>
+    </code></pre></figure>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

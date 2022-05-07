@@ -96,7 +96,7 @@ for i in range(5):
 </div>I dati sono stati separati iinerendoli all’interno di un file txt il cui contenuto è il seguente.
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="text" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Prenotazioni  Temperature  Pizze
+Prenotazioni  Temperature  Pizze
 13            26           44
 2             14           23
 14            20           28
@@ -127,6 +127,6 @@ for i in range(5):
 6             14           38
 13            19           30
 13            20           28
-{% endhighlight %}
+
 
 </div>

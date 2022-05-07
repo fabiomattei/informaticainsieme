@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Il ciclo While | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Il ciclo While" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Il costrutto while in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti ciclicamente." />
+<meta property="og:description" content="Il costrutto while in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti ciclicamente." />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/python/il-ciclo-while" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/python/il-ciclo-while" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-04T08:12:47+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Il ciclo While" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2020-02-04T08:12:47+01:00","datePublished":"2020-02-04T08:12:47+01:00","description":"Il costrutto while in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti ciclicamente.","headline":"Il ciclo While","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/python/il-ciclo-while"},"url":"http://localhost:4000/informaticainsieme/python/il-ciclo-while"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Il ciclo While</h1>
+  </header>
+
+  <div class="post-content">
+    <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/x1GTNxCnJ-A?feature=oembed" title="Il ciclo while in Python" width="580"></iframe></div></figure>
+<p>Il costrutto <strong>while</strong> in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti <strong>ciclicamente</strong>.</p>
+
+<p>La sintassi è la seguente:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">while</span> <span class="o">&lt;</span><span class="n">espressione</span> <span class="n">booleana</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">comando</span> <span class="mi">1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">comando</span> <span class="mi">2</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">comando</span> <span class="mi">3</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>&lt;/div&gt;While è un ciclo con <strong>controllo in testa</strong> questo significa che <em>il controllo sull’espressione booleana viene fatto prima di entrare nel ciclo</em>.</p>
+
+<p>Le istruzioni all’interno del ciclo vengono eseguite se il risultato dell’espressione booleana è <strong>vero</strong>. In caso contrario (espressione booleana falsa) il blocco comandi interno al ciclo viene ignorato e l’esecuzione del programma continua con la prima istruzione successiva al ciclo.</p>
+
+<p>Scrivi ed esegui il seguente programma:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">cont</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">cont</span> <span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">cont</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;<figure class="wp-block-table">| cont | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|—|—|—|—|—|—|—|—|—|—|—|—|</figure></p>
+
+<p>&lt;/figure&gt;Questo programma ci mostra un ciclo le cui istruzioni contenute all’interno vengono eseguite <em>fintanto che cont &lt; 10</em>. La <strong>variabile cont</strong> si dice <strong>contatore</strong> dato che il suo scopo è contare il numero di volte che il ciclo è stato eseguito. Questo costrutto è molto diffuso.</p>
+
+<p>Facciamo un secondo esempio:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">cont</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+   <span class="n">cont</span> <span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">cont</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;Noterai che l’istruzione print(cont) non è posta all’interno del ciclo (non è contenuta) dato che la sua indentazione è allineata alla parola while che definisce il ciclo e non più a destra di questa. Questo ciclo scriverà sulla console il solo numero 10.</p>
+
+<p>Ricorda che l’indentazione in Python è molto importante!</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">cont</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">cont</span> <span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">' '</span><span class="p">)</span> </code></pre></figure>
+
+<p>&lt;/div&gt;Cosa noti?</p>
+
+<p>Scriviamo ora un programma che calcoli la somma dei primi 10 numeri interi</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">cont</span> <span class="o">=</span> <span class="mi">1</span>             <span class="c1"># variabile contatore
+</span><span class="n">acc</span> <span class="o">=</span> <span class="mi">0</span>              <span class="c1"># variabile accumulatore
+</span><span class="k">while</span> <span class="n">cont</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span> <span class="o">+</span> <span class="n">cont</span> <span class="c1"># incremento l'accumulatore di cont
+</span>    <span class="n">cont</span><span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1"># incremento il contatore di 1
+</span><span class="k">print</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>           <span class="c1"># al termine del ciclo scrivo il valore di acc</span></code></pre></figure>
+
+<p>&lt;/div&gt;Nel precedente esempio abbiamo introdotto il concetto di <strong>accumulatore</strong>. Si dice accumulatore una variabile che <em>accumula dopo ciascuna esecuzione delle istruzioni all’interno del ciclo i risultati di un calcolo</em>. Nell’esempio ad acc viene sommato di volta in volta il contento della variabile contatore. Possiamo vedere come le variabili si comportano in una tabella di tracciamento:</p>
+
+<figure class="wp-block-table">| **n** | 10 |  |  |  |  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| **cont** | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
+| **acc** | 0 | 1 | 3 | 6 | 10 | 15 | 21 | 28 | 36 | 45 | 55 |
+
+</figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Questo programma calcola la sequenza di Fibonacci.
+</span><span class="n">acc_a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">acc_b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">max_cont</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">while</span> <span class="n">cont</span> <span class="o">&lt;</span> <span class="n">max_cont</span><span class="p">:</span>
+  <span class="n">cont</span> <span class="o">=</span> <span class="n">cont</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="c1"># Occorre tenere traccia finché ci sono cambiamenti
+</span>  <span class="n">vecchio_acc_a</span> <span class="o">=</span> <span class="n">acc_a</span>
+  <span class="n">vecchio_acc_b</span> <span class="o">=</span> <span class="n">acc_b</span>
+  <span class="n">acc_a</span> <span class="o">=</span> <span class="n">vecchio_acc_b</span>
+  <span class="n">acc_b</span> <span class="o">=</span> <span class="n">vecchio_acc_a</span> <span class="o">+</span> <span class="n">vecchio_acc_b</span>
+  <span class="c1"># Attenzione che la virgola alla fine di un istruzione print
+</span>  <span class="c1"># prosegue la stampa sulla stessa linea.
+</span>  <span class="k">print</span><span class="p">(</span><span class="n">vecchio_acc_a</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span></code></pre></figure>
+
+<p>&lt;/div&gt;L’algoritmo di Fibonacci funziona su di un gioco di due variabili accumulatori: acc_a e acc_b.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># Attende sino a quando non viene inserita la giusta password.
+# Usate Control-C per fermare il programma senza password.
+# Notate che se non viene inserita la giusta password, il ciclo
+# while prosegue all’infinito.
+</span><span class="n">password</span> <span class="o">=</span> <span class="s">"foobar"</span>
+<span class="c1"># Notate il simbolo != (diverso).
+</span><span class="k">while</span> <span class="n">password</span> <span class="o">!=</span> <span class="s">"unicorn"</span><span class="p">:</span>
+   <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Password:"</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">"Benvenuto"</span></code></pre></figure>
+
+<p>&lt;/div&gt;<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">&lt;div class="wp-block-embed__wrapper"&gt;&lt;iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"&gt;&lt;/iframe&gt;&lt;/div&gt;</figure><strong>Esercizio 1:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N calcoli la somma di tutti i numeri da 1 ad N</p>
+
+<p><strong>Esercizio 2:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri da N ad M (estremi inclusi)</p>
+
+<p><strong>Esercizio 3:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N calcoli il fattoriale di N ( 1 * 2 * 3 * 4 …. * N)</p>
+
+<p><strong>Esercizio 4:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri pari compresi tra N ed M</p>
+
+<p><strong>Esercizio 5:</strong></p>
+
+<p>Scrivere un programma che letti N numeri in ingresso calcoli il numero massimo e il numero minimo inseriti</p>
+
+<p><strong>Esercizio 6:</strong></p>
+
+<p>Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti</p>
+
+<p><strong>Esercizio 7:</strong></p>
+
+<p>Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti</p>
+
+<p><strong>Esercizio 8:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N calcoli la somma di tutte le cifre dispari che lo compongono</p>
+
+<p><strong>Esercizio 9:</strong></p>
+
+<p>Scrivere un programma che letto un numero intero N scriva la tavola pitagorica della moltiplicazione del numero prescelto</p>
+
+<p><strong>Esercizio 10:</strong></p>
+
+<p>Scrivere un programma che scriva la tavola pitagorica della moltiplicazione completa</p>
+
+<p><strong>Esercizio 11:</strong></p>
+
+<p>Leonardo Pisano propose nel tredicesimo secolo il seguente problema:</p>
+
+<p>Immaginiamo di chiudere una coppia di conigli in un recinto sapendo che per ogni coppia di conigli valgono le seguenti condizioni:</p>
+
+<ul>
+  <li>Inizia a generare dal secondo mese di età</li>
+  <li>Genera una nuova coppia ogni mese</li>
+  <li>Non muore mai;</li>
+</ul>
+
+<p>Quante coppie di conigli ci saranno dopo un anno?</p>
+
+<p>E quante dopo un numero di mesi N, letto in input?</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Flask: URL e variabili | Informatica insieme</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Flask: URL e variabili" />
+<meta name="author" content="fabio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Una Uniform Resource Locator (URL), di solito chiamata indirizzo web, è un riferimento ad una risorsa (file di testo, immagine, file audio/video) che si trova sul web e specifica la sua collocazione in una rete di computer. Una URL è un tipo specifico di Uniform Resource Identifier (URI), anche se in molti confondono i due termini. Le URL sono un riferimento per lo più di pagine web (http) ma posso essere usate per identificare una risorsa in un trasferimento di file (ftp), per identificare un indirizzo email (mailto), per ideentificare un punto di acceesso ad un database (JDBC) e per molto altro." />
+<meta property="og:description" content="Una Uniform Resource Locator (URL), di solito chiamata indirizzo web, è un riferimento ad una risorsa (file di testo, immagine, file audio/video) che si trova sul web e specifica la sua collocazione in una rete di computer. Una URL è un tipo specifico di Uniform Resource Identifier (URI), anche se in molti confondono i due termini. Le URL sono un riferimento per lo più di pagine web (http) ma posso essere usate per identificare una risorsa in un trasferimento di file (ftp), per identificare un indirizzo email (mailto), per ideentificare un punto di acceesso ad un database (JDBC) e per molto altro." />
+<link rel="canonical" href="http://localhost:4000/informaticainsieme/flask/flask-url-e-variabili" />
+<meta property="og:url" content="http://localhost:4000/informaticainsieme/flask/flask-url-e-variabili" />
+<meta property="og:site_name" content="Informatica insieme" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-28T05:54:35+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Flask: URL e variabili" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"fabio"},"dateModified":"2021-10-28T05:54:35+02:00","datePublished":"2021-10-28T05:54:35+02:00","description":"Una Uniform Resource Locator (URL), di solito chiamata indirizzo web, è un riferimento ad una risorsa (file di testo, immagine, file audio/video) che si trova sul web e specifica la sua collocazione in una rete di computer. Una URL è un tipo specifico di Uniform Resource Identifier (URI), anche se in molti confondono i due termini. Le URL sono un riferimento per lo più di pagine web (http) ma posso essere usate per identificare una risorsa in un trasferimento di file (ftp), per identificare un indirizzo email (mailto), per ideentificare un punto di acceesso ad un database (JDBC) e per molto altro.","headline":"Flask: URL e variabili","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/informaticainsieme/flask/flask-url-e-variabili"},"url":"http://localhost:4000/informaticainsieme/flask/flask-url-e-variabili"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/informaticainsieme/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/informaticainsieme/feed.xml" title="Informatica insieme" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/informaticainsieme/">Informatica insieme</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/informaticainsieme/about/">About me</a><a class="page-link" href="/informaticainsieme/paginemenu/codifica.html">La codifica dell&#39;informazione</a><a class="page-link" href="/informaticainsieme/paginemenu/python.html">Python</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Flask: URL e variabili</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Una <strong>Uniform Resource Locator</strong> (URL), di solito chiamata <em>indirizzo web</em>, è un riferimento ad una risorsa (file di testo, immagine, file audio/video) che si trova sul web e specifica la sua collocazione in una rete di computer. Una URL è un tipo specifico di <strong>Uniform Resource Identifier</strong> (URI), anche se in molti confondono i due termini. Le URL sono un riferimento per lo più di pagine web (http) ma posso essere usate per identificare una risorsa in un trasferimento di file (ftp), per identificare un indirizzo email (mailto), per ideentificare un punto di acceesso ad un database (JDBC) e per molto altro.</p>
+
+<p>I browser mostrano la URL di una pagina web nella barra degli indirizzi. Una tipica URL potrebbe essere: http://www.example.com/index.html.</p>
+
+<ul>
+  <li>http indica il <strong>protocollo di trasferimento dati</strong></li>
+  <li>www.example.com indica l’<strong>hostname</strong>, il nome del computer che ospita la risorsa</li>
+  <li>index.html indica il <strong>nome della risorsa</strong></li>
+</ul>
+
+<p>Questa forma di URL è stata specificata da Tim Berners Lee nell’<a href="https://datatracker.ietf.org/doc/html/rfc1738">RFC 1738</a>.</p>
+
+<h4 id="flask-e-le-url">Flask e le URL</h4>
+
+<p>Flask associa una funzione ad ogni URL e fa questo utilizzando la direttiva @app.route.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="n">miavariabile</span> <span class="o">=</span> <span class="s">"Anna Bolena"</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'home.html'</span><span class="p">,</span> <span class="n">nomeutente</span><span class="o">=</span><span class="n">miavariabile</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/primapagina"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">prima_pagina</span><span class="p">():</span>
+    <span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'primapagina.html'</span><span class="p">,</span> <span class="n">mieinumeri</span><span class="o">=</span><span class="n">numeri</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">"/secondapagina"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">seconda_pagina</span><span class="p">():</span>
+    <span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="s">"giovanni"</span><span class="p">,</span> <span class="s">"pasquale"</span><span class="p">,</span> <span class="s">"mirko"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">'secondapagina.html'</span><span class="p">,</span> <span class="n">miatupla</span><span class="o">=</span><span class="n">tupla</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;In questo esempio vengono esplicitate tre URL. La prima è composta da un semplice / e per convenzione punta alla risorsa richiesta quando non viene specificata alcuna risorsa. Di solito questa coincide con il file index.html.</p>
+
+<h4 id="aggiungiamo-le-variabili">Aggiungiamo le variabili</h4>
+
+<p>Per seguire questa lezione scarica il <a href="https://www.esercizidiinformatica.it/progetti/flask/miosito3.zip">file contenente gli script</a>.</p>
+
+<p>E’ possibile associare le variabili alle risorse, è inoltre possibile specificarne il tipo. La variabile ricevuta verrà mandata come argomento alla funzione.</p>
+
+<p>La sintassi per specificare una variabile è la seguente:</p>
+
+<p><strong>&lt;tipo di variabile: nome di variabile&gt;</strong></p>
+
+<p>Guardiamo un esempio</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">markupsafe</span> <span class="kn">import</span> <span class="n">escape</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/utente/&lt;nomeutente&gt;'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mostra_profilo_utente</span><span class="p">(</span><span class="n">nomeutente</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">'User '</span><span class="o">+</span><span class="n">escape</span><span class="p">(</span><span class="n">nomeutente</span><span class="p">)</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/post/&lt;int:post_id&gt;'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mostra_post</span><span class="p">(</span><span class="n">post_id</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">'Post Numero '</span><span class="o">+</span><span class="n">post_id</span>
+
+<span class="o">@</span><span class="n">app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s">'/path/&lt;path:subpath&gt;'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mostra_subpath</span><span class="p">(</span><span class="n">subpath</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">'Subpath '</span><span class="o">+</span><span class="n">escape</span><span class="p">(</span><span class="n">subpath</span><span class="p">)</span></code></pre></figure>
+
+<p>&lt;/div&gt;La prima funzione è associata ad una URL del tipo: <em>http://www.lamiaapplicazioneweb.com/utente/mariorossi</em>. Se questa URL viene richiesta al server che ospita la mia applicazione viene chiamata la funzione <em>mostra_profilo_utente</em> passando come argomento <em>mariorossi</em> associato al parametro <em>nomeutente</em>. Viene quindi mostrata nel browser la scritta: User mariorossi.</p>
+
+<p>La seconda funzione è associata ad una URL del tipo: <em>http://www.lamiaapplicazioneweb.com/post/123</em>. Viene chiamata la funzione <em>mostra_post</em> passando come argomento <em>123</em> associato al parametro <em>post_id</em>. Viene quindi mostrata nel browser la scritta: Post nummero 123.</p>
+
+<p>La terza funzione è associata ad una URL del tipo: <em>http://www.lamiaapplicazioneweb.com/path/ilmiosottopath/cartella/cartella/risorsa</em>. Viene chiamata la funzione <em>mostra_subpath</em> passando come argomento <strong>ilmiosottopath/cartella/cartella/risorsa</strong> associato al parametro <em>sub_path</em>. Viene quindi mostrata nel browser la scritta: Subpath ilmiosottopath/cartella/cartella/risorsa.</p>
+
+<p>Notiamo che i parametri sono sempre stati passati alla funzione escape. Si fa questo perché gli intenti degli utenti della nostra applicazione potrebbero essere malevoli dunque è bene filtrare le informazioni che arrivano dagli utenti per evitare problemi di sicurezza.</p>
+
+<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flaskesempiourl-1024x352.png)</figure>
+<h4 id="i-tipi-accettati">I tipi accettati</h4>
+
+<figure class="wp-block-table">| string (default) | accetta un qualsiasi testo senza / |
+|---|---|
+| int | accetta interi positivi |
+| float | accetta numeri con la virgola positivi |
+| path | come la stringa ma accetta anche gli / |
+| uuid | accetta stringhe **uuid** identificatore universale per una risorsa. Es: `123e4567-e89b-12d3-a456-426614174000` |
+
+</figure>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/informaticainsieme/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Informatica insieme</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Informatica insieme</li><li><a class="u-email" href="mailto:burattino@gmail.com">burattino@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#github"></use></svg> <span class="username">fabiomattei</span></a></li><li><a href="https://www.twitter.com/fabiomattei"><svg class="svg-icon"><use xlink:href="/informaticainsieme/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">fabiomattei</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>fare cosa gradita.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

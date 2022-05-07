@@ -30,18 +30,16 @@ Se si vuole installare la libreria arcade assicurarsi di avere sul computer una 
 
 Quindi digitare il seguente comando:
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 pip install arcade
-{% endhighlight %}
 {% endhighlight %}
 
 Se si dispone di python 3.6 o antecedente sarà necessario anche installareil seguente pacchetto:
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 pip install dataclasses
-{% endhighlight %}
 {% endhighlight %}
 
 #### Asset sempre utili per fare i videogiochi

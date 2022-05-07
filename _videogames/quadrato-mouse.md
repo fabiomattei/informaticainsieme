@@ -7,8 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=15'
 ---
 
-{% endhighlight %}
-<pre class="wp-block-code">{% endhighlight %}
+{% highlight shell %}
+
 """
 Questa semplice animazione mostra come muovere uno sprite utilizzando il mouse e gestire il click del mouse.
 """
@@ -89,5 +89,4 @@ if __name__ == "__main__":
     main()
     
     
-{% endhighlight %}
 {% endhighlight %}

@@ -22,7 +22,8 @@ Installare Python avendo l’accortezza di selezionare “Add Python3.8 to PATH�
 Assicurarsi che siano presenti le diciture:
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">C:\Users\burat\AppData\Local\Programs\Python\Python38\Scripts\
+{% highlight shell %}
+C:\Users\burat\AppData\Local\Programs\Python\Python38\Scripts\
 C:\Users\burat\AppData\Local\Programs\Python\Python38\
 
 {% endhighlight %}
@@ -34,7 +35,8 @@ Accedere all prompt dei comandi come amministratore, a tal fine cliccare con il 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Picture-5.png)</figure>Digitare il comando:
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">pip install arcade
+{% highlight shell %}
+pip install arcade
 
 {% endhighlight %}
 
@@ -43,7 +45,8 @@ Accedere all prompt dei comandi come amministratore, a tal fine cliccare con il 
 Se si dispone di python 3.7 o precedende digitare il comando:
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sh" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">pip install dataclasses
+{% highlight shell %}
+pip install dataclasses
 
 {% endhighlight %}
 

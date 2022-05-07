@@ -58,7 +58,8 @@ Una volta definita la griglia base devo disporre le aree al suo interno per crea
 L’html che si accompagna a questo css è il seguente:
 
 
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><div class="container" >
+{% highlight html %}
+<div class="container" >
     <div class="item-a"></div>
     <div class="item-b"></div>
     <div class="item-c"></div>
