@@ -1,10 +1,8 @@
 ---
-id: 54
 title: Introduzione
 date: '2020-01-22T09:18:35+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=54'
 ---
 
 Python è un linguaggio di programmazione di alto livello il cui sviluppo è iniziato nel Dicembre 1989 da **Guido van Rossum** al CWI (Centrum Wiskunde &amp; Informatica – National Research Institute for Mathematics and Computer Science) in Olanda.
