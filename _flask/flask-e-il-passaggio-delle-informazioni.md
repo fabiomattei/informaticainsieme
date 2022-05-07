@@ -16,8 +16,9 @@ Abbiamo già visto la chiamata GET che consiste nel passare le informazioni attr
 
 Una chiamata **POST** si verifica quando mi trovo di fronte ad una form che ha al suo interni diversi campi e un bottone per spedire i dati:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><html>
+
+{% highlight html %}
+<html>
    <body>
       <form action = "http://localhost:5000/login" method = "post">
          <p>Inserisci le credenziali:</p>

@@ -1,10 +1,8 @@
 ---
-id: 788
 title: 'Flask: URL e variabili'
 date: '2021-10-28T05:54:35+02:00'
 author: fabio
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=788'
 ---
 
 Una **Uniform Resource Locator** (URL), di solito chiamata *indirizzo web*, è un riferimento ad una risorsa (file di testo, immagine, file audio/video) che si trova sul web e specifica la sua collocazione in una rete di computer. Una URL è un tipo specifico di **Uniform Resource Identifier** (URI), anche se in molti confondono i due termini. Le URL sono un riferimento per lo più di pagine web (http) ma posso essere usate per identificare una risorsa in un trasferimento di file (ftp), per identificare un indirizzo email (mailto), per ideentificare un punto di acceesso ad un database (JDBC) e per molto altro.

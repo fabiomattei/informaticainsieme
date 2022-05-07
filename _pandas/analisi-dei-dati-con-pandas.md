@@ -27,7 +27,7 @@ Negli esempi utilizzeremo **Google Colab** perché molto semplice da utilizzare 
 
 Al fine di istallare Pandas sul proprio sistema possiamo utilizzare il gestore nativo di pacchetti Python: pip.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
+
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">pip install pandas
 
 
@@ -35,7 +35,7 @@ Al fine di istallare Pandas sul proprio sistema possiamo utilizzare il gestore n
 
 </div>oppure
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
+
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">conda install pandas
 
 
@@ -45,7 +45,7 @@ Al fine di istallare Pandas sul proprio sistema possiamo utilizzare il gestore n
 
 Per utilizzare la libreria Pandas all’interno di uno script scriviamo:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
+
 <pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">import pandas as pd
 
 

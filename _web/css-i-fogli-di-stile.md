@@ -19,8 +19,9 @@ I CSS definiscono **attributi** da applicare ai tag. Ciascun attributo intervien
 
 Supponiamo di avere il seguente codice HTML:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><p id="primoparagrafo">Questo è il testo del mio paragrafo</p>
+
+{% highlight html %}
+<p id="primoparagrafo">Questo è il testo del mio paragrafo</p>
 
 <p id="secondoparagrafo">Ora ho un nuovo paragrafo</p>
 
@@ -33,8 +34,9 @@ Supponiamo di avere il seguente codice HTML:
 
 </div>Notiamo come a ciascun tag utilizzato è stato associato un **attributo id**. Questo attributo mi permette di identificare in modo univoco un tag in una pagina. A questo punto posso iniziare a scrivere il codice CSS:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="css" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">#primoparagrafo {
+
+{% highlight css %}
+#primoparagrafo {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 12px;
     font-weight: bold;
@@ -63,8 +65,9 @@ Supponiamo di avere il seguente codice HTML:
 
 Supponiamo di avere il seguente codice HTML:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><p class="coseimportanti">Questo è il testo del mio paragrafo</p>
+
+{% highlight html %}
+<p class="coseimportanti">Questo è il testo del mio paragrafo</p>
 
 <p class="coseimportanti">Ora ho un nuovo paragrafo</p>
 
@@ -77,8 +80,9 @@ Supponiamo di avere il seguente codice HTML:
 
 </div>Come possiamo notare tutti questi tag sono accumunati dall’appartenere alla classe *coseimportanti*.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="css" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">.coseimportanti {
+
+{% highlight css %}
+.coseimportanti {
     color: red;
     background-color: #FFFF00; /* Colore giallo */
 }

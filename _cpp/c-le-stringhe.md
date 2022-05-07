@@ -20,8 +20,9 @@ Ad una variabile di tipo stringa é possibile
 assegnare un valore di una stringa, un carattere  
 o un’altra variabile di tipo stringa.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string nome1, nome2, miastringa;
+
+{% highlight cpp %}
+string nome1, nome2, miastringa;
 const char a=12;
 nome1 = "Mario";
 nome2 = nome1;
@@ -29,10 +30,11 @@ miastringa = 'n';
 miastringa = a;
 {% endhighlight %}
 
-</div>#### Assegnamenti multilinea
+#### Assegnamenti multilinea
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">// Non é possibile andare a capo in un assegnamento a
+
+{% highlight cpp %}
+// Non é possibile andare a capo in un assegnamento a
 // costante stringa
 string sbagliata= "stringa veramente troppo, //ERRORE!
 lunga "";
@@ -41,22 +43,23 @@ string corretta= "stringa veramente troppo, \n "
 "lunga ";
 {% endhighlight %}
 
-</div>#### Output di stringhe
+#### Output di stringhe
 
 Una stringa si puó stampare inserendolo su uno  
 stream di output.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string saluto="ciao mondo!!";
+{% highlight cpp %}
+string saluto="ciao mondo!!";
 cout << saluto  << endl;
 {% endhighlight %}
 
-</div>#### Input di stringhe
+#### Input di stringhe
 
 E’ possibile utilizzare l’operatore di estrazione &gt;&gt; su cin per raccogliere una stringa inserita dall’utente. Tuttavia, cin considera il carattere spazio (spazio bianco, tab, etc) come terminatore, quindi si può fare l’input di una sola parola.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string nome;
+
+{% highlight cpp %}
+string nome;
 cout << "Scrivi il tuo nome: ";
 cin >> nome; // raccoglie l'input dall'utente
 cout << "Il tuo nome: " << nome;
@@ -65,8 +68,8 @@ cout << "Il tuo nome: " << nome;
 // Il tuo nome: Mario
 {% endhighlight %}
 
-</div><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string nome;
+{% highlight cpp %}
+string nome;
 cout << "Scrivi il tuo nome: ";
 cin >> nome; // raccoglie l'input dall'utente
 cout << "Il tuo nome: " << nome;
@@ -77,8 +80,9 @@ cout << "Il tuo nome: " << nome;
 
 </div>Si utilizza la funzione getline che legge una linea da un file di testo fino a quando incontra il fine-linea \\n.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string nome;
+
+{% highlight cpp %}
+string nome;
 cout << "Scrivi il tuo nome: ";
 getline(cin, nome);
 cout << "Il tuo nome: " << nome;
@@ -89,7 +93,7 @@ cout << "Il tuo nome: " << nome;
 
 </div>La funzione getline può prendere due o tre parametri:
 
-{% endhighlight %}
+{% highlight cpp %}
 <pre class="wp-block-preformatted">istream& getline (istream&  is, string& str, char delim);
 {% endhighlight %}
 
@@ -102,19 +106,21 @@ cout << "Il tuo nome: " << nome;
 Le stringhe sono normali classi C++ dotati di funzioni membro  
 Il primo metodo che vediamo misura la lunghezza di una stringa.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">int i;
+
+{% highlight cpp %}
+int i;
 string saluto="ciao";
 i = saluto.length();  // i assume il valore 4
 
 {% endhighlight %}
 
-</div>#### Controlliamo se una stringa è vuota
+#### Controlliamo se una stringa è vuota
 
 Il metodo membro bool empty() restituisce true se la stringa non contiene alcun carattere e false altrimenti.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s1 = "";
+
+{% highlight cpp %}
+string s1 = "";
 cin >> s1;
 if (s1.empty()) {
     cout << "Lettura fallita!" << endl;
@@ -123,84 +129,87 @@ if (s1.empty()) {
 }
 {% endhighlight %}
 
-</div>#### Concatenazione
+#### Concatenazione
 
 Le stringhe possono essere concatenate tramite l’operatore (+)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string saluto = "ciao";
+
+{% highlight cpp %}
+string saluto = "ciao";
 string chi = "mondo";
 string saluti = saluto +", "+chi+"!"
 // equivale a 
 string saluti = "ciao, mondo!";
 {% endhighlight %}
 
-</div>#### Accesso agli elementi di una stringa
+#### Accesso agli elementi di una stringa
 
 L’accesso agli elementi di una stringa puó avvenire tramite funzione membro at(int i) o tramite operatore \[\]. Il primo carattere é alla posizione zero.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s="liceo scientifico";
+{% highlight cpp %}
+string s="liceo scientifico";
 char c;
 c = s.at(2);  // c = 'c'
 c = s[1];     //c='i'
 {% endhighlight %}
 
-</div>#### Inserimento in una stringa
+#### Inserimento in una stringa
 
 Una stringa puó essere inserita in un’altra tramite il metodo:  
 string insert(int startpos, string s)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s = "Liceo scienze applicate";
+
+{% highlight cpp %}
+string s = "Liceo scienze applicate";
 string s1 = "scientifico ";
 s.insert(6, s1);   // s diviene "Liceo scientifico scienze applicate"
 {% endhighlight %}
 
-</div>#### Estrazione di una sottostringa
+#### Estrazione di una sottostringa
 
 L’estrazione di una sottostringa viene fatta tramite il metodo  
 string &amp; substr(int start, int num)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s = "Liceo scientifico scienze applicate";
+
+{% highlight cpp %}
+string s = "Liceo scientifico scienze applicate";
 string s1 = s.substr(6,11);
 cout << s1 << endl; //stampa scientifico
 {% endhighlight %}
 
-</div>#### Cancellazione di una sottostringa
+#### Cancellazione di una sottostringa
 
 La cancellazione di una sottostringa viene fatta tramite il metodo  
 string &amp; erase(int start, int num)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s = "Mario Nicola Verdi";
+{% highlight cpp %}
+string s = "Mario Nicola Verdi";
 s.erase(5,7);
 cout << s << endl; //stampa Mario Verdi
 {% endhighlight %}
 
-</div>#### Sostituzione di una sottostringa
+#### Sostituzione di una sottostringa
 
 Si puó cancellare e sostituire una sottostringa all’interno di una stringa tramite il metodo  
 string &amp; replace(int start, int num, string s)
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s = "Mario Rossi";
+
+{% highlight cpp %}
+string s = "Mario Rossi";
 s.replace(0,5,"Marco");
 cout << s << endl; //stampa "Marco Rossi"
 {% endhighlight %}
 
-</div>#### Ricerca di una sottostringa
+#### Ricerca di una sottostringa
 
 Si puó cercare una sottostringa all’interno di una stringa tramite il metodo  
 int find(string s, int startSearch)
 
 Il metodo ricerca a partire dal carattere occupante la posizione ad indice startSearch e restituisce il numero intero indicante la posizione in cui la sottostringa inizia.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="c_cpp" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">string s= "Mario Rossi";
+
+{% highlight cpp %}
+string s= "Mario Rossi";
 int a = s.find("R",0);
 cout << a << endl; //stampa 6
 {% endhighlight %}
-
-</div>

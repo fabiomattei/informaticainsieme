@@ -17,8 +17,9 @@ Il linguaggio HTML si fonda su una idea semplice: etichettare sezioni di testo i
 
 #### Paragrafi
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><p>Un paragrafo in HTML è una sezione di testo 
+
+{% highlight html %}
+<p>Un paragrafo in HTML è una sezione di testo 
 circondata dal tag p</p>
 {% endhighlight %}
 
@@ -26,8 +27,9 @@ circondata dal tag p</p>
 
 #### Titoli
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><h1>Titolo di livello più alto</h1>
+
+{% highlight html %}
+<h1>Titolo di livello più alto</h1>
 <h2>Titolo di livello due</h2>
 <h3>Titolo di livello tre</h3>
 <h4>Titolo di livello quattro</h4>
@@ -53,8 +55,9 @@ Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
 
 Elenco puntato
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><ul>
+
+{% highlight html %}
+<ul>
   <li>primo elemento</li>
   <li>secondo elemento</li>
   <li>terzo elemento</li>
@@ -63,8 +66,9 @@ Elenco puntato
 
 </div>Elenco numerato
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><ol>
+
+{% highlight html %}
+<ol>
   <li>primo elemento</li>
   <li>secondo elemento</li>
   <li>terzo elemento</li>
@@ -75,8 +79,9 @@ Elenco puntato
 
 La tabella è utile quando si vogliono inserire in una pagina web dati di qualsiasi genere.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="html" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0"><table>
+
+{% highlight html %}
+<table>
     <caption>
         <p>I miei dati</p>
     </caption>

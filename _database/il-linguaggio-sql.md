@@ -1,10 +1,8 @@
 ---
-id: 324
 title: 'Il linguaggio SQL'
 date: '2020-02-10T06:22:07+01:00'
 author: fabio
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=324'
 ---
 
 Il linguaggio SQL permette al database administrator di operare sui database. Il linguaggio è di per se molto semplice e conta pochi comandi. Le possibili combinazioni di comandi danno però luogo ad una ricchissima potenzialità espressiva.
@@ -13,8 +11,9 @@ Il linguaggio SQL permette al database administrator di operare sui database. Il
 
 Le **entità** e le **relazioni** si concretizzano in tabelle e campi contenute all’interno di un database. Il comando create table consente di creare una tabella in un database. Sintassi:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">CREATE TABLE nome_tabella 
+
+{% highlight sql %}
+CREATE TABLE nome_tabella 
 (<nome_colonna><tipo_dato>[attributi],
 <nome_colonna><tipo_dato>[attributi],...);
 {% endhighlight %}
@@ -35,37 +34,35 @@ Nel comando per creare una tabella abbiamo visto che occorre indicare, per ciasc
 
  Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">CREATE TABLE alunni (
+{% highlight sql %}
+CREATE TABLE alunni (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 nome TEXT,
 cognome TEXT);
 {% endhighlight %}
 
-</div>#### DROP TABLE 
+#### DROP TABLE 
 
 Il comando consente di cancellare una tabella dal database.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DROP TABLE nome_tabella;
 
-
+{% highlight sql %}
+DROP TABLE nome_tabella;
 {% endhighlight %}
 
 </div>Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DROP TABLE alunni;
 
-
+{% highlight sql %}
+DROP TABLE alunni;
 {% endhighlight %}
 
-</div>#### INSERT 
+#### INSERT 
 
 Il comando consente di inserire dati in una tabella esistente
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">INSERT INTO nome_tabella
+{% highlight sql %}
+INSERT INTO nome_tabella
 (colonna1, colonna2, colonna3) 
 VALUES (valore1, valore2, valore3);
 {% endhighlight %}
@@ -74,8 +71,9 @@ VALUES (valore1, valore2, valore3);
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">INSERT INTO alunni 
+
+{% highlight sql %}
+INSERT INTO alunni 
 (nome, cognome) 
 VALUES ("Annalisa", "De Pamphilis");
 {% endhighlight %}
@@ -88,8 +86,8 @@ VALUES ("Annalisa", "De Pamphilis");
 
 </figure>#### UPDATE 
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">UPDATE nome_tabella
+{% highlight sql %}
+UPDATE nome_tabella
 SET colonna1=valore1, colonna2=valore2, ... 
 WHERE predicato;
 {% endhighlight %}
@@ -98,38 +96,34 @@ WHERE predicato;
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">UPDATE alunni SET nome = "Annabella" WHERE id = 1;
-
-
+{% highlight sql %}
+UPDATE alunni SET nome = "Annabella" WHERE id = 1;
 {% endhighlight %}
 
-</div>#### DELETE 
+#### DELETE 
 
 Il comando consente di cancellare i dati da una tabella
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DELETE FROM nome_tabella WHERE predicato;
 
-
+{% highlight sql %}
+DELETE FROM nome_tabella WHERE predicato;
 {% endhighlight %}
 
 </div>I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
 
 Esempio:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">DELETE FROM alunni WHERE id = 1;
-
-
+{% highlight sql %}
+DELETE FROM alunni WHERE id = 1;
 {% endhighlight %}
 
-</div>#### SELECT 
+#### SELECT 
 
 Il comando consente di andare a leggere i dati dalle tabelle del database
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">SELECT colonna1, colonna2, ... 
+
+{% highlight sql %}
+SELECT colonna1, colonna2, ... 
 FROM nome_tabella
 WHERE predicato;
 {% endhighlight %}
@@ -147,8 +141,9 @@ WHERE predicato;
 
  I predicati si combinano tra loro utilizzando gli operatori logici AND, OR, NOT.
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Esempio di uso di AND 
+
+{% highlight sql %}
+Esempio di uso di AND 
 SELECT colonna1, colonna2, ...
 FROM nome_tabella
 WHERE predicato1 AND predicato2 AND predicato3 ...; 
@@ -165,7 +160,7 @@ FROM nome_tabella
 WHERE NOT predicato;
 {% endhighlight %}
 
-</div>#### L’istruzione JOIN in SQL 
+#### L’istruzione JOIN in SQL 
 
 L’istruzione JOIN ha lo scopo di combinare tuple tra due o più tabelle, basandosi su una colonna che collega logicamente le tabelle stesse.
 
@@ -187,8 +182,9 @@ Vediamo un esempio:
 | 10309 | 1 | 13/04/2019 |
 | 10310 | 3 | 18/04/2019 |
 
-</figure><div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="sql" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">SELECT Ordini.IdOrdine, Clienti.NomeCliente, Ordini.DataOrdine 
+</figure>
+{% highlight sql %}
+ SELECT Ordini.IdOrdine, Clienti.NomeCliente, Ordini.DataOrdine 
 FROM Ordini
 JOIN Clienti ON Ordini.IdCliente=Clienti.IdCliente;
 {% endhighlight %}

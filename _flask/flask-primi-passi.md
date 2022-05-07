@@ -1,10 +1,8 @@
 ---
-id: 760
 title: 'Flask: primi passi'
 date: '2021-10-21T00:34:31+02:00'
 author: fabio
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=760'
 ---
 
 Per seguire questa lezione scarica il [file contenente gli script](https://www.esercizidiinformatica.it/progetti/flask/miosito.zip).
@@ -25,8 +23,9 @@ def hello_world():
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/10/cambiadirectory-1024x596.png)</figure>Ora digitiamo i comandi:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">{% endhighlight %}
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="php" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">set FLASK_APP=hello
+
+{% highlight python %}
+set FLASK_APP=hello
 set FLASK_ENV=development
 flask run
 {% endhighlight %}

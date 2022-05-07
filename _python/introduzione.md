@@ -17,11 +17,11 @@ Per programmare useremo **IDLE** (Ambiente di sviluppo integrato di Python).
 
 Scrivi all’interno dell’editor le seguenti istruzioni:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">print("Ciao mondo!")
+{% highlight python %}
+print("Ciao mondo!")
 print("Questo è il mio primo programma")
 print("Da questo momento sono uno sviluppatore software")
-```
+{% endhighlight %}
 
 </div>Ora fai eseguire il programma al computer cliccando su:
 
@@ -29,11 +29,11 @@ Run -&gt; Run module
 
 Vedrai apparire sulla console:
 
-<div class="wp-block-simple-code-block-ace" style="height: 250px; position:relative; margin-bottom: 50px;">```
-<pre class="wp-block-simple-code-block-ace" data-copy="false" data-fontsize="14" data-lines="Infinity" data-mode="python" data-showlines="true" data-theme="monokai" style="position:absolute;top:0;right:0;bottom:0;left:0">Ciao mondo!
+{% highlight python %}
+Ciao mondo!
 Questo è il mio primo programma
 Da questo momento sono uno sviluppatore software
-```
+{% endhighlight %}
 
 </div>E’ tradizione che il primo programma quando si comincia a studiare un nuovo linguaggio di programmazione sia il “Ciao Mondo”. Il programma avrà lo scopo di far apparire la scritta *Ciao Mondo* sullo schermo. Dal punto di vista logico è un compito semplice tuttavia il fatto che questo venga eseguito correttamente ci dà indicazione del fatto che l’ambiente di programmazione funziona in modo corretto e che il programmatore è riuscito ad operare con l’ambiente in maniera adeguata.
 
