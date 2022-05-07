@@ -5,7 +5,7 @@ name: Home
 
 # In questa pagina troverete l’elenco delle esercitazioni di python:
 
-Per installare python sul tuo computer, leggi la guida su [come installare python sui sistemi windows](https://www.esercizidiinformatica.it/come-installare-python-su-windows/).
+Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseurl}}/python/come-installare-python-su-windows">come installare python sui sistemi windows</a>.
 
 * <a href="{{site.baseurl}}/python/introduzione">Introduzione</a>
 * <a href="{{site.baseurl}}/python/variabili">Variabili</a>

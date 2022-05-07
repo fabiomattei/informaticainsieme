@@ -1,22 +1,17 @@
 ---
-id: 158
-title: Home
+title: La codifica dell'informazione
 date: '2020-02-06T05:08:27+01:00'
 author: fabio
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=158'
 ---
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/03/logo.png)</figure><div class="wp-block-columns"><div class="wp-block-column">[La codifica dell’informazione](https://www.esercizidiinformatica.it/la-codifica-dellinformazione/)
+* <a href="{{site.baseurl}}/codifica/la-codifica-dellinformazione">La codifica dell’informazione</a>
+* La codifica dei numeri
+* <a href="{{site.baseurl}}/codifica/la-codifica-del-testo">La codifica del testo</a>
+* <a href="{{site.baseurl}}/codifica/la-codifica-delle-immagini">La codifica delle immagini</a>
+* <a href="{{site.baseurl}}/codifica/la-codifica-dei-video">La codifica dei video</a>
 
-- La codifica dei numeri
-- [La codifica del testo](https://www.esercizidiinformatica.it/la-codifica-del-testo/)
-- [La codifica delle immagini](https://www.esercizidiinformatica.it/la-codifica-delle-immagini/)
-- [La codifica dei video](https://www.esercizidiinformatica.it/la-codifica-dei-video/)
-
-</div><div class="wp-block-column">.La progettazione grafica.
+#### La progettazione grafica.
 
 - [Alcune regole per una progettazione grafica](https://www.esercizidiinformatica.it/alcune-regole-per-una-progettazione-grafica/)
 - [La scelta del font](https://www.esercizidiinformatica.it/font/)
-
-</div></div>
