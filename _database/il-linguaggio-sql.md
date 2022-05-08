@@ -189,7 +189,7 @@ FROM Ordini
 JOIN Clienti ON Ordini.IdCliente=Clienti.IdCliente;
 {% endhighlight %}
 
-</div><figure class="wp-block-table">| IdOrdine | NomeCliente | DataOrdine |
+| IdOrdine | NomeCliente | DataOrdine |
 |---|---|---|
 | 10308 | Mario Girotti | 12/04/2019 |
 | 10309 | Carlo Pedersoli | 13/04/2019 |

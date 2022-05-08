@@ -1,13 +1,11 @@
 ---
-id: 92
 title: 'Il ciclo While'
 date: '2020-02-04T08:12:47+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=92'
 ---
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/x1GTNxCnJ-A?feature=oembed" title="Il ciclo while in Python" width="580"></iframe></div></figure>Il costrutto **while** in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti **ciclicamente**.
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/x1GTNxCnJ-A?feature=oembed" title="Il ciclo while in Python" width="580"></iframe>Il costrutto **while** in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti **ciclicamente**.
 
 La sintassi è la seguente:
 
@@ -18,7 +16,7 @@ while <espressione booleana>:
     <comando 3>
 {% endhighlight %}
 
-</div>While è un ciclo con **controllo in testa** questo significa che *il controllo sull’espressione booleana viene fatto prima di entrare nel ciclo*.
+While è un ciclo con **controllo in testa** questo significa che *il controllo sull’espressione booleana viene fatto prima di entrare nel ciclo*.
 
 Le istruzioni all’interno del ciclo vengono eseguite se il risultato dell’espressione booleana è **vero**. In caso contrario (espressione booleana falsa) il blocco comandi interno al ciclo viene ignorato e l’esecuzione del programma continua con la prima istruzione successiva al ciclo.
 
@@ -31,10 +29,10 @@ while cont < 10:
    print(cont)
 {% endhighlight %}
 
-</div><figure class="wp-block-table">| cont | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| cont | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 
-</figure>Questo programma ci mostra un ciclo le cui istruzioni contenute all’interno vengono eseguite *fintanto che cont &lt; 10*. La **variabile cont** si dice **contatore** dato che il suo scopo è contare il numero di volte che il ciclo è stato eseguito. Questo costrutto è molto diffuso.
+Questo programma ci mostra un ciclo le cui istruzioni contenute all’interno vengono eseguite *fintanto che cont &lt; 10*. La **variabile cont** si dice **contatore** dato che il suo scopo è contare il numero di volte che il ciclo è stato eseguito. Questo costrutto è molto diffuso.
 
 Facciamo un secondo esempio:
 
@@ -45,7 +43,7 @@ while cont < 10:
 print(cont)
 {% endhighlight %}
 
-</div>Noterai che l’istruzione print(cont) non è posta all’interno del ciclo (non è contenuta) dato che la sua indentazione è allineata alla parola while che definisce il ciclo e non più a destra di questa. Questo ciclo scriverà sulla console il solo numero 10.
+Noterai che l’istruzione print(cont) non è posta all’interno del ciclo (non è contenuta) dato che la sua indentazione è allineata alla parola while che definisce il ciclo e non più a destra di questa. Questo ciclo scriverà sulla console il solo numero 10.
 
 Ricorda che l’indentazione in Python è molto importante!
 
@@ -56,7 +54,7 @@ while cont < 10:
     print(cont, end = ' ') 
 {% endhighlight %}
 
-</div>Cosa noti?
+Cosa noti?
 
 Scriviamo ora un programma che calcoli la somma dei primi 10 numeri interi
 
@@ -70,14 +68,14 @@ while cont <= n:
 print(acc)           # al termine del ciclo scrivo il valore di acc
 {% endhighlight %}
 
-</div>Nel precedente esempio abbiamo introdotto il concetto di **accumulatore**. Si dice accumulatore una variabile che *accumula dopo ciascuna esecuzione delle istruzioni all’interno del ciclo i risultati di un calcolo*. Nell’esempio ad acc viene sommato di volta in volta il contento della variabile contatore. Possiamo vedere come le variabili si comportano in una tabella di tracciamento:
+Nel precedente esempio abbiamo introdotto il concetto di **accumulatore**. Si dice accumulatore una variabile che *accumula dopo ciascuna esecuzione delle istruzioni all’interno del ciclo i risultati di un calcolo*. Nell’esempio ad acc viene sommato di volta in volta il contento della variabile contatore. Possiamo vedere come le variabili si comportano in una tabella di tracciamento:
 
-<figure class="wp-block-table">| **n** | 10 |  |  |  |  |  |  |  |  |  |  |
+| **n** | 10 |  |  |  |  |  |  |  |  |  |  |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | **cont** | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 | **acc** | 0 | 1 | 3 | 6 | 10 | 15 | 21 | 28 | 36 | 45 | 55 |
 
-</figure>{% highlight python %}
+{% highlight python %}
 # Questo programma calcola la sequenza di Fibonacci.
 acc_a = 0
 acc_b = 1
@@ -96,7 +94,7 @@ while cont < max_cont:
 print()
 {% endhighlight %}
 
-</div>L’algoritmo di Fibonacci funziona su di un gioco di due variabili accumulatori: acc\_a e acc\_b.
+L’algoritmo di Fibonacci funziona su di un gioco di due variabili accumulatori: acc\_a e acc\_b.
 
 {% highlight python %}
 # Attende sino a quando non viene inserita la giusta password.
@@ -110,47 +108,47 @@ while password != "unicorn":
 print "Benvenuto"
 {% endhighlight %}
 
-</div><figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"></iframe></div></figure>**Esercizio 1:**
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"></iframe>#### Esercizio1:
 
 Scrivere un programma che letto un numero intero N calcoli la somma di tutti i numeri da 1 ad N
 
-**Esercizio 2:**
+#### Esercizio2:
 
 Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri da N ad M (estremi inclusi)
 
-**Esercizio 3:**
+#### Esercizio3:
 
 Scrivere un programma che letto un numero intero N calcoli il fattoriale di N ( 1 \* 2 \* 3 \* 4 …. \* N)
 
-**Esercizio 4:**
+#### Esercizio4:
 
 Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri pari compresi tra N ed M
 
-**Esercizio 5:**
+#### Esercizio5:
 
 Scrivere un programma che letti N numeri in ingresso calcoli il numero massimo e il numero minimo inseriti
 
-**Esercizio 6:**
+#### Esercizio6:
 
 Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti
 
-**Esercizio 7:**
+#### Esercizio7:
 
 Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti
 
-**Esercizio 8:**
+#### Esercizio8:
 
 Scrivere un programma che letto un numero intero N calcoli la somma di tutte le cifre dispari che lo compongono
 
-**Esercizio 9:**
+#### Esercizio9:
 
 Scrivere un programma che letto un numero intero N scriva la tavola pitagorica della moltiplicazione del numero prescelto
 
-**Esercizio 10:**
+#### Esercizio10:
 
 Scrivere un programma che scriva la tavola pitagorica della moltiplicazione completa
 
-**Esercizio 11:**
+#### Esercizio11:
 
 Leonardo Pisano propose nel tredicesimo secolo il seguente problema:
 
