@@ -20,8 +20,7 @@
 
 title: Informatica insieme
 email: burattino@gmail.com
-description: >- # I miei personali appunti di informatica, pensado di 
-  fare cosa gradita.
+description: >- # I miei personali appunti di informatica, pensado di fare cosa gradita.
 baseurl: "/informaticainsieme" # the subpath of your site, e.g. /blog
 url: "https://fabiomattei.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fabiomattei
