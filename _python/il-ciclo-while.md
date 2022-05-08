@@ -5,7 +5,11 @@ author: Fabio Mattei
 layout: page
 ---
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/x1GTNxCnJ-A?feature=oembed" title="Il ciclo while in Python" width="580"></iframe>Il costrutto **while** in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti **ciclicamente**.
+{::options parse_block_html="true" /}
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/x1GTNxCnJ-A?feature=oembed" title="Il ciclo while in Python" width="580"></iframe>
+{::options parse_block_html="false" /}
+
+Il costrutto **while** in python permette di eseguire dei comandi un certo numero di volte. Si chiama ciclo perchè i comandi contenuti al suo interno vengono ripetuti **ciclicamente**.
 
 La sintassi è la seguente:
 
@@ -108,7 +112,11 @@ while password != "unicorn":
 print "Benvenuto"
 {% endhighlight %}
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"></iframe>#### Esercizio1:
+{::options parse_block_html="true" /}
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/kAnH-nfn8D0?feature=oembed" title="Il ciclo While in Python con variabile flag" width="580"></iframe>
+{::options parse_block_html="false" /}
+
+#### Esercizio1:
 
 Scrivere un programma che letto un numero intero N calcoli la somma di tutti i numeri da 1 ad N
 
