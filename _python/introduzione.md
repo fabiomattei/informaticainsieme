@@ -27,7 +27,7 @@ print("Questo è il mio primo programma")
 print("Da questo momento sono uno sviluppatore software")
 {% endhighlight %}
 
-![Il mio primo programma](/informaticainsieme/images/python/introduzione/console2.jpg){:class="aside-image"}
+![Il mio primo programma](/informaticainsieme/images/python/introduzione/console2.png){:class="aside-image"}
 
 Ora fai eseguire il programma al computer cliccando su:
 
