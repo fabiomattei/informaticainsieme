@@ -7,7 +7,11 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=202'
 ---
 
-Le variabili sono **contenitori di informazioni**. Al fine di creare o inizializzare una variabile Python si avvale dell’operatore di assegnamento indicato dal simbolo **=** in questo modo:
+Le variabili sono **contenitori di informazioni**. Possiamo pensare ad una varibile come ad un cassetto, dotato di etichetta, che può contenere una informazione.
+Lo pensiamo come un cassetto dotato di etichetta perché ogni variabile ha un nome, il nome ci serve per ricordare cosa contiene e per trovarla facilmente tra
+le tante variabili che andremo a creare per ciascun nostro programma.
+
+Al fine di creare o inizializzare una variabile Python si avvale dell’operatore di assegnazione indicato dal simbolo **=** in questo modo:
 
 {% highlight python %}
 x = 5
@@ -15,7 +19,13 @@ y = "John"
 z = 3.564
 {% endhighlight %}
 
-</div>L’operando alla sinistra del simbolo = è il **nome della variabile**, l’operando alla destra è il **valore da conservare** all’interno della variabile.
+Facciamo bene attenzione, questa non è una equazione matematica ma una assegnazione, si legge in questo modo: assegno alla variabile x il numero 5.
+Significa che nella memoria del computer verrà conservato uno spazio (il cassetto) che avrà come etichetta la **x**. All'interno di questo spasio sarà 
+posto il numero 5.
+
+Quindi ricordiamo:
+* il simbolo alla sinistra del simbolo = è il **nome della variabile**
+* il simbolo alla destra del simbolo = il **valore da conservare** all’interno della variabile.
 
 In questo esempio vengono create tre variabili:
 
@@ -47,7 +57,7 @@ costo_panino = 2
 costo_totale = numero_panini * costo_panino
 {% endhighlight %}
 
-</div>Osserviamo che:
+Osserviamo che:
 
 - Alle variabili sono stati dati nomi significativi che seguono le regole elencate in precedenza
 - Nelle variabili si memorizzano valori ma non le unità di misura
