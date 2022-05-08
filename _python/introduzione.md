@@ -13,7 +13,7 @@ Per programmare useremo **IDLE** (Ambiente di sviluppo integrato di Python).
 
 Si aprirà una shell
 
-![Apertura editod](/informaticainsieme/images/python/introduzione/console.jpg){:class="aside-image"}
+![Apertura editor](/informaticainsieme/images/python/introduzione/console.jpg){:class="aside-image"}
 
 Cliccare su file → new e creare un nuovo file. Si aprirà l’editor. Salvare il file con nome primoesempio.py (save as) nella cartella di lavoro personale.
 
@@ -27,13 +27,13 @@ print("Questo è il mio primo programma")
 print("Da questo momento sono uno sviluppatore software")
 {% endhighlight %}
 
-![Il mio primo programma](/informaticainsieme/images/python/introduzione/console2.png){:class="aside-image"}
-
 Ora fai eseguire il programma al computer cliccando su:
 
 Run -&gt; Run module
 
 Vedrai apparire sulla console:
+
+![Il mio primo programma](/informaticainsieme/images/python/introduzione/console2.png){:class="aside-image"}
 
 {% highlight python %}
 Ciao mondo!
