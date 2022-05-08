@@ -40,10 +40,10 @@ In Python l’indentazione (gli spazi che nell’esempio 1 precedono l’istruzi
     
     - Uguale: a == b
     - Diverso: a != b
-    - Minore: a &lt; b
-    - Minore o uguale: a &lt;= b
-    - Maggiore: a &gt; b
-    - Maggiore o uguale: a &gt;= b
+    - Minore: a < b
+    - Minore o uguale: a <= b
+    - Maggiore: a > b
+    - Maggiore o uguale: a >= b
 
 ##  Il costrutto elif
 
