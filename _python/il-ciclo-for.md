@@ -6,7 +6,7 @@ layout: page
 ---
 
 {::options parse_block_html="true" /}
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/9ZTyZnUvYqM?feature=oembed" title="Il ciclo for in python: variabile contatore e variabile accumulatore" width="580"></iframe></figure>
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/9ZTyZnUvYqM?feature=oembed" title="Il ciclo for in python: variabile contatore e variabile accumulatore" width="580"></iframe>
 {::options parse_block_html="false" /}
 
 Il ciclo for ci permette di iterare su tutti gli elementi di una lista ed eseguire un determinato blocco di codice.
