@@ -173,7 +173,7 @@ dic1={1:10, 2:20}
 dic2={3:30, 4:40}  
 Expected Result : {1: 10, 2: 20, 3: 30, 4: 40}
 
-**Es.3:
+#### Esercizio 3:
 Scrivi un programma Python che letto un numero n generi un dizionario i cui elementi abbiano la forma x, x\*x:  
 Esempio ( n = 5) :  
 Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
