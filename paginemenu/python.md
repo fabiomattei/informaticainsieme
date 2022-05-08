@@ -14,15 +14,13 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * [Conversioni di tipo]({{ site.baseurl }}{% link _python/conversioni-di-tipo.md %})
 * [Print]({{ site.baseurl }}{% link _python/print.md %})
 * [Input]({{ site.baseurl }}{% link _python/input.md %})
-* <a href="{{site.baseurl}}/python/la-condizione">Condizione</a>
-* <a href="{{site.baseurl}}/python/operatori-logici">Operatori logici</a>
-* <a href="{{site.baseurl}}/python/il-ciclo-while">Il ciclo While</a>
-* <a href="{{site.baseurl}}/python/il-ciclo-for">Il ciclo for</a>
-* <a href="{{site.baseurl}}/python/esercizi-sulle-liste">Liste</a>
-* <a href="{{site.baseurl}}/python/esercizi-sulle-tuple">Tuple</a>
-* <a href="{{site.baseurl}}/python/i-dizionari">Dizionari</a>
-* <a href="{{site.baseurl}}/python/funzioni">Funzioni</a>
-* <a href="{{site.baseurl}}/python/la-ricorsione">Ricorsione</a>
-* <a href="{{site.baseurl}}/python/la-programmazione-ad-oggetti">La programmazione ad oggetti</a>
-
-
+* [Condizione]({{ site.baseurl }}{% link _python/la-condizione.md %})
+* [Operatori logici]({{ site.baseurl }}{% link _python/operatori-logici.md %})
+* [Il ciclo While]({{ site.baseurl }}{% link _python/il-ciclo-while.md %})
+* [Il ciclo for]({{ site.baseurl }}{% link _python/il-ciclo-for.md %})
+* [Liste]({{ site.baseurl }}{% link _python/esercizi-sulle-liste.md %})
+* [Tuple]({{ site.baseurl }}{% link _python/esercizi-sulle-tuple.md %})
+* [Dizionari]({{ site.baseurl }}{% link _python/i-dizionari.md %})
+* [Funzioni]({{ site.baseurl }}{% link _python/funzioni.md %})
+* [Ricorsione]({{ site.baseurl }}{% link _python/la-ricorsione.md %})
+* [La programmazione ad oggetti]({{ site.baseurl }}{% link _python/la-programmazione-ad-oggetti.md %})
