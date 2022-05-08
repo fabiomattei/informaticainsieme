@@ -12,8 +12,8 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * [Variabili]({{ site.baseurl }}{% link _python/variabili.md %})
 * [Tipi di variabile]({{ site.baseurl }}{% link _python/tipi-di-variabile.md %})
 * [Conversioni di tipo]({{ site.baseurl }}{% link _python/conversioni-di-tipo.md %})
-* <a href="{{site.baseurl}}/python/print">Print</a>
-* <a href="{{site.baseurl}}/python/input">Input</a>
+* [Print]({{ site.baseurl }}{% link _python/print.md %})
+* [Input]({{ site.baseurl }}{% link _python/input.md %})
 * <a href="{{site.baseurl}}/python/la-condizione">Condizione</a>
 * <a href="{{site.baseurl}}/python/operatori-logici">Operatori logici</a>
 * <a href="{{site.baseurl}}/python/il-ciclo-while">Il ciclo While</a>
