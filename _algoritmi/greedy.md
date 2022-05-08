@@ -59,7 +59,7 @@ Facciamo finta di disporre delle seguenti monete.
 * 1 x 20 cent 
 * 19 x 50 cent
 
-La logiva Greedy, come al solito, inizia dalla moneta più grande e poi lavora andando verso le monete più piccole. In questo caso però prima di erogare la moneta controlla la disponibltà della moneta stessa.
+La logica Greedy, come al solito, inizia dalla moneta più grande e poi lavora andando verso le monete più piccole. In questo caso però prima di erogare la moneta controlla la disponibltà della moneta stessa.
 
 L'algoritmo prende in esame dalla moneta più grande, quella da 50 centesimi e la confronta con il resto da dare (30 centesimi). Dato che la moneta supera il resto da dare la scarta.
 
@@ -158,10 +158,10 @@ Per lavorare con l'algoritmo si crea una tabella che indica la distanza compless
 
 Immaginiamo di trovarci di fronte il seguente grafo:
 
-![Dijkstra, grafo iniziale](dijkstra01.png)
+![Dijkstra, grafo iniziale](/informaticainsieme/images/algoritmi/greedy/dijkstra01.png){:class="aside-image"}
 
 
-![Dijkstra: aggiungo nodo A](dijkstra02.png)
+![Dijkstra: aggiungo nodo A](/informaticainsieme/images/algoritmi/greedy/dijkstra02.png){:class="aside-image"}
 
 Iniziamo ad applicare l'algoritmo di Dijkstra a partire dal nodo A che considereremo nodo radice. Consideriamo tutti i suoi vicini e calcoliamo la distanza da A.
 
@@ -177,7 +177,7 @@ La tabella delle distanza aggiornata è la seguente:
 
 Il nodo a costo minimo da raggiungere è il nodo E quindi vado a considerare il nodo E.
 
-![Dijkstra: aggiungo nodo E](dijkstra03.png)
+![Dijkstra: aggiungo nodo E](/informaticainsieme/images/algoritmi/greedy/dijkstra03.png){:class="aside-image"}
 
 Una volta in E rivaluto le distanze dei vicini di E non ancora visitati. 
 Noto che D, è raggiungibile a costo 7 da E, quindi è raggiungibile a costo complessivo 10 da A.
@@ -196,7 +196,7 @@ Ecco la tabella aggiornata.
 
 Per andare al passo successivo guardo tutti i nodi rimasti e scelgo quello a costo minore quindi vado a valutare C che ha costo 4.
 
-![Dijkstra: aggiungo nodo C](dijkstra04.png)
+![Dijkstra: aggiungo nodo C](/informaticainsieme/images/algoritmi/greedy/dijkstra04.png){:class="aside-image"}
 
 Una volta in C rivaluto le distanze dei vicini di C non ancora visitati.
 Noto che da C è raggiungibile D a costo 3. Dato che arrivare a C ha costo 4, il costo complessivo sarebbe 7. Al momento il costo per arrivare a D passando per E è 10 quindi il percorso che passa per C è conveniente.
@@ -213,7 +213,7 @@ Da C è raggiungibile B a costo 6. Dato che arrivare a C ha costo 4, il costo co
 
 Per andare al passo successivo guardo tutti i nodi rimasti e scelgo quello a costo minore. Sono rimasti B e D e il costo minore è rappresentato da B.
 
-![Dijkstra: aggiungo nodo B](dijkstra05.png)
+![Dijkstra: aggiungo nodo B](/informaticainsieme/images/algoritmi/greedy/dijkstra05.png){:class="aside-image"}
 
 Una volta in B rivaluto le distanze dei suoi vicini non visitati.
 L'unico rimasto è il nodo D che è distante 4 da B. Dato che arrivare a B mi è costato 5 il costo complessivo per arrivare a D passando per B sarebbe 9. Tuttavia il costo attuale di B è minore di 9 quindi non cambio nulla nella tabella.
@@ -226,7 +226,7 @@ L'unico rimasto è il nodo D che è distante 4 da B. Dato che arrivare a B mi è
 | D    | 7               | C            |          |
 | E    | 3               | A            | Si       |
 
-![Dijkstra: aggiungo nodo D](dijkstra06.png)
+![Dijkstra: aggiungo nodo D](/informaticainsieme/images/algoritmi/greedy/dijkstra06.png){:class="aside-image"}
 
 A questo punto rimane solo il nodo D e lo aggiungo senza il bisogno di rivalutare nulla.
 
