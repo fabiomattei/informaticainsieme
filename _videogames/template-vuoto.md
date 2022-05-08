@@ -2,7 +2,7 @@
 id: 20
 title: 'Template vuoto'
 date: '2020-01-20T17:37:45+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=20'
 ---

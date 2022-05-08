@@ -2,7 +2,7 @@
 id: 3
 title: 'Privacy Policy'
 date: '2020-01-09T06:01:11+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=3'
 ---

@@ -2,7 +2,7 @@
 id: 202
 title: Variabili
 date: '2020-02-07T21:44:05+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=202'
 ---

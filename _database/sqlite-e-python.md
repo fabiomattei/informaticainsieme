@@ -2,7 +2,7 @@
 id: 402
 title: 'SQLite e Python'
 date: '2020-02-19T05:11:54+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=402'
 ---

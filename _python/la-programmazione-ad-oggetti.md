@@ -2,7 +2,7 @@
 id: 297
 title: 'La programmazione ad oggetti'
 date: '2020-02-09T07:36:40+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=297'
 ---

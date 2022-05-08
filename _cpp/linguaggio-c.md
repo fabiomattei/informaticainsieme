@@ -2,7 +2,7 @@
 id: 725
 title: 'Linguaggio c++'
 date: '2021-10-10T22:33:00+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=725'
 ---

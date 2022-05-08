@@ -2,7 +2,7 @@
 id: 642
 title: 'Analisi dei dati con Pandas'
 date: '2021-09-15T08:04:41+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=642'
 ---

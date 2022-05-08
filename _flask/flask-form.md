@@ -2,7 +2,7 @@
 id: 813
 title: 'Flask:  Form'
 date: '2021-11-11T09:47:36+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=813'
 ---

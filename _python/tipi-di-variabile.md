@@ -2,7 +2,7 @@
 id: 207
 title: 'Tipi di variabile'
 date: '2020-02-07T22:03:41+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=207'
 ---

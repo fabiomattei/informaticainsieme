@@ -2,7 +2,7 @@
 id: 468
 title: 'MS Access'
 date: '2020-02-22T05:29:00+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=468'
 ---

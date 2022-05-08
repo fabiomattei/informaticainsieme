@@ -2,7 +2,7 @@
 id: 1014
 title: OCR
 date: '2022-04-21T08:33:47+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=1014'
 ---

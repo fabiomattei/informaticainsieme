@@ -2,7 +2,7 @@
 id: 979
 title: 'Aggiungiamo una dimensione'
 date: '2022-02-23T05:48:03+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=979'
 ---

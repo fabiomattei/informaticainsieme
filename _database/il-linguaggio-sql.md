@@ -1,7 +1,7 @@
 ---
 title: 'Il linguaggio SQL'
 date: '2020-02-10T06:22:07+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

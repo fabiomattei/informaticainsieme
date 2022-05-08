@@ -2,7 +2,7 @@
 id: 322
 title: Database
 date: '2020-02-10T06:20:07+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=322'
 ---

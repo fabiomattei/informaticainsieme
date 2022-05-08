@@ -2,7 +2,7 @@
 id: 17
 title: 'Palla contrllata dalla tastiera'
 date: '2020-01-20T13:14:25+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=17'
 ---

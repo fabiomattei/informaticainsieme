@@ -2,7 +2,7 @@
 id: 446
 title: 'Il problema del commesso viaggiatore'
 date: '2020-02-20T15:21:11+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=446'
 ---

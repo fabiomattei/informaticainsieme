@@ -2,7 +2,7 @@
 id: 906
 title: 'Regressione lineare'
 date: '2022-01-13T07:45:57+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=906'
 ---

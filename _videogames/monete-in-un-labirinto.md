@@ -2,7 +2,7 @@
 id: 41
 title: 'Monete in un labirinto'
 date: '2020-01-20T18:02:04+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=41'
 ---

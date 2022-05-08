@@ -2,7 +2,7 @@
 id: 15
 title: 'Palla controllata dal mouse'
 date: '2020-01-20T13:03:52+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=15'
 ---

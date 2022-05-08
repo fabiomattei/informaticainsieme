@@ -2,7 +2,7 @@
 id: 238
 title: 'Conversioni di tipo'
 date: '2020-02-08T06:03:58+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=238'
 ---

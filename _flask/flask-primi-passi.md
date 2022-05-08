@@ -1,7 +1,7 @@
 ---
 title: 'Flask: primi passi'
 date: '2021-10-21T00:34:31+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

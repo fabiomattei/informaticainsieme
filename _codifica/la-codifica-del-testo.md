@@ -2,7 +2,7 @@
 id: 560
 title: 'La codifica del testo'
 date: '2020-10-06T23:56:27+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=560'
 ---

@@ -2,7 +2,7 @@
 id: 33
 title: 'Raccogli le monete con la tastiera'
 date: '2020-01-20T17:57:38+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=33'
 ---

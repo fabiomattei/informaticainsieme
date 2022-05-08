@@ -2,7 +2,7 @@
 id: 962
 title: 'Andiamo a disegnare la funzione costo'
 date: '2022-02-10T05:52:56+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=962'
 ---

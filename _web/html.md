@@ -2,7 +2,7 @@
 id: 340
 title: HTML
 date: '2020-02-10T21:29:02+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=340'
 ---

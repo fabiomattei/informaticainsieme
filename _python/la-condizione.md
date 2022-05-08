@@ -2,7 +2,7 @@
 id: 105
 title: 'La condizione'
 date: '2020-02-04T12:17:23+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=105'
 ---

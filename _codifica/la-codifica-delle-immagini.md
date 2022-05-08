@@ -2,7 +2,7 @@
 id: 549
 title: 'La codifica delle immagini'
 date: '2020-10-06T23:32:06+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=549'
 ---

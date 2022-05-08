@@ -2,7 +2,7 @@
 id: 121
 title: 'Le tuple'
 date: '2020-02-04T15:18:20+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=121'
 ---

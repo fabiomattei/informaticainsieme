@@ -2,7 +2,7 @@
 id: 1027
 title: 'Natural Language Processing'
 date: '2022-04-28T09:57:43+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=1027'
 ---

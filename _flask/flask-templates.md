@@ -1,7 +1,7 @@
 ---
 title: 'Flask: Templates'
 date: '2021-10-21T00:36:43+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

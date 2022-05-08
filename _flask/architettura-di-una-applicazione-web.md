@@ -2,7 +2,7 @@
 id: 845
 title: 'Architettura di una applicazione WEB'
 date: '2021-11-18T08:04:34+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=845'
 ---

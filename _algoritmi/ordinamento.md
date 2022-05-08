@@ -2,7 +2,7 @@
 id: 720
 title: Ordinamento
 date: '2021-09-30T10:58:13+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=720'
 ---

@@ -2,7 +2,7 @@
 id: 356
 title: Web
 date: '2020-02-12T07:02:08+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=356'
 ---

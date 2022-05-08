@@ -2,7 +2,7 @@
 id: 558
 title: 'La codifica dell&#8217;informazione'
 date: '2020-10-07T00:08:33+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=558'
 ---

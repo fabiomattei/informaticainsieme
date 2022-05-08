@@ -2,7 +2,7 @@
 id: 269
 title: 'I dizionari'
 date: '2020-02-09T06:44:11+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=269'
 ---

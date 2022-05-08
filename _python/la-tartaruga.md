@@ -2,7 +2,7 @@
 id: 134
 title: 'La tartaruga'
 date: '2020-02-04T15:55:20+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=134'
 ---

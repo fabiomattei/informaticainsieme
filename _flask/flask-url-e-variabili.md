@@ -1,7 +1,7 @@
 ---
 title: 'Flask: URL e variabili'
 date: '2021-10-28T05:54:35+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

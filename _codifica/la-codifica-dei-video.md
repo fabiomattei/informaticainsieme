@@ -2,7 +2,7 @@
 id: 569
 title: 'La codifica dei video'
 date: '2020-10-08T21:50:15+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=569'
 ---

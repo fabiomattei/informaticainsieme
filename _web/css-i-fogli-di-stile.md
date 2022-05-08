@@ -2,7 +2,7 @@
 id: 624
 title: 'CSS i fogli di stile'
 date: '2021-05-21T11:44:47+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=624'
 ---

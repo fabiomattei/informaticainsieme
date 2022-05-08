@@ -2,7 +2,7 @@
 id: 118
 title: 'Il ciclo for'
 date: '2020-02-04T15:13:58+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=118'
 ---

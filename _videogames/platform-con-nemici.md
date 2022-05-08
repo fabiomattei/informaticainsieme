@@ -2,7 +2,7 @@
 id: 68
 title: 'Platform con nemici'
 date: '2020-01-26T14:19:48+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=68'
 ---

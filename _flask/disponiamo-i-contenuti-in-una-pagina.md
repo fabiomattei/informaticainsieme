@@ -2,7 +2,7 @@
 id: 864
 title: 'Disponiamo i contenuti in una pagina'
 date: '2021-12-11T06:03:23+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=864'
 ---

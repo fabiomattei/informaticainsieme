@@ -1,7 +1,7 @@
 ---
 title: 'Come installare python su Windows'
 date: '2020-02-07T08:47:01+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

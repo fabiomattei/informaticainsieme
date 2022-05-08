@@ -2,7 +2,7 @@
 id: 886
 title: 'c++ le stringhe'
 date: '2021-12-13T07:41:22+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=886'
 ---

@@ -2,7 +2,7 @@
 id: 74
 title: 'Platform con mappa tmx'
 date: '2020-01-26T14:41:12+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=74'
 ---

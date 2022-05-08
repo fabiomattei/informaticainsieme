@@ -2,7 +2,7 @@
 id: 620
 title: font
 date: '2021-05-08T06:14:18+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=620'
 ---

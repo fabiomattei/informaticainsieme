@@ -2,7 +2,7 @@
 id: 617
 title: 'Alcune regole per una progettazione grafica'
 date: '2021-05-08T05:59:55+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=617'
 ---

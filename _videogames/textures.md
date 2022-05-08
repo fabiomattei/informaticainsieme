@@ -2,7 +2,7 @@
 id: 37
 title: 'Utilizziamo le Textures sul nostro personaggio'
 date: '2020-01-20T17:59:56+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=37'
 ---

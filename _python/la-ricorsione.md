@@ -2,7 +2,7 @@
 id: 128
 title: 'La ricorsione'
 date: '2020-02-04T15:45:02+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=128'
 ---

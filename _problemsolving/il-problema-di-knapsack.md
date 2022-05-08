@@ -2,7 +2,7 @@
 id: 430
 title: 'Il problema di Knapsack'
 date: '2020-02-20T08:08:07+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=430'
 ---

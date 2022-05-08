@@ -2,7 +2,7 @@
 id: 806
 title: 'Flask e il passaggio delle informazioni'
 date: '2021-11-11T05:52:06+01:00'
-author: fabio
+author: Fabio Mattei
 layout: post
 guid: 'https://www.esercizidiinformatica.it/?p=806'
 permalink: /blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/

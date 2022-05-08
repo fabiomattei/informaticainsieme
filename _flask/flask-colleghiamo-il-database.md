@@ -2,7 +2,7 @@
 id: 824
 title: 'Flask: colleghiamo il database'
 date: '2021-11-18T08:20:53+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=824'
 ---

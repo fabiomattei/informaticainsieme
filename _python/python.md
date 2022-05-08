@@ -2,7 +2,7 @@
 id: 52
 title: Python
 date: '2020-01-22T09:08:29+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=52'
 ---

@@ -2,7 +2,7 @@
 id: 998
 title: 'La classificazione'
 date: '2022-03-16T23:47:41+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=998'
 ---

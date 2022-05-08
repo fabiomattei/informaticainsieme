@@ -2,7 +2,7 @@
 id: 635
 title: 'HTML e CSS: organizziamo il codice'
 date: '2021-05-22T06:08:50+02:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=635'
 ---

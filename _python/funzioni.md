@@ -2,7 +2,7 @@
 id: 244
 title: Funzioni
 date: '2020-02-08T11:59:27+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=244'
 ---

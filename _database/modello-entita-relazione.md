@@ -2,7 +2,7 @@
 id: 366
 title: 'Modello entità relazione'
 date: '2020-02-16T21:30:07+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=366'
 ---

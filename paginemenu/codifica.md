@@ -1,7 +1,7 @@
 ---
 title: La codifica dell'informazione
 date: '2020-02-06T05:08:27+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 ---
 

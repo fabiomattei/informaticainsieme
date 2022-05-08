@@ -2,7 +2,7 @@
 id: 31
 title: 'Raccogli le monete'
 date: '2020-01-20T17:56:15+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=31'
 ---

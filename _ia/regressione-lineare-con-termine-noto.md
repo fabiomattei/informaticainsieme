@@ -2,7 +2,7 @@
 id: 945
 title: 'Regressione lineare con termine noto'
 date: '2022-02-09T14:48:07+01:00'
-author: fabio
+author: Fabio Mattei
 layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=945'
 ---
