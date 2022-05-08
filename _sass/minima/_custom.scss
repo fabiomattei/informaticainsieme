@@ -1,0 +1,57 @@
+
+.home-page-posts {
+    display: grid;
+}
+
+@media (max-width: 749px) {
+  .home-page-posts {
+    grid-template-columns: auto;
+	grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+	    "leftcol"
+		"rightcol";
+  }
+}
+
+@media (min-width: 750px) {
+  .home-page-posts {
+	grid-gap: 24px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+    grid-template-areas: 
+	    "leftcol rightcol";
+  }
+}
+sss
+.home-posts {
+	grid-area: leftcol;
+}
+
+.home-tutorials {
+	grid-area: rightcol;	
+}
+
+@media (min-width: 750px) {
+    .aside-image {
+        float: right;
+	    max-width: 46%;
+    }
+}
+
+@media (max-width: 749px) {
+    .aside-image {
+	    max-width: 96%;
+    }
+}
+
+.aside-image {
+    padding: 1%;
+    margin: 1%;
+    border: 1px dashed $grey-color-dark;
+}
+
+.home-aside-image {
+    padding: 1%;
+    border: 1px dashed $grey-color-dark;
+	border-radius: 3px;
+}
