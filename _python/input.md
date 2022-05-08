@@ -36,7 +36,8 @@ print("Nome: ", nome, " cognome: ", cognome)
 
 Abbiamo detto che per conservare le informazioni che l’utente digita il computer ha bisogno di [varabili](https://www.esercizidiinformatica.it/variabili/). Nell’esercizio precedente abbiamo richiesto all’utente due informazioni, la prima l’abbiamo conservata all’interno della variabile *nome*, la seconda all’interno della variabile *cognome*.
 
-Esercizio 3: copia il seguente codice nell’editor. Una volta finito fallo eseguire.
+#### Esercizio 3: 
+copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
 {% highlight python %}
 nome = input("scrivi il tuo nome: ")
