@@ -83,9 +83,8 @@ area = lato * lato
 print("L’area del quadrato di lato ", lato, " vale ", area)
 {% endhighlight %}
 
-####  Operatori matematici:
-
-–, +, -, / (divisione), \* (moltiplicazione), \*\* (esponente), // (divisione intera), % (resto della divisione intera).
+    Operatori matematici:
+    –, +, -, / (divisione), \* (moltiplicazione), \*\* (potenza), // (divisione intera), % (resto della divisione intera).
 
 #### Esercizio 10: 
 scrivi un programma che letti due valori interi calcoli le operazioni che si ottengono utilizzando tutti gli operatori matematici elencati e scriva il risultato
