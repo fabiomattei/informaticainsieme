@@ -1,15 +1,15 @@
 ---
-id: 269
 title: 'I dizionari'
 date: '2020-02-09T06:44:11+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=269'
 ---
 
 Se le variabili sono cassetti e liste e tuple sono cassettiere, i dizionario sono cassettiere con etichette.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/03/cassettieraetichette.jpg)</figure>Un dizionario è una struttura dati che può accogliere molti dati. Ciascun dato è associato ad una etichetta, che d’ora in avanti chiameremo **chiave**, che ci permette di identificarlo in maniera univoca all’interno della struttura.
+![Dizionari](/informaticainsieme/images/python/dizionari/cassettieraetichette.jpg){:class="aside-image"}
+
+Un dizionario è una struttura dati che può accogliere molti dati. Ciascun dato è associato ad una etichetta, che d’ora in avanti chiameremo **chiave**, che ci permette di identificarlo in maniera univoca all’interno della struttura.
 
 I dizionari sono un tipo **mutabile** e **non ordinato** che contiene elementi formati da una **chiave** e un **valore**. Si utilizza questa struttura dati quando non è comodo lavorare con un indice che sia un numero intero, ma si vuole utilizzare un indice di tipo diverso ad esempio testuale.
 
@@ -31,7 +31,7 @@ Ilmiodiz = {
 }
 {% endhighlight %}
 
-</div>In questo esempio possiamo vedere che d3 è un dizionario che contiene 3 elementi formati da una chiave e un valore. ’a’, ’b’ e ’c’ sono le chiavi, mentre 1, 2 e 3 sono i valori. Le chiavi di un dizionario sono solitamente stringhe, ma è possibile usare anche altri tipi. I valori possono essere di qualsiasi tipo.
+In questo esempio possiamo vedere che d3 è un dizionario che contiene 3 elementi formati da una chiave e un valore. ’a’, ’b’ e ’c’ sono le chiavi, mentre 1, 2 e 3 sono i valori. Le chiavi di un dizionario sono solitamente stringhe, ma è possibile usare anche altri tipi. I valori possono essere di qualsiasi tipo.
 
 {% highlight python %}
 # tipo int per la chiave, tipo list per il valore
@@ -44,7 +44,7 @@ d = {[0, 10]: 'primo intervallo'} # ERRORE!!!!
 d = {(0, 10): 'primo intervallo'}
 {% endhighlight %}
 
-</div>#### Accedere agli elementi conservati in un dizionario 
+#### Accedere agli elementi conservati in un dizionario 
 
 Una volta creato un dizionario, è possibile ottenere il valore associato a una chiave usando la sintassi **nome\_dizionario\[chiave\]**:
 
@@ -64,7 +64,7 @@ d['campana'] # ritorna 'rumorosa'
 d[10] # ritorna 'automobili'
 {% endhighlight %}
 
-</div>Se viene specificata una chiave inesistente, Python restituisce un *KeyError*. È però possibile usare l’operatore in (o not in) per verificare se una chiave è presente nel dizionario:
+Se viene specificata una chiave inesistente, Python restituisce un *KeyError*. È però possibile usare l’operatore in (o not in) per verificare se una chiave è presente nel dizionario:
 
 {% highlight python %}
 d = {'a': 1, 'b': 2, 'c': 3}
@@ -74,7 +74,7 @@ d['x']
 # KeyError Traceback (most recent call last):
 {% endhighlight %}
 
-</div>#### Operatori in e not in
+#### Operatori in e not in
 
 Gli operatori booleani **in** e **not in** mi permettono di controllare se una specifica chiave è stata definita all’interno di un dizionario.
 
@@ -91,7 +91,7 @@ if 'b' in d: # la chiave 'b' è presente
     print(d['b']) # il valore associato alla chiave 'b' è 2
 {% endhighlight %}
 
-</div>#### Aggiungere e modificare gli elementi di un dizionario
+#### Aggiungere e modificare gli elementi di un dizionario
 
 È possibile aggiungere o modificare elementi in un dizionario usando la sintassi **dizionario\[chiave\] = valore**.
 
@@ -108,7 +108,7 @@ d['a'] = 123
 print(d)      # scrive {'a': 123, 'b': 2, 'c': 3, 'k': 2020}
 {% endhighlight %}
 
-</div>#### Rimuovere un elemento da un dizionario
+#### Rimuovere un elemento da un dizionario
 
 E’ possibile rimuovere un elemento dal dizionario usando il comando usando la sintassi: **del nome\_dizionario\[chiave\]**:
 
@@ -121,7 +121,7 @@ del d['a']
 print(d)      # scrive {'b': 2, 'c': 3}
 {% endhighlight %}
 
-</div>#### Visita di un dizionario
+#### Visita di un dizionario
 
 Visitare un dizionario signigica utilizzare un ciclo per scandire tutti gli elementi che sono al suo interno al fine di fare con questi delle operazioni.
 
@@ -143,7 +143,7 @@ for stato in stati_e_capitali:
     
 {% endhighlight %}
 
-</div>Nell’esempio mi sono limitato a scrivere (print) le chiavi definite all’interno del dizionario. Avrei però potuto applicare su queste qualsiasi funzione python.
+Nell’esempio mi sono limitato a scrivere (print) le chiavi definite all’interno del dizionario. Avrei però potuto applicare su queste qualsiasi funzione python.
 
 Se volessi utilizzare, all’interno del ciclo, non solo le chiavi ma anche i valori a queste associate utilizzo la notazione che fa uso delle parentesi quadre per accedere al singolo elemento.
 
@@ -157,10 +157,9 @@ for stato in stati_e_capitali:
     
 {% endhighlight %}
 
-</div>## Esercizi
+## Esercizi
 
-**Es 1:**
-
+#### Esercizio 1:
 - definisci un dizionario “persona1” che al suo interno abbia due elementi, il primo con etichetta “nome” e contenuto “Mario”, il secondo con etichetta “cognome” e contenuto “Serenelli”.
 - definisci un dizionario “persona2” che al suo interno abbia due elementi, il primo con etichetta “nome” e contenuto “Maria”, il secondo con etichetta “cognome” e contenuto “Giacobini”.
 - aggiungi a persona1 l’elemento ad etichetta “indirizzo” con valore “Via Giuseppe Verdi”
@@ -168,27 +167,22 @@ for stato in stati_e_capitali:
 - scrivi un ciclo che permetta di scrivere tutto il contenuto di persona2
 - definisci una lista che contenga persona1 e persona2 appena definiti.
 
-**Es 2:**
-
+#### Esercizio 2:
 Scrivi un algoritmo che concateni due dizionari creandone uno nuovo che contiene tutti gli elementi del primo e tutti gli elementi del secondo.  
 dic1={1:10, 2:20}  
 dic2={3:30, 4:40}  
 Expected Result : {1: 10, 2: 20, 3: 30, 4: 40}
 
-**Es.3:**
-
+**Es.3:
 Scrivi un programma Python che letto un numero n generi un dizionario i cui elementi abbiano la forma x, x\*x:  
 Esempio ( n = 5) :  
 Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
-**Es 4:**
-
+#### Esercizio 4:
 Scrivi uno script python che controlli se due dizionari hanno le stesse chiavi (tutte le chiavi del primo sono definite nel secondo e viceversa)
 
-**Es 5:**
-
+#### Esercizio 5:
 Scrivi uno script python che ricevuto un dizionario i cui valori sono tutti numeri interi, trovi il massimo valore e il minimo valore.
 
-**Es 6:**
-
+#### Esercizio 6:
 Scrivi un programma Python che controlli se un dizionario è vuoto oppure no.
