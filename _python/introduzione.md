@@ -7,13 +7,9 @@ layout: page
 
 Python è un linguaggio di programmazione di alto livello il cui sviluppo è iniziato nel Dicembre 1989 da **Guido van Rossum** al CWI (Centrum Wiskunde &amp; Informatica – National Research Institute for Mathematics and Computer Science) in Olanda.
 
-# Headline1
-------------
 
 {::options parse_block_html="true" /}
 <div>
-# Headline2
-------------
 
 ![Apertura editor](/informaticainsieme/images/python/introduzione/console.jpg){:class="aside-image"}
 
@@ -36,7 +32,7 @@ print("Da questo momento sono uno sviluppatore software")
 {% endhighlight %}
 </div>
 
-{::options parse_block_html="true" /}
+
 <div>
 ##  Fai eseguire il programma al computer 
 
