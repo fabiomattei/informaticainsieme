@@ -19,9 +19,9 @@ y = "John"
 z = 3.564
 {% endhighlight %}
 
-Facciamo bene attenzione, questa non è una equazione matematica ma una assegnazione, si legge in questo modo: assegno alla variabile x il numero 5.
+Facciamo bene attenzione, questa non è una equazione matematica ma una assegnazione, si legge in questo modo: **assegno alla variabile x il numero 5**.
 Significa che nella memoria del computer verrà conservato uno spazio (il cassetto) che avrà come etichetta la **x**. All'interno di questo spasio sarà 
-posto il numero 5.
+posto il **numero 5**.
 
 Quindi ricordiamo:
 * il simbolo alla sinistra del simbolo = è il **nome della variabile**

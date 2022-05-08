@@ -58,12 +58,12 @@ Un esempio di ricorsione diretta è la funzione per calcolare il fattoriale di u
 
 Osserviamo che:
 
-*n! = n ∗ (n − 1) ∗ … ∗ 2 ∗ 1 = n ∗ (n − 1)!*
+*n! = n * (n − 1) * … * 2 * 1 = n * (n − 1)!*
 
 Quindi la definizione induttiva del fattoriale è:
 
 - (passo base) 0! = 1
-- (passoricorsivo)n!=n∗(n−1)!(sen&gt;0).
+- (passoricorsivo)n!=n*(n−1)!(sen&gt;0).
 
 {% highlight python %}
 def fattoriale(n): 
