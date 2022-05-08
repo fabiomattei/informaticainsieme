@@ -112,10 +112,10 @@ Letti due numeri interi A e B verificare se A è il quadrato di B
 #### Esercizio 15:
 Un’azienda elettrica ha stabilito le seguenti tariffe:
 
-| KW/H |  |
-|---|---|
-| 0 – 500 | 20 |
-| 501 – 1000 | 20 + 0,08 per ogni KW/H oltre i 500 |
-| 1001 – oltre | 20 + 0,05 per ogni KW/H oltre i 1000 |
+| KW/H         |                                                                                   |
+|--------------|-----------------------------------------------------------------------------------|
+| 0 – 500      | 20                                                                                |
+| 501 – 1000   | 20 + 0,08 per ogni KW/H oltre i 500                                               |
+| 1001 – oltre | 20 + 0,08 per ogni KW/H compreso tra 500 e 1000 + 0,05 per ogni KW/H oltre i 1000 |
 
 Scrivere un programma che letto il consumo mensile calcoli e stampi l’importo della bolletta.
