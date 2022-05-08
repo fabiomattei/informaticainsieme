@@ -1,11 +1,9 @@
 ---
-title: Algoritmi Greedy
-date: '2022-05-09T10:58:13+02:00'
+title: Greedy
+date: '2021-09-30T10:58:13+02:00'
 author: Fabio Mattei
 layout: page
 ---
-
-# Algoritmi Greedy
 
 Gli algoritmi di tipo Greedy sono una classe di algoritmi che hanno una logica di fondo comune. Gli algoritmo di tipo Greedy mirano a trovare una soluzione ottima globale cercando di fare la scelta migliore ad ogni passo.
 Quando si presenta una scelta l'algoritmo sceglie la strada che permette di avere il massimo vantaggio senza cercare di intepretare il futuro e senza rimettere in discussione
@@ -45,6 +43,7 @@ L'algoritmo passa quindi alla moneta da 10 centesimi e la confronta con il resto
 L'algoritmo decide dunque di dare una moneta da 20 centesimi ed una da 10.
 
 L'algoritmo sembra funzionare bene, purtroppo però non viviamo in un mondo ideale in cui la macchinetta dispone sempre di tutte le monete che occorrono per dare il resto.
+
 
 ## Il problema del resto un po' più complicato
 
@@ -125,6 +124,8 @@ L'algoritmo controlla se c'è almeno una moneta da 1 centesimo. Dato che una mon
 Restano da dare 0 centesimi di resto.
 
 L'agoritmo ha concluso erogando 1 moneta da 20 centesimi, 1 moneta da 5, 2 monete da 2 e una moneta da 1 centesimo.
+
+
 
 ## Il problema di Knapsack
 
@@ -242,6 +243,8 @@ Ecco dunque la tabella indicante le distanze minime a partire dal nodo A.
 
 L'algoritmo di Dijkstra è stato completato.
 
+
+
 ## Algoritmo di Prim
 
 E' un algoritmo molto simile a quello di Dijkstra, la differenza nella meccanica è che al posto del costo complessivo si tiene conto del costo passo per passo. 
@@ -284,13 +287,5 @@ Scegliamo il ramo con distanza minore e passiamo al passo successivo. Dato che i
 A questo punto 
 
 
+
 ## Algoritmo di Kruskal
-
-
-
-
-(training.olinfo.it)
-
-
-
-

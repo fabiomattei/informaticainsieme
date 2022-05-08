@@ -18,7 +18,7 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
  
-# Esempio di chiamata
+## Esempio di chiamata
 arr = [63, 38, 22, 12, 24, 12, 99]
  
 bubbleSort(arr)
@@ -28,4 +28,3 @@ for i in range(len(arr)):
     print ("%d" %arr[i]),
 {% endhighlight %}
 
-</div>
