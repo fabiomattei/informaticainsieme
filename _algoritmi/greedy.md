@@ -1,3 +1,10 @@
+---
+title: Algoritmi Greedy
+date: '2022-05-09T10:58:13+02:00'
+author: Fabio Mattei
+layout: page
+---
+
 # Algoritmi Greedy
 
 Gli algoritmi di tipo Greedy sono una classe di algoritmi che hanno una logica di fondo comune. Gli algoritmo di tipo Greedy mirano a trovare una soluzione ottima globale cercando di fare la scelta migliore ad ogni passo.
