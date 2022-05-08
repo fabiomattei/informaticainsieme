@@ -34,16 +34,16 @@ print("b e' maggiore di a") # questo codice è errato dato che manca l'indentazi
 
 In Python l’indentazione (gli spazi che nell’esempio 1 precedono l’istruzione print) indica l’appartenenza di un codice ad un blocco di codice. Dato che bisogna distinguere tra quali istruzioni eseguire in caso la condizione venga verificata oppure no, chi ha inventato il linguaggio ha deciso di utilizzare l’indentazione a tale scopo. Dunque nel primo esempio è chiaro per il computer che deve eseguire l’istruzione print() se b &gt; a, nel secondo esempio, mancando indentazione non è chiaro, quindi il computer ci dà errore.
 
-####  Operatori di confronto
-
-Sono gli operatori che possiamo utilizzare all’interno di una condizione.
-
-- Uguale: a == b
-- Diverso: a != b
-- Minore: a &lt; b
-- Minore o uguale: a &lt;= b
-- Maggiore: a &gt; b
-- Maggiore o uguale: a &gt;= b
+    ####  Operatori di confronto
+    
+    Sono gli operatori che possiamo utilizzare all’interno di una condizione.
+    
+    - Uguale: a == b
+    - Diverso: a != b
+    - Minore: a &lt; b
+    - Minore o uguale: a &lt;= b
+    - Maggiore: a &gt; b
+    - Maggiore o uguale: a &gt;= b
 
 ##  Il costrutto elif
 
