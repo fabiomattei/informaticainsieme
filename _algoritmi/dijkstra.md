@@ -5,7 +5,6 @@ author: Fabio Mattei
 layout: page
 ---
 
-
 L'algoritmo di Dijkstra trova il cammino più breve che collega un nodo radice ad ogni altro nodo del grafo. Nel nostro esempio utilizzereemo un grafo orientato pesato, ogni arco ha una direzione ed un peso.
 
 L'agoritmo di Dijkstra ha molti utilizzi. Può essere utilizzato per calcolare il percorso su di una mappa. Inoltre è utilizzato per:
@@ -20,6 +19,11 @@ L'algoritmo segue queste regole:
 * Una volta scelto il nodo controlliamo tutti i nodi suoi vicini e calcoliamo la distanza tra i vicini e la radice sommando i pesi dai percorsi che includono il nuovo nodo selezionato.
 * Se la distanza appena calcolata è minore della distanza conosciuta in precedenza, aggiorneremo la distanza più corta.
 
+
+Immaginiamo di trovarci di fronte il seguente grafo:
+
+![Dijkstra, grafo iniziale](/informaticainsieme/images/algoritmi/greedy/dijkstra01.png){:class="aside-image"}
+
 Per lavorare con l'algoritmo si crea una tabella che indica la distanza complessiva tra la radice e ciascun nodo e si pone il suo valore ad infinito per ciascun nodo.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
@@ -30,14 +34,10 @@ Per lavorare con l'algoritmo si crea una tabella che indica la distanza compless
 | D    | infinito        |              |          |
 | E    | infinito        |              |          |
 
-Immaginiamo di trovarci di fronte il seguente grafo:
-
-![Dijkstra, grafo iniziale](/informaticainsieme/images/algoritmi/greedy/dijkstra01.png){:class="aside-image"}
-
-
 ![Dijkstra: aggiungo nodo A](/informaticainsieme/images/algoritmi/greedy/dijkstra02.png){:class="aside-image"}
 
-Iniziamo ad applicare l'algoritmo di Dijkstra a partire dal nodo A che considereremo nodo radice. Consideriamo tutti i suoi vicini e calcoliamo la distanza da A.
+Iniziamo ad applicare l'algoritmo di Dijkstra a partire dal nodo A che considereremo **nodo radice**. **Consideriamo tutti i suoi vicini** e calcoliamo la distanza da A. Il fine ultimo dell'algoritmo è quello di calcolare la distanza minima che intercorre tra A e tutti i nodi del grafo.
+I nodi raggiungibili da A sono B ed E. B ha distanza 6 da A ed E ha distanza 3 da A. Queste distanze rappresentano la distanza minima tra i nodi B, E ed A
 
 La tabella delle distanza aggiornata è la seguente:
 
