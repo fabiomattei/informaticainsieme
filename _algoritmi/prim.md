@@ -15,7 +15,7 @@ L'algoritmo segue queste regole:
 * Una volta scelto il nodo controlliamo tutti i nodi suoi vicini e la confrontiamo che le distanze minime che abbiamo ottenuto fino ad ora per arrivare a quei nodi.
 * Se la distanza appena calcolata per arrivare ad un nodo è minore della distanza conosciuta in precedenza, aggiorneremo la distanza più corta.
 
-Immaginiamo di partire sempre dal nodo A
+Immaginiamo di partire dal nodo A, e inizializziamo la tabella che rappresenta le distanze minime dicopertura del grafo. Porremo A a distannza 0 e tutti gli altri nodi a distanza infinita. A è l'unico nodo visitato.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
 | ---- | --------------- | ------------ | -------- |
@@ -27,7 +27,9 @@ Immaginiamo di partire sempre dal nodo A
 
 ![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim01.png)
 
-Consideriamo tutti i suoi vicini e calcoliamo la distanza da A.
+A questo punto è nel MST soltanto il nodo A. Vado a valutare la distanze tra nodi non ancora visitati adiacenti ad A e questi nodi sono B a distanza 6 da A ed E a distanza 3 da A.
+
+Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal nodo iniziale, questa è rappresentata dalla distanza tra A ed E, quindi scegliamo E, lo marchiamo come visitato nella tabella e passiamo al passo successivo.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
 | ---- | --------------- | ------------ | -------- |
@@ -37,11 +39,11 @@ Consideriamo tutti i suoi vicini e calcoliamo la distanza da A.
 | D    | infinito        |              |          |
 | E    | 3               | A            | Si       |
 
-Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal nodo iniziale, questa è rappresentata dalla distanza tra A ed E, quindi scegliamo E, lo marchiamo come visitato nella tabella e passiamo al passo successivo.
-
 ![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim02.png)
 
-A questo punto abbiamo visitato i nodi A ed E, calcoliamo le distanza che separano i nodi non ancora coperti da quelli coperti e aggiorniamo la tabella. Notiamo che B è a distanza 2 da E, il nodo C è a distanza 4 da E e il nodo B è a distanza 2 da E. Aggiorno la tabella di conseguenza. Ora bisogna aggiungere un nuovo nodo, il nodo non ancora visitato a distanza minima dal MST è B con distanza 2 da E.
+A questo punto abbiamo visitato i nodi A ed E, calcoliamo le distanza che separano i nodi non ancora coperti dal MST quelli coperti e aggiorniamo la tabella. Notiamo che B è a distanza 2 da E, il nodo C è a distanza 4 da E e il nodo B è a distanza 2 da E. Aggiorno la tabella di conseguenza. 
+
+Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal nodo iniziale e questo è rappresentato da B-E, quindi aggiorno la tabella.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
 | ---- | --------------- | ------------ | -------- |
@@ -54,6 +56,7 @@ A questo punto abbiamo visitato i nodi A ed E, calcoliamo le distanza che separa
 ![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim03.png)
 
 A questo punto sono nel MST i nodi A, B, E quindi vado a riaggiornare la distanze tra nodi non ancora visitati e questi nodi. Rivaluto il nodo C che è adiacente a B con distanza 6 ma C era già valutato a distanza 4 da E, quindi non aggiorno le distanza minime sulla tabella.
+
 Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal nodo iniziale e questo è rappresentato da C-E, quindi aggiorno la tabella.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
@@ -69,6 +72,7 @@ Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal 
 A questo punto sono nel MST i nodi A, B, E e C quindi vado a riaggiornare la distanze tra nodi non ancora visitati e questi nodi.
 
 Rivaluto il nodo D che è adiacente a C con distanza 3. In precedenza questo era valutato a distanza 7 quindi vado ad aggiornare la tabella.
+
 Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal nodo iniziale e questo è rappresentato da C-E, quindi aggiorno la tabella.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
