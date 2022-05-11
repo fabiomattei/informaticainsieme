@@ -25,7 +25,7 @@ Immaginiamo di partire dal nodo A, e inizializziamo la tabella che rappresenta l
 | D    | infinito        |              |          |
 | E    | infinito        |              |          |
 
-![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim01.png)
+![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim01.png){:class="aside-image"}
 
 A questo punto è nel MST soltanto il nodo A. Vado a valutare la distanze tra nodi non ancora visitati adiacenti ad A e questi nodi sono B a distanza 6 da A ed E a distanza 3 da A.
 
@@ -39,7 +39,7 @@ Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal 
 | D    | infinito        |              |          |
 | E    | 3               | A            | Si       |
 
-![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim02.png)
+![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim02.png){:class="aside-image"}
 
 A questo punto abbiamo visitato i nodi A ed E, calcoliamo le distanza che separano i nodi non ancora coperti dal MST quelli coperti e aggiorniamo la tabella. Notiamo che B è a distanza 2 da E, il nodo C è a distanza 4 da E e il nodo B è a distanza 2 da E. Aggiorno la tabella di conseguenza. 
 
@@ -53,7 +53,7 @@ Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal 
 | D    | 7               |              |          |
 | E    | 3               | A            | Si       |
 
-![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim03.png)
+![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim03.png){:class="aside-image"}
 
 A questo punto sono nel MST i nodi A, B, E quindi vado a riaggiornare la distanze tra nodi non ancora visitati e questi nodi. Rivaluto il nodo C che è adiacente a B con distanza 6 ma C era già valutato a distanza 4 da E, quindi non aggiorno le distanza minime sulla tabella.
 
@@ -67,7 +67,7 @@ Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal 
 | D    | 7               |              |          |
 | E    | 3               | A            | Si       |
 
-![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim04.png)
+![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim04.png){:class="aside-image"}
 
 A questo punto sono nel MST i nodi A, B, E e C quindi vado a riaggiornare la distanze tra nodi non ancora visitati e questi nodi.
 
@@ -84,7 +84,7 @@ Scegliamo il ramo con distanza minore che collega i nodi non ancora coperti dal 
 | E    | 3               | A            | Si       |
 
 
-![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim05.png)
+![Prim, grafo iniziale](/informaticainsieme/images/algoritmi/prim/prim05.png){:class="aside-image"}
 
 L'albero di copertura minimo (minimum spanning tree o MST) è. ili seguente.
 
