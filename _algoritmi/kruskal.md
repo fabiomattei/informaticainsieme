@@ -9,8 +9,9 @@ L'algoritmo di Kruskal è un algoritmo per calcolare l'albero di copertura minim
 
 Per collegare n nodi dobbiamo utilizzare n - 1 rami.
 
-* All'inizio si sceglie il ramo con il peso più basso e si collegano i primi due nodi
-* Si guardano tutti i rami uscenti dai nodi già collegati e si sceglie il più basso che crei una connessione ad un nodo ancora non connesso.
+1. Ordina tutti i rami in ordine di peso crescente. 
+2. Prendi il ramo con peso minore. Controlla se forma un ciclo nel MST che hai formato fino a quel momento. Se il ciclo non si forma includi quel ramo altrimenti passa al successivo.
+3. Ripeti il passo 2 fino a quando non ci sono n - 1 rami nel MST
 
 Si può dimostrare che utilizzando questo algoritmo si può trovare la soluzione ottima.
 
