@@ -116,5 +116,5 @@ Ecco dunque la tabella indicante le distanze minime a partire dal nodo A.
 
 L'algoritmo di Dijkstra è stato completato.
 
-![Dijkstra: aggiungo nodo D](/informaticainsieme/images/algoritmi/greedy/dijkstra07.png){:class="aside-image"}
+![Dijkstra: aggiungo nodo D](/informaticainsieme/images/algoritmi/greedy/dijkstra07.png)
 
