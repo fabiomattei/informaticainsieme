@@ -5,7 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
-L'algoritmmo di Prim è un algoritmo molto simile a quello di Dijkstra. A differenza di questo l'algoritmo di Prim vuole calcolare l'albero di copertura minimo (minimum spanning tree o MST) di un un grafo non orientato e con pesi non negativi.
+L'algoritmo di Prim è un algoritmo molto simile a quello di Dijkstra. A differenza di questo l'algoritmo di Prim vuole calcolare l'albero di copertura minimo (minimum spanning tree o MST) di un un grafo non orientato e con pesi non negativi.
 
 La differenza nella meccanica è che al posto del costo complessivo tra ciascun nodo e il nodo radice si tiene conto del costo tra ciascun nodo e il più viciono nodo già coperto.
 
