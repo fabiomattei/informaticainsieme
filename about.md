@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-![Fabio Mattei](/informaticainsieme/images/about/fabio.jpg){:class="aside-image"}
+![Fabio Mattei](/images/about/fabio.jpg){:class="aside-image"}
 
 Qualcosa su di me.
 

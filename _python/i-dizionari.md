@@ -7,7 +7,7 @@ layout: page
 
 Se le variabili sono cassetti e liste e tuple sono cassettiere, i dizionario sono cassettiere con etichette.
 
-![Dizionari](/informaticainsieme/images/python/dizionari/cassettieraetichette.jpg){:class="aside-image"}
+![Dizionari](/images/python/dizionari/cassettieraetichette.jpg){:class="aside-image"}
 
 Un dizionario è una struttura dati che può accogliere molti dati. Ciascun dato è associato ad una etichetta, che d’ora in avanti chiameremo **chiave**, che ci permette di identificarlo in maniera univoca all’interno della struttura.
 

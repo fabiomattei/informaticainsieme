@@ -11,7 +11,7 @@ Python è un linguaggio di programmazione di alto livello il cui sviluppo è ini
 {::options parse_block_html="true" /}
 <div>
 
-![Apertura editor](/informaticainsieme/images/python/introduzione/console.jpg){:class="aside-image"}
+![Apertura editor](/images/python/introduzione/console.jpg){:class="aside-image"}
 
 Per programmare useremo **IDLE** (Ambiente di sviluppo integrato di Python).
 	
@@ -42,7 +42,7 @@ Run -&gt; Run module
 
 Vedrai apparire all'interno della console:
 
-![Il mio primo programma](/informaticainsieme/images/python/introduzione/console2.png){:class="aside-image"}
+![Il mio primo programma](/images/python/introduzione/console2.png){:class="aside-image"}
 
 {% highlight python %}
 Ciao mondo!
