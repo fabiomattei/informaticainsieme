@@ -5,25 +5,51 @@ author: Fabio Mattei
 layout: page
 ---
 
-L'algoritmo di Kruskal è un algoritmo per calcolare l'albero di copertura minimo (minimum spanning tree o MST) di un un grafo non orientato.
+L'algoritmo di Kruskal è un algoritmo che consente di calcolare l'albero di copertura minimo (minimum spanning tree o MST) di un un grafo non orientato.
 
-Per collegare n nodi dobbiamo utilizzare n - 1 rami.
+Un grafo comprende per sua natura molti archi, il minimum spanning tree formato da un sottoinsieme di questi.
+Il minimum spanning tree **non ha mai cicli al suo interno** e, se nel grafo sono presenti **n nodi**, per collegare n nodi utilizzando il minimo numero di archi **abbiamo la necessità di utilizzare n - 1 archi**.
+
+Questi i passi dell'algoritmo:
 
 1. Ordina tutti i rami in ordine di peso crescente. 
-2. Prendi il ramo con peso minore. Controlla se forma un ciclo nel MST che hai formato fino a quel momento. Se il ciclo non si forma includi quel ramo altrimenti passa al successivo.
-3. Ripeti il passo 2 fino a quando non ci sono n - 1 rami nel MST
+2. Prendi l'arco con peso minore. Controlla se forma un ciclo nel MST che hai formato fino a quel momento. Se il ciclo non si forma includi quel ramo nel MST altrimenti passa all'arco successivo.
+3. Ripeti il passo 2 fino a quando non ci sono n - 1 archi nel MST
 
 Si può dimostrare che utilizzando questo algoritmo si può trovare la soluzione ottima.
 
 ![Kruskal, grafo iniziale](/images/algoritmi/kruskal/kruskal01.png){:class="aside-image"}
 
+Inizialmente rappresentiamo il nostro grafo con tutti i nodi e tutti gli archi. 
+Al contempo costruiremo una struttura dati che contiene tutti gli archi in ordine di lunghezza.
+
 ![Kruskal, primo ramo](/images/algoritmi/kruskal/kruskal02.png){:class="aside-image"}
+
+Il primo passo consiste nello scegliere il ramo più corto sul nostro grafo ed includerlo nel nostro MST.
+D'ora in avanti rappresenteremo in rosso i rami che fanno parte del MST.
+
+MST: E-B
 
 ![Kruskal, secondo ramo](/images/algoritmi/kruskal/kruskal03.png){:class="aside-image"}
 
+Il secondo passo consiste nel prendere in esame tutti i rami collegati ai nodi connessi al MST, in questo caso E e B.
+Tra questi consideriamo il ramo più corto, e se questo non forma un ciclo chiuso lo selezioniamo, altrimenti passiamo al nodo successivo.
+In questo caso il ramo più corto è E-A. Dato che questo non forma un ciclo chiuso possiamo includerlo nel MST.
+
+MST: E-B, E-A
+
 ![Kruskal, terzo ramo](/images/algoritmi/kruskal/kruskal04.png){:class="aside-image"}
 
+Il passo successivo consiste di nuovo nel prendere in esame tutti i rami collegati ai nodi connessi al MST, in questo caso E, B e A.
+Tra questi consideriamo il ramo più corto. Dato che ci sono due rami a lunghezza 4 consideriamo quello ad indice minimo, dunque quello collegato al nodo B. Questo non forma un ciclo chiuso quindi lo selezioniamo e lo includiamo nell'MST.
+
+MST: E-B, E-A, B-D
+
 ![Kruskal, quarto ramo](/images/algoritmi/kruskal/kruskal05.png){:class="aside-image"}
+
+L'ultmo passo consiste di nuovo nel prendere in esame tutti i rami collegati ai nodi connessi al MST, in ordine di lunghezza che non formano cicli. Noteremo che soltanto B-C e D-C non formano cicli. Il più corto tra questi è D-C quindi lo includiamo nel MST.
+
+MST: E-B, E-A, B-D, D-C
 
 ## Implementazione in python
 
