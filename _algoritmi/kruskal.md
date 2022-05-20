@@ -18,17 +18,23 @@ Questi i passi dell'algoritmo:
 
 Si può dimostrare che utilizzando questo algoritmo si può trovare la soluzione ottima.
 
+{::options parse_block_html="true" /}
+
 ![Kruskal, grafo iniziale](/images/algoritmi/kruskal/kruskal01.png){:class="aside-image"}
 
 Inizialmente rappresentiamo il nostro grafo con tutti i nodi e tutti gli archi. 
 Al contempo costruiremo una struttura dati che contiene tutti gli archi in ordine di lunghezza.
+
+<br style="clear:both" />
 
 ![Kruskal, primo ramo](/images/algoritmi/kruskal/kruskal02.png){:class="aside-image"}
 
 Il primo passo consiste nello scegliere il ramo più corto sul nostro grafo ed includerlo nel nostro MST.
 D'ora in avanti rappresenteremo in rosso i rami che fanno parte del MST.
 
-MST: E-B
+	MST: E-B
+
+<br style="clear:both" />
 
 ![Kruskal, secondo ramo](/images/algoritmi/kruskal/kruskal03.png){:class="aside-image"}
 
@@ -36,20 +42,26 @@ Il secondo passo consiste nel prendere in esame tutti i rami collegati ai nodi c
 Tra questi consideriamo il ramo più corto, e se questo non forma un ciclo chiuso lo selezioniamo, altrimenti passiamo al nodo successivo.
 In questo caso il ramo più corto è E-A. Dato che questo non forma un ciclo chiuso possiamo includerlo nel MST.
 
-MST: E-B, E-A
+	MST: E-B, E-A
+
+<br style="clear:both" />
 
 ![Kruskal, terzo ramo](/images/algoritmi/kruskal/kruskal04.png){:class="aside-image"}
 
 Il passo successivo consiste di nuovo nel prendere in esame tutti i rami collegati ai nodi connessi al MST, in questo caso E, B e A.
 Tra questi consideriamo il ramo più corto. Dato che ci sono due rami a lunghezza 4 consideriamo quello ad indice minimo, dunque quello collegato al nodo B. Questo non forma un ciclo chiuso quindi lo selezioniamo e lo includiamo nell'MST.
 
-MST: E-B, E-A, B-D
+	MST: E-B, E-A, B-D
+
+<br style="clear:both" />
 
 ![Kruskal, quarto ramo](/images/algoritmi/kruskal/kruskal05.png){:class="aside-image"}
 
 L'ultmo passo consiste di nuovo nel prendere in esame tutti i rami collegati ai nodi connessi al MST, in ordine di lunghezza che non formano cicli. Noteremo che soltanto B-C e D-C non formano cicli. Il più corto tra questi è D-C quindi lo includiamo nel MST.
 
-MST: E-B, E-A, B-D, D-C
+	MST: E-B, E-A, B-D, D-C
+
+<br style="clear:both" />
 
 ## Implementazione in python
 

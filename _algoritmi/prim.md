@@ -89,5 +89,63 @@ L'albero di copertura minimo (minimum spanning tree o MST) è. ili seguente.
 
 ![Prim, grafo iniziale](/images/algoritmi/prim/prim06.png)
 
+## Implementazione in python
 
+{% highlight python %}  
+grafo = [
+    ('E', 'B', 2), 
+    ('A', 'E', 3), 
+    ('D', 'C', 3),
+    ('B', 'D', 4), 
+    ('E', 'C', 4), 
+    ('B', 'C', 6), 
+    ('A', 'B', 6), 
+    ('E', 'D', 7)
+]
+
+nnodi = 5
+inf = float('inf')
+
+percorsi_minimi = { 
+    'A': [  0, '', False, ''], 
+    'B': [inf, '', False, ''], 
+    'C': [inf, '', False, ''], 
+    'D': [inf, '', False, ''], 
+    'E': [inf, '', False, ''] 
+}
+
+nodi_visitati = []
+
+while len(nodi_visitati) < nnodi:
+    # inserisco il nodo a distanza minima
+    nodo_da_inserire = ''
+    min_dist = float('inf')
+    for nodo in percorsi_minimi:
+        if (percorsi_minimi[nodo][0] < min_dist) and (nodo not in nodi_visitati):
+            nodo_da_inserire = nodo
+            min_dist = percorsi_minimi[nodo][0]
+            
+    nodi_visitati.append( nodo_da_inserire )
+    percorsi_minimi[nodo_da_inserire][2] = True
+            
+    # rivaluto le distanze
+    indice = 0
+    while indice < len(grafo):
+        n1 = grafo[indice][0]
+        n2 = grafo[indice][1]
+        if (n1 == nodo_da_inserire):
+            if grafo[indice][2] < percorsi_minimi[n2][0]:
+                percorsi_minimi[n2][0] = grafo[indice][2]
+                percorsi_minimi[n2][3] = nodo_da_inserire
+        
+        if (n2 == nodo_da_inserire):
+            if grafo[indice][2] < percorsi_minimi[n1][0]:
+                percorsi_minimi[n1][0] = grafo[indice][2]
+                percorsi_minimi[n2][3] = nodo_da_inserire
+                
+        indice = indice + 1
+    
+
+print(percorsi_minimi)
+{% endhighlight %}
 
