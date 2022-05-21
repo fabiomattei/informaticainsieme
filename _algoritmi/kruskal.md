@@ -18,13 +18,12 @@ Questi i passi dell'algoritmo:
 
 Si può dimostrare che utilizzando questo algoritmo si può trovare la soluzione ottima.
 
-{::options parse_block_html="true" /}
-
 ![Kruskal, grafo iniziale](/images/algoritmi/kruskal/kruskal01.png){:class="aside-image"}
 
 Inizialmente rappresentiamo il nostro grafo con tutti i nodi e tutti gli archi. 
 Al contempo costruiremo una struttura dati che contiene tutti gli archi in ordine di lunghezza.
 
+{::options parse_block_html="true" /}
 <br style="clear:both" />
 
 ![Kruskal, primo ramo](/images/algoritmi/kruskal/kruskal02.png){:class="aside-image"}

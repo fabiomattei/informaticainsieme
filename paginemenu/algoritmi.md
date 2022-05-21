@@ -16,6 +16,7 @@ name: Algoritmi
 ## Ordinamento
 
 * [Bubble Sort]({{ site.baseurl }}{% link _algoritmi/bubblesort.md %}.html)
+* [Quick Sort]({{ site.baseurl }}{% link _algoritmi/quicksort.md %}.html)
 
 ## Varie
 
