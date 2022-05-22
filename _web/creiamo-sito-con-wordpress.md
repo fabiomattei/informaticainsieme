@@ -1,10 +1,8 @@
 ---
-id: 162
 title: 'Creiamo sito con wordpress'
 date: '2020-02-06T05:49:52+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=162'
 ---
 
 WordPress è un sistema CMS (Content management system, sistema di gestione di contenuti) che permette di creare siti web in modo molto semplice. Attraverso wordpress si possono creare blog personali, siti di e-commerce e molto altro. Il sistema è open source, sviluppato gratuitamente da una comunità di sviluppatori ed è scaricabile gratuitamente da <https://wordpress.org/>
@@ -13,7 +11,9 @@ WordPress è un sistema CMS (Content management system, sistema di gestione di c
 
 Al fine di modificare i contenuti ed i commenti di un sito wordpress, accediamo all’area di amministrazione cliccando su *Accedi*. All’interno del pannello di amministrazione sarà possibile amministrare il sito: cambiarne i testi contenuti, organizzare le fotografie, moderare i commenti, ecc.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/bacheca_wordpress-1024x811.png)</figure>#### I contenuti base
+![Bacheca wordpress](/images/web/wordpress/bacheca_wordpress.png){:class="aside-image"}
+
+#### I contenuti base
 
 WordPress dispone di alcuni tipi di contenuti base, tra questi ricordiamo le pagine ed i post.
 
@@ -24,16 +24,21 @@ WordPress dispone di alcuni tipi di contenuti base, tra questi ricordiamo le pag
 
 WordPress dispone di due sistemi di categorizzazione dei **post**.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/categorie_tag-1.png)</figure>Le **categorie** sono organizzate gerarchicamente, su tre livelli. Ciascun livello rappresenta una sottocategoria del livello sovrastante. Permettono di ricercare i contenuti velocemente.
+
+![Bacheca wordpress](/images/web/wordpress/categorie_tag-1.png){:class="aside-image"}
+
+Le **categorie** sono organizzate gerarchicamente, su tre livelli. Ciascun livello rappresenta una sottocategoria del livello sovrastante. Permettono di ricercare i contenuti velocemente.
 
 I **tag** (o etichette) non hanno organizzazione di alcun genere ma permettono di categorizzare i contenuti al fine di facilitare le ricerche.
 
-<figure class="wp-block-gallery columns-2 is-cropped">- <figure>![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/categorie.png)</figure>
-- <figure>![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/tag.png)</figure>
+![Categorie](/images/web/wordpress/categorie.png){:class="aside-image"}
+![Tag](/images/web/wordpress/tag.png){:class="aside-image"}
 
-</figure>#### Blocchi di contenuti
+#### Blocchi di contenuti
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/blocchi.png)</figure>Cliccando sul simbolo + è possibile aggiungere contenuti ad una pagina o un articolo (post). Tra questi ricordiamo:
+![Blocchi](/images/web/wordpress/blocchi.png){:class="aside-image"}
+
+Cliccando sul simbolo + è possibile aggiungere contenuti ad una pagina o un articolo (post). Tra questi ricordiamo:
 
 - Titolo (da H1 il più importante ad H6 il meno importante)
 - Paragrafo (contiene un blocco di testo)
