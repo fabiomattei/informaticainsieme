@@ -57,13 +57,15 @@ Stando alle conclusioni cui sono giunti i giudici della Cassazione con la senten
 
 #### Editor di menù
 
-<figure class="wp-block-gallery columns-2 is-cropped">- <figure>![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/menu-1024x577.png)</figure>
-- <figure>![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/menu_aperto-1024x558.png)</figure>
+![menu](/images/web/wordpress/menu.png){:class="aside-image"}
+![menu aperto](/images/web/wordpress/menu_aperto.png){:class="aside-image"}
 
-</figure>Il sistema wordpress viene preimpostato affichè nel menù compaiano tutte le pagine del sito nel loro ordine di inserimento.
+Il sistema wordpress viene preimpostato affichè nel menù compaiano tutte le pagine del sito nel loro ordine di inserimento.
 
 E’ però possibile personalizzare il menù attraverso l’editor di menù. Il menù è organizzato gerarchicamente su tre livelli, questo significa che ogni voce *nonna* può contenere delle sottovoci *figlie* e che ciascuna di queste può contenere delle voci *nipoti*. La struttura verrà mostrata al navigatore attraverso tendine che si aprono all’occorrenza.
 
 #### Aspetto
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/aspetto-1024x580.png)</figure>Andando su aspetto -&gt; personalizza, è possibile personalizzare l’aspetto del proprio sito. Posso cambiare il logo, il titolo del sito, il sottotitolo, i colori dei testi, i colori delle pagine e rendere il sito unico.
+![aspetto](/images/web/wordpress/aspetto.png){:class="aside-image"}
+
+Andando su aspetto -&gt; personalizza, è possibile personalizzare l’aspetto del proprio sito. Posso cambiare il logo, il titolo del sito, il sottotitolo, i colori dei testi, i colori delle pagine e rendere il sito unico.
