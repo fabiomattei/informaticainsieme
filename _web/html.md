@@ -1,10 +1,8 @@
 ---
-id: 340
 title: HTML
 date: '2020-02-10T21:29:02+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=340'
 ---
 
 HTML (Hyper text markup language – Linguaggio ipertestuale a marcatori) è un linguaggio inventato da Tim Berners Lee nel 1980 per avere la *libertà di pubblicare le sue ricerche senza dover passare attraverso il controllo degli editori delle riviste scientifiche*. Tim è un ricercatore che lavorava al CERN di Ginevra ed aveva difficoltà a far pubblicare i suoi articoli. Nella sua ricerca di libertà inventò il WEB.
@@ -43,7 +41,7 @@ circondata dal tag p</p>
 
 Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
 
-<figure class="wp-block-table">| Tag | Descrizione | Resa di base |
+| Tag | Descrizione | Resa di base |
 |---|---|---|
 | &lt;strong&gt; | Attribuisce al testo una forte importanza, serietà o urgenza | Grassetto |
 | &lt;b&gt; | Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo | Grassetto |
@@ -51,7 +49,7 @@ Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
 | &lt;i&gt; | Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo | Corsivo |
 | &lt;u&gt; | Rende un testo sottolineato | Sottolineato |
 
-</figure>#### Elenchi puntati e numerati 
+#### Elenchi puntati e numerati 
 
 Elenco puntato
 
@@ -64,7 +62,7 @@ Elenco puntato
 </ul>
 {% endhighlight %}
 
-</div>Elenco numerato
+Elenco numerato
 
 
 {% highlight html %}
@@ -75,7 +73,7 @@ Elenco puntato
 </ol>
 {% endhighlight %}
 
-</div>#### Le tabelle 
+#### Le tabelle 
 
 La tabella è utile quando si vogliono inserire in una pagina web dati di qualsiasi genere.
 
@@ -99,7 +97,7 @@ La tabella è utile quando si vogliono inserire in una pagina web dati di qualsi
 </table>
 {% endhighlight %}
 
-</div>Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. Normalmente questo si scrive all’interno di un paragrafo.
+Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. Normalmente questo si scrive all’interno di un paragrafo.
 
 Una tabella è contrassegnata dal tag &lt;table&gt; ed è divisa in tre sezioni &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;.
 

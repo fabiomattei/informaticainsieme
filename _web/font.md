@@ -1,10 +1,8 @@
 ---
-id: 620
 title: font
 date: '2021-05-08T06:14:18+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=620'
 ---
 
 Da quando **Gutenberg** ha inventato la stampa a caratteri mobili, l’arte tipografica ha visto lo sviluppo e il succedersi di stili e tendenze. Per rispondere a diverse esigenze, tecniche ma non solo, le lettere venivano arricchite o semplificate. Alla fine ci siamo ritrovati con diversi stili di font. Vediamo insieme quali sono le famiglie di Font.
@@ -19,7 +17,9 @@ L’evoluzione dei **diversi stili di caratteri tipografici** è parallela allo 
 
 I primi caratteri mobili, quelli della macchina di Gutenberg, si ispiravano alle **iscrizioni lapidarie romane** di epoca imperiale, che presentavano delle **grazie** – dei filetti più o meno sottili alle estremità delle lettere. Col tempo però le linee diventarono più semplici, così da rendere il processo di fusione dei caratteri mobili più veloce ed economico: erano i caratteri cosiddetti **bastoni**.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Carattere-lapidario-romano-grazie.png)</figure>Col passare del tempo **la tipografia si faceva più raffinata** e, intanto, nuove stili e correnti artistiche si succedevano. Il Barocco, il Rococò, il Neoclassicismo, il periodo modernista: ad ogni nuova concezione del bello si sviluppavano **nuovi caratteri tipografici**.
+![Bacheca wordpress](/images/web/font/Carattere-lapidario-romano-grazie.png){:class="aside-image"}
+
+Col passare del tempo **la tipografia si faceva più raffinata** e, intanto, nuove stili e correnti artistiche si succedevano. Il Barocco, il Rococò, il Neoclassicismo, il periodo modernista: ad ogni nuova concezione del bello si sviluppavano **nuovi caratteri tipografici**.
 
 ### La classificazione dei caratteri tipografici.
 
@@ -33,9 +33,12 @@ Prima ancora di parlare di quelle famiglie, è il caso di introdurre **le due pi
 
 Un carattere può essere **Serif** – cioè con il piede “graziato”, arricciato – o, al contrario, **Sans Serif** – cioè tutto dritto. In italiano diciamo **graziato** o **bastoni**.
 
-<div class="wp-block-image"><figure class="aligncenter">[![](https://c1.staticflickr.com/6/5523/12071493185_aff71ea381_b.jpg)](https://c1.staticflickr.com/6/5523/12071493185_aff71ea381_b.jpg)</figure></div>### I caratteri tipografici secondo Aldo Novarese.
+![Bacheca wordpress](/images/web/font/12071493185_aff71ea381_b.jpg){:class="aside-image"}
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://nemawashistudio.it/wp-content/uploads/2019/02/c96d3f6490d1b18440bbb94a458496a0.jpg)</figure></div>  
+### I caratteri tipografici secondo Aldo Novarese.
+
+![Bacheca wordpress](/images/web/font/c96d3f6490d1b18440bbb94a458496a0.jpg){:class="aside-image"}
+
 **Lapidari**: si ispirano ai caratteri romani antichi e sono caratterizzati da **grazie triangolari**.
 
 **Veneziani**: derivano anch’essi dai caratteri romani antichi ma stavolta sono caratterizzati da grazie con **estremità arrotondate e dal piede d’asta un po’ concavo**.
@@ -76,13 +79,17 @@ Gli **Old Style** sono la prima categoria di caratteri serif, procedendo in ordi
 
 La prima sotto-categoria dei font Veneziani aveva altezza dell’occhio del font relativamente piccola (la x-height inglese), un basso contrasto tra linee spesse e sottili, aste trasversali inclinate nella “e” minuscola e un “colore” molto scuro, inteso come l’effetto generato dalla densità di inchiostro stampato su una pagina.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-10-font-umanisti.png)<figcaption>Immagine presa dal nostro corso online [Font-Ninja](https://www.grafigata.com/font-ninja-corso)</figcaption></figure>**I font “Garalde”** sostituirono poi i font Veneziani/Umanisti perché **garantivano una lettura più scorrevole**.
+![Bacheca wordpress](/images/web/font/Immagine-10-font-umanisti.png){:class="aside-image"}
+
+**I font “Garalde”** sostituirono poi i font Veneziani/Umanisti perché **garantivano una lettura più scorrevole**.
 
 I Garalde sono infatti caratterizzati da un **maggiore contrasto tra linee spesse e sottili** e da una **maggior rifinitura dei tratti**, come si può notare, ad esempio, dalla presenza di **grazie più dritte e appuntite**, quasi cuneiformi.
 
 In questo confronto: ***Jenson* (Umanista), *Garamond* e *Caslon* (Garalde)**:
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-11-garalde-grazie.png)</figure>#### 2. Transizionali
+![Bacheca wordpress](/images/web/font/Immagine-11-garalde-grazie.png){:class="aside-image"}
+
+#### 2. Transizionali
 
 I **Transizionali**, dei quali il capostipite è stato il ***Baskerville*** nel 1757, è una categoria che raggruppa font molto popolari (ma più recenti) come il ***Times New Roman***, il ***Cheltenham*** e il ***Georgia.***
 
@@ -90,13 +97,17 @@ I font Transizionali furono fortemente caratterizzati dall’**approccio Illumin
 
 I Transizionali (chiamati così perché situati storicamente tra i Romani antichi e i Romani moderni) si differenziano dai romani antichi grazie a **forme più geometriche**, a un **contrasto maggiore tra aste verticali e orizzontali**, da **grazie più appiattite** e da un **allineamento più verticale negli occhielli delle lettere**.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-14-caratteristiche-transizionali.jpg)</figure>#### 3. I Bodoni o Didoniani (o Romani moderni)
+![Bacheca wordpress](/images/web/font/Immagine-14-caratteristiche-transizionali.jpg){:class="aside-image"}
+
+#### 3. I Bodoni o Didoniani (o Romani moderni)
 
 Successivamente, tra fine ‘700 ed inizio ‘800, arrivarono i “***Bodoni***” (che prendono nome dall’*omonimo font*). In inglese e francese vengono detti anche **Didoniani** (dal font *Didot*) e un po’ dappertutto sono chiamati anche **Romani moderni**.
 
 Proseguono nella ricerca di geometricità iniziata dai font transizionali e dal Baskerville. Hanno un **passaggio molto marcato tra aste verticali e orizzontali** e possiedono **grazie molto fini e sottili** che formano **angoli retti** con le aste.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-16-caratteristiche-bodoniani.png)</figure>#### 4. Slab Serif o Egiziani
+![Bacheca wordpress](/images/web/font/Immagine-16-caratteristiche-bodoniani.png){:class="aside-image"}
+
+#### 4. Slab Serif o Egiziani
 
 Successivamente, con il diffondersi delle tecniche di stampa, i font iniziarono ad aumentare vertiginosamente e arrivarono gli ***Slab Serif*** o **Egiziani** (o anche *Square Serif*, *Mechanical* o *Mécanes*).
 
@@ -108,7 +119,9 @@ I tipografi decisero quindi, molto semplicemente, di utilizzare un termine che a
 
 E, coincidenza, la pubblicità ha moltissimo a che fare con gli Slab Serif (o Egiziani): si sono infatti diffusi grazie alle crescenti necessità creative dell’advertising, il quale si stava sviluppando proprio in quegli anni.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-17-poster-vittoriani.jpg)</figure>Sono caratterizzati da un **utilizzo estremo del contrasto** e dall’utilizzo di **grazie perpendicolari e molto sottili**, ovvero caratteristiche volte solamente a **catturare l’attenzione** e non a garantire leggibilità.
+![Bacheca wordpress](/images/web/font/Immagine-17-poster-vittoriani.jpg){:class="aside-image"}
+
+Sono caratterizzati da un **utilizzo estremo del contrasto** e dall’utilizzo di **grazie perpendicolari e molto sottili**, ovvero caratteristiche volte solamente a **catturare l’attenzione** e non a garantire leggibilità.
 
 Proprio per questi motivi **furono molto criticati** in quel periodo storico per aver contribuito a rovinare la buona tipografia (ad esempio in [*Writing, Illuminating &amp; Lettering di Edward Johnston*](https://amzn.to/2P704vg)).
 
@@ -138,7 +151,9 @@ Questi caratteri Grotteschi, sono caratterizzati, **oltre che dall’assenza di 
 - **Scarso (ma presente) contrasto visivo**;
 - Molti caratteri grotteschi hanno una **G maiuscola caratterizzata da uno spuntone che genera la forma di una freccia**, una **g minuscola caratterizzata dalla presenza dell’occhiello inferiore** e/o una **R con la gamba incurvata** (però non nel Franklin Gothic che uso in questo esempio).
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-20-caratteristiche-grotteschi.png)</figure>Alcuni font Grotteschi possono essere considerati l’***Akzidenz Grotesk*** (1896), il ***Franklin Gothic*** (1903), il ***Johnston Sans*** (1916, quello della metropolitana di Londra) e il ***Gill Sans*** (1926).
+![Bacheca wordpress](/images/web/font/Immagine-20-caratteristiche-grotteschi.png){:class="aside-image"}
+
+Alcuni font Grotteschi possono essere considerati l’***Akzidenz Grotesk*** (1896), il ***Franklin Gothic*** (1903), il ***Johnston Sans*** (1916, quello della metropolitana di Londra) e il ***Gill Sans*** (1926).
 
 Gli ultimi due (Johnston Sans e Gill Sans), vengono spesso categorizzati anche come **font Neo-Tradizionalisti o Neo-Umanisti**, perché ispirati alle forme degli antichi font Umanisti, ritenuti più naturali e leggibili.
 
@@ -150,7 +165,9 @@ Gli esempi più famosi sono l’***Univers*** e l’***Helvetica*** (entrambi de
 
 Questi font si distinguono dai classici Grotteschi per alcuni dettagli come una **maggior geometricità**, una **g minuscola senza l’occhiello inferiore** e la presenza di **numerose varianti di peso**, strutturate all’interno di una **famiglia di font**.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2016/12/Varianti-di-peso-Univers.png)</figure>#### 3. I Geometrici
+![Bacheca wordpress](/images/web/font/Varianti-di-peso-Univers.png){:class="aside-image"}
+
+#### 3. I Geometrici
 
 In quegli stessi anni (anni ’20 e ’30 del Novecento), assieme a quei caratteri sans serif “Neo tradizionalisti”, come il Gill Sans e il Johnston Sans, nascono anche i sans serif **“Geometrici”**, spinti dalle rivoluzioni artistiche nate **attorno alla scuola del Bauhaus** e a **movimenti come il De Stijl olandese**.
 
@@ -158,7 +175,9 @@ Tra tutti i caratteri geometrici, non si può non citare il più famoso di tutti
 
 Il Futura viene creato nel **1928** ed è considerato il **capostipite dei caratteri sans serif geometrici.** Infatti, **è basato sulle tre forme geometriche di base**: il cerchio, il quadrato e il triangolo.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/Immagine-26-Futura-forme-base.png)</figure>### Le altre categorie
+![Bacheca wordpress](/images/web/font/Immagine-26-Futura-forme-base.png){:class="aside-image"}
+
+### Le altre categorie
 
 Oltre a serif, sans serif e alle loro sotto-categorie, esistono svariate altre famiglie di caratteri.
 
@@ -174,7 +193,9 @@ Esistono tre diverse categorie di font di stile Gotico:
 
 Oggigiorno, i caratteri gotici non vengono più usati da nessuna parte, se non per casi particolari o per decorazioni. Un uso che tuttavia è rimasto è quello dell’utilizzo di caratteri gotici per le testate e i loghi dei quotidiani.
 
-<figure class="wp-block-image">![](https://www.grafigata.com/wp-content/uploads/2014/11/ezgif-3-8ad361385dd8.jpg)</figure>#### I caratteri Script o informali
+![Bacheca wordpress](/images/web/font/ezgif-3-8ad361385dd8.jpg){:class="aside-image"}
+
+#### I caratteri Script o informali
 
 Tra esse bisogna assolutamente citare i cosiddetti **Script o Informali.** Si tratta di caratteri che sostanzialmente simulano la calligrafia e la scrittura manuale, in vari modalità diverse. Sono generalmente poco leggibili e da usare solo in casi davvero particolari.
 

@@ -1,10 +1,8 @@
 ---
-id: 624
 title: 'CSS i fogli di stile'
 date: '2021-05-21T11:44:47+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=624'
 ---
 
 L’acronimo **CSS** sta per **Cascading Style Sheets** (fogli di stile a cascata) e indica un linguaggio che permette di formattare lo di un documento web (HTML). I CSS contengono indicazioni su come l’interfaccia debba essere composta dal punto di vista grafico, mentre l’HTML compone le informazioini dal punto di vista semantico.
@@ -32,7 +30,7 @@ Supponiamo di avere il seguente codice HTML:
 </ul>
 {% endhighlight %}
 
-</div>Notiamo come a ciascun tag utilizzato è stato associato un **attributo id**. Questo attributo mi permette di identificare in modo univoco un tag in una pagina. A questo punto posso iniziare a scrivere il codice CSS:
+Notiamo come a ciascun tag utilizzato è stato associato un **attributo id**. Questo attributo mi permette di identificare in modo univoco un tag in una pagina. A questo punto posso iniziare a scrivere il codice CSS:
 
 
 {% highlight css %}
@@ -59,7 +57,7 @@ Supponiamo di avere il seguente codice HTML:
 }
 {% endhighlight %}
 
-</div>Come possiamo vedere il codice CSS crea aggregazioni di stili associati ad un attributo. Il paragrafo che ha per id *primoparagrafo* utilizza ili font Georgia, con una dimensione di 12 pixel, con un carattere grassetto, allineato a destra con una linea che attraversa il testo. Il paragrafo che ha per id *secondoparagrafo* utilizza un font Arial, con un testo di dimensione 16 pixel, uno stile italico, giustificato.
+Come possiamo vedere il codice CSS crea aggregazioni di stili associati ad un attributo. Il paragrafo che ha per id *primoparagrafo* utilizza ili font Georgia, con una dimensione di 12 pixel, con un carattere grassetto, allineato a destra con una linea che attraversa il testo. Il paragrafo che ha per id *secondoparagrafo* utilizza un font Arial, con un testo di dimensione 16 pixel, uno stile italico, giustificato.
 
 #### Selettore class
 
@@ -78,7 +76,7 @@ Supponiamo di avere il seguente codice HTML:
 </ul>
 {% endhighlight %}
 
-</div>Come possiamo notare tutti questi tag sono accumunati dall’appartenere alla classe *coseimportanti*.
+Come possiamo notare tutti questi tag sono accumunati dall’appartenere alla classe *coseimportanti*.
 
 
 {% highlight css %}
@@ -88,4 +86,4 @@ Supponiamo di avere il seguente codice HTML:
 }
 {% endhighlight %}
 
-</div>Dunque a tutti gli elementi nella pagina che hanno l’attributo class contenente *coseimportanti* sarà applicato un colore del testo rosso ed uno sfondo giallo.
+Dunque a tutti gli elementi nella pagina che hanno l’attributo class contenente *coseimportanti* sarà applicato un colore del testo rosso ed uno sfondo giallo.
