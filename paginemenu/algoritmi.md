@@ -21,4 +21,4 @@ name: Algoritmi
 ## Varie
 
 * [Il problema del resto]({{ site.baseurl }}{% link _algoritmi/resto.md %}.html)
-* [L'approccio greedy al problema di knapsack]({{ site.baseurl }}{% link _algoritmi/knapsack.md %}.html)
+* [L'approccio greedy al problema di knapsack] ({{ site.baseurl }}{% link _algoritmi/knapsack.md %}.html)

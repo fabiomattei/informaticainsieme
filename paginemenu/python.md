@@ -24,3 +24,8 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * [Funzioni]({{ site.baseurl }}{% link _python/funzioni.md %}.html)
 * [Ricorsione]({{ site.baseurl }}{% link _python/la-ricorsione.md %}.html)
 * [La programmazione ad oggetti]({{ site.baseurl }}{% link _python/la-programmazione-ad-oggetti.md %}.html)
+
+Approfondimenti
+
+- [Analisi dei dati con Pandas]({{ site.baseurl }}{% link _pandas/analisi-dei-dati-con-pandas.md %}.html)
+
