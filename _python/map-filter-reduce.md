@@ -79,7 +79,7 @@ def somma(x, y):
 
 ## La funzione filter
 
-La funzione filter() prende come parametri una funzione che restituisce un booleano e una struttura dati di tipo iterable (list, tuple etc.) e restituisce un iterator contenente i valori della struttura dati per cui la funzione passata restitusce True.
+La funzione filter() prende come parametri una funzione, che restituisce un booleano, e una struttura dati di tipo iterable (list, tuple etc.) e restituisce un iterator contenente i valori della struttura dati per cui la funzione passata restitusce True.
 
 {% highlight python %}
 def isvocal(variable):
@@ -128,14 +128,16 @@ print(list(numeriPari))
 
 ## La funzione reduce
 
-The reduce(fun,seq) function is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along. This function is defined in “functools” module.
+La funzione *reduce* riduce gli elementi di una lista ad uno solo. E' utile per sommare tutti gli elementi di una lista o per concatenare, è utile ogni qual volta pensiamo al concetto di *accumulatore* visto quando abbiamo studiato i cicli.
 
-Working :  
+La funzione *reduce* prende come parametri una funzione, che riceve due parametri, e una struttura dati di tipo iterable (list, tuple etc.) e fa questi passi:
 
-    At first step, first two elements of sequence are picked and the result is obtained.
-    Next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
-    This process continues till no more elements are left in the container.
-    The final returned result is returned and printed on console.
+* Al primo passo prende i primi due elementi della struttura dati e li passa alla funzione calcolando il risultato
+* Al secondo passo prende il risultato calcolato al primo passo e lo passa come primo parametro della funzione per la seconda iterazione, come secondo parametro passa il terzo elemento della struttura.
+* Il processo continua fino all'esaurimento della struttura dati passata
+* Il risultato finale viene restituito al chiamante della funzione *reduce*
+
+La funzione *reduce* è definita nel modulo *functools* e va inclusa prima di poter essere usata.
 
 Facciamo un esempio
 
@@ -147,70 +149,51 @@ import functools
 numeri = [1, 3, 5, 6, 2, ]
  
 """usiamo reduce per calcolare la somma degli elementi di una lista"""
-print("The sum of the list elements is : ", end="")
-print(functools.reduce(lambda a, b: a+b, numeri))
+print("Somma degli elementi nella lista: ", end="")
+somma = functools.reduce(lambda a, b: a+b, numeri)
+print(somma)
  
 """usiamo reduce per calcolare l'elemento più grande in una lista"""
-print("The maximum element of the list is : ", end="")
-print(functools.reduce(lambda a, b: a if a > b else b, numeri))
+print("Massimo elemento della lista: ", end="")
+massimo = functools.reduce(lambda a, b: a if a > b else b, numeri)
+print(massimo)
 {% endhighlight %}
 
 
 ##### Output: 
-The sum of the list elements is : 17
-The maximum element of the list is : 6
+Somma degli elementi nella lista: 17
+Massimo elemento della lista: 6
  
-# python code to demonstrate working of reduce()
-# using operator functions
+
+#### Reduce con funzioni operator
 
 
 {% highlight python %}
-"""importing functools for reduce()"""
 import functools
 
-"""importing operator for operator functions"""
+"""importo le funzioni operator"""
 import operator
 
 """initializing list"""
-lis = [1, 3, 5, 6, 2, ]
+lista = [1, 3, 5, 6, 2, ]
 
 """using reduce to compute sum of list"""
 """using operator functions"""
-print("The sum of the list elements is : ", end="")
-print(functools.reduce(operator.add, lis))
+print("Somma degli elementi nella lista: ", end="")
+print(functools.reduce(operator.add, lista))
 
 """using reduce to compute product"""
 """using operator functions"""
-print("The product of list elements is : ", end="")
-print(functools.reduce(operator.mul, lis))
+print("Massimo elemento della lista: ", end="")
+print(functools.reduce(operator.mul, lista))
 
 """using reduce to concatenate string"""
-print("The concatenated product is : ", end="")
-print(functools.reduce(operator.add, ["geeks", "for", "geeks"]))
+print("Le stringhe concatenate sono: ", end="")
+print(functools.reduce(operator.add, ["latte", "miele", "biscotti"]))
 {% endhighlight %}
 
 ##### Output:
-The sum of the list elements is : 17
-The product of list elements is : 180
-The concatenated product is : geeksforgeeks
+Somma degli elementi nella lista: 17
+Massimo elemento della lista: 180
+Le stringhe concatenate sono: lattemielebiscotti
 
-
-{% highlight python %}
-"""Python program to  illustrate sum of two numbers."""
-def reduce(function, iterable, initializer=None):
-    it = iter(iterable)
-    if initializer is None:
-        value = next(it)
-    else:
-        value = initializer
-    for element in it:
-        value = function(value, element)
-    return value
- 
-"""Note that the initializer, when not None, is used as the first value instead of the first value from iterable , and after the whole iterable."""
-tup = (2,1,0,2,2,0,0,2)
-print(reduce(lambda x, y: x+y, tup,6))
-{% endhighlight %}
-
-##### Output:
-15
