@@ -5,7 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
-### La funzione map
+## La funzione map
 
 La funzione map() prende come parametri una funzione e una o più strutture dati di tipo iterable (list, tuple etc.) 
 e restituisce un oggetto map (che è un iterator) contenente i risultati che si ottengono applicando la funzione passata a ciascuno degli oggetti contenuti nella struttura dati.
@@ -13,19 +13,36 @@ e restituisce un oggetto map (che è un iterator) contenente i risultati che si 
 Facciamo un esempio:
 
 {% highlight python %}
-def addition(n):
+def raddoppia(n):
     """Questa funzione prende un numero come parametro, lo raddoppia e restituisce il risultato"""
     return n + n
 
 numbers = (1, 2, 3, 4)
-result = map(addition, numbers)
+result = map(raddoppia, numbers)
 print(list(result))
 {% endhighlight %}
 
 ##### Output:
 [2, 4, 6, 8]
 
-Possiamo ottenere lo stesso effetto utilizzando le lambda functions:
+Possiamo ottenere lo stesso effetto utilizzando le lambda functions.
+La lambda function non è altro che una funzione molto breve, anonima, che sta su una sola riga, in pratica la funzione:
+
+{% highlight python %}
+def raddoppia(x):
+    return x + x
+{% endhighlight %}
+
+Si trasforma in:
+
+{% highlight python %}
+lambda x: x + x
+{% endhighlight %}
+
+La lambda function si riconosce per la parola chiave *lambda* seguida dal o dai parametri seguito dal simbolo *:*.
+Dopo di questo si scrive l'espressione per il calcolo del valore restituito. Non c'è bisogno della parola _return_.
+
+A questo punto lo scrip map può diventare:
 
 {% highlight python %}
 numbers = (1, 2, 3, 4)
@@ -37,7 +54,8 @@ print(list(result))
 [2, 4, 6, 8]
 
 
-E' possibile utilizzare la funzione map su due liste contemporaneamente, si presume che le due liste contengano lo stesso numero di elementi
+E' possibile utilizzare la funzione map su due liste contemporaneamente, si presume che le due liste contengano lo stesso numero di elementi.
+In questo caso è necessario che la funzione che va ad operare riceva due parametri e che operi su questi.
 
 {% highlight python %}
 numbers1 = [1, 2, 3]
@@ -50,8 +68,16 @@ print(list(result))
 ##### Output:
 [5, 7, 9]
 
+Questo script somma il primo elemento della lista numbers1 con il primo della lista numbers2, il secondo elemento della lista numbers1 con il secondo della lista numbers2 e il terzo elemento della lista numbers1 con il terzo della lista numbers2.
 
-### La funzione filter
+In questo script la funzione *lambda x, y: x + y* equivale a
+
+{% highlight python %}
+def somma(x, y):
+    return x + y
+{% endhighlight %}
+
+## La funzione filter
 
 La funzione filter() prende come parametri una funzione che restituisce un booleano e una struttura dati di tipo iterable (list, tuple etc.) e restituisce un iterator contenente i valori della struttura dati per cui la funzione passata restitusce True.
 
@@ -64,12 +90,12 @@ def isvocal(variable):
     else:
         return False
   
-sequence = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
+listaDiLettere = ['g', 'e', 'e', 'j', 'k', 's', 'p', 'r']
   
-filtered = filter(isvocal, sequence)
+lettereFiltrate = filter(isvocal, listaDiLettere)
 
-print('The filtered letters are:')
-for s in filtered:
+print('Le lettere filtrate sono:')
+for s in lettereFiltrate:
     print(s)
 {% endhighlight %}
 
@@ -83,25 +109,24 @@ e
 E' possibile anche in questo caso utilizzare una lambda function:
 
 {% highlight python %}
-"""a list contains both even and odd numbers. """
+"""Una lista contenete numeri pari e dispari. """
 seq = [0, 1, 2, 3, 5, 8, 13]
   
 """result contains odd numbers of the list"""
-result = filter(lambda x: x % 2 != 0, seq)
-print(list(result))
+numeriDispari = filter(lambda x: x % 2 != 0, seq)
+print(list(numeriDispari))
   
 """result contains even numbers of the list"""
-result = filter(lambda x: x % 2 == 0, seq)
-print(list(result))
+numeriPari = filter(lambda x: x % 2 == 0, seq)
+print(list(numeriPari))
 {% endhighlight %}
 
 ##### Output:
-
 [1, 3, 5, 13]
 [0, 2, 8]
 
 
-### La funzione reduce
+## La funzione reduce
 
 The reduce(fun,seq) function is used to apply a particular function passed in its argument to all of the list elements mentioned in the sequence passed along. This function is defined in “functools” module.
 
