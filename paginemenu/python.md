@@ -28,4 +28,5 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 Approfondimenti
 
 - [Analisi dei dati con Pandas]({{ site.baseurl }}{% link _pandas/analisi-dei-dati-con-pandas.md %}.html)
+- [Map, Filter e reduce]({{ site.baseurl }}{% link _python/map-filter-reduce.md %}.html)
 
