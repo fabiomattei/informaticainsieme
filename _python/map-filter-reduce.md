@@ -22,8 +22,10 @@ result = map(raddoppia, numbers)
 print(list(result))
 {% endhighlight %}
 
-##### Output:
+{% highlight shell %}
+# Output:
 [2, 4, 6, 8]
+{% endhighlight %}
 
 Possiamo ottenere lo stesso effetto utilizzando le lambda functions.
 La lambda function non è altro che una funzione molto breve, anonima, che sta su una sola riga, in pratica la funzione:
@@ -50,9 +52,10 @@ result = map(lambda x: x + x, numbers)
 print(list(result))
 {% endhighlight %}
 
-##### Output:
+{% highlight shell %}
+# Output:
 [2, 4, 6, 8]
-
+{% endhighlight %}
 
 E' possibile utilizzare la funzione map su due liste contemporaneamente, si presume che le due liste contengano lo stesso numero di elementi.
 In questo caso è necessario che la funzione che va ad operare riceva due parametri e che operi su questi.
@@ -65,8 +68,10 @@ result = map(lambda x, y: x + y, numbers1, numbers2)
 print(list(result))
 {% endhighlight %}
 
-##### Output:
+{% highlight shell %}
+# Output:
 [5, 7, 9]
+{% endhighlight %}
 
 Questo script somma il primo elemento della lista numbers1 con il primo della lista numbers2, il secondo elemento della lista numbers1 con il secondo della lista numbers2 e il terzo elemento della lista numbers1 con il terzo della lista numbers2.
 
@@ -99,11 +104,12 @@ for s in lettereFiltrate:
     print(s)
 {% endhighlight %}
 
+{% highlight shell %}
 ##### Output:
-
-The filtered letters are:
+Le lettere filtrate sono:
 e
 e
+{% endhighlight %}
 
 
 E' possibile anche in questo caso utilizzare una lambda function:
@@ -121,10 +127,11 @@ numeriPari = filter(lambda x: x % 2 == 0, seq)
 print(list(numeriPari))
 {% endhighlight %}
 
-##### Output:
+{% highlight shell %}
+# Output:
 [1, 3, 5, 13]
 [0, 2, 8]
-
+{% endhighlight %}
 
 ## La funzione reduce
 
@@ -159,41 +166,39 @@ massimo = functools.reduce(lambda a, b: a if a > b else b, numeri)
 print(massimo)
 {% endhighlight %}
 
-
-##### Output: 
+{% highlight shell %}
+# Output: 
 Somma degli elementi nella lista: 17
 Massimo elemento della lista: 6
- 
+{% endhighlight %} 
 
 #### Reduce con funzioni operator
 
 
 {% highlight python %}
 import functools
+import operator      # importo le funzioni operator
 
-"""importo le funzioni operator"""
-import operator
-
-"""initializing list"""
 lista = [1, 3, 5, 6, 2, ]
 
-"""using reduce to compute sum of list"""
-"""using operator functions"""
+"""utilizziamo reduce per calcolare la somma degli elementi di una lista"""
+"""utilizzando le funzioni operator"""
 print("Somma degli elementi nella lista: ", end="")
 print(functools.reduce(operator.add, lista))
 
-"""using reduce to compute product"""
-"""using operator functions"""
+"""utilizziamo reduce per calcolare il prodotto degli elementi di una lista"""
+"""utilizzando le funzioni operator"""
 print("Massimo elemento della lista: ", end="")
 print(functools.reduce(operator.mul, lista))
 
-"""using reduce to concatenate string"""
+"""utilizziamo reduce per concatenare gli elementi di una lista"""
 print("Le stringhe concatenate sono: ", end="")
 print(functools.reduce(operator.add, ["latte", "miele", "biscotti"]))
 {% endhighlight %}
 
-##### Output:
+{% highlight shell %}
+# Output:
 Somma degli elementi nella lista: 17
 Massimo elemento della lista: 180
 Le stringhe concatenate sono: lattemielebiscotti
-
+{% endhighlight %}
