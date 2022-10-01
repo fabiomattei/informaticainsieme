@@ -11,7 +11,7 @@ L'agoritmo di Dijkstra ha molti utilizzi. Può essere utilizzato per calcolare i
 
 * IP Routing
 * A* Algorithm
-* Telephone networks
+* Network telefonici
 
 L'algoritmo segue queste regole:
 
@@ -24,7 +24,7 @@ Immaginiamo di trovarci di fronte il seguente grafo:
 
 ![Dijkstra, grafo iniziale](/images/algoritmi/greedy/dijkstra01.png){:class="aside-image"}
 
-Per lavorare con l'algoritmo si crea una tabella che indica la distanza complessiva tra la radice e ciascun nodo e si pone il suo valore ad infinito per ciascun nodo.
+Per lavorare con l'algoritmo si crea una tabella che indica la distanza complessiva tra la radice e ciascun nodo e si pone il suo valore ad infinito per ciascun nodo. Il nodo di partenza è il nodo A che pertanto si considera a distanza 0.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
 | ---- | --------------- | ------------ | -------- |
@@ -37,7 +37,7 @@ Per lavorare con l'algoritmo si crea una tabella che indica la distanza compless
 ![Dijkstra: aggiungo nodo A](/images/algoritmi/greedy/dijkstra02.png){:class="aside-image"}
 
 Iniziamo ad applicare l'algoritmo di Dijkstra a partire dal nodo A che considereremo **nodo radice**. **Consideriamo tutti i suoi vicini** e calcoliamo la distanza da A. Il fine ultimo dell'algoritmo è quello di calcolare la distanza minima che intercorre tra A e tutti i nodi del grafo.
-I nodi raggiungibili da A sono B ed E. B ha distanza 6 da A ed E ha distanza 3 da A. Queste distanze rappresentano la distanza minima tra i nodi B, E ed A
+I nodi raggiungibili da A sono B ed E. B ha distanza 6 da A ed E ha distanza 3 da A. Queste distanze rappresentano la distanza minima tra i nodi B, E ed A.
 
 La tabella delle distanza aggiornata è la seguente:
 
@@ -49,7 +49,7 @@ La tabella delle distanza aggiornata è la seguente:
 | D    | infinito        |              |          |
 | E    | 3               | A            |          |
 
-Il nodo a costo minimo da raggiungere è il nodo E quindi vado a considerare il nodo E.
+A questo punto selezioniamo un nodo da aggiungere ai nodi visitati. Dato che Il nodo a costo minimo da raggiungere è il nodo E vado a ad aggiungere E ai nodi visitati.
 
 ![Dijkstra: aggiungo nodo E](/images/algoritmi/greedy/dijkstra03.png){:class="aside-image"}
 
@@ -68,7 +68,7 @@ Ecco la tabella aggiornata.
 | D    | 10              | E            |          |
 | E    | 3               | A            | Si       |
 
-Per andare al passo successivo guardo tutti i nodi rimasti e scelgo quello a costo minore quindi vado a valutare C che ha costo 4.
+Dopo aver rivalutato tutte le distanze vado a selezionare il nodo, **non ancora visitato**, che ha distanza minima da A. Scelgo C che è a distanza 4.
 
 ![Dijkstra: aggiungo nodo C](/images/algoritmi/greedy/dijkstra04.png){:class="aside-image"}
 
