@@ -449,4 +449,8 @@ is\_prime(4) restituisce False
 
 #### Esercizio 17
 
+Scrivi una funzione celsiusToFahrenheit che accetti come parametro una temperatura in gradi Celsius e restituisca la corrispondente temperatura inn gradi Fahrenheit. Scrivere poi una funzione FahrenheitToCelsius che faccia l'operazione opposta. Scrivi in fine il main che facendo uso delle funzioni scrivi le scale di conversione di temperatura per i gradi Celsius che vanno da -20°C a 100°C a passo 5 e per i gradi Fahrenheit che vanno da -5 a 205 a passo 10.
+
+#### Esercizio 18
+
 Crea una libreria di funzioni turtle che disegnino figure geometriche. Le firme delle funzioni da scrivere sono: def quadrato(lato): def rettangono(base, altezza): def cerchio(raggio) def esagono(lato) Crea in fine una funzione main() che richiami le quattro funzioni appena descritte con dei valori dati in input dall’utente.

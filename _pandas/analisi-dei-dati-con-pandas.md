@@ -86,7 +86,9 @@ type(df)
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/514/1*8OHeUqQ5rZxzPxdCNpMo1Q.png)</figure># Esaminiamo il DataFrame
+![DataFrame](/images/python/pandas/01_pandas_dataframe.png)
+
+## Esaminiamo il DataFrame
 
 Diamo una prima occhiata al DataFrame. Possiamo controllare le prime *n* righe del file appena caricato con il metodo *head*. Se *n* non viene specificato si applica il valore di default pari a 5.
 

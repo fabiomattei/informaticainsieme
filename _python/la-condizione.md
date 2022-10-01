@@ -83,7 +83,7 @@ else:
 scrivi un programma che lette due stringhe di testo ne scriva la prima in ordine alfabetico
 
 #### Esercizio 6:
-scrivi un programma che letti due numeri ne scriva il maggiore
+scrivi un programma che letti due numeri scriva il più grande tra i due
 
 #### Esercizio 7:
 scrivi un programma che letto un numero intero determini se è pari o dispari (utilizzare l’operatore resto: %)
@@ -119,3 +119,19 @@ Un’azienda elettrica ha stabilito le seguenti tariffe:
 | 1001 – oltre | 20 + 0,08 per ogni KW/H compreso tra 500 e 1000 + 0,05 per ogni KW/H oltre i 1000 |
 
 Scrivere un programma che letto il consumo mensile calcoli e stampi l’importo della bolletta.
+
+#### Esercizio 16:
+Scrivi un programma python che legga il valore di una spesa e calcoli lo sconto secondo la seguente tabella:
+Al di sotto di 100 euro nessuno sconto
+Tra 100 e 300 euro sconto del 10%
+Tra i 300 e i 500 euro sconto del 15%
+Tra i 500 e i 800 euro sconto del 20%
+
+#### Esercizio 17:
+Simona deve comperare le paste per il suo bar. 
+Le tariffe applicate dal pasticciere sono le seguenti: Se le paste sono fino a 20 il prezzo è di 1 euro 
+per ciascuna pasta Se le paste sono più di 20 ma meno di 40 il prezzo è di 0.9 euro per pasta.
+Se le paste sono più di 40 ma meno di 60 il prezzo è di 0.8 euro per pasta Se le paste sono più di 100 
+il prezzo è di 0.6 euro per pasta Scrivi il programma che aiuta il panettiere a calcolare l'ammontare che 
+Simona dovrà pagare.
+
