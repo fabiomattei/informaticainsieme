@@ -36,7 +36,18 @@ f.close()                              # chiude il file appena aperto
 Se sono nella necessità di scrivere dati su di un file posso utilizzare la funzione open passando il parametro **w** per indicare che ho bisogno di scrivere sul file.
 Andrò a scrivere nel file utilizzando il metodo **write** del **file handler**, ma nota bene la funzione write accetta soltanto stringhe di testo quindi eventuali numeri vanno convertiti in stringa attraverso la funzione str.
 
+Se devo scrivere una stringa di testo posso fare questo:
 {% highlight shell %}
+scritta = "La mia stringa di testo"
+f = open("sunnyoutput.txt", "w")
+f.write(scritta)
+f.close()
+{% endhighlight %}
+
+Se devo scrivere un numero intero lo devo necessariamente convertire prima in stringa di testo.
+
+{% highlight shell %}
+numero_passi = 5
 f = open("sunnyoutput.txt", "w")
 f.write(str(numero_passi))
 f.close()
@@ -45,4 +56,39 @@ f.close()
 ## Esercizi 
 
 #### Esercizio 1:
+
+Crea un file chiamato *numeri.txt* contenente 10 numeri interi. Apri il file, leggi il suo contenuto, raddoppia tutti i numeri e scrivili nel file *raddoppiati.txt*.
+
+Esempio file input numeri.txt:
+{% highlight shell %}
+3
+5
+7
+{% endhighlight %}
+
+Esempio file output raddoppiati.txt:
+{% highlight shell %}
+6
+10
+14
+{% endhighlight %}
+
+
+#### Esercizio 2:
+
+Crea un file chiamato *letteremiste.txt* contenente lettere una per ciascuna riga. Apri il file, leggi il suo contenuto e scrivi un fil *letterefilatrate.txt* che contenga soltanto le vocali contenute nel primo file.
+
+Esempio file input letteremiste.txt:
+{% highlight shell %}
+a
+b
+e
+m
+{% endhighlight %}
+
+Esempio file output letterefilatrate.txt:
+{% highlight shell %}
+a
+e
+{% endhighlight %}
 
