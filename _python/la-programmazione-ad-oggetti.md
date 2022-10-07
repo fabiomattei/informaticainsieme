@@ -364,11 +364,97 @@ L’esempio che abbiamo appena visto ci dà idea su come gestire il codice in mo
 
 ## Esercizi 
 
-#### Esercizio 1:
+### Esercizio 1:
 Completa la struttura descritta all’interno del capitolo aggiungendo altre 5 classi di persone che ruotano nell’ambito del mondo della scuola.
 
-#### Esercizio 2:
+### Esercizio 2:
 Crea la struttura di classi necessaria per descrivere gli animali all’interno di uno zoo. Parti dalla classe base Animali e poi definisci le sottoclassi Mammiferi Rettili Uccelli e poi continua creando una classe per ciascun tipo di Animale: Orso, Vipera ecc. fino a 10 animali. Le classi avranno un attributo di classe per il nome scientifico, un attributo di istanza per il nome de singolo e avranno un metodo per presentarsi ed un per fare il verso (Bau bau, Miao, Zzzzz ecc.).
 
-#### Esercizio 3:
+### Esercizio 3:
 Immagina di dover fare una applicazione per pagare gli stipendi in una azienda. Il direttore guadagna 100000 euro/anno, il vi- cedirettore 70000, una manager di medio livello 50000, gli impiegati 35000. Le ore di straordinario vengono retribuite il 20% più del normale. Chi fa il part-time guadagna il 60% del suo stipendio lordo. Crea la struttura di classi e i metodi per calcolare gli stipendi del personale in basso.
+
+### Esercizio 4:
+
+Fai la tabella di tracciamento:
+
+{% highlight python %}
+class Conto:
+   def __init__(self):
+       self.saldo = 0
+   def deposita(self, ammontare):
+       self.saldo = self.saldo + ammontare
+   def preleva(self, ammontare):
+       if self.saldo > ammontare:
+         self.saldo = self.saldo - ammontare
+       else:
+         return "sei povero"
+   def estrattoConto(self):
+       return self.saldo
+       
+       
+# main
+mioconto = Conto()
+mioconto.deposita(1000)
+print(mioconto.estrattoConto())
+mioconto.deposita(2000)
+print(mioconto.estrattoConto())
+mioconto.preleva(500)
+print(mioconto.estrattoConto())
+
+contoBeatrice = Conto()
+contoBeatrice.deposita(1000000)
+print(contoBeatrice.estrattoConto())
+contoBeatrice.preleva(500000)
+print(contoBeatrice.estrattoConto())
+{% endhighlight %}
+
+### Esercizio 5:
+
+Crea una classe automobile che conservi memoria della distanza percorsa dall'acquisto (odometro o conta km).
+La classe possiede un metodo "percorri" che prende come parametro i km percorsi da aggiungere alla distanza percorsa dal momento
+dell'acquisto.
+La classe possiede il metodo "getKm" che restituisce i km percorsi da quando acquistata.
+La classe possiede anche il metodo "tarocca" che si preoccupa di far sembrare che la macchina non abbia mai percorso più di 10000 km in modo da poterla rivendere al massimo prezzo possibile
+
+### Esercizio 6:
+
+Fai la tabella di tracciamento:
+
+{% highlight python %}
+class Macchina:
+    
+	def __init__(self, modello):
+	    self.modello = modello
+	    self.componenti = []
+		
+	def aggiungiComponente(self, componente):
+	    self.componenti.append( componente ) # il metodo append del tipo lista aggiunge un elemento ad una lista
+        
+	def calcolaPeso(self):
+	    peso = 0
+	    for componente in self.componenti:
+	        peso = peso + componente.getPeso()
+	    return peso
+    
+class Componente:
+    
+    def __init__(self, nome, peso):
+	    self.nome = nome
+	    self.peso = peso
+    
+    def getPeso(self):
+	    return self.peso
+        
+
+# main
+m1 = Macchina("Ford Fiesta")
+c1 = Componente("Ammortizzatore", 10)
+m1.aggiungiComponente( c1 )
+c2 = Componente("Cruscotto", 20)
+m1.aggiungiComponente( c2 )
+c2 = Componente("Sedile", 12)
+print(m1.calcolaPeso())
+{% endhighlight %}
+
+
+
