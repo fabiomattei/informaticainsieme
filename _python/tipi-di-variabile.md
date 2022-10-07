@@ -4,7 +4,6 @@ title: 'Tipi di variabile'
 date: '2020-02-07T22:03:41+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=207'
 ---
 
 Una informazione, conservata in una variabile, ha sempre un tipo associato. **Il tipo della variabile determina l’insieme di valori che una variabile può assumere e le operazioni che possono manipolare tali valori**.
@@ -15,7 +14,7 @@ Una informazione, conservata in una variabile, ha sempre un tipo associato. **Il
 - valori booleani (bool) Es. True, False
 - valori stringa (str) Es. “ciao”, ‘Buongiorno’
 
-#### Operazioni su numeri interi, numeri a virgola mobile e numeri complessi
+## Operazioni su numeri interi, numeri a virgola mobile e numeri complessi
 
 Per assegnare un numero ad una variabile basta utilizzare l’operatore = come visto nella pagina dedicata alle [variabili](https://www.esercizidiinformatica.it/variabili/).
 
@@ -33,6 +32,9 @@ Le operazioni possibili su di una variabile di tipo **int**, **float** o **compl
 - M//M → quoziente intero
 - M%M → modulo (resto della divisione intera, solo tra interi)
 - M\*\*M → potenza (interi, float, complessi)
+
+
+
 
 #### Esercizio 1: 
 copia il seguente codice nell’editor. Una volta finito fallo eseguire premendo F5 oppure dando il comando RUN → RUN MODULE.
