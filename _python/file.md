@@ -55,7 +55,7 @@ f.close()
 
 ## Esercizi 
 
-#### Esercizio 1:
+### Esercizio 1:
 
 Crea un file chiamato *numeri.txt* contenente 10 numeri interi. Apri il file, leggi il suo contenuto, raddoppia tutti i numeri e scrivili nel file *raddoppiati.txt*.
 
@@ -74,7 +74,7 @@ Esempio file output raddoppiati.txt:
 {% endhighlight %}
 
 
-#### Esercizio 2:
+### Esercizio 2:
 
 Crea un file chiamato *letteremiste.txt* contenente lettere una per ciascuna riga. Apri il file, leggi il suo contenuto e scrivi un fil *letterefilatrate.txt* che contenga soltanto le vocali contenute nel primo file.
 
@@ -91,4 +91,37 @@ Esempio file output letterefilatrate.txt:
 a
 e
 {% endhighlight %}
+
+### Esercizio 3:
+
+Crea un file chiamato numeri.txt contenente 10 numeri interi. Apri il file, leggi il suo contenuto e calcolare la somma, la media, il massimo e il minimo  e scrivi l'output nel file statistiche.txt
+
+Esempio file input numeri.txt:
+
+3
+5
+7
+
+Esempio file output statistiche.txt:
+
+Somma: 15
+Media: 5
+Massimo: 7
+Minimo: 3
+
+### Esercizio 3:
+
+Crea un file chiamato numeri.txt contenente 10 coppie di numeri interi separati da uno spazio. Apri il file, leggi il suo contenuto e calcola la somma dei numeri riga per riga e scrivi l'output nel file somme.txt
+
+Esempio file input numeri.txt:
+
+3 2
+5 1
+7 4
+
+Esempio file output somme.txt:
+
+5
+6
+11
 
