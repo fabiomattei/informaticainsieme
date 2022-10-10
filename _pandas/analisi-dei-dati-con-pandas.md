@@ -98,7 +98,8 @@ df.head()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*P9dcG0lJvmZlftEp2mmRPg.png)</figure>Ad un prima occhiata tutto sembra in ordine. Possiamo allo stesso modo usare il metodo tail per vedere le ultime 5 righe del file:
+![head](/images/python/pandas/02_pandas_head.png)
+Ad un prima occhiata tutto sembra in ordine. Possiamo allo stesso modo usare il metodo tail per vedere le ultime 5 righe del file:
 
 {% highlight python %}
 df.tail()
@@ -106,7 +107,8 @@ df.tail()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*gv18jwruP61WZ4XLNd89ag.png)</figure>Ora controlliamo le dimensione del nostro DataFrame stampando l’attributo *shape*.
+![tail](/images/python/pandas/03_pandas_tail.png)
+Ora controlliamo le dimensione del nostro DataFrame stampando l’attributo *shape*.
 
 {% highlight python %}
 df.shape
@@ -114,7 +116,8 @@ df.shape
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/260/1*7qFdFOwoju3_MNxemilRdg.png)</figure>Viene restituita una tupla contenente il numero delle righe e delle colonne del nostro Dataframe. Nel nostro caso 1,460 righe e 16 colonne o **features** (caratteristiche)
+![shape](/images/python/pandas/04_pandas_shape.png)
+Viene restituita una tupla contenente il numero delle righe e delle colonne del nostro Dataframe. Nel nostro caso 1,460 righe e 16 colonne o **features** (caratteristiche)
 
 Possiamo vedere un sommario del Dataframe con il metodo *info*.
 
@@ -124,7 +127,9 @@ df.info()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/772/1*dYOOxU-MzmUojyKhi6TQnQ.png)</figure>Vengono mostrate informazioni utili sul DataFrame, come i nomi delle colonne, il numero di valori non nulli, i tipi di dato, e la quantità di memoria utilizzata. Possiamo vedere che alcune colonne hanno valori mancanti. Approfondiremo questo aspetto più avanti.
+![Info](/images/python/pandas/05_pandas_info.png)
+
+Vengono mostrate informazioni utili sul DataFrame, come i nomi delle colonne, il numero di valori non nulli, i tipi di dato, e la quantità di memoria utilizzata. Possiamo vedere che alcune colonne hanno valori mancanti. Approfondiremo questo aspetto più avanti.
 
 Il metodo describe ci fornisce qualche valore statistico sul Dataframe.
 
@@ -134,7 +139,8 @@ df.describe()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/1400/1*VN54H9tL-LPMmV2VuYHmmQ.png)</figure>Viene mostrato il conteggio dei valori, la media, la mediana, la deviazione standard i valori minimi e massimi e la distribuzione nei quartili per ciascuna colonna o feature. Attenzione si mostrano soltanto dati sulle colonne numeriche.
+![Describe](/images/python/pandas/06_pandas_describe.png)
+Viene mostrato il conteggio dei valori, la media, la mediana, la deviazione standard i valori minimi e massimi e la distribuzione nei quartili per ciascuna colonna o feature. Attenzione si mostrano soltanto dati sulle colonne numeriche.
 
 Vediamo un ultimo metodo prima di spostarci alla prossima sezione: *value\_counts*.
 
@@ -144,7 +150,9 @@ df['Neighborhood'].value_counts()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/752/1*u_E9AjnF59x9_m0Y1tZwOg.png)</figure>Questo metodo restituisce una Serie di valori che contiene il numero di valori unici per ciascuna colonna. La si può applicare all’intero DataFrame ma nell’esempio l’abbiamo applicata soltanto alla colonna “Neighborhood”.
+![Describe](/images/python/pandas/07_pandas_values_count.png)
+
+Questo metodo restituisce una Serie di valori che contiene il numero di valori unici per ciascuna colonna. La si può applicare all’intero DataFrame ma nell’esempio l’abbiamo applicata soltanto alla colonna “Neighborhood”.
 
 Prima di andare avanti cerchiamo di capire con che dati abbiamo a che fare:
 
@@ -184,7 +192,9 @@ df.index
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/1244/1*3_Fx6w6QClEYV8Hu6TEF2g.png)</figure>Durante questa operazione, se poniamo *inplace* a *True* andiamo ad aggiornare il DataFrame corrente. Se poniamo *inplace = False* (valore di default) andremo a creare una copia del DataFrame in cui la colonna Id sarò indice senza modificare il DataFrame di partenza.
+![Info](/images/python/pandas/08_pandas_info.png)
+
+Durante questa operazione, se poniamo *inplace* a *True* andiamo ad aggiornare il DataFrame corrente. Se poniamo *inplace = False* (valore di default) andremo a creare una copia del DataFrame in cui la colonna Id sarò indice senza modificare il DataFrame di partenza.
 
 Questa operazione può essere fatta anche durante il caricamento del file.
 
@@ -196,7 +206,9 @@ df = pd.read_csv(PATH, index_col='Id')
 
 Vediamo che aspetto ha il nostro DataFrame dopo aver impartito questo comando.
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*JB3Jn5Mror4O6ETJt2ijjg.png)</figure>Ora i dati sono un po’ più puliti!
+![Read CSV con indice](/images/python/pandas/09_pandas_read_csv.png)
+
+Ora i dati sono un po’ più puliti!
 
 ## Righe e colonne
 
@@ -208,19 +220,25 @@ df.columns
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/1366/1*R6EWPCNB3oY2_nirL4ZtPg.png)</figure>{% highlight python %}
+![Colonne](/images/python/pandas/10_pandas_columns.png)
+
+{% highlight python %}
 df['LotArea'].head()
 
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/522/1*_qn-69ByRaMe8E7flm2rQA.png)</figure>{% highlight python %}
+![Colonne](/images/python/pandas/11_pandas_column_head.png)
+
+{% highlight python %}
 type(df['LotArea'])
 
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/488/1*al2CI9DXApHqFPTrd1KmgA.png)</figure>Notate che una colonna nel nostro DataFrame è di tipo *Series*.
+![Colonne](/images/python/pandas/12_pandas_series.png)
+
+Notate che una colonna nel nostro DataFrame è di tipo *Series*.
 
 **Rinominiamo le colonne**
 
@@ -251,7 +269,9 @@ Questo è il modo più facile di creare una colonna. Notiamo che abbiamo assegna
 
 Ecco il DataFrame con la nuova colonna.
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*Wvqs89iny8w1LZjNMcHg8Q.png)</figure>**Adding rows**
+![Colonne](/images/python/pandas/13_pandas_new_column.png)
+
+**Aggiungiamo delle righe**
 
 Ora supponiamo di avere un DataFrame (*df\_to\_append*) che contiene due righe che vogliamo aggiungere a *df\_copy*. Uno dei modi di aggiungere righe alla fine del DataFrame è con il metodo *append*.
 
@@ -277,7 +297,9 @@ df_to_append
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*ERQa8iLMeun4AqR2c8zTvw.png)</figure>Ora aggiungiamo le due righe al DataFrame su *df\_copy*.
+![Colonne](/images/python/pandas/14_pandas_add_row.png)
+
+Ora aggiungiamo le due righe al DataFrame su *df\_copy*.
 
 {% highlight python %}
 data_to_append = {'LotArea': [9500, 15000],
@@ -293,7 +315,9 @@ df_copy.tail(3)
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*ixAB4LFq6M4DGxh_4r7-Dg.png)</figure>**Rimuoviamo righe e colonne**
+![Colonne](/images/python/pandas/15_pandas_copy.png)
+
+**Rimuoviamo righe e colonne**
 
 Al fine di eliminare righe e colonne da un DataFrame, possiamo usar il metodo *drop*. Immaginiamo di voler cancellare l’ultima riga e le colonna ‘Fence’.
 
@@ -319,7 +343,9 @@ df.loc[1000]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/504/1*9NP2p7Jxc_3jOS2RG2AicA.png)</figure>Il metodo in alto seleziona la riga con indice 1000 e mostra i dati contenuti in questa riga. Possiamo anche selezionare la colonna che vogliamo visualizzare.
+![Colonne](/images/python/pandas/16_pandas_loc.png)
+
+Il metodo in alto seleziona la riga con indice 1000 e mostra i dati contenuti in questa riga. Possiamo anche selezionare la colonna che vogliamo visualizzare.
 
 {% highlight python %}
 df.loc[1000, ['LotArea', 'SalePrice']]
@@ -327,7 +353,9 @@ df.loc[1000, ['LotArea', 'SalePrice']]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/488/1*HkP4eQj1MEPA45KGFapYeg.png)</figure>Ora vediamo come possiamo applicare una condizione (o filtro) a *loc*. Immaginiamo di voler selezionare le case che hanno un prezzo di almeno $600,000.
+![Colonne](/images/python/pandas/17_pandas_loc2.png)
+
+Ora vediamo come possiamo applicare una condizione (o filtro) a *loc*. Immaginiamo di voler selezionare le case che hanno un prezzo di almeno $600,000.
 
 {% highlight python %}
 df.loc[df['SalePrice'] >= 600000]
@@ -335,7 +363,9 @@ df.loc[df['SalePrice'] >= 600000]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*5pI-nxkxeuIL7i84a59b4A.png)</figure>Con una semplice riga di codice abbiamo trovato le 4 case che hanno un valore al di sopra di $600,000.
+![Colonne](/images/python/pandas/18_pandas_loc3.png)
+
+Con una semplice riga di codice abbiamo trovato le 4 case che hanno un valore al di sopra di $600,000.
 
 *iloc* viene utilizzato per selezionare dati basandosi sulla loro posizione espressa attraverso gli indici come numeri interi oppure come array di valori booleani. Per esempio se vogliamo selezionnare il dato contenuto nella prima riga alla prima colonna utilizziamo:
 
@@ -345,7 +375,9 @@ df.iloc[0,0]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/156/1*F3llOmLMIJkYIRWeCwtrxQ.png)</figure>Il valore mostrato è il valore contenuto nella colonna *LotArea* nella riga con *ID* pari a 1. Ricorda che il conteggio degli indici inizia sempre da zero.
+![Colonne](/images/python/pandas/19_pandas_iloc.png)
+
+Il valore mostrato è il valore contenuto nella colonna *LotArea* nella riga con *ID* pari a 1. Ricorda che il conteggio degli indici inizia sempre da zero.
 
 Possiamo anche selezionare una intera riga, in questo caso la riga in posizione 10:
 
@@ -355,7 +387,9 @@ df.iloc[10,:]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/464/1*D9LSuZATAoAIdS26ouTCKQ.png)</figure>E possiamo selezionare una intera colonna, per esempio l’ultima:
+![Colonne](/images/python/pandas/20_pandas_iloc2.png)
+
+E possiamo selezionare una intera colonna, per esempio l’ultima:
 
 {% highlight python %}
 df.iloc[:,-1]
@@ -363,7 +397,9 @@ df.iloc[:,-1]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/812/1*h2PDLZ3BMUavq7dlziuq2g.png)</figure>Possiamo utilizzare le tecniche di slicing viste per le liste.
+![Colonne](/images/python/pandas/21_pandas_iloc3.png)
+
+Possiamo utilizzare le tecniche di slicing viste per le liste.
 
 {% highlight python %}
 df.iloc[8:12, 2:5]
@@ -371,7 +407,9 @@ df.iloc[8:12, 2:5]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/720/1*MByQHdDyG9VMNK8tPyyZJA.png)</figure># Gestire i valori mancanti
+![Colonne](/images/python/pandas/22_pandas_iloc4.png)
+
+# Gestire i valori mancanti
 
 In un mondo ideale avremmo dati corretti, accurati e completi. Purtrroppo il mondo ideale non esiste. Un problema particolare sono i dati mancanti. Vediamo come Pandas ci viene in aiuto.
 
@@ -385,7 +423,9 @@ df.isnull()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/2000/1*6krVxLO-KlplLSGUldJ-PA.png)</figure>Nota che non è sempre semplice lavorare con i dati restituiti qui in alto. See stai lavorando con un DataFrame molto piccolo va bene ma se hai milioni di righe è meglio aggregare i valori per colonna come nell’esempio seguente:
+![Colonne](/images/python/pandas/23_pandas_isnull.png)
+
+Nota che non è sempre semplice lavorare con i dati restituiti qui in alto. See stai lavorando con un DataFrame molto piccolo va bene ma se hai milioni di righe è meglio aggregare i valori per colonna come nell’esempio seguente:
 
 {% highlight python %}
 df.isnull().sum()
@@ -393,7 +433,9 @@ df.isnull().sum()
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/422/1*1XUaaTXM8fjaGXVvA7fDyQ.png)</figure>Ora è molto meglio! Ci possiamo rendere conto dell’accuratezza dei nostri dati. Molte colonne sono complete e queesto va bene. Il metodo *sum* ha sommato tutti i valori *True* restituiti da *isnull* perché questi sono equivalenti a 1. I valori pari a *False* sono equivalenti a 0.
+![Colonne](/images/python/pandas/24_pandas_isnullsum.png)
+
+Ora è molto meglio! Ci possiamo rendere conto dell’accuratezza dei nostri dati. Molte colonne sono complete e queesto va bene. Il metodo *sum* ha sommato tutti i valori *True* restituiti da *isnull* perché questi sono equivalenti a 1. I valori pari a *False* sono equivalenti a 0.
 
 Possiamo anche calcolare il rapporto tra il numero di valori mancanti e il numero di valori in ciascuna colonna:
 
@@ -403,7 +445,9 @@ df.isnull().sum() / df.shape[0]
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/486/1*FOiFBAZyQsO05KEPtzmkhg.png)</figure>Facciamo un passo avanti e scriviamo un script che calcoli le percentuali dei valori che sono mancanti.
+![Colonne](/images/python/pandas/25_pandas_average.png)
+
+Facciamo un passo avanti e scriviamo un script che calcoli le percentuali dei valori che sono mancanti.
 
 {% highlight python %}
 for column in df.columns:
@@ -412,7 +456,9 @@ for column in df.columns:
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/382/1*EVO89zxch2olG6HsWVHNaw.png)</figure>## Rimuoviamo i valori mancanti
+![Colonne](/images/python/pandas/26_pandas_percentage.png)
+
+## Rimuoviamo i valori mancanti
 
 Dopo aver capito quali e quanti sono i valori mancanti dobbiamo decidere cosa fare con questi. Ora vedremo come eliminarli.
 
@@ -478,7 +524,10 @@ df['SalePrice'].plot(kind='hist')
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/812/1*C8hCTPpaKFy_2vJPPiXLaA.png)</figure>## Diagrammi a punti
+
+![Colonne](/images/python/pandas/27_pandas_histogram.png)
+
+## Diagrammi a punti
 
 Con i diagrammi a punti possiamo vedere la relazione tra due variabili mostrando i valori su di un piano cartesiano. Mostriamo una caratteristica sull’asse **x** e l’altra sull’asse **y**.
 
@@ -488,7 +537,9 @@ df.plot(x='SalePrice', y='YearBuilt', kind='scatter')
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/794/1*E-g_jn1qr8ukvEKSHGaIjQ.png)</figure>Possiamo vedere che c’è una piccola relazione positiva tra il prezzo di vendita e l’anno di costruzione. Gli edifici più nuovi tendenzialmente si vendono ad un prezzo più alto.
+![Colonne](/images/python/pandas/28_pandas_scattered.png)
+
+Possiamo vedere che c’è una piccola relazione positiva tra il prezzo di vendita e l’anno di costruzione. Gli edifici più nuovi tendenzialmente si vendono ad un prezzo più alto.
 
 Il metodo *plot* supporta molti tipi di grafico: a linee, a barre, ad area, a torta, ecc.
 
@@ -505,14 +556,18 @@ df.to_csv('My_DataFrame.csv')
 
 Il file salvato può essere trovato nella cartella Files in alto a sinistra nella pagina di Google Colab.
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/658/1*sZYDVA8b9mFOJ7tP6Onmyg.png)</figure>Possiamo anche specificare un percorso in locale sulla nostra macchina:
+![Colonne](/images/python/pandas/29_pandas_save.png)
+
+Possiamo anche specificare un percorso in locale sulla nostra macchina:
 
 {% highlight python %}
 df.to_csv('C:/Users/username/Documents/My_DataFrame.csv')   
 
 {% endhighlight %}
 
-<figure class="wp-block-image">![](https://miro.medium.com/max/1400/1*lVlFpvldmpluAqkxVrFyfg.jpeg)</figure># Conclusioni
+![Save](/images/python/pandas/30_pandas.jpeg)
+
+# Conclusioni
 
 Spero che questa pagina abbia aiutato a capire le potenzialità di questa libreria. Con un po’ di pratica manipolare i dati diventerà naturale.
 
