@@ -331,6 +331,55 @@ La prima istruzione rimuove l’ultima riga, quella con *Id* = 1461. E’ possib
 
 Ponendo axis=0 (valore di default) chiediamo di rimuovere una riga. Se volessimo rimuovere una colonna porremmo axis=1.
 
+## Filtri
+
+Un dataframe può accogliere molti dati, qualche volta non ci servono tutte le righe, ma soltanto un sottoinsieme. In questo caso utilizziamo i filtri. I filtri sono espressioni booleane che applicate ai dati nel dataframe lasciano passare soltanto le righe per cui risultavo *verificate*.
+
+Per esempio voglio cercare le case che hanno un costo maggiore di 100000$.
+
+{% highlight python %}
+df[SalePrice >= 100000].head()
+
+{% endhighlight %}
+
+Notiamo che il filtro va posto tra parentesi quadre, in forma di espressione booleana e restituisce un dataframe per vedere il quale abbiamo bisogno di applicare il metodo **head**. Posso applicare due espressioni legate da **and** per esempio per vedere tutte le case con prezzo compreso tra 100000$ e 300000$:
+
+{% highlight python %}
+df[(df[SalePrice] >= 100000) & (df[SalePrice] <= 300000)].head()
+
+{% endhighlight %}
+
+Dato che dopo aver applicato un filtro viene restituito un dataframe posso sommare i prezzi di tutte le case con prezzo compreso tra i 100000$ e i 300000$ utilizzando questa tecnica:
+
+{% highlight python %}
+df[(df[SalePrice] >= 100000) & (df[SalePrice] <= 300000)]['SalePrice'].sum()
+
+{% endhighlight %}
+
+Notiamo che all'interno della prima coppia di parentesi quadre risiede il filtro, all'interno della seconda coppia la colonna che voglio estrarre.
+
+Gli operatori logici in pandas sono:
+
+* & and
+* \| or
+* ~ not
+
+## Raggruppare i dati
+
+E' possibile raggruppare i dati, contenuti in un dataframe, utilizzando i valori contenuti in un colonna. Ad esempio ora raggrupperemo i dati sulla colonna **Neighborhood**.
+
+{% highlight python %}
+df.groupby("Neighborhood")
+
+{% endhighlight %}
+
+Anche il metodo groupby restituisce un dataframe quindi possiamo ad esempio contare i vicinati così:
+
+{% highlight python %}
+df.groupby("Neighborhood")["Neighborhood"].count()
+
+{% endhighlight %}
+
 ## Accedere ai dati con loc e iloc
 
 Uno dei modi più semplici per accedere ai dati è attraverso i metodi *loc* e *iloc*.
@@ -411,7 +460,7 @@ df.iloc[8:12, 2:5]
 
 # Gestire i valori mancanti
 
-In un mondo ideale avremmo dati corretti, accurati e completi. Purtrroppo il mondo ideale non esiste. Un problema particolare sono i dati mancanti. Vediamo come Pandas ci viene in aiuto.
+In un mondo ideale avremmo dati corretti, accurati e completi. Purtroppo il mondo ideale non esiste. Un problema particolare sono i dati mancanti. Vediamo come Pandas ci viene in aiuto.
 
 ## Cerchiamo valori mancanti
 
@@ -469,7 +518,8 @@ Iniziamo dalla caratteristica (feature) che si chiama *PoolQC*. Dato che il 99% 
 Utilizzeremo una copia del DataFrame originale.
 
 {% highlight python %}
-df_toremove = df.copy()df_toremove.drop(labels='PoolQC', axis=1, inplace=True)
+df_toremove = df.copy()
+df_toremove.drop(labels='PoolQC', axis=1, inplace=True)
 
 
 {% endhighlight %}
