@@ -54,7 +54,7 @@ Di solito Pandas viene importato come “pd” per brevità, in modo da non deve
 
 Dopo che abbiamo istallato ed importato *Pandas*, vediamo come fare per leggere un file e creare un **Pandas DataFrame**. I dati su cui lavoreremo sono una versione semplificata di una competizione [Kaggle](https://www.kaggle.com/c/home-data-for-ml-course/overview) che riguarda i prezzi delle case.
 
-Il file che contiene i dati è un file di tipo **.CSV** (Comma-separated values) che potete trovare [qui](http://esercizidiinformatica.it/daticase.csv).
+Il file che contiene i dati è un file di tipo **.CSV** (Comma-separated values) che potete trovare [qui](http://informaticainsieme.it/dati/daticase.csv).
 
 ## Leggere il file e creare il DataFrame
 
@@ -368,7 +368,7 @@ Gli operatori logici in pandas sono:
 
 Parliamo ora dei metodi count(), sum(), min(), max(), e groupby(). Sono chiamati metodi di aggregazione perché **aggregano le rige** di un dataframe in un valore riassuntivo.
 
-Consideriamo il seguente dataset contenete i dati di uno zoo. **.CSV** (Comma-separated values) che potete trovare [qui](http://esercizidiinformatica.it/zoo.csv).
+Consideriamo il seguente dataset contenete i dati di uno zoo. **.CSV** (Comma-separated values) che potete trovare [qui](http://informaticainsieme.it/dati/zoo.csv).
 
 ![Carichiamo il dataset](/images/python/pandas/31_pandas_ragg_load.png)
 
