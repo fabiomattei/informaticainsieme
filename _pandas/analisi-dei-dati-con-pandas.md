@@ -364,21 +364,63 @@ Gli operatori logici in pandas sono:
 * \| or
 * ~ not
 
-## Raggruppare i dati
+## Metodi di aggregazione in pandas
 
-E' possibile raggruppare i dati, contenuti in un dataframe, utilizzando i valori contenuti in un colonna. Ad esempio ora raggrupperemo i dati sulla colonna **Neighborhood**.
+Parliamo ora dei metodi count(), sum(), min(), max(), e groupby(). Sono chiamati metodi di aggregazione perché **aggregano le rige** di un dataframe in un valore riassuntivo.
 
-{% highlight python %}
-df.groupby("Neighborhood")
+Consideriamo il seguente dataset contenete i dati di uno zoo. **.CSV** (Comma-separated values) che potete trovare [qui](http://esercizidiinformatica.it/zoo.csv).
 
-{% endhighlight %}
+![Carichiamo il dataset](/images/python/pandas/31_pandas_ragg_load.png)
 
-Anche il metodo groupby restituisce un dataframe quindi possiamo ad esempio contare i vicinati così:
+### count()
 
-{% highlight python %}
-df.groupby("Neighborhood")["Neighborhood"].count()
+Il metodo più semplice di aggregazione è il count che conta il numero di valori non nulli in una colonna. In questo caso tutte le colonne contengono 22 valori.
 
-{% endhighlight %}
+![Count su tutte le colonne](/images/python/pandas/31_pandas_ragg_count.png)
+
+Posso anche applicare il metodo ad una sola colonna.
+
+![Count su di una sola colonna](/images/python/pandas/31_pandas_ragg_count2.png)
+
+### sum()
+
+Sum somma le colonne una per una fornendo i relavitivi risultati:
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_sum.png)
+
+### max() e min()
+
+Questi metodi trovano l'elemento maggiore e l'elemento minore in una serie.
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_max.png)
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_min.png)
+
+### mean() e median()
+
+Questi metodi calcolano la media e la mediana di una serie.
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_mean.png)
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_median.png)
+
+### Group by
+
+E' possibile raggruppare i valori tra loro prima di eseguire i calcoli sopra elencati. Si raggruppano i dati su di una colonna, questo significa che le righe che hanno lo stesso valore per quella colonna, vengono raggruppate insieme. Pensiamo all'esempio dello zoo:
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_groupby.png)
+
+A questo punto posso contare.
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_gruopby_count.png)
+
+Se uso questa sintassi ottengo in uscita un dataframe.
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_gruopby_mean_series.png)
+
+Dopo aver raggruppato posso calcolare la media.
+
+![Somma le colonne](/images/python/pandas/31_pandas_ragg_gruopby_mean.png)
 
 ## Accedere ai dati con loc e iloc
 
