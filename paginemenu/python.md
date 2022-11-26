@@ -30,4 +30,5 @@ Approfondimenti
 - [Analisi dei dati con Pandas]({{ site.baseurl }}{% link _pandas/analisi-dei-dati-con-pandas.md %}.html)
 - [Map, Filter e reduce]({{ site.baseurl }}{% link _python/map-filter-reduce.md %}.html)
 - [Caricamento dei dati da file e scrittura dati su file in python]({{ site.baseurl }}{% link _python/file.md %}.html)   
+- [Natural Language Processing]({{ site.baseurl }}{% link _ia/natural-language-processing.md %}.html)   
 

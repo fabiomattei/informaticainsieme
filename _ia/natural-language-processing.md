@@ -1,10 +1,8 @@
 ---
-id: 1027
 title: 'Natural Language Processing'
 date: '2022-04-28T09:57:43+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=1027'
 ---
 
 # Che cosa significa NLP?
@@ -36,66 +34,66 @@ La caratteristica più semplice consiste nel contare il numero di parole che com
 
 Per tutti gli esempli seguenti si presupporrà che il testo sia contenuto in una variabile **campione.** campione = ’’’Il mio testo da analizzare’’’
 
-numero\_di\_parole = len(campione.split(” “))
+{% highlight python %}
+numero_di_parole = len(campione.split(" "))
+{% endhighlight %}
 
 **Numero di caratteri:**
 
-numero\_di\_caratteri = len(campione)
+{% highlight python %}
+numero_di_caratteri = len(campione)
+{% endhighlight %}
 
 **Lunghezza media delle parole:**
 
-lunghezza\_media = len(campione) / numero\_di\_parole
+{% highlight python %}
+lunghezza_media = len(campione) / numero_di_parole
+{% endhighlight %}
 
 **Numero di parole maiuscole:**
 
-parole = campione.split(” “)
-
+{% highlight python %}
+parole = campione.split(" ")
 cont = 0
-
 for parola in parole:
-
- if parola.isupper():
-
- cont = cont + 1
+    if parola.isupper():
+        cont = cont + 1
+{% endhighlight %}
 
 # Prepariamo il testo
 
 Al fine di lavorare con il testo è bene renderlo tutto minuscolo. Questo facilita molto le operazioni che verranno in seguito
 
-punteggiatura = ”’!()-\[\]{};:'”\\,&lt;&gt;./?@#$%^&amp;\*\_~”’  
+{% highlight python %}
+punteggiatura = "’!()-\[\]{};:'”\\,<>;./?@#$%^&\*\_~"
 for x in campione.lower():
-
- if x in punteggiatura:
-
- string = string.replace(x, “”)
+    if x in punteggiatura:
+        string = string.replace(x, "")
+{% endhighlight %} 
 
 **Rimuoviamo le parole comuni:**
 
 Le parole comuni sono poco informative dal punto di vista statistico dunque è preferibile rimuoverle.
 
-parole\_comuni = (‘a’, ‘e’, ‘è’, ‘di’, ‘in’, ‘che’, ‘un’, ‘in’)
-
-campione\_pulito = “”  
+{% highlight python %}
+parole_comuni = (‘a’, ‘e’, ‘è’, ‘di’, ‘in’, ‘che’, ‘un’, ‘in’)
+campione_pulito = ""
 for x in campione.lower():
-
- if x not in parole\_comuni:  
- campione\_pulito = campione\_pulito + x
+    if x not in parole_comuni:  
+        campione_pulito = campione_pulito + x
+{% endhighlight %} 
 
 **Contare la frequenza delle parole: (tokenization)**
 
+{% highlight python %}
 conteggio = dict()
-
-parole = campione.split(” “)
-
+parole = campione.split(" ")
 for parola in parole:
-
- if parole in conteggio:
-
- conteggio\[parola\] += 1
-
- else:
-
- conteggio\[parola\] = 0
+    if parole in conteggio:
+        conteggio[parola] += 1
+    else:
+        conteggio[parola] = 0
+{% endhighlight %} 
 
 **Parole derivate: (stemming)**
 
