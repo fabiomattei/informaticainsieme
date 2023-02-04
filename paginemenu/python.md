@@ -32,3 +32,19 @@ Approfondimenti
 - [Caricamento dei dati da file e scrittura dati su file in python]({{ site.baseurl }}{% link _python/file.md %}.html)   
 - [Natural Language Processing]({{ site.baseurl }}{% link _ia/natural-language-processing.md %}.html)   
 
+Intelligenza artificiale
+
+- [Introduzione]({{ site.baseurl }}{% link _ia/intelligenza-artificiale.md %}.html)
+- [Regressione Lineare]({{ site.baseurl }}{% link _ia/regressione-lineare.md %}.html)
+- [Regressione Lineare con termine noto]({{ site.baseurl }}{% link _ia/regressione-lineare-con-termine-noto.md %}.html)
+- [Andiamo a disegnare la funzione costo]({{ site.baseurl }}{% link _ia/andiamo-a-disegnare-la-funzione-costo.md %}.html)
+- [Aggiungiamo una dimensione]({{ site.baseurl }}{% link _ia/aggiungiamo-una-dimensione.md %}.html)
+- [La classificazione]({{ site.baseurl }}{% link _ia/la-classificazione.md %}.html)
+- [OCR]({{ site.baseurl }}{% link _ia/ocr.md %}.html)
+
+
+
+
+
+
+
