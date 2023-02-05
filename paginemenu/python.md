@@ -34,7 +34,6 @@ Approfondimenti
 
 Intelligenza artificiale
 
-- [Introduzione]({{ site.baseurl }}{% link _ia/intelligenza-artificiale.md %}.html)
 - [Regressione Lineare]({{ site.baseurl }}{% link _ia/regressione-lineare.md %}.html)
 - [Regressione Lineare con termine noto]({{ site.baseurl }}{% link _ia/regressione-lineare-con-termine-noto.md %}.html)
 - [Andiamo a disegnare la funzione costo]({{ site.baseurl }}{% link _ia/andiamo-a-disegnare-la-funzione-costo.md %}.html)

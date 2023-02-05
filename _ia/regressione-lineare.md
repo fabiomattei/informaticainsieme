@@ -7,7 +7,9 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=906'
 ---
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/01/regressione-lineare.png)</figure>I punti nel grafico in alto rappresentano le entrate e le uscite di un sistema. La variabile X rappresenta l’input, la variabile Y rappresenta l’output.
+![Regressione lineare](/images/python/ia/regressione-lineare.png){:class="aside-image"}
+
+I punti nel grafico in alto rappresentano le entrate e le uscite di un sistema. La variabile X rappresenta l’input, la variabile Y rappresenta l’output.
 
 La matematica ci insegna che per due punti passa una sola retta. Ma se il numero di punti è più grande non è possibile trovare una retta che li attraversi tutti.
 
@@ -150,5 +152,7 @@ plt.axis([0, x_edge, 0, y_edge])
 plt.plot([0, x_edge], [0, predici(x_edge, w)], linewidth=1.0, color="g")
 plt.show()
 {% endhighlight %}
+
+![Regressione lineare](/images/python/ia/regressione-lineare.png){:class="aside-image"}
 
 </div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.34.23-1-1024x810.png)</figure>
