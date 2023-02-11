@@ -1,21 +1,23 @@
 ---
-id: 1014
 title: OCR
 date: '2022-04-21T08:33:47+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=1014'
 ---
 
 Le reti neurali sono ottime nel risolvere problemi difficilmente schematizzabili con la logica. Uno di questi problemi è ad esempio il riconoscimento automatico dei caratteri.
 
 Al fine di trattare questo argomento faremo uso del database MNIST (<http://yann.lecun.com/exdb/mnist/>) un database che ha scopo didattico contenente un set di caratteri per l’apprendimento composto da 60000 simboli ed un set di controllo di 10000 simboli.
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/04/Sample-images-of-MNIST-data.png)</figure>Il nostro scopo è quello di costruire una rete in grado di riconoscere i caratteri. Questa rete verrà addestrata utilizzando il set per l’apprendimento. Il secondo passo consiste nel controllare la qualità dell’apprendimento attraverso il set di controllo.
+![Dati di esempio di MNIST](/images/python/ia/Sample-images-of-MNIST-data.png)
+
+Il nostro scopo è quello di costruire una rete in grado di riconoscere i caratteri. Questa rete verrà addestrata utilizzando il set per l’apprendimento. Il secondo passo consiste nel controllare la qualità dell’apprendimento attraverso il set di controllo.
 
 Ciascun carattere è descritto da una matrice di 28×28 pixel ognuno dei quali descritto da 8 bit in scala di grigio per un totale di 256 tonalità. Ciascun pixel è descritto da un numero (compreso tra 0 e 255) e costituisce un input per la nostra rete neurale. I caratteri del set di addestramento sono contrassegnati dunque in questo caso si parla di apprendimento supervisionato.
 
-<figure class="wp-block-image size-full is-resized">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/04/tensorflow-neural-network-schema-tensorflow-mnist-tutorial-italiano-esempio-guida-tensorflow-italia-tensorflow-classification-hello-world-single-digit.png)</figure>Dal punto di vista del codice vedremo che l’algoritmo è analogo ai precedenti.
+![Esempio di rete](/images/python/ia/tensorflow-neural-network-schema-tensorflow-mnist-tutorial-italiano-esempio-guida-tensorflow-italia-tensorflow-classification-hello-world-single-digit.png)
+
+Dal punto di vista del codice vedremo che l’algoritmo è analogo ai precedenti.
 
 {% highlight python %}
 import numpy as np
@@ -67,5 +69,3 @@ for digit in range(10):
 
 
 {% endhighlight %}
-
-</div>
