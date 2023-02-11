@@ -95,7 +95,7 @@ print("Predico che venderai", pizze, "stasera")
 
 {% endhighlight %}
 
-</div>La funzione **predici**, realizza la vera e propria predizione che in questo caso consiste nell’applicare una legge lineare. Dato un certo numero di prenotazioni, la funzione predici cerca di indovinare il numero di pizze che verranno vendute quella sera.
+La funzione **predici**, realizza la vera e propria predizione che in questo caso consiste nell’applicare una legge lineare. Dato un certo numero di prenotazioni, la funzione predici cerca di indovinare il numero di pizze che verranno vendute quella sera.
 
 Utlizziamo ora la libreria numpy per rendere i calcoli più veloce e la libreria seaborn per visualizzare il grafico contenente dati e retta trovata.
 
@@ -124,18 +124,18 @@ def allena(X, Y, iterations, lr):
     raise Exception("Couldn't converge within %d iterations" % iterations)
 
 
-# Inizializza i dati
+"""Inizializza i dati"""
 X = np.array([13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13])
 Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,23,39,27,37,17,18,25,23])
 
-# Allena il sistema
+"""Allena il sistema"""
 w = allena(X, Y, iterations=10000, lr=0.01)
 print("\nw=%.3f" % w)
 
-# predici il numero di pizze
+"""predici il numero di pizze"""
 print("predizione: x=%d => y=%.2f" % (20, predici(20, w)))
 
-# Disegna il grafico
+"""Disegna il grafico"""
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
@@ -150,6 +150,4 @@ plt.plot([0, x_edge], [0, predici(x_edge, w)], linewidth=1.0, color="g")
 plt.show()
 {% endhighlight %}
 
-![Regressione lineare](/images/python/ia/regressione-lineare.png){:class="aside-image"}
-
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.34.23-1-1024x810.png)</figure>
+![Regressione lineare](/images/python/ia/regressione-lineare-origine.png){:class="aside-image"}
