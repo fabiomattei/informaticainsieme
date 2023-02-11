@@ -1,17 +1,17 @@
 ---
-id: 998
 title: 'La classificazione'
 date: '2022-03-16T23:47:41+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=998'
 ---
 
 **Un problema di classificazione** consiste nell’individuazione di una regola che assegni univocamente ogni osservazione ad una particolare categoria, sulla base di un insieme di dati per i quali è nota a priori la classe di appartenenza di ciascuno.
 
 Per approcciare questo problema introduciamo la funzione sigmoide:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/03/sigmoide.png)<figcaption>la sigmoide</figcaption></figure>La funzione sigmoide ha come dominio l’intero R e come codominio l’intervallo che va da 0 a 1. Tende a 0 per x tendente a meno infinito e a 1 per x tendente a più infinito.
+![Sigmoide](/images/python/ia/sigmoide.png){:class="aside-image"}
+
+La funzione sigmoide ha come dominio l’intero R e come codominio l’intervallo che va da 0 a 1. Tende a 0 per x tendente a meno infinito e a 1 per x tendente a più infinito.
 
 Questa funzione ci è comoda perchè ci permette di mettere in relazione valori appartenenti ad un insieme continuo a valori booleani 0, 1. In pratica ci permette di passare dal continuo al binario. Si presta dunque a rispondere alla domanda fondamentale del problema della classificazione: il campione x appartiene all’insieme?
 
@@ -86,5 +86,3 @@ print('pesi calcolati', w)
 # Vediamo quanto e' efficace
 test(X, Y, w)
 {% endhighlight %}
-
-</div>
