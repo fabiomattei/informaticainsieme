@@ -1,10 +1,8 @@
 ---
-id: 945
 title: 'Regressione lineare con termine noto'
 date: '2022-02-09T14:48:07+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=945'
 ---
 
 {% highlight python %}
@@ -163,4 +161,5 @@ plt.show()
 
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.43.33-1024x843.png)</figure>
+![Regressione lineare](/images/python/ia/regressione-lineare-terminenoto.png){:class="aside-image"}
+

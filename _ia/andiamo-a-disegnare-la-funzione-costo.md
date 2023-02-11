@@ -1,10 +1,8 @@
 ---
-id: 962
 title: 'Andiamo a disegnare la funzione costo'
 date: '2022-02-10T05:52:56+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=962'
 ---
 
 Ritorniamo al problema senza tenere conto del termine noto e andiamo a disegnare la funzione di costo.
@@ -50,9 +48,11 @@ plt.plot(weights[min_index], losses[min_index], "gX", markersize=26)
 plt.show()
 {% endhighlight %}
 
-</div>Se andiamo a disegnare il grafico della funzione costo, ci accorgiamo che la forma che otteniamo è quella di una parabola, in effetti questo non è inaspettato dato che stiamo facendo una somma di quadrati delle distanze.
+Se andiamo a disegnare il grafico della funzione costo, ci accorgiamo che la forma che otteniamo è quella di una parabola, in effetti questo non è inaspettato dato che stiamo facendo una somma di quadrati delle distanze.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-10-alle-05.51.25-1024x703.png)</figure>Dato che il concetto alla base della funzione allena consiste nel minimizzare la funzione di costo, l’idea è che, partendo da un punto a caso sulla parabola dobbiamo scendere a valle, dunque dobbiamo trovare il minimo. Possiamo utilizzare il concetto di derivata per andare a calcolare l’iperparametro w. Con questo metodo il learning rate non rappresenta una componente additiva che muove il peso a passi sempre uguali ma una componente moltiplicativa che muove il peso in maniera proporzionale alla derivata.
+![Parabola del costo](/images/python/ia/parabola-costo.png){:class="aside-image"}
+
+Dato che il concetto alla base della funzione allena consiste nel minimizzare la funzione di costo, l’idea è che, partendo da un punto a caso sulla parabola dobbiamo scendere a valle, dunque dobbiamo trovare il minimo. Possiamo utilizzare il concetto di derivata per andare a calcolare l’iperparametro w. Con questo metodo il learning rate non rappresenta una componente additiva che muove il peso a passi sempre uguali ma una componente moltiplicativa che muove il peso in maniera proporzionale alla derivata.
 
 Questo ci permette di esplorare il territorio delle soluzioni in molto meno tempo.
 
@@ -89,7 +89,7 @@ w = allena(X, Y, iterations=100, lr=0.001)
 print("\nw=%.10f" % w)
 {% endhighlight %}
 
-</div>Volendo inserire anche il termine noto andiamo a scrivere:
+Volendo inserire anche il termine noto andiamo a scrivere:
 
 {% highlight python %}
 import numpy as np
@@ -127,5 +127,3 @@ print("\nw=%.10f, b=%.10f" % (w, b))
 print("Predizione: x=%d => y=%.2f" % (20, predici(20, w, b)))
 
 {% endhighlight %}
-
-</div>
