@@ -1,25 +1,25 @@
 ---
-id: 979
 title: 'Aggiungiamo una dimensione'
 date: '2022-02-23T05:48:03+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=979'
 ---
 
 Supponiamo di aggiungere al nostro modello una variabile in più: la temperatura.
 
 Sappiamo tutti che quando c’è una bella serata è bello andare a mangiare una pizza. D’altro canto è un po’ meno bello quando fuori fa troppo freddo.
 
-<figure class="wp-block-table">| Reservations | Temperature | Pizzas |
-|---|---|---|
+| Reservations | Temperature | Pizzas |
+|--------------|-------------|--------|
 | 13 | 26 | 44 |
 | 2 | 14 | 23 |
 | 14 | 20 | 28 |
 
-</figure>A questo punto il modello matematico si complica un po’, dobbiamo accogliere la nuova variabile. Non assomiglia più ad una retta assumendo la forma: **y = x1 \* w1 + x2 \* w2 + b**
+A questo punto il modello matematico si complica un po’, dobbiamo accogliere la nuova variabile. Non assomiglia più ad una retta assumendo la forma: **y = x1 \* w1 + x2 \* w2 + b**
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-23-alle-06.02.51-1024x626.png)</figure>Quelli che andiamo a rappresentare sono punti nello spazio dato che la temperatura e il numero di prenotazioni rappresentano le nostre variabili di ingresso mentre il numero di pizze rappresenta la grandezza calcolata.
+![Piano nello spazio](/images/python/ia/piano-3d.png){:class="aside-image"}
+
+Quelli che andiamo a rappresentare sono punti nello spazio dato che la temperatura e il numero di prenotazioni rappresentano le nostre variabili di ingresso mentre il numero di pizze rappresenta la grandezza calcolata.
 
 {% highlight python %}
 import numpy as np
@@ -60,7 +60,7 @@ plt.show()
 
 {% endhighlight %}
 
-</div>Lo script utilizzato per calcolare fare l’allenameno e calcolare i pesi è il seguente:
+Lo script utilizzato per calcolare fare l’allenameno e calcolare i pesi è il seguente:
 
 {% highlight python %}
 import numpy as np
@@ -93,40 +93,40 @@ for i in range(5):
     print("X[%d] -> %.4f (label: %d)" % (i, predici(X[i], w), Y[i]))
 {% endhighlight %}
 
-</div>I dati sono stati separati iinerendoli all’interno di un file txt il cui contenuto è il seguente.
+I dati sono stati separati iinerendoli all’interno di un file txt il cui contenuto è il seguente.
 
 
-Prenotazioni  Temperature  Pizze
-13            26           44
-2             14           23
-14            20           28
-23            25           60
-13            24           42
-1             12           5
-18            23           51
-10            18           44
-26            24           42
-3             14           9
-3             12           14
-21            27           43
-7             17           22
-22            21           34
-2             12           16
-27            26           46
-6             15           26
-10            21           33
-18            18           29
-15            26           43
-9             20           37
-26            25           62
-8             21           47
-15            22           38
-10            20           22
-21            21           29
-5             12           34
-6             14           38
-13            19           30
-13            20           28
+|Prenotazioni | Temperature | Pizze |
+|-------------|-------------|-------|
+|13           | 26          | 44    |
+|2            | 14          | 23    |
+|14           | 20          | 28    |
+|23           | 25          | 60    |
+|13           | 24          | 42    |
+|1            | 12          | 5     |
+|18           | 23          | 51    |
+|10           | 18          | 44    |
+|26           | 24          | 42    |
+|3            | 14          | 9     |
+|3            | 12          | 14    |
+|21           | 27          | 43    |
+|7            | 17          | 22    |
+|22           | 21          | 34    |
+|2            | 12          | 16    |
+|27           | 26          | 46    |
+|6            | 15          | 26    |
+|10           | 21          | 33    |
+|18           | 18          | 29    |
+|15           | 26          | 43    |
+|9            | 20          | 37    |
+|26           | 25          | 62    |
+|8            | 21          | 47    |
+|15           | 22          | 38    |
+|10           | 20          | 22    |
+|21           | 21          | 29    |
+|5            | 12          | 34    |
+|6            | 14          | 38    |
+|13           | 19          | 30    |
+|13           | 20          | 28    |
 
 
-</div>
