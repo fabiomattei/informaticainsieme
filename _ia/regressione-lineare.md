@@ -102,14 +102,11 @@ Utlizziamo ora la libreria numpy per rendere i calcoli più veloce e la libreria
 {% highlight python %}
 import numpy as np
 
-
 def predici(X, w):
     return X * w
 
-
 def costo(X, Y, w):
     return np.average((predici(X, w) - Y) ** 2)
-
 
 def allena(X, Y, iterations, lr):
     w = 0
@@ -127,7 +124,7 @@ def allena(X, Y, iterations, lr):
     raise Exception("Couldn't converge within %d iterations" % iterations)
 
 
-# Iniizializza i dati
+# Inizializza i dati
 X = np.array([13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13])
 Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,23,39,27,37,17,18,25,23])
 
