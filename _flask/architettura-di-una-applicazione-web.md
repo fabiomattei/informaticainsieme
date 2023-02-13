@@ -1,11 +1,11 @@
 ---
-id: 845
 title: 'Architettura di una applicazione WEB'
 date: '2021-11-18T08:04:34+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=845'
 ---
+
+![Piano nello spazio](/images/python/flask/piano-3d.png){:class="aside-image"}
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/architetturaweb-1024x456.png)</figure>La struttura di una applicazione web è basata sul concetto di client/server (cliente servitore).
 
