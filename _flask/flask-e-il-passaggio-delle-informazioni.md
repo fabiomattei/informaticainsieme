@@ -1,13 +1,9 @@
 ---
-id: 806
 title: 'Flask e il passaggio delle informazioni'
 date: '2021-11-11T05:52:06+01:00'
 author: Fabio Mattei
 layout: post
 guid: 'https://www.esercizidiinformatica.it/?p=806'
-permalink: /blog/2021/11/11/flask-e-il-passaggio-delle-informazioni/
-categories:
-    - 'Senza categoria'
 ---
 
 Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: **GET** e **POST**.
@@ -55,7 +51,7 @@ def login():
         
 {% endhighlight %}
 
-</div>Proviamo a realizzare la logica che dal lato controller si occupa del log in.
+Proviamo a realizzare la logica che dal lato controller si occupa del log in.
 
 Vediamo che dal lato controller viene specificato nella direttiva @app.route nella riga 1 che la funzione login() risponde alle chiamate GET e POST alla route /login.
 
@@ -65,4 +61,3 @@ Se il metodo richiesto è POST vuol dire che la form è stata precedentemente mo
 
 Se le informazioni inviate corrispondono agli username e password che il sistema conosce viene visualizzata paginasegreta.html in caso contrario viene mostrato un messaggio di errore e si torna alla pagina di login.
 
-</body></html>

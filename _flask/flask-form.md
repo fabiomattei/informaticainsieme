@@ -1,10 +1,8 @@
 ---
-id: 813
 title: 'Flask:  Form'
 date: '2021-11-11T09:47:36+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=813'
 ---
 
 Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: **GET** e **POST**.
@@ -29,7 +27,9 @@ Una chiamata **POST** si verifica quando mi trovo di fronte ad una form che ha a
 </html>
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flasklogin.png)</figure>Questa pagina contiene una form HTML che punta alla pagina route login del controller e utilizza il metodo POST come specificato alla riga 3.
+![Login](/images/python/flask/flasklogin.png){:class="aside-image"}
+
+Questa pagina contiene una form HTML che punta alla pagina route login del controller e utilizza il metodo POST come specificato alla riga 3.
 
 Nelle riga 5 compare un input field, che corrisponde ad uno spazio nella pagina in cui l’utente può inserire dei dati.
 
@@ -54,7 +54,7 @@ def login():
         
 {% endhighlight %}
 
-</div>Proviamo a realizzare la logica che dal lato controller si occupa del log in.
+Proviamo a realizzare la logica che dal lato controller si occupa del log in.
 
 Vediamo che dal lato controller viene specificato nella direttiva @app.route nella riga 1 che la funzione login() risponde alle chiamate GET e POST alla route /login.
 
@@ -62,6 +62,7 @@ Se il metodo richiesto è GET viene mostrata la pagina che ha al suo interno la 
 
 Se il metodo richiesto è POST vuol dire che la form è stata precedentemente mostrata e l’utente ha mandato dei dati. I dati sono contenuti nel **dizionario request.form**. Le chiavi del dizionario corrispondono agli **attributi name** che abbiamo specificato nella definizione dell’html della form.
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flaskloginok.png)</figure>Se le informazioni inviate corrispondono agli username e password che il sistema conosce viene visualizzata paginasegreta.html in caso contrario viene mostrato un messaggio di errore e si torna alla pagina di login.
+![Login ok](/images/python/flask/flaskloginok.png){:class="aside-image"}
+Se le informazioni inviate corrispondono agli username e password che il sistema conosce viene visualizzata paginasegreta.html in caso contrario viene mostrato un messaggio di errore e si torna alla pagina di login.
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flaskloginerrore.png)</figure></body></html>
+![Login errore](/images/python/flask/flaskloginerrore.png){:class="aside-image"}

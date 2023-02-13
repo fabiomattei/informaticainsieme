@@ -72,7 +72,7 @@ def mostra_subpath(subpath):
 
 {% endhighlight %}
 
-</div>La prima funzione è associata ad una URL del tipo: *http://www.lamiaapplicazioneweb.com/utente/mariorossi*. Se questa URL viene richiesta al server che ospita la mia applicazione viene chiamata la funzione *mostra\_profilo\_utente* passando come argomento *mariorossi* associato al parametro *nomeutente*. Viene quindi mostrata nel browser la scritta: User mariorossi.
+La prima funzione è associata ad una URL del tipo: *http://www.lamiaapplicazioneweb.com/utente/mariorossi*. Se questa URL viene richiesta al server che ospita la mia applicazione viene chiamata la funzione *mostra\_profilo\_utente* passando come argomento *mariorossi* associato al parametro *nomeutente*. Viene quindi mostrata nel browser la scritta: User mariorossi.
 
 La seconda funzione è associata ad una URL del tipo: *http://www.lamiaapplicazioneweb.com/post/123*. Viene chiamata la funzione *mostra\_post* passando come argomento *123* associato al parametro *post\_id*. Viene quindi mostrata nel browser la scritta: Post nummero 123.
 
@@ -80,13 +80,15 @@ La terza funzione è associata ad una URL del tipo: *http://www.lamiaapplicazion
 
 Notiamo che i parametri sono sempre stati passati alla funzione escape. Si fa questo perché gli intenti degli utenti della nostra applicazione potrebbero essere malevoli dunque è bene filtrare le informazioni che arrivano dagli utenti per evitare problemi di sicurezza.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/flaskesempiourl-1024x352.png)</figure>#### I tipi accettati
 
-<figure class="wp-block-table">| string (default) | accetta un qualsiasi testo senza / |
+![Esempio URL](/images/python/flask/flaskesempiourl.png){:class="aside-image"}
+
+#### I tipi accettati
+
+| string (default) | accetta un qualsiasi testo senza / |
 |---|---|
 | int | accetta interi positivi |
 | float | accetta numeri con la virgola positivi |
 | path | come la stringa ma accetta anche gli / |
 | uuid | accetta stringhe **uuid** identificatore universale per una risorsa. Es: `123e4567-e89b-12d3-a456-426614174000` |
 
-</figure>

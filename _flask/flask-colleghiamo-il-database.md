@@ -1,10 +1,8 @@
 ---
-id: 824
 title: 'Flask: colleghiamo il database'
 date: '2021-11-18T08:20:53+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=824'
 ---
 
 #### Creazione del database
@@ -24,7 +22,7 @@ print "Table created successfully";
 conn.close()
 {% endhighlight %}
 
-</div>Il file va lanciato digitando: python creadb.py
+Il file va lanciato digitando: python creadb.py
 
 #### Aggiungi uno studente al database
 
@@ -39,7 +37,7 @@ def new_student():
    
 {% endhighlight %}
 
-</div>Il contenuto del file **student.html**
+Il contenuto del file **student.html**
 
 
 {% highlight html %}
@@ -64,7 +62,7 @@ def new_student():
 {% endraw %}
 {% endhighlight %}
 
-</div>Come si nota i dati della form vengono inviati in POST alla URL **/addrec** che è collegata alla funzione **addrec()**.
+Come si nota i dati della form vengono inviati in POST alla URL **/addrec** che è collegata alla funzione **addrec()**.
 
 Questa funzione **addrec()** raccoglie le informazioni inviate in **POST** ed inserisce uno studente nella tabella. Se l’operazione va a buon fine fiene mostrato il messaggio “studente inserito con successo” in caso contrario viene mostrato il messaggio “errore nell’inserimento”.
 
@@ -95,9 +93,9 @@ def addrec():
          
 {% endhighlight %}
 
-</div>Il template HTML che si chiama **result.html** mostra il contenuto della variabile **{{msg}}** che mostrail risultato dell’operazione di inserimento.
+Il template HTML che si chiama **result.html** mostra il contenuto della variabile **{{msg}}** che mostrail risultato dell’operazione di inserimento.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/aggiungistudente-1024x683.png)</figure>
+![Aggiungi studente](/images/python/flask/aggiungistudente.png){:class="aside-image"}
 {% highlight html %}
 <!doctype html>
 <html>
@@ -108,9 +106,13 @@ def addrec():
 </html>
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/studenteaggiunto-1024x687.png)</figure>#### Mostra tutti gli studenti contenuti nel database
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/listastudenti-1024x299.png)</figure>L’applicazione contiene un’altra funzione che si chiama **list()** che si collega alla URL **/list**. Questa interroga il database e carica i risultati in **rows** che saranno contenuti in una istanza di **MultiDict**. Questo conterrà tutti i record nella tabella students. Questo oggetto è passato al template **list.html**.
+![Studente aggiunto](/images/python/flask/studenteaggiunto.png){:class="aside-image"}
+
+#### Mostra tutti gli studenti contenuti nel database
+
+![Lista studenti](/images/python/flask/listastudenti.png){:class="aside-image"}
+L’applicazione contiene un’altra funzione che si chiama **list()** che si collega alla URL **/list**. Questa interroga il database e carica i risultati in **rows** che saranno contenuti in una istanza di **MultiDict**. Questo conterrà tutti i record nella tabella students. Questo oggetto è passato al template **list.html**.
 
 {% highlight python %}
 @app.route('/list')
@@ -126,7 +128,7 @@ def list():
    
 {% endhighlight %}
 
-</div>Il template **list.html** contiene una iterazione sui questi records e inserisce i dati degli studenti in una tabella HTML.
+Il template **list.html** contiene una iterazione sui questi records e inserisce i dati degli studenti in una tabella HTML.
 
 
 {% highlight html %}
@@ -156,9 +158,10 @@ def list():
 </html>
 {% endhighlight %}
 
-</div>#### La home del progetto
+#### La home del progetto
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/studentihome.png)</figure>In fine la URL **/** renderizza un file **‘home.html’** che agisce da punto di accesso all’intera applicazione.
+![home studenti](/images/python/flask/studentihome.png){:class="aside-image"}
+In fine la URL **/** renderizza un file **‘home.html’** che agisce da punto di accesso all’intera applicazione.
 
 {% highlight python %}
 @app.route('/')
@@ -167,11 +170,14 @@ def home():
    
 {% endhighlight %}
 
-</div>#### Modifica le informazioni di uno studente
+#### Modifica le informazioni di uno studente
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/modifiicastudente-1024x619.png)</figure>#### Cancella le informazioni di uno studente
+![Modifica studente](/images/python/flask/modifiicastudente.png){:class="aside-image"}
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/cancellastudente.png)</figure>Ecco il codice completo del controller.
+#### Cancella le informazioni di uno studente
+
+![Cancella studente](/images/python/flask/cancellastudente.png){:class="aside-image"}
+Ecco il codice completo del controller.
 
 {% highlight python %}
 from flask import Flask, render_template, request
@@ -227,6 +233,5 @@ if __name__ == '__main__':
    
 {% endhighlight %}
 
-</div>Lancia questo script dalla shell di python quindi visita la URL **http://localhost:5000/** nella barra degli indirizzi del browser per vedere l’applicazione funzionare.
+Lancia questo script dalla shell di python quindi visita la URL **http://localhost:5000/** nella barra degli indirizzi del browser per vedere l’applicazione funzionare.
 
-</body></html>

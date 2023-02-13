@@ -49,7 +49,7 @@ Andiamo a vedere come è fatto il file *home.html*. Per convenzione tutti i file
 {% endraw %}
 {% endhighlight %}
 
-</div>Il file va ad estendere un file di nome *base.html* che vedremo più in avanti. Al suo interno si definiscono due blocchi: *header* e *content*. I blocchi contengono il primo un tag h1 specificante un titolo e il secondo un tag p specificante un paragrafo.
+Il file va ad estendere un file di nome *base.html* che vedremo più in avanti. Al suo interno si definiscono due blocchi: *header* e *content*. I blocchi contengono il primo un tag h1 specificante un titolo e il secondo un tag p specificante un paragrafo.
 
 All’interno del blocco header troviamo un segnaposto di variabile: *{{ nomeutente }}*.
 
@@ -70,5 +70,5 @@ Il file base contiene i buchi da riempire con i blocchi definiti in precedenza. 
 {% endraw %}
 {% endhighlight %}
 
-</div>Abbiamo visto oggi come creare una struttura che ci permette di lavorare ad una applicazione web in modo più ordinato.
+Abbiamo visto oggi come creare una struttura che ci permette di lavorare ad una applicazione web in modo più ordinato.
 
