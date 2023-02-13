@@ -46,15 +46,12 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 
 - [Introduzione]({{ site.baseurl }}{% link _flask/architettura-di-una-applicazione-web.md %}.html)
 - [Creiamo una applicazione web con flask]({{ site.baseurl }}{% link _flask/creiamo-una-applicazione-web-con-flask.md %}.html)
-- [disponiamo-i-contenuti-in-una-pagina]({{ site.baseurl }}{% link _flask/disponiamo-i-contenuti-in-una-pagina.md %}.html)
+- [Primi passi]({{ site.baseurl }}{% link _flask/flask-primi-passi.md %}.html)
+- [Templates di pagina]({{ site.baseurl }}{% link _flask/flask-templates.md %}.html)
+- [Url e variabili]({{ site.baseurl }}{% link _flask/flask-url-e-variabili.md %}.html)
+- [Disponiamo i contenuti in una pagina]({{ site.baseurl }}{% link _flask/disponiamo-i-contenuti-in-una-pagina.md %}.html)
+- [Il passaggio delle informazioni]({{ site.baseurl }}{% link _flask/flask-e-il-passaggio-delle-informazioni.md %}.html)
+- [Form]({{ site.baseurl }}{% link _flask/flask-form.md %}.html)
 - [flask-colleghiamo-il-database]({{ site.baseurl }}{% link _flask/flask-colleghiamo-il-database.md %}.html)
-- [flask-e-il-passaggio-delle-informazioni]({{ site.baseurl }}{% link _flask/flask-e-il-passaggio-delle-informazioni.md %}.html)
-- [flask-form]({{ site.baseurl }}{% link _flask/flask-form.md %}.html)
-- [flask-primi-passi]({{ site.baseurl }}{% link _flask/flask-primi-passi.md %}.html)
-- [flask-templates]({{ site.baseurl }}{% link _flask/flask-templates.md %}.html)
-- [flask-url-e-variabili]({{ site.baseurl }}{% link _flask/flask-url-e-variabili.md %}.html)
-
-
-
 
 
