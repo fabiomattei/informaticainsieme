@@ -25,14 +25,14 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * [Ricorsione]({{ site.baseurl }}{% link _python/la-ricorsione.md %}.html)
 * [La programmazione ad oggetti]({{ site.baseurl }}{% link _python/la-programmazione-ad-oggetti.md %}.html)
 
-Approfondimenti
+## Approfondimenti
 
 - [Analisi dei dati con Pandas]({{ site.baseurl }}{% link _pandas/analisi-dei-dati-con-pandas.md %}.html)
 - [Map, Filter e reduce]({{ site.baseurl }}{% link _python/map-filter-reduce.md %}.html)
 - [Caricamento dei dati da file e scrittura dati su file in python]({{ site.baseurl }}{% link _python/file.md %}.html)   
 - [Natural Language Processing]({{ site.baseurl }}{% link _ia/natural-language-processing.md %}.html)   
 
-Intelligenza artificiale
+## Intelligenza artificiale
 
 - [Regressione Lineare]({{ site.baseurl }}{% link _ia/regressione-lineare.md %}.html)
 - [Regressione Lineare con termine noto]({{ site.baseurl }}{% link _ia/regressione-lineare-con-termine-noto.md %}.html)
@@ -41,6 +41,8 @@ Intelligenza artificiale
 - [La classificazione]({{ site.baseurl }}{% link _ia/la-classificazione.md %}.html)
 - [OCR]({{ site.baseurl }}{% link _ia/ocr.md %}.html)
 
+
+## Progettiamo una applicazione web con flask
 
 
 

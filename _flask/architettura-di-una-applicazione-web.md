@@ -5,9 +5,9 @@ author: Fabio Mattei
 layout: page
 ---
 
-![Piano nello spazio](/images/python/flask/piano-3d.png){:class="aside-image"}
+![Architettura di una applicazione web](/images/python/flask/architetturaweb.png){:class="aside-image"}
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/11/architetturaweb-1024x456.png)</figure>La struttura di una applicazione web è basata sul concetto di client/server (cliente servitore).
+La struttura di una applicazione web è basata sul concetto di client/server (cliente servitore).
 
 Il client è rappresentato da un software che permette all’utente di utilizzare l’applicazione in oggetto. Si tratta di un browser qualsiasi come Firefox, Chrome, Edge, Safari, etc…
 
