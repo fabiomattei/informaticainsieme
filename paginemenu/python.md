@@ -54,4 +54,9 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 - [Form]({{ site.baseurl }}{% link _flask/flask-form.md %}.html)
 - [Colleghiamo il database]({{ site.baseurl }}{% link _flask/flask-colleghiamo-il-database.md %}.html)
 
+## La rete
+
+- [La shell]({{ site.baseurl }}{% link _rete/la-shell.md %}.html)
+- [Client / Server]({{ site.baseurl }}{% link _rete/client-server.md %}.html)
+
 
