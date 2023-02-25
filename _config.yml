@@ -58,6 +58,9 @@ collections:
   pythonmath:
     output: true
     permalink: /pythonmath/:path
+  rete:
+    output: true
+    permalink: /rete/:path
   videogames:
     output: true
     permalink: /videogames/:path
