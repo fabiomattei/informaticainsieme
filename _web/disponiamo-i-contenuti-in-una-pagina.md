@@ -1,17 +1,17 @@
 ---
-id: 864
 title: 'Disponiamo i contenuti in una pagina'
 date: '2021-12-11T06:03:23+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=864'
 ---
 
 Il W3C ha definito il **grid system** in modo da dare un sistema per disporre contenuti in una pagina web. Il sito [The grid system](http://www.thegridsystem.org) contiene molti esempi da cui si può prendere spunto.
 
 Il problema che risolve è il seguente: dividere la pagina in sezioni in modo da dare una struttura logica e grafica alla pagina.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/grid-system-1024x815.png)</figure>Questo risultato si raggiunge utilizzando un tag **div** come contenitore e definendo le sottoaree attraverso i css.
+![Il Grid System](/images/web/grid/grid-system.png){:class="aside-image"}
+
+Questo risultato si raggiunge utilizzando un tag **div** come contenitore e definendo le sottoaree attraverso i css.
 
 
 {% highlight css %}
@@ -22,11 +22,12 @@ Il problema che risolve è il seguente: dividere la pagina in sezioni in modo da
 }
 {% endhighlight %}
 
-</div>La prorietà css **grid-template-columns** e **grid-template-rows** mi permettono di definire il numero e le dimensioni di rige e colonne della griglia base. Le unità di misura per definire le dimensioni possono essere: percentuale, pixel, frazioni.
+La prorietà css **grid-template-columns** e **grid-template-rows** mi permettono di definire il numero e le dimensioni di rige e colonne della griglia base. Le unità di misura per definire le dimensioni possono essere: percentuale, pixel, frazioni.
 
 Una volta definita la griglia base devo disporre le aree al suo interno per creare per esempio qualcosa del genere.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/grid-system-struttura-1024x706.png)</figure>
+![Il Grid System](/images/web/grid/grid-system-struttura.png){:class="aside-image"}
+
 {% highlight css %}
 .container {
   display: grid;
@@ -53,7 +54,7 @@ Una volta definita la griglia base devo disporre le aree al suo interno per crea
 
 {% endhighlight %}
 
-</div>In questo esempio la prima riga viene dedicata alla testata, le due colonne a sinistra ad una sezione di contenuti, segue uno spazio lasciato vuoto, una barra laterale ed in fine il piè di pagina.
+In questo esempio la prima riga viene dedicata alla testata, le due colonne a sinistra ad una sezione di contenuti, segue uno spazio lasciato vuoto, una barra laterale ed in fine il piè di pagina.
 
 L’html che si accompagna a questo css è il seguente:
 
@@ -67,6 +68,6 @@ L’html che si accompagna a questo css è il seguente:
 </div>
 {% endhighlight %}
 
-</div>Posso inserire all’interno dei divisor i contenuti che voglio essendo certo che finiranno nella giusta porzione di pagina.
+Posso inserire all’interno dei divisor i contenuti che voglio essendo certo che finiranno nella giusta porzione di pagina.
 
 Il grid sistem risolve un problema che per anni ha confuso i creatori di pagine web. E’ uno strumento che seppur tardivo si rivelò molto potente.
