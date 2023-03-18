@@ -57,5 +57,6 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 
 - [La shell]({{ site.baseurl }}{% link _rete/la-shell.md %}.html)
 - [Client / Server]({{ site.baseurl }}{% link _rete/client-server.md %}.html)
+- [Client / Server]({{ site.baseurl }}{% link _rete/connection-pool.md %}.html)
 
 
