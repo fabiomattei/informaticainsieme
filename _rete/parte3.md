@@ -1,12 +1,9 @@
 ---
-title: 'Connection pool'
+title: 'Sending and receiving Python Objects with sockets'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page
 ---
-
-Tutorial with Python 3 part 3 - sending and receiving Python Objects with sockets
-
 
 
 Welcome to part 3 of the sockets tutorial with Python. We've learned how to send and receive string data via sockets, and now I want to talk about is pickles. Not the food, but the serialization technique in Python.
