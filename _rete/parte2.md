@@ -1,33 +1,11 @@
 ---
-title: 'Connection pool'
+title: 'Buffering and streaming data'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page
 ---
 
-
-
-    search
-    Home
-    +=1
-    Support the Content
-    Community
-    Log in
-    Sign up
-
-    Home
-    +=1
-    Support the Content
-    Community
-    Log in
-    Sign up
-
-
-Sockets Tutorial with Python 3 part 2 - buffering and streaming data
-
-
-
-Welcome to part 2 of the sockets tutorial with Python. In the previous tutorial, we learned how we could send and receive data using sockets, but then we illustrated the problem that can arise when our communication exceeds our buffer size. In this tutorial, we'll talk about overcoming this!
+Nella lezione precedente abbiamo imparato come mandare e ricevere dati attraverso un socket e abbiamo sollevato il problema di cosa succede quando il nostro messaggio è più grande della dimensione del nostro buffer. Ora risolveremo questo problema.
 
 As mentioned before, there are a few logical ways that you could handle for this, but one common way is by starting all messages with a header that contains the length of the message that is going to come. The next challenge is normalizing this header in some way. You might consider using some series of characters, or some format, but then you run the risk of people accidentally, or purposefully, mimicking this formatting. Instead, you can go with a fixed-length header, where the first n bytes of data will be the header data, which will include the length of the message to come. Once we've received that length of data, we know any following information will be a new message, where we need to grab the header and continue repeating this process.
 
