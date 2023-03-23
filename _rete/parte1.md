@@ -5,7 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
-La libreria socket fa parte della libreria standard di python.
+La libreria socket, che utlizzeremo per fare servizi di rete, fa parte della libreria standard di python.
 
 {% highlight python %}
 import socket
@@ -16,18 +16,18 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 {% endhighlight %}
 
-La variabile s è il nostro socket TCP/IP. 
-AF_INET è il riferimento alla famiglia o dominio, significa ipv4 all'opposto c'è AF_INET6 che identifica ipv6. 
-SOCK_STREAM identifica un socket TCP, il nostro tipo di socket. 
-TCP sarà connection-oriented in opposto a connectionless.
+La variabile **s** è il nostro socket TCP/IP. Al momento della creazione di questa istanza dobbiamo specificare:
+
+* AF_INET è il riferimento alla famiglia o dominio, significa ipv4 all'opposto c'è AF_INET6 che identifica ipv6;
+* SOCK_STREAM identifica un socket TCP, il nostro tipo di socket; TCP sarà connection-oriented in opposto a connectionless.
 
 Quindi cos'è un socket? Un socket è un punto di congiunzione in una comunicazione tra una applicazione e una rete.
-Un socket è legato ad una porta e ad un host. In generale voi avrete sempre un programma per il client ed un programma per il server collegati attraverso un socket.
+Un socket è legato ad una porta e ad un host. In generale voi avrete sempre un programma per il client ed un programma per il server collegati attraverso socket.
 
-Nel caso del server voi collegherete (bind) un socket ad una porta del server. 
-Nel caso del client, collegherete un socket a quel server nella stessa porta che il server ha aperto.
+Quando si va a creare il server bisogna collegare (bind) un socket ad una porta del server. 
+Quando si va a creare il client, ci si va a collegare, sempre utilizzando un socket, a quel server nella porta che si è specificato in precedenza.
 
-Scriviamo un po' di codice per il lato server:
+### Il server
 
 {% highlight python %}
 s.bind((socket.gethostname(), 1234))
@@ -35,9 +35,8 @@ s.bind((socket.gethostname(), 1234))
 
 Per dare la possibilità di accettare una connessione bisogna chiamare il metodo bind passando una tupla che contiene il nome dell'host e il numero della porta.
 
-Ora che abbiamo fatto questo possiamo restare in ascolto per le connessioni che verranno richieste. Noi possiamo gestire una sola connessione per volta per cui vogliamo per cui è bene creare una sorta di coda. Se la coda si riempie ulteriori connessioni verranno negate.
-
-Facciamo una coda con 5 posti:
+Fatto questo si resta in ascolto delle connessioni che verranno richieste. Possiamo gestire una sola connessione per volta per cui è bene creare una sorta di coda. Se la coda si riempie ulteriori connessioni verranno negate.
+Predisponiamo una coda con 5 posti:
 
 {% highlight python %}
 s.listen(5)
@@ -47,9 +46,8 @@ Ed ora restiamo in ascolto:
 
 {% highlight python %}
 while True:
-    # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
 {% endhighlight %}
 
 Il codice completo per il file server.py:
@@ -62,12 +60,11 @@ s.bind((socket.gethostname(), 1234))
 s.listen(5)
 
 while True:
-    # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
 {% endhighlight %}
 
-Ora abbiamo bisogno del codice per il client:
+### Il client
 
 {% highlight python %}
 import socket
@@ -75,13 +72,13 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 {% endhighlight %}
 
-Ora, dato che siamo nel client, piuttosto che lasciare aperta una porta (binding) ci andiamo a collegare.
+Ora, dato che siamo nel client, ci andiamo a collegare alla porta lasciata aperta sul server:
 
 {% highlight python %}
 s.connect((socket.gethostname(), 1234))
 {% endhighlight %}
 
-Nel senso più tradizionale della logica client/server non client e server voi non avreste client e server sulla stessa macchina. Se aveste bisogno di uno scambio di dati tra due programmi "in locale" potreste otternelo in modo diverso. Quindi normalmente non vi andreste mai a collegare a **localhost** o **127.0.0.1** ma passereste una stringa contenete un indirizzo IP, ad esempio "175.123.78.96".
+Nel senso più tradizionale della logica client/server voi non avreste client e server sulla stessa macchina. Se aveste bisogno di uno scambio di dati tra due programmi "in locale" potreste otternelo in modo diverso. Quindi normalmente non vi andreste mai a collegare a **localhost** o **127.0.0.1** ma passereste una stringa contenete un indirizzo IP, ad esempio "175.123.78.96".
 
 A questo punto il file client.py conterrà:
 
@@ -94,28 +91,32 @@ s.connect((socket.gethostname(), 1234))
 
 Benissimo, avviamo entrambi i programmi. Prima avviamo il server:
 
+{% highlight shell %}
 python3 server.py
+{% endhighlight %}
 
 E poi avviamo il client:
 
+{% highlight shell %}
 python3 client.py
+{% endhighlight %}
 
 Nel nostro server dovremmo vedere:
 
 {% highlight shell %}
-Connection from ('192.168.86.34', 54276) has been established.
+Connessione stabilita con ('192.168.86.34', 54276).
 {% endhighlight %}
 
 Il nostro client ad ogni modo termina non appena completato il suo lavoro.
 
+### Inviamo qualche dato
+
 Dunque ora abbiamo una connessione. Ma come facciamo a mandare dati avanti e indietro?
 
-La nostra socket può mandare (send) e ricevere (recv) dati. Questi metodi lavorano su buffer. I Buffer sono portizioni di memoria di grandezza fissa prefissata. Vediamoli in azione
-
-All'interno di server.py aggiungiamo
+La nostra socket può mandare (send) e ricevere (recv) dati. Questi metodi lavorano su buffer. I Buffer sono portizioni di memoria di grandezza fissa. Vediamoli in azione. All'interno di server.py aggiungiamo:
 
 {% highlight python %}
-    clientsocket.send(bytes("Hey there!!!","utf-8"))
+clientsocket.send(bytes("Hey there!!!","utf-8"))
 {% endhighlight %}
 
 All'interno di un ciclo while il nostro codice diventa:
@@ -128,13 +129,12 @@ s.bind((socket.gethostname(), 1234))
 s.listen(5)
 
 while True:
-    # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
-    clientsocket.send(bytes("Hey there!!!","utf-8"))
+    print(f"Connessione stabilita con: {address}.")
+    clientsocket.send(bytes("Ciao amico!!","utf-8"))
 {% endhighlight %}
 
-Ora che abbiamo mandato un po' di dati, vogliamo essere in grado di riceverli dallìaltra parte, quindi in client.py faremo:
+Ora che abbiamo mandato un po' di dati, vogliamo essere in grado di riceverli dall'altra parte, quindi in client.py faremo:
 
 {% highlight python %}
 msg = s.recv(1024)
@@ -161,17 +161,20 @@ print(msg.decode("utf-8"))
 Ora lanciamo insieme server.py e client.py, il nostro server.py mostra:
 
 {% highlight python %}
-Connection from ('192.168.86.34', 55300) has been established.
+Connessione stabilita con ('192.168.86.34', 54276).
 {% endhighlight %}
 
 Mentre il nostro client mostra:
 
 {% highlight python %}
-Hey there!!!
+Ciao amico!!
 {% endhighlight %}
 
 E poi il programma finisce.
-Ora aggiustiamo un po' quel buffer per fare in modo che la funzione recv in client.py riceverà 8 byte alla volta.
+
+### Il buffer 
+
+Modifichiamo il buffer per fare in modo che la funzione recv in client.py riceva 8 byte alla volta.
 
 {% highlight python %}
 import socket
@@ -186,10 +189,10 @@ print(msg.decode("utf-8"))
 Se ora lanciamo di nuovo il client vedremo:
 
 {% highlight shell %}
-Hey ther
+Ciao ami
 {% endhighlight %}
 
-Ora capiamo che ogni byte rappresenta un carattere. Ad ogni modo è meglio tornare a 1024.
+In effetti ricordiamo che ogni byte rappresenta un carattere. Ad ogni modo è meglio tornare a 1024.
 
 Ci sarà un momento in cui non importa quanto faremo grande il buffer, questa memoria non basterà. A tal proposito è bene tenere presente che dovremo organizzare l'applicazione in modo che funzioni a pacchetti di dati. La grandezza del buffer varia da applicazione ad applicazione ma se organizziamo lo scambio dati in pacchetti la grandezza del buffer non sarà un problema.
 
@@ -209,12 +212,12 @@ while True:
 
 Se lanciamo il programma adesso vedremo:
 
-So, at the moment, we will receive this data and print it in chunks. If we run client.py now, we see:
-
 {% highlight shell %}
-Hey ther
-e!!!
+Ciao ami
+co!!
 {% endhighlight %}
+
+Come poi notare stiamo ricevendo i dati "a pezzi".
 
 Dovresti anche aver notate che il nostro client.py non esiste più. Questa connessione adesso rimane aperta e la cosa è dovuta al nostro ciclo while. Possiamo usare il metodo *.close()* sulla istanza di un socket al fine di chiudere la comunicazione se lo desideriamo. Possiamo farlo sia sul server sia sul client, il primo che chiude la connessione interrompe la trasmissione di dati. Per questo è una buona idea essere preparati da entrambe le parte ad una connessione che si chiude, se per caso dovesse essere chiusa dall'altra capo.
 
@@ -228,10 +231,9 @@ s.bind((socket.gethostname(), 1234))
 s.listen(5)
 
 while True:
-    # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
     print(f"Connection from {address} has been established.")
-    clientsocket.send(bytes("Hey there!!!","utf-8"))
+    clientsocket.send(bytes("Ciao amico!!","utf-8"))
     clientsocket.close()
 {% endhighlight %}
 
