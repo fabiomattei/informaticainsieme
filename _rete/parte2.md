@@ -52,7 +52,7 @@ s.listen(5)
 while True:
     # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
 
     msg = "Welcome to the server!"
     msg = f"{len(msg):<{HEADERSIZE}}"+msg
@@ -132,7 +132,7 @@ s.listen(5)
 while True:
     # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
 
     msg = "Welcome to the server!"
     msg = f"{len(msg):<{HEADERSIZE}}"+msg

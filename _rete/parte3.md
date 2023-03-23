@@ -56,7 +56,7 @@ s.listen(5)
 while True:
     # now our endpoint knows about the OTHER endpoint.
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
 
     d = {1:"hi", 2: "there"}
     msg = pickle.dumps(d)
