@@ -127,12 +127,22 @@ def receive_message(client_socket):
 Ora ci occorre un ciclo infinito che per sempre riceva messaggi e diffonda i messaggi. All'interno di questo ciclo utilizzeremo **select.select**:
 
 {% highlight python %}
-read_sockets, _, exception_sockets = select.select(sockets_list, [], sockets_list)
+read_sockets, write_sockets, exception_sockets = select.select(sockets_list, [], sockets_list)
 {% endhighlight %}
 
-This isn't totally straightforward, but it's fairly simple. We're purely using select.select here for the aforementioned OS-level i/o for our sockets. What this function takes as parameters is rlist, wlist, and xlist...which are read list, write list, and error list respectively. The return of this function is that same 3 elements where the returns are "subsets" of the input lists where the subset is a list of those sockets that are ready.
+Questa chiamata è una interfaccia per il sistema operativo che chiama direttamente le routine di più basso livello. Accetta tre liste:
 
-Now, from here, we're going to iterate over the read_sockets list. These are sockets that have data to be read.
+* rlist: è composta da oggetti in attesa che possono essere pronti per la lettura
+* wlist: è composta da oggetti in attesa che possono essere pronti per la scrittura
+* xlist: è composta da oggetti in attesa che riportano condizioni eccezionali (per lo più errori)
+
+Gli oggetti nelle liste possono essere socket oppure file handler. Ciò che viene restituito sono sottoliste composte da elementi che sono **ready**.
+
+* read_sockets: è composta da oggetti pronti per la lettura
+* write_sockets: è composta da oggetti pronti per la scrittura
+* exception_sockets: è composta da oggetti che riportano condizioni eccezionali (per lo più errori)
+
+Ora possiamo iterare sulla lista read_sockets che contiene le sockets che devono essere lette.
 
 {% highlight python %}
 for notified_socket in read_sockets:
