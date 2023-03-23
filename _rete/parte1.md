@@ -204,7 +204,6 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((socket.gethostname(), 1234))
 
-
 while True:
     msg = s.recv(8)
     print(msg.decode("utf-8"))
@@ -219,7 +218,7 @@ co!!
 
 Come poi notare stiamo ricevendo i dati "a pezzi".
 
-Dovresti anche aver notate che il nostro client.py non esiste più. Questa connessione adesso rimane aperta e la cosa è dovuta al nostro ciclo while. Possiamo usare il metodo *.close()* sulla istanza di un socket al fine di chiudere la comunicazione se lo desideriamo. Possiamo farlo sia sul server sia sul client, il primo che chiude la connessione interrompe la trasmissione di dati. Per questo è una buona idea essere preparati da entrambe le parte ad una connessione che si chiude, se per caso dovesse essere chiusa dall'altra capo.
+Dovresti anche aver notato che il nostro client.py non chiude mai la connessione. La connessione rimane sempre aperta e la cosa è dovuta al nostro ciclo while. Possiamo usare il metodo *.close()* sulla istanza di un socket al fine di chiudere la comunicazione se lo desideriamo. Possiamo farlo sia sul server sia sul client, il primo che chiude la connessione interrompe la trasmissione di dati. Per questo è una buona idea essere preparati da entrambe le parte ad una connessione che si chiude, se per caso dovesse essere chiusa dall'altra capo.
 
 ### server.py
 
@@ -232,12 +231,12 @@ s.listen(5)
 
 while True:
     clientsocket, address = s.accept()
-    print(f"Connection from {address} has been established.")
+    print(f"Connessione stabilita con: {address}.")
     clientsocket.send(bytes("Ciao amico!!","utf-8"))
     clientsocket.close()
 {% endhighlight %}
 
-If we run this, however, we will see our client.py then spams out a bunch of nothingness, because the data it's receiving, is, well, nothing. It's empty. 0 bytes, but we are still asking it to print out what it receives, even if that's nothing! We could fix that:
+Se lanciamo questo programma però vedremo il nostro client.py che non tira fuori nulla, perchè i dati che sta ricevendo in effetti sono nulla, sono vuoti, 0 byte, ma stiamo continuiamo a dirgli di stampare ciò che riceve anche se non riceve nulla. Aggiustiamolo!
 
 ### client.py
 
@@ -304,4 +303,4 @@ while True:
 
 Tutto questo funziona ma ci sono delle questioni che restano aperte. Cosa succede se non chiudiamo la connessione dal server? Non non riceveremo mai un messaggio. Perché?
 
-TCP è uno *stream* di comunicazione, quindi come sappiamo se una connessione aperta sta scambiando informazioni in un certo momento? Generalmente abbiamo bisogno di un modo per notificare alla socket che stiamo per mandare un messaggio e quanto è grande questo messaggio. Ci sono molti modi per farlo. Un modo molto popolare consiste nel mandare una testata (header) che ha al suo interno queste informazioni. Potremmo anche utilizzare una sorte di footer ma questo potrebbe creare problemi.
+TCP è uno *stream* di comunicazione, quindi come sappiamo se una connessione aperta sta scambiando informazioni in un certo momento? Generalmente abbiamo bisogno di un modo per notificare alla socket che stiamo per mandare un messaggio e quanto è grande questo messaggio. Ci sono molti modi per farlo. Un modo molto popolare consiste nel mandare una testata (header) che ha al suo interno queste informazioni. Potremmo anche utilizzare una sorta di footer ma questo potrebbe creare problemi.
