@@ -9,9 +9,9 @@ Ora che abbiamo fatto tutto questo percorso proviamo a costruire qualcosa: una c
 
 ## Cominciamo con il server
 
-First, the server needs to accept new connections from clients. From here, we need to come up with some way to identify our unique users. We could display users by IP address, but most people tend to rather come up with some sort of username, so our server will first allow clients to connect and choose a username. Beyond this, the server will collect incoming messages and then distribute them to the rest of the connected clients.
+Il server deve essere in grado di accettare nuove connessione dai vari client. A questo proposito dobbiamo inventare un meccanismo per poter identificare in maniera univoca gli utenti. Potremmo procedere mostrandi gli indirizzi IP ma di solito si preferisce procedere con uno username. Al di la di questo il lavoro del server sarà ricevere un messaggio da un utente e distribuirlo a tutti gli altri utenti.
 
-So, we will start with the imports and some starting values:
+Iniziamo con i giusti import e impostando alcune variabili:
 
 {% highlight python %}
 import socket
@@ -23,45 +23,43 @@ IP = "127.0.0.1"
 PORT = 1234
 {% endhighlight %}
 
-Nothing new here except for the select import. What's this? The select module gives us OS-level monitoring operations for things, including for sockets. It is especially useful in cases where we're attempting to monitor many connections simultaneously. While you could use a for loop to just iterate over all of the sockets, using select is going to be far more efficient and will scale much better, mainly since it's going to work on your OS layer, rather than all the way through Python. For how to use it, we'll talk about it more when we get to that point!
+La novità rispetto a prima è che andiamo ad importare la libreria **select**. Questa libreria è utile per monitorare molte connessioni simultanee. Potremmo semplicemente utilizzare un loop che itera su di una lista di connessioni ma utilizzare select sarà molto più efficiente anche perché lavora a livello di sistema operativo e non di interprete python.
 
-Initially setup our socket:
+Inisiamo impostando il socket:
 
 {% highlight python %}
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 {% endhighlight %}
 
-Next, we can set the following to overcome the "Address already in use" that we hit often while building our programs:
+Ora settiamo l'opzione che ci permette di evitare di ricevere il messaggio "Address already in use" che riceviamo spesso quando lavoriamo in questo ambiente.
 
 {% highlight python %}
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 {% endhighlight %}
 
-This modifies the socket to allow us to reuse the address.
+Questo imposta il socket in modo che l'indirizzo possa essere riutilizzato.
 
-Next, we bind and listen:
+Ora rimaniamo in ascolto:
 
 {% highlight python %}
 server_socket.bind((IP, PORT))
-
 server_socket.listen()
 {% endhighlight %}
 
-Next, we'll create a list of sockets for select to keep track of, as well as begin our clients dict:
+Ora andiamo a creare una lista di socket che **select** gestirà per noi e creiamo anche un dizionario che andrà a contenere tutti i client (intesi come utenti che si sono collegati):
 
 {% highlight python %}
 sockets_list = [server_socket]
-
 clients = {}
 {% endhighlight %}
 
-Some debugging info:
+Teniamoci qualche informazione per il debug:
 
 {% highlight python %}
 print(f'Listening for connections on {IP}:{PORT}...')
 {% endhighlight %}
 
-Now, this server's main job is to receive messages, and then disperse them to the connected clients. For receiving messages, we're going to make a function:
+Ora, il lavoro principale del server consiste nel ricevere messaggi e poi ridistribuirli tra i client. Facciamo una funzione per ricevere i messaggi:
 
 {% highlight python %}
 def receive_message(client_socket):
@@ -75,7 +73,7 @@ def receive_message(client_socket):
         return False
 {% endhighlight %}
 
-Step 1 for receiving a message is to read the header:
+### 1 leggiamo l'header
 
 {% highlight python %}
 def receive_message(client_socket):
@@ -89,26 +87,26 @@ def receive_message(client_socket):
         return False
 {% endhighlight %}
 
-If a client closes a connection gracefully, then a socket.close() will be issued and there will be no header. We can handle for that with:
+Se il client chiude la connessione per bene chiamando socket.close() noi riceveremo un messaggio di lunghezza nulla. Gestiamo la cosa in questo modo:
 
 {% highlight python %}
-        if not len(message_header):
-            return False
+if not len(message_header):
+    return False
 {% endhighlight %}
 
-Then, we can convert our header to a length:
+Ora convertiamo il contenuto dell'header in una variabile contenente un numero intero.
 
 {% highlight python %}
-        message_length = int(message_header.decode('utf-8').strip())
+message_length = int(message_header.decode('utf-8').strip())
 {% endhighlight %}
 
-Finally, we can return some meaningful data:
+Alla fine restituiamo un dizionario con una sezione che contiene l'header ed una sezione che contiene il messaggio ricevuto.
 
 {% highlight python %}
         return {'header': message_header, 'data': client_socket.recv(message_length)}
 {% endhighlight %}
 
-Full code now:
+Il codice completo:
 
 {% highlight python %}
 def receive_message(client_socket):
@@ -126,10 +124,10 @@ def receive_message(client_socket):
         return False
 {% endhighlight %}
 
-Now, what we wish to do is, in a continuous loop, receive messages for all of our client sockets, then send all of the messages out to all of the client sockets. To begin, we will use a while loop and then we will make use of select.select:
+Ora ci occorre un ciclo infinito che per sempre riceva messaggi e diffonda i messaggi. All'interno di questo ciclo utilizzeremo **select.select**:
 
 {% highlight python %}
-    read_sockets, _, exception_sockets = select.select(sockets_list, [], sockets_list)
+read_sockets, _, exception_sockets = select.select(sockets_list, [], sockets_list)
 {% endhighlight %}
 
 This isn't totally straightforward, but it's fairly simple. We're purely using select.select here for the aforementioned OS-level i/o for our sockets. What this function takes as parameters is rlist, wlist, and xlist...which are read list, write list, and error list respectively. The return of this function is that same 3 elements where the returns are "subsets" of the input lists where the subset is a list of those sockets that are ready.
@@ -137,19 +135,19 @@ This isn't totally straightforward, but it's fairly simple. We're purely using s
 Now, from here, we're going to iterate over the read_sockets list. These are sockets that have data to be read.
 
 {% highlight python %}
-    for notified_socket in read_sockets:
-        if notified_socket == server_socket:
+for notified_socket in read_sockets:
+    if notified_socket == server_socket:
 {% endhighlight %}
 
 If the notified socket is our server socket, then this means we just got a new connection, which we want to handle for.
 
 {% highlight python %}
-    for notified_socket in read_sockets:
-        if notified_socket == server_socket:
-            client_socket, client_address = server_socket.accept()
-            user = receive_message(client_socket)
-            if user is False:
-                continue
+for notified_socket in read_sockets:
+    if notified_socket == server_socket:
+        client_socket, client_address = server_socket.accept()
+        user = receive_message(client_socket)
+        if user is False:
+            continue
 {% endhighlight %}
 
 So with client_socket, client_address = server_socket.accept() we get that unique client socket and their address. We then store their chosen username to the one they picked (this should be the very first thing the client will send). If, for some reason, that doesn't happen (such as client closed before sending a name), then we will just move along.
@@ -157,70 +155,69 @@ So with client_socket, client_address = server_socket.accept() we get that uniqu
 Next, we want to append this new client_socket to our sockets_list
 
 {% highlight python %}
-            sockets_list.append(client_socket)
+sockets_list.append(client_socket)
 {% endhighlight %}
 
 After this, we'd like to save this client's username, which we'll save as the value to the key that is the socket object:
 
 {% highlight python %}
-            clients[client_socket] = user
-            print('Accepted new connection from {}:{}, username: {}'.format(*client_address, user['data'].decode('utf-8')))
+clients[client_socket] = user
+print('Accepted new connection from {}:{}, username: {}'.format(*client_address, user['data'].decode('utf-8')))
 {% endhighlight %}
 
 If the notified socket is not a server socket, then this means instead we've got a message to read:
 
 {% highlight python %}
-        else:
-            message = receive_message(notified_socket)
+else:
+    message = receive_message(notified_socket)
 {% endhighlight %}
 
 Before we attempt to read the message, let's make sure one exists. If the client disconnects, then the message would be empty:
 
 {% highlight python %}
-            if message is False:
-                print('Closed connection from: {}'.format(clients[notified_socket]['data'].decode('utf-8')))
-                sockets_list.remove(notified_socket)
-                del clients[notified_socket]
-
-                continue
+if message is False:
+    print('Closed connection from: {}'.format(clients[notified_socket]['data'].decode('utf-8')))
+    sockets_list.remove(notified_socket)
+    del clients[notified_socket]
+    continue
 {% endhighlight %}
 
 Now, assuming it wasn't a disconnect, we can the information like so:
 
 {% highlight python %}
-            user = clients[notified_socket]
+user = clients[notified_socket]
 
-            print(f'Received message from {user["data"].decode("utf-8")}: {message["data"].decode("utf-8")}')
+print(f'Received message from {user["data"].decode("utf-8")}: {message["data"].decode("utf-8")}')
 {% endhighlight %}
 
-Next, we'd like to basically broadcast this out to all of our connected clients:
+Ora diffondiamo a tutti i client connessi il messaggio ricevuto:
 
 {% highlight python %}
-            # Iterate over connected clients and broadcast message
-            for client_socket in clients:
+# Iterate over connected clients and broadcast message
+for client_socket in clients:
 
-                # But don't sent it to sender
-                if client_socket != notified_socket:
+    # But don't sent it to sender
+    if client_socket != notified_socket:
 
-                    # Send user and message (both with their headers)
-                    # We are reusing here message header sent by sender, and saved username header send by user when he connected
-                    client_socket.send(user['header'] + user['data'] + message['header'] + message['data'])
+        # Send user and message (both with their headers)
+        # We are reusing here message header sent by sender, and saved username header send by user when he connected
+        client_socket.send(user['header'] + user['data'] + message['header'] + message['data'])
 {% endhighlight %}
 
-Finally, we can handle for the exception/error sockets with:
+In fine possiamo gestire le eccezzioni e gli errori dei socket con:
 
 {% highlight python %}
-    # It's not really necessary to have this, but will handle some socket exceptions just in case
-    for notified_socket in exception_sockets:
+# It's not really necessary to have this, but will handle some socket exceptions just in case
+for notified_socket in exception_sockets:
 
-        # Remove from list for socket.socket()
-        sockets_list.remove(notified_socket)
+    # Remove from list for socket.socket()
+    sockets_list.remove(notified_socket)
 
-        # Remove from our list of users
-        del clients[notified_socket]
+    # Remove from our list of users
+    del clients[notified_socket]
 {% endhighlight %}
 
-Full noted code for chat server:
+### Codice completo per il server.py
 
 {% highlight python %}
 import socket
@@ -363,5 +360,6 @@ while True:
 
         # Remove from our list of users
         del clients[notified_socket]
+		
 {% endhighlight %}
 
