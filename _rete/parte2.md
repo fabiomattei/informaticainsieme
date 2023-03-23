@@ -7,36 +7,40 @@ layout: page
 
 Nella lezione precedente abbiamo imparato come mandare e ricevere dati attraverso un socket e abbiamo sollevato il problema di cosa succede quando il nostro messaggio è più grande della dimensione del nostro buffer. Ora risolveremo questo problema.
 
-As mentioned before, there are a few logical ways that you could handle for this, but one common way is by starting all messages with a header that contains the length of the message that is going to come. The next challenge is normalizing this header in some way. You might consider using some series of characters, or some format, but then you run the risk of people accidentally, or purposefully, mimicking this formatting. Instead, you can go with a fixed-length header, where the first n bytes of data will be the header data, which will include the length of the message to come. Once we've received that length of data, we know any following information will be a new message, where we need to grab the header and continue repeating this process.
+Come detto in precedenza ci sono delle strate per gestire la cosa a livello logico. La soluzione più gettonata consiste nel cominciare tutti i messaggi con un header che contiene la lunghezza del messaggio che sta per arrivare. La sfida successiva consiste nel normalizzare questo header in qualche modo. Potremmo considerare di usare una serie di caratteri per dividerlo dal resto del messaggio ma poi si corre il rischio che gli utenti non interpretino bene oppure modifichino questa informazione di proposito. Si può risolvere la cosa con un header di lunghezza fissa, sempre uguale, dove i primi n byte contengono i dati dell'header cioè la lunghezza del messaggio che sta per arrivare.
 
-So what we need to do now is choose some truly maximal message size. Say, 1,000,000,000 bytes. Right, there's almost no circumstance where someone would attempt anything even close to this via our chat app, so this will be fine. That number is 10 bytes (10 chars). In python, how might we represent any number as 10 characters? We can use string formatting! Yay basics! Since this is a lesser-used functionality, see more here: format examples, which you will see examples like:
+A questo punto ci resta da definire una lunghezza massima di messaggio vera e propria, ad esempio 1000000000 byte. Nessuno dovrebbe aver bisogno di mandare messaggi così lunghi quindi per il momento possiamo definire questa quantità come la quantità massima supportata. Questo numero viene spedito come insieme di caratteri ed utilizza 10 byte. In python per scrivere questo numero utilizziamo la formattazione di stringhe:
 
-
-#Aligning the text and specifying a width:
-
->>>
+{% highlight shell %}
+# Allineiamo il testo con una lunghezza specifica
 >>> '{:<30}'.format('left aligned')
 'left aligned                  '
 >>> '{:>30}'.format('right aligned')
 '                 right aligned'
 >>> '{:^30}'.format('centered')
 '           centered           '
->>> '{:*^30}'.format('centered')  # use '*' as a fill char
+>>> '{:*^30}'.format('centered')  # usa '*' come carattere di riempimento
 '***********centered***********'
+{% endhighlight %}
 
-In this case, you can see various examples where there are 30 characters used every time, but you can do various alignments. While this is mainly used to make text-based GUIs pretty, we can also use this for our purposes, like:
+In questo caso possiamo vedere vari esempi in cui vengono generate stringhe della lunghezza di 30 caratteri. Di solito questa funzionalità viene utilizzata per fare delle interfacce utente carine ad ogni modo la possiamo usare per i nostri scopi.
 
+{% highlight python %}
 f'{len("your message here!"):<10}'
+{% endhighlight %}
 
-In the above case, this will produce the length of our message using 10 characters.
+Nel caso in alto il comando produrrà una stringa di 10 caratteri.
 
+{% highlight shell %}
 >>> f'{len("your message here!"):<10}'
 '18        '
+{% endhighlight %}
 
-All we do now is just pre-pend all of our messages with this, then we can convert the first 10 chars of new messages to an int to know how much more is a part of a unique message. To do this, we'll start in our server script:
+Quello che facciamo ora è utilizzare questa tecnica a inizio messaggio in modo da indicarne la lunghezza con i primi 10 caratteri.
 
-server.py
+### server.py
 
+{% highlight python %}
 import socket
 
 HEADERSIZE = 10
@@ -54,11 +58,13 @@ while True:
     msg = f"{len(msg):<{HEADERSIZE}}"+msg
 
     clientsocket.send(bytes(msg,"utf-8"))
+{% endhighlight %}
 
-So now our messages will have a header of 10 characters/bytes that will contain the length of the message, which our client use to inform it when the end of the message is received. Let's work on the client.py next:
+Come possiamo vedere ora il nostro messaggio contiene un header che informa il client della lunghezza del messaggio.
 
-client.py
+### client.py
 
+{% highlight python %}
 import socket
 
 HEADERSIZE = 10
@@ -87,15 +93,19 @@ while True:
             print("full msg recvd")
             print(full_msg[HEADERSIZE:])
             new_msg = True
+{% endhighlight %}
 
-This one is a bit more involved, but nothing too crazy here. I increased out buffer to 16 bytes. 8 wouldnt even be enough to read the header, so that would have been a problem, and you would probably never have a buffer as small as these anyway. We're just doing it for example. So, we start off in a state where the next bit of data we get is a new_msg.
+Il client è un pochino più intricato. Abbiamo incrementato il buffer a 16 byte perché 8 non sarebbero stati abbastanza per includere l'header. Iniziamo in uno stato in cui i primi dati che riceviamo sono l'inizio di un messaggio.
 
-If the message is a new_msg, then the first thing we do is parse the header, which we already know is a fixed-length of 10 characters. From here, we parse the message length. Then, we continue to build the full_msg, until that var is the size of msglen + our HEADERSIZE. Once this happens, we print out the full message.
 
-Going from this to some sort of streaming API is quite simple. Let's do an example where the server just streams out something simple, like the current time.
 
-To do this, we just add the following to the end:
+Dato che il messaggio è un nuovo messaggio, prima di tutto dobbiamo parsare l'header che sappiamo già avere una lunghezza predefinita di 10 caratteri. Fatto questo andiamo a parsare il messaggio vero e proprio. Da qui continuiamo a costruire il nostro messaggio fino a quando var raggiunge la grandezza di msglen sommato ad HEADERSIZE. Quando questo avviene stampiamo il messaggio completo.
 
+Andare da questo a una specie di API di è abbastanza semplice. Facciamo un esempio in cui il server manda in stream qualcosa di semplice come l'ora corrente.
+
+A queto fine aggiungiamo alla fine dello script:
+
+{% highlight python %}
     while True:
         time.sleep(3)
         msg = f"The time is {time.time()}"
@@ -104,9 +114,11 @@ To do this, we just add the following to the end:
         print(msg)
 
         clientsocket.send(bytes(msg,"utf-8"))
+{% endhighlight %}
 
-Our full server.py is now:
+server.py completo:
 
+{% highlight python %}
 import socket
 import time
 
@@ -135,9 +147,11 @@ while True:
         print(msg)
 
         clientsocket.send(bytes(msg,"utf-8"))
+{% endhighlight %}
 
-Now, nothing changes for our client, except for the preparation that we will accept new messages after the first, so we need to reset the full_msg var, so our full client.py becomes:
+Ora non cambia nulla per il nostro client, eccetto la preparazione che ci occorre fare per accettare un messaggio successivo al primo; dobbiamo resettare la variabile **full_msg**:
 
+{% highlight python %}
 import socket
 
 HEADERSIZE = 10
@@ -167,9 +181,11 @@ while True:
             print(full_msg[HEADERSIZE:])
             new_msg = True
             full_msg = ""
+{% endhighlight %}
 
-Now, run these two things, and you should see the server outputting something like:
+Ora mandiamo il tutto in esecuzione e sul server dovremmo vedere:
 
+{% highlight shell %}
 28        The time is 1552068299.01783
 30        The time is 1552068302.0181189
 30        The time is 1552068305.0206459
@@ -185,9 +201,11 @@ Now, run these two things, and you should see the server outputting something li
 30        The time is 1552068335.0402749
 27        The time is 1552068338.0437
 29        The time is 1552068341.043971
+{% endhighlight %}
 
-And the client:
+mentre sul client:
 
+{% highlight shell %}
 new msg len: b'27        '
 full message length: 27
 16
@@ -206,5 +224,4 @@ full message length: 29
 39
 full msg recvd
 The time is 1552068341.043971
-
-In the next tutorial, we'll be talking about how we can send Python objects rather than just strings.
+{% endhighlight %}

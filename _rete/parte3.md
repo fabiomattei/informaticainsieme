@@ -5,12 +5,11 @@ author: Fabio Mattei
 layout: page
 ---
 
+Fino ad ora abbiamo scambiato messaggi di testo tra client e server. Andiamo a vedere cosa bisogna fare per scambiarsi oggetti attraverso la tecnica di serializzazione con la libreria pinkle.
 
-Welcome to part 3 of the sockets tutorial with Python. We've learned how to send and receive string data via sockets, and now I want to talk about is pickles. Not the food, but the serialization technique in Python.
+In Python ogni cosa è un oggetto e ogni oggetto più essere serializzato utilizzando Pickle. Serializzare significa convertire le informazioni contenuti nelle proprietà di un oggetto in byte.
 
-In Python, everything is an object, and all of your objects can be serialized with Pickle. Serialization is the conversion of your object to bytes.
-
-...and we send bytes with sockets. This means that you can communicate between your python programs both locally, or remotely, via sockets, using pickle. So now, literally anything...functions, a giant dictionary, some arrays, a TensorFlow model...etc can be sent back and forth between your programs! Let's see a quick example of that before I close out this tutorial.
+I byte saranno inviati su di un sockets. This means that you can communicate between your python programs both locally, or remotely, via sockets, using pickle. So now, literally anything...functions, a giant dictionary, some arrays, a TensorFlow model...etc can be sent back and forth between your programs! Let's see a quick example of that before I close out this tutorial.
 
 So first, quickly, just in case you don't know about pickles, let's convert a pickle to a byte string:
 
