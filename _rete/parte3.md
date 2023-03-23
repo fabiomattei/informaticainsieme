@@ -9,33 +9,39 @@ Fino ad ora abbiamo scambiato messaggi di testo tra client e server. Andiamo a v
 
 In Python ogni cosa è un oggetto e ogni oggetto più essere serializzato utilizzando Pickle. Serializzare significa convertire le informazioni contenuti nelle proprietà di un oggetto in byte.
 
-I byte saranno inviati su di un sockets. This means that you can communicate between your python programs both locally, or remotely, via sockets, using pickle. So now, literally anything...functions, a giant dictionary, some arrays, a TensorFlow model...etc can be sent back and forth between your programs! Let's see a quick example of that before I close out this tutorial.
+I byte saranno inviati su di un sockets. Questo perché ogni cosa può essere inviata attraverso socket.
 
-So first, quickly, just in case you don't know about pickles, let's convert a pickle to a byte string:
+Cominciamo a scaldarci, creiamo un dizionario e ceonvertiamolo in una stringa di byte utilizzando pinckle:
 
+{% highlight shell %}
 >>> import pickle
 >>> d = {1:"hi", 2: "there"}
 >>> msg = pickle.dumps(d)
 >>> msg
 b'\x80\x03}q\x00(K\x01X\x02\x00\x00\x00hiq\x01K\x02X\x05\x00\x00\x00thereq\x02u.'
+{% endhighlight %}
 
-Now, that's our msg, we just send it. When we get it, we can read it with loads.
+Ora, questo costituisce il nostro messaggio che possiamo spedire. Una volta ricevuto andremo a fare:
 
+{% highlight shell %}
 >>> recd = pickle.loads(msg)
 >>> recd
 {1: 'hi', 2: 'there'}
+{% endhighlight %}
 
-Okay, let's put it together and send that. Our server.py will have the following code for the message to send:
+Quindi nel nostro server dovremo scrivere:
 
-    d = {1:"hi", 2: "there"}
-    msg = pickle.dumps(d)
-    msg = bytes(f"{len(msg):<{HEADERSIZE}}", 'utf-8')+msg
-    print(msg)
-    clientsocket.send(msg)
+{% highlight python %}
+d = {1:"hi", 2: "there"}
+msg = pickle.dumps(d)
+msg = bytes(f"{len(msg):<{HEADERSIZE}}", 'utf-8')+msg
+print(msg)
+clientsocket.send(msg)
+{% endhighlight %}
 
-Making the full script (with a lot removed from before since we're just trying to illustrate sending objects):
-server.py
+### server.py completo
 
+{% highlight python %}
 import socket
 import time
 import pickle
@@ -57,27 +63,35 @@ while True:
     msg = bytes(f"{len(msg):<{HEADERSIZE}}", 'utf-8')+msg
     print(msg)
     clientsocket.send(msg)
+{% endhighlight %}
 
-In the above case as well, we're sending a header that counts in bytes, rather than characters, which makes more sense in either case, really. Now, our client needs to handle this. In line with this change, we change our starting message to (both initally, then after the message is complete):
+Anche in questo caso stiamo spedendo un header che riposta il conteggio dei byte che costituiscono il messaggio. Ora il nostro client deve essere in grado di gestire la cosa. Dunque cambiamo la stringa di inzializzazione:
 
-   full_msg = b''
+{% highlight python %}
+full_msg = b''
+{% endhighlight %}
 
-Then, we can remove the decoding bits, so we just build our message as:
+Quindi procediamo come sempre:
 
-       full_msg += msg
+{% highlight python %}
+full_msg += msg
+{% endhighlight %}
 
-Then, we wait for the full message, then convert from bytes to object with pickel.loads():
+Quando il messaggio è completo utilizziamo **pickel.loads()** per riconvertire da byte a dizionario:
 
-       if len(full_msg)-HEADERSIZE == msglen:
-            print("full msg recvd")
-            print(full_msg[HEADERSIZE:])
-            print(pickle.loads(full_msg[HEADERSIZE:]))
+{% highlight python %}
+if len(full_msg)-HEADERSIZE == msglen:
+     print("full msg recvd")
+     print(full_msg[HEADERSIZE:])
+     print(pickle.loads(full_msg[HEADERSIZE:]))
 
-            new_msg = True
-            full_msg = b""
+     new_msg = True
+     full_msg = b""
+{% endhighlight %}
 
-Full client.py
+### client.py completo
 
+{% highlight python %}
 import socket
 import pickle
 
@@ -108,15 +122,19 @@ while True:
             print(pickle.loads(full_msg[HEADERSIZE:]))
             new_msg = True
             full_msg = b""
+{% endhighlight %}
 
-Running these, I get:
+Mandando in esecuzione ottengo:
 
- python3 server.py
+{% highlight shell %}
+$ python3 server.py
 Connection from ('192.168.86.25', 50373) has been established.
 b'33        \x80\x03}q\x00(K\x01X\x02\x00\x00\x00hiq\x01K\x02X\x05\x00\x00\x00thereq\x02u.'
+{% endhighlight %}
 
-And on the client:
+E per il client:
 
+{% highlight shell %}
 $ python3 client.py
 new msg len: b'33        '
 full message length: 33
@@ -128,10 +146,4 @@ full message length: 33
 full msg recvd
 b'\x80\x03}q\x00(K\x01X\x02\x00\x00\x00hiq\x01K\x02X\x05\x00\x00\x00thereq\x02u.'
 {1: 'hi', 2: 'there'}
-
-If that doesn't excite you, you're not nerdy enough!
-
-Alright, well there's sockets for you!
-
-In the next tutorial, we're going to make a simple chat room with sockets.
-
+{% endhighlight %}
