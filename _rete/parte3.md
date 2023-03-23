@@ -1,5 +1,5 @@
 ---
-title: 'Sending and receiving Python Objects with sockets'
+title: 'Spediamo e riceviamo oggetti Python con le socket'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page

@@ -57,11 +57,10 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 
 - [La shell]({{ site.baseurl }}{% link _rete/la-shell.md %}.html)
 - [Client / Server]({{ site.baseurl }}{% link _rete/client-server.md %}.html)
-- [Client / Server]({{ site.baseurl }}{% link _rete/connection-pool.md %}.html)
-- [parte 1]({{ site.baseurl }}{% link _rete/parte1.md %}.html)
-- [parte 2]({{ site.baseurl }}{% link _rete/parte2.md %}.html)
-- [parte 3]({{ site.baseurl }}{% link _rete/parte3.md %}.html)
-- [parte 4]({{ site.baseurl }}{% link _rete/parte4.md %}.html)
-- [parte 5]({{ site.baseurl }}{% link _rete/parte5.md %}.html)
+- [Spedire e ricevere dati]({{ site.baseurl }}{% link _rete/parte1.md %}.html)
+- [Buffering e streaming di dati]({{ site.baseurl }}{% link _rete/parte2.md %}.html)
+- [Spediamo e riceviamo oggetti Python con le socket]({{ site.baseurl }}{% link _rete/parte3.md %}.html)
+- [Progetto Chat: il server]({{ site.baseurl }}{% link _rete/parte4.md %}.html)
+- [Progetto Chat: il client]({{ site.baseurl }}{% link _rete/parte5.md %}.html)
 
 

@@ -1,5 +1,5 @@
 ---
-title: 'Creating chat application with sockets in Python'
+title: 'Progetto Chat: il server'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page

@@ -1,5 +1,5 @@
 ---
-title: 'Creating chat application with sockets in Python'
+title: 'Progetto Chat: il client'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page
@@ -54,9 +54,9 @@ Si tratta semplicemente di un input ma ci mettiamo dentro il nome utente in modo
         client_socket.send(message_header + message)
 {% endhighlight %}
 
-So that's sending messages, now we actually want to receive them. This is slightly more tricky. What we will do is just do a while True loop that will infinitely attempt to receive any incoming messages. Once there are no more to receive, we will get an error. We'll handle for other expected errors, but if we get the specific error we're expecting to just be out of messages, then we'll break the loop cleanly and repeat.
+Ora che abbiamo mandato messaggio vogliamo riceverne a nostra volta. A questo proposito facciamo un ciclo infinito che tenta di ricevere messaggi finché possibile. Quando non ce ne sono più si solleverà un errore. Andremo a gestire gli altri errori ma se l'errore che arriva è la fine dei messaggi in code andiamo semplicemente ad uscire dal ciclo infito.
 
-To display messages, we need both the username and the message, each of which have separate headers and contents, so we need to grab each.
+Al fine di mostrare i messaggi abbiamo bisodno dei nome utente e del corpo del messaggio inviato. Ogni porzione avrà un header separato. Andiamo a gestire il tutto.
 
 {% highlight python %}
         while True:
@@ -69,14 +69,14 @@ To display messages, we need both the username and the message, each of which ha
                 sys.exit()
 {% endhighlight %}
 
-Now we actually get the username:
+Ora raccogliamo il nome utente:
 
 {% highlight python %}
             username_length = int(username_header.decode('utf-8').strip())
             username = client_socket.recv(username_length).decode('utf-8')
 {% endhighlight %}
 
-Using the same logic, let's grab the message too:
+Usando la stessa logica raccogliamo il messaggio:
 
 {% highlight python %}
             message_header = client_socket.recv(HEADER_LENGTH)
@@ -84,13 +84,13 @@ Using the same logic, let's grab the message too:
             message = client_socket.recv(message_length).decode('utf-8')
 {% endhighlight %}
 
-Then output it to the screen:
+Ora mostriamo l'output.
 
 {% highlight python %}
             print(f'{username} > {message}')
 {% endhighlight %}
 
-Now, eventually, we're going to hit an error because there wont be messages to receieve anymore. We expect this error, but we wouldn't want to assume for just this error. Thus, let's encase this in a try/except:
+Aspettiamo che si arrivi all'errore che ci indica la fine dei messaggi ricevuti. Ci aspettiamo questo errore e lo gestiamo con un try/except:
 
 {% highlight python %}
     try:
@@ -130,7 +130,7 @@ Now, eventually, we're going to hit an error because there wont be messages to r
         sys.exit()
 {% endhighlight %}
 
-Great, that's it! Fully noted code up to this point:
+Ecco il codice completo:
 
 {% highlight python %}
 import socket

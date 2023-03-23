@@ -1,5 +1,5 @@
 ---
-title: 'Buffering and streaming data'
+title: 'Buffering e streaming di dati'
 date: '2023-02-25T15:55:20+01:00'
 author: Fabio Mattei
 layout: page
