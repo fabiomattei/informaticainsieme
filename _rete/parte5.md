@@ -5,10 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
-
-Welcome to part 5 of the sockets tutorial, in this tutorial we're going to build the client's code for our chatroom application.
-
-To begin, we do a lot of the same similar setup that we've seen before:
+Andiamo ora a costruire il client del nostro sistema di chat.
 
 {% highlight python %}
 import socket
@@ -26,13 +23,13 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((IP, PORT))
 {% endhighlight %}
 
-Next, we're going to set the recv method to not block:
+L'inizio è analogo al server, ora però settiamo la socket in modo che non si blocchi mai.
 
 {% highlight python %}
 client_socket.setblocking(False)
 {% endhighlight %}
 
-Now, if you recall, our server is expecting the very first message to be a username choice for the client:
+Se ricordate il server si aspetta che il primo messaggio comunichi il nome utente di chi si sta collegando:
 
 {% highlight python %}
 username = my_username.encode('utf-8')
@@ -40,18 +37,17 @@ username_header = f"{len(username):<{HEADER_LENGTH}}".encode('utf-8')
 client_socket.send(username_header + username)
 {% endhighlight %}
 
-After this, we're ready for the main loop for the client, which will be there to accept new messages from the client. For now, we'll just use the input function from Python. Eventually, you would probably want to have some sort of GUI here, and input is going to block the rest of the program from running/updating messages, which means we will have to send a message to see the updates. There are some OS specific methods we can use to get around this, but I am going to not get into that here. If you want to, feel free to research them and implement them. You can add a sys check at the beginning to determine what OS your client is running with.
+Fatto questo siamo pronti per il ciclo principale del client il quale sarà pronto ad accettare i messaggi del client. Per ora ci accontenteremo della funzione input() di python anche se sarebbe il caso di costruire una qualche interfaccia dato che input andrà a bloccare il programma restando in attesa dell'utente, il che significa che dovremo mandare un messaggio per vedere gli aggiornamenti. Ci sono metodi specifici del sistema operativo che potremmo utilizzare.
 
 {% highlight python %}
 while True:
     message = input(f'{my_username} > ')
 {% endhighlight %}
 
-It's really just an input, but we'll slap their username in there to give it a look and feel like a chat app. Next, before just sending the message, we should make sure there is one. People may also just hit enter to refresh with this app, but also people may just accidentally hit enter later or something. No reason to send an empty message.
+Si tratta semplicemente di un input ma ci mettiamo dentro il nome utente in modo da farlo sembrare più professionale. Controlliamo, prima di inviare un messaggio, che questo contenga una qualche informazione, dato che sarebbe inutile mandare un messaggio vuoto.
 
 {% highlight python %}
     if message:
-
         # Encode message to bytes, prepare header and convert to bytes, like for username above, then send
         message = message.encode('utf-8')
         message_header = f"{len(message):<{HEADER_LENGTH}}".encode('utf-8')
