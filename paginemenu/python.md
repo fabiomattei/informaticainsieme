@@ -61,5 +61,7 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 - [parte 1]({{ site.baseurl }}{% link _rete/parte1.md %}.html)
 - [parte 2]({{ site.baseurl }}{% link _rete/parte2.md %}.html)
 - [parte 3]({{ site.baseurl }}{% link _rete/parte3.md %}.html)
+- [parte 4]({{ site.baseurl }}{% link _rete/parte4.md %}.html)
+- [parte 5]({{ site.baseurl }}{% link _rete/parte5.md %}.html)
 
 
