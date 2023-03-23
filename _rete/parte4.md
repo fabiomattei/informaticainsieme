@@ -149,7 +149,7 @@ for notified_socket in read_sockets:
     if notified_socket == server_socket:
 {% endhighlight %}
 
-If the notified socket is our server socket, then this means we just got a new connection, which we want to handle for.
+Se la socket che è pronta per essere letta, è la server_socket vuol dire che c'è un nuovo client che si sta connettendo e che dobbiamo gestire.
 
 {% highlight python %}
 for notified_socket in read_sockets:
@@ -160,29 +160,28 @@ for notified_socket in read_sockets:
             continue
 {% endhighlight %}
 
-So with client_socket, client_address = server_socket.accept() we get that unique client socket and their address. We then store their chosen username to the one they picked (this should be the very first thing the client will send). If, for some reason, that doesn't happen (such as client closed before sending a name), then we will just move along.
-
-Next, we want to append this new client_socket to our sockets_list
+Chiamiamo il metodo **server_socket() ** che restituisce la socket che si sta collegando e l'indirizzo del client. Quello che facciamo è conservare il nome utente (la prima cosa che il client invia). Se per qualche ragione il nome utente non arriva semplicemente andiamo avanti.
+La cosa successiva da fare è aggiungere il nuovo **client_socket** alla nostra lista **sockets_list**.
 
 {% highlight python %}
 sockets_list.append(client_socket)
 {% endhighlight %}
 
-After this, we'd like to save this client's username, which we'll save as the value to the key that is the socket object:
+Fatto questo vogliamo salvare il nome utente. Lo utilizzeremo come valore del dizionario che ha la socket come chiave:
 
 {% highlight python %}
 clients[client_socket] = user
 print('Accepted new connection from {}:{}, username: {}'.format(*client_address, user['data'].decode('utf-8')))
 {% endhighlight %}
 
-If the notified socket is not a server socket, then this means instead we've got a message to read:
+Se non si tratta del server socket allora si tratta di un messaggio da propagare. 
 
 {% highlight python %}
 else:
     message = receive_message(notified_socket)
 {% endhighlight %}
 
-Before we attempt to read the message, let's make sure one exists. If the client disconnects, then the message would be empty:
+Prima di leggere il messaggio ci assicuriamo che il messaggio esista perché se il client si disconnettesse il messaggio sarebbe vuoto:
 
 {% highlight python %}
 if message is False:
@@ -192,7 +191,7 @@ if message is False:
     continue
 {% endhighlight %}
 
-Now, assuming it wasn't a disconnect, we can the information like so:
+Ora, assumendo che non si sia disconnesso possiamo ricevere l'informazione in questo modo:
 
 {% highlight python %}
 user = clients[notified_socket]
