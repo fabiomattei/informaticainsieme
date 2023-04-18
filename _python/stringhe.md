@@ -105,6 +105,11 @@ else:
     print(momento)
 {% endhighlight %}
 
+#### Tabella di tracciamento
+
+|saluto| momento  | output |
+|"ciao"| "mattino"   | mattino   |
+
 Devi comunque fare attenzione al fatto che Python non gestisce le parole maiuscole e minuscole come facciamo noi in modo intuitivo: in un confronto le lettere maiuscole vengono sempre prima delle minuscole.
 
 # Visitiamo le stringhe
