@@ -116,7 +116,7 @@ Dunque ora abbiamo una connessione. Ma come facciamo a mandare dati avanti e ind
 La nostra socket può mandare (send) e ricevere (recv) dati. Questi metodi lavorano su buffer. I Buffer sono portizioni di memoria di grandezza fissa. Vediamoli in azione. All'interno di server.py aggiungiamo:
 
 {% highlight python %}
-clientsocket.send(bytes("Hey there!!!","utf-8"))
+clientsocket.send(bytes("Ciao amico!!","utf-8"))
 {% endhighlight %}
 
 All'interno di un ciclo while il nostro codice diventa:
@@ -301,6 +301,6 @@ while True:
         print(full_msg)
 {% endhighlight %}
 
-Tutto questo funziona ma ci sono delle questioni che restano aperte. Cosa succede se non chiudiamo la connessione dal server? Non non riceveremo mai un messaggio. Perché?
+Tutto questo funziona ma ci sono delle questioni che restano aperte. Cosa succede se non chiudiamo la connessione dal server? Non riceveremo mai un messaggio. Perché?
 
 TCP è uno *stream* di comunicazione, quindi come sappiamo se una connessione aperta sta scambiando informazioni in un certo momento? Generalmente abbiamo bisogno di un modo per notificare alla socket che stiamo per mandare un messaggio e quanto è grande questo messaggio. Ci sono molti modi per farlo. Un modo molto popolare consiste nel mandare una testata (header) che ha al suo interno queste informazioni. Potremmo anche utilizzare una sorta di footer ma questo potrebbe creare problemi.
