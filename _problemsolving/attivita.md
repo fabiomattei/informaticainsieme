@@ -1,6 +1,6 @@
 ---
 title: 'Attività'
-date: '2020-02-20T15:21:11+01:00'
+date: '2023-04-18T15:21:11+01:00'
 author: Fabio Mattei
 layout: page
 ---
