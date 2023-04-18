@@ -11,6 +11,7 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 * [Introduzione]({{ site.baseurl }}{% link _python/introduzione.md %}.html)
 * [Variabili]({{ site.baseurl }}{% link _python/variabili.md %}.html)
 * [Tipi di variabile]({{ site.baseurl }}{% link _python/tipi-di-variabile.md %}.html)
+* [Le stringhe di testo]({{ site.baseurl }}{% link _python/stringhe.md %}.html)
 * [Conversioni di tipo]({{ site.baseurl }}{% link _python/conversioni-di-tipo.md %}.html)
 * [Print]({{ site.baseurl }}{% link _python/print.md %}.html)
 * [Input]({{ site.baseurl }}{% link _python/input.md %}.html)
