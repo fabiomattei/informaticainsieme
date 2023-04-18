@@ -114,7 +114,7 @@ Attraverso l'uso degli indici possiamo visitare una stringha di testo, cioé pos
 {% highlight python %}
 saluto = "ciao"
 indice = 0 
-while Indice < len(indice): 
+while indice < len(saluto): 
   lettera = saluto[indice]
   if lettera == "a" or lettera == "e" or lettera == "i" or lettera == "o" or lettera == "u":
      print("vocale")
@@ -122,6 +122,14 @@ while Indice < len(indice):
      print("consonante")
   indice = indice + 1 
 {% endhighlight %}
+
+#### Tabella di tracciamento
+
+|saluto| indice  | lettera  | ouput |
+|"ciao"| 0  | "c"  | consonante   |
+| |1  | "i"  | vocale   |
+| |2  | "a"  | vocale   |
+| |3  | "o"  | vocale   |
 
 Possiamo scrivere la stessa cosa più semplicemente con un ciclo for:
 
