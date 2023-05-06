@@ -216,3 +216,11 @@ F(n)=2F(n−1) n≥2
 
 #### Esercizio 7:
 Scrivere una funzione ricorsiva che, avendo in input una lista di n interi, dia in output il numero degli elementi positivi della lista.
+
+#### Esercizio 8:
+Calcolo della potenza di un numero; scrivere una funzione ricorsiva potenza(num, esponente)
+ che calcoli la potenza di un numero.
+ 
+#### Esercizio 9:
+Stringa inversa: scrivere una funzione ricorsiva che presa come parametro una stringa di testo calcoli la stringa inversa.
+
