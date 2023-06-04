@@ -164,10 +164,10 @@ print(massimo)
  Scrivere un ciclo che letti 10 numeri scriva la somma dei numeri il cui valore è compreso fra 10 e 20.
 
 #### Esercizio 7:
- Scrivere un ciclo che letti due numeri N e M con N&lt;M, scriva tutti i numeri compresi tra N e M.
+ Scrivere un ciclo che letti due numeri N e M con N < M, scriva tutti i numeri compresi tra N e M.
 
 #### Esercizio 8:
- Scrivere un ciclo che letti due numeri N e M con N&lt;M, sommi tutti i numeri compresi tra N e M. Scrivere la somma ottenuta.
+ Scrivere un ciclo che letti due numeri N e M con N < M, sommi tutti i numeri compresi tra N e M. Scrivere la somma ottenuta.
 
 #### Esercizio 9:
  Scrivere un ciclo che letto un numero N scriva tutti i suoi divisori
@@ -197,19 +197,43 @@ Ad esempio, se N=20 allora K risulta 5, infatti
 1 + 2 + 3 + 4 + 5 + 6 = 21
 
 #### Esercizio 16:
- Scrivere un ciclo che continui a **leggere** valori interi digitati dall’utente e a sommarli fino all’immissione del quinto numero pari. Scrivere la somma ottenuta.
+un programma che letti N numeri in ingresso calcoli il numero massimo e il
+numero minimo inseriti
 
 #### Esercizio 17:
- Trovare il minor numero di banconote da 100€, 50€, 10€, 5€, necessarie per pagare una assegnata cifra C multipla di 5.
+un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri
+mostrando le somme parziali ogni 3 numeri inseriti
 
 #### Esercizio 18:
-scrivi un programma python che utilizzando due cicli for scriva la tabellina della addizione
+ Scrivere un ciclo che continui a **leggere** valori interi digitati dall’utente e a sommarli fino all’immissione del quinto numero pari. Scrivere la somma ottenuta.
 
-#### Esercizio 19: 
-scrivi un programma python che utilizzando due cicli for scriva la tabellina della moltiplicazione
+#### Esercizio 19:
+ Trovare il minor numero di banconote da 100€, 50€, 10€, 5€, necessarie per pagare una assegnata cifra C multipla di 5.
 
 #### Esercizio 20:
+scrivi un programma python che utilizzando due cicli for scriva la tabellina della addizione
+
+#### Esercizio 21: 
+scrivi un programma python che utilizzando due cicli for scriva la tabellina della moltiplicazione
+
+#### Esercizio 22:
 scrivi un programma python che trovi i numeri primi compresi tra 1 e 100000.
 
-#### Esercizio 21:
+#### Esercizio 23:
 Scrivere un ciclo che continui a leggere valori interi digitati dall’utente e a sommarli fino all’immissione del quinto numero pari. Scrivere la somma ottenuta.
+
+#### Esercizio 24:
+Scrivere un programma che letto un numero intero N calcoli la somma di tutte le cifre
+dispari che lo compongono
+
+#### Esercizio 25:
+Scrivere un programma che letti due numeri interi calcoli il massimo comune divisore e scriva il risultato
+
+#### Esercizio 26:
+Scrivi un algoritmo che letto un numero scriva "numero primo" se questo è un numero primo, "numero non primo" in caso opposto.
+
+#### Esercizio 27:
+Scrivi un programma python che generi tre numeri interi compresi tra 100 e 999 che siano divisibili per 5.
+
+
+

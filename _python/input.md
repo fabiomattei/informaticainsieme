@@ -135,3 +135,14 @@ Scrivi un programma Python che letti due numeri n e m scriva il numero più gran
 
 #### Esercizio 22: 
 Scrivi un programma Python che letti tre numeri l, n e m scriva il numero più grande
+
+#### Esercizio 23: 
+Scrivere un programma python che letta una distanza da percorrere, letto quanta distanza una automobile copra per litro di carburante e letto il prezzo per litro del carburante calcoli e scriva la quantità di litri necessari a coprire la distanza e il costo da sostenere per coprire la distanza
+
+#### Esercizio 24: 
+Scrivere un programma che letti tre numeri calcoli se i tre numeri costituiscono una terna pitagorica e in caso positivo scriva: "I numeri costituiscono una terna pitagorica"
+
+#### Esercizio 25: 
+Scrivere un programma che letti tre numeri rappresentanti la lunghezza dei lati di un triangolo scriva se il triangolo è iscoscele, scaleno o equilatero.
+
+
