@@ -63,17 +63,20 @@ print("L’area del quadrato di lato ", lato, " vale ", area)
 scrivi un programma che letta una variabile intera calcoli l’area del cerchio che ha per raggio il valore appena richiesto.
 
 #### Esercizio 6: 
-scrivi un programma che letta una parola calcoli l’area del cerchio che ha per raggio il la lunghezza della parola appena richiesta
+Scrivi un programma Python legga un numero intero ad una cifra, calcoli il valore di n+nn+nnn e scriva il risultato.
 
 #### Esercizio 7: 
-scrivi un programma che letta una variabile intera indicante un tempo in ore, calcoli di quanti minuti è composto quel tempo
+scrivi un programma che letta una parola calcoli l’area del cerchio che ha per raggio il la lunghezza della parola appena richiesta
 
 #### Esercizio 8: 
+scrivi un programma che letta una variabile intera indicante un tempo in ore, calcoli di quanti minuti è composto quel tempo
+
+#### Esercizio 9: 
 scrivi un programma che letta una variabile intera indicante un tempo in ore, calcoli di quanti secondi è composto quel tempo
 
 Qualche volta bisogna richiedere in input dei valori in virgola mobile in quel caso si usa la funzione **float()**
 
-#### Esercizio 9: 
+#### Esercizio 10: 
 copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
 {% highlight python %}
@@ -86,13 +89,13 @@ print("L’area del quadrato di lato ", lato, " vale ", area)
     Operatori matematici:
     –, +, -, / (divisione), \* (moltiplicazione), \*\* (potenza), // (divisione intera), % (resto della divisione intera).
 
-#### Esercizio 10: 
+#### Esercizio 11: 
 scrivi un programma che letti due valori interi calcoli le operazioni che si ottengono utilizzando tutti gli operatori matematici elencati e scriva il risultato
 
-#### Esercizio 11: 
+#### Esercizio 12: 
 scrivi un programma che letti due valori a virgola mobile calcoli le operazioni che si ottengono utilizzando tutti gli operatori matematici elencati e scriva il risultato
 
-#### Esercizio 12: 
+#### Esercizio 13: 
 copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
 {% highlight python %}
@@ -106,14 +109,29 @@ print("Dopo  ", anni, " anni il capitale e’ ", round(capitalefinale, 2))
 
 La funzione **round(valore, cifra)** arrotonda un valore ad una certa cifra decimale.
 
-#### Esercizio 13: 
+#### Esercizio 14: 
 scrivi un programma che letta la distanza e il tempo calcoli la velocità di un corpo arrotondata alla terza cifra decimale. (Velocità = spazio / tempo)
 
-#### Esercizio 14: 
+#### Esercizio 15: 
 scrivi un programma che letto un numero rappresentante un valore imponibile calcoli l’iva e scriva il totale composto da imponibile sommato all’iva.
 
-#### Esercizio 15: 
+#### Esercizio 16: 
 scrivi un programma che letto un valore in euro scriva il valore di vecchie lire corrispondente. (1 euro = 1927,36 lire)
 
-#### Esercizio 16: 
+#### Esercizio 17: 
 scrivi un programma che letta una stringa di testo ed un numero intero, scriva la stringa di testo tante volte quanto è grande il numero.
+
+#### Esercizio 18: 
+Scrivi un programma Python che letto il raggio di una sfera ne calcoli il volume e scriva il risultato
+
+#### Esercizio 19: 
+Scrivi un programma Python che letto un numero capisca se è compreso tra 0 e 100 o tra 100 e 1000 o tra 1000 e 2000, e scriva l’intervallo di appartenenza.
+
+#### Esercizio 20: 
+Scrivi un programma Python che calcoli la somma di tre numeri interi, se i numeri sono uguali allora calcoli il triplo della somma e scriva il risultato.
+
+#### Esercizio 21: 
+Scrivi un programma Python che letti due numeri n e m scriva il numero più grande
+
+#### Esercizio 22: 
+Scrivi un programma Python che letti tre numeri l, n e m scriva il numero più grande

@@ -146,3 +146,93 @@ for lettera in saluto:
   else:
      print("consonante")
 {% endhighlight %}
+
+
+## Esercizi
+
+{% highlight python %}
+#Ricorda che:
+nome = input("Scrivi il tuo nome:") # ritorna sempre una stringa di testo
+len(nome)                           # ritorna la lunghezza della stringa
+print("#"*3)                        # scrive 3 volte il carattere #
+{% endhighlight %}
+
+#### Esercizio 1:
+Scrivi un programma Python che utilizzando la funzione print e il carattere asterisco legga 3 numeri e generi il relativo istogramma
+Es: input 3, 5, 6
+***
+*****
+******
+
+#### Esercizio 2:
+Scrivi un programma Python che lette due stringhe le scriva in ordine di lunghezza (prima la più corta)
+
+#### Esercizio 3:
+Scrivi un programma Python che lette tre stringhe le scriva in ordine di lunghezza (prima la più corta)
+
+#### Esercizio 4:
+Scrivi un programma Python che letta una stringa ne calcoli la lunghezza e la riscriva tante volta quanto è la sua lunghezza
+
+#### Esercizio 5:
+Scrivi un programma Python che lette due stringhe le scriva in ordine alfabetico [con le stringhe si possono utilizzare gli operatori < e >]
+
+#### Esercizio 6:
+Scrivi un programma Python che lette tre stringhe le scriva in ordine alfabetico
+
+#### Esercizio 7:
+Scrivi un programma Python che letto un numero intero n e una stringa s scriva la stringa s solo se la sua lunghezza è maggiore di n
+
+#### Esercizio 8:
+Tabella di tracciamento
+{% highlight python %}
+S="mandolino"
+C=1
+K=""
+while C <= len(S):
+      If C > 10:
+          K = "X"
+      else:
+          K = "P"
+     C=C+1
+print(K)
+{% endhighlight %}
+
+#### Esercizio 9:
+Scrivi un programma python che visiti una stringa di testo e scriva sul display “vocale” ogni volta che incontra una vocale e “consonante” ogni volta che incontra una consonante.
+
+
+#### Esercizio 10:
+Scrivi un programma python che legga due stringhe di testo e componga una nuova stringa di testo alternando i caratteri delle stringhe inziali.
+Esempio
+Str1: casa
+Str2: rosa
+Output: craossaa
+
+#### Esercizio 11:
+Scrivi un programma python che letta una stringa di testo conti quante vocali ci sono al suo interno.
+
+#### Esercizio 12:
+Scrivi un programma python che letta una stringa di testo crei una nuova stringa che sostituisca tutte le S della strina letta (maiuscole e minuscole) con il carattere $ e tutte le E (maiuscole e minuscole) con il carattere €.
+
+
+
+
+
+
+
+#### Esercizio 1:
+Scrivi un programma python che letto un numero calcoli la somma delle cifre che lo compongono. 
+Es input = 124 output = 7
+
+#### Esercizio n:
+Scrivi un programma python che crei una stringa di 10 vocali estratte casualmente e conti il numero di occorrenze di A al suo interno
+
+
+#### Esercizio n:
+Generatore di password: Crea un programma che generi una password a lunghezza variabile casuale compresa tra 8 e 25
+
+#### Esercizio n:
+Generatore di 10 password: Crea un programma che generi 10 password a lunghezza variabile casuale compresa tra 8 e 25
+
+#### Esercizio n:
+Scrivi un programma che letta una stringa di testo messaggio ed un numero intero k (compreso tra 1 e 25) applichi alla stringa di testo messaggio l'algoritmo del cifrario di Cesare con chiave k.

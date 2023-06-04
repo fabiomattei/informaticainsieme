@@ -135,3 +135,13 @@ Se le paste sono più di 40 ma meno di 60 il prezzo è di 0.8 euro per pasta Se 
 il prezzo è di 0.6 euro per pasta Scrivi il programma che aiuta il panettiere a calcolare l'ammontare che 
 Simona dovrà pagare.
 
+#### Esercizio 18:
+Tenendo conto degli scaglioni fiscali definiti correntemente:
+0 -15000: 23%
+15001 - 28000: 25%
+28001 - 50000: 35%
+50001 in su: 43%.
+Scrivere un programma che letto il reddito di 5 cittadini italiani calcoli l'ammontare delle tasse che ciascun cittadino deve pagare ed il totale pagato da tutti i cittadini.
+
+
+

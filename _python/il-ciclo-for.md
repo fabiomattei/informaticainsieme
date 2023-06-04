@@ -210,3 +210,6 @@ scrivi un programma python che utilizzando due cicli for scriva la tabellina del
 
 #### Esercizio 20:
 scrivi un programma python che trovi i numeri primi compresi tra 1 e 100000.
+
+#### Esercizio 21:
+Scrivere un ciclo che continui a leggere valori interi digitati dall’utente e a sommarli fino all’immissione del quinto numero pari. Scrivere la somma ottenuta.
