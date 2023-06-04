@@ -150,13 +150,6 @@ for lettera in saluto:
 
 ## Esercizi
 
-{% highlight python %}
-#Ricorda che:
-nome = input("Scrivi il tuo nome:") # ritorna sempre una stringa di testo
-len(nome)                           # ritorna la lunghezza della stringa
-print("#"*3)                        # scrive 3 volte il carattere #
-{% endhighlight %}
-
 #### Esercizio 1:
 Scrivi un programma Python che utilizzando la funzione print e il carattere asterisco legga 3 numeri e generi il relativo istogramma
 Es: input 3, 5, 6
@@ -164,11 +157,15 @@ Es: input 3, 5, 6
 *****
 ******
 
+{% highlight python %}
+#Ricorda che:
+nome = input("Scrivi il tuo nome:") # ritorna sempre una stringa di testo
+len(nome)                           # ritorna la lunghezza della stringa
+print("#"*3)                        # scrive 3 volte il carattere #
+{% endhighlight %}
+
 #### Esercizio 2:
 Scrivi un programma Python che lette due stringhe le scriva in ordine di lunghezza (prima la più corta)
-
-#### Esercizio 3:
-Scrivi un programma Python che lette tre stringhe le scriva in ordine di lunghezza (prima la più corta)
 
 #### Esercizio 4:
 Scrivi un programma Python che letta una stringa ne calcoli la lunghezza e la riscriva tante volta quanto è la sua lunghezza
@@ -220,19 +217,19 @@ Scrivi un programma python che letta una stringa di testo crei una nuova stringa
 
 
 
-#### Esercizio 1:
+#### Esercizio 13:
 Scrivi un programma python che letto un numero calcoli la somma delle cifre che lo compongono. 
 Es input = 124 output = 7
 
-#### Esercizio n:
+#### Esercizio 14:
 Scrivi un programma python che crei una stringa di 10 vocali estratte casualmente e conti il numero di occorrenze di A al suo interno
 
 
-#### Esercizio n:
+#### Esercizio 15:
 Generatore di password: Crea un programma che generi una password a lunghezza variabile casuale compresa tra 8 e 25
 
-#### Esercizio n:
+#### Esercizio 16:
 Generatore di 10 password: Crea un programma che generi 10 password a lunghezza variabile casuale compresa tra 8 e 25
 
-#### Esercizio n:
+#### Esercizio 17:
 Scrivi un programma che letta una stringa di testo messaggio ed un numero intero k (compreso tra 1 e 25) applichi alla stringa di testo messaggio l'algoritmo del cifrario di Cesare con chiave k.

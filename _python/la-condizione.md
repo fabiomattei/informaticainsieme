@@ -122,10 +122,13 @@ Scrivere un programma che letto il consumo mensile calcoli e stampi l’importo 
 
 #### Esercizio 16:
 Scrivi un programma python che legga il valore di una spesa e calcoli lo sconto secondo la seguente tabella:
-Al di sotto di 100 euro nessuno sconto
-Tra 100 e 300 euro sconto del 10%
-Tra i 300 e i 500 euro sconto del 15%
-Tra i 500 e i 800 euro sconto del 20%
+
+| Spesa                |  Sconto        |
+|----------------------|----------------|
+| Al di sotto di 100 € | nessuno sconto |
+| Tra 100 e 300        | sconto del 10% |
+| Tra i 300 e i 500    | sconto del 15% |
+| Tra i 500 e i 800    | sconto del 20% |
 
 #### Esercizio 17:
 Simona deve comperare le paste per il suo bar. 
@@ -137,10 +140,14 @@ Simona dovrà pagare.
 
 #### Esercizio 18:
 Tenendo conto degli scaglioni fiscali definiti correntemente:
-0 -15000: 23%
-15001 - 28000: 25%
-28001 - 50000: 35%
-50001 in su: 43%.
+
+| Reddito         | Aliquota |
+|-----------------|----------|
+| 0 - 15000 €     | 23%      |
+| 15001 - 28000 € | 25%      |
+| 28001 - 50000 € | 35%      |
+| 50001 in su   € | 43%      |
+
 Scrivere un programma che letto il reddito di 5 cittadini italiani calcoli l'ammontare delle tasse che ciascun cittadino deve pagare ed il totale pagato da tutti i cittadini.
 
 
