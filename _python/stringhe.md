@@ -233,3 +233,79 @@ Generatore di 10 password: Crea un programma che generi 10 password a lunghezza 
 
 #### Esercizio 17:
 Scrivi un programma che letta una stringa di testo messaggio ed un numero intero k (compreso tra 1 e 25) applichi alla stringa di testo messaggio l'algoritmo del cifrario di Cesare con chiave k.
+
+
+#### Esercizio 18:
+Copia il seguente codice in un file python e gioca con il seguente videogioco:
+
+{% highlight python %}
+import random
+
+score = 0
+attempts = 0
+test_words = [
+    "ciao mondo",
+    "delfino",
+    "pizzelle",
+    "ciliegie",
+    "motorino"
+    ]
+    
+print ("""
+        Benvenuto nel gioco delle stringhe fatte a fette (slicing)!
+        
+        Questo gioco ti mostra una stringha e una piccola espressione di slicing
+        tu vinci insdovinando il risultato che l'espressione dovrebbe 
+        Restituire.
+        
+        Scrivi "x" nel prompt per usicre. (Non ci sono stringhe con la "x").
+    """)
+    
+while(1):
+    attempts += 1
+    word = test_words[ random.randrange(0,len(test_words)) ]
+    start = random.randrange(0,len(word))
+    end = random.randrange(0,len(word))
+    
+    if random.random() > 0.5:
+        start = start * -1
+    if random.random() > 0.5:
+        end = end * -1
+    
+    if start > 0 and end > 0 and start > end:
+        temp = start
+        start = end
+        end = temp
+        
+    if random.random() > 0.8:
+        start = None
+    if random.random() < 0.2:
+        end = None
+    
+    ans = word[start:end]
+    print (attempts, ": stringa = \"" + word + "\"")
+    print ("    Calcola: ")
+    if start == None:
+        print ("    stringa[:" + str(end) + "]\n")
+    elif end == None:
+        print ("    stringa[" + str(start) + ":]\n")
+    else:
+        print ("    stringa[" + str(start) + ":" + str(end) + "]\n")
+    
+    inpt = input("=> ")
+    if inpt == "x":
+        print ("    Fine!!!!")
+        print ("    ", score, " / ", attempts)
+        print ("\n")
+        break
+        
+    if inpt == ans:
+        score += 1
+        print ("    Successo! ... corretto: ", ans)
+        print ("    ", score, " / ", attempts)
+        print ("\n")
+    else:
+        print ("    Errore! ... la risposta corretta era: ", ans)
+        print ("    ", score, " / ", attempts)
+        print ("\n")
+{% endhighlight %}
