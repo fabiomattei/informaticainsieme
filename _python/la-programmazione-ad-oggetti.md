@@ -1,17 +1,15 @@
 ---
-id: 297
 title: 'La programmazione ad oggetti'
 date: '2020-02-09T07:36:40+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=297'
 ---
 
 ## Introduzione
 
 Nella programmazione procedurale distinguiamo tra dati, e funzioni. I primi costituiscono l’insieme delle informazioni su cui operiamo, le seconde costituiscono l’insieme degli algoritmi che operano sui dati. Nella programmazione tradizionale queste sono due entità distinte.
 
-Il kernel linux è custotuito da oltre 25 milioni di righe di codice scritte da 19000 programmatori, il progetto Libreoffice è custotuito da circa 10 milioni di righe di codice scritte da pidi 1800 programmatori.
+Il [kernel linux](https://github.com/torvalds/linux) è custituito da oltre 25 milioni di righe di codice scritte da 19000 programmatori, il progetto [Libreoffice](https://github.com/LibreOffice/core) è custituito da circa 10 milioni di righe di codice scritte da più di 1800 programmatori.
 
 Quando il codice diventa molto ampio si aprono problematiche come:
 
@@ -141,7 +139,63 @@ Quando si parla di incapsulamento si intendono due aspetti della progettazione d
 
 La particolarità della programmazione ad oggetti consiste nel creare gerarchie di classi che condividono metodi ed attributi al fine di permettere al programmatore di definire di volta in volta non l’intero ammontare di informazioni e algoritmi ma soltanto ciò che varia.
 
-Ad esempio potrei generalizzare la classe Alunno definita in precedenza nella sua classe padre Persona.
+Supponiamo di aver definito due classi Docente ed Alunno che definiscono il metodo **saluta** e il metodo **lavora**. Il metodo saluta è analogo per entrambe le classi mentre il metodo lavora è diverso.
+
+![Ereditarietà](/images/python/oggetti/ereditarieta1.png){:class="aside-image"}
+
+{% highlight python %}
+class Docente:
+    def __init__(self, nome, cognome):
+        """ Costruttore 
+        parametro nome string 
+        parametro cognome string 
+        """
+        self.nome = nome 
+        self.cognome = cognome
+        
+    def saluta(self):
+        """ Scrive una stringa di saluto 
+        return string
+        """
+    return "Ciao, mi chiamo " + self.nome + " " + self.cognome
+	
+    def lavora(self):
+        """ Scrive una stringa per spiegare cosa fa 
+        return string
+        """
+        print("Sto studiando")
+
+class Alunno:
+    def __init__(self, nome, cognome):
+        """ Costruttore 
+        parametro nome string 
+        parametro cognome string 
+        """
+        self.nome = nome 
+        self.cognome = cognome
+        
+    def saluta(self):
+        """ Scrive una stringa di saluto 
+        return string
+        """
+    return "Ciao, mi chiamo " + self.nome + " " + self.cognome
+	
+    def lavora(self):
+        """ Scrive una stringa per spiegare cosa fa 
+        return string
+        """
+        print("Sto studiando")
+{% endhighlight %}
+
+L'ereditarietà mi permette di astrarre in una classe genitore le informazioni e i metodi comuni in modo da rendere il codice molto più compatto. 
+
+Definiamo dunque la classe Persona che contiene gli attributi **nome** e **cognome** e contiene il metodo **saluta** comune sia alla classe Docente che alla classe Alunno.
+
+Quando vado a definire la classe Docente indico il fatto che questa eredita da Persona mettendo il nome della classe Persona tra parentesi di fianco al nome della classe Docente. A questo punto la classe Docente erediterà da Persona attributi e metodi e le sue implementazioni potranno utilizzare questi attributi e questi metodi ereditati come se fossero parte integrande della classe Docente. Mi comporto analogamente con la classe Alunno.
+
+Notiamo come il codice diventa più snello dato che non ho bisogno di definire due volte gli stessi metodi e gli stessi attributi riducendo la ridondanza del codice.
+
+![Ereditarietà](/images/python/oggetti/ereditarieta2.png){:class="aside-image"}
 
 {% highlight python %}
 class Persona:
@@ -158,39 +212,26 @@ class Persona:
         return string
         """
     return "Ciao, mi chiamo " + self.nome + " " + self.cognome
-{% endhighlight %}
-
-### Esempio: la scuola
-
-Se riprendo l'esempio precedente della scuola, posso fare un pochino di refactoring (modificare un codice senza variarne il comportamento) e posso definire la classe Studente in maniera più semplice, ereditando i metodi \_\_init\_\_ e saluta dalla classe padre. Per lo studente definisco il solo metodo lavora.
-
-{% highlight python %}
-class Studente(Persona):
+	
+class Docente(Persona):
     def lavora(self):
+        """ Scrive una stringa per spiegare cosa fa 
+        return string
+        """
         print("Sto studiando")
-        
-class Professore(Persona):
+class Alunno(Persona):
     def lavora(self):
-        print("Sto spiegando")
-    
+        """ Scrive una stringa per spiegare cosa fa 
+        return string
+        """
+        print("Sto studiando")
 {% endhighlight %}
 
-{% highlight python %}
-scuola = []
-scuola.append(Alunno("Mario", "Rossi")) 
-scuola.append(Alunno("Rita", "Morelli")) 
-scuola.append(Professore("Antonino", "Anile"))
-for persona in scuola: 
-    persona.lavora()
-{% endhighlight %}
-
-Le istanze di una sottoclasse possono essere utilizzate al posto delle istanze della superclasse. L’overriding dei metodi o delle proprietà permette che gli oggetti appartenenti alle sottoclassi di una stessa classe rispondano diversamente agli stessi utilizzi.
-
-Per esempio nell’esempio in alto abbiamo tre oggetti, i primi due appartenenti alla classe Alunno e il terzo appartenente alla classe Professore. Dato che tutti questi oggetti definiscono il metodo lavora è possibile scrivere un costrutto come quello contenuto nel ciclo for.
+Sulla destra vediamo i diagrammi UML delle classi. Questi diagrammi servono a rendere visibile la gerarchia delle classi e l'interfaccia di ciascuna classe. Ogni classe viene identificata da un rettangolo che si divide in tre sezioni. Nella prima sezione si mette il nome della classe, nella seconda i suoi attributi e nella terza i suoi metodi. L'ereditarietà si rappresenta con una freccia che dalla classe figlia va verso la classe 
 
 ## Polimorfismo 
 
-Il polimorfismo entra in atto quando ho oggetti di tipo differente (che appartengono a classi diverse) che hanno la stessa interfaccia.
+Si parla di polimorfismo quando ho oggetti di tipo differente (appartengono a classi diverse) che hanno la stessa interfaccia.
 
 Spieghiamo meglio il concetto: l'interfaccia di un oggetto (che ricordiamo è l'istanza di una classe) è rappresentata dai metodi che sono definiti nella sua classe. Quindi se due classi diverse, implementano soltanto metodi aventi lo stesso nome, con gli stessi parametri, allora le classi hanno la stessa interfaccia.
 
@@ -239,6 +280,22 @@ print(t1.calcola_area())       # invoco il metodo calcola_area() appartenente al
 print(t2.calcola_area())       # invoco il metodo calcola_area() appartenente all'istanza t2 della classe Triangolo
 print(r1.calcola_area())       # invoco il metodo calcola_area() appartenente all'istanza r1 della classe Rettangolo
 {% endhighlight %}
+
+### Esempio: la scuola
+
+{% highlight python %}
+scuola = []
+scuola.append(Alunno("Mario", "Rossi")) 
+scuola.append(Alunno("Rita", "Morelli")) 
+scuola.append(Professore("Antonino", "Anile"))
+for persona in scuola: 
+    persona.lavora()
+{% endhighlight %}
+
+Le istanze di una sottoclasse possono essere utilizzate al posto delle istanze della superclasse. L’overriding dei metodi o delle proprietà permette che gli oggetti appartenenti alle sottoclassi di una stessa classe rispondano diversamente agli stessi utilizzi.
+
+Per esempio nell’esempio in alto abbiamo tre oggetti, i primi due appartenenti alla classe Alunno e il terzo appartenente alla classe Professore. Dato che tutti questi oggetti definiscono il metodo lavora è possibile scrivere un costrutto come quello contenuto nel ciclo for.
+
 
 ## Composizione
 
