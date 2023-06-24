@@ -160,7 +160,9 @@ class Persona:
     return "Ciao, mi chiamo " + self.nome + " " + self.cognome
 {% endhighlight %}
 
-A questo punto definisco la classe Studente in maniera più semplice, ereditando i metodi \_\_init\_\_ e saluta dalla classe padre. Per lo studente definisco il solo metodo lavora.
+### Esempio: la scuola
+
+Se riprendo l'esempio precedente della scuola, posso fare un pochino di refactoring (modificare un codice senza variarne il comportamento) e posso definire la classe Studente in maniera più semplice, ereditando i metodi \_\_init\_\_ e saluta dalla classe padre. Per lo studente definisco il solo metodo lavora.
 
 {% highlight python %}
 class Studente(Persona):
@@ -173,8 +175,6 @@ class Professore(Persona):
     
 {% endhighlight %}
 
-## Polimorfismo 
-
 {% highlight python %}
 scuola = []
 scuola.append(Alunno("Mario", "Rossi")) 
@@ -184,9 +184,57 @@ for persona in scuola:
     persona.lavora()
 {% endhighlight %}
 
-Il polimorfismo entra in atto quando ho oggetti di tipo differente (che appartengono a classi diverse) che hanno la stessa interfaccia. Le istanze di una sottoclasse possono essere utilizzate al posto delle istanze della superclasse. L’overriding dei metodi o delle proprietà permette che gli oggetti appartenenti alle sottoclassi di una stessa classe rispondano diversamente agli stessi utilizzi.
+Le istanze di una sottoclasse possono essere utilizzate al posto delle istanze della superclasse. L’overriding dei metodi o delle proprietà permette che gli oggetti appartenenti alle sottoclassi di una stessa classe rispondano diversamente agli stessi utilizzi.
 
 Per esempio nell’esempio in alto abbiamo tre oggetti, i primi due appartenenti alla classe Alunno e il terzo appartenente alla classe Professore. Dato che tutti questi oggetti definiscono il metodo lavora è possibile scrivere un costrutto come quello contenuto nel ciclo for.
+
+## Polimorfismo 
+
+Il polimorfismo entra in atto quando ho oggetti di tipo differente (che appartengono a classi diverse) che hanno la stessa interfaccia.
+
+Spieghiamo meglio il concetto: l'interfaccia di un oggetto (che ricordiamo è l'istanza di una classe) è rappresentata dai metodi che sono definiti nella sua classe. Quindi se due classi diverse, implementano soltanto metodi aventi lo stesso nome, con gli stessi parametri, allora le classi hanno la stessa interfaccia.
+
+### Esempio: geometria 
+
+{% highlight python %}
+class Triangolo:
+    def __init__(self, base, altezza):
+        """Costruttore della classe Triangolo"""	
+        self.base = base
+        self.altezza = altezza
+    
+    def calcola_area(self):
+        """Metodo che restituisce larea del triangolo"""	
+        return self.base * self.altezza / 2
+{% endhighlight %}
+
+
+{% highlight python %}
+class Rettangolo:
+    def __init__(self, base, altezza):
+        """Costruttore della classe Rettangolo"""	
+        self.base = base
+        self.altezza = altezza
+    
+    def calcola_area(self):
+        """Metodo che restituisce larea del triangolo"""	
+        return self.base * self.altezza
+{% endhighlight %}
+
+Notiamo che le classi appena definite implementano metodi con lo stesso nome e con gli stessi parametri, dunque hanno la stessa interfaccia.
+
+A questo punto nel **main** posso scrivere:
+
+
+{% highlight python %}
+t1 = Triangolo(2, 4)   # creo una istanza di Triangolo
+t2 = Triangolo(2, 6)   # creo una seconda istanza di Triangolo
+r1 = Rettangolo(2, 3)  # creo una seconda istanza di Rettangolo
+
+print(t1.calcola_area())       # invoco il metodo calcola_area() appartenente all'istanza t1 della classe Triangolo
+print(t2.calcola_area())       # invoco il metodo calcola_area() appartenente all'istanza t2 della classe Triangolo
+print(r1.calcola_area())       # invoco il metodo calcola_area() appartenente all'istanza r1 della classe Rettangolo
+{% endhighlight %}
 
 ## Composizione
 
