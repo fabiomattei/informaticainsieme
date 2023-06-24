@@ -252,7 +252,27 @@ class Alunno(Persona):
         return "Sto frequentando la classe " + self.classe
 {% endhighlight %}
 
-Sulla destra vediamo i diagrammi UML delle classi. Questi diagrammi servono a rendere visibile la gerarchia delle classi e l'interfaccia di ciascuna classe. Ogni classe viene identificata da un rettangolo che si divide in tre sezioni. Nella prima sezione si mette il nome della classe, nella seconda i suoi attributi e nella terza i suoi metodi. L'ereditarietà si rappresenta con una freccia che dalla classe figlia va verso la classe 
+Sulla destra vediamo i diagrammi UML delle classi. Questi diagrammi servono a rendere visibile la gerarchia delle classi e l'interfaccia di ciascuna classe. Ogni classe viene identificata da un rettangolo che si divide in tre sezioni. Nella prima sezione si mette il nome della classe, nella seconda i suoi attributi e nella terza i suoi metodi. L'ereditarietà si rappresenta con una freccia che dalla  classe figlia va verso la classe.
+
+A questo punto posso definire il main in questo modo:
+
+{% highlight python %}
+mario = Alunno("Mario", "Rossi", "4C")
+rosa = Alunno("Rosa", "Verdi", "3C")
+armando = Docente("Armando", "Bianchi", "Filosofia")
+
+print(mario.saluta())
+print(mario.lavora())
+
+print(rosa.saluta())
+print(rosa.lavora())
+
+print(armando.saluta())
+print(armando.lavora())
+{% endhighlight %}
+
+
+
 
 ## Polimorfismo 
 
