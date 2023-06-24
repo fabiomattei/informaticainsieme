@@ -194,6 +194,10 @@ Il polimorfismo entra in atto quando ho oggetti di tipo differente (che apparten
 
 Spieghiamo meglio il concetto: l'interfaccia di un oggetto (che ricordiamo è l'istanza di una classe) è rappresentata dai metodi che sono definiti nella sua classe. Quindi se due classi diverse, implementano soltanto metodi aventi lo stesso nome, con gli stessi parametri, allora le classi hanno la stessa interfaccia.
 
+I metodi che vengono ridefiniti in una sottoclasse sono detti **polimorfi**, in quanto lo stesso metodo si comporta diversamente a seconda della classe a cui appartiene l'oggetto dal quale è invocato. 
+
+L'iterfaccia di una classe definisce un **contratto** generale che sottoclassi diverse possono soddisfare in modi diversi.
+
 ### Esempio: geometria 
 
 {% highlight python %}
