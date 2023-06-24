@@ -190,10 +190,79 @@ Per esempio nell’esempio in alto abbiamo tre oggetti, i primi due appartenenti
 
 ## Composizione
 
-Negli esempi che abbiamo visto finora gli attributi  
-delle classi erano variabili di tipo primitivo è però possibile definire come attributi dei riferimenti ad oggetti di un’altra classe.  
-In questo modo abbiamo oggetti composti da altri  
-oggetti.
+Negli esempi che abbiamo visto finora gli attributi delle classi erano variabili di tipo primitivo è però possibile definire come attributi dei riferimenti ad oggetti di un’altra classe. In questo modo abbiamo oggetti composti da altri oggetti.
+
+### Esempio: l'appartamento
+
+![Appartamento](/images/python/oggetti/appartamento.png){:class="aside-image"}
+
+Facciamo un esempio. Immaginiamo di voler calcolare la superficie di un appartamento. L'Appartamento, visibile in piantina è composto da due camere da letto, un bagno una cucina ed un salotto. Il tutto è collegato da un corridoio centrale.
+
+Se ci pensiamo un attimo notiamo che tutti questi ambienti, sono schematizzabili come rettangoli. Possiamo dunque definire una classe in questo modo:
+
+{% highlight python %}
+class Stanza:
+    def __init__(self, nome, lunghezza, larghezza):
+        """Costruttore della classe Stanza"""	
+        self.nome = nome
+        self.lunghezza = lunghezza
+        self.lunghezza = larghezza
+    
+    def calcola_superficie(self, studente):
+        """Metodo che restituisce la superficie della stanza"""	
+        return self.lunghezza * self.larghezza
+{% endhighlight %}
+
+La nostra classe **Stanza** possiede tre attributi: il nome, la lunghezze e la larghezza. Una stanza è inoltre in grado di **calcolare la sua superficie** attraverso un metodo che restituisce il prodotto dell'attributo larghezza moltiplicato per l'attributo lunghezza.
+
+A questo punto possiamo implementare l'appartamento come un contenitore di stanze:
+
+{% highlight python %}
+class Appartamento:
+    def __init__(self, indirizzo):
+        """Costruttore della classe Appartamento"""	
+        self.indirizzo = indirizzo
+        self.stanze = []
+    
+    def aggiungi_stanza(self, stanza):
+        """Questo metodo aggiunge la stanza passata come parametro
+        alla lista di stanze contenute nell'appartamento"""
+        self.stanze.append(stanza)
+
+    def calcola_superficie(self):
+        """Calcola la superficie dell'intero appartamento
+        sommando tra loro le superfici delle singole stanze"""	
+        superficie = 0
+        for stanza in self.stanze:
+            superficie = superficie + stanza.calcola_superficie()
+        return superficie
+{% endhighlight %}
+
+A questo punto possiamo implementare il **main** in questo modo:
+
+{% highlight python %}
+appartamentomio = Appartamento("via Mazzini, 22") # creo una istanza di appartamento
+camera_grande = Stanza("Camera grande", 5, 5)     # creo una istanza di stanza per la camera grande
+camera_piccola = Stanza("Camera piccola", 4, 5)   # creo una istanza di stanza per la camera piccola
+bagno = Stanza("Bagno", 4, 2)                     # creo una istanza di stanza per il bagno
+cucina = Stanza("Cucina", 4, 2)                   # creo una istanza di stanza per la cucina
+salotto = Stanza("Salotto", 4, 2)                 # creo una istanza di stanza per il salotto
+appartamentomio.aggiungi_stanza(camera_grande)    # aggiungo la camera grande al mio appartamento
+appartamentomio.aggiungi_stanza(camera_piccola)
+appartamentomio.aggiungi_stanza(bagno)
+appartamentomio.aggiungi_stanza(cucina)
+appartamentomio.aggiungi_stanza(salotto)
+
+print(appartamentomio.calcola_superficie())       # invoco il metodo calcola_superficie() dell'appartamento e scrivo il risultato
+{% endhighlight %}
+
+Possiamo notare come inizialmente vado a creare una istanza di appartamento invocando il suo costruttore e fornendo a questo una stringha di testo che rappresenta l'indirizzo.
+Vado poi a creare una istanza di stanza per ogni stanza. Per ognuna di questa invoco il relativo costruttore fornendo un nome alla stanza, e la sua lunghezza e la larghezza.
+Possiamo notare come questa struttura realizzi nella memoria del computer una struttura di dati che **modellizza** la struttura reale.
+
+A questo punto vado a sfruttare la composizione per calcolare l'area dell'appartamento.
+
+### Esempio: la scuola
 
 Creiamo una classe scuola che contenga al suo interno una lista di studenti, una lista di professori, una lista di persone che compongono il personale ATA ed un preside.
 
