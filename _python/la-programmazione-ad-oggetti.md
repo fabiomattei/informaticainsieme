@@ -47,13 +47,13 @@ class Cerchio:
         """ Calcola l'area del cerchio 
         return float
         """ 
-        return self.raggio ** 2 * self.pigreco
+        return self.raggio ** 2 * pigreco
         
     def calcola_circonferenza(self):
         """ Calcola la circonferenza del cerchio 
         return float
         """ 
-        return 2 * self.pigreco * self.raggio
+        return 2 * pigreco * self.raggio
 {% endhighlight %}
 
 La classe Cerchio ha un **attributo di classe** chiamato *pigreco*. È un attributo di classe perchè ha lo stesso valore per tutte le istanze della classe.
@@ -137,61 +137,67 @@ Quando si parla di incapsulamento si intendono due aspetti della progettazione d
 
 ## Ereditarietà 
 
-La particolarità della programmazione ad oggetti consiste nel creare gerarchie di classi che condividono metodi ed attributi al fine di permettere al programmatore di definire di volta in volta non l’intero ammontare di informazioni e algoritmi ma soltanto ciò che varia.
+La programmazione ad oggetti permette di creare gerarchie di classi che condividono metodi ed attributi al fine di permettere al programmatore di definire di volta in volta non l’intero ammontare di informazioni e algoritmi ma soltanto ciò che varia.
 
-Supponiamo di aver definito due classi Docente ed Alunno che definiscono il metodo **saluta** e il metodo **lavora**. Il metodo saluta è analogo per entrambe le classi mentre il metodo lavora è diverso.
+Supponiamo di aver definito due classi Docente ed Alunno che definiscono il metodo **saluta** e il metodo **lavora**. Il metodo saluta è analogo per entrambe le classi mentre il metodo lavora è diverso. Entrambe le classi contengono gli attributi nome e cognome ma la classe Docente contiene l'attributo materia mentre la classe Alunno contiene l'attributo classe.
 
 ![Ereditarietà](/images/python/oggetti/ereditarieta1.png){:class="aside-image"}
 
 {% highlight python %}
 class Docente:
-    def __init__(self, nome, cognome):
+    def __init__(self, nome, cognome, materia):
         """ Costruttore 
         parametro nome string 
         parametro cognome string 
+        parametro materia string 
         """
         self.nome = nome 
         self.cognome = cognome
+        self.materia = materia
         
     def saluta(self):
         """ Scrive una stringa di saluto 
         return string
         """
-    return "Ciao, mi chiamo " + self.nome + " " + self.cognome
+        return "Ciao, mi chiamo " + self.nome + " " + self.cognome
 	
     def lavora(self):
         """ Scrive una stringa per spiegare cosa fa 
         return string
         """
-        print("Sto studiando")
+        return "Sto insegnando " + self.materia
 
 class Alunno:
-    def __init__(self, nome, cognome):
+    def __init__(self, nome, cognome, classe):
         """ Costruttore 
         parametro nome string 
         parametro cognome string 
+        parametro classe string 
         """
         self.nome = nome 
         self.cognome = cognome
+        self.classe = classe
         
     def saluta(self):
         """ Scrive una stringa di saluto 
         return string
         """
-    return "Ciao, mi chiamo " + self.nome + " " + self.cognome
+        return "Ciao, mi chiamo " + self.nome + " " + self.cognome
 	
     def lavora(self):
         """ Scrive una stringa per spiegare cosa fa 
         return string
         """
-        print("Sto studiando")
+        return "Sto frequentando la classe " + self.classe
 {% endhighlight %}
 
 L'ereditarietà mi permette di astrarre in una classe genitore le informazioni e i metodi comuni in modo da rendere il codice molto più compatto. 
 
-Definiamo dunque la classe Persona che contiene gli attributi **nome** e **cognome** e contiene il metodo **saluta** comune sia alla classe Docente che alla classe Alunno.
+Definiamo dunque la classe Persona che contiene gli attributi **nome** e **cognome** e contiene il metodo **saluta**. Sono stati scelti questi attributi e questo metodo perché comuni sia alla classe Docente che alla classe Alunno.
 
 Quando vado a definire la classe Docente indico il fatto che questa eredita da Persona mettendo il nome della classe Persona tra parentesi di fianco al nome della classe Docente. A questo punto la classe Docente erediterà da Persona attributi e metodi e le sue implementazioni potranno utilizzare questi attributi e questi metodi ereditati come se fossero parte integrande della classe Docente. Mi comporto analogamente con la classe Alunno.
+
+Notiamo che il costruttore della classe docente è un po' diverso dal solito. Questo avviene perché vado a richiamare al suo interno il costruttore della classe padre in modo da non implementare due volte l'assegnazione degli attributi nome e cognome.
 
 Notiamo come il codice diventa più snello dato che non ho bisogno di definire due volte gli stessi metodi e gli stessi attributi riducendo la ridondanza del codice.
 
@@ -211,20 +217,39 @@ class Persona:
         """ Scrive una stringa di saluto 
         return string
         """
-    return "Ciao, mi chiamo " + self.nome + " " + self.cognome
+        return "Ciao, mi chiamo " + self.nome + " " + self.cognome
 	
 class Docente(Persona):
+    def __init__(self, nome, cognome, materia):
+        """ Costruttore 
+        parametro nome string 
+        parametro cognome string 
+        parametro materia string 
+        """
+        super().__init__(nome, cognome)
+        self.materia = materia
+		
     def lavora(self):
         """ Scrive una stringa per spiegare cosa fa 
         return string
         """
-        print("Sto studiando")
+        return "Sto insegnando " + self.materia
+		
 class Alunno(Persona):
+    def __init__(self, nome, cognome, classe):
+        """ Costruttore 
+        parametro nome string 
+        parametro cognome string 
+        parametro classe string 
+        """
+        super().__init__(nome, cognome)
+        self.classe = classe
+		
     def lavora(self):
         """ Scrive una stringa per spiegare cosa fa 
         return string
         """
-        print("Sto studiando")
+        return "Sto frequentando la classe " + self.classe
 {% endhighlight %}
 
 Sulla destra vediamo i diagrammi UML delle classi. Questi diagrammi servono a rendere visibile la gerarchia delle classi e l'interfaccia di ciascuna classe. Ogni classe viene identificata da un rettangolo che si divide in tre sezioni. Nella prima sezione si mette il nome della classe, nella seconda i suoi attributi e nella terza i suoi metodi. L'ereditarietà si rappresenta con una freccia che dalla classe figlia va verso la classe 
