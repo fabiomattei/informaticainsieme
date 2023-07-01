@@ -5,7 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
-L'algoritmo di Dijkstra trova il cammino più breve che collega un nodo radice ad ogni altro nodo del grafo. Nel nostro esempio utilizzereemo un grafo orientato pesato, ogni arco ha una direzione ed un peso.
+L'algoritmo di Dijkstra trova il cammino più breve che collega un nodo radice ad ogni altro nodo del grafo. Nel nostro esempio utilizzeremo un grafo non orientato pesato, ogni arco ha in effetti un peso ma non ha una direzione di percorrenza.
 
 L'agoritmo di Dijkstra ha molti utilizzi. Può essere utilizzato per calcolare il percorso su di una mappa. Inoltre è utilizzato per:
 
