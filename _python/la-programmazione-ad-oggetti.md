@@ -135,6 +135,14 @@ Quando si parla di incapsulamento si intendono due aspetti della progettazione d
 - mettere insieme informazioni e metodi logicamente connessi in una classe;
 - nascondere i dettagli implementativi al di fuori della classe stessa.
 
+In effetti l'incapsulamento è proprio legato al concetto di **impacchettare**. Si impacchettano all'interno di una classe i dati e le azioni che sono riconducibili ad un singolo componente.
+
+Un altro modo di guardare all'incapsulamento, che abbiamo già accennato, è quello di pensare a suddividere un'applicazione in piccole parti (le classi) che raggruppano al loro interno alcune funzionalità legate tra loro.
+
+Pensiamo ad esempio all'automobile. Una automobile possiende delle proprietà come: nome, modello, azienda produttruce, tipo di motore, cilindrata ecc. L'automobile inoltre può fare della azioni come: apri le porte, spostati, fai scattare l'allarme ecc. Queste proprietà e questi metodi, dato cono sono **correlati**, sono insieme all'interno della classe Automobile. L'effetto è che tutto è raccolto quindi quando si dovrà fare manutenzione e modificare la classe, si saprà dove andare ad intervenire. 
+
+Manutenere un software è normalmente più difficoltoso che costruirlo. E' bene che attributi e dati siano vicini per evitare il problema della **duplicazione**. La duplicazione dei metodi e degli attributi è molto pericolosa. E' possibile che nel tempo ci si dimentichi di due metodi **gemelli** e se ne aggiorni uno solo inserendo immancabilmente bug nel codice.
+
 ## Ereditarietà 
 
 La programmazione ad oggetti permette di creare gerarchie di classi che condividono metodi ed attributi al fine di permettere al programmatore di definire di volta in volta non l’intero ammontare di informazioni e algoritmi ma soltanto ciò che varia.
