@@ -73,31 +73,33 @@ Dopo aver rivalutato tutte le distanze vado a selezionare il nodo, **non ancora 
 ![Dijkstra: aggiungo nodo C](/images/algoritmi/dijkstra/dijkstra04.png){:class="aside-image"}
 
 Una volta aggiunto il nodo B rivaluto le distanze dei vicini di C non ancora visitati.
-Noto che da C è raggiungibile D a costo 3. Dato che arrivare a C ha costo 4, il costo complessivo sarebbe 7. Al momento il costo per arrivare a D passando per E è 10 quindi il percorso che passa per C è conveniente.
-Da C è raggiungibile B a costo 6. Dato che arrivare a C ha costo 4, il costo complessivo per arrivare a B passando da C sarebbe 10. Tuttavia è già possibile arrivare a B con un costo minore, quindi scarto questa possibilità.
 
+Noto che da B è raggiungibile D a costo 4. Dato che arrivare a C ha costo 5, il costo complessivo per andare da A a D, secondo questo nuovo percroso, è pari a 7. Al momento il costo per arrivare a D è 10 quindi il percorso appena trovato è più conveniente. Vado ad aggiornare allora la tabella.
 
-| Nodo | Distanza minima | Predecessore | Visitato |
-| ---- | --------------- | ------------ | -------- |
-| A    | 0               | no           | Si       |
-| B    | 5               | E            |          |
-| C    | 4               | E            | Si       |
-| D    | 7               | C            |          |
-| E    | 3               | A            | Si       |
+Da B è raggiungibile C a costo 6. Dato che arrivare a C ha costo 5, il costo complessivo per arrivare da A a C secondo questo nuovo percorso sarebbe 11. Tuttavia è già possibile arrivare a B con un costo minore pari a 7 quindi scarto questa possibilità.
 
-Per andare al passo successivo guardo tutti i nodi rimasti e scelgo quello a costo minore. Sono rimasti B e D e il costo minore è rappresentato da B.
-
-![Dijkstra: aggiungo nodo B](/images/algoritmi/dijkstra/dijkstra05.png){:class="aside-image"}
-
-Una volta in B rivaluto le distanze dei suoi vicini non visitati.
-L'unico rimasto è il nodo D che è distante 4 da B. Dato che arrivare a B mi è costato 5 il costo complessivo per arrivare a D passando per B sarebbe 9. Tuttavia il costo attuale di B è minore di 9 quindi non cambio nulla nella tabella.
 
 | Nodo | Distanza minima | Predecessore | Visitato |
 | ---- | --------------- | ------------ | -------- |
 | A    | 0               | no           | Si       |
 | B    | 5               | E            | Si       |
-| C    | 4               | E            | Si       |
-| D    | 7               | C            |          |
+| C    | 7               | E            |          |
+| D    | 10              | C            |          |
+| E    | 3               | A            | Si       |
+
+Per andare al passo successivo guardo tutti i nodi rimasti e scelgo quello a costo minore. Sono rimasti C e D e il costo minore è rappresentato da C pari a 7.
+
+![Dijkstra: aggiungo nodo B](/images/algoritmi/dijkstra/dijkstra05.png){:class="aside-image"}
+
+Una volta in C rivaluto le distanze dei suoi vicini non visitati.
+L'unico rimasto è il nodo D che è distante 3 da D. Dato che arrivare a C mi è costato 7 il costo complessivo per arrivare a D passando per B sarebbe 10. Ma questo non migliora il 10 già calcolato in precedenza, quindi non ricevo benefici e scarto questa ipotesi.
+
+| Nodo | Distanza minima | Predecessore | Visitato |
+| ---- | --------------- | ------------ | -------- |
+| A    | 0               | no           | Si       |
+| B    | 5               | E            | Si       |
+| C    | 7               | E            | Si       |
+| D    | 10              | C            |          |
 | E    | 3               | A            | Si       |
 
 ![Dijkstra: aggiungo nodo D](/images/algoritmi/dijkstra/dijkstra06.png){:class="aside-image"}
@@ -110,8 +112,8 @@ Ecco dunque la tabella indicante le distanze minime a partire dal nodo A.
 | ---- | --------------- | ------------ | -------- |
 | A    | 0               | no           | Si       |
 | B    | 5               | E            | Si       |
-| C    | 4               | E            | Si       |
-| D    | 7               | C            | Si       |
+| C    | 7               | E            | Si       |
+| D    | 10              | C            | Si       |
 | E    | 3               | A            | Si       |
 
 L'algoritmo di Dijkstra è stato completato.
