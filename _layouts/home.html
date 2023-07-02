@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <div class="home-page-posts">
+	  {{ content }}
+  </div>
+  
+  <div class="home-page-posts">
+	  <div class="home-posts">
+		  {%- if site.codifica.size > 0 -%}
+		    <h2 class="post-list-heading">{{ page.list_title | default: "La codifica dell'informazione" }}</h2>
+		      {%- for post in site.codifica -%}
+		        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+		          <a class="post-link" href="{{ post.url | relative_url }}">
+		            {{ post.title | escape }}
+		          </a>
+		        {%- if site.show_excerpts -%}
+		          {{ post.excerpt }}
+		        {%- endif -%}
+		      {%- endfor -%}
+		  {%- endif -%}
+	  </div>
+	  <div class="home-tutorials">
+		  {%- if site.python.size > 0 -%}
+		    <h2 class="post-list-heading">{{ page.list_title | default: "Python" }}</h2>
+			  {% assign items = site.python | sort: 'orderfield' %}
+		      {%- for post in items -%}
+		          <a class="post-link" href="{{ post.url | relative_url }}">
+		            {{ post.title | escape }}
+		          </a>
+		        {%- if site.show_excerpts -%}
+		          {{ post.excerpt }}
+		        {%- endif -%}
+		      {%- endfor -%}
+		  {%- endif -%}
+	  </div>
+  </div>
+
+</div>

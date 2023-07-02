@@ -1,13 +1,12 @@
 ---
 id: 558
-title: 'La codifica dell&#8217;informazione'
+title: La codifica dell'informazione
 date: '2020-10-07T00:08:33+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=558'
 ---
 
-Ciascun calcolatore memorizza ed elabora informazione. Queste informazioni possono essere testi, immagini, filmati o suoni.
+Ciascun calcolatore memorizza ed elabora informazioni. Queste informazioni possono essere testi, immagini, filmati o suoni.
 
 <figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/10/bit-0-1.jpg)</figure>Per rappresentare tutta l’informazione il computer utilizza soltanto due simboli: 0 zero, 1 uno.
 
