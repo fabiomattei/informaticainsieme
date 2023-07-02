@@ -1,10 +1,8 @@
 ---
-id: 322
 title: Database
 date: '2020-02-10T06:20:07+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=322'
 ---
 
 L’archiviazione e il reperimento delle informazioni rappresentano una delle maggiori risposte che l’informatica ha saputo dare alle aziende e alle istituzioni.
@@ -15,7 +13,7 @@ Le basi di dati rispondono al problema di poter momorizzare **grandi** moli di d
 
 Gli arogmenti del nostro studio saranno:
 
-- [Modello Entità-Relazione](https://www.esercizidiinformatica.it/modello-entita-relazione/)
-- [Il linguaggio SQL](https://www.esercizidiinformatica.it/il-linguaggio-sql/)
-- [SQLite e Python](https://www.esercizidiinformatica.it/sqlite-e-python/)
-- [MS Access](https://www.esercizidiinformatica.it/ms-access/)
+- [Il modello entità relazione]({{ site.baseurl }}{% link _database/modello-entita-relazione.md %}.html)
+- [Il linguaggio SQL]({{ site.baseurl }}{% link _database/il-linguaggio-sql.md %}.html)
+- [MS Access]({{ site.baseurl }}{% link _database/ms-access.md %}.html)
+- [SQLite e python]({{ site.baseurl }}{% link _database/sqlite-e-python.md %}.html)
