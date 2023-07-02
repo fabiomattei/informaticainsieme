@@ -1,17 +1,17 @@
 ---
-id: 725
 title: 'Linguaggio c++'
 date: '2021-10-10T22:33:00+02:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=725'
 ---
 
 Il linguaggio C++ è stato inventato da **Bjarne Stroustrup** nel 1985 per estendere il linguaggio C con la sintassi della programmazione orientata agli oggetti.
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/10/BjarneStroustrup.jpg)</figure>Il linguaggio C++ è estremamente efficiente. I campi di applicazione sono i più svariati: dal gaming alle applicazioni real-time, dai componenti per sistemi operativi ai software di grafica e musica, dalle app per cellulari ai sistemi per supercomputer. Praticamente, C++ è ovunque.
+![Nuova tabella in access](/images/cpp/BjarneStroustrup.jpg)
 
-Per esercitarci con il C++ utilizzeremo un [compilatore on line reperibile qui](https://www.onlinegdb.com/online_c++_compiler). E’ preferibile però scaricare l’ambiente della [bloodshed](http://bloodshed.net/).
+Il linguaggio C++ è estremamente efficiente. I campi di applicazione sono i più svariati: dal gaming alle applicazioni real-time, dai componenti per sistemi operativi ai software di grafica e musica, dalle app per cellulari ai sistemi per supercomputer. Praticamente, C++ è ovunque.
+
+Per esercitarci con il C++ utilizzeremo un [compilatore on line reperibile qui](https://www.onlinegdb.com/online_c++_compiler). E’ preferibile però scaricare l'ide istallabile su computer [CodeBlock](https://www.codeblocks.org/) oppure l’ambiente della [bloodshed](http://bloodshed.net/).
 
 Ecco un primo esempio di codice:
 
@@ -36,7 +36,7 @@ int main() {
 }
 {% endhighlight %}
 
-</div>Notiamo come la sintassi sia diversa dal Python ma non la logica.
+Notiamo come la sintassi sia diversa dal Python ma non la logica.
 
 Innanzi tutto, a differenza di Python, in linguaggio C++ le variabili vanno definite (o dichiarate) indicando il tipo a cui appartengono. In questo pezzetto di codice dichiariamo le variabili base, altezza e area di tipo intero.
 
@@ -67,7 +67,7 @@ int main() {
 }
 {% endhighlight %}
 
-</div>Utilizziamo lo stream di input **cin** per chiedere informazioni all’utente. cin va seguito dai caratteri **&gt;&gt;** seguiti dalla **variabile** che andrà a contenere l’informazione.
+Utilizziamo lo stream di input **cin** per chiedere informazioni all’utente. cin va seguito dai caratteri **&gt;&gt;** seguiti dalla **variabile** che andrà a contenere l’informazione.
 
 **Condizione**
 
@@ -91,7 +91,7 @@ int main() {
 }
 {% endhighlight %}
 
-</div>**L’iterazione**
+**L’iterazione**
 
 L’iterazione in C++ può essere definita con la sintassi for. In questo caso inizializziamo un contatore **i** a zero. Al centro va definita la condizione che verrà valutata a ogni inizio iterazione; se l’esito della condizione è positivo vengono eseguite le istruzioni all’interno del blocco di codice definito dalle parentesi graffe.
 
@@ -105,14 +105,14 @@ int main() {
     
     cout << "inizio ciclo for \n";
     for (int i = 0; i < 10; i++) {
-       cout << "i vale: " << i << "\n";    
+       cout << "i vale: " << i << "\n";
     }
 
     return 0;
 }
 {% endhighlight %}
 
-</div>**Il ciclo while**
+**Il ciclo while**
 
 L’iterazione in C++ può essere definita anche con la sintassi while. In questo caso inizializziamo un contatore **cont** a zero. Al centro va definita la condizione che verrà valutata a ogni inizio iterazione; se l’esito della condizione è positivo vengono eseguite le istruzioni all’interno del blocco di codice definito dalle parentesi graffe.
 
@@ -136,4 +136,4 @@ int main() {
 }
 {% endhighlight %}
 
-</div>
+
