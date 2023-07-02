@@ -224,3 +224,15 @@ Calcolo della potenza di un numero; scrivere una funzione ricorsiva potenza(num,
 #### Esercizio 9:
 Stringa inversa: scrivere una funzione ricorsiva che presa come parametro una stringa di testo calcoli la stringa inversa.
 
+#### Esercizio 10:
+
+Scrivere una funzione ricorsiva che analizzando una stringa in modo ricorsivo ne estragga, scrivendole in output (print), le sole lettere vocali.
+
+#### Esercizio 11:
+
+Creare una funzione ricorsiva per calcolare una funzione definita così:
+per m>0 allora f(n,m) = 1+f(n,m-1)
+per m=0 allora f(n,m) = n
+Una volta implementata, provarla e dire cosa calcola la funzione.
+
+

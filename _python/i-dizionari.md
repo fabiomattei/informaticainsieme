@@ -186,3 +186,21 @@ Scrivi uno script python che ricevuto un dizionario i cui valori sono tutti nume
 
 #### Esercizio 6:
 Scrivi un programma Python che controlli se un dizionario è vuoto oppure no.
+
+#### Esercizio 7:
+Crea una lista di dizionari che descriva il seguente problema di Knapsack:
+m1: peso 23 valore 54
+m2: peso 27 valore 59
+m3: peso 19 valore 40
+m4: peso 26 valore 57
+
+#### Esercizio 8: 
+
+dato il dizionario:
+voti = {
+  'Fisica': 8,
+  'Matematica': 6,
+  'Storia': 7
+}
+
+Scrivere il nome della disciplina con il voto più basso.

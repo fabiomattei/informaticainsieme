@@ -365,6 +365,19 @@ Implementa una funzione che preso come parametro un numero intero restituisca al
 
 #### Esercizio 7:
 
+Scrivi con approccio Test Drive Development una funzione che calcoli il massimo comune divisotre tra due numeri.
+
+#### Esercizio 8:
+
+Scrivi con approccio Test Drive Development una funzione che calcoli il minimo comune multiplo tra due numeri.
+
+#### Esercizio 9:
+
+Scrivere una funzione con approccio TDD che calcoli la distanza tra due punti sul piano cartesiano.
+firma: distanza(ax, ay, bx, by)
+
+#### Esercizio 7:
+
 Cosa fa il seguente script?
 
 {% highlight python %}
