@@ -1,17 +1,16 @@
 ---
-id: 366
 title: 'Modello entità relazione'
 date: '2020-02-16T21:30:07+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=366'
 ---
 
-Un modello entità relazione ha lo scopo di descrivere uno schema con lo scopo di incasellare al meglio possibile l’informazione in un sistema informatico. Un modello è formato da **entità**, le cose di interesse che vogliamo ricordare, e le **relazioni** che specificano i legami logici tra queste.
+Un modello entità relazione ha lo scopo di descrivere uno schema al fine di incasellare al meglio possibile l’informazione in un sistema informativo. Un modello è formato da **entità**, le cose di interesse che vogliamo ricordare, e le **relazioni** che specificano i legami logici tra queste.
 
 Le entità vengono descritte da rettangoli, le relazioni da rombi.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/er_1.png)</figure>Nello schema in alto abbiamo le entità *Studente* e *Scuola* che sono uniti dalla relazione *Frequenta*.
+![Diagramma ER scuola e studente](/images/database/er/er1.png){:class="aside-image"}
+Nello schema di fianco abbiamo le entità *Studente* e *Scuola* che sono uniti dalla relazione *Frequenta*.
 
 Con una entità vogliamo descrivere una **classe**, cioè un insieme, di oggetti che appartengono al mondo reale all’interno della quale verranno memorizzate le occorrenze degli oggetti veri e propri che si chiamano **istanze**. Ad esempio l’entità scuola conterrà l’istanza *Patini-Liberatore* e l’entità studente conterrà le istanze *Mario Rossi* ed *Enrichetta Lambertini*.
 
@@ -24,7 +23,8 @@ I simboli generalmente più usati sono sono:
 - 0, 1, 2 (qualsiasi numero intero)
 - N (nel senso di numero generico maggiore di 1)
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/er_2.png)</figure>La cardinalità che lega lo *studente* alla relazione *frequenta* è (1, 1) questo vuol dire che uno studente frequenta sicuramente almeno una scuola ma non ne può frequentare più di una.
+![Cardinalità](/images/database/er/er2.png){:class="aside-image"}
+La cardinalità che lega lo *studente* alla relazione *frequenta* è (1, 1) questo vuol dire che uno studente frequenta sicuramente almeno una scuola ma non ne può frequentare più di una.
 
 La cardinalità che lega la *scuola* alla relazione *frequenta* è (0, N) questo vuol dire che una scuola potrebbe essere non frequentata da nessuno studente e al massimo potrebbe essere frequentata da N studenti.
 
@@ -34,40 +34,41 @@ Gli attributi sono oggetti di natura semplice che non possiedono proprietà rile
 
 Un attributo ha un **nome univoco** all’interno dell’insieme degli attributi della stessa entità o relazione. Dunque attributi di entità o relazioni diverse possono essere omonimi. Un attributo si rappresenta graficamente con una ellisse.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/er_3-1.png)</figure>Nell’esempio in alto 4 attributi sono associati all’entità Studente:
+![Attributi per entità studente](/images/database/er/er3-1.png){:class="aside-image"}
+Nell’esempio in alto 4 attributi sono associati all’entità Studente:
 
-- Codice Fiscale
-- Nome
-- Cognome
-- Data Nascita
+* Codice Fiscale
+* Nome
+* Cognome
+* Data Nascita
 
 Questo vuol dire che per ciascuna istanza studente che andremo a memorizzare all’interno di questa entità potremo memorizzare questi 4 attributi.
 
-<figure class="wp-block-table">| **Codice Fiscale** | Nome | Cognome | Data Nascita |
+| **Codice Fiscale** | Nome | Cognome | Data Nascita |
 |---|---|---|---|
 | MRARSS04D03A345U | Mario | Rossi | 03/04/2004 |
 | ENRLMB06D11A345U | Enrichetta | Lambertini | 06/11/2004 |
 
-</figure>Analogamente per l’entità scuola potremo memorizzare gli attributi:
+Analogamente per l’entità scuola potremo memorizzare gli attributi:
 
-- Codice meccanografico
-- Nome
-- Indirizzo
-- Telefono
+* Codice meccanografico
+* Nome
+* Indirizzo
+* Telefono
 
-<figure class="wp-block-table">| **Codice meccanografico** | Nome | Indirizzo | Telefono |
+| **Codice meccanografico** | Nome | Indirizzo | Telefono |
 |---|---|---|---|
 | AQIS002006 | Patini Liberatore | Via dei Caraceni | 0864 845856 |
 | AQRH010008 | De Panfilis    Di Rocco | SS 17 | 086462420 |
 
-</figure>Per quanto riguarda la relazione *Frequenta* memorizziamo la sola *data di iscrizione*.
+Per quanto riguarda la relazione *Frequenta* memorizziamo la sola *data di iscrizione*.
 
-<figure class="wp-block-table">| **Codice meccanografico** | **Codice Fiscale** | Data di iscrizione |
+| **Codice meccanografico** | **Codice Fiscale** | Data di iscrizione |
 |---|---|---|
 | AQIS002006 | MRARSS04D03A345U | 12/1/2019 |
 | AQIS002006 | ENRLMB06D11A345U | 16/1/2019 |
 
-</figure>Notiamo come, quando andiamo a specificare una istanza di attributo di una relazione, abbiamo bisogno di specificare gli attributi di tipo chiave di entrambe le entità cui questi si riferiscono.
+Notiamo come, quando andiamo a specificare una istanza di attributo di una relazione, abbiamo bisogno di specificare gli attributi di tipo chiave di entrambe le entità cui questi si riferiscono.
 
 #### Chiave
 
