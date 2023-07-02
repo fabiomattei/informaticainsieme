@@ -1,10 +1,8 @@
 ---
-id: 402
 title: 'SQLite e Python'
 date: '2020-02-19T05:11:54+01:00'
 author: Fabio Mattei
 layout: page
-guid: 'https://www.esercizidiinformatica.it/?page_id=402'
 ---
 
 SQLite è un database semplificato, utilizzato molto per le applicazioni su telefonino con il fine di salvare e accedere ai dati. E’ spesso utilizzato nei videogiochi, lo si utilizza in Adobe Lightroom, in Apple iTunes, in Dropbox, in Firefox e in molte altre applicazioni. SQLite è piccolo ma contiene molto del linguaggio SQL standard ed è ACID, questo significa che ogni query è Atomica, Consistente, Isolata e Durevole.
@@ -21,7 +19,7 @@ db = sqlite3.connect('dati/ilmiodatabase.db')
 cursor = db.cursor() 
 {% endhighlight %}
 
-</div>Nell’esempio in alto ci siamo collegati al file dati/ilmiodatabase.db
+Nell’esempio in alto ci siamo collegati al file dati/ilmiodatabase.db
 
 Quando ci si collega ad un file database SQLite che non esiste, SQLite crea un nuovo file.
 
@@ -41,7 +39,7 @@ telefono TEXT, email TEXT unique, password TEXT)
 db.commit()   # rende il comando persistente
 {% endhighlight %}
 
-</div>I comandi inseriti sopra creano una tabella chiamata studenti con i campi: id, nome, telefono, email e password.
+I comandi inseriti sopra creano una tabella chiamata studenti con i campi: id, nome, telefono, email e password.
 
 #### Inseriamo dei dati nel database 
 
@@ -75,7 +73,7 @@ print('Secondo utente inserito')
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-</div>Così facendo ho inserito i dati utilizzando delle tuple, ma posso anche utilizzare un dizionario:
+Così facendo ho inserito i dati utilizzando delle tuple, ma posso anche utilizzare un dizionario:
 
 {% highlight python %}
 import sqlite3
@@ -89,7 +87,7 @@ INSERT INTO studenti(nome, telefono, email, password) VALUES(:nome,:telefono, :e
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-</div>Oppure posso utilizzare una lista di tuple:
+Oppure posso utilizzare una lista di tuple:
 
 {% highlight python %}
 import sqlite3
@@ -105,7 +103,7 @@ db.commit()    # rende il comando persistente
 
 {% endhighlight %}
 
-</div>Se hai bisogno di sapere l’id dell’ultima riga inserita:
+Se hai bisogno di sapere l’id dell’ultima riga inserita:
 
 {% highlight python %}
 id = cursor.lastrowid 
@@ -113,7 +111,7 @@ print('Last row id: %d' % id)
 
 {% endhighlight %}
 
-</div>#### Accedere ai dati contenuti in un database
+#### Accedere ai dati contenuti in un database
 
 Se hai bisogno di caricare i dati dal database:
 
@@ -133,7 +131,7 @@ for row in all_rows:
     
 {% endhighlight %}
 
-</div>Se hai bisogno di caricare dei dati dal database passando dei parametri per la query:
+Se hai bisogno di caricare dei dati dal database passando dei parametri per la query:
 
 {% highlight python %}
 import sqlite3
@@ -147,7 +145,7 @@ SELECT nome, email, telefono FROM studenti WHERE id=?
 user = cursor.fetchone()
 {% endhighlight %}
 
-</div>#### Aggiornare i dati nel database: 
+#### Aggiornare i dati nel database: 
 
 Vediamo ora come passare a SQLite una query di tipo UPDATE. Inseriamo, come di consueto, la quesy in una stringa di tipo multilinea contrassegnata dalle tre virgolette ”’.
 
@@ -170,7 +168,7 @@ UPDATE studenti SET telefono = ? WHERE id = ?
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-</div>#### Cancellare i dati dal database:
+#### Cancellare i dati dal database:
 
 Vediamo ora come passare a SQLite una query di tipo DELETE. Notiamo che la inseriamo, come di consueto in una stringa di tipo multilinea contrassegnata dalle tre virgolette ”’.
 
@@ -190,4 +188,4 @@ DELETE FROM studenti WHERE id = ?
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-</div>
+
