@@ -47,13 +47,13 @@ class Cerchio:
         """ Calcola l'area del cerchio 
         return float
         """ 
-        return self.raggio ** 2 * pigreco
+        return self.raggio ** 2 * self.pigreco
         
     def calcola_circonferenza(self):
         """ Calcola la circonferenza del cerchio 
         return float
         """ 
-        return 2 * pigreco * self.raggio
+        return 2 * self.pigreco * self.raggio
 {% endhighlight %}
 
 La classe Cerchio ha un **attributo di classe** chiamato *pigreco*. È un attributo di classe perchè ha lo stesso valore per tutte le istanze della classe.
