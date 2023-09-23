@@ -48,7 +48,7 @@ Ciao a te!
 Segue le chiamate a funzione
 {% endhighlight %}
 
-Una delle finalità principali delle funzioni è quella di raggruppare istru- zioni che vengono utilizzate molte volte. Se non fosse stata definita una funzione avreste dovuto copiare e incollare il codice al suo interno molte volte e lo script avrebbe avuto questo aspetto:
+Una delle finalità principali delle funzioni è quella di raggruppare istruzioni che vengono utilizzate molte volte. Se non fosse stata definita una funzione avreste dovuto copiare e incollare il codice al suo interno molte volte e lo script avrebbe avuto questo aspetto:
 
 {% highlight python %}
 print('Precede le chiamate a funzione')
@@ -76,7 +76,7 @@ print('Io sono un argomento')
 
 {% endhighlight %}
 
-Ad esempio in questo script viene invocata la funzione print() passan- dole, come argomento, la stringa di testo ’Io sono un argomento’.
+Ad esempio in questo script viene invocata la funzione print() passandole, come argomento, la stringa di testo ’Io sono un argomento’.
 
 Proviamo a definire la funzione hello in questo modo:
 
@@ -85,7 +85,7 @@ def hello(nome):
   print('Ciao ' + nome)
 {% endhighlight %}
 
-La definizione della funzione hello in questo programma ha un para- metro chiamato nome. Un parametro è una variabile in cui viene memorizzato un argomento nel momento in cui viene chiamata la funzione. La prima volta che la funzione viene chiamata le viene passata la stringa Alice come argomento, l’esecuzione del programma entra nella fun- zione e la variabile nome viene impostata ad “Alice”. L’istruzione print va dunque a stampare la stringa Ciao Alice. L’argomento, memorizzato nel parametro, viene dimenticato al terminare dell’esecuzione della funzione. È un po’ come quello che succede alle variabili di un programma che vengono dimenticate una volta giunto a conclusione.
+La definizione della funzione hello in questo programma ha un parametro chiamato nome. Un parametro è una variabile in cui viene memorizzato un argomento nel momento in cui viene chiamata la funzione. La prima volta che la funzione viene chiamata le viene passata la stringa Alice come argomento, l’esecuzione del programma entra nella funzione e la variabile nome viene impostata ad “Alice”. L’istruzione print va dunque a stampare la stringa Ciao Alice. L’argomento, memorizzato nel parametro, viene dimenticato al terminare dell’esecuzione della funzione. È un po’ come quello che succede alle variabili di un programma che vengono dimenticate una volta giunto a conclusione.
 
 ## I valori di ritorno 
 
@@ -93,7 +93,7 @@ La definizione della funzione hello in questo programma ha un para- metro chiama
 lunghezza = len('Ciao')
 {% endhighlight %}
 
-Nell’esempio in alto, si utilizza la funzione len, passandole come argo- mento la stringa ’Ciao’ al fine di far calcolare la lunghezza della stringa pas- sata. Il valore calcolato viene restituito al chiamante e da questi memorizzato nella variabile lunghezza.
+Nell’esempio in alto, si utilizza la funzione len, passandole come argomento la stringa ’Ciao’ al fine di far calcolare la lunghezza della stringa passata. Il valore calcolato viene restituito al chiamante e da questi memorizzato nella variabile lunghezza.
 
 Quando chiamate la funzione len e le passate un argomento come ’Ciao’ la funzione calcola come valore l’intero 4, la lunghezza della stringa. In generale il valore che una funzione calcola viene chiamato valore di ritorno. Quando si crea una funzione è possibile specificare quale sia il valore di ritorno attraverso l’istruzione return. Facciamo un esempio:
 
@@ -114,9 +114,9 @@ def pariodispari(numero):
     return 'Dispari'
 {% endhighlight %}
 
-La funzione pariodispari accetta un parametro e restituisce la stringa ’Pari’ se l’argomento passato è pari e la stringa ’Dispari’ in caso contrario. È possibile inserire due o più istruzioni di return in una funzione. Duran- te l’esecuzione del programma (a runtime) una di questa prima poi verrà eseguita. Quando questo accade il computer esce dalla funzione e torna al programma chiamante portando con se il valore di ritorno.
+La funzione pariodispari accetta un parametro e restituisce la stringa ’Pari’ se l’argomento passato è pari e la stringa ’Dispari’ in caso contrario. È possibile inserire due o più istruzioni di return in una funzione. Durante l’esecuzione del programma (a runtime) una di questa prima poi verrà eseguita. Quando questo accade il computer esce dalla funzione e torna al programma chiamante portando con se il valore di ritorno.
 
-Notate che quando l’interprete incontra l’istruzione return esce dall’am- bito della funzione e torna nel programma da cui questa era stata chiamata. Nessuna istruzione all’interno della funzione viene eseguita dopo il return.
+Notate che quando l’interprete incontra l’istruzione return esce dall’ambito della funzione e torna nel programma da cui questa era stata chiamata. Nessuna istruzione all’interno della funzione viene eseguita dopo il return.
 
 {% highlight python %}
 primonumero = pariodispari(4)   # var primonumero = 'Pari' 
@@ -157,7 +157,7 @@ Parametri e variabili definiti all’atto della definizione di una funzione hann
 
 Pensate ad un ambito come ad una sorta di contenitore di variabili. Quando un ambito viene distrutto tutti i valori conservati nelle variabili di quell’ambito vengono dimenticati. Esiste un solo ambito globale e viene creato quando inizia il programma. Esistono tanti ambiti locali quante sono le funzioni che definiamo.
 
-Un ambito locale viene creato ogni volta che si chiama una funzione. Qualsiasi variabile che riceva assegnazione in quella funzione esiste solo nel- l’ambito locale. Quando la funzione ritorna al chiamante l’ambito locale viene distutto e quelle variabili vengono dimenticate. Alla seguente chia- mata della stessa funzione le variabili locali non ricorderanno i valori che vi erano memorizzati nella precedente chiamata. Valgono le seguenti proprietà:
+Un ambito locale viene creato ogni volta che si chiama una funzione. Qualsiasi variabile che riceva assegnazione in quella funzione esiste solo nell’ambito locale. Quando la funzione ritorna al chiamante l’ambito locale viene distutto e quelle variabili vengono dimenticate. Alla seguente chiamata della stessa funzione le variabili locali non ricorderanno i valori che vi erano memorizzati nella precedente chiamata. Valgono le seguenti proprietà:
 
 - istruzioni nell’ambito globale non possono usare variabili che appartengono ad un ambito locale;
 - istruzioni nell’ambito locale possono liberamente accedere a variabili definite in ambito globale;
@@ -220,7 +220,7 @@ La variabile uova viene definita sia nell’ambito globale, che nell’ambito de
 
 ## Collaborare attraverso le funzioni 
 
-Quando un gruppo di sviluppatori lavora ad un software un aspetto mol- to delicato è quello della divisione dei compiti e del lavoro. Un approccio che spesso viene utilizzato è quello di strutturare il software identificando- ne le varie caratteristiche quindi organizzare queste ultime all’interno delle varie funzioni. Se per esempio la classe 3C volesse creare un software per la gestione della biblioteca della scuola, potrebbe dividere il lavoro in varie sezioni (interfaccia utente, salvataggio dati, regole per l’utilizzo del servi- zio, servizi di notifiche, servizi di calendario). A questo punto il gruppo stabilisce un linguaggio comune per la comunicazione esplicitando la firma di tutte le funzioni. Questo consiste nell’esplicitare il nome delle funzioni che andranno a costituire il software, i parametri che queste accettano e i valori che queste riportano al chiamante. Tutto ciò va fatto prima dell’implementazione delle funzioni stesse. In questo modo gli sviluppatori possono lavorare in modo indipendente sapendo esattamente come il loro lavoro andrà a integrarsi nel resto del sistema software che si sta creando.
+Quando un gruppo di sviluppatori lavora ad un software un aspetto molto delicato è quello della divisione dei compiti e del lavoro. Un approccio che spesso viene utilizzato è quello di strutturare il software identificandone le varie caratteristiche quindi organizzare queste ultime all’interno delle varie funzioni. Se per esempio la classe 3C volesse creare un software per la gestione della biblioteca della scuola, potrebbe dividere il lavoro in varie sezioni (interfaccia utente, salvataggio dati, regole per l’utilizzo del servizio, servizi di notifiche, servizi di calendario). A questo punto il gruppo stabilisce un linguaggio comune per la comunicazione esplicitando la firma di tutte le funzioni. Questo consiste nell’esplicitare il nome delle funzioni che andranno a costituire il software, i parametri che queste accettano e i valori che queste riportano al chiamante. Tutto ciò va fatto prima dell’implementazione delle funzioni stesse. In questo modo gli sviluppatori possono lavorare in modo indipendente sapendo esattamente come il loro lavoro andrà a integrarsi nel resto del sistema software che si sta creando.
 
 ## Inizia scrivendo un test 
 
@@ -240,7 +240,7 @@ assert trasfCelsInFahr(30) == 86.0, "Errore per 30"
 
 Quando vado a lanciare il programma questo manderà in esecuzione tutti i test e nel caso uno di questi non funzioni, cioè se la mia implementazione non è corretta, visualizza un messaggio di errore. Questo espediente mi consente di correggere l’implementazione della funzione dato che è molto rapido eseguire i test per vedere se tutto funziona come atteso.
 
-Un test rappresenta anche una forma di contratto tra programmato- ri. Quando due programmatori collaborano su di una applicazione possono accordarsi sulla firma delle funzioni e su alcuni esempio che scrivono sotto forma di test. In questo modo sarà chiaro per entrambi quando la funzione è ben implementata.
+Un test rappresenta anche una forma di contratto tra programmatori. Quando due programmatori collaborano su di una applicazione possono accordarsi sulla firma delle funzioni e su alcuni esempio che scrivono sotto forma di test. In questo modo sarà chiaro per entrambi quando la funzione è ben implementata.
 
 Ultimo vantaggio un test mi permette di fare refactoring del codice. Questo significa che posso lavorare sull’implementazione della funzione per migliorarla dal punto di visto delle prestazioni per esempio, essendo sicuro di non introdurre bugs nel codice dato che di volta in volta controllo che tutti i test diano esito positivo.
 
@@ -339,18 +339,22 @@ Implementa una funzione che preso come parametro un numero intero restituisca al
 
 #### Esercizio n6:
 
-Scrivi con approccio Test Drive Development una funzione che calcoli il massimo comune divisotre tra due numeri.
+Implementa una funzione che preso come parametro un numero intero restituisca al chiamante True se il numero è primo e False altrimenti.
 
 #### Esercizio n7:
 
-Scrivi con approccio Test Drive Development una funzione che calcoli il minimo comune multiplo tra due numeri.
+Scrivi con approccio Test Drive Development una funzione che calcoli il massimo comune divisotre tra due numeri.
 
 #### Esercizio n8:
+
+Scrivi con approccio Test Drive Development una funzione che calcoli il minimo comune multiplo tra due numeri.
+
+#### Esercizio n9:
 
 Scrivere una funzione con approccio TDD che calcoli la distanza tra due punti sul piano cartesiano.
 firma: distanza(ax, ay, bx, by)
 
-#### Esercizio n9:
+#### Esercizio n10:
 
 Cosa fa il seguente script?
 
@@ -361,7 +365,7 @@ def scrivi_biciclette():
 scrivi_biciclette()
 {% endhighlight %}
 
-#### Esercizio n10:
+#### Esercizio n11:
 
 Cosa fa il seguente script?
 
@@ -373,33 +377,41 @@ def scrivi_biciclette():
 scrivi_biciclette()
 {% endhighlight %}
 
-#### Esercizio n11:
+#### Esercizio n12:
 
 Crea una funzione **divisibile\_per** che prenda come parametro due numeri e che restituisca True se il primo numero è divisibile per il secondo e False in caso contrario
 
-#### Esercizio n12:
+#### Esercizio n13:
 
 Scrivi una funzione python somma\_numeri che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri compresi tra a e b con a e b compresi   
 Esempio:   
 somma\_numeri(4, 6) restituisce 15   
 somma\_numeri(1, 4) restituisce 10
 
-#### Esercizio n13:
+#### Esercizio n14:
 
 Scrivi una funzione python somma\_pari che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri pari compresi tra a e b con a e b compresi   
 Esempio:   
 somma\_numeri(4, 6) restituisce 10   
 somma\_numeri(1, 5) restituisce 6
 
-#### Esercizio n14:
+#### Esercizio n15:
 
 Scrivi una funzione python is\_prime che prenda come parametro un numero interi a e restituisca True se a è primo e False in caso contrario Esempio:   
 is\_prime(11) restituisce True   
 is\_prime(4) restituisce False
 
-#### Esercizio n15:
+#### Esercizio n16:
 
 Scrivi una funzione celsiusToFahrenheit che accetti come parametro una temperatura in gradi Celsius e restituisca la corrispondente temperatura inn gradi Fahrenheit. Scrivere poi una funzione FahrenheitToCelsius che faccia l'operazione opposta. Scrivi in fine il main che facendo uso delle funzioni scrivi le scale di conversione di temperatura per i gradi Celsius che vanno da -20°C a 100°C a passo 5 e per i gradi Fahrenheit che vanno da -5 a 205 a passo 10.
+
+#### Esercizio n17:
+Scrivi una funzione Python ricevuto un numero come parametro restituisce True se questo è perfetto.
+Nella teoria dei numeri un numero perfetto è un numero positivo che è uguale alla somma dei propri divisori positivi escluso il numero stesso. In modo equivalente possiamo dire che un numero perfetto è pari alla metà della somma dei suoi divisori positivi incluso se stesso.
+Esempi : Il primo numero perfetto è 6, perché 1, 2, e 3 sono i suoi divisori positibi e 1 + 2 + 3 = 6. 
+In modo equivalente possiamo dire che il numero 6 è uguale alla metà della somma dei suoi divisori incluso se stesso: ( 1 + 2 + 3 + 6 ) / 2 = 6. 
+Il numero perfetto successivo è 28 = 1 + 2 + 4 + 7 + 14. 
+Questi è seguito dai numeri perfetti 496 e 8128.
 
 ### Funzioni e stringhe
 
@@ -476,6 +488,32 @@ def mistero(parametro):
             output = output * 10 + 9
     return output
 {% endhighlight %}
+
+### Funzioni e liste
+
+#### Esercizio l1: 
+Scrivi una funzione python che accetti una lista come parametro, calcoli la somma dei numeri contenuti nella lista e restituisca il risultato
+Esempio: 
+parametro: [8, 2, 3, 0, 7]
+Output : 20
+
+#### Esercizio l2: 
+Scrivi una funzione python che accetti una lista come parametro, calcoli il prodotto dei numeri contenuti nella lista e restituisca il risultato
+Esempio: 
+parametro: [8, 2, 3, -1, 7]
+Output : -336 
+
+#### Esercizio l3: 
+Scrivi una funzione python che accetti una lista come parametro e restituisca una lista contenente i soli numeri pari della lista ricevuta.
+Esempio: 
+parametro: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Output : [2, 4, 6, 8]
+
+### Esercizio l4: 
+Scrivi una funzione python che accetti una lista come parametro e restituisca una lista contenente gli elementi della lista ricevuta non ripetuti.
+Esempio: 
+parametro: [1,2,3,3,3,3,4,5]
+Output : [1, 2, 3, 4, 5]
 
 ### Top Down
 
