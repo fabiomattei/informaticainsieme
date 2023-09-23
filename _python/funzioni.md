@@ -391,23 +391,26 @@ print('Grazie! Alla prossima volta')
 {% endhighlight %}
 
 #### Esercizio 7:
-
-Implementa una funzione che preso come parametro un numero intero restituisca al chiamante il corrispondente numero di Fibonacci.
+Scrivi una funzione che accetti un parametro di tipo numerico e calcoli il fattorile del numero ricevuto e lo restituisca al chiamante.
 
 #### Esercizio 8:
 
-Scrivi con approccio Test Drive Development una funzione che calcoli il massimo comune divisotre tra due numeri.
+Implementa una funzione che preso come parametro un numero intero restituisca al chiamante il corrispondente numero di Fibonacci.
 
 #### Esercizio 9:
 
-Scrivi con approccio Test Drive Development una funzione che calcoli il minimo comune multiplo tra due numeri.
+Scrivi con approccio Test Drive Development una funzione che calcoli il massimo comune divisotre tra due numeri.
 
 #### Esercizio 10:
+
+Scrivi con approccio Test Drive Development una funzione che calcoli il minimo comune multiplo tra due numeri.
+
+#### Esercizio 11:
 
 Scrivere una funzione con approccio TDD che calcoli la distanza tra due punti sul piano cartesiano.
 firma: distanza(ax, ay, bx, by)
 
-#### Esercizio 11:
+#### Esercizio 12:
 
 Cosa fa il seguente script?
 
@@ -418,7 +421,7 @@ def scrivi_biciclette():
 scrivi_biciclette()
 {% endhighlight %}
 
-#### Esercizio 12:
+#### Esercizio 13:
 
 Cosa fa il seguente script?
 
@@ -430,11 +433,11 @@ def scrivi_biciclette():
 scrivi_biciclette()
 {% endhighlight %}
 
-#### Esercizio 13:
+#### Esercizio 14:
 
 Crea una funzione **divisibile\_per** che prenda come parametro due numeri e che restituisca True se il primo numero è divisibile per il secondo e False in caso contrario
 
-#### Esercizio 14:
+#### Esercizio 15:
 
 Scrivi una funzione in python chiamata calcola stipendio che prende come parametro il numero di ore lavorate in una settimana e la paga oraria.
 
@@ -447,11 +450,11 @@ calcolastipendio(20, 20) =&gt; 400
 calcolastipendio(40, 20) =&gt; 800   
 calcolastipendio(50, 20) =&gt; 1100
 
-#### Esercizio 15:
+#### Esercizio 16:
 
 Utilizziamo le funzioni per calcolare delle spese di viaggio: Definisci una funzione chiamata **costo\_hotel** che prende come parametro il numero delle notti. L’hotel costa 140 per notte. La funzione deve calcolare il costo totale dell’hotel. Definisci una funziona chiamata **costo\_aereo** questa prende come parametro il nome della città in cui si vola e ritorna a seconda della destinazione: “Charlotte”: 183 “Tampa”: 220 “Pittsburgh”: 222 “Los Angeles”: 475. Definisci una funziona **noleggio\_macchina** che prenda come parametro il numero di giorni. Ogni giorno di noleggio macchina costa 40. Se si noleggia la macchina per più di 7 giorni si ottiene uno sconto di 50. Se si noleggia la macchina per più di 10 giorni si ottiene uno sconto di 10 al giorno. In fine crea una funzione **costo\_viaggio** che prenda come parametro una stringa rappresentante la destinazione e il numero di giorni di viaggio e chiamando le funzioni prima definite calcoli il costo totale del viaggio.
 
-#### Esercizio 16:
+#### Esercizio 17:
 
 Crea una funzione **tipo\_stringa** che prenda come parametro una stringa di testo e restituisca:   
 * la stringa “solo lettere” se il parametro è costitutito completamente da lettere   
@@ -463,7 +466,26 @@ tipo\_stringa(“1322132”) =&gt; “solo numeri”
 print(tipo\_stringa(“acbac”)) =&gt; “solo lettere”  
 print(tipo\_stringa(“132acbac12”)) =&gt; “mista”
 
-#### Esercizio 17:
+#### Esercizio 18:
+
+Scrivi una funzione che accetti una stringa di testo come parametro e la restituisca invertita al chiamante:
+Esempio
+Parametro : "1234abcd"
+Valore restituito : "dcba4321"
+
+#### Esercizio 19:
+
+Scrivi una funzione python che accetti un parametro di tipo stringa e restiituisca il numero di vocali contenute in  questa.
+Esempio:   
+conta\_vocali("ciao") restituisce 3  
+
+#### Esercizio 20:
+
+Scrivi una funzione python che accetti un parametro di tipo stringa e restiituisca il numero di connsonanti contenute in  questa.
+Esempio:   
+conta\_consonanti("ciao") restituisce 1 
+
+#### Esercizio 21:
 
 Scrivi una funzione **esprimi\_giudizio(voto)** che preso come parametro il voto di uno studente restituisca una stringa di testo con giudizio secondo la seguente tabella:
 
@@ -471,30 +493,33 @@ Scrivi una funzione **esprimi\_giudizio(voto)** che preso come parametro il voto
 |---|---|---|---|---|---|---|
 | Gravemente insufficiente | Insufficiente | Sufficiente | Discreto | Buono | Distinto | Ottimo |
 
-#### Esercizio 18:
+#### Esercizio 22:
 
 Scrivi una funzione python somma\_numeri che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri compresi tra a e b con a e b compresi   
 Esempio:   
 somma\_numeri(4, 6) restituisce 15   
 somma\_numeri(1, 4) restituisce 10
 
-#### Esercizio 19:
+#### Esercizio 23:
 
 Scrivi una funzione python somma\_pari che prenda come parametri due numeri interi a e b e calcoli la somma di tutti i numeri pari compresi tra a e b con a e b compresi   
 Esempio:   
 somma\_numeri(4, 6) restituisce 10   
 somma\_numeri(1, 5) restituisce 6
 
-#### Esercizio 20:
+#### Esercizio 24:
 
 Scrivi una funzione python is\_prime che prenda come parametro un numero interi a e restituisca True se a è primo e False in caso contrario Esempio:   
 is\_prime(11) restituisce True   
 is\_prime(4) restituisce False
 
-#### Esercizio 21:
+#### Esercizio 25:
 
 Scrivi una funzione celsiusToFahrenheit che accetti come parametro una temperatura in gradi Celsius e restituisca la corrispondente temperatura inn gradi Fahrenheit. Scrivere poi una funzione FahrenheitToCelsius che faccia l'operazione opposta. Scrivi in fine il main che facendo uso delle funzioni scrivi le scale di conversione di temperatura per i gradi Celsius che vanno da -20°C a 100°C a passo 5 e per i gradi Fahrenheit che vanno da -5 a 205 a passo 10.
 
-#### Esercizio 22
+#### Esercizio 26:
 
 Crea una libreria di funzioni turtle che disegnino figure geometriche. Le firme delle funzioni da scrivere sono: def quadrato(lato): def rettangono(base, altezza): def cerchio(raggio) def esagono(lato) Crea in fine una funzione main() che richiami le quattro funzioni appena descritte con dei valori dati in input dall’utente.
+
+
+
