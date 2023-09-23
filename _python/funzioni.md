@@ -334,6 +334,37 @@ Scrivi una funzione a cui viene passato un carattere come parametro, e che resti
 
 #### Esercizio 5:
 
+Indovina cosa fa la funzione mistero
+
+{% highlight python %}
+def mistero(parametro):
+    output = 0
+    for x in parametro:
+        if x == '0':
+            output = output * 10 + 0
+        elif x == '1':
+            output = output * 10 + 1
+        elif x == '2':
+            output = output * 10 + 2
+        elif x == '3':
+            output = output * 10 + 3
+        elif x == '4':
+            output = output * 10 + 4
+        elif x == '5':
+            output = output * 10 + 5
+        elif x == '6':
+            output = output * 10 + 6
+        elif x == '7':
+            output = output * 10 + 7
+        elif x == '8':
+            output = output * 10 + 8
+        elif x == '9':
+            output = output * 10 + 9
+    return output
+{% endhighlight %}
+
+#### Esercizio 5:
+
 Riorganizza il seguente codice Python in funzioni. Bisogna soddividere l’algoritmo in algoritmi piú piccoli e semplici da capire in modo da rendere il codice più leggibile.
 
 {% highlight python %}
