@@ -595,8 +595,65 @@ L’esempio che abbiamo appena visto ci dà idea su come gestire il codice in mo
 
 ## Esercizi 
 
-### Esercizio 1:
+
+### Creazione di classi
+
+#### Esercizio 1:
+
+Crea una classe Python nominata Impiegato con gli attributi matricola, nome, salario e dipartimento e metodi come calcola_salario, imposta_dipartimento e descrivi_impiegato
+
+Istanze:
+"ADAMS", "E7876", 50000, "ACCOUNTING"
+"JONES", "E7499", 45000, "RESEARCH"
+"MARTIN", "E7900", 50000, "SALES"
+"SMITH", "E7698", 55000, "OPERATIONS"
+Crea 'imposta_dipartimento' per cambiare l'attributo dipartimento dell'impiegato
+Crea 'print_employee_details' per scrivere il contenuto di tutti gli attributi di un impiegato
+Crea 'calculate_emp_salary' per calcolare l'ammontare del salario prendendo come parametro le ore lavorate dall'impiegate e aggiungendo se necessario lo straordinario:
+straordinario = ore_lavorate - 50
+ammontare_straordinario = (straordinario * (salario / 50))
+
+#### Esercizio 2:
+
+Crea una classe Python nominata Lavorazione con gli attributi id, nome, metriQuadrati e costoAlMetro.
+
+Crea il metodo **init** per inzializzare la classe.
+Crea il metodo **calcolaCostoTotale** che restituisce il risultato del prodotto degli altributi metriQuadrati e costoAlMetro
+
+Crea le Istanze:
+
+* 1, "Rimozione pavimento", 32, 48
+* 2, "Posa del massetto grezzo", 32, 30
+* 3, "Posa massetto autolivellante", 32, 80
+* 4, "Posa mattonelle", 32, 90
+
+Chiama il metodo **calcolaCostoTotale** per ciascuna istanza.
+
+#### Esercizio 3:
+
+Crea una classe Python nominata AlberoAntico con gli attributi id, nome, nomeEsteso, lat, long, anni
+
+Crea il metodo **init** per inzializzare la classe.
+Crea il metodo **presentazione** che restituisce una stringa di testo contenente tutti gli attributi
+
+Crea le Istanze:
+
+* 1, "Abete", "Abies alba", 17.4, 28.3, 145
+* 2, "Quercia", "Quercus", 18.4, 27.3, 122
+* 3, "Faggio", "Fagus", 17.2, 28.5, 259
+* 4, "Ginepro", "Juniperus", 17.1, 23.3, 32
+
+Chiama il metodo **presentazione** per ciascuna istanza.
+
+### Creazione di strutture basate su ereditarietà
+
+
+### Creazione di strutture basate su composizione
+
+#### Esercizio 1:
 Completa la struttura descritta all’interno del capitolo aggiungendo altre 5 classi di persone che ruotano nell’ambito del mondo della scuola.
+
+
 
 ### Esercizio 2:
 Crea la struttura di classi necessaria per descrivere gli animali all’interno di uno zoo. Parti dalla classe base Animali e poi definisci le sottoclassi Mammiferi Rettili Uccelli e poi continua creando una classe per ciascun tipo di Animale: Orso, Vipera ecc. fino a 10 animali. Le classi avranno un attributo di classe per il nome scientifico, un attributo di istanza per il nome de singolo e avranno un metodo per presentarsi ed un per fare il verso (Bau bau, Miao, Zzzzz ecc.).
