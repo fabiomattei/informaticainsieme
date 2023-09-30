@@ -647,7 +647,7 @@ Chiama il metodo **presentazione** per ciascuna istanza.
 
 #### Esercizio 4:
 
-Crea una classe Python nominata Libro con gli attributi isbn, titolo, autore, pagine
+Crea una classe Python nominata Libro con gli attributi isbn, titolo, autore, pagine, editore
 
 Crea il metodo **init** per inzializzare la classe.
 Crea il metodo **presentazione** che restituisce una stringa di testo contenente una stringa formattata in questo modo:
