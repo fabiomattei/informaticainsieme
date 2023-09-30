@@ -645,6 +645,42 @@ Crea le Istanze:
 
 Chiama il metodo **presentazione** per ciascuna istanza.
 
+#### Esercizio 4:
+
+Crea una classe Python nominata Libro con gli attributi isbn, titolo, autore, pagine
+
+Crea il metodo **init** per inzializzare la classe.
+Crea il metodo **presentazione** che restituisce una stringa di testo contenente una stringa formattata in questo modo:
+il libro *titolo* è stato scritto da *autore* 
+
+All'interno del main:
+
+Crea 4 istanze la prima delle quali deve essere:
+
+* 978-8849419535, "La Divina Commedia", "Dante Alighieri", 427, Petrini
+* ....
+
+Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **presentazione** per ciascuna istanza.
+
+#### Esercizio 5:
+
+Crea una classe Python nominata Arredo con gli attributi nrCatalogo, nome, altezza, larghezza, profondita, materiale
+
+Crea il metodo **init** per inzializzare la classe.
+Crea il metodo **presentazione** che restituisce una stringa di testo contenente tutti i dati dell'arredo in forma di stringa di testo.
+Crea il metodo **calcolaVolume** che restituisce il volume dell'arredo come prodotto di altezza, larghezza, profondita.
+
+All'interno del main:
+
+Crea 4 istanze la prima delle quali deve essere:
+
+* 245, "Banco", 55, 45, 30, "Legno e metallo"
+* 246, "Banco a rotelle", 60, 45, 55, "Legno, metallo, plastica"
+* 247, "Sedia", 65, 40, 55, "Legno, metallo"
+* 248, "Cattedra", 65, 140, 100, "Legno, metallo"
+
+Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **presentazione** e **calcolaVolume** per ciascuna istanza.
+
 ### Creazione di strutture basate su ereditarietà
 
 
