@@ -120,43 +120,47 @@ print "Benvenuto"
 
 Scrivere un programma che letto un numero intero N calcoli la somma di tutti i numeri da 1 ad N
 
-#### Esercizio2:
+#### Esercizio 2:
 
 Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri da N ad M (estremi inclusi)
 
-#### Esercizio3:
+#### Esercizio 3:
 
 Scrivere un programma che letto un numero intero N calcoli il fattoriale di N ( 1 \* 2 \* 3 \* 4 …. \* N)
 
-#### Esercizio4:
+#### Esercizio 4:
 
 Scrivere un programma che letto un numero intero N ed un numero intero M (con N&lt;M) calcoli la somma di tutti i numeri pari compresi tra N ed M
 
-#### Esercizio5:
+#### Esercizio 5:
+
+Scrivere un programma python che letti 10 numeri calcoli l'ammontare dei soli numeri pari.
+
+#### Esercizio 6:
 
 Scrivere un programma che letti N numeri in ingresso calcoli il numero massimo e il numero minimo inseriti
 
-#### Esercizio6:
+#### Esercizio 7:
 
 Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti
 
-#### Esercizio7:
+#### Esercizio 8:
 
 Scrivere un programma che letti N numeri in ingresso calcoli la somma di tutti i numeri mostrando le somme parziali ogni 3 numeri inseriti
 
-#### Esercizio8:
+#### Esercizio 9:
 
 Scrivere un programma che letto un numero intero N calcoli la somma di tutte le cifre dispari che lo compongono
 
-#### Esercizio9:
+#### Esercizio 10:
 
 Scrivere un programma che letto un numero intero N scriva la tavola pitagorica della moltiplicazione del numero prescelto
 
-#### Esercizio10:
+#### Esercizio 11:
 
 Scrivere un programma che scriva la tavola pitagorica della moltiplicazione completa
 
-#### Esercizio11:
+#### Esercizio 12:
 
 Leonardo Pisano propose nel tredicesimo secolo il seguente problema:
 
@@ -169,3 +173,4 @@ Immaginiamo di chiudere una coppia di conigli in un recinto sapendo che per ogni
 Quante coppie di conigli ci saranno dopo un anno?
 
 E quante dopo un numero di mesi N, letto in input?
+

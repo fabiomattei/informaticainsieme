@@ -672,7 +672,7 @@ Crea il metodo **calcolaVolume** che restituisce il volume dell'arredo come prod
 
 All'interno del main:
 
-Crea 4 istanze la prima delle quali deve essere:
+Crea 4 istanze con i dati:
 
 * 245, "Banco", 55, 45, 30, "Legno e metallo"
 * 246, "Banco a rotelle", 60, 45, 55, "Legno, metallo, plastica"
@@ -681,23 +681,26 @@ Crea 4 istanze la prima delle quali deve essere:
 
 Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **presentazione** e **calcolaVolume** per ciascuna istanza.
 
-### Creazione di strutture basate su ereditarietà
+#### Esercizio 6:
 
+Crea una classe Python nominata Edificio con gli attributi indirizzo, citta, altezza, larghezza, profondita
 
-### Creazione di strutture basate su composizione
+Crea il metodo **init** per inzializzare la classe.
+Crea il metodo **presentazione** che restituisce una stringa di testo contenente tutti i dati dell'edificio in forma di stringa di testo.
+Crea il metodo **calcolaVolume** che restituisce il volume dell'edificio come prodotto di altezza, larghezza, profondita.
 
-#### Esercizio 1:
-Completa la struttura descritta all’interno del capitolo aggiungendo altre 5 classi di persone che ruotano nell’ambito del mondo della scuola.
+All'interno del main:
 
+Crea 4 istanze con i dati:
 
+* "Via Verdi nr 2", "Castel di Sangro", 55, 45, 50
+* "Via Verdi nr 4", "Castel di Sangro", 55, 25, 40
+* "Via Verdi nr 6", "Castel di Sangro", 155, 45, 30
+* "Via Verdi nr 8", "Castel di Sangro", 15, 45, 130
 
-### Esercizio 2:
-Crea la struttura di classi necessaria per descrivere gli animali all’interno di uno zoo. Parti dalla classe base Animali e poi definisci le sottoclassi Mammiferi Rettili Uccelli e poi continua creando una classe per ciascun tipo di Animale: Orso, Vipera ecc. fino a 10 animali. Le classi avranno un attributo di classe per il nome scientifico, un attributo di istanza per il nome de singolo e avranno un metodo per presentarsi ed un per fare il verso (Bau bau, Miao, Zzzzz ecc.).
+Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **presentazione** e **calcolaVolume** per ciascuna istanza.
 
-### Esercizio 3:
-Immagina di dover fare una applicazione per pagare gli stipendi in una azienda. Il direttore guadagna 100000 euro/anno, il vi- cedirettore 70000, una manager di medio livello 50000, gli impiegati 35000. Le ore di straordinario vengono retribuite il 20% più del normale. Chi fa il part-time guadagna il 60% del suo stipendio lordo. Crea la struttura di classi e i metodi per calcolare gli stipendi del personale in basso.
-
-### Esercizio 4:
+### Esercizio 7:
 
 Fai la tabella di tracciamento:
 
@@ -732,7 +735,21 @@ contoBeatrice.preleva(500000)
 print(contoBeatrice.estrattoConto())
 {% endhighlight %}
 
-### Esercizio 5:
+### Creazione di strutture basate su ereditarietà
+
+
+### Creazione di strutture basate su composizione
+
+#### Esercizio 1:
+Completa la struttura descritta all’interno del capitolo aggiungendo altre 5 classi di persone che ruotano nell’ambito del mondo della scuola.
+
+### Esercizio 2:
+Crea la struttura di classi necessaria per descrivere gli animali all’interno di uno zoo. Parti dalla classe base Animali e poi definisci le sottoclassi Mammiferi Rettili Uccelli e poi continua creando una classe per ciascun tipo di Animale: Orso, Vipera ecc. fino a 10 animali. Le classi avranno un attributo di classe per il nome scientifico, un attributo di istanza per il nome de singolo e avranno un metodo per presentarsi ed un per fare il verso (Bau bau, Miao, Zzzzz ecc.).
+
+### Esercizio 3:
+Immagina di dover fare una applicazione per pagare gli stipendi in una azienda. Il direttore guadagna 100000 euro/anno, il vi- cedirettore 70000, una manager di medio livello 50000, gli impiegati 35000. Le ore di straordinario vengono retribuite il 20% più del normale. Chi fa il part-time guadagna il 60% del suo stipendio lordo. Crea la struttura di classi e i metodi per calcolare gli stipendi del personale in basso.
+
+### Esercizio 4:
 
 Crea una classe automobile che conservi memoria della distanza percorsa dall'acquisto (odometro o conta km).
 La classe possiede un metodo "percorri" che prende come parametro i km percorsi da aggiungere alla distanza percorsa dal momento
@@ -740,7 +757,7 @@ dell'acquisto.
 La classe possiede il metodo "getKm" che restituisce i km percorsi da quando acquistata.
 La classe possiede anche il metodo "tarocca" che si preoccupa di far sembrare che la macchina non abbia mai percorso più di 10000 km in modo da poterla rivendere al massimo prezzo possibile
 
-### Esercizio 6:
+### Esercizio 5:
 
 Fai la tabella di tracciamento:
 
