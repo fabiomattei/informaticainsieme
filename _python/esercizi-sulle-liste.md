@@ -170,6 +170,9 @@ while indice < len(numeri):
 
 ## Esercizi sulle liste
 
+#### Esercizio 1: 
+Scrivi un programma python che inizializzi una lista "nomi" contenente sei nomi a tua scelta. In seguito il programma scrive sullo schermo il nome inserito nella lista all'indice 3 e sostituisce il nome ad indice 5 con uno letto in input dall'utente.
+
 #### Esercizio 1:
 Scrivi un programma python in cui venga inizializzata una lista di nomi contente sei nomi a piacere e che scriva i nomi contenuti nella lista iniziale utilizzando un ciclo for.
 
