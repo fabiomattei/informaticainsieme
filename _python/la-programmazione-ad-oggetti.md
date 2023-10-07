@@ -368,9 +368,9 @@ class Stanza:
         """Costruttore della classe Stanza"""	
         self.nome = nome
         self.lunghezza = lunghezza
-        self.lunghezza = larghezza
+        self.larghezza = larghezza
     
-    def calcola_superficie(self, studente):
+    def calcola_superficie(self):
         """Metodo che restituisce la superficie della stanza"""	
         return self.lunghezza * self.larghezza
 {% endhighlight %}
@@ -739,6 +739,10 @@ print(contoBeatrice.estrattoConto())
 
 
 ### Creazione di strutture basate su composizione
+
+#### Esercizio 1:
+Crea una composizione di oggetti: gli oggetti da comporre sono Albero e Foresta. 
+L'labero contiene gli attributi nome e altezza. La foresta contiene gli alberi ed è in grado di calcolare la somma delle altezze di tutti gli alberi al suo interno
 
 #### Esercizio 1:
 Completa la struttura descritta all’interno del capitolo aggiungendo altre 5 classi di persone che ruotano nell’ambito del mondo della scuola.
