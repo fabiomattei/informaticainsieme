@@ -700,7 +700,20 @@ Crea 4 istanze con i dati:
 
 Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **presentazione** e **calcolaVolume** per ciascuna istanza.
 
-### Esercizio 7:
+#### Esercizio 7:
+
+Implementare il diagramma UML di fianco creando tutte le classi necessarie. 
+Creare le istanze necessarie per un panino al prosciutto condito con olio e maionese e contenuto in un menù che ha come bevanda una cocacola.
+Calcolare le calorie del menù seguendo la seguente tabella:
+
+* prosciutto Cal 145 per 100gr
+* olio Cal 884 per 100gr
+* maionese Cal 680 per 100gr
+* coca cola 38 Cal per 100gr
+
+![Ereditarietà](/images/python/oggetti/panineria.png){:class="aside-image"}
+
+### Esercizio 8:
 
 Fai la tabella di tracciamento:
 
