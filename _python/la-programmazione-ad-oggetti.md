@@ -702,6 +702,8 @@ Inserisci tutte le istanze in una lista e visita la lista chiamando metodo **pre
 
 #### Esercizio 7:
 
+![Panineria](/images/python/oggetti/panineria.png){:class="aside-image"}
+
 Implementare il diagramma UML di fianco creando tutte le classi necessarie. 
 Creare le istanze necessarie per un panino al prosciutto condito con olio e maionese e contenuto in un menù che ha come bevanda una cocacola.
 Calcolare le calorie del menù seguendo la seguente tabella:
@@ -711,7 +713,7 @@ Calcolare le calorie del menù seguendo la seguente tabella:
 * maionese Cal 680 per 100gr
 * coca cola 38 Cal per 100gr
 
-![Ereditarietà](/images/python/oggetti/panineria.png){:class="aside-image"}
+
 
 ### Esercizio 8:
 
