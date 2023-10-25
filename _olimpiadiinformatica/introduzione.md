@@ -98,6 +98,7 @@ Inputs 9 through 12 have N≤105.
 
 {% highlight python %}
 ingresso = input("Scrivi la stringa che descrive la disposizione delle mucche: ")
+K = int(input("Di quando si possono spostare le mucche? "))
 N = len(ingresso)
 out = "." * N                              # creo una stringa contenente tanti . quante sono le mucche
 cont = 0                                   # conto le aiuole disposte
