@@ -1,14 +1,21 @@
----s
+---
 title: 'Il problema di Knapsack'
-date: '2020-02-20T08:08:07+01:00'
+date: '2020-04-18'
 author: Fabio Mattei
 layout: page
 ---
 
-Il problema di **knapsack** (zainetto) o problema di **rucksack** è un problema di ottimizzazione combinatoria: Dato un insieme di oggetti, ognuno dei quali possiede un certo **peso** ed un certo **valore**, determinare un sottoinsieme da includere in una collezione in modo tale che la somma dei pesi di questo sottoinsieme rispetti il **vincolo di capacità** dello zainetto. Nel determinare il sottoinsieme fare in modo che la somma dei valori sia la più grande possibile.
+Il problema di **knapsack** (zainetto) o problema di **rucksack** è un problema di ottimizzazione combinatoria.
+Enunciao: dato uno zainetto con una **capacità limitata** e dato un insieme di oggetti, ognuno dei quali possiede un certo **peso** ed un certo **valore**, determinare un sottoinsieme di oggetti da includere in una collezione in modo tale che la somma dei pesi di questo sottoinsieme rispetti il **vincolo di capacità** dello zainetto. Nel determinare il sottoinsieme fare in modo che la somma dei valori sia la più grande possibile.
 
 ![Problema di knapsack](/images/problemsolving/knapsack.png){:class="aside-image"}
 Il problema viene spesso affrontato nei sistemi di logistica e di allocazione di risorse dove per esempio un manager deve scegliere dove impiegare le risorse monetarie di cui dispone al fine di ottenere il miglior risultato possibile. Il problema ha il vincolo implicito del tempo, si cerca la migliore soluzione calcolabile in un tempo determinato.
+
+Il problema ammette tre tipi di soluzione:
+
+* **soluzione ammissibile**: il sottoinsieme di oggetti che si è determinato rispetta il vincolo di capacità
+* **soluzione non ammissibile**: il sottoinsieme di oggetti che si è determinato NON rispetta il vincolo di capacità
+* **soluzione ottima**: soluzione ammissibile (rispetta il vincolo di capacità) la cui somma dei valori è la più grande possibile
 
 #### Esempio:
 
@@ -26,12 +33,6 @@ Il deposito contiene i seguenti minerali:
 Disponendo di un piccolo motocarro con portata massima di 59 Kg trovare la lista L delle sigle di due minerali diversi che siano trasportabili contemporaneamente con questo mezzo e che abbiano il massimo valore complessivo; calcolare inoltre questo valore V.
 
 Soluzione
-
-| Funzione | Cosa fa | Esempio | Risultato |
-|---|---|---|---|
-| **len** | Calcola la lunghezza della lista | len(lettere) | 5 |
-| **min** | Trova l’elemento più piccolo | min(lettere) | ‘a’ |
-| **max** | Trova l’elemento più grande | max(lettere) | ‘e’ |
 
 | L | m2, m4 |
 |---|---|
