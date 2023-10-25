@@ -4,8 +4,6 @@ author: Fabio Mattei
 layout: page
 ---
 
-
-
 * [Introduzione]({{ site.baseurl }}{% link _olimpiadiinformatica/introduzione.md %}.html)
 * [Il problema di Knapsack]({{ site.baseurl }}{% link _problemsolving/knapsack.md %}.html)
 
