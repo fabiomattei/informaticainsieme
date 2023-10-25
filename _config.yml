@@ -46,6 +46,9 @@ collections:
   ia:
     output: true
     permalink: /ia/:path	
+  olimpiadiinformatica:
+    output: true
+    permalink: /olimpiadiinformatica/:path	
   pandas:
     output: true
     permalink: /pandas/:path
