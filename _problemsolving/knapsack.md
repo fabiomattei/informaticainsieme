@@ -27,6 +27,12 @@ Disponendo di un piccolo motocarro con portata massima di 59 Kg trovare la lista
 
 Soluzione
 
+| Funzione | Cosa fa | Esempio | Risultato |
+|---|---|---|---|
+| **len** | Calcola la lunghezza della lista | len(lettere) | 5 |
+| **min** | Trova l’elemento più piccolo | min(lettere) | ‘a’ |
+| **max** | Trova l’elemento più grande | max(lettere) | ‘e’ |
+
 | L | m2, m4 |
 |---|---|
 | V | 19 + 10 = 29 |
