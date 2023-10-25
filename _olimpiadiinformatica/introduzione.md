@@ -90,17 +90,21 @@ Inputs 9 through 12 have N≤105.
 ##### Problem credits: Mythreya Dharani
 
 
-## Visualizziamo l'input
+## Visualizziamo l'input e l'output in esempio
+
+![visualizziamo](/images/olimpiadiinformatica/introduzione.jpg)
 
 ## Scriviamo l'algoritmo
 
 {% highlight python %}
-out = "." * N                              # creo una strgina contenente tanti . quante sono le mucche
+ingresso = input("Scrivi la stringa che descrive la disposizione delle mucche: ")
+N = len(ingresso)
+out = "." * N                              # creo una stringa contenente tanti . quante sono le mucche
 cont = 0                                   # conto le aiuole disposte
 g_last_covered = -1;                       # all'inizio non ci sono mucche coperte da una aiuola
 h_last_covered = -1;
 for i in range(N):                         # iterazione su tutte le mucche
-	cow = str[i]
+	cow = ingresso[i]
 	if cow == 'G':
 		if not i <= g_last_covered:        # se la posizione è coperta non dobbiamo fare nulla
 			cont = cont + 1                # aggiungiamo una nuova aiula
