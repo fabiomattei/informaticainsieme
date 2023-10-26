@@ -17,6 +17,11 @@ Il problema ammette tre tipi di soluzione:
 * **soluzione non ammissibile**: il sottoinsieme di oggetti che si è determinato NON rispetta il vincolo di capacità
 * **soluzione ottima**: soluzione ammissibile (rispetta il vincolo di capacità) la cui somma dei valori è la più grande possibile
 
+
+{::options parse_block_html="true" /}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zELsJd8cEEE?si=3gPmPuU_p8bfjxJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{::options parse_block_html="false" /}
+
 #### Esempio:
 
 In un deposito di minerali esistono esemplari di vario peso e valore individuati da sigle di riconoscimento. Ciascun minerale è descritto da una sigla che contiene le seguenti informazioni:
