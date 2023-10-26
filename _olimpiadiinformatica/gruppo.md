@@ -60,7 +60,11 @@ for i in range(N):
 			print(line1[i], line2[j])
 {% endhighlight %}
 
-Questa soluzione è molto onerosa, in effetti calcola tutte le possibili soluzioni per determinare quella giusta. Per N = 4 fa 16 moltiplicazioni ma se N fosse un numero più grande quante moltiplicazioni farebbe?
+Questa soluzione è molto onerosa, in effetti calcola tutte le possibili soluzioni per determinare quella giusta. Per N = 4 fa 16 somme ma se N fosse un numero più grande quante somme farebbe?
+
+![Tutte le combinazioni](/images/olimpiadiinformatica/gruppo1.png)
+
+Ne farebbe N<sup>2</sup>, tantissime!!!
 
 #### Soluzione più leggera
 
@@ -79,8 +83,25 @@ while i < N and j >= 0 and somma != K:
 	    i = i + 1 # la somma è troppo piccola
 {% endhighlight %}
 
-In questo modo riduciamo drasticamente la quantità di calcoli da fare
+In questo modo riduciamo drasticamente la quantità di calcoli da fare.
 
+La soluzione consiste nell'utilizzare due indici, uno che percorre la coda 1 in senso crescente, l'altro che percorre la coda 2 in senso decrescente.
+
+![Tutte le combinazioni](/images/olimpiadiinformatica/gruppo2.png)
+
+Dato che la somma supera il risutalto voluto decremento l'indice della coda 2.
+
+![Tutte le combinazioni](/images/olimpiadiinformatica/gruppo3.png)
+
+Dato che la somma è minore del risutalto voluto incremento l'indice della coda 1.
+
+![Tutte le combinazioni](/images/olimpiadiinformatica/gruppo4.png)
+
+Continuo fino ad arrivare al risultato desiderato.
+
+![Tutte le combinazioni](/images/olimpiadiinformatica/gruppo5.png)
+
+In questo caso le somme sono 2N nel caso peggiore, ma potrei anche non doverle calcolare tutte. Potrei essere fortunato e trovare la soluzione al primo tentativo.
 
 ## Esercizio
 
