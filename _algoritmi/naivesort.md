@@ -15,22 +15,22 @@ Fatto questo, dato che sono sicuro di avere l'elemento più piccolo al primo pos
 {% highlight python %}
 
 def naiveSort(array):
-	n = len(arr)
-	for j in range(n):
-		posmin = j
-		min = vet[j]
-		for i in range(j+1, N)
-			if vet[i] < min: # /* istr. dom. */
-				min=vet[i]
-				posmin=i
-		if posmin != j: # scambia 
-			vet[posmin] = vet[j]
-			vet[j] = min
+    n = len(arr)
+    for j in range(n):              # ciclo principale di visita della lista
+        poskey = j
+        key = vet[j]
+        for i in range(j+1, N):     # questo ciclo visita la parte destra della lista in cerca di
+            if vet[i] < key:        # elementi più piccoli di quello selezionato
+                key = vet[i]
+                poskey = i
+        if poskey != j:             # se viene trovato un elemento più piccolo di key
+            vet[poskey] = vet[j]    # i due vengono scambiati
+            vet[j] = key
 
 data = [9, 5, 1, 4, 3]
-naiveSort(data)
-print('Sorted Array in Ascending Order:')
-print(data)
+sorted_data = naiveSort(data)
+print('Lista ordinata:')
+print(sorted_data)
 {% endhighlight %}
   
 ## Esempio di chiamata
