@@ -5,14 +5,14 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Esempio](/images/algoritmi/bubblesort/bubblesort.png){:class="aside-image"}
+
 ## Descrizione dell'algoritmo
 
 L'algoritmo esegue ripetute visite dell'insieme da ordinare.
 Ad ogni visita dell'insieme l'algoritmo confronta gli elementi due alla volta, nel caso in cui il primo elemento sia più grande del secondo l'algoritmo scambia gli elementi.
 Alla fine della visita sono __sicuro__ che di avere l'elemento più grande in fondo alla lista.
 Ripeto il procedimento considerando la lista cui viene sottratto l'elemento ormai nella giusta posizione.
-
-![Esempio](/images/algoritmi/bubblesort/bubblesort.png){:class="aside-image"}
 
 {% highlight python %}
 def bubbleSort(arr):
