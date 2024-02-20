@@ -1,6 +1,6 @@
 ---
 title: Naive Sort
-date: '2024-02-20T10:58:13+02:00'
+date: '2024-02-19T10:58:13+02:00'
 author: Fabio Mattei
 layout: page
 ---
