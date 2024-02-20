@@ -12,6 +12,8 @@ Ad ogni visita dell'insieme l'algoritmo seleziona l'elemento più piccolo e lo s
 Fatto questo, dato che sono sicuro di avere l'elemento più piccolo al primo posto, si ripete il processo con in sottoinsieme cui viene sottratto il primo elemento ormai ordinato.
 
 
+![Esempio](/images/algoritmi/naivesort/naivesort.png){:class="aside-image"}
+
 {% highlight python %}
 
 def naiveSort(array):

@@ -12,6 +12,8 @@ Ad ogni visita dell'insieme l'algoritmo confronta gli elementi due alla volta, n
 Alla fine della visita sono __sicuro__ che di avere l'elemento più grande in fondo alla lista.
 Ripeto il procedimento considerando la lista cui viene sottratto l'elemento ormai nella giusta posizione.
 
+![Esempio](/images/algoritmi/bubblesort/bubblesort.png){:class="aside-image"}
+
 {% highlight python %}
 def bubbleSort(arr):
     n = len(arr)
