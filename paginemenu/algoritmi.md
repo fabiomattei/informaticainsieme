@@ -13,6 +13,10 @@ name: Algoritmi
 * [L'algritmo di Kruskal]({{ site.baseurl }}{% link _algoritmi/kruskal.md %}.html)
 
 
+## Ricerca
+
+* [Algoritmi di ricerca]({{ site.baseurl }}{% link _algoritmi/ricerca.md %}.html)
+
 ## Ordinamento
 
 * [Naive Sort]({{ site.baseurl }}{% link _algoritmi/naivesort.md %}.html)
