@@ -70,6 +70,9 @@ collections:
   web:
     output: true
     permalink: /web/:path
+  arduino:
+    output: true
+    permalink: /arduino/:path
 
 # Build settings
 theme: minima
