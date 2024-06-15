@@ -58,26 +58,18 @@ layout: default
 		    {%- endif %}
 
 		  {%- endif -%}
-		  
-		  
-		  <hr>
-		  <br />
-		  <a href="{{site.baseurl}}/paginemenu/codifica.html"><img alt="La codifica dell'informazione. Uccellino pixellato." src="images/codifica/codifica.png" /></a>
-		  
+
 	  </div>
 	  <div class="home-tutorials">
-		  {%- if site.python.size > 0 -%}
-		    <h2 class="post-list-heading">{{ page.list_title | default: "Python" }}</h2>
-			  {% assign items = site.python | sort: 'orderfield' %}
-		      {%- for post in items -%}
-		          <a class="post-link" href="{{ post.url | relative_url }}.html">
-		            {{ post.title | escape }}
-		          </a>
-		        {%- if site.show_excerpts -%}
-		          {{ post.excerpt }}
-		        {%- endif -%}
-		      {%- endfor -%}
-		  {%- endif -%}
+		  <a href="{{site.baseurl}}/paginemenu/codifica.html"><img alt="La codifica dell'informazione. Uccellino pixellato." src="images/codifica/codifica.png" /></a>
+		  
+		  <br /><br />
+		  
+		  <a href="{{site.baseurl}}/paginemenu/python.html"><img alt="Python, sintassi base" src="images/python/pythonbutton.png" /></a>
+		  
+		  <br /><br />
+		  
+		  <a href="{{site.baseurl}}/paginemenu/algoritmi.html"><img alt="Algoritmi: guida agli algoritmi più importanti" src="images/algoritmi/algoritmibutton.png" /></a>
 	  </div>
   </div>
 
