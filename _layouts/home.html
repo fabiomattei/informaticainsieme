@@ -22,9 +22,7 @@ layout: default
 
 
 		  {%- if posts.size > 0 -%}
-		    {%- if page.list_title -%}
-		      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-		    {%- endif -%}
+		    <h2 class="post-list-heading">Blog</h2>
 		    <ul class="post-list">
 		      {%- for post in posts -%}
 		      <li>
@@ -63,19 +61,9 @@ layout: default
 		  
 		  
 		  <hr>
+		  <br />
+		  <a href="{{site.baseurl}}/paginemenu/codifica.html"><img alt="La codifica dell'informazione. Uccellino pixellato." src="images/codifica/codifica.png" /></a>
 		  
-		  {%- if site.codifica.size > 0 -%}
-		    <h2 class="post-list-heading">{{ page.list_title | default: "La codifica dell'informazione" }}</h2>
-		      {%- for post in site.codifica -%}
-		        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		          <a class="post-link" href="{{ post.url | relative_url }}.html">
-		            {{ post.title | escape }}
-		          </a>
-		        {%- if site.show_excerpts -%}
-		          {{ post.excerpt }}
-		        {%- endif -%}
-		      {%- endfor -%}
-		  {%- endif -%}
 	  </div>
 	  <div class="home-tutorials">
 		  {%- if site.python.size > 0 -%}
