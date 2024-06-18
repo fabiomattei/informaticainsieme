@@ -55,3 +55,11 @@ sss
     border: 1px dashed $grey-color-dark;
 	border-radius: 3px;
 }
+
+#search-input {
+    border-radius: 12px;
+    border: 1px solid #484848;
+    padding: 20px; 
+    width: 250px;
+    height: 15px;    
+}

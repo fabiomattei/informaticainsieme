@@ -61,6 +61,11 @@ layout: base
 
 	  </div>
 	  <div class="home-tutorials">
+		  <!-- HTML elements for search -->
+		  <input type="text" id="search-input" placeholder="Cerca nel sito..">
+		  <ul id="results-container"></ul>
+		  
+		  
 		  <a href="{{site.baseurl}}/codifica/codifica.html"><img alt="La codifica dell'informazione. Uccellino pixellato." src="images/codifica/codifica.png" /></a>
 		  
 		  <br /><br />
@@ -74,3 +79,15 @@ layout: base
   </div>
 
 </div>
+
+<!-- or without installing anything -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+	var sjs = SimpleJekyllSearch({
+	  searchInput: document.getElementById('search-input'),
+	  resultsContainer: document.getElementById('results-container'),
+	  json: '/search.json'
+	})
+</script>
+	
