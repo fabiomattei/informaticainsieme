@@ -4,6 +4,8 @@ title:  "Creiamo una news letter con python"
 date:   2024-06-17 00:00:00
 categories: python newsletter
 excerpt: E' possibile mandare messaggi email ad un certo numero di destinatari interessati utilizzando python
+author: Fabio
+tags: python email
 ---
 
 Le news letter sono la spina dorsale di internet. Esistono da sempre e permettono agli utenti di stare in contatto con le comunità a cui tengono di più.
