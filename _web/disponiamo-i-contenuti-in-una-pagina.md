@@ -11,7 +11,7 @@ Il problema che risolve è il seguente: dividere la pagina in sezioni in modo da
 
 ![Il Grid System](/images/web/grid/grid-system.png){:class="aside-image"}
 
-Questo risultato si raggiunge utilizzando un tag **div** come contenitore e definendo le sottoaree attraverso i css.
+Questo risultato si raggiunge utilizzando un tag **div** come contenitore e definendo le sottoaree attraverso il codice css.
 
 
 {% highlight css %}
@@ -68,6 +68,9 @@ L’html che si accompagna a questo css è il seguente:
 </div>
 {% endhighlight %}
 
-Posso inserire all’interno dei divisor i contenuti che voglio essendo certo che finiranno nella giusta porzione di pagina.
+Posso inserire all’interno dei divisor (div) i contenuti che voglio essendo certo che finiranno nella giusta porzione di pagina.
 
 Il grid sistem risolve un problema che per anni ha confuso i creatori di pagine web. E’ uno strumento che seppur tardivo si rivelò molto potente.
+
+
+

@@ -45,3 +45,4 @@ Si attribuisce attraverso la proprità border-width
 Si può anche riassumere il tutto attraverso la proprietà border:
 
 border: 1px solid red;
+
