@@ -13,40 +13,62 @@ Python è sia un linguaggio fortemente tipato sia un linguaggio a tipizzazione d
 * fortemente tipato: ad ogni variabile viene assegnato un tipo di dato (intero, booleano, stringa di testo) e questo tipo è predefinito e parte del linguaggio
 * l'interprete assegna i tipi durante l'esecuzione del programma basandosi sui valori che le variabili assumono
 
+Normalmente noi definiamo una funzione senza specificare il tipo dei parametri, come nell'esempio che segue:
+
 {% highlight python %}
-def magic(a, b):
+def somma(a, b):
   return a + b
 {% endhighlight %}
 
-^ we can write functions like that because Python is dynamically typed — meaning that variable data types are determined at runtime.
+Lo possiamo fare perché python è un linguaggio a tipizzazione dinamica e questo significa che il tipo dei parametri viene determinato durante l'esecuzione.
+La funzione qui in alto riesce a lavorare bene sia che le si passino due numeri interi sia che le si passino due stringhe di testo.
+
+Es:
 
 {% highlight python %}
-def magic(a:int, b:int) -> int:
+print(somma(2, 3))
+# stampa il numero 5
+print(somma("ciao", "marco"))
+# stampa la stringha di testo "ciaomarco"
+{% endhighlight %}
+
+La nuova sintassi di python permette di specificare il tipo dei parametri:
+
+{% highlight python %}
+def somma(a:int, b:int) -> int:
   return a + b
 {% endhighlight %}
 
-^ writing the exact same function as above, but with type hints
+La funzione è analoga alla precedente ma ora come si vede specifichiamo i tipi:
 
-    a should be an integer
-    b should be an integer
-    the function’s return value should also be an integer
+* a parametro di tipo integer
+* b parametro di tipo integer
+* parametro restituito di tipo integer
 
-When our code base gets huge, type hinting becomes increasingly important in making our code as human-readable as possible — imagine having 10,000 functions but you need to infer the data types they take in, and their return types. Not too fun
+Quando il nostro codice è costituito da centinaia o migliaia di righe specificare il tipo dei parametri ci aiuta ad evitare un sacco di errori e ci permette di fare **refactoring** del codice in modo molto più semplice.
 
-{% highlight python %}
-def test1(ls: list[int], x:float) -> list[float]:
-  # stuff
-{% endhighlight %}
-
-^ ls should be a list of floats, x should be a float, and the function should return a list of floats
+Possiamo fare di più, possiamo specificare che un parametro è una lista e specificare il tipo di dato all'interno della lista:
 
 {% highlight python %}
-def test2(a:str, b:bool, c:dict[str,str]) -> dict[str,int]:
-  # stuff
+def miafunzione(ls: list[int], x:float) -> list[float]:
+  # corpo della funzione
 {% endhighlight %}
 
-^ a should be a string, b should be a boolean value, and c should be a dictionary where keys are strings, and values are strings. The return value should be a dict where keys are strings, but values are integers.
+* ls è una lista di numeri interi
+* x è un numero float 
+* la funzione dovrebbe restituire una lista di float
 
-Note — type hints hint, not enforce. If we do not follow a type hint’s type, Python will still allow it.
+Facciamo un esempio con i dizionari:
+
+{% highlight python %}
+def miasecondafunzione(a:str, b:bool, c:dict[str,str]) -> dict[str,int]:
+  # corpo della funzione
+{% endhighlight %}
+
+* a è una stringa
+* b è un booleano
+* c è un dizionario le cui chiavi sono stringhe di testo e i valori sono stringhe di testo
+* il dato restituito è un dizionario le cui chiavi sono stringhe e i cui valori sono int
+
 
 
