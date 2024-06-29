@@ -21,9 +21,9 @@
 title: Informatica insieme
 email: burattino@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I miei personali appunti di informatica, pensado di fare cosa gradita.
-locale: it_IT
+  I miei personali appunti di informatica, pensado di fare cosa gradita. Questo sito non utilizza alcun tipo di cookie e non traccia i visitatori in alcun modo.
 baseurl: "" # the subpath of your site, e.g. /blog
+locale: it_IT
 absolute_url: https://www.informaticainsieme.it" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fabiomattei
 logo: /images/logo.png
