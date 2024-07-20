@@ -8,7 +8,7 @@ author: Fabio
 tags: python librerie
 ---
 
-Python è un linugaggio estensibile attraverso l'uso delle librerie. Utilizziamo una libreria quando in testa ad un file scriviamo import. 
+Python è un linguaggio estensibile attraverso l'uso delle librerie. Utilizziamo una libreria quando in testa ad un file scriviamo import. 
 
 {% highlight python %}
 import math

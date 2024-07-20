@@ -70,5 +70,3 @@ def miasecondafunzione(a:str, b:bool, c:dict[str,str]) -> dict[str,int]:
 * c è un dizionario le cui chiavi sono stringhe di testo e i valori sono stringhe di testo
 * il dato restituito è un dizionario le cui chiavi sono stringhe e i cui valori sono int
 
-
-
