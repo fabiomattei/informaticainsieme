@@ -22,7 +22,7 @@ Ci sono alcune librerie che sono una parte standard del linguaggio ma la cosa no
 
 ![pypi.org](/images/blog/2024-06/pypi.png){:class="aside-image"}
 
-Per capire di cosa stiamo parlando è bene aprire il sito : [pypi.org](https://pypi.org/)
+Per capire di cosa stiamo parlando è bene aprire il sito: [pypi.org](https://pypi.org/)
 
 Questo portale ci permette di navigare attraverso più di mezzo milione di librerie e cercarne una che faccia al caso nostro. 
 In effetti questo portale nasce all'insegna della condivisione della conoscenza, vi si trovano soluzioni a problemi che altri informatici hanno avuto e per cui si sono presi la briga di creare un pacchetto e condividerlo con il resto del mondo. Questo portale rappresenta la più grande comunità di programmatore python.
