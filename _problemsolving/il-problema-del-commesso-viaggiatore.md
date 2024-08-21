@@ -11,13 +11,16 @@ guid: 'https://www.esercizidiinformatica.it/?page_id=446'
 
 In termini più formali, il problema consiste nel costruire un grafo i cui nodi rappresentano i clienti e la casa del commesso, mentre gli archi rappresentano i percorsi fra i nodi, e di trovare su di esso un ciclo che tocchi tutti i nodi e abbia la distanza complessiva minima.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Example_The_travelling_salesman_problem_TSP.gif)</figure><figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/9tH9oDTQlCA?feature=oembed" title="Problem solving: il problema del commesso viaggiatore" width="580"></iframe></div></figure>Il problema, semplice da descrivere, è però complesso da risolvere. Il numero delle sue soluzioni, infatti, cresce molto rapidamente con il numero dei nodi.
+![Problema TSP](/images/problemsolving/Example_The_travelling_salesman_problem_TSP.gif){:class="aside-image"}
+
+Il problema, semplice da descrivere, è però complesso da risolvere. Il numero delle sue soluzioni, infatti, cresce molto rapidamente con il numero dei nodi.
 
 Il TSP (travelling salesman problem) fu formulato per la prima volta dal matematico irlandese [Sir William Rowan Hamilton](http://www-groups.dcs.st-andrews.ac.uk/~history/Mathematicians/Hamilton.html). Nel 1857, a Dublino, egli descrisse un gioco, detto *Icosian game*, a una riunione della British Association for the Advancement of Science. Il gioco consisteva nel trovare un percorso che toccasse tutti i vertici di un *icosaedro*, passando lungo gli spigoli, ma senza mai percorrere due volte lo stesso spigolo. Come si può vedere nella figura seguente, l’icosaedro ha 12 vertici, 30 spigoli e 20 facce identiche a forma di triangolo equilatero.
 
 Il gioco, venduto alla ditta J. Jacques and Sons per 25 sterline, fu brevettato a Londra nel 1859, ma vendette pochissimo.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/icosian_game.png)</figure>Al fine di risolvere i problemi ci occorrono alcune definizioni:
+![ICOSIAN GAME](/images/problemsolving/icosian_game.png){:class="aside-image"}
+Al fine di risolvere i problemi ci occorrono alcune definizioni:
 
 - Due nodi si dicono *adiacenti* se sono collegati da un arco;
 - Il numero di archi che “escono” da un nodo si dice *valenza* del nodo;
@@ -44,17 +47,18 @@ Disegnare il grafo e trovare:
 COMMENTI ALLA SOLUZIONE  
 Per disegnare il grafo si osservi innanzitutto che vengono menzionati 5 nodi (n1, n2, n3, n4, n5); si procede per tentativi: si disegnano i 5 punti nel piano e li si collega con archi costituiti da segmenti: probabilmente al primo tentativo gli archi si incrociano;
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/Schermata-2020-02-21-alle-20.35.02-1024x454.png)</figure>Si noti che le lunghezze degli archi che compaiono nei termini (che rappresentano delle strade) *non* sono (necessariamente) proporzionali a quelle degli archi del grafo (che sono, segmenti di retta).  
+![Problema TSP](/images/problemsolving/Schermata-2020-02-21-alle-20.35.02-1024x454.png){:class="aside-image"}
+Si noti che le lunghezze degli archi che compaiono nei termini (che rappresentano delle strade) *non* sono (necessariamente) proporzionali a quelle degli archi del grafo (che sono, segmenti di retta).  
 Per rispondere alle due domande occorre elencare sistematicamente *tutti* i percorsi, che non passino più volte per uno stesso punto, tra n5 e n3:
 
-<figure class="wp-block-table">| Percorso da n5 a n3 | Lunghezza |
+| Percorso da n5 a n3 | Lunghezza |
 |---|---|
 | \[n5, n4, n1, n2, n3\] | 3+1+2+2=8 |
 | \[n5, n4, n1, n3\] | 3+1+5=9 |
 | \[n5, n4, n2, n3\] | 3+4+2=9 |
 | \[n5, n4, n2, n1, n3\] | 3+4+2+5=14 |
 
-</figure>#### Problema 1
+#### Problema 1
 
 Un grafo (che corrisponde alla rete di strade che collegano delle città) è descritto dal seguente elenco di archi:
 
