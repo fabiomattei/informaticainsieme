@@ -8,3 +8,9 @@ layout: page
 * https://vidyo.ai/
 * https://invideo.io/
 
+## Domande
+
+Gli attori avranno ancora un lavoro?
+E i registi?
+E i cameraman?
+
