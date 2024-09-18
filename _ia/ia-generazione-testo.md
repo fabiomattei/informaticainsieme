@@ -51,6 +51,8 @@ Ci sono alcuni problemi che le IA generative non possono risolvere:
 
 * le allucinazioni: consiste nel fatto che il modello restituisce una risposta che sembra esatta ma contiene delle parole o delle frasi che in realtà sono inventate.
 
+![Limite chat GPT](/images/ia/limitichatgpt.png){:class="aside-image"}
+
 ## Domande
 
 Quali problemi pensi che questo genere di algoritmi possa risolvere per la società?
