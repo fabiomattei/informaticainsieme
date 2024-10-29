@@ -1,6 +1,6 @@
 ---
 title: 'Generazione di musica'
-date: '2024-26-28T09:57:43+02:00'
+date: '2024-10-26T09:57:43+02:00'
 author: Fabio Mattei
 layout: page
 ---
