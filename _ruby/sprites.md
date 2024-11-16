@@ -113,7 +113,8 @@ def tick args
         y:args.state.player_y, 
         w:100, 
         h:80, 
-        path:'sprites/dragon-0.png'}
+        path:'sprites/dragon-0.png'
+	}
 end
 {% endhighlight %}
 
@@ -146,13 +147,15 @@ def tick args
     args.outputs.labels << {
         x:120, 
         y:120, 
-        text:"Hello Dragon!"}
+        text:"Hello Dragon!"
+	}
     args.outputs.sprites << {
         x:120, 
         y:180, 
         w:100, 
         h:80, 
-        path:'sprites/misc/dragon-0.png'}
+        path:'sprites/misc/dragon-0.png'
+	}
 end
 {% endhighlight %}
 
