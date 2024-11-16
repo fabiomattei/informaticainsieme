@@ -50,7 +50,9 @@ def tick args
 end
 {% endhighlight %}
 
-Se il punteggio fosse contenuto nella variabile **args.state.punteggio**:
+Se il punteggio fosse contenuto nella variabile **args.state.punteggio** si utilizza
+la notazione che prevede di mettere il nome della variabile all'interno del tag #{nome_variabile}
+come si vede nell'esempio che segue.
 
 {% highlight ruby %}
 def tick args

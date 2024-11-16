@@ -1,5 +1,5 @@
 ---
-title: 'Gli sprites'
+title: 'Dragonruby: gli sprites'
 date: '2020-11-15T08:47:01+01:00'
 author: Fabio Mattei
 layout: page
@@ -72,15 +72,42 @@ in basso a sinistra della sua immagine.
 Questo punto di ancoraggio viene utilizzato come punto da tenere in considerazione quando vado a posizionare
 lo sprite sullo schermo. 
 
-![Il loop](/images/ruby/dragonruby/anchor.png)
+![Il loop](/images/ruby/dragonruby/sprite00.png)
 
-![Il loop](/images/ruby/dragonruby/anchorrotation.png)
+Il punto di ancoraggio viene fissato in modo proporzionale alle dimensioni dell'immagine facendo variare
+i valori di **anchor_x e anchor_y** tra 0 e 1
+
+![Il loop](/images/ruby/dragonruby/sprite55.png)
 
 ## Capovolgi (flip)
 
+I flag flip_horizontally e flip_vertically sono variabili booleane che servono per far capovolegere una immagine
+rispetto ad un asse oppure ad un altro.
+In basso un esempio di flip_horizzontally settato a True
+
+![Il loop](/images/ruby/dragonruby/spriteflip.png)
 
 ## Sprite sheet
 
+Per dare l'illusione del movimento si utilizzano molte immagini con piccole variazioni dello stesso sprite.
+Si chiama **sprite sheet** un foglio che si concretizza in un file, contenente molte variazione della stessa immagine.
+Dato che vogliamo visualizzare una sola immagine per volta, localizziamo la porzione da rendere visibile
+attraverso le sue coordinate e le sue dimensioni.
 
+![Sprite Sheet](/images/ruby/dragonruby/spritesheet.png)
 
+Se utilizzo le coordinate che utilizzano l'angolo in alto a sinistra come origine ed hanno l'asse delle ordinate orientato 
+verso il basso si utilizzano le seguenti proprietà:
+
+* tile_x: ascissa dell'inizio del ritaglio
+* tile_y: ordinata dell'inizio del ritaglio
+* tile_w: larghezza del ritaglio
+* tile_h: altezza del ritaglio
+
+Se utilizzo le coordinate che utilizzano l'angolo in basso a sinistra come origine si utilizzano le seguenti proprietà:
+
+* source_x: ascissa dell'inizio del ritaglio
+* source_y: ordinata dell'inizio del ritaglio
+* source_w: larghezza del ritaglio
+* source_h: altezza del ritaglio
   
