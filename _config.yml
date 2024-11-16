@@ -82,6 +82,9 @@ collections:
   arduino:
     output: true
     permalink: /arduino/:path
+  ruby:
+    output: true
+    permalink: /ruby/:path
 
 # Build settings
 theme: minima
