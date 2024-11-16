@@ -11,3 +11,4 @@ layout: page
 
 * [Introduzione]({{ site.baseurl }}{% link _ruby/sprites.md %}.html)
 * [Labels]({{ site.baseurl }}{% link _ruby/labels.md %}.html)
+* [Sprites]({{ site.baseurl }}{% link _ruby/dragonsprites.md %}.html) 

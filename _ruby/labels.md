@@ -11,7 +11,7 @@ Vediamo subito un esempio:
 
 {% highlight ruby %}
 mylabel = {
-    x: 320,
+    +x: 320,
     y: 640,
     text: "Text",
     font: "fonts/font.ttf",
