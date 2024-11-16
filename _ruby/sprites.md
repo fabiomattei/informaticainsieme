@@ -52,11 +52,11 @@ def tick args
     args.state.player_x ||= 120
     args.state.player_y ||= 280
     args.outputs.sprites << {
-		x:args.state.player_x, 
-		y:args.state.player_y, 
-		w:100, 
-		h:80, 
-		path:'sprites/dragon-0.png' 
+		x: args.state.player_x, 
+		y: args.state.player_y, 
+		w: 100, 
+		h: 80, 
+		path: 'sprites/dragon-0.png' 
 	}
 end
 {% endhighlight %}
