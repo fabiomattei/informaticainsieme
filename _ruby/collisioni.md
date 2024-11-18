@@ -20,6 +20,8 @@ Dato che ogni elemento che sta sullo schermo è uno sprite, ed ogni sprite è de
 quello che in effetti dobbiamo valutare è se il rettangolo che definisce lo sprite del proiettile va ad
 intersecare il rettangolo che definisce il personaggio. 
 
+![Collisioni](/images/ruby/dragonruby/collisioni.png)
+
 Per velocizzare il tutto dragonruby ci fornisce il metodo **intersect_rect?**.
 
 intersect_rect? è un metodo che troviamo nelle liste e che restituisce **true** se due rettangoli si toccano:

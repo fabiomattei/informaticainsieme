@@ -337,7 +337,6 @@ class Cerchio
    def calcola_area
        @raggio ** 2 * @@pigreco
    end 
-   
 end
 
 # main
