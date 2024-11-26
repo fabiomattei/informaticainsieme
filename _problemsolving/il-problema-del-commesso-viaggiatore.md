@@ -7,6 +7,10 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=446'
 ---
 
+{::options parse_block_html="true" /}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/idUm-yho9JE?si=dg95xdHjwHqyGiWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{::options parse_block_html="false" /}
+
 *Un commesso viaggiatore deve visitare i suoi clienti. Conosce la posizione dei clienti e la distanza che li separa. Vuole visitare tutti i clienti nell’ordine che gli consente di percorrere la strada più corta possibile. Come fa?*
 
 In termini più formali, il problema consiste nel costruire un grafo i cui nodi rappresentano i clienti e la casa del commesso, mentre gli archi rappresentano i percorsi fra i nodi, e di trovare su di esso un ciclo che tocchi tutti i nodi e abbia la distanza complessiva minima.

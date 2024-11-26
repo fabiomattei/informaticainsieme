@@ -5,6 +5,12 @@ author: Fabio Mattei
 layout: page
 ---
 
+{::options parse_block_html="true" /}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9bdZWeIrxrM?si=Sp2J3ybnWSNhdyCN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{::options parse_block_html="false" /}
+
+
+
 Il problema di **knapsack** (zainetto) o problema di **rucksack** è un problema di ottimizzazione combinatoria.
 Enunciao: dato uno zainetto con una **capacità limitata** e dato un insieme di oggetti, ognuno dei quali possiede un certo **peso** ed un certo **valore**, determinare un sottoinsieme di oggetti da includere in una collezione in modo tale che la somma dei pesi di questo sottoinsieme rispetti il **vincolo di capacità** dello zainetto. Nel determinare il sottoinsieme fare in modo che la somma dei valori sia la più grande possibile.
 
@@ -17,10 +23,6 @@ Il problema ammette tre tipi di soluzione:
 * **soluzione non ammissibile**: il sottoinsieme di oggetti che si è determinato NON rispetta il vincolo di capacità
 * **soluzione ottima**: soluzione ammissibile (rispetta il vincolo di capacità) la cui somma dei valori è la più grande possibile
 
-
-{::options parse_block_html="true" /}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zELsJd8cEEE?si=3gPmPuU_p8bfjxJd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-{::options parse_block_html="false" /}
 
 #### Esempio:
 
