@@ -1,5 +1,5 @@
 ---
-title: 'Il cicfrario di Cesare'
+title: 'Il cifrario di Cesare'
 date: '2020-04-18'
 author: Fabio Mattei
 layout: page
