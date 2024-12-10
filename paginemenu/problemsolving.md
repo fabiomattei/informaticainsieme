@@ -10,6 +10,7 @@ name: Problem solving
 * [Sottosequenze]({{ site.baseurl }}{% link _problemsolving/sottosequenze.md %}.html)
 * [Il cifrario di Cesare]({{ site.baseurl }}{% link _problemsolving/cifrario-cesare.md %}.html)
 * [Il movimento di un robot]({{ site.baseurl }}{% link _problemsolving/movimento-robot.md %}.html)
+* [Flussi in una rete di canali]({{ site.baseurl }}{% link _problemsolving/canali.md %}.html)
 
 ## Pseudolinguaggio
 
