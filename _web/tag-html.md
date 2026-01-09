@@ -8,32 +8,89 @@ layout: page
 Nell'[introduzione]({{ site.baseurl }}{% link _web/html.md %}.html) abbiamo cominciato a prendere coscienza della logica che guida la struttura del linguaggio html. Ora cominciamo a conoscere i TAG principali che vengono utilizzati per 
 costruire le pagine.
 
-#### Titoli
+![Pagina di una rivista etichettata](/images/web/html/pagina-taggata.jpg)
+
+#### Intestazioni
+
+Il TAG H va a indicare le intestazioni contenute all'interno di un documento HTML. 
+H è inteso come acronimo di **heading**. Il numero 
+che lo segue va a definire il peso che questa intestazione ricopre all'interno del testo. 
+I numeri più bassi vanno a definire le intestazioni più importanti, i numeri più bassi quelle meno importanti. 
+
+Notiamo nell'immagine in alto che il **peso** di una intestazione si rispecchia nella grandezza del carattere, 
+nell'utilizzazione dello stile grassetto e, qualche volta, nel colore con cui il testo è scritto o nel colore 
+del suo sfondo.
 
 {% highlight html %}
-<h1>Titolo di livello più alto</h1>
-<h2>Titolo di livello due</h2>
-<h3>Titolo di livello tre</h3>
-<h4>Titolo di livello quattro</h4>
-<h5>Titolo di livello cinque</h5>
-<h6>Titolo di livello più basso</h6>
+<h1>Intestazione di livello più alto</h1>
+<h2>Intestazione di livello due</h2>
+<h3>Intestazione di livello tre</h3>
+<h4>Intestazione di livello quattro</h4>
+<h5>Intestazione di livello cinque</h5>
+<h6>Intestazione di livello più basso</h6>
 {% endhighlight %}
-
-I tag che vanno da H1 ad H6 permettono di scrivere i titoli. 
-Ci sono 6 diversi livelli di titoli che permettono allo scrittore di sottolineare l’importanza che ciascuno di questi riveste all’interno del testo.
 
 #### Paragrafi
 
+Il paragrafo è una porzione di testo, formata da uno i più periodi, isolata visivamente dal testo che lo precede e da quello che lo segue.
+
 {% highlight html %}
-<p>Un paragrafo in HTML è una sezione di testo 
-circondata dal tag p</p>
+<p>Un paragrafo in HTML è una porzione di testo, formata da uno i più periodi, 
+isolata visivamente dal testo che lo precede e da quello che lo segue.</p>
 {% endhighlight %}
 
 Possiamo notare che il testo nel paragrafo è circondato dalle etichette &lt;p&gt; e &lt;/p&gt;. Queste etichette determinano l’inizio e la fine del paragrafo.
 
+Il tag **P** è acronimo di **paragraph**.
+
+#### Elenchi puntati 
+
+Gli elenchi puntati sono elenchi formati da elementi il cui ordine non ha particolare importanza.
+
+Possiamo pensare alla lista della spesa come esempio di elenco puntato.
+
+{% highlight html %}
+<ul>
+  <li>Carote</li>
+  <li>Mele</li>
+  <li>Pane</li>
+</ul>
+{% endhighlight %}
+
+La renderizzazione, dal parte del browser, è la seguente:
+
+* Carote
+* Mele
+* Pane
+
+Il TAG **UL** è acronimo di **unordered list** il tag **LI** di **list item**
+
+#### Elenchi  numerati 
+
+Un elenco numerato è una lista all'interno della quale l'ordine degli elementi che la compongono è molto importante.
+
+Un esempio di elenco numerato è l'arrivo di un gran premio di formula 1. 
+
+{% highlight html %}
+<ol>
+  <li>Verstappen M.</li>
+  <li>Piastri O.</li>
+  <li>Norris L.</li>
+</ol>
+{% endhighlight %}
+
+La renderizzazione, dal parte del browser, è la seguente:
+
+1. Verstappen M.
+2. Piastri O.
+3. Norris L.
+
+Il TAG **OL** è acronimo di **ordered list** il tag **LI** di **list item**
+
 #### Formattazione del testo
 
-Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
+E' possible formattare il testo scritto all'interno dei paragrafi, delle liste e in generale
+all'interno di quasi tutti i tag utilizzando i seguenti tag.
 
 | Tag | Descrizione | Resa di base |
 |---|---|---|
@@ -43,29 +100,17 @@ Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
 | &lt;i&gt; | Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo | Corsivo |
 | &lt;u&gt; | Rende un testo sottolineato | Sottolineato |
 
-#### Elenchi puntati e numerati 
-
-Elenco puntato
-
+Esempio
 
 {% highlight html %}
-<ul>
-  <li>primo elemento</li>
-  <li>secondo elemento</li>
-  <li>terzo elemento</li>
-</ul>
+<p>Un paragrafo in <strong>HTML</strong> è una porzione di testo, formata da uno i più <em>periodi</em>, 
+isolata visivamente dal testo che lo precede e da quello che lo segue.</p>
 {% endhighlight %}
 
-Elenco numerato
+La renderizzazione, dal parte del browser, è la seguente:
 
-
-{% highlight html %}
-<ol>
-  <li>primo elemento</li>
-  <li>secondo elemento</li>
-  <li>terzo elemento</li>
-</ol>
-{% endhighlight %}
+Un paragrafo in **HTML** è una porzione di testo, formata da uno i più *periodi*, 
+isolata visivamente dal testo che lo precede e da quello che lo segue.
 
 #### Le tabelle 
 
