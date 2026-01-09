@@ -5,6 +5,9 @@ author: Fabio Mattei
 layout: page
 ---
 
+Nell'[introduzione]({{ site.baseurl }}{% link _web/html.md %}.html) abbiamo cominciato a prendere coscienza della logica che guida la struttura del linguaggio html. Ora cominciamo a conoscere i TAG principali che vengono utilizzati per 
+costruire le pagine.
+
 #### Titoli
 
 {% highlight html %}
