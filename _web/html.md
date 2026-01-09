@@ -39,7 +39,7 @@ Se guardiamo con attenzione possiamo riconoscere i vari elementi:
 [Designed by Freepik](http://www.freepik.com)
 
 In basso possiamo vedere una pagina che viene, come si dice in gergo, **"taggata"** in modo da individuare 
-i vari elementi che ne determinano il contenuto.
+i vari elementi che ne costituiscono il contenuto.
 
 ![Pagina di una rivista etichettata](/images/web/html/pagina-taggata.jpg)
 
