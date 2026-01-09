@@ -114,29 +114,43 @@ isolata visivamente dal testo che lo precede e da quello che lo segue.
 
 #### Le tabelle 
 
-La tabella è utile quando si vogliono inserire in una pagina web dati di qualsiasi genere.
+La tabella è utile quando si ha la necessità di inserire in una pagina web dati di qualsiasi genere.
 
+*Tabella dei voti della 3C*
+
+| Studente | Italiano | Matematica |
+|---|---|---|
+| Francesco | 8 | 7 |
+| Giulia | 7 | 9 |
+| Michele | 6 | 6 |
+| Angela | 8 | 9 |
+|---|---|---|
+| Nome | Decimi | Decimi |
+
+Il codice per trascrivere in HTML la tabella in alto è il seguente
 
 {% highlight html %}
 <table>
     <caption>
-        <p>I miei dati</p>
+        <p>Tabella dei voti della 3C</p>
     </caption>
     <thead>
-        <tr><th>Colonna 1</th><th>Colonna 2</th></tr>
+        <tr><th>Studente</th><th>Italiano</th><th>Matematica</th></tr>
     </thead>
     <tbody>
-        <tr><td>Dato 1,1</td><td>Dato 1,2</td></tr>
-        <tr><td>Dato 2,1</td><td>Dato 2,2</td></tr>
-        <tr><td>Dato 3,1</td><td>Dato 3,2</td></tr>
+        <tr><td>Francesco</td><td>8</td><td>7</td></tr>
+        <tr><td>Giulia</td><td>7</td><td>9</td></tr>
+        <tr><td>Michele</td><td>6</td><td>6</td></tr>
+        <tr><td>Angela</td><td>8</td><td>9</td></tr>
     </tbody>
     <tfoot>
-        <tr><td>Totale 1</td><td>Totale 2</td></tr>
+        <tr><th>Nome</th><th>Decimi</th><th>Decimi</th></tr>
     </tfoot>
 </table>
 {% endhighlight %}
 
-Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. Normalmente questo si scrive all’interno di un paragrafo.
+Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. 
+Normalmente questo si scrive all’interno di un paragrafo.
 
 Una tabella è contrassegnata dal tag &lt;table&gt; ed è divisa in tre sezioni &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;.
 
@@ -144,4 +158,19 @@ Una tabella è contrassegnata dal tag &lt;table&gt; ed è divisa in tre sezioni 
 - **tbody**: sezione corpo, contiene i dati che voglio mostrare nella tabella
 - **tfoot**: sezione ai piedi della tabella, contiene ciò che voglio mostrare a fine tabella, ad esempio una somma dei dati contenuti nella tabella
 
-In una tabella le informazioni sono organizzate in righe e colonne. Ogni riga è contrassegnata da un &lt;tr&gt; e ogni colonna da un &lt;td&gt;. Al fine di scrivere un contenuto si apre un tag &lt;tr&gt;, si inserisce il dato all’interno di un tag &lt;td&gt; per ciascuno di questi avendo cura di chiuderlo &lt;/td&gt; subito dopo, in fine si chiude il tag &lt;/tr&gt;
+All'interno di una sezione di una tabella le informazioni sono organizzate in primo luogo in righe e in seconda battuta in colonne.
+
+Ogni riga è contrassegnata dal tag &lt;tr&gt; che è l'acronimo di **table row**.
+
+All'interno delle righe, vanno delimitate le colonne. 
+Se la colonna si trova nella sezione thead o tfoot questa è connotata dal tag &lt;th&gt; (table heading), 
+se invece si trova nella sezione tbody questa è connotata dal tag &lt;td&gt; (table data). 
+
+
+
+
+
+
+
+
+
