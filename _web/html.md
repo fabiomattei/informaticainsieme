@@ -16,13 +16,15 @@ Il linguaggio HTML si fonda su una idea semplice: etichettare sezioni di testo i
 
 ### I tag html
 
-Il **tag html**, o etichetta, è riconosbili perché circondato dai simboli &lt;tag&gt;.
+Il **tag html**, o etichetta, è riconoscibile perché circondato dai simboli &lt;tag&gt;.
 
 Esempi di tag sono: &lt;p&gt;, &lt;ul&gt;, &lt;h1&gt;
 
-Dobbiamo pensare ai tag come ad etichette che "etichettano" i contenuti che dobbiamo inserire in una pagina.
+Dobbiamo pensare ai tag come ad etichette che vanno a contornare i contenuti che si trovano all'interno di una pagina.
+I tag sono elementi **semantici** dato che concorrono a identificare il ruolo di un contenuto all'interno di
+una pagina e danno la possibilità di strutturare il testo in modo che sia possibile l'elaborazione da parte di un sistema informatico.
 
-##### Facciamo un esempio
+### Facciamo un esempio
 
 Qui in basso potete vedere l'immagina di due pagine di una rivista.
 Se guardiamo con attenzione possiamo riconoscere i vari elementi:
@@ -37,7 +39,7 @@ Se guardiamo con attenzione possiamo riconoscere i vari elementi:
 [Designed by Freepik](http://www.freepik.com)
 
 In basso possiamo vedere una pagina che viene, come si dice in gergo, **"taggata"** in modo da individuare 
-i vari elementi che ne determinano i contenuti.
+i vari elementi che ne determinano il contenuto.
 
 ![Pagina di una rivista etichettata](/images/web/html/pagina-taggata.jpg)
 
