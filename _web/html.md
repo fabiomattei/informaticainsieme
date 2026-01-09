@@ -5,26 +5,24 @@ author: Fabio Mattei
 layout: page
 ---
 
-HTML (Hyper text markup language – Linguaggio ipertestuale a marcatori) è un linguaggio inventato da Tim Berners Lee nel 1980 per avere la *libertà di pubblicare le sue ricerche senza dover passare attraverso il controllo degli editori delle riviste scientifiche*. Tim è un ricercatore che lavorava al CERN di Ginevra ed aveva difficoltà a far pubblicare i suoi articoli. Nella sua ricerca di libertà inventò il WEB.
+HTML (Hyper text markup language – Linguaggio ipertestuale a marcatori) è un linguaggio inventato da **Tim Berners Lee** nel 1989 e diffuso al pubblico nel 1993 per avere la *libertà di pubblicare le sue ricerche senza dover passare attraverso il controllo degli editori delle riviste scientifiche*. 
+Tim era un ricercatore che lavorava al CERN di Ginevra ed aveva difficoltà a far pubblicare i suoi articoli. Nella sua ricerca di libertà inventò il WEB.
 
-- Hyper test: indica il fatto che la fruizione dei contenuti non avviene necessariamente in modo lineare, come avviene in un testo scritto, ma cliccando sui link ogni lettore può creare un percorso unico diverso da quello di tutti gli altri lettori
-- Markup: indica il fatto che il linguaggio “etichetta” le sezioni di testo utilizzando i tag
+- Hyper text: indica il fatto che la fruizione dei contenuti non avviene necessariamente in modo lineare, come avviene in un testo scritto, ma cliccando sui link ogni lettore può creare un percorso unico diverso da quello di tutti gli altri lettori
+- Markup: indica il fatto che il linguaggio **etichetta** le sezioni di testo utilizzando i **tag**
 - Language: indica il fatto che è un linguaggio vero e proprio dotato di propri termini, grammatica e sintassi
 
 Il linguaggio HTML si fonda su una idea semplice: etichettare sezioni di testo in un file testuale al fine di dare loro un livello semantico e al fine di visualizzarle propriamente.
 
-#### Paragrafi
+### I tag html
 
+Il **tag html**, o etichetta, è riconosbili perché circondato dai simboli &lt;tag&gt;.
 
-{% highlight html %}
-<p>Un paragrafo in HTML è una sezione di testo 
-circondata dal tag p</p>
-{% endhighlight %}
+Esempi di tag sono: &lt;p&gt;, &lt;ul&gt;, &lt;h1&gt;
 
-</div>Possiamo notare che il testo nel paragrafo è circondato dalle etichette &lt;p&gt; e &lt;/p&gt;. Queste etichette determinano l’inizio e la fine del paragrafo.
+Dobbiamo pensare ai tag come ad etichette che "etichettano" i contenuti che dobbiamo inserire in una pagina.
 
 #### Titoli
-
 
 {% highlight html %}
 <h1>Titolo di livello più alto</h1>
@@ -35,7 +33,17 @@ circondata dal tag p</p>
 <h6>Titolo di livello più basso</h6>
 {% endhighlight %}
 
-</div>I tag che vanno da H1 ad H6 permettono di scrivere i titoli. Ci sono 6 diversi livelli di titoli che permettono allo scrittore di sottolineare l’importanza che ciascuno di questi riveste all’interno del testo.
+I tag che vanno da H1 ad H6 permettono di scrivere i titoli. 
+Ci sono 6 diversi livelli di titoli che permettono allo scrittore di sottolineare l’importanza che ciascuno di questi riveste all’interno del testo.
+
+#### Paragrafi
+
+{% highlight html %}
+<p>Un paragrafo in HTML è una sezione di testo 
+circondata dal tag p</p>
+{% endhighlight %}
+
+Possiamo notare che il testo nel paragrafo è circondato dalle etichette &lt;p&gt; e &lt;/p&gt;. Queste etichette determinano l’inizio e la fine del paragrafo.
 
 #### Formattazione del testo
 
