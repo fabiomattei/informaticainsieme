@@ -11,7 +11,7 @@ Se da un lato l’HTML suddivide e compone i contenuti dal punto di vista **sema
 
 All’interno del CSS vengono definite informazioni su come devono apparire i font, i colori, le immagini di sfondo, il layout, il posizionamento delle colonne o di altri elementi sulla pagina.
 
-#### L'attributo style
+### L'attributo style
 
 {% highlight html %}
 <p style="font-size: 30px; color red;">L'Italia è un paese bellissimo</p>
@@ -33,7 +33,7 @@ Per il secondo paragrafo sono stati definiti:
 * colore del carattare
 * colore di sfondo
 
-#### I selettori
+### I selettori
 
 Attraverso i selettori CSS è possibile **separare il codice CSS dai tag HTML**.
 
@@ -46,10 +46,9 @@ Ci sono due aspetti da considerare:
 
 I CSS definiscono **attributi** da applicare ai tag. Ciascun attributo interviene su di un aspetto specifico della presentazione grafica. Gli attributi vengono raggruppati tra loro ed associati ad un **selettore** in modo da poter essere richiamati all’interno del codice HTML.
 
-#### Selettore id
+### Selettore id
 
 Supponiamo di avere il seguente codice HTML:
-
 
 {% highlight html %}
 <p id="primoparagrafo">Questo è il testo del mio paragrafo</p>
@@ -63,39 +62,55 @@ Supponiamo di avere il seguente codice HTML:
 </ul>
 {% endhighlight %}
 
-Notiamo come a ciascun tag utilizzato è stato associato un **attributo id**. Questo attributo mi permette di identificare in modo univoco un tag in una pagina. A questo punto posso iniziare a scrivere il codice CSS:
+Notiamo come a ciascun tag utilizzato è stato associato un **attributo id**. Questo attributo mi permette di identificare in modo univoco un tag all'interno di una pagina. 
+
+A questo punto posso iniziare a scrivere il codice CSS in modo da associare a ciasun tag i suoi attributi grafici:
 
 
 {% highlight css %}
-#primoparagrafo {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: right;
-    text-decoration: line-through;
-}
-
-#secondoparagrafo {
-    font-family: Arial, Verdana, sans-serif;
-    font-size: 16px;
-    font-style: italic;
-    text-align: justify;
-    text-decoration: overline;
-}
-
-#lamialissta {
-    font-family: Helvetica, sans-serif;
-    font-size: 11px;
-    text-align: center;
-}
+<head>
+  <title>La mia pagina</title>
+  <style>
+    #primoparagrafo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: right;
+      text-decoration: line-through;
+    }
+    
+    #secondoparagrafo {
+      font-family: Arial, Verdana, sans-serif;
+      font-size: 16px;
+      font-style: italic;
+      text-align: justify;
+      text-decoration: overline;
+    }
+    
+    #lamialissta {
+      font-family: Helvetica, sans-serif;
+      font-size: 11px;
+      text-align: center;
+    }
+  <style>
+</head>
 {% endhighlight %}
 
-Come possiamo vedere il codice CSS crea aggregazioni di stili associati ad un attributo. Il paragrafo che ha per id *primoparagrafo* utilizza ili font Georgia, con una dimensione di 12 pixel, con un carattere grassetto, allineato a destra con una linea che attraversa il testo. Il paragrafo che ha per id *secondoparagrafo* utilizza un font Arial, con un testo di dimensione 16 pixel, uno stile italico, giustificato.
+Come possiamo vedere il codice CSS crea aggregazioni di stili associati ad un tag e va posizionato dentro al tag style nella sezione **head** del documento HTML. 
 
-#### Selettore class
+Il paragrafo che ha per id *primoparagrafo* utilizza il font Georgia, con una dimensione di 12 pixel, con un carattere grassetto, allineato a destra con una linea che attraversa il testo. 
+
+Il paragrafo che ha per id *secondoparagrafo* utilizza un font Arial, con un testo di dimensione 16 pixel, uno stile italico, giustificato.
+
+La lista che ha per id *lamialissta* utilizza il font Helvetica, con dimensione 11 pixel, allineato al centro.
+
+### Selettore class
+
+Spesso si ha la necessità di voler applicare un insieme di stili a più tag html.
+Questo significa definire un **insieme di stili**, dare loro un **nome di classe** e, in un secondo tempo, 
+andare a specificare quali tag appartengono a quella specifica classe appena definita.
 
 Supponiamo di avere il seguente codice HTML:
-
 
 {% highlight html %}
 <p class="coseimportanti">Questo è il testo del mio paragrafo</p>
@@ -111,6 +126,7 @@ Supponiamo di avere il seguente codice HTML:
 
 Come possiamo notare tutti questi tag sono accumunati dall’appartenere alla classe *coseimportanti*.
 
+Ma cosa significa esattamete? Significa che a tutti questi tag verranno applicati gli stili:
 
 {% highlight css %}
 .coseimportanti {
@@ -119,4 +135,7 @@ Come possiamo notare tutti questi tag sono accumunati dall’appartenere alla cl
 }
 {% endhighlight %}
 
-Dunque a tutti gli elementi nella pagina che hanno l’attributo class contenente *coseimportanti* sarà applicato un colore del testo rosso ed uno sfondo giallo.
+Dunque a tutti gli elementi nella pagina che hanno **l’attributo** class contenente **coseimportanti** sarà applicato un colore del testo rosso ed uno sfondo giallo. Questo ci permette di risparmiare la scrittura di molto codice che
+altrimenti sarebbe ridondante.
+
+
