@@ -5,11 +5,44 @@ author: Fabio Mattei
 layout: page
 ---
 
-L’acronimo **CSS** sta per **Cascading Style Sheets** (fogli di stile a cascata) e indica un linguaggio che permette di formattare lo di un documento web (HTML). I CSS contengono indicazioni su come l’interfaccia debba essere composta dal punto di vista grafico, mentre l’HTML compone le informazioini dal punto di vista semantico.
+L’acronimo **CSS** ha come significato **Cascading Style Sheets** (fogli di stile a cascata). Questo indica un linguaggio che permette di formattare lo sitle cioè le decorazioni grafiche di un documento web (HTML). 
 
-All’interno del CSS vengono definite cose come i font, i colori, le immagini di sfondo, il layout, il posizionamento delle colonne o di altri elementi sulla pagina.
+Se da un lato l’HTML suddivide e compone i contenuti dal punto di vista **semantico**, la sua sezione **CSS** contiene indicazioni su come ciascuno di questi contenuti debba essere composto dal punto di vista **grafico**, 
+
+All’interno del CSS vengono definite informazioni su come devono apparire i font, i colori, le immagini di sfondo, il layout, il posizionamento delle colonne o di altri elementi sulla pagina.
+
+#### L'attributo style
+
+{% highlight html %}
+<p style="font-size: 30px; color red;">L'Italia è un paese bellissimo</p>
+{% endhighlight %}
+
+Si può notare che per questo paragrafo viene specificato l'attributo style al fine di indicare che il testo deve avere un font dalle dimnesioni di 30 pixel e deve essere di colore rosso.
+
+E' possibile utilizzare l'attributo style, al fine di indicare, per ciascun tag, le sue caratteristiche grafiche.
+
+{% highlight html %}
+<p style="font-size: 30px; color red;">L'Italia è un paese bellissimo.</p>
+
+<p style="font-size: 30px; color yellow; background-color: black;">In Italia ci sono molti monumenti.</p>
+{% endhighlight %}
+
+Per il secondo paragrafo sono stati definiti:
+
+* grandezza del carattare
+* colore del carattare
+* colore di sfondo
 
 #### I selettori
+
+Attraverso i selettori CSS è possibile **separare il codice CSS dai tag HTML**.
+
+L'HTML dà la possibilità di inseire il codice CSS all'interno dell'attributo style di ciascun tag tuttavia questa 
+modalità di lavoro non è tra le più raccomandate. 
+Ci sono due aspetti da considerare:
+
+* il codice css inserito come attributo in un tag HTML rende il codice **pesante** da leggere e da manutenere
+* la modifica del codice css diventa laboriosa
 
 I CSS definiscono **attributi** da applicare ai tag. Ciascun attributo interviene su di un aspetto specifico della presentazione grafica. Gli attributi vengono raggruppati tra loro ed associati ad un **selettore** in modo da poter essere richiamati all’interno del codice HTML.
 
