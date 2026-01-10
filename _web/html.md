@@ -16,56 +16,107 @@ Il linguaggio HTML si fonda su una idea semplice: etichettare sezioni di testo i
 
 ### I tag html
 
-Il **tag html**, o etichetta, è riconoscibile perché circondato dai simboli &lt;tag&gt;.
+Il **tag html**, o etichetta, è riconosbili perché circondato dai simboli &lt;tag&gt;.
 
 Esempi di tag sono: &lt;p&gt;, &lt;ul&gt;, &lt;h1&gt;
 
-Dobbiamo pensare ai tag come ad etichette che vanno a contornare i contenuti che si trovano all'interno di una pagina.
-I tag sono elementi **semantici** dato che concorrono a identificare il ruolo di un contenuto all'interno di
-una pagina e danno la possibilità di strutturare il testo in modo che sia possibile l'elaborazione da parte di un sistema informatico.
+Dobbiamo pensare ai tag come ad etichette che "etichettano" i contenuti che dobbiamo inserire in una pagina.
 
-### Facciamo un esempio
-
-Qui in basso potete vedere l'immagina di due pagine di una rivista.
-Se guardiamo con attenzione possiamo riconoscere i vari elementi:
-
-* titoli
-* sottotili
-* testi
-* immagini
-
-![Pagina di una rivista](/images/web/html/pagina-prima.jpg)
-
-[Designed by Freepik](http://www.freepik.com)
-
-In basso possiamo vedere una pagina che viene, come si dice in gergo, **"taggata"** in modo da individuare 
-i vari elementi che ne costituiscono il contenuto.
-
-![Pagina di una rivista etichettata](/images/web/html/pagina-taggata.jpg)
-
-Si può notare che il **titolo** più importante viene individuato dal tag **H1**, il **sottotitolo** dall tag **H2**, 
-il **sotto-sottotitolo** dal tag **H3**.
-Il testo viene connotato dal tag **p** e l'immagine dal tag **img**.
-
-
-La pagina appena descritta, **codificata in HTML**, diventa:
+#### Titoli
 
 {% highlight html %}
-<h1>LOREM IPSUM DOLOR SIT AMET.</h1>
-<h2>LOREM IPSUM DOLOR</h2>
-<h3>Lorem ipsum dolor sit amet.</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum turpis
-eget scelerisque iaculis. Nam lacus erat, eu-ismod nec dolor eu, posuere lacinia leo.
-Duis sit amet facilisis lorem, sed volutpat ligula. 
-Curabitur dapibus sem non feugiat placerat. Aenean placerat dui eu condimen-tum dignissim. 
-Phasellus id nulla nec sem ullamcorper sagittis.</p>
-<img src="nomme-immagine.jpg"></img>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum turpis
-eget scelerisque iaculis. Nam lacus erat,
-euismod nec dolor eu, posuere lacinia leo.
-Duis sit amet facilisis lorem, sed volutpat
-ligula. Curabitur dapibus sem non feugiat placerat. Aenean placerat dui eu condi-mentum dignissim. 
-Phasellus id nulla nec sem ullamcorper sagittis. Curabitur pretium neque vitae faucibus gravida.
-Nunc euismod tempus magna vel volutpat.
-Morbi vel posuere mauris. Cras pellen-tesque dolor bibendum.</p>
+<h1>Titolo di livello più alto</h1>
+<h2>Titolo di livello due</h2>
+<h3>Titolo di livello tre</h3>
+<h4>Titolo di livello quattro</h4>
+<h5>Titolo di livello cinque</h5>
+<h6>Titolo di livello più basso</h6>
 {% endhighlight %}
+
+I tag che vanno da H1 ad H6 permettono di scrivere i titoli. 
+Ci sono 6 diversi livelli di titoli che permettono allo scrittore di sottolineare l’importanza che ciascuno di questi riveste all’interno del testo.
+
+#### Paragrafi
+
+{% highlight html %}
+<p>Un paragrafo in HTML è una sezione di testo 
+circondata dal tag p</p>
+{% endhighlight %}
+
+Possiamo notare che il testo nel paragrafo è circondato dalle etichette &lt;p&gt; e &lt;/p&gt;. Queste etichette determinano l’inizio e la fine del paragrafo.
+
+#### Formattazione del testo
+
+Si applica all’interno dei paragrafi &lt;p&gt; e di altre sezioni di testo.
+
+| Tag | Descrizione | Resa di base |
+|---|---|---|
+| &lt;strong&gt; | Attribuisce al testo una forte importanza, serietà o urgenza | Grassetto |
+| &lt;b&gt; | Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo | Grassetto |
+| &lt;em&gt; | Enfatizza un testo | Corsivo |
+| &lt;i&gt; | Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo | Corsivo |
+| &lt;u&gt; | Rende un testo sottolineato | Sottolineato |
+
+#### Elenchi puntati e numerati 
+
+Elenco puntato
+
+
+{% highlight html %}
+<ul>
+  <li>primo elemento</li>
+  <li>secondo elemento</li>
+  <li>terzo elemento</li>
+</ul>
+{% endhighlight %}
+
+Elenco numerato
+
+
+{% highlight html %}
+<ol>
+  <li>primo elemento</li>
+  <li>secondo elemento</li>
+  <li>terzo elemento</li>
+</ol>
+{% endhighlight %}
+
+#### Le tabelle 
+
+La tabella è utile quando si vogliono inserire in una pagina web dati di qualsiasi genere.
+
+
+{% highlight html %}
+<table>
+    <caption>
+        <p>I miei dati</p>
+    </caption>
+    <thead>
+        <tr><th>Colonna 1</th><th>Colonna 2</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Dato 1,1</td><td>Dato 1,2</td></tr>
+        <tr><td>Dato 2,1</td><td>Dato 2,2</td></tr>
+        <tr><td>Dato 3,1</td><td>Dato 3,2</td></tr>
+    </tbody>
+    <tfoot>
+        <tr><td>Totale 1</td><td>Totale 2</td></tr>
+    </tfoot>
+</table>
+{% endhighlight %}
+
+Ogni tabella può avere un testo descrittivo all’interno del tag &lt;caption&gt;. Normalmente questo si scrive all’interno di un paragrafo.
+
+Una tabella è contrassegnata dal tag &lt;table&gt; ed è divisa in tre sezioni &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;.
+
+- **thead**: sezione di testa della tabella, contiene i titoli delle colonne che formano la tabella
+- **tbody**: sezione corpo, contiene i dati che voglio mostrare nella tabella
+- **tfoot**: sezione ai piedi della tabella, contiene ciò che voglio mostrare a fine tabella, ad esempio una somma dei dati contenuti nella tabella
+
+In una tabella le informazioni sono organizzate in righe e colonne. Ogni riga è contrassegnata da un &lt;tr&gt; e ogni colonna da un &lt;td&gt;. 
+Al fine di scrivere un contenuto si apre un tag &lt;tr&gt;, si inserisce il dato all’interno di un tag &lt;td&gt; per ciascuno di questi 
+avendo cura di chiuderlo &lt;/td&gt; subito dopo, in fine si chiude il tag &lt;/tr&gt;.
+
+
+
+
