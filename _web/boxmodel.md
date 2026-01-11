@@ -14,6 +14,8 @@ All'interno del box.model distinguiamo:
 - border: bordo che circonda il box 
 - margin: distanza tra un box e quelli che lo circondano, delimitato dalla proprietà css margin ma anche da margin-top, margin-bottom, margin-left, margin-right
 
+![Box Model](/images/web/boxmodel.png)
+
 ### Il bordo
 
 Il bordo merita una trattazione specifica dato che è un elemento ricco di proprietà.
