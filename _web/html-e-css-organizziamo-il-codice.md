@@ -7,43 +7,6 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=635'
 ---
 
-Fino ad ora abbiamo visto gli elementi html separati gli uni dagli altri, ma in effetti ogni documento contiene 
-una pagina completa e ciascuna pagina ha la struttura che vedete in alto contraddistinta dal titolo dalla testata 
-(head) e dal corpo (body).
-
-Si intende come **scheletro** di un documento HTML un file che contiene quanto necessario per iniziare a lavorare.
-Al suo interno si trovano i TAG che devono essere necessariamente presenti in ogni pagina, 
-i contenuti sono tutti vuoti ma tutto è pronto per iniziare la compilazione. 
-
-{% highlight html %}
-<html lang="it">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-  
-  </body>
-</html>
-{% endhighlight %}
-
-Se iniziamo a lavorare nella pagina inseriremo il titolo e qualche informazione nella sezione body.
-
-{% highlight html %}
-
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <title>L'atomo</title>
-</head>
-<body>
-  <h1>Il modello atomico di Bohr</h1>
-  <p>Gli elettroni ruotano attorno al nucleo, e le orbite da loro descritte sono a una distanza ben precisa dal nucleo, che dipende dalla quantità di energia, chiamati livelli energetici.</p>
-  <p>Ogni elettrone segue una determinata traiettoria circolare, chiamata orbita stazionaria.</p>
-</body>
-</html>
-{% endhighlight %}
-
 Abbiamo imparato che gli stili css vanno inseriti nella sezione **STYLE** contenuto nell'**HEAD** del documento HTML.
 In questo esempio abbiamo definito due selettori per ID (pagina, titolo) e un selettore di classe (conteuto).
 I selettori definiti vengono poi utilizzati nel corpo della pagina (body).
