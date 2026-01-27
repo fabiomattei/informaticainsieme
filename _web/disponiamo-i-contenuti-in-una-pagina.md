@@ -72,5 +72,31 @@ Posso inserire all’interno dei divisor (div) i contenuti che voglio essendo ce
 
 Il grid sistem risolve un problema che per anni ha confuso i creatori di pagine web. E’ uno strumento che seppur tardivo si rivelò molto potente.
 
+## Esercizi
+
+#### Esercizio 1: 
+Scrivi il codice HTML e il relativo CSS per ottenere una griglia fatta come in figura.
+
+![Esercizio 1](/images/web/grid/esercizio1.png){:class="half-image"}
+
+Scrivi poi il codice CSS affiché:
+
+* l'header abbia un bordo di 1px tratteggiato di colore nero, padding di 10px, margin di 10px e colore di sfondo come in figura
+* il main abbia un bordo di 3px continuo di colore verde scuro, padding di 10px, margin di 10px e colore di sfondo come in figura
+* la sidebar abbia un bordo di 5px a puntini di colore blù scuro, padding di 30px, margin di 10px e colore di sfondo come in figura
+* il footer abbia un bordo di 1px a puntini di colore viola scuro, padding di 10px, margin di 10px e colore di sfondo come in figura
+
+#### Esercizio 2:
+Scrivi il codice HTML e il relativo CSS per ottenere una griglia fatta come in figura.
+
+![Esercizio 2](/images/web/grid/esercizio2.png){:class="half-image"}
+
+Scrivi poi il codice CSS affiché:
+
+* l'header abbia un bordo di 2px tratteggiato di colore nero, padding di 10px, margin di 20px e colore di sfondo come in figura
+* il main abbia un bordo di 2px continuo di colore verde scuro, padding di 10px, margin di 20px e colore di sfondo come in figura
+* la sidebar abbia un bordo di 1px a puntini di colore blù scuro, padding di 30px, margin di 20px e colore di sfondo come in figura
+* il footer abbia un bordo di 3px a puntini di colore viola scuro, padding di 10px, margin di 20px e colore di sfondo come in figura
+
 
 

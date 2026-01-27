@@ -36,15 +36,30 @@ sss
         float: right;
 	    max-width: 46%;
     }
+	
+    .half-image {
+	    max-width: 48%;
+    }
 }
 
 @media (max-width: 749px) {
     .aside-image {
+		float: right;
+	    max-width: 96%;
+    }
+	
+    .half-image {
 	    max-width: 96%;
     }
 }
 
 .aside-image {
+    padding: 1%;
+    margin: 1%;
+    border: 1px dashed $grey-color-dark;
+}
+
+.half-image {
     padding: 1%;
     margin: 1%;
     border: 1px dashed $grey-color-dark;

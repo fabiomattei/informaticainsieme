@@ -14,7 +14,7 @@ All’interno del CSS vengono definite informazioni su come devono apparire i fo
 ### L'attributo style
 
 {% highlight html %}
-<p style="font-size: 30px; color red;">L'Italia è un paese bellissimo</p>
+<p style="font-size: 30px; color: red;">L'Italia è un paese bellissimo</p>
 {% endhighlight %}
 
 Si può notare che per questo paragrafo viene specificato l'attributo style al fine di indicare che il testo deve avere un font dalle dimnesioni di 30 pixel e deve essere di colore rosso.
@@ -22,14 +22,14 @@ Si può notare che per questo paragrafo viene specificato l'attributo style al f
 E' possibile utilizzare l'attributo style, al fine di indicare, per ciascun tag, le sue caratteristiche grafiche.
 
 {% highlight html %}
-<p style="font-size: 30px; color red;">L'Italia è un paese bellissimo.</p>
+<p style="font-size: 30px; color: red;">L'Italia è un paese bellissimo.</p>
 
-<p style="font-size: 30px; color yellow; background-color: black;">In Italia ci sono molti monumenti.</p>
+<p style="font-size: 30px; color: yellow; background-color: black;">In Italia ci sono molti monumenti.</p>
 {% endhighlight %}
 
 Per il secondo paragrafo sono stati definiti:
 
-* grandezza del carattare
+* grandezza del carattere
 * colore del carattare
 * colore di sfondo
 
@@ -92,7 +92,7 @@ A questo punto posso iniziare a scrivere il codice CSS in modo da associare a ci
       font-size: 11px;
       text-align: center;
     }
-  <style>
+  </style>
 </head>
 {% endhighlight %}
 
