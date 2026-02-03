@@ -141,9 +141,3 @@ fra le vane speranze e ’l van dolore,<br />
 ove sia chi per prova intenda amore,<br />
 spero trovar pietà, nonché perdono.</p>
 {% endhighlight %}
-
-
-
-
-
-

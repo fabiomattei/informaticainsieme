@@ -100,3 +100,51 @@ Scrivi poi il codice CSS affiché:
 
 
 
+#### Esercizio 3:
+
+![Esercizio](/images/web/esercizi/paginaesercizio1.png)
+
+Scarica gli assets: [Scarica]({{ site.baseurl }} ../myassets/web/agenzia.zip)
+
+#### Esercizio 4
+
+Inserisci Il seguente codice nell'esercizio precedente al fine di ottenere un menù ben fatto. 
+
+![Esercizio](/images/web/esercizi/menu.png)
+
+{% highlight css %}
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.elementomenu {
+  float: left;
+}
+
+.linkmenu {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.linkmenu:hover {
+  background-color: #111111;
+}
+{% endhighlight %}
+
+
+{% highlight html %}
+<ul class="menu">
+  <li class="elementomenu"><a href="index.html" class="linkmenu">Home</a></li>
+  <li class="elementomenu"><a href="novita.html" class="linkmenu">Novità</a></li>
+  <li class="elementomenu"><a href="contatti.html" class="linkmenu">Contatti</a></li>
+  <li class="elementomenu"><a href="informazioni.html" class="linkmenu">Informazioni</a></li>
+</ul>
+{% endhighlight %}
+
