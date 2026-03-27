@@ -73,6 +73,9 @@ collections:
   rete:
     output: true
     permalink: /rete/:path
+  storia:
+    output: true
+    permalink: /storia/:path
   videogames:
     output: true
     permalink: /videogames/:path
