@@ -148,3 +148,32 @@ Inserisci Il seguente codice nell'esercizio precedente al fine di ottenere un me
 </ul>
 {% endhighlight %}
 
+
+#### Esercizio 5:
+
+![Esercizio](/images/web/esercizi/paginaesercizio2.jpg)
+
+Scarica gli assets: [Scarica]({{ site.baseurl }} ../myassets/web/assets2.zip)
+
+###### Testi:
+
+the good ritual
+
+THE GOOD RITUAL
+
+"Our vision is to empower busy women by providing convenient products that come with added health benefits."
+
+We are launching with an instant, functional coffee that enhances our customer's everyday lite it's cate quality, in a convenient packet Were supplemented the collee with L-thonanine, which is an all-natural nootropic that improves cognitive funciton, roduces mental fatigue, and roduces stress. As wo expand our product line, all of our afferings will be supplemented with all-notural ingredients that enhance health
+
+Colori sfondi: 
+
+* testata: #F9F6E3 
+* giallo: #FFD976 
+* rosa: #FDCDC1 
+* verdino: #C7D9A7 
+* azzurrino: #D0EFE9
+
+Colori testi: 
+
+* verde scuro: #0D3032
+* verde chiaro: #7B937B

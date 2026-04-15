@@ -34,3 +34,8 @@ name: Algoritmi
 * [Dimensione esatta del gruppo]({{ site.baseurl }}{% link _olimpiadiinformatica/gruppo.md %}.html)
 * [Doppio campione]({{ site.baseurl }}{% link _olimpiadiinformatica/doppiocampione.md %}.html)
 
+# Integrazioni di complessità
+
+* [Processori e complessità]({{ site.baseurl }}{% link _algoritmi/storia-microprocessore.md %}.html)
+* [Laboratorio sulla complessità]({{ site.baseurl }}{% link _algoritmi/laboratorio-complessita.md %}.html)
+
