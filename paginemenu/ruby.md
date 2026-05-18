@@ -19,6 +19,7 @@ layout: page
 * [Range]({{ site.baseurl }}{% link _ruby/range.md %}.html)
 * [Set]({{ site.baseurl }}{% link _ruby/set.md %}.html)
 * [Struct]({{ site.baseurl }}{% link _ruby/struct.md %}.html)
+* [Map, select e reduce]({{ site.baseurl }}{% link _ruby/map-filter-reduce.md %}.html)
 * [Visibilità delle variabili]({{ site.baseurl }}{% link _ruby/visibilita-variabili.md %}.html)
 * [Condizioni]({{ site.baseurl }}{% link _ruby/condizioni.md %}.html)
 * [Il ciclo while]({{ site.baseurl }}{% link _ruby/il-ciclo-while.md %}.html)
