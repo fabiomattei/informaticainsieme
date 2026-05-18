@@ -1,87 +1,52 @@
 ---
-title: 'Responsible AI: dal Manifesto Etico alla Macchina Operativa'
+title: 'Responsible AI'
 date: '2026-05-18T09:00:00+02:00'
 author: Fabio Mattei
 layout: page
 ---
 
-# Dal Manifesto Etico alla Macchina Operativa
+## Dal Manifesto Etico alla Macchina Operativa
 
-Fra il 2020 e il 2024 l'industry ha tradotto i principi etici in policy interne, standard e controlli ripetibili.
+Per molti anni parlare di etica nell'intelligenza artificiale significava scrivere manifesti, dichiarare principi, pubblicare white paper. Erano documenti importanti, ma raramente cambiavano qualcosa nei processi reali di chi sviluppava e distribuiva i sistemi. Fra il 2020 e il 2024 qualcosa è cambiato in modo sostanziale: i principi etici hanno cominciato a diventare strumenti di lavoro, policy interne, standard verificabili e controlli ripetibili. La Responsible AI è passata dall'ufficio comunicazione all'ufficio rischi.
 
-## Responsible AI = Capacità Organizzativa
+## Responsible AI come Capacità Organizzativa
 
-Non più solo principi "alti", ma strumenti di lavoro concreti per product, legal, risk, security e procurement:
+Il punto di svolta concettuale è stato riconoscere che la responsabilità nell'uso dell'AI non è una questione filosofica ma una capacità organizzativa — qualcosa che un'azienda o un'istituzione sa fare oppure no, e che si misura in processi, ruoli e documentazione.
 
-- **Impact assessment** — Valutazione ex ante di rischi e persone impattate
-- **Restricted uses** — Casi d'uso vietati o sottoposti a escalation
-- **Testing e red teaming** — Sicurezza, robustness, misuse, fairness
-- **Documentazione** — Model cards, data provenance, logs, audit trail
-- **Oversight** — Ruoli, board, escalation, human-in-the-loop
+Questo si è tradotto in strumenti concreti che oggi attraversano funzioni diverse: i team di prodotto usano **impact assessment** per valutare ex ante chi viene coinvolto e quali rischi porta una nuova funzionalità; le funzioni legali e di rischio gestiscono **elenchi di usi vietati** o sottoposti a escalation; i team di sicurezza conducono **test e red teaming** per scoprire come un sistema può essere manipolato, usato in modo improprio o produrre risultati discriminatori. A tutto questo si affianca una crescente attenzione alla **documentazione** — model cards, data provenance, log di decisione, audit trail — e alla **supervisione**: chi decide cosa, chi può bloccare un deploy, quando interviene un essere umano nella catena.
 
-## La Gerarchia degli Standard
+Non è più, insomma, un tema per esperti di etica a margine del processo. È diventato parte del ciclo di vita dei prodotti.
 
-Gli strumenti di governance si organizzano in livelli crescenti di formalità:
+## Come Si Organizzano gli Standard
 
-| Livello | Esempi |
-|---------|--------|
-| **Principi** | Microsoft Responsible AI principles |
-| **Standard interni** | IBM, Microsoft, Google, OpenAI |
-| **Framework di rischio** | NIST AI RMF |
-| **Standard esterni** | ISO/IEC 42001 |
+Gli strumenti di governance non sono tutti allo stesso livello: si organizzano in una gerarchia che va dai principi interni alle certificazioni internazionali, con ogni livello che aggiunge struttura, verificabilità e riconoscimento esterno.
 
-Dal basso verso l'alto, ogni livello aggiunge struttura, verificabilità e riconoscimento esterno. Le organizzazioni partono dai propri principi e progressivamente adottano framework di rischio e certificazioni internazionali.
+Al livello più basso ci sono i **principi** dichiarati dalle singole organizzazioni — come i Microsoft Responsible AI Principles — che definiscono i valori guida ma senza meccanismi di verifica terza. Un livello più su ci sono gli **standard interni** formalizzati da grandi player come IBM, Google, OpenAI: documenti operativi che traducono i principi in processi e requisiti di prodotto. Al livello successivo si trovano i **framework di rischio** come il NIST AI Risk Management Framework, strumenti strutturati che aiutano le organizzazioni a identificare, misurare e mitigare i rischi in modo sistematico. In cima alla gerarchia ci sono gli **standard internazionali** come ISO/IEC 42001, che aggiungono certificabilità e riconoscimento globale.
 
-## L'Accelerazione GenAI: 2023–2025
+Le organizzazioni percorrono questa scala progressivamente: partono dai propri principi, adottano framework di rischio quando la pressione normativa o reputazionale cresce, e puntano alle certificazioni quando i clienti o i regolatori lo richiedono esplicitamente.
 
-Con i foundation models la Responsible AI passa da tema specialistico a priorità di board, policy e relazioni istituzionali.
+## L'Accelerazione dei Foundation Models: 2023–2025
 
-Il vocabolario cambia: system cards, evaluations, red teaming, incident reporting, preparedness, model governance.
+Se la Responsible AI stava crescendo lentamente come priorità aziendale, l'arrivo dei grandi modelli linguistici ha accelerato tutto. Con ChatGPT nel novembre 2022 la GenAI è entrata nel mercato consumer e nel procurement enterprise nel giro di pochi mesi, portando con sé domande che nessuno aveva ancora affrontato a quella scala.
 
-**Messaggio chiave**: la frontiera non è più "ethics" in senso astratto — è governance dei modelli più potenti e delle esternalità sistemiche.
+Il vocabolario si è trasformato rapidamente. Non si parla più solo di bias algoritmici o fairness nei sistemi di selezione del personale: si parla di **system cards**, di **evaluations**, di **red teaming** su modelli che possono produrre testo persuasivo, codice malevolo o contenuti pericolosi. Si parla di **incident reporting**, di **preparedness** — ovvero di quanto un'organizzazione è pronta a rispondere a un uso imprevisto o a un fallimento sistemico del modello.
 
-### Timeline
+Lungo questa traiettoria, alcuni momenti hanno segnato l'evoluzione del campo. Nel luglio 2023 i principali laboratori di ricerca hanno fondato il Frontier Model Forum per coordinarsi su safety, valutazione e best practice condivise. Nel novembre dello stesso anno la Bletchley Declaration ha aperto una cornice internazionale sui rischi legati ai modelli più potenti, con la partecipazione di governi europei, americani e asiatici. Il G7 di Hiroshima ha prodotto principi e un codice di condotta per le organizzazioni che sviluppano AI avanzata. Nel 2025 i principali laboratori hanno cominciato a formalizzare framework volontari sul dispiegamento sicuro in scenari ad alto rischio.
 
-| Data | Evento | Significato |
-|------|--------|-------------|
-| 11/2022 | **ChatGPT** | La GenAI entra nel mercato consumer e nel procurement enterprise. |
-| 07/2023 | **Frontier Model Forum** | I big lab si coordinano su safety, evaluation e best practice. |
-| 11/2023 | **Bletchley Declaration** | Nasce una cornice internazionale sui rischi frontier. |
-| 2023→24 | **G7 Hiroshima** | Principi e codice di condotta per organizzazioni che sviluppano advanced AI. |
-| 04/2025 | **Preparedness** | I lab formalizzano framework volontari su severe harm e deployment gates. |
+Il messaggio di fondo è chiaro: la frontiera non è più "ethics" nel senso astratto — è governance dei modelli più potenti e delle loro esternalità a livello sistemico.
 
 ## Dalle Linee Guida alle Regole Vincolanti
 
-Il 2024–2026 è il passaggio alla compliance: trattati, regolamenti e leggi con date di applicazione precise.
+Il passaggio più significativo del periodo 2024–2026 è però quello dalla volontarietà alla compliance: trattati, regolamenti e leggi con date di applicazione precise e sanzioni reali.
 
-### EU AI Act: il Benchmark Globale
+Il riferimento principale a livello globale è l'**EU AI Act**, entrato in vigore nell'agosto 2024. La sua logica è risk-based: gli obblighi variano in funzione del rischio che un sistema presenta, con requisiti più stringenti per i sistemi ad alto rischio e una supervisione specifica per i modelli di uso generale — i GPAI, General Purpose AI. Il percorso di attuazione si estende fino al 2027: i divieti più netti e gli obblighi di AI literacy sono scattati nel febbraio 2025, le regole sui GPAI nell'agosto 2025, l'applicazione generale nel 2026, e la disciplina sui prodotti regolati ad alto rischio nel 2027.
 
-Logica del regolamento: approccio risk-based, obblighi differenziati e supervisione per GPAI e high-risk.
+Parallelamente, il settembre 2024 ha visto l'apertura alla firma della Framework Convention del Consiglio d'Europa su AI, diritti umani, democrazia e stato di diritto — un trattato internazionale con portata più ampia di qualsiasi regolamento regionale. Negli Stati Uniti il Colorado SB24-205 ha introdotto obblighi sulle discriminazioni algoritmiche per sviluppatori e deployer, con entrata in vigore nel giugno 2026. In Asia la Corea del Sud ha approvato un AI Basic Act che combina incentivi all'industria e fondamenta per la trustworthiness dei sistemi.
 
-| Data | Tappa |
-|------|-------|
-| 08/2024 | Entrata in vigore |
-| 02/2025 | Divieti + AI literacy |
-| 08/2025 | GPAI + governance |
-| 08/2026 | Applicazione generale |
-| 08/2027 | Prodotti regolati high-risk |
+## Cosa Significa Tutto Questo nel 2026
 
-### Altri Testi Chiave
+La domanda rilevante per chi opera nell'industry oggi non è più se adottare un approccio di Responsible AI. Quella scelta è stata fatta dall'esterno, dai regolatori e dal mercato. La domanda è con quale maturità organizzativa si affronta il contesto che si è costruito.
 
-- **09/2024 — Consiglio d'Europa**: Apertura alla firma della Framework Convention su AI, diritti umani, democrazia e rule of law.
-- **06/2026 — Colorado SB24-205**: Obblighi su algorithmic discrimination per developer e deployer; data effettiva rinviata al 30 giugno 2026.
-- **01/2026 — Korea AI Basic Act**: Quadro nazionale che combina promozione industriale e foundation for trustworthiness.
+La maturità si misura su cinque dimensioni. La prima è la **governance**: ownership chiara su chi decide, chi blocca, chi risponde, con visibilità fino al board. La seconda è la gestione del **portfolio di use case**: sapere quali sistemi esistono, come sono classificati in termini di rischio, quali usi sono consentiti e quali sono vietati o vincolati. La terza è la capacità di produrre **evidenza**: assessment documentati, test, sessioni di red teaming, metriche di performance e fairness, log e audit trail che reggano a un'ispezione esterna. La quarta è la **supervisione umana**: meccanismi reali di review, possibilità di contestazione degli output, procedure di fallback e piani di risposta agli incidenti. La quinta è la **compliance by design**: non come strato aggiunto a posteriori, ma integrata nel procurement, nella vendor diligence, nella formazione e nella documentazione fin dall'inizio del ciclo di vita di un sistema.
 
-## Cosa Significa per l'Industry nel 2026
-
-La domanda non è più se adottare un discorso di Responsible AI, ma con quale maturità organizzativa.
-
-1. **Governance** — ownership chiara, ruoli, escalation, board visibility
-2. **Portfolio & use cases** — mappatura sistemi, classificazione del rischio, uso consentito/vietato
-3. **Evidence** — assessment, test, red teaming, logs, metriche, audit trail
-4. **Human oversight** — review, contestazione, fallback, incident response
-5. **Compliance by design** — procurement, vendor diligence, formazione, documentazione
-
----
-
-*Abbiamo le regole, ma è sufficiente?*
+Abbiamo le regole. La questione aperta è se le organizzazioni stanno costruendo la capacità di rispettarle davvero, o se ci troviamo di fronte a un nuovo ciclo di manifesti — più sofisticati, più legalmente vincolanti, ma ancora separati dalla pratica quotidiana.

@@ -48,7 +48,7 @@ l'adozione dell'intelligenza artificiale, rendendolo un argomento di grande rile
 
 * [Anatomia di un prompt efficace]({{ site.baseurl }}{% link _ia/anatomia-prompt-efficace.md %}.html)
 * [Responsible AI]({{ site.baseurl }}{% link _ia/responsible-ai.md %}.html)
-* [sicurezza AI]({{ site.baseurl }}{% link _ia/sicurezza-ai.md %}.html)
+* [Sicurezza AI]({{ site.baseurl }}{% link _ia/sicurezza-ai.md %}.html)
 
 
 
