@@ -40,7 +40,17 @@ l'adozione dell'intelligenza artificiale, rendendolo un argomento di grande rile
 * [Recommendation System]({{ site.baseurl }}{% link _ia/ia-recommendation.md %}.html)
 * [Intelligent Data Processing]({{ site.baseurl }}{% link _ia/ia-data-processing.md %}.html)
 
+## Argomenti aperti
+
 * [Problematiche]({{ site.baseurl }}{% link _ia/ia-problematiche.md %}.html)
+
+## Tecnologia IA
+
+* [Anatomia di un prompt efficace]({{ site.baseurl }}{% link _ia/anatomia-prompt-efficace.md %}.html)
+* [Responsible AI]({{ site.baseurl }}{% link _ia/responsible-ai.md %}.html)
+* [sicurezza AI]({{ site.baseurl }}{% link _ia/sicurezza-ai.md %}.html)
+
+
 
 
 
