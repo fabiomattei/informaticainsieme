@@ -1,11 +1,9 @@
 ---
-title: 'Gli inizi: dalla macchina analitica all'IBM System/360'
+title: 'Gli inizi'
 date: '2026-05-18'
 author: Fabio Mattei
 layout: page
 ---
-
-# Gli inizi: dalla macchina analitica all'IBM System/360
 
 La storia dell'informatica non è cominciata con un computer. È cominciata con un'idea: che il calcolo potesse essere separato dall'essere umano che lo eseguiva, affidato a una macchina che seguisse regole precise senza stancarsi, senza distrarsi, senza sbagliare. Quell'idea ha impiegato più di un secolo per diventare realtà, e la strada è stata molto meno lineare di quanto i libri di testo lascino intendere.
 
@@ -16,6 +14,10 @@ Nella prima metà dell'Ottocento, il matematico inglese **Charles Babbage** si t
 Nel 1822 propose la **Difference Engine**, un meccanismo in grado di calcolare polinomi attraverso il metodo delle differenze finite. Il governo britannico finanziò il progetto, ma Babbage non riuscì mai a completarlo — in parte per difficoltà tecniche, in parte per il suo stesso carattere irrequieto.
 
 Nel frattempo la sua mente era già altrove. Nel 1837 abbozzò un progetto molto più ambizioso: la **Analytical Engine**, una macchina programmabile attraverso schede perforate, dotata di una "mill" (l'unità di calcolo) e di un "store" (la memoria). Era, concettualmente, un computer a tutti gli effetti — un secolo prima che qualcuno costruisse effettivamente qualcosa del genere.
+
+![La macchina analitica di Babbage (1834–1871)](/images/storia/gli-inizi/babbage-analytical-engine.jpg){:class="aside-image" style="max-width: 50%;"}
+
+![Ada Lovelace, ritratto di Alfred Edward Chalon (1840)](/images/storia/gli-inizi/ada-lovelace-portrait.jpg){:class="aside-image" style="max-width: 50%;"}
 
 Fu **Ada Lovelace**, figlia del poeta Lord Byron e matematica di straordinario talento, a intuire l'importanza di questa macchina oltre il calcolo numerico. Nei suoi appunti alla traduzione di un articolo sull'Analytical Engine, scrisse quello che viene considerato il primo algoritmo della storia, concepito per calcolare i numeri di Bernoulli. Ada capì che la macchina di Babbage poteva manipolare qualsiasi simbolo secondo regole — non solo numeri. Era un'intuizione che il mondo avrebbe impiegato decenni ad assimilare.
 
@@ -36,6 +38,8 @@ In Germania, **Konrad Zuse** costruì tra il 1938 e il 1941 lo **Z3**, il primo 
 In Gran Bretagna, **Alan Turing** e il suo team a Bletchley Park costruirono la **Bombe**, una macchina elettromeccanica progettata per decifrare i messaggi cifrati dalla macchina Enigma dei tedeschi. Turing era anche il teorico che aveva gettato le basi concettuali dell'informatica moderna: nel 1936 aveva pubblicato il suo celebre articolo sulla "macchina di Turing", un modello astratto capace di calcolare qualsiasi funzione computabile. Era, in effetti, la descrizione formale di un computer universale — prima ancora che esistesse un computer.
 
 Negli Stati Uniti, intanto, la pressione di calcolare rapidamente le tavole balistiche portò alla costruzione dell'**ENIAC** (Electronic Numerical Integrator and Computer), completato nel 1945 all'Università della Pennsylvania. Pesava 27 tonnellate, occupava un intero piano di un edificio, conteneva quasi 18.000 valvole termoioniche e consumava abbastanza elettricità da far abbassare le luci dell'intero quartiere quando veniva acceso. Era però completamente elettronico — non meccanico, non elettromeccanico — e poteva eseguire 5.000 addizioni al secondo. Era una macchina straordinaria per l'epoca, ma si programmava fisicamente riconfigurando migliaia di cavi e interruttori. Per cambiare programma servivano giorni di lavoro.
+
+![Programmazione dell'ENIAC al Ballistic Research Laboratory (US Army, dominio pubblico)](/images/storia/gli-inizi/eniac-programming.jpg){:class="aside-image" style="max-width: 50%;"}
 
 ## Il contributo di Von Neumann: il programma in memoria
 
@@ -76,6 +80,8 @@ Il passo successivo fu l'invenzione del **circuito integrato** (IC), avvenuta qu
 Le conseguenze furono enormi: costi drasticamente ridotti, dimensioni ridotte, affidabilità aumentata. Kilby avrebbe ricevuto il Nobel per la fisica nel 2000.
 
 ## L'IBM System/360: quando l'informatica divenne industria
+
+![IBM System/360 presso il laboratorio USDA (dominio pubblico)](/images/storia/gli-inizi/ibm-system-360-usda.jpg){:class="aside-image" style="max-width: 50%;"}
 
 Nel 1964 IBM annunciò il **System/360**, e il mondo dell'informatica non fu più lo stesso. Prima del System/360, ogni modello di computer era una famiglia a sé: programmi scritti per un IBM 7090 non giravano su un IBM 1401, e viceversa. Le aziende erano intrappolate nell'architettura che avevano scelto.
 
