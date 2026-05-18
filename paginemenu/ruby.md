@@ -7,9 +7,12 @@ layout: page
 
 ## Sintassi del linguaggio
 
+* [Variabili]({{ site.baseurl }}{% link _ruby/variabili.md %}.html)
 * [Tipi di dato]({{ site.baseurl }}{% link _ruby/tipi-di-dato.md %}.html)
+* [Stringhe di testo]({{ site.baseurl }}{% link _ruby/stringhe.md %}.html)
 * [Conversioni di tipo]({{ site.baseurl }}{% link _ruby/conversioni-di-tipo.md %}.html)
 * [Operatori]({{ site.baseurl }}{% link _ruby/operatori.md %}.html)
+* [Operatori logici]({{ site.baseurl }}{% link _ruby/operatori-logici.md %}.html)
 * [Visibilità delle variabili]({{ site.baseurl }}{% link _ruby/visibilita-variabili.md %}.html)
 * [Condizioni]({{ site.baseurl }}{% link _ruby/condizioni.md %}.html)
 * [Il ciclo while]({{ site.baseurl }}{% link _ruby/il-ciclo-while.md %}.html)
