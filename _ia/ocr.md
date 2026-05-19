@@ -19,6 +19,23 @@ Ciascun carattere è descritto da una matrice di 28×28 pixel ognuno dei quali d
 
 Dal punto di vista del codice vedremo che l’algoritmo è analogo ai precedenti.
 
+#### Il modulo mnist
+
+Il codice usa il pacchetto Python `mnist`, installabile con:
+
+```
+pip install mnist
+```
+
+Questo pacchetto scarica e carica automaticamente il dataset MNIST. Fornisce quattro array numpy:
+
+- `X_train`: 60000 immagini di addestramento, ciascuna rappresentata come un vettore di 784 valori (28 × 28 pixel appiattiti), con valori da 0 a 255.
+- `Y_train`: dizionario con chiavi da 0 a 9; `Y_train[d]` è un vettore di 60000 valori 0/1 che indica se l’immagine corrisponde alla cifra d.
+- `X_test`: 10000 immagini di verifica, stesso formato di `X_train`.
+- `Y_test`: stesso formato di `Y_train`, usato per misurare l’accuratezza dopo l’addestramento.
+
+Il codice addestra **10 classificatori binari indipendenti** (uno per cifra): il classificatore del digit 3, ad esempio, risponde solo alla domanda "questa immagine è un 3?". Questa tecnica si chiama **one-vs-all** (uno contro tutti).
+
 {% highlight python %}
 import numpy as np
 
@@ -49,7 +66,7 @@ def gradiente(X, Y, w):
 def allena(X, Y, iterations, lr):
     w = np.zeros((X.shape[1], 1))
     for i in range(iterations):
-        # print("Iterazionie %4d => Costo: %.20f" % (i, costo(X, Y, w)))
+        # print("Iterazione %4d => Costo: %.20f" % (i, costo(X, Y, w)))
         w -= gradiente(X, Y, w) * lr
     return w
 
@@ -69,3 +86,10 @@ for digit in range(10):
 
 
 {% endhighlight %}
+
+### Esercizi
+
+1. Modifica il codice per addestrare e testare solo il classificatore del digit 0. Aumenta le iterazioni da 100 a 500: l'accuratezza migliora?
+2. Esegui il codice con 100 iterazioni e annota l'accuratezza di ciascuna cifra. Quale cifra è riconosciuta meglio? Quale peggio? Proponi un'ipotesi sul perché alcune cifre siano più difficili da riconoscere.
+3. Prova learning rate diversi: `1e-4`, `1e-5`, `1e-6`. Per ciascuno stampa l'accuratezza media su tutte le cifre. Quale learning rate dà i risultati migliori con 100 iterazioni?
+4. Modifica la funzione `test` per restituire la percentuale di successo invece di stamparla, e scrivi un ciclo che stampa la cifra con l'accuratezza più alta e quella con l'accuratezza più bassa.

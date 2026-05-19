@@ -40,6 +40,8 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 - [Andiamo a disegnare la funzione costo]({{ site.baseurl }}{% link _ia/andiamo-a-disegnare-la-funzione-costo.md %}.html)
 - [Aggiungiamo una dimensione]({{ site.baseurl }}{% link _ia/aggiungiamo-una-dimensione.md %}.html)
 - [La classificazione]({{ site.baseurl }}{% link _ia/la-classificazione.md %}.html)
+- [Reti neurali]({{ site.baseurl }}{% link _ia/reti-neurali.md %}.html)
+- [Reti neurali profonde]({{ site.baseurl }}{% link _ia/reti-neurali-profonde.md %}.html)
 - [OCR]({{ site.baseurl }}{% link _ia/ocr.md %}.html)
 
 

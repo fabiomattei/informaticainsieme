@@ -24,8 +24,8 @@ def costo(X, Y, w, b):
 
 
 # Load data
-X = np.array([13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13])
-Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,23,39,27,37,17,18,25,23])
+X = np.array([ 2, 8, 5, 9, 1, 7, 3, 6, 4,10, 2, 8, 6, 3, 9, 1, 5, 7, 4, 8, 3, 6, 9, 2, 7, 4,10, 5, 1, 6])
+Y = np.array([ 5, 8, 7, 9, 4, 8, 5, 7, 6, 9, 4, 8, 7, 5, 9, 3, 6, 7, 6, 8, 5, 7, 9, 4, 8, 6,10, 6, 4, 7])
 
 sns.set()  # Activate Seaborn
 
@@ -56,7 +56,7 @@ Dato che il concetto alla base della funzione allena consiste nel minimizzare la
 
 Questo ci permette di esplorare il territorio delle soluzioni in molto meno tempo.
 
-Lo script seguente calcola la retta passante peere l’origine avente il minimo costo.
+Lo script seguente calcola la retta passante per l’origine avente il minimo costo.
 
 {% highlight python %}
 import numpy as np
@@ -82,8 +82,8 @@ def allena(X, Y, iterations, lr):
     return w
 
 
-X = np.array([13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13])
-Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,23,39,27,37,17,18,25,23])
+X = np.array([ 2, 8, 5, 9, 1, 7, 3, 6, 4,10, 2, 8, 6, 3, 9, 1, 5, 7, 4, 8, 3, 6, 9, 2, 7, 4,10, 5, 1, 6])
+Y = np.array([ 5, 8, 7, 9, 4, 8, 5, 7, 6, 9, 4, 8, 7, 5, 9, 3, 6, 7, 6, 8, 5, 7, 9, 4, 8, 6,10, 6, 4, 7])
 
 w = allena(X, Y, iterations=100, lr=0.001)
 print("\nw=%.10f" % w)
@@ -119,11 +119,18 @@ def allena(X, Y, iterations, lr):
     return w, b
 
 
-X = np.array([13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13])
-Y = np.array([33,16,32,51,27,16,34,17,29,15,15,32,22,37,13,44,16,21,37,30,26,34,23,39,27,37,17,18,25,23])
+X = np.array([ 2, 8, 5, 9, 1, 7, 3, 6, 4,10, 2, 8, 6, 3, 9, 1, 5, 7, 4, 8, 3, 6, 9, 2, 7, 4,10, 5, 1, 6])
+Y = np.array([ 5, 8, 7, 9, 4, 8, 5, 7, 6, 9, 4, 8, 7, 5, 9, 3, 6, 7, 6, 8, 5, 7, 9, 4, 8, 6,10, 6, 4, 7])
 
 w, b = allena(X, Y, iterations=20000, lr=0.001)
 print("\nw=%.10f, b=%.10f" % (w, b))
-print("Predizione: x=%d => y=%.2f" % (20, predici(20, w, b)))
+print("Predizione: x=%d ore => voto=%.2f" % (6, predici(6, w, b)))
+
+### Esercizi
+
+1. Modifica il range del grafico della parabola da `[-1, 4]` a `[-5, 10]`. La forma della parabola cambia o si estende semplicemente?
+2. Aggiungi al grafico della parabola un punto blu che indica la posizione iniziale dell'algoritmo (w=0, costo corrispondente). Confrontalo visivamente con il minimo segnato in verde.
+3. Nel secondo script (con la derivata), riduci il learning rate da 0.001 a 0.0001 e aumenta le iterazioni da 100 a 1000. Il costo finale è più basso? Quante iterazioni servono per avvicinarsi al minimo?
+4. Nel terzo script (con gradiente e termine noto), prova a partire da w=2, b=5 invece di w=0, b=0 modificando la riga `w = b = 0`. L'algoritmo converge allo stesso risultato?
 
 {% endhighlight %}

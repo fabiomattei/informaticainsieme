@@ -5,15 +5,15 @@ author: Fabio Mattei
 layout: page
 ---
 
-Supponiamo di aggiungere al nostro modello una variabile in più: la temperatura.
+Supponiamo di aggiungere al nostro modello una variabile in più: le ore di sonno.
 
-Sappiamo tutti che quando c’è una bella serata è bello andare a mangiare una pizza. D’altro canto è un po’ meno bello quando fuori fa troppo freddo.
+Sappiamo tutti che dormire bene prima di un esame aiuta la concentrazione e la memoria. Un modello che considera sia le ore di studio che le ore di sonno dovrebbe fare predizioni più accurate.
 
-| Reservations | Temperature | Pizzas |
-|--------------|-------------|--------|
-| 13 | 26 | 44 |
-| 2 | 14 | 23 |
-| 14 | 20 | 28 |
+| OreDiStudio | OreDiSonno | Voto |
+|-------------|------------|------|
+| 2 | 7 | 5 |
+| 8 | 8 | 8 |
+| 5 | 6 | 7 |
 
 A questo punto il modello matematico si complica un po’, dobbiamo accogliere la nuova variabile. Non assomiglia più ad una retta assumendo la forma: **y = x1 \* w1 + x2 \* w2 + b**
 
@@ -28,22 +28,22 @@ from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 import seaborn as sns
 
-# Prenotazioni
-x1 = [13,2 ,14,23,13,1 ,18,10,26,3 ,3 ,21,7 ,22,2 ,27,6 ,10,18,15,9 ,26,8 ,15,10,21,5 ,6 ,13,13]
-# Temperatura
-x2 = [26,14,20,25,24,12,23,18,24,14,12,27,17,21,12,26,15,21,18,26,20,25,21,22,20,21,12,14,19,20]
-# Pizze
-y = [44,23,28,60,42,5,51,44,42,9,14,43,22,34,16,46,26,33,29,43,37,62,47,38,22,29,34,38,30,28]
+# Ore di studio
+x1 = [ 2, 8, 5, 9, 1, 7, 3, 6, 4,10, 2, 8, 6, 3, 9, 1, 5, 7, 4, 8, 3, 6, 9, 2, 7, 4,10, 5, 1, 6]
+# Ore di sonno
+x2 = [ 7, 8, 6, 8, 5, 7, 6, 7, 6, 8, 5, 8, 7, 6, 9, 4, 7, 8, 6, 8, 5, 7, 9, 5, 8, 6, 9, 7, 4, 7]
+# Voto
+y = [ 5, 8, 7, 9, 4, 8, 5, 7, 6, 9, 4, 8, 7, 5, 9, 3, 6, 7, 6, 8, 5, 7, 9, 4, 8, 6,10, 6, 4, 7]
 
 # Pesi calcolati nella fase di allenamento
-w = np.array([-3.98230894, 0.37333539, 1.69202346])
+w = np.array([0.21, 0.58, 0.31])
 
 # Disegna gli assi
 sns.set(rc={"axes.facecolor": "white", "figure.facecolor": "white"})
 ax = plt.figure().gca(projection="3d")
-ax.set_xlabel("Temperatura", labelpad=15, fontsize=30)
-ax.set_ylabel("Prenotazioni", labelpad=15, fontsize=30)
-ax.set_zlabel("Pizze", labelpad=5, fontsize=30)
+ax.set_xlabel("Ore di sonno", labelpad=15, fontsize=30)
+ax.set_ylabel("Ore di studio", labelpad=15, fontsize=30)
+ax.set_zlabel("Voto", labelpad=5, fontsize=30)
 
 # Disegna i punti
 ax.scatter(x1, x2, y, color='b')
@@ -60,7 +60,7 @@ plt.show()
 
 {% endhighlight %}
 
-Lo script utilizzato per calcolare fare l’allenameno e calcolare i pesi è il seguente:
+Lo script utilizzato per fare l’allenamento e calcolare i pesi è il seguente:
 
 {% highlight python %}
 import numpy as np
@@ -74,18 +74,18 @@ def costo(X, Y, w):
 def gradiente(X, Y, w):
     return 2 * np.matmul(X.T, (predici(X, w) - Y)) / X.shape[0]
 
-def allena(X, Y, num_iterazioini, lr):
+def allena(X, Y, num_iterazioni, lr):
     w = np.zeros((X.shape[1], 1))
-    for i in range(num_iterazioini):
+    for i in range(num_iterazioni):
         print("Iterazione %4d => costo: %.20f" % (i, costo(X, Y, w)))
         w -= gradiente(X, Y, w) * lr
     return w
 
 
-x1, x2, y = np.loadtxt("pizza_2_vars.txt", skiprows=1, unpack=True)
+x1, x2, y = np.loadtxt("studio_2_vars.txt", skiprows=1, unpack=True)
 X = np.column_stack((np.ones(x1.size), x1, x2))
 Y = y.reshape(-1, 1)
-w = allena(X, Y, num_iterazioini=100000, lr=0.001)
+w = allena(X, Y, num_iterazioni=100000, lr=0.001)
 
 print("\nPesi: %s" % w.T)
 print("\nAlcune predizioni:")
@@ -93,40 +93,47 @@ for i in range(5):
     print("X[%d] -> %.4f (label: %d)" % (i, predici(X[i], w), Y[i]))
 {% endhighlight %}
 
-I dati sono stati separati iinerendoli all’interno di un file txt il cui contenuto è il seguente.
+I dati sono stati separati inserendoli all’interno di un file txt il cui contenuto è il seguente.
+
+### Esercizi
+
+1. Rimuovi le ore di sonno dal modello (usa solo `x1` - ore di studio) e confronta il costo finale con quello del modello a due variabili. Aggiungere le ore di sonno migliora le predizioni?
+2. Usa il modello allenato per predire il voto di uno studente che ha studiato 7 ore e dormito 8 ore: `predici(X_nuovo, w)` dove `X_nuovo = np.array([1, 7, 8])`. Perché serve il valore 1 come primo elemento?
+3. Aggiungi una terza variabile al dataset: il numero di esercizi svolti (da 0 a 10). Inventa valori plausibili per ogni riga e aggiorna il modello per usare tre variabili di input. Il costo finale scende?
+4. Modifica il codice per caricare i dati da un file CSV invece che da un file txt usando `np.loadtxt` con `delimiter=’,’`.
 
 
-|Prenotazioni | Temperature | Pizze |
-|-------------|-------------|-------|
-|13           | 26          | 44    |
-|2            | 14          | 23    |
-|14           | 20          | 28    |
-|23           | 25          | 60    |
-|13           | 24          | 42    |
-|1            | 12          | 5     |
-|18           | 23          | 51    |
-|10           | 18          | 44    |
-|26           | 24          | 42    |
-|3            | 14          | 9     |
-|3            | 12          | 14    |
-|21           | 27          | 43    |
-|7            | 17          | 22    |
-|22           | 21          | 34    |
-|2            | 12          | 16    |
-|27           | 26          | 46    |
-|6            | 15          | 26    |
-|10           | 21          | 33    |
-|18           | 18          | 29    |
-|15           | 26          | 43    |
-|9            | 20          | 37    |
-|26           | 25          | 62    |
-|8            | 21          | 47    |
-|15           | 22          | 38    |
-|10           | 20          | 22    |
-|21           | 21          | 29    |
-|5            | 12          | 34    |
-|6            | 14          | 38    |
-|13           | 19          | 30    |
-|13           | 20          | 28    |
+|OreDiStudio | OreDiSonno | Voto |
+|------------|------------|------|
+|2           | 7          | 5    |
+|8           | 8          | 8    |
+|5           | 6          | 7    |
+|9           | 8          | 9    |
+|1           | 5          | 4    |
+|7           | 7          | 8    |
+|3           | 6          | 5    |
+|6           | 7          | 7    |
+|4           | 6          | 6    |
+|10          | 8          | 9    |
+|2           | 5          | 4    |
+|8           | 8          | 8    |
+|6           | 7          | 7    |
+|3           | 6          | 5    |
+|9           | 9          | 9    |
+|1           | 4          | 3    |
+|5           | 7          | 6    |
+|7           | 8          | 7    |
+|4           | 6          | 6    |
+|8           | 8          | 8    |
+|3           | 5          | 5    |
+|6           | 7          | 7    |
+|9           | 9          | 9    |
+|2           | 5          | 4    |
+|7           | 8          | 8    |
+|4           | 6          | 6    |
+|10          | 9          | 10   |
+|5           | 7          | 6    |
+|1           | 4          | 4    |
+|6           | 7          | 7    |
 
 

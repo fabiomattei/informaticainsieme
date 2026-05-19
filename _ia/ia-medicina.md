@@ -36,7 +36,7 @@ Sulla base della diagnosi verrà basata la terapia dunque il problema della diag
 I sistemi esperti sono programmati dai dipendenti delle compagnie dunque non si può pensare che siano esenti da qualunque **bias**.
 Bisogna allora capire per quale goal principalmente i sistemi sono programmati:
 
-1. Dare priorità alla salute del paziende
+1. Dare priorità alla salute del paziente
 2. Minimizzare spese del sistema sanitario
 3. Massimizzare i profitti di una qualche entità privata
 
