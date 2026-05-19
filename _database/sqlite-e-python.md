@@ -5,25 +5,27 @@ author: Fabio Mattei
 layout: page
 ---
 
-SQLite è un database semplificato, utilizzato molto per le applicazioni su telefonino con il fine di salvare e accedere ai dati. E’ spesso utilizzato nei videogiochi, lo si utilizza in Adobe Lightroom, in Apple iTunes, in Dropbox, in Firefox e in molte altre applicazioni. SQLite è piccolo ma contiene molto del linguaggio SQL standard ed è ACID, questo significa che ogni query è Atomica, Consistente, Isolata e Durevole.
+SQLite è un database semplificato, utilizzato molto per le applicazioni su telefonino con il fine di salvare e accedere ai dati. È spesso utilizzato nei videogiochi, lo si utilizza in Adobe Lightroom, in Apple iTunes, in Dropbox, in Firefox e in molte altre applicazioni. SQLite è piccolo ma contiene molto del linguaggio SQL standard ed è ACID, questo significa che ogni query è Atomica, Consistente, Isolata e Durevole.
 
 #### Sqlite e i file
 
 SQLite memorizza un intero schema relazionale in un unico file. Questo significa che tutte le tabelle e le loro relazioni saranno contenute in un file.
 
-Per potersi collegare ad un file bisogna collegarsi a questo.
+Per aprire un database si usa `sqlite3.connect()` passando il percorso del file. Se il file non esiste SQLite lo crea automaticamente.
 
 {% highlight python %}
 import sqlite3
-db = sqlite3.connect('dati/ilmiodatabase.db') 
+db = sqlite3.connect(‘dati/ilmiodatabase.db’) 
 cursor = db.cursor() 
 {% endhighlight %}
 
-Nell’esempio in alto ci siamo collegati al file dati/ilmiodatabase.db
+L’oggetto `db` rappresenta la connessione al database; `cursor` è lo strumento con cui si inviano le query. Quando si ha finito di lavorare con il database è importante chiudere la connessione:
 
-Quando ci si collega ad un file database SQLite che non esiste, SQLite crea un nuovo file.
+{% highlight python %}
+db.close()
+{% endhighlight %}
 
-Ritroveremo queste righe in tutti gli esempi seguenti
+Ritroveremo `sqlite3.connect` e `db.cursor()` in tutti gli esempi seguenti.
 
 #### Creiamo una tabella con SQLite e Python
 
@@ -73,65 +75,91 @@ print('Secondo utente inserito')
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-Così facendo ho inserito i dati utilizzando delle tuple, ma posso anche utilizzare un dizionario:
+Così facendo ho inserito i dati utilizzando delle tuple, ma posso anche utilizzare un dizionario, in modo da rendere il codice più leggibile:
 
 {% highlight python %}
 import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
+studente = {'nome': 'Gino', 'telefono': '123456789', 'email': 'gino@example.com', 'password': '12345'}
 cursor.execute('''
-INSERT INTO studenti(nome, telefono, email, password) VALUES(:nome,:telefono, :email, :password)
-''', {'nome':nome1, 'telefono':telefono1,'email':email1, 'password':password1})
+INSERT INTO studenti(nome, telefono, email, password) VALUES(:nome, :telefono, :email, :password)
+''', studente)
 
 db.commit()    # rende il comando persistente
 {% endhighlight %}
 
-Oppure posso utilizzare una lista di tuple:
+Oppure posso utilizzare una lista di tuple con `executemany`, utile quando si devono inserire molti record in una sola operazione:
 
 {% highlight python %}
 import sqlite3
-db = sqlite3.connect('dati/ilmiodatabase.db') 
+db = sqlite3.connect(‘dati/ilmiodatabase.db’) 
 cursor = db.cursor()
 
-studenti = [(nome1,telefono1, email1, password1), (nome2,telefono2, email2, password2), (nome3,telefono3, email3, password3)]
-cursor.executemany('''
+studenti = [
+    (‘Gino’,    ‘123456789’, ‘gino@example.com’,    ‘12345’),
+    (‘Roberto’, ‘987654321’, ‘roberto@example.com’, ‘abcdef’),
+    (‘Maria’,   ‘111222333’, ‘maria@example.com’,   ‘xyz789’),
+]
+cursor.executemany(‘’’
 INSERT INTO studenti(nome, telefono, email, password) VALUES(?,?,?,?)
-''', studenti)
+‘’’, studenti)
 
 db.commit()    # rende il comando persistente
-
+db.close()
 {% endhighlight %}
 
-Se hai bisogno di sapere l’id dell’ultima riga inserita:
+Se hai bisogno di conoscere l’id dell’ultima riga inserita:
 
 {% highlight python %}
-id = cursor.lastrowid 
-print('Last row id: %d' % id)
-
+ultimo_id = cursor.lastrowid
+print(f’Ultimo id inserito: {ultimo_id}’)
 {% endhighlight %}
+
+#### Gestire gli errori con il context manager
+
+Chiamare `db.commit()` manualmente funziona, ma non gestisce il caso in cui una query fallisca a metà: i dati rimangono in uno stato inconsistente. Il modo corretto è usare la connessione come **context manager** con `with`:
+
+{% highlight python %}
+import sqlite3
+
+db = sqlite3.connect('dati/ilmiodatabase.db')
+cursor = db.cursor()
+
+with db:
+    cursor.execute('''
+    INSERT INTO studenti(nome, telefono, email, password) VALUES(?,?,?,?)
+    ''', ('Luisa', '555666777', 'luisa@example.com', 'pass123'))
+
+# se non ci sono errori, db.commit() viene chiamato automaticamente
+# in caso di eccezione, db.rollback() viene chiamato automaticamente
+
+db.close()
+{% endhighlight %}
+
+Con il blocco `with db:` non serve più chiamare `db.commit()` esplicitamente: SQLite lo fa da solo al termine del blocco se tutto è andato a buon fine, oppure annulla tutte le operazioni del blocco se si è verificata un'eccezione.
 
 #### Accedere ai dati contenuti in un database
 
-Se hai bisogno di caricare i dati dal database:
+Per leggere tutte le righe in una volta si usa `fetchall()`, che restituisce una lista di tuple:
 
 {% highlight python %}
 import sqlite3
 db = sqlite3.connect('dati/ilmiodatabase.db') 
 cursor = db.cursor()
 
-cursor.execute('''SELECT nome, email, telefono FROM studenti''') 
-user1 = cursor.fetchone() # carica la prima riga o tupla 
-print(user1[0]) # scrive il primo campo della prima tupla 
-all_rows = cursor.fetchall() # carica tutte le tuple
+cursor.execute('''SELECT nome, email, telefono FROM studenti''')
+righe = cursor.fetchall()
 
-for row in all_rows:
-    # row[0] ritorna la prima colonna (nome), row[1] ritorna la colonna email. 
-    print('{0} : {1}, {2}'.format(row[0], row[1], row[2]))
-    
+for riga in righe:
+    # riga[0] è nome, riga[1] è email, riga[2] è telefono
+    print(f'{riga[0]} : {riga[1]}, {riga[2]}')
+
+db.close()
 {% endhighlight %}
 
-Se hai bisogno di caricare dei dati dal database passando dei parametri per la query:
+Per leggere una singola riga si usa `fetchone()`, utile quando ci si aspetta al massimo un risultato:
 
 {% highlight python %}
 import sqlite3
@@ -140,18 +168,74 @@ cursor = db.cursor()
 
 user_id = 3
 cursor.execute('''
-SELECT nome, email, telefono FROM studenti WHERE id=?
-''',(user_id,)) 
-user = cursor.fetchone()
+SELECT nome, email, telefono FROM studenti WHERE id = ?
+''', (user_id,))
+riga = cursor.fetchone()
+
+if riga:
+    print(f'{riga[0]} : {riga[1]}')
+
+db.close()
+{% endhighlight %}
+
+#### Accesso per nome di colonna
+
+Accedere alle colonne tramite indice numerico (`riga[0]`, `riga[1]`) funziona ma rende il codice difficile da leggere. Impostando `db.row_factory = sqlite3.Row` prima di creare il cursore, le righe diventano accessibili per nome di colonna:
+
+{% highlight python %}
+import sqlite3
+db = sqlite3.connect('dati/ilmiodatabase.db')
+db.row_factory = sqlite3.Row   # abilita l'accesso per nome
+cursor = db.cursor()
+
+cursor.execute('''SELECT nome, email, telefono FROM studenti''')
+for riga in cursor.fetchall():
+    print(f"{riga['nome']} : {riga['email']}, {riga['telefono']}")
+
+db.close()
+{% endhighlight %}
+
+#### SELECT con JOIN
+
+Le query con JOIN si scrivono esattamente come in SQL. Supponendo di avere anche una tabella `voti` collegata a `studenti`:
+
+{% highlight python %}
+import sqlite3
+db = sqlite3.connect('dati/ilmiodatabase.db')
+db.row_factory = sqlite3.Row
+cursor = db.cursor()
+
+cursor.execute('''
+SELECT studenti.nome, studenti.cognome, voti.materia, voti.voto
+FROM studenti
+JOIN voti ON studenti.id = voti.id_studente
+ORDER BY studenti.cognome ASC
+''')
+
+for riga in cursor.fetchall():
+    print(f"{riga['nome']} {riga['cognome']} - {riga['materia']}: {riga['voto']}")
+
+db.close()
+{% endhighlight %}
+
+Per filtrare con parametri:
+
+{% highlight python %}
+materia = 'Matematica'
+cursor.execute('''
+SELECT studenti.nome, voti.voto
+FROM studenti
+JOIN voti ON studenti.id = voti.id_studente
+WHERE voti.materia = ?
+ORDER BY voti.voto DESC
+''', (materia,))
 {% endhighlight %}
 
 #### Aggiornare i dati nel database: 
 
-Vediamo ora come passare a SQLite una query di tipo UPDATE. Inseriamo, come di consueto, la quesy in una stringa di tipo multilinea contrassegnata dalle tre virgolette ”’.
+Vediamo ora come passare a SQLite una query di tipo UPDATE. Inseriamo, come di consueto, la query in una stringa di tipo multilinea contrassegnata dalle tre virgolette `’’’`.
 
-I parametri da passare alla query vengono prima memorizzati in due variabili: *nuovotelefono*, *userid*.
-
-la funzione cursor.execute si aspetta di ricevere due parametri: una stringa che contiene la query SQL e una tupla che contiene tutti i parametri che la query attende inseriti nell’ordine in cui questa li attende.
+I parametri da passare alla query vengono memorizzati in variabili e passati come tupla. La funzione `cursor.execute` riceve due argomenti: la stringa con la query SQL e la tupla con i valori, nell’ordine in cui i segnaposto `?` compaiono nella query.
 
 {% highlight python %}
 import sqlite3
@@ -166,13 +250,14 @@ UPDATE studenti SET telefono = ? WHERE id = ?
 ''', (nuovotelefono, userid) )
 
 db.commit()    # rende il comando persistente
+db.close()
 {% endhighlight %}
 
 #### Cancellare i dati dal database:
 
-Vediamo ora come passare a SQLite una query di tipo DELETE. Notiamo che la inseriamo, come di consueto in una stringa di tipo multilinea contrassegnata dalle tre virgolette ”’.
+Vediamo ora come passare a SQLite una query di tipo DELETE.
 
-La query richiede il passaggio di un parametro id di tipo numerico, questo parametro viene passato attraverso una tupla: *(iddacancellare,)*. Fate attenzione a questa scrittura, la virgola che segue la variabile *iddacancellare* è necessaria, senza di questa la tupla viene cambiata automaticamente di tipo a *int* e la chiamata a *cursor.excecute* fallisce.
+La query richiede il passaggio di un parametro id di tipo numerico. Questo parametro viene passato attraverso una tupla: `(id_da_cancellare,)`. Fate attenzione alla virgola finale: è necessaria perché senza di essa Python interpreta l’espressione come un semplice intero anziché come una tupla, e la chiamata a `cursor.execute` fallisce.
 
 {% highlight python %}
 import sqlite3
@@ -180,12 +265,49 @@ db = sqlite3.connect('dati/ilmiodatabase.db')
 cursor = db.cursor()
 
 # Cancella utente con id = 2
-iddacancellare = 2
+id_da_cancellare = 2
 cursor.execute('''
-DELETE FROM studenti WHERE id = ? 
-''', (iddacancellare,) ) 
+DELETE FROM studenti WHERE id = ?
+''', (id_da_cancellare,))
 
 db.commit()    # rende il comando persistente
+db.close()
 {% endhighlight %}
 
+### Esercizi
 
+**Esercizio 1**
+
+Crea un database `negozio.db` con la seguente tabella:
+
+PRODOTTI (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, prezzo REAL, quantita INTEGER)
+
+Scrivi un programma Python che:
+
+* Crea la tabella con CREATE TABLE
+* Inserisce 5 prodotti usando `executemany` con una lista di tuple
+* Visualizza tutti i prodotti ordinati per prezzo crescente
+* Visualizza solo i prodotti con quantità maggiore di 10
+
+**Esercizio 2**
+
+Partendo dal database dell'esercizio 1, scrivi un programma Python che:
+
+* Aggiorna il prezzo di un prodotto scelto per nome
+* Cancella un prodotto scelto per id
+* Conta quanti prodotti costano meno di 5€ (usa `fetchone` per leggere il risultato di COUNT)
+* Usa `db.row_factory = sqlite3.Row` e accedi alle colonne per nome anziché per indice
+
+**Esercizio 3**
+
+Crea un database `biblioteca.db` con le seguenti tabelle:
+
+LIBRI (id INTEGER PRIMARY KEY AUTOINCREMENT, titolo TEXT, autore TEXT)  
+PRESTITI (id INTEGER PRIMARY KEY AUTOINCREMENT, id_libro INTEGER, data_prestito TEXT, data_restituzione TEXT)
+
+Scrivi un programma Python che:
+
+* Crea le due tabelle
+* Inserisce 3 libri e 2 prestiti
+* Usa una query con JOIN per visualizzare, per ogni prestito, il titolo del libro e la data di prestito
+* Usa `db.row_factory = sqlite3.Row` e il context manager `with db:` per tutte le operazioni di scrittura

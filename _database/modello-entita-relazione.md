@@ -18,7 +18,7 @@ Con una entità vogliamo descrivere una **classe**, cioè un insieme, di oggetti
 
 Per ogni entità che è legata ad una relazione viene specificata una **cardinalità di relazione**. Questa è una coppia di numeri o simboli che specifica il **numero minimo e massimo** di istanze di relazione a cui una istanza dell’entità può partecipare.
 
-I simboli generalmente più usati sono sono:
+I simboli generalmente più usati sono:
 
 - 0, 1, 2 (qualsiasi numero intero)
 - N (nel senso di numero generico maggiore di 1)
@@ -27,6 +27,18 @@ I simboli generalmente più usati sono sono:
 La cardinalità che lega lo *studente* alla relazione *frequenta* è (1, 1) questo vuol dire che uno studente frequenta sicuramente almeno una scuola ma non ne può frequentare più di una.
 
 La cardinalità che lega la *scuola* alla relazione *frequenta* è (0, N) questo vuol dire che una scuola potrebbe essere non frequentata da nessuno studente e al massimo potrebbe essere frequentata da N studenti.
+
+#### Tipi di relazione
+
+Le cardinalità massime delle due entità coinvolte determinano il **tipo di relazione**. Esistono tre tipi fondamentali:
+
+**Uno a uno (1:1)** — Ogni istanza di A è collegata ad al massimo un'istanza di B e viceversa. Esempio: una persona possiede un solo passaporto e un passaporto appartiene a una sola persona.
+
+**Uno a molti (1:N)** — Un'istanza di A può essere collegata a molte istanze di B, ma ogni istanza di B è collegata ad al massimo un'istanza di A. La relazione *Studente — frequenta — Scuola* è di tipo 1:N: ogni studente frequenta una sola scuola, ma una scuola ospita molti studenti.
+
+**Molti a molti (N:M)** — Un'istanza di A può essere collegata a molte istanze di B e viceversa. Esempio: uno studente può iscriversi a più corsi e un corso è frequentato da molti studenti.
+
+Le relazioni N:M sono le più complesse: nella loro rappresentazione come tabelle richiedono una **tabella di collegamento** separata che memorizza le coppie di chiavi delle entità coinvolte. Gli attributi della relazione diventano colonne aggiuntive di quella tabella.
 
 #### Attributi
 
@@ -96,7 +108,9 @@ Si vuole organizzare il campionato di calcetto tra i **comuni** appartenente all
 2\. Predisporre un’analisi dei dati che, motivando le scelte effettuate, individui:
 
 - Le entità, con breve descrizione delle istanze;
-- Gli attributi;
-- Le relazioni.
+- Gli attributi di ciascuna entità e la chiave primaria scelta;
+- Le relazioni, specificando per ognuna il tipo (1:1, 1:N o N:M) e la cardinalità.
 
 3\. Disegnare il modello E/R
+
+4\. Per ciascuna relazione N:M identificata, descrivere la tabella di collegamento che sarà necessaria nella traduzione al modello relazionale.
