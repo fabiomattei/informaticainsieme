@@ -174,3 +174,130 @@ Quante coppie di conigli ci saranno dopo un anno?
 
 E quante dopo un numero di mesi N, letto in input?
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, cioè una tabella che mostra riga per riga come cambia il valore di ogni variabile ad ogni iterazione del ciclo, esattamente come abbiamo fatto per l'esempio dell'accumulatore.
+
+#### Esercizio 13:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `cont` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+cont = 1
+acc = 1
+while cont <= 5:
+    acc = acc * cont
+    cont = cont + 1
+print(acc)
+{% endhighlight %}
+
+Qual è il valore stampato alla fine? Che calcolo sta eseguendo questo programma?
+
+#### Esercizio 14:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `a`, `b` e `cont` ad ogni iterazione):
+
+{% highlight python %}
+a = 1
+b = 10
+cont = 0
+while a < b:
+    a = a + 2
+    b = b - 1
+    cont = cont + 1
+print(cont, a, b)
+{% endhighlight %}
+
+Attenzione: la condizione del ciclo dipende da due variabili che cambiano entrambe ad ogni iterazione.
+
+#### Esercizio 15:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `n`, `cont` e `somma` ad ogni iterazione):
+
+{% highlight python %}
+n = 8
+cont = 1
+somma = 0
+while cont <= n:
+    if cont % 2 == 0:
+        somma = somma + cont
+    cont = cont + 1
+print(somma)
+{% endhighlight %}
+
+#### Esercizio 16:
+
+Costruite la tabella di tracciamento del seguente programma. Fate attenzione: in questo caso il ciclo potrebbe non venire mai eseguito, oppure eseguito un numero di volte diverso da quello che vi aspettate.
+
+{% highlight python %}
+x = 20
+cont = 0
+while x > 1:
+    x = x // 2
+    cont = cont + 1
+print(cont)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 17:
+
+{% highlight python %}
+cont = 0
+while cont < 5
+    print(cont)
+    cont = cont + 1
+{% endhighlight %}
+
+#### Esercizio 18:
+
+{% highlight python %}
+cont = 0
+while cont < 5:
+print(cont)
+cont = cont + 1
+{% endhighlight %}
+
+#### Esercizio 19:
+
+{% highlight python %}
+cont = 0
+while cont < 5:
+    print(cont)
+    cont = cont + 1
+    print "Fine ciclo"
+{% endhighlight %}
+
+#### Esercizio 20:
+
+{% highlight python %}
+cont = 0
+while cont < 5:
+    print(cont)
+    cont = cont 1
+{% endhighlight %}
+
+#### Esercizio 21:
+
+{% highlight python %}
+cont = 0
+while cont < 5:
+    print(cont)
+    cont = cont + 1
+    if cont == 3
+        print("Siamo a metà")
+{% endhighlight %}
+
+#### Esercizio 22:
+
+Questo programma non contiene errori di sintassi (viene eseguito senza generare errori), ma contiene un **errore logico**: individuatelo e spiegate perché il ciclo non termina mai.
+
+{% highlight python %}
+cont = 0
+while cont < 5:
+    print(cont)
+    cont = 0
+{% endhighlight %}
+

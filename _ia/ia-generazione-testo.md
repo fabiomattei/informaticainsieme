@@ -3,53 +3,58 @@ title: 'Generazione di testo'
 date: '2022-04-28T09:57:43+02:00'
 author: Fabio Mattei
 layout: page
+modified_date: '2026-07-25T00:00:00+02:00'
 ---
 
-I sistemi LLM (Large Language Model) sono degli avanzati modelli di intelligenza artificiale, progettati per comprendere e 
-generare testo in modo simile a come farebbe un essere umano. Questi sono in 
-grado di rispondere a domande, fornire spiegazioni, creare contenuti, e persino dare l'impressione di poter sostenere 
-conversazioni su una 
-vasta gamma di argomenti. Il loro funzionamento si basa su un processo di addestramento che coinvolge l'elaborazione 
-di enormi quantità di testo, permettendogli di acquisire conoscenze su linguaggio, cultura, scienza, tecnologia, 
-e molto altro.
+## Introduzione
 
-Una delle loro caratteristiche è la loro capacità di generare risposte coerenti e contestualmente 
-appropriate, adattandosi al tono e al contenuto della conversazione. Che si tratti di assistere con la scrittura, 
-risolvere dubbi tecnici, o semplicemente chiacchierare su argomenti di interesse, i modelli LLM offrono un'interazione 
-naturale e fluida, rendendo la tecnologia accessibile e utile per una vasta gamma di utenti.
+I sistemi **LLM (Large Language Model)** sono modelli di intelligenza artificiale addestrati su enormi quantità di
+testo per comprendere e generare linguaggio naturale in modo simile a un essere umano. Sono in grado di rispondere
+a domande, scrivere testi, tradurre, riassumere e sostenere conversazioni su una vasta gamma di argomenti,
+adattandosi al tono e al contenuto della richiesta.
 
-Come strumento di supporto e automazione del linguaggio, i modelli LLM rappresentano un passo avanti significativo nel campo 
-dell'intelligenza artificiale, rendendo possibile una nuova era di interazioni uomo-macchina.
+## Come funzionano
 
-Alcuni esempi di sistemi LLM sono: 
+Alla base degli LLM c'è l'architettura **Transformer**. Il testo viene scomposto in unità dette **token** (parole o
+parti di parola) e, durante l'addestramento, il modello impara a prevedere il token successivo più probabile data
+una sequenza di testo. Ripetendo questo processo su miliardi di frasi, il modello acquisisce sia una
+rappresentazione statistica del linguaggio sia nozioni di fatto contenute nei testi di addestramento.
 
-* ChatGPT
-* JasperAI
-* Content at Scale
-* Rytr
-* Writesonic
-* Frase
-* ShortlyAI
-* WordHero
+Dopo questa fase iniziale (**pre-training**), i modelli vengono ulteriormente affinati con tecniche come il
+*fine-tuning* supervisionato e l'**apprendimento per rinforzo dal feedback umano (RLHF)**, che li rendono più utili,
+coerenti e allineati alle richieste nelle conversazioni.
+
+## Modelli e applicazioni
+
+È utile distinguere tra due livelli:
+
+* **Modelli di base (LLM)**: i motori linguistici veri e propri, sviluppati dalle grandi aziende di IA. Esempi:
+  GPT (OpenAI), Claude (Anthropic), Gemini (Google), Llama (Meta, open source), Mistral (Mistral AI, open source).
+* **Applicazioni costruite sopra gli LLM**: strumenti pensati per compiti specifici — ad esempio la scrittura di
+  articoli o testi pubblicitari — che internamente si appoggiano a uno di questi modelli tramite API. Esempi:
+  Jasper AI, Writesonic, Rytr, Copy.ai.
 
 ## Problematiche
 
-Molte sono le problematiche inerenti ai modelli di intelligenza artificiale di questo tipo:
-
-* Sono energivori
-* Richiedono grandi quantità di dati per essere addestrati (diritti d'autore e qualità dei dati)
-* Il testo generato è in un certo senso una forma di plagio dato che non viene mai citato l'autore di quel testo
-* Non c'è controllo sulla veridicità dei contenuti
-* Privacy (fino ad ora le grandi aziende non ci hanno mai chiesto il permesso di utlizzare i nostri dati per l'addestramento)
-
+* Sono **energivori**: l'addestramento e l'uso su larga scala richiedono grandi quantità di elettricità e risorse
+  di calcolo.
+* Richiedono **enormi quantità di dati** per l'addestramento, il che solleva questioni di diritto d'autore e
+  qualità delle fonti utilizzate.
+* L'uso di testi altrui per l'addestramento è oggetto di **cause legali e dibattiti** ancora aperti su copyright e
+  compenso agli autori originali.
+* Non offrono **garanzie di veridicità** sui contenuti generati.
+* Sollevano questioni di **privacy**, dato che i dati di addestramento provengono spesso dal web senza un consenso
+  esplicito degli autori.
 
 ## Limiti
 
-Ci sono alcuni problemi che le IA generative non possono risolvere: 
-
-* se poste di fronte a domande di logica o problemi di tipo matematico fornoscono risposte a caso. Non sono in grado di comprendere un problema e men che mai sono in grado di risolverlo.
-
-* le allucinazioni: consiste nel fatto che il modello restituisce una risposta che sembra esatta ma contiene delle parole o delle frasi che in realtà sono inventate.
+* **Ragionamento logico e matematico**: i primi LLM davano spesso risposte scorrette su problemi di logica o
+  calcolo, perché si limitano a prevedere il testo più probabile piuttosto che "ragionare" in senso umano. I
+  modelli più recenti, detti **modelli di ragionamento** (es. la serie o di OpenAI, Claude con extended thinking,
+  Gemini con reasoning), affrontano questi problemi generando esplicitamente passaggi intermedi prima della
+  risposta finale, migliorando molto l'affidabilità su questo tipo di compiti — pur senza essere infallibili.
+* **Allucinazioni**: il modello può restituire un'affermazione che sembra corretta e sicura di sé, ma che contiene
+  informazioni inventate. Il limite persiste anche nei modelli più recenti, sebbene in forma ridotta.
 
 ![Limite chat GPT](/images/ia/limitichatgpt.png){:class="aside-image"}
 
@@ -58,5 +63,3 @@ Ci sono alcuni problemi che le IA generative non possono risolvere:
 Quali problemi pensi che questo genere di algoritmi possa risolvere per la società?
 Quali per te?
 Quali per le persone che ti circondano?
-
-

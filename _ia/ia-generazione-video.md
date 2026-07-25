@@ -9,7 +9,7 @@ layout: page
 
 La generazione di video tramite intelligenza artificiale è una delle frontiere più recenti e più dirompenti del campo. Fino a pochi anni fa creare un video richiedeva telecamere, attori, luci, montaggio e un intero team di professionisti. Oggi esistono sistemi che, a partire da una semplice descrizione testuale, producono sequenze video di diversi secondi — o addirittura minuti — con personaggi, ambienti e movimenti di camera fotorealistici.
 
-Il salto di qualità più visibile è avvenuto nel 2024, quando OpenAI ha presentato **Sora**, un sistema in grado di generare video fino a un minuto di durata con una coerenza visiva mai vista prima. Nello stesso periodo hanno raggiunto risultati comparabili anche **Google Veo**, **Runway**, **Pika** e **Kling**.
+Il salto di qualità più visibile è avvenuto nel 2024, quando OpenAI ha presentato **Sora**, un sistema in grado di generare video fino a un minuto di durata con una coerenza visiva mai vista prima. Nello stesso periodo hanno raggiunto risultati comparabili anche **Google Veo**, **Runway**, **Pika** e **Kling**. Nel corso del 2025 le versioni successive di questi strumenti (Sora 2, Veo 3, Runway Gen-4) hanno aggiunto un'ulteriore capacità: la generazione di **audio sincronizzato** — dialoghi, rumori d'ambiente, musica — insieme al video, riducendo ulteriormente il lavoro di post-produzione.
 
 ## Come funziona
 
@@ -29,9 +29,9 @@ Alcuni strumenti supportano anche la **generazione da immagine a video**: si for
 
 | Strumento | Produttore | Caratteristiche |
 |---|---|---|
-| Sora | OpenAI | Fino a 1 minuto, alta qualità, fisicamente coerente |
-| Veo | Google DeepMind | Alta risoluzione, controllo del movimento di camera |
-| Runway Gen-3 | Runway | Testo e immagine come input, orientato ai professionisti creativi |
+| Sora | OpenAI | Fino a 1 minuto, alta qualità, fisicamente coerente, audio sincronizzato (Sora 2) |
+| Veo | Google DeepMind | Alta risoluzione, controllo del movimento di camera, audio nativo (Veo 3) |
+| Runway | Runway | Testo e immagine come input, orientato ai professionisti creativi |
 | Pika | Pika Labs | Interfaccia semplice, animazione di immagini statiche |
 | Kling | Kuaishou | Movimento realistico, popolare in Asia |
 | Luma Dream Machine | Luma AI | Fisica realistica, accessibile al pubblico generale |

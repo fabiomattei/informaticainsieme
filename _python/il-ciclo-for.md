@@ -235,5 +235,112 @@ Scrivi un algoritmo che letto un numero scriva "numero primo" se questo è un nu
 #### Esercizio 27:
 Scrivi un programma python che generi tre numeri interi compresi tra 100 e 999 che siano divisibili per 5.
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, cioè una tabella che mostra riga per riga come cambia il valore di ogni variabile ad ogni iterazione del ciclo `for`.
+
+#### Esercizio 28:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `x` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+acc = 0
+for x in range(1, 6):
+    acc = acc + x
+print(acc)
+{% endhighlight %}
+
+#### Esercizio 29:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `x` e `acc` ad ogni iterazione). Attenzione al valore di partenza e al passo di `range`:
+
+{% highlight python %}
+acc = 1
+for x in range(10, 0, -2):
+    acc = acc * 1
+    acc = acc + x
+print(acc)
+{% endhighlight %}
+
+#### Esercizio 30:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `x`, `cont` e `somma` ad ogni iterazione):
+
+{% highlight python %}
+somma = 0
+cont = 0
+for x in range(1, 11):
+    if x % 3 == 0:
+        somma = somma + x
+        cont = cont + 1
+print(cont, somma)
+{% endhighlight %}
+
+#### Esercizio 31:
+
+Costruite la tabella di tracciamento del seguente programma. Fate attenzione al valore di `massimo` prima ancora che il ciclo cominci:
+
+{% highlight python %}
+valori = [3, 7, 2, 9, 4]
+massimo = 0
+for x in valori:
+    if x > massimo:
+        massimo = x
+print(massimo)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 32:
+
+{% highlight python %}
+for x in range(1, 10)
+    print(x)
+{% endhighlight %}
+
+#### Esercizio 33:
+
+{% highlight python %}
+for x in range(1, 10):
+print(x)
+{% endhighlight %}
+
+#### Esercizio 34:
+
+{% highlight python %}
+acc = 0
+for x in range(1, 11):
+    acc = acc + x
+    print "Il valore parziale e'", acc
+{% endhighlight %}
+
+#### Esercizio 35:
+
+{% highlight python %}
+for x in range(1 10):
+    print(x)
+{% endhighlight %}
+
+#### Esercizio 36:
+
+{% highlight python %}
+for x in range(1, 6):
+    if x % 2 == 0
+        print(x, "e' pari")
+{% endhighlight %}
+
+#### Esercizio 37:
+
+Questo programma non contiene errori di sintassi (viene eseguito senza generare errori), ma contiene un **errore logico**: individuatelo e spiegate perché il programma non stampa il risultato che ci si aspetterebbe.
+
+{% highlight python %}
+acc = 0
+for x in range(1, 11):
+    acc = x + x
+print(acc)
+{% endhighlight %}
+
 
 
