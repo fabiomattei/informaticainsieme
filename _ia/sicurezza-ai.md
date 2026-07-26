@@ -3,6 +3,7 @@ title: 'Sicurezza AI'
 date: '2026-05-18T09:00:00+02:00'
 author: Fabio Mattei
 layout: page
+modified_date: '2026-07-26T00:00:00+02:00'
 ---
 
 Quando un sistema di intelligenza artificiale entra in un'organizzazione, porta con sé capacità nuove — e superfici di attacco nuove. Alcune di queste superfici sono varianti di problemi già noti nella sicurezza informatica tradizionale; altre sono specifiche dei modelli linguistici e dei sistemi agentici, e richiedono modi di pensare che i framework classici non coprono del tutto.
@@ -39,13 +40,7 @@ Sistemi vengono deployati prima che esistano policy chiare su chi può usarli, c
 
 Il principio fondante della Zero Trust è semplice: **non fidarti mai, verifica sempre**. Non si parte dall'assunzione che chi è dentro il perimetro sia affidabile — perché il perimetro, nell'architettura distribuita di oggi, non esiste più in modo significativo. Ogni accesso viene valutato nel contesto: chi sta chiedendo, da dove, con quale dispositivo, su quale dato, con quale rischio associato. La fiducia non è permanente: si concede, si misura, si revoca.
 
-Applicata all'AI generativa, questa logica diventa uno strumento pratico per governare prompt, dati, plugin, agenti e azioni automatiche.
-
-Il primo principio è la **verifica esplicita**: prima di concedere l'accesso a dati, strumenti o azioni, bisogna sapere chi o cosa sta chiedendo. Utenti, agenti, modelli, API e connettori devono essere identificati e valutati, non assunti come affidabili per default.
-
-Il secondo è il **minimo privilegio**: ogni componente del sistema — umano o non umano — riceve solo gli accessi strettamente necessari per il compito corrente, per il tempo strettamente necessario. Un agente che deve leggere un documento non ha bisogno di poter inviare email. Un modello che deve rispondere a domande su un dataset non ha bisogno di accedere all'intera base dati aziendale.
-
-Il terzo è **assumere la violazione**: progettare il sistema partendo dall'ipotesi che qualcosa sarà compromesso. Questo significa pensare in anticipo a prompt injection, a data leak, a tool abusati, a output manipolati — e costruire i controlli di conseguenza, non come risposta a un incidente già avvenuto.
+Applicata all'AI generativa, questa logica diventa uno strumento pratico per governare prompt, dati, plugin, agenti e azioni automatiche — la mappatura concreta dei principi è nella sezione finale di questa pagina.
 
 *Riferimenti: NIST SP 800-207, Microsoft Zero Trust, OWASP Top 10 for LLM Apps.*
 
