@@ -31,6 +31,10 @@ Per installare python sul tuo computer, leggi la guida su <a href="{{site.baseur
 - [La tartaruga]({{ site.baseurl }}{% link _python/la-tartaruga.md %}.html)
 - [I frattali con turtle]({{ site.baseurl }}{% link _pythonmath/i-frattali-con-turtle.md %}.html)
 
+## Grafici con matplotlib
+
+- [Disegnare una funzione in Python]({{ site.baseurl }}{% link _pythonmath/disegnare-una-funzione-in-python.md %}.html)
+
 ## Approfondimenti
 
 - [Analisi dei dati con Pandas]({{ site.baseurl }}{% link _pandas/analisi-dei-dati-con-pandas.md %}.html)

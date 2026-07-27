@@ -24,17 +24,19 @@ plt.plot(x, y)
 plt.show()
 {% endhighlight %}
 
-</div>Python è un linguaggio molto versatile che può essere utilizzato per generare il grafico di una funzione.
+Python è un linguaggio molto versatile che può essere utilizzato per generare il grafico di una funzione.
 
 A tal proposito è necessario utilizzare le librerie matplotlib e numpy. La prima è una libreria che dà a Python la possibilità di creare dei grafici, la seconda una libreria che permette di operare con i numeri con le stesse performances (quasi) dei linguaggi a più basso livello come C++.
 
 Quando in matematica studiamo una funzione dobbiamo stabilire dominio e codominio. In Python le cose sono un pochino diverse. LA riga 6 definisce il fatto che vogliamo visualizzare la funzione per -10 &lt; x &lt; 12. Dividiamo questo intervallo in 1000 punti e creiamo una lista contenete tutti i numeri compresi in questo intervallo.
 
-La riga 7 ci permette di definire per ciascun numero appartenete alla lista x la corispondente ordinata.
+La riga 7 ci permette di definire per ciascun numero appartenente alla lista x la corrispondente ordinata.
 
 Le ultime tre righe ci permettono di generare il grafico vero e proprio con questo risultato.
 
-<figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-14.49.30.png)<figcaption>Il grafico rappresentate la parabola</figcaption></figure>#### La libreria ci permette di definire alcuni parametri
+<figure class="wp-block-image size-large"><img src="/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-14.49.30.png" alt="Grafico della parabola y = x^2 - 2x + 4 generato con matplotlib"><figcaption>Il grafico rappresenta la parabola</figcaption></figure>
+
+#### La libreria ci permette di definire alcuni parametri
 
 - **plt.xlim()** imposta i limiti per l’asse x
 - **plt.ylim()** imposta i limiti per l’asse y
@@ -43,11 +45,11 @@ Le ultime tre righe ci permettono di generare il grafico vero e proprio con ques
 - **plt.xlabel()** aggiunge una etichetta sull’asse x
 - **plt.ylabel()** aggiunge una etichetta sull’asse y
 - **plt.axis()** imposta le proprietà degli assi (equal, off, scaled, etc.)
-- **plt.xticks()** imposta le lineete visibili sull’asse x
-- **plt.yticks()** imposta le lineete visibili sull’asse y
+- **plt.xticks()** imposta le tacche visibili sull’asse x
+- **plt.yticks()** imposta le tacche visibili sull’asse y
 - **plt.legend()** aggiunge una legenda
 - **plt.savefig()** salva la figura (.png, .pdf, etc.) nella cartella corrente
-- **plt.figure()** aggiunge altre proprietà alla fiigura
+- **plt.figure()** aggiunge altre proprietà alla figura
 
 Stile della linea
 
@@ -111,7 +113,9 @@ plt.legend()
 plt.show()
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.12.41.png)<figcaption>un grafico più complesso</figcaption></figure>#### Un esempio con più di una funzione in un grafico
+<figure class="wp-block-image size-large"><img src="/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.12.41.png" alt="Grafico più complesso con titolo, etichette degli assi e watermark"><figcaption>un grafico più complesso</figcaption></figure>
+
+#### Un esempio con più di una funzione in un grafico
 
 {% highlight python %}
 # Import libraries
@@ -148,4 +152,4 @@ plt.ylabel('asse y')
 plt.show()
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.16.44.png)</figure>
+<figure class="wp-block-image size-large"><img src="/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.16.44.png" alt="Grafico con tre funzioni sovrapposte: cos(x) e le sue approssimazioni polinomiali di Taylor"></figure>
