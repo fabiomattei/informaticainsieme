@@ -22,6 +22,7 @@ Qualsiasi informazione noi trattiamo in un sistema informatico viene trasformata
 * <a href="{{site.baseurl}}/codifica/la-codifica-del-testo.html">La codifica del testo</a>
 * <a href="{{site.baseurl}}/codifica/la-codifica-delle-immagini.html">La codifica delle immagini</a>
 * <a href="{{site.baseurl}}/codifica/la-codifica-dei-video.html">La codifica dei video</a>
+* <a href="{{site.baseurl}}/codifica/la-codifica-del-software.html">La codifica del software</a>
 
 #### La progettazione grafica.
 
