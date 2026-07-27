@@ -102,12 +102,23 @@ set /a RESTO=20%%3
 
 Attenzione: `set /a` lavora solo con **numeri interi** (niente virgola), e per calcolare il resto di una divisione dentro uno script batch il simbolo di percentuale va raddoppiato (`%%3`), esattamente come si fa nei cicli `for`.
 
-Combinando `set /p` e `set /a` si può già scrivere una piccola calcolatrice:
+## Esempio: una piccola calcolatrice
+
+Combinando `set /p`, `set /a` e `if` (visto nella pagina sugli [script batch]({{ site.baseurl }}{% link _cmd/script-batch.md %}.html)) si può scrivere una vera calcolatrice, che chiede due numeri e l'operazione da eseguire:
 
 {% highlight shell %}
 @echo off
 set /p NUM1=Inserisci il primo numero: 
 set /p NUM2=Inserisci il secondo numero: 
-set /a SOMMA=%NUM1%+%NUM2%
-echo La somma è %SOMMA%
+set /p OP=Operazione (+, -, *, /): 
+
+if "%OP%"=="+" set /a RISULTATO=%NUM1%+%NUM2%
+if "%OP%"=="-" set /a RISULTATO=%NUM1%-%NUM2%
+if "%OP%"=="*" set /a RISULTATO=%NUM1%*%NUM2%
+if "%OP%"=="/" set /a RISULTATO=%NUM1%/%NUM2%
+
+echo Risultato: %RISULTATO%
+pause
 {% endhighlight %}
+
+Salvando questo testo in un file `calcolatrice.bat` ed eseguendolo, si ottiene un piccolo programma completo: chiede i dati all'utente (`set /p`), decide cosa fare in base alla risposta (`if`) e infine calcola il risultato (`set /a`). È un buon esempio di come, mettendo insieme pochi comandi semplici, si possa già costruire qualcosa di utile.
