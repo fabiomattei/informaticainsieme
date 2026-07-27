@@ -28,6 +28,8 @@ dir /o:n    ordina alfabeticamente per nome
 cd Documenti
 {% endhighlight %}
 
+![Il comando cd usato nel prompt dei comandi per entrare nella cartella Desktop](/images/cmd/cambiadirectory.png)
+
 Sposta la cartella di lavoro dentro `Documenti`. Alcuni casi particolari:
 
 {% highlight shell %}

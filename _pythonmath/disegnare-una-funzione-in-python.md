@@ -34,7 +34,7 @@ La riga 7 ci permette di definire per ciascun numero appartenete alla lista x la
 
 Le ultime tre righe ci permettono di generare il grafico vero e proprio con questo risultato.
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-02-alle-14.49.30-1024x525.png)<figcaption>Il grafico rappresentate la parabola</figcaption></figure>#### La libreria ci permette di definire alcuni parametri
+<figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-14.49.30.png)<figcaption>Il grafico rappresentate la parabola</figcaption></figure>#### La libreria ci permette di definire alcuni parametri
 
 - **plt.xlim()** imposta i limiti per l’asse x
 - **plt.ylim()** imposta i limiti per l’asse y
@@ -111,7 +111,7 @@ plt.legend()
 plt.show()
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-02-alle-15.12.41-1024x634.png)<figcaption>un grafico più complesso</figcaption></figure>#### Un esempio con più di una funzione in un grafico
+</div><figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.12.41.png)<figcaption>un grafico più complesso</figcaption></figure>#### Un esempio con più di una funzione in un grafico
 
 {% highlight python %}
 # Import libraries
@@ -148,4 +148,4 @@ plt.ylabel('asse y')
 plt.show()
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2022/02/Schermata-2022-02-02-alle-15.16.44-1024x612.png)</figure>
+</div><figure class="wp-block-image size-large">![](/images/pythonmath/disegnare-una-funzione-in-python/Schermata-2022-02-02-alle-15.16.44.png)</figure>

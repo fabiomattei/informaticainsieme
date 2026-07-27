@@ -30,7 +30,7 @@ btn.grid(column=2, row=0)
 window.mainloop()
 {% endhighlight %}
 
-</div><figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/02/finestra.png)</figure>Questo programma genera una finestra avente le dimensioni di 350px per 200px con un titolo (La mia prima applicazione) e un colore di sfondo verde.
+</div><figure class="wp-block-image size-large">![](/images/python/interfacce-grafiche/finestra.png)</figure>Questo programma genera una finestra avente le dimensioni di 350px per 200px con un titolo (La mia prima applicazione) e un colore di sfondo verde.
 
 Sulla finestra sono posizionati tre **widget**: una **Label**, una **Entry box** e un **Button**.
 

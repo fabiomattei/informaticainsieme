@@ -7,7 +7,7 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=74'
 ---
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/01/10_ladders_and_more2-1024x697.png)</figure>L’applicazione per creare la mappa puoi scaricarla da: [www.mapeditor.com](https://www.mapeditor.org/).
+<figure class="wp-block-image size-large">![](/images/videogames/platform-con-mappa-tmx/10_ladders_and_more2-1024x697.png)</figure>L’applicazione per creare la mappa puoi scaricarla da: [www.mapeditor.com](https://www.mapeditor.org/).
 
 [Per un tutorial completo in inglese clicca qui](http://arcade.academy/examples/platform_tutorial/index.html).
 

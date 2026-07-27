@@ -7,7 +7,7 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=68'
 ---
 
-<figure class="wp-block-image size-large">![](https://www.esercizidiinformatica.it/wp-content/uploads/2020/01/sprite_enemies_in_platformer1-1024x808.png)</figure>{% highlight shell %}
+<figure class="wp-block-image size-large">![](/images/videogames/platform-con-nemici/sprite_enemies_in_platformer1-1024x808.png)</figure>{% highlight shell %}
 
 """
 Mostra come aggiungere nemici in un gioco platform

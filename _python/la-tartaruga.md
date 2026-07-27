@@ -17,7 +17,7 @@ sfondo = Screen()
 tartaruga.forward(100)
 {% endhighlight %}
 
-</div>La prima righa di codice permette a Python di **estendere le sue conoscenze** caricando la **libreria Turtle**. Le righe 3 e 4 attivano la libreria, la riga 5 disegna una linea orizzontale.
+La prima righa di codice permette a Python di **estendere le sue conoscenze** caricando la **libreria Turtle**. Le righe 3 e 4 attivano la libreria, la riga 5 disegna una linea orizzontale.
 
 ###### Aggiungiamo una curva
 
@@ -28,7 +28,7 @@ tartaruga.right(90)
 tartaruga.forward(100)
 {% endhighlight %}
 
-</div>Noterai che la tartaruga ha creato un angolo e aggiunto un secondo lato al quadrato. Questo perché il comando right fa girare la tartaruga a destra di 90 gradi.
+Noterai che la tartaruga ha creato un angolo e aggiunto un secondo lato al quadrato. Questo perché il comando right fa girare la tartaruga a destra di 90 gradi.
 
 ## Esercizi
 
@@ -56,7 +56,7 @@ tartaruga.setpos(60,30)    # cambia la posizione della tartaruga
 tartaruga.shape("turtle")  # calbia la forma della tartaruga
 {% endhighlight %}
 
-</div>Le possibile forme per la tartaruga sono:
+Le possibile forme per la tartaruga sono:
 
 - square
 - arrow
@@ -83,7 +83,7 @@ for j in range(10):
 turtle.done()                   # comunica alla libreria il fine programma
 {% endhighlight %}
 
-</div>La tartaruga all’inizio si trova al centro dello schermo (posizione 0, 0) inclinata verso est (destra). Attraverso i comandi forward(int x), backward(int x), left(int angle) e right(int angle), facciamo muovere la tartaruga. Nota come è stato utilizzato un ciclo per evitare di ripetere tediosi comandi. Il comando goToPoint(int x, int y) indica alla tartaruga di andare nel punto di coordinate x, y.  
+La tartaruga all’inizio si trova al centro dello schermo (posizione 0, 0) inclinata verso est (destra). Attraverso i comandi forward(int x), backward(int x), left(int angle) e right(int angle), facciamo muovere la tartaruga. Nota come è stato utilizzato un ciclo per evitare di ripetere tediosi comandi. Il comando goToPoint(int x, int y) indica alla tartaruga di andare nel punto di coordinate x, y.  
 Quando si muove la tartaruga lascia una traccia, questa funzione ci permette di creare dei disegni. Se vogliamo far interrompere la traccia diamo il comando penUP(), se vogliamo riattivare la traccia diamo il comando penDown().
 
 Esercizio 1: scrivi un programma per far disegnare alla tartaruga un triangolo equilatero
@@ -98,26 +98,26 @@ Esercizio 5: scrivi un programma per far disegnare alla tartaruga un triangolo c
 
 Esercizio 6: Disegna un casetta utilizzando turtle
 
-<figure class="wp-block-image">![](https://lh5.googleusercontent.com/de8sblVERxaTXSydejDQcOe77D95ukwYTnScucdfbO8ySZq2dvlhv5TyqlH-yR0tVQnKRGzDQgiAxsCBn_v5Rp5eqzZ7jtR0ZSxmmgXIyqlJzw1xqIR8cY85UWOO5AsYaIWLT2iQ)</figure>Esercizio 7:
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/de8sblVERxaTXSydejDQcOe77D95ukwYTnScucdfbO8ySZq2dvlhv5TyqlH-yR0tVQnKRGzDQgiAxsCBn_v5Rp5eqzZ7jtR0ZSxmmgXIyqlJzw1xqIR8cY85UWOO5AsYaIWLT2iQ" alt=""></figure>Esercizio 7:
 
 Colora il disegno fatto in precedenza
 
-<figure class="wp-block-image">![](https://lh6.googleusercontent.com/E9Zal8RV8wiIM4e0SFpzoR6AYSjgL7-Y4XYkRGD8yAk0TOvGfLsza2b6hPf3yi0lPwTIDX9obGBOfSIcBbza_PH4YLMbuRHuwBFMLxvBTTdK5-Gdhj2pZB74wrbKXKj5SH_1KX-F)</figure>Esercizio 8:
+<figure class="wp-block-image"><img src="https://lh6.googleusercontent.com/E9Zal8RV8wiIM4e0SFpzoR6AYSjgL7-Y4XYkRGD8yAk0TOvGfLsza2b6hPf3yi0lPwTIDX9obGBOfSIcBbza_PH4YLMbuRHuwBFMLxvBTTdK5-Gdhj2pZB74wrbKXKj5SH_1KX-F" alt=""></figure>Esercizio 8:
 
 Utilizzando turtle disegna un villaggio
 
-<figure class="wp-block-image">![](https://lh5.googleusercontent.com/Uzczu8uG6GzNMeewOnONcx69OK03Z_KvCy8XSxIOSPAA92oCydE9bZhIm10HROk5QyEq8JwIgWpC2LoigLGIVwOAi9lHHxjAFmGXL0GNNxIDEN9o3U0Pzovib3ayuXHTIcyedVAa)</figure>Esercizio 9:
+<figure class="wp-block-image"><img src="https://lh5.googleusercontent.com/Uzczu8uG6GzNMeewOnONcx69OK03Z_KvCy8XSxIOSPAA92oCydE9bZhIm10HROk5QyEq8JwIgWpC2LoigLGIVwOAi9lHHxjAFmGXL0GNNxIDEN9o3U0Pzovib3ayuXHTIcyedVAa" alt=""></figure>Esercizio 9:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/panda.png)</figure>Esercizio 10:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/panda.png" alt=""></figure>Esercizio 10:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/alveare.png)</figure>Esercizio 11:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/alveare.png" alt=""></figure>Esercizio 11:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/fiore.png)</figure>Esercizio 12:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/fiore.png" alt=""></figure>Esercizio 12:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/pupazzoneve.png)</figure>Esercizio 13:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/pupazzoneve.png" alt=""></figure>Esercizio 13:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/cerchi.png)</figure>Esercizio 14:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/cerchi.png" alt=""></figure>Esercizio 14:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/figuraregolare.png)</figure>Esercizio 15:
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/figuraregolare.png" alt=""></figure>Esercizio 15:
 
-<figure class="wp-block-image size-full">![](https://www.esercizidiinformatica.it/wp-content/uploads/2021/12/figuraregolarecolorata.png)</figure>
+<figure class="wp-block-image size-full"><img src="/images/python/la-tartaruga/figuraregolarecolorata.png" alt=""></figure>
