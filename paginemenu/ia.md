@@ -50,7 +50,37 @@ l'adozione dell'intelligenza artificiale, rendendolo un argomento di grande rile
 * [Responsible AI]({{ site.baseurl }}{% link _ia/responsible-ai.md %}.html)
 * [Sicurezza AI]({{ site.baseurl }}{% link _ia/sicurezza-ai.md %}.html)
 
+## Come Pensano le Macchine che Parlano
 
+Una guida curiosa ai Large Language Model, senza formule.
 
+* [Prefazione]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-prefazione.md %}.html)
+* [Lezione 01 — Da "indovina la parola" ai chatbot]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-01-da-indovina-la-parola-ai-chatbot.md %}.html)
+* [Lezione 02 — Come una macchina legge le parole]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-02-come-una-macchina-legge-le-parole.md %}.html)
+* [Lezione 03 — Il segreto dell'attenzione]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-03-il-segreto-dellattenzione.md %}.html)
+* [Lezione 04 — Come si allena un gigante]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-04-come-si-allena-un-gigante.md %}.html)
+* [Lezione 05 — Insegnargli le buone maniere]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-05-insegnargli-le-buone-maniere.md %}.html)
+* [Lezione 06 — Come nasce una risposta, parola per parola]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-06-come-nasce-una-risposta.md %}.html)
+* [Lezione 07 — Quanto ci possiamo fidare]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-07-quanto-ci-possiamo-fidare.md %}.html)
+* [Lezione 08 — Perché a volte sbaglia]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-08-perche-a-volte-sbaglia.md %}.html)
+* [Lezione 09 — Oltre la chat]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-09-oltre-la-chat.md %}.html)
+* [Lezione 10 — Cosa ci aspetta]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-10-cosa-ci-aspetta.md %}.html)
+* [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-appendice-a-soluzioni.md %}.html)
+* [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-appendice-b-glossario.md %}.html)
 
+## Come Pensano le Reti Neurali
+
+Una guida curiosa a come una macchina impara, senza formule.
+
+* [Prefazione]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-prefazione.md %}.html)
+* [Lezione 01 — Un interruttore che impara a decidere]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-01-un-interruttore-che-impara-a-decidere.md %}.html)
+* [Lezione 02 — Impilare le decisioni]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-02-impilare-le-decisioni.md %}.html)
+* [Lezione 03 — Uno stencil che scorre sull'immagine]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-03-uno-stencil-che-scorre-sullimmagine.md %}.html)
+* [Lezione 04 — Il filo della memoria]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-04-il-filo-della-memoria.md %}.html)
+* [Lezione 05 — Quanto costa sbagliare]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-05-quanto-costa-sbagliare.md %}.html)
+* [Lezione 06 — La colpa che risale la catena]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-06-la-colpa-che-risale-la-catena.md %}.html)
+* [Lezione 07 — Allenarsi bene (e non a memoria)]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-07-allenarsi-bene-e-non-a-memoria.md %}.html)
+* [Lezione 08 — Perché serviva un'idea nuova]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-08-perche-serviva-unidea-nuova.md %}.html)
+* [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-appendice-a-soluzioni.md %}.html)
+* [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-appendice-b-glossario.md %}.html)
 
