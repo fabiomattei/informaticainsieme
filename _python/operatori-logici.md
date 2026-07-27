@@ -98,3 +98,83 @@ Scrivere un programma Python che chieda all’utente una data e visualizzi la st
 #### Esercizio 12:  
 Un anno viene detto bisestile se divisibile per 4. Gli anni come 1996 xsono bisestili. Ma gli anni divisibili per 100 non lo sono, ad esempio il 1900 non lo è. Eccezione dell’eccezione gli anni divisibili per 400 lo sono, ad esempio l’anno 2000.  
 Scrivere un programma che legga un anno e scriva se questo è bisestile oppure no.
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete eseguire il codice: dovete calcolare a mano il valore (True o False) di ciascuna sotto-espressione e il risultato finale dell'espressione logica, oppure costruire la tabella di tracciamento richiesta.
+
+#### Esercizio 13:
+
+Calcolate il valore (True o False) delle seguenti espressioni, sapendo che `a = 5`, `b = 10` e `c = 5`:
+
+- `a == c`
+- `a < b and b < c`
+- `a < b or b < c`
+- `not (a == c)`
+- `a < b and not(a == c)`
+
+#### Esercizio 14:
+
+Costruite la tabella di tracciamento del seguente programma per `temperatura = 50` (mostrate il valore di ciascuna condizione valutata e quale ramo viene eseguito):
+
+{% highlight python %}
+temperatura = 50
+if temperatura <= 0:
+   print("Stato solido")
+if temperatura > 0 and temperatura <= 100:
+   print("Stato liquido")
+if temperatura > 100:
+   print("Stato Gassoso")
+{% endhighlight %}
+
+#### Esercizio 15:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `x`, `y` ed il valore booleano calcolato ad ogni riga), sapendo che `x = 7` e `y = -3`:
+
+{% highlight python %}
+x = 7
+y = -3
+positivi = x > 0 and y > 0
+almeno_uno_positivo = x > 0 or y > 0
+opposti = (x > 0 and y < 0) or (x < 0 and y > 0)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 16:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+temperatura = int( input("Scrivi la temperatura dell'acqua: ") )
+if temperatura <= 0:
+   print("Stato solido")
+if temperatura >0 and temperatura <=100
+   print("Stato liquido")
+{% endhighlight %}
+
+#### Esercizio 17:
+
+Questo programma non contiene errori di sintassi, ma contiene un **errore logico**: un numero come 0 (nullo) viene sempre classificato come "positivo". Individuate l'errore.
+
+{% highlight python %}
+numero = 0
+if numero >= 0:
+    print("positivo")
+else:
+    print("negativo")
+{% endhighlight %}
+
+#### Esercizio 18:
+
+Questo programma dovrebbe stampare "in intervallo" solo se il numero è compreso tra 10 e 20 (estremi inclusi), ma contiene un **errore logico** che fa sì che stampi sempre "in intervallo". Individuate l'errore e correggetelo.
+
+{% highlight python %}
+numero = 50
+if numero >= 10 or numero <= 20:
+    print("in intervallo")
+else:
+    print("fuori intervallo")
+{% endhighlight %}

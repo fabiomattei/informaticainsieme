@@ -816,5 +816,88 @@ c2 = Componente("Sedile", 12)
 print(m1.calcolaPeso())
 {% endhighlight %}
 
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 6:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+class Cerchio:
+    def __init__(self, raggio)
+        self.raggio = raggio
+
+    def calcola_area(self):
+        return self.raggio ** 2 * 3.14
+{% endhighlight %}
+
+#### Esercizio 7:
+
+Questo programma genera un errore a runtime (`TypeError`): individuate quale metodo lo causa e spiegate perché, ricordando il ruolo del parametro `self`.
+
+{% highlight python %}
+class Cerchio:
+    def __init__(self, raggio):
+        self.raggio = raggio
+
+    def calcola_area():
+        return self.raggio ** 2 * 3.14
+
+c = Cerchio(5)
+print(c.calcola_area())
+{% endhighlight %}
+
+#### Esercizio 8:
+
+Questo programma genera un errore a runtime (`AttributeError`): individuate quale istruzione lo causa e spiegate perché.
+
+{% highlight python %}
+class Alunno:
+    def __init__(self, nome, cognome):
+        self.nome = nome
+        self.cognome = cognome
+
+alunno = Alunno("Mario", "Rossi")
+print(alunno.saluta())
+{% endhighlight %}
+
+#### Esercizio 9:
+
+Questo programma non genera errori ma contiene un **errore logico**: tutte le istanze di `Cerchio` finiscono per condividere lo stesso raggio invece di avere ciascuna il proprio. Individuate l'errore.
+
+{% highlight python %}
+class Cerchio:
+    raggio = 0
+
+    def __init__(self, raggio):
+        Cerchio.raggio = raggio
+
+    def calcola_area(self):
+        return self.raggio ** 2 * 3.14
+
+c1 = Cerchio(5)
+c2 = Cerchio(10)
+print(c1.calcola_area())
+{% endhighlight %}
+
+#### Esercizio 10:
+
+Questo programma non genera errori ma contiene un **errore logico**: il metodo `deposita` non modifica realmente il saldo del conto. Individuate l'errore.
+
+{% highlight python %}
+class Conto:
+    def __init__(self):
+        self.saldo = 0
+
+    def deposita(self, ammontare):
+        saldo = self.saldo + ammontare
+
+mioconto = Conto()
+mioconto.deposita(1000)
+print(mioconto.saldo)
+{% endhighlight %}
+
 
 

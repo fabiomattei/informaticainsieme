@@ -227,3 +227,80 @@ Scrivi un programma Python che legga 10 numeri (utilizzare un ciclo), li memoriz
 
 #### Esercizio 16:
 Scrivi un programma Python che legga 10 numeri e memorizzi in due liste separate che si chiamano: numeri\_grandi e numeri\_piccoli. Nella prima lista vanno i numeri da più piccoli di 100, nella seconda quelli più grandi. I numeri negativi non vanno memorizzati.
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, mostrando come cambia il contenuto della lista (o delle variabili) ad ogni iterazione del ciclo.
+
+#### Esercizio 17:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate il contenuto di `numeri` e il valore di `x` ad ogni iterazione):
+
+{% highlight python %}
+numeri = [3, 8, 1]
+for x in range(1, 4):
+    numeri.append(x * 2)
+print(numeri)
+{% endhighlight %}
+
+#### Esercizio 18:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `lettere`, `indice` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+lettere = ['a', 'b', 'c', 'd']
+indice = 0
+acc = ""
+while indice < len(lettere):
+    acc = acc + lettere[indice]
+    indice = indice + 1
+print(acc)
+{% endhighlight %}
+
+#### Esercizio 19:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `numeri`, `x` e `massimo` ad ogni iterazione):
+
+{% highlight python %}
+numeri = [4, 9, 2, 15, 6]
+massimo = numeri[0]
+for x in numeri:
+    if x > massimo:
+        massimo = x
+print(massimo)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 20:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+numeri = [1, 2, 3, 4, 5]
+for x in numeri
+    print(x)
+{% endhighlight %}
+
+#### Esercizio 21:
+
+Questo programma genera un errore a runtime (`IndexError`): individuate quale istruzione lo causa e spiegate perché.
+
+{% highlight python %}
+numeri = [1, 2, 3, 4, 5]
+print(numeri[5])
+{% endhighlight %}
+
+#### Esercizio 22:
+
+Questo programma non genera errori ma contiene un **errore logico**: dovrebbe stampare la somma di tutti gli elementi della lista, ma stampa un valore sbagliato. Individuate l'errore.
+
+{% highlight python %}
+numeri = [1, 2, 3, 4, 5]
+somma = 0
+for x in numeri:
+    somma = x
+print(somma)
+{% endhighlight %}

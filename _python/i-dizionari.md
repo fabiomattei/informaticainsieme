@@ -204,3 +204,65 @@ voti = {
 }
 
 Scrivere il nome della disciplina con il voto più basso.
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, mostrando come cambia il contenuto del dizionario (o delle variabili) ad ogni iterazione o istruzione.
+
+#### Esercizio 9:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate il contenuto di `d` dopo ogni riga):
+
+{% highlight python %}
+d = {'a': 1, 'b': 2}
+d['c'] = 3
+d['a'] = 10
+del d['b']
+{% endhighlight %}
+
+#### Esercizio 10:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `chiave` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+voti = {'Fisica': 8, 'Matematica': 6, 'Storia': 7}
+acc = 0
+for chiave in voti:
+    acc = acc + voti[chiave]
+print(acc)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 11:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+d = {'a': 1, 'b': 2, 'c': 3}
+if 'x' not in d
+    print('Chiave x non definita')
+{% endhighlight %}
+
+#### Esercizio 12:
+
+Questo programma genera un errore a runtime (`KeyError`): individuate quale istruzione lo causa e spiegate perché.
+
+{% highlight python %}
+d = {'a': 1, 'b': 2, 'c': 3}
+print(d['x'])
+{% endhighlight %}
+
+#### Esercizio 13:
+
+Questo programma non genera errori ma contiene un **errore logico**: dovrebbe contare quante chiavi ha il dizionario, ma il valore stampato è sempre sbagliato. Individuate l'errore.
+
+{% highlight python %}
+d = {'a': 1, 'b': 2, 'c': 3}
+conta = 0
+for chiave in d:
+    conta = 1
+print(conta)
+{% endhighlight %}

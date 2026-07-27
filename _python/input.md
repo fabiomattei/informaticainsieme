@@ -145,4 +145,66 @@ Scrivere un programma che letti tre numeri calcoli se i tre numeri costituiscono
 #### Esercizio 25: 
 Scrivere un programma che letti tre numeri rappresentanti la lunghezza dei lati di un triangolo scriva se il triangolo è iscoscele, scaleno o equilatero.
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete eseguire il codice: dovete costruire la **tabella di tracciamento** del programma, indicando il valore di ogni variabile dopo ogni riga di codice, assumendo che l'utente digiti i valori indicati.
+
+#### Esercizio 26:
+
+Costruite la tabella di tracciamento del seguente programma, sapendo che l'utente digita "7" quando gli viene chiesto il lato (mostrate i valori di `valorestringa`, `lato` e `area` dopo ogni riga):
+
+{% highlight python %}
+valorestringa = input("scrivi la lughezza del lato: ")
+lato = int(valorestringa)
+area = lato * lato
+print("L'area del quadrato di lato ", lato, " vale ", area)
+{% endhighlight %}
+
+#### Esercizio 27:
+
+Costruite la tabella di tracciamento del seguente programma, sapendo che l'utente digita nell'ordine "10" e "3" (mostrate i valori di `a`, `b` e `risultato` dopo ogni riga):
+
+{% highlight python %}
+a = int(input("Primo numero: "))
+b = int(input("Secondo numero: "))
+risultato = a
+a = b
+b = risultato
+risultato = a + b
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 28:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+nome = input("scrivi il tuo nome: "
+print("Ciao ", nome)
+{% endhighlight %}
+
+#### Esercizio 29:
+
+Questo programma genera un errore a runtime (`TypeError`) quando si prova a calcolare l'area: individuate quale istruzione manca e spiegate perché.
+
+{% highlight python %}
+valorestringa = input("scrivi la lughezza del lato: ")
+area = valorestringa * valorestringa
+print("L'area del quadrato vale ", area)
+{% endhighlight %}
+
+#### Esercizio 30:
+
+Questo programma non genera errori ma contiene un **errore logico**: se l'utente digita 4, il programma dovrebbe stampare 16 ma stampa 8. Individuate l'errore.
+
+{% highlight python %}
+valorestringa = input("scrivi la lughezza del lato: ")
+lato = int(valorestringa)
+area = lato + lato
+print("L'area del quadrato di lato ", lato, " vale ", area)
+{% endhighlight %}
+
 

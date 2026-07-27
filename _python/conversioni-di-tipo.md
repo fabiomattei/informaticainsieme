@@ -212,3 +212,78 @@ dove X è l'età aumentata di 10.
 #### Esercizio 12
 Scrivi un programma che legga tre voti (numeri decimali) e stampi la media
 arrotondata a due cifre decimali e il valore intero della media (troncato).
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, indicando per ogni variabile sia il **valore** sia il **tipo** dopo ogni riga di codice.
+
+#### Esercizio 13:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate valore e tipo di `x` dopo ogni riga):
+
+{% highlight python %}
+x = "10"
+x = int(x)
+x = x + 5
+x = str(x)
+x = x + " anni"
+{% endhighlight %}
+
+#### Esercizio 14:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate valore e tipo di `n` dopo ogni riga):
+
+{% highlight python %}
+n = 7.9
+n = int(n)
+n = float(n)
+n = n / 2
+{% endhighlight %}
+
+#### Esercizio 15:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `c` e `codice` ad ogni iterazione):
+
+{% highlight python %}
+c = 'a'
+codice = ord(c)
+cont = 0
+while cont < 3:
+    codice = codice + 1
+    c = chr(codice)
+    cont = cont + 1
+print(c)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 16:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+testo = input("Inserisci un numero: ")
+numero = int(testo
+print(numero)
+{% endhighlight %}
+
+#### Esercizio 17:
+
+Questo programma genera un errore a runtime (`ValueError`): individuate quale istruzione lo causa e spiegate perché.
+
+{% highlight python %}
+testo = "3.14"
+numero = int(testo)
+print(numero)
+{% endhighlight %}
+
+#### Esercizio 18:
+
+Questo programma non genera errori ma contiene un **errore logico**: il risultato stampato non è quello atteso. Individuate l'errore e correggetelo.
+
+{% highlight python %}
+eta = 25
+print("Ho " + eta + " anni")
+{% endhighlight %}

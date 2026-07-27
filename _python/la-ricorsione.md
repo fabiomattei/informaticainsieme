@@ -235,4 +235,106 @@ per m>0 allora f(n,m) = 1+f(n,m-1)
 per m=0 allora f(n,m) = n
 Una volta implementata, provarla e dire cosa calcola la funzione.
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete eseguire il codice: dovete costruire la **tabella di tracciamento** del programma, elencando in ordine tutte le chiamate ricorsive effettuate (con il rispettivo parametro) e il valore che ciascuna di esse restituisce, dalla più interna alla più esterna.
+
+#### Esercizio 12:
+
+Costruite la tabella di tracciamento delle chiamate ricorsive generate da `fattoriale(4)`, indicando per ciascuna chiamata il valore di `n` e il valore restituito:
+
+{% highlight python %}
+def fattoriale(n): 
+    if n == 0:
+        return 1
+    else:
+        return n * fattoriale(n-1)
+
+print(fattoriale(4))
+{% endhighlight %}
+
+#### Esercizio 13:
+
+Costruite la tabella di tracciamento delle chiamate ricorsive generate da `sommainteri(4)`, indicando per ciascuna chiamata il valore di `n` e il valore restituito:
+
+{% highlight python %}
+def sommainteri(n):
+    if n > 0:
+        return n + sommainteri(n-1) 
+    else:
+        return 0
+
+print(sommainteri(4))
+{% endhighlight %}
+
+#### Esercizio 14:
+
+Costruite la tabella di tracciamento delle chiamate ricorsive generate da `fib(4)` (attenzione: essendo una ricorsione multipla, da ogni chiamata ne partono altre due), indicando per ciascuna chiamata il valore di `n` e il valore restituito:
+
+{% highlight python %}
+def fib(n):
+    if n==0:
+        return 0
+    elif n==1: 
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+
+print(fib(4))
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 15:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+def fattoriale(n):
+    if n == 0
+        return 1
+    else:
+        return n * fattoriale(n-1)
+{% endhighlight %}
+
+#### Esercizio 16:
+
+Questo programma non genera errori di sintassi, ma manca del **passo base**: eseguendolo va in errore per raggiungimento del limite massimo di ricorsione (`RecursionError`). Individuate cosa manca e correggetelo.
+
+{% highlight python %}
+def sommainteri(n):
+    return n + sommainteri(n-1)
+
+print(sommainteri(4))
+{% endhighlight %}
+
+#### Esercizio 17:
+
+Questo programma non genera errori ma contiene un **errore logico**: la chiamata ricorsiva non semplifica il problema, quindi il ciclo di chiamate non termina mai correttamente (va in `RecursionError`). Individuate l'errore.
+
+{% highlight python %}
+def fattoriale(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fattoriale(n)
+{% endhighlight %}
+
+#### Esercizio 18:
+
+Questo programma non genera errori ma contiene un **errore logico**: `s_lista` dovrebbe restituire la somma di tutti i numeri della lista, ma restituisce sempre 0. Individuate l'errore.
+
+{% highlight python %}
+def s_lista(lista): 
+    if len(lista) == 0:
+        return 0
+    else:
+        return s_lista(lista[1:])
+
+numeri = [6, 1, 7, 3]
+print(s_lista(numeri))
+{% endhighlight %}
+
 

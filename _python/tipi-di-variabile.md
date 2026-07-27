@@ -115,3 +115,71 @@ Supponete di correre 10 km in 42 min e 42 sec. Stampate la vostra velocità medi
 - Calcolate quanti secondi ci sono in 42 minuti e 42 secondi.
 - A quante miglia corrispondono 10 km? (Suggerimento: ci sono 1,61 km in un miglio)
 - La vostra velocità media è calcolata come distanza/tempo
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, cioè una tabella che mostra come cambia il valore (ed eventualmente il tipo) di ogni variabile ad ogni istruzione eseguita.
+
+#### Esercizio 9:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate il valore e il tipo di `M` dopo ogni riga):
+
+{% highlight python %}
+M = 3
+M = M + 1.5
+M = M * 2
+{% endhighlight %}
+
+#### Esercizio 10:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `nome`, `cognome` e `nome_cognome` dopo ogni riga):
+
+{% highlight python %}
+nome = "Giacomo"
+cognome = "Leopardi"
+nome_cognome = nome + cognome
+nome = "Alessandro"
+nome_cognome = nome + cognome
+{% endhighlight %}
+
+#### Esercizio 11:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `a`, `area` e `perimetro` dopo ogni riga):
+
+{% highlight python %}
+a = 2
+b = 3
+area = a * b
+perimetro = a * 2 + b * 2
+a = 5
+area = a * b
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 12:
+
+{% highlight python %}
+a = 2
+b = 3
+area = a*b
+print(area
+{% endhighlight %}
+
+#### Esercizio 13:
+
+{% highlight python %}
+nome = "Giacomo
+cognome = "Leopardi"
+print(nome + cognome)
+{% endhighlight %}
+
+#### Esercizio 14:
+
+{% highlight python %}
+nome = "Giacomo"
+lunghezza = len nome
+print(lunghezza)
+{% endhighlight %}

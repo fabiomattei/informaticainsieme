@@ -309,3 +309,75 @@ while(1):
         print ("    ", score, " / ", attempts)
         print ("\n")
 {% endhighlight %}
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, cioè una tabella che mostra riga per riga come cambia il valore di ogni variabile ad ogni iterazione del ciclo.
+
+#### Esercizio 19:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `parola`, `indice` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+parola = "python"
+indice = 0
+acc = ""
+while indice < len(parola):
+    acc = parola[indice] + acc
+    indice = indice + 1
+print(acc)
+{% endhighlight %}
+
+Cosa calcola questo programma?
+
+#### Esercizio 20:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `frase`, `lettera` e `conta` ad ogni iterazione):
+
+{% highlight python %}
+frase = "casa mia"
+conta = 0
+for lettera in frase:
+    if lettera == "a":
+        conta = conta + 1
+print(conta)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 21:
+
+{% highlight python %}
+saluto = "ciao"
+print(saluto[0]
+{% endhighlight %}
+
+#### Esercizio 22:
+
+{% highlight python %}
+saluto = 'ciao"
+print(saluto)
+{% endhighlight %}
+
+#### Esercizio 23:
+
+{% highlight python %}
+saluto = "ciao"
+indice = 0
+while indice < len(saluto)
+    print(saluto[indice])
+    indice = indice + 1
+{% endhighlight %}
+
+#### Esercizio 24:
+
+Questo programma non contiene errori di sintassi (viene eseguito senza generare errori), ma contiene un **errore logico**: individuatelo e spiegate perché il ciclo non termina mai.
+
+{% highlight python %}
+saluto = "ciao"
+indice = 0
+while indice < len(saluto):
+    print(saluto[indice])
+{% endhighlight %}

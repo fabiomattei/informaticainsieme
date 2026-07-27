@@ -56,3 +56,68 @@ Da questo momento sono uno sviluppatore software
 E’ tradizione che il primo programma quando si comincia a studiare un nuovo linguaggio di programmazione sia il “Ciao Mondo”. Il programma avrà lo scopo di far apparire la scritta *Ciao Mondo* sullo schermo. Dal punto di vista logico è un compito semplice tuttavia il fatto che questo venga eseguito correttamente ci dà indicazione del fatto che l’ambiente di programmazione funziona in modo corretto e che il programmatore è riuscito ad operare con l’ambiente in maniera adeguata.
 
 Da questo momento siete sviluppatori software!
+
+## Esercizi
+
+#### Esercizio 1:
+Scrivi ed esegui un programma che stampi sullo schermo il tuo nome, la tua età e la scuola che frequenti, usando tre istruzioni print separate.
+
+#### Esercizio 2:
+Scrivi ed esegui un programma che stampi un piccolo disegno fatto di caratteri, ad esempio un triangolo:
+{% highlight python %}
+print("*")
+print("**")
+print("***")
+{% endhighlight %}
+
+#### Esercizio 3:
+Scrivi ed esegui un programma che stampi la tabellina del 2, da 2x1 a 2x10, usando 10 istruzioni print (una per riga).
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete scrivere esattamente cosa apparirà sulla console quando il programma verrà eseguito, riga per riga.
+
+#### Esercizio 4:
+
+Scrivi cosa viene stampato sulla console dal seguente programma:
+
+{% highlight python %}
+print("Ciao mondo!")
+print("Questo è il mio primo programma")
+print("Da questo momento sono uno sviluppatore software")
+{% endhighlight %}
+
+#### Esercizio 5:
+
+Scrivi, riga per riga, cosa viene stampato sulla console dal seguente programma:
+
+{% highlight python %}
+print("Uno")
+print("Due")
+print("Tre")
+print("Quattro")
+{% endhighlight %}
+
+Cosa cambia se scambi tra loro la seconda e la terza riga di codice?
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 6:
+
+{% highlight python %}
+print("Ciao mondo!)
+{% endhighlight %}
+
+#### Esercizio 7:
+
+{% highlight python %}
+print("Ciao mondo!"
+{% endhighlight %}
+
+#### Esercizio 8:
+
+{% highlight python %}
+Print("Ciao mondo!")
+{% endhighlight %}

@@ -85,3 +85,64 @@ Scrivi un programma Python che definisca una lista di tuple di due elementi
 
 #### Esercizio 11:
 Scrivi un programma Python che scriva gli elementi del punto 10 prima in ordine alfabetico e poi in ordine numerico.
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, mostrando come cambia il valore di ogni variabile ad ogni iterazione del ciclo.
+
+#### Esercizio 12:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `n` e `acc` ad ogni iterazione):
+
+{% highlight python %}
+numeri = (2, 4, 6, 8)
+acc = 1
+for n in numeri:
+    acc = acc * n
+print(acc)
+{% endhighlight %}
+
+#### Esercizio 13:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `tuplex` dopo la sua creazione e i valori di `n1`, `n2`, `n3` dopo l'assegnamento):
+
+{% highlight python %}
+tuplex = 4, 8, 3
+n1, n2, n3 = tuplex
+n1 = n1 + n2
+n2 = n3
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 14:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+numeri = (1, 2, 3, 4, 5)
+for x in numeri
+    print(x)
+{% endhighlight %}
+
+#### Esercizio 15:
+
+Questo programma genera un errore a runtime (`TypeError`): individuate quale istruzione lo causa e spiegate perché, ricordando la differenza fondamentale tra liste e tuple.
+
+{% highlight python %}
+numeri = (1, 2, 3, 4, 5)
+numeri[0] = 10
+print(numeri)
+{% endhighlight %}
+
+#### Esercizio 16:
+
+Questo programma non genera errori ma contiene un **errore logico**: `n1`, `n2` e `n3` non ricevono i valori attesi. Individuate l'errore.
+
+{% highlight python %}
+tuplex = 4, 8, 3
+n1, n2, n3 = tuplex, tuplex, tuplex
+print(n1, n2, n3)
+{% endhighlight %}

@@ -42,3 +42,68 @@ Digita e manda in esecuzione le seguenti istruzioni:
 {% endhighlight %}
 
 Leggi cosa viene scritto nella console e mettilo in relazione con i comandi che hai digitato.
+
+## Esercizi
+
+#### Esercizio 1:
+Scrivi un’istruzione print che stampi le parole "Lunedì", "Martedì" e "Mercoledì" separate da una virgola e uno spazio.
+
+#### Esercizio 2:
+Scrivi un’istruzione print che stampi i numeri 1, 2 e 3 separati dal carattere `-` e che termini con il simbolo `!` invece che con l’a capo.
+
+#### Esercizio 3:
+Scrivi due istruzioni print che, eseguite una di seguito all’altra, scrivano sulla stessa riga della console le parole "Ciao" e "mondo" (suggerimento: usa il parametro `end`).
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete eseguire il codice: scrivete esattamente, carattere per carattere, cosa apparirà sulla console.
+
+#### Esercizio 4:
+
+Cosa scrive sulla console il seguente programma?
+
+{% highlight python %}
+print("Mela", "Pera", "Banana", sep=", ")
+print("Fine")
+{% endhighlight %}
+
+#### Esercizio 5:
+
+Cosa scrive sulla console il seguente programma? Fate attenzione a dove va a capo la scrittura.
+
+{% highlight python %}
+print("Uno", end=" - ")
+print("Due", end=" - ")
+print("Tre")
+{% endhighlight %}
+
+#### Esercizio 6:
+
+Cosa scrive sulla console il seguente programma?
+
+{% highlight python %}
+print("A", "B", "C", sep="")
+print("A", "B", "C")
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 7:
+
+{% highlight python %}
+print("Ciao", "mondo"
+{% endhighlight %}
+
+#### Esercizio 8:
+
+{% highlight python %}
+print("Mela", "Pera" sep=", ")
+{% endhighlight %}
+
+#### Esercizio 9:
+
+{% highlight python %}
+print "Ciao mondo"
+{% endhighlight %}

@@ -150,5 +150,102 @@ Tenendo conto degli scaglioni fiscali definiti correntemente:
 
 Scrivere un programma che letto il reddito di 5 cittadini italiani calcoli l'ammontare delle tasse che ciascun cittadino deve pagare ed il totale pagato da tutti i cittadini.
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete eseguire il codice: dovete dire quale blocco di istruzioni viene eseguito e cosa viene stampato sulla console, motivando la risposta in base al valore delle variabili.
+
+#### Esercizio 19:
+
+Dato il seguente programma, indicate cosa viene stampato quando `a = 15` e quando `a = 25`:
+
+{% highlight python %}
+a = 15
+if a < 10:
+    print("piccolo")
+elif a < 20:
+    print("medio")
+else:
+    print("grande")
+{% endhighlight %}
+
+#### Esercizio 20:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `a`, `b` e `messaggio` dopo ogni riga), sapendo che `a = 7` e `b = 12`:
+
+{% highlight python %}
+a = 7
+b = 12
+if a > b:
+    messaggio = "a maggiore"
+elif a == b:
+    messaggio = "uguali"
+else:
+    messaggio = "b maggiore"
+print(messaggio)
+{% endhighlight %}
+
+#### Esercizio 21:
+
+Costruite la tabella di tracciamento del seguente programma per `n = 8` (mostrate il valore di `n` e quale ramo dell'if viene eseguito):
+
+{% highlight python %}
+n = 8
+if n % 2 == 0:
+    n = n // 2
+    print("pari, dimezzato:", n)
+else:
+    n = n * 3 + 1
+    print("dispari:", n)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio 22:
+
+{% highlight python %}
+a = 33
+b = 200
+if b > a
+   print("b e' maggiore di a")
+{% endhighlight %}
+
+#### Esercizio 23:
+
+{% highlight python %}
+a = 33
+b = 33
+if b > a:
+    print("b e' piu' grande di a")
+elseif a == b:
+    print("a e b sono uguali")
+{% endhighlight %}
+
+#### Esercizio 24:
+
+{% highlight python %}
+a = 33
+b = 33
+if b > a:
+    print("b e' piu' grande di a")
+elif a == b:
+    print("a e b sono uguali")
+else
+    print("a e' piu' grande di b")
+{% endhighlight %}
+
+#### Esercizio 25:
+
+Questo programma non contiene errori di sintassi (viene eseguito senza generare errori), ma contiene un **errore logico**: individuatelo e spiegate perché il messaggio stampato è sbagliato quando `voto` vale, ad esempio, 6.
+
+{% highlight python %}
+voto = 6
+if voto > 6:
+    print("sufficiente")
+else:
+    print("insufficiente")
+{% endhighlight %}
+
 
 

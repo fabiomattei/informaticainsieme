@@ -569,5 +569,122 @@ print('Grazie! Alla prossima volta')
 
 Crea una libreria di funzioni turtle che disegnino figure geometriche. Le firme delle funzioni da scrivere sono: def quadrato(lato): def rettangono(base, altezza): def cerchio(raggio) def esagono(lato) Crea in fine una funzione main() che richiami le quattro funzioni appena descritte con dei valori dati in input dall’utente.
 
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, indicando per ciascuna riga eseguita l'ambito (globale o il nome della funzione) in cui ci si trova e il valore di ogni variabile.
+
+#### Esercizio t1:
+
+Costruite la tabella di tracciamento del seguente programma, indicando ad ogni istruzione l'ambito in cui viene eseguita e il valore delle variabili coinvolte:
+
+{% highlight python %}
+def raddoppia(numero):
+    numero = numero * 2
+    return numero
+
+x = 5
+y = raddoppia(x)
+x = raddoppia(y)
+{% endhighlight %}
+
+Che valore hanno `x` e `y` alla fine dell'esecuzione?
+
+#### Esercizio t2:
+
+Costruite la tabella di tracciamento del seguente programma, facendo attenzione alla differenza tra la variabile globale `contatore` e la variabile locale definita nella funzione:
+
+{% highlight python %}
+contatore = 0
+
+def incrementa(contatore):
+    contatore = contatore + 1
+    return contatore
+
+contatore = incrementa(contatore)
+contatore = incrementa(contatore)
+print(contatore)
+{% endhighlight %}
+
+#### Esercizio t3:
+
+Costruite la tabella di tracciamento del seguente programma ricordando che ogni chiamata a funzione crea un nuovo ambito locale (mostrate i valori di `n`, `acc` e `risultato` ad ogni chiamata):
+
+{% highlight python %}
+def somma_fino_a(n):
+    acc = 0
+    x = 1
+    while x <= n:
+        acc = acc + x
+        x = x + 1
+    return acc
+
+risultato = somma_fino_a(4)
+print(risultato)
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un errore. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo.
+
+#### Esercizio e1:
+
+Questo programma genera un errore di sintassi.
+
+{% highlight python %}
+def saluta(nome)
+    print("Ciao " + nome)
+
+saluta("Marco")
+{% endhighlight %}
+
+#### Esercizio e2:
+
+Questo programma genera un errore di sintassi legato all'indentazione.
+
+{% highlight python %}
+def raddoppia(numero):
+return numero * 2
+
+print(raddoppia(5))
+{% endhighlight %}
+
+#### Esercizio e3:
+
+Questo programma genera un errore a runtime (`NameError`): individuate quale istruzione lo causa e spiegate perché, ricordando le regole sull'ambito locale e globale.
+
+{% highlight python %}
+def pollaio():
+    uova = 32765
+
+pollaio()
+print(uova)
+{% endhighlight %}
+
+#### Esercizio e4:
+
+Questo programma non genera errori ma contiene un **errore logico**: la funzione dovrebbe restituire il doppio del numero, ma chi la chiama riceve sempre `None`. Individuate l'errore.
+
+{% highlight python %}
+def raddoppia(numero):
+    numero * 2
+
+risultato = raddoppia(5)
+print(risultato)
+{% endhighlight %}
+
+#### Esercizio e5:
+
+Questo programma non genera errori ma contiene un **errore logico**: la funzione dovrebbe restituire il maggiore tra i due numeri passati, ma per alcuni valori restituisce il risultato sbagliato. Individuate l'errore.
+
+{% highlight python %}
+def calcolamaggiore(num1, num2):
+    if num1 > num2:
+        return num1
+    else:
+        return num1
+
+print(calcolamaggiore(3, 8))
+{% endhighlight %}
+
 
 

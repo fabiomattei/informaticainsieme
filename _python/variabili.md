@@ -62,3 +62,85 @@ Osserviamo che:
 - Alle variabili sono stati dati nomi significativi che seguono le regole elencate in precedenza
 - Nelle variabili si memorizzano valori ma non le unità di misura
 - Il simbolo \* in informatica è utilizzato per indicare la moltiplicazione
+
+## Esercizi
+
+#### Esercizio 1:
+Crea tre variabili nome, cognome ed età ed assegna loro dei valori a piacere. Scrivi poi sullo schermo il contenuto delle tre variabili.
+
+#### Esercizio 2:
+Marco compra 3 quaderni a 1,50€ l’uno. Crea le variabili numero\_quaderni e costo\_quaderno, calcola il costo\_totale e scrivilo sullo schermo.
+
+#### Esercizio 3:
+Assegna alla variabile x il valore 10 e alla variabile y il valore 3. Crea una variabile somma che contenga la somma di x e y ed una variabile prodotto che ne contenga il prodotto. Scrivi entrambe sullo schermo.
+
+#### Esercizio 4:
+Scrivi un programma che scambi il contenuto di due variabili a e b (a deve assumere il valore che prima aveva b e viceversa) usando una terza variabile di appoggio.
+
+### Esercizi di tracciamento
+
+Per i seguenti esercizi non dovete scrivere codice: dovete costruire la **tabella di tracciamento** del programma, cioè una tabella che mostra come cambia il valore di ogni variabile ad ogni istruzione eseguita.
+
+#### Esercizio 5:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `x` e `y` dopo ogni riga):
+
+{% highlight python %}
+x = 5
+y = 10
+x = y
+y = 3
+{% endhighlight %}
+
+#### Esercizio 6:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `a`, `b` e `c` dopo ogni riga):
+
+{% highlight python %}
+a = 2
+b = 3
+c = a
+a = b
+b = c
+{% endhighlight %}
+
+Che effetto ha, nel complesso, questo programma sulle variabili a e b?
+
+#### Esercizio 7:
+
+Costruite la tabella di tracciamento del seguente programma (mostrate i valori di `numero_panini`, `costo_panino` e `costo_totale` dopo ogni riga):
+
+{% highlight python %}
+numero_panini = 6
+costo_panino = 2
+costo_totale = numero_panini * costo_panino
+numero_panini = numero_panini + 1
+costo_totale = numero_panini * costo_panino
+{% endhighlight %}
+
+### Esercizi di ricerca degli errori (debugging)
+
+Nei seguenti programmi è stato inserito un **errore di sintassi**. Provate prima a individuarlo leggendo il codice (senza eseguirlo), poi verificate eseguendolo in Python ed infine correggetelo. Fate riferimento alle regole sui nomi di variabile elencate in questa pagina.
+
+#### Esercizio 8:
+
+{% highlight python %}
+1nome = "Mario"
+print(1nome)
+{% endhighlight %}
+
+#### Esercizio 9:
+
+{% highlight python %}
+costo totale = 10
+print(costo totale)
+{% endhighlight %}
+
+#### Esercizio 10:
+
+{% highlight python %}
+x = 5
+y = 10
+z == x + y
+print(z)
+{% endhighlight %}
