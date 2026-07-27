@@ -73,6 +73,9 @@ collections:
   pythonmath:
     output: true
     permalink: /pythonmath/:path
+  regolamenti:
+    output: true
+    permalink: /regolamenti/:path
   rete:
     output: true
     permalink: /rete/:path
