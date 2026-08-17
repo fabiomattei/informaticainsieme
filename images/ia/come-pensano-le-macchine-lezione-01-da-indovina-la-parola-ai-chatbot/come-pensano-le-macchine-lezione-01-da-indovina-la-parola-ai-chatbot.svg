@@ -1,0 +1,48 @@
+<svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l1-title l1-desc">
+  <title id="l1-title">Dall'indovinare una parola al chatbot</title>
+  <desc id="l1-desc">Quattro tappe in verticale, che crescono di dimensione: contare le parole (bigrammi), un bigliettino che sbiadisce (rete ricorrente), guardare tutta la frase con attenzione (Transformer), fino al chatbot moderno, allenato su una scala enorme di testo.</desc>
+  <defs>
+    <marker id="l1Arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#828282" />
+    </marker>
+  </defs>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+    <!-- tappa 1: bigrammi -->
+    <rect x="140" y="16" width="200" height="54" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="38" fill="#111111" font-size="13" font-weight="bold" text-anchor="middle">Conta le parole</text>
+    <text x="240" y="56" fill="#828282" font-size="11" text-anchor="middle">bigrammi: guarda 1 parola indietro</text>
+
+    <path d="M 240,70 L 240,98" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l1Arrow)" />
+
+    <!-- tappa 2: RNN -->
+    <rect x="110" y="100" width="260" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="124" fill="#111111" font-size="13" font-weight="bold" text-anchor="middle">Un bigliettino mentale</text>
+    <text x="240" y="142" fill="#828282" font-size="11" text-anchor="middle">rete ricorrente: il ricordo sbiadisce</text>
+    <text x="240" y="156" fill="#828282" font-size="11" text-anchor="middle">via via che il testo si allunga</text>
+
+    <path d="M 240,160 L 240,190" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l1Arrow)" />
+
+    <!-- tappa 3: Transformer -->
+    <rect x="70" y="192" width="340" height="72" rx="6" fill="#dceafc" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="220" fill="#111111" font-size="14" font-weight="bold" text-anchor="middle">Guarda tutta la frase insieme</text>
+    <text x="240" y="240" fill="#1d5eb8" font-size="11" text-anchor="middle">Transformer: attenzione a ogni parola,</text>
+    <text x="240" y="255" fill="#1d5eb8" font-size="11" text-anchor="middle">vicina o lontana che sia (2017)</text>
+
+    <path d="M 240,264 L 240,294" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l1Arrow)" />
+
+    <!-- tappa 4: scala -->
+    <rect x="30" y="296" width="420" height="80" rx="6" fill="#dceafc" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="326" fill="#111111" font-size="14" font-weight="bold" text-anchor="middle">Più letture, più bravo</text>
+    <text x="240" y="346" fill="#1d5eb8" font-size="11" text-anchor="middle">stesso Transformer, allenato su miliardi</text>
+    <text x="240" y="361" fill="#1d5eb8" font-size="11" text-anchor="middle">di pagine: emergono capacità nuove</text>
+
+    <path d="M 240,376 L 240,406" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l1Arrow)" />
+
+    <!-- risultato: chatbot -->
+    <rect x="120" y="408" width="240" height="44" rx="8" fill="#f66a0a" stroke="#c85506" stroke-width="2" />
+    <text x="240" y="435" fill="#fdfdfd" font-size="14" font-weight="bold" text-anchor="middle">un chatbot moderno</text>
+
+  </g>
+</svg>

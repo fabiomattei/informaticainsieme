@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Struct Punto con i campi e l'istanza generata](/images/ruby/struct/struct.svg){:class="aside-image"}
+
 ## Un oggetto leggero con campi nominati
 
 **Struct** è una scorciatoia per creare classi semplici con attributi

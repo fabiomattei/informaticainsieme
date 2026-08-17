@@ -1,0 +1,56 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Evoluzione del microprocessore</text>
+
+  <!-- timeline -->
+  <line x1="40" y1="180" x2="450" y2="180" stroke="#2a7ae2" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- events -->
+  <g>
+    <circle cx="70" cy="180" r="7" fill="#f66a0a"/>
+    <line x1="70" y1="180" x2="70" y2="130" stroke="#828282" stroke-width="1.5"/>
+    <text x="70" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">1971</text>
+    <text x="70" y="105" text-anchor="middle" font-size="11" fill="#828282">Intel 4004</text>
+    <text x="70" y="200" text-anchor="middle" font-size="10" fill="#828282">740Khz</text>
+  </g>
+
+  <g>
+    <circle cx="160" cy="180" r="7" fill="#2a7ae2"/>
+    <line x1="160" y1="180" x2="160" y2="230" stroke="#828282" stroke-width="1.5"/>
+    <text x="160" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">1978</text>
+    <text x="160" y="260" text-anchor="middle" font-size="11" fill="#828282">Intel 8086</text>
+    <text x="160" y="160" text-anchor="middle" font-size="10" fill="#828282">3-8Mhz</text>
+  </g>
+
+  <g>
+    <circle cx="260" cy="180" r="7" fill="#2a7ae2"/>
+    <line x1="260" y1="180" x2="260" y2="130" stroke="#828282" stroke-width="1.5"/>
+    <text x="260" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">1993</text>
+    <text x="260" y="105" text-anchor="middle" font-size="11" fill="#828282">Pentium</text>
+    <text x="260" y="200" text-anchor="middle" font-size="10" fill="#828282">100Mhz</text>
+  </g>
+
+  <g>
+    <circle cx="350" cy="180" r="7" fill="#2a7ae2"/>
+    <line x1="350" y1="180" x2="350" y2="230" stroke="#828282" stroke-width="1.5"/>
+    <text x="350" y="245" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">1999</text>
+    <text x="350" y="260" text-anchor="middle" font-size="11" fill="#828282">Pentium 3</text>
+    <text x="350" y="160" text-anchor="middle" font-size="10" fill="#828282">1Ghz</text>
+  </g>
+
+  <g>
+    <circle cx="430" cy="180" r="7" fill="#f66a0a"/>
+    <line x1="430" y1="180" x2="430" y2="130" stroke="#828282" stroke-width="1.5"/>
+    <text x="430" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">2026</text>
+    <text x="430" y="105" text-anchor="middle" font-size="11" fill="#828282">Core Ultra</text>
+    <text x="430" y="200" text-anchor="middle" font-size="10" fill="#828282">3Ghz, multicore</text>
+  </g>
+
+  <text x="240" y="300" text-anchor="middle" font-size="13" fill="#828282">1978-1999: +3 ordini di grandezza in frequenza</text>
+  <text x="240" y="318" text-anchor="middle" font-size="13" fill="#828282">dal 2000: limite fisico &#8594; crescita nel numero di core</text>
+</svg>

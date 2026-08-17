@@ -1,0 +1,51 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Perché serviva un'idea nuova</text>
+
+  <!-- arc: attention, direct jump -->
+  <path d="M40,150 Q240,55 440,150" fill="none" stroke="#2a7ae2" stroke-width="3" marker-end="url(#arrow8)"/>
+  <text x="240" y="48" text-anchor="middle" font-size="12" fill="#1d5eb8">attenzione: un solo passo, qualunque sia la distanza</text>
+
+  <!-- start node -->
+  <circle cx="40" cy="150" r="14" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="40" y="188" text-anchor="middle" font-size="11" fill="#828282">pagina 1</text>
+
+  <!-- sequential chain -->
+  <line x1="54" y1="150" x2="72" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="74" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+  <line x1="92" y1="150" x2="100" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="102" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+  <line x1="120" y1="150" x2="128" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="130" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+  <line x1="148" y1="150" x2="156" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="158" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+  <line x1="176" y1="150" x2="184" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="186" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+  <line x1="204" y1="150" x2="212" y2="150" stroke="#828282" stroke-width="1.5" marker-end="url(#arrow8)"/>
+  <rect x="214" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5"/>
+
+  <!-- wall / block -->
+  <rect x="240" y="100" width="10" height="95" fill="#f66a0a"/>
+  <text x="245" y="92" text-anchor="middle" font-size="11" fill="#c85506">vincolo</text>
+  <text x="245" y="105" text-anchor="middle" font-size="0"></text>
+
+  <!-- unreachable rest, faded -->
+  <rect x="260" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.4"/>
+  <rect x="288" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.4"/>
+  <rect x="316" y="141" width="18" height="18" fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.4"/>
+
+  <text x="220" y="215" text-anchor="middle" font-size="12" fill="#c85506">lettura pagina per pagina: un passo alla volta,</text>
+  <text x="220" y="230" text-anchor="middle" font-size="12" fill="#c85506">non si può saltare avanti</text>
+
+  <!-- end node -->
+  <circle cx="440" cy="150" r="14" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="440" y="188" text-anchor="middle" font-size="11" fill="#828282">pagina finale</text>
+
+  <text x="240" y="300" text-anchor="middle" font-size="13" fill="#111111">serviva un'idea che non fosse vincolata a leggere in ordine:</text>
+  <text x="240" y="318" text-anchor="middle" font-size="13" fill="#111111">è nato il Transformer, basato sulla sola attenzione</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Classe con sezioni private/public e due istanze derivate](/images/cpp/classi/classi.svg){:class="aside-image"}
+
 ## Dati e comportamenti insieme
 
 Una **classe** è un tipo definito dal programmatore che raggruppa **dati**

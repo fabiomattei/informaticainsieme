@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=17'
 ---
 
+![Pallina nella finestra di gioco spostata con i tasti freccia della tastiera](/images/videogames/quadrato-tastiera/quadrato-tastiera.svg){:class="aside-image"}
+
 {% highlight shell %}
 
 """

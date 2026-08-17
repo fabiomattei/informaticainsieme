@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Finestra del Prompt personalizzata con titolo, colori e cronologia comandi](/images/cmd/comandi-vari/comandi-vari.svg){:class="aside-image"}
+
 In questa pagina trovi alcuni comandi che non rientrano nelle categorie viste finora, ma che sono comunque comodi da conoscere: permettono di personalizzare la finestra del Prompt, gestire i file "nascosti" e velocizzare la scrittura dei comandi.
 
 ## title - cambia il titolo della finestra

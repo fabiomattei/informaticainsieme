@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Il ciclo for che avanza su una sequenza di valori](/images/ruby/il-ciclo-for/il-ciclo-for.svg){:class="aside-image"}
+
 ## Il ciclo for
 
 Il ciclo `for` itera su un range o una collezione, assegnando a ogni

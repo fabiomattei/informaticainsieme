@@ -22,6 +22,8 @@ if b > a:
    print("b e' maggiore di a")
 {% endhighlight %}
 
+![Diagramma di flusso dell'esercizio 1](/images/python/la-condizione/esercizio-1.svg){:class="half-image"}
+
 #### Esercizio 2:
 copia il seguente codice nell’editor. Una volta finito fallo eseguire.
 
@@ -31,6 +33,8 @@ b = 200
 if b > a:
 print("b e' maggiore di a") # questo codice è errato dato che manca l'indentazione
 {% endhighlight %}
+
+![Diagramma di flusso dell'esercizio 2: errore di indentazione](/images/python/la-condizione/esercizio-2.svg){:class="half-image"}
 
 In Python l’indentazione (gli spazi che nell’esempio 1 precedono l’istruzione print) indica l’appartenenza di un codice ad un blocco di codice. Dato che bisogna distinguere tra quali istruzioni eseguire in caso la condizione venga verificata oppure no, chi ha inventato il linguaggio ha deciso di utilizzare l’indentazione a tale scopo. Dunque nel primo esempio è chiaro per il computer che deve eseguire l’istruzione print() se b &gt; a, nel secondo esempio, mancando indentazione non è chiaro, quindi il computer ci dà errore.
 
@@ -61,6 +65,8 @@ elif a == b:
     print("a e b sono uguali")
 {% endhighlight %}
 
+![Diagramma di flusso dell'esercizio 3](/images/python/la-condizione/esercizio-3.svg){:class="half-image"}
+
 ## Il costrutto else
 
 Nel caso nessuna delle proposizione contenute nelle condizioni precedenti sia stata verificata, si esegue il codice contenuto nel blocco else:
@@ -78,6 +84,8 @@ elif a == b:
 else:
     print("a e' piu' grande di b")
 {% endhighlight %}
+
+![Diagramma di flusso dell'esercizio 4](/images/python/la-condizione/la-condizione.svg){:class="half-image"}
 
 #### Esercizio 5:
 scrivi un programma che lette due stringhe di testo ne scriva la prima in ordine alfabetico

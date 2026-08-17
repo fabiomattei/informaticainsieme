@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una scheda del glossario con un termine e la sua definizione, indicizzata alfabeticamente](/images/ia/come-pensano-le-reti-neurali-appendice-b-glossario/come-pensano-le-reti-neurali-appendice-b-glossario.svg){:class="aside-image"}
+
 Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per la prima volta. Nessuna definizione qui contiene formule: per la versione tecnica e formale di ciascun termine, vedi il glossario di *Come Imparano le Reti Neurali*.
 
 **Adam** — variante evoluta del momentum che calibra il ritmo di correzione separatamente per ciascun peso della rete, in base a quanto è stato "agitato" storicamente il suo segnale di errore. Lezione 7.

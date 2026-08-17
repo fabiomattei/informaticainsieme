@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma del flusso di input tra utente, programma e variabile](/images/python/input/input.svg){:class="aside-image"}
+
 La funzione **input** viene usata per consentire all’utente di immettere dati da tastiera, che verranno poi utilizzati dal programma. **Tali dati vanno memorizzati in una variabile** altrimenti vengono *dimenticati* immediatamente dal computer.
 
 **input** accetta un singolo argomento opzionale: una *stringa di testo* che viene mostrata a video prima di leggere il valore digitato. Questa ha la funzione di dare una indicazione all’utente sull’informazione che si vuole ottenere da lui. Una volta che l’utente abbia digitato un valore e premuto il tasto *Invio*, la funzione input restituisce il valore come *stringa*, come mostra il seguente esempio:

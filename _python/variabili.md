@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=202'
 ---
 
+![Diagramma di variabili come cassetti etichettati che contengono un valore](/images/python/variabili/variabili.svg){:class="aside-image"}
+
 Le variabili sono **contenitori di informazioni**. Possiamo pensare ad una varibile come ad un cassetto, dotato di etichetta, che può contenere una informazione.
 Lo pensiamo come un cassetto dotato di etichetta perché ogni variabile ha un nome, il nome ci serve per ricordare cosa contiene e per trovarla facilmente tra
 le tante variabili che andremo a creare per ciascun nostro programma.

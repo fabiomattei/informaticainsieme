@@ -1,0 +1,18 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Template vuoto</text>
+
+  <!-- empty game window -->
+  <rect x="60" y="50" width="360" height="200" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="60" y="50" width="360" height="24" rx="6" fill="#2a7ae2"/>
+  <circle cx="76" cy="62" r="4" fill="#ffffff"/>
+  <circle cx="90" cy="62" r="4" fill="#ffffff"/>
+  <circle cx="104" cy="62" r="4" fill="#ffffff"/>
+  <text x="240" y="67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff">Starting Template</text>
+
+  <!-- dashed empty placeholder -->
+  <rect x="150" y="110" width="180" height="100" rx="6" fill="none" stroke="#828282" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="240" y="165" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">canvas vuoto</text>
+
+  <text x="240" y="290" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">on_draw · on_update · on_key_press</text>
+  <text x="240" y="312" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">metodi pronti da riempire, ancora vuoti (pass)</text>
+</svg>

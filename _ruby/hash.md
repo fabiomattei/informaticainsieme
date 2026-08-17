@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Coppie chiave-valore di un hash](/images/ruby/hash/hash.svg){:class="aside-image"}
+
 ## Chiavi e valori
 
 Se gli array sono cassettiere con i cassetti numerati, gli **hash** sono

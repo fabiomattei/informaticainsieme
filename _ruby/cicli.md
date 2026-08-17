@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart generale di un ciclo con condizione, next e break](/images/ruby/cicli/cicli.svg){:class="aside-image"}
+
 ## Il ciclo while
 
 Il ciclo `while` esegue il blocco di codice racchiuso tra `while` e `end` **fintanto che la condizione è vera**. È un ciclo con **controllo in testa**: la condizione viene verificata prima di ogni iterazione, quindi se è subito falsa il blocco non viene mai eseguito.

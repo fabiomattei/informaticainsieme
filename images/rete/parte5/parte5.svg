@@ -1,0 +1,40 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Parte 5: il client della chat</text>
+
+  <text x="240" y="56" text-anchor="middle" font-size="12" fill="#828282">ogni messaggio ricevuto ha due parti, ciascuna con il suo header</text>
+
+  <!-- frame: username_header | username | message_header | message -->
+  <rect x="30" y="72" width="90" height="50" rx="4" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="75" y="94" text-anchor="middle" font-size="9" fill="#f66a0a" font-weight="bold">header</text>
+  <text x="75" y="108" text-anchor="middle" font-size="9" fill="#f66a0a">10 byte</text>
+
+  <rect x="120" y="72" width="100" height="50" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="170" y="94" text-anchor="middle" font-size="10" font-weight="bold" fill="#111111">username</text>
+  <text x="170" y="110" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">"Mario"</text>
+
+  <rect x="220" y="72" width="90" height="50" rx="4" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="265" y="94" text-anchor="middle" font-size="9" fill="#f66a0a" font-weight="bold">header</text>
+  <text x="265" y="108" text-anchor="middle" font-size="9" fill="#f66a0a">10 byte</text>
+
+  <rect x="310" y="72" width="140" height="50" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="380" y="94" text-anchor="middle" font-size="10" font-weight="bold" fill="#111111">messaggio</text>
+  <text x="380" y="110" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">"Ciao a tutti"</text>
+
+  <line x1="240" y1="130" x2="240" y2="154" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="290" y="146" text-anchor="middle" font-size="10" fill="#2a7ae2">client_socket.recv()</text>
+
+  <!-- terminal output -->
+  <rect x="60" y="160" width="360" height="70" rx="6" fill="#111111" stroke="#828282" stroke-width="1.5"/>
+  <text x="80" y="184" font-size="12" font-family="monospace" fill="#f66a0a">Mario &gt; Ciao a tutti</text>
+  <text x="80" y="204" font-size="12" font-family="monospace" fill="#828282">Giulia > Ciao Mario!</text>
+  <text x="80" y="222" font-size="12" font-family="monospace" fill="#2a7ae2">Tu > _</text>
+
+  <text x="240" y="256" text-anchor="middle" font-size="12" fill="#828282">il client legge in loop finché non riceve più dati</text>
+  <text x="240" y="274" text-anchor="middle" font-size="12" fill="#828282">(IOError con EAGAIN/EWOULDBLOCK significa: nessun messaggio nuovo)</text>
+</svg>

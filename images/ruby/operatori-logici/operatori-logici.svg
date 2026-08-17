@@ -1,0 +1,42 @@
+<svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <!-- AND gate -->
+  <text x="90" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">A &amp;&amp; B</text>
+  <line x1="20" y1="55" x2="55" y2="55" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="20" y1="85" x2="55" y2="85" stroke="#2a7ae2" stroke-width="2"/>
+  <path d="M55 40 L80 40 A30 30 0 0 1 80 100 L55 100 Z" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="110" y1="70" x2="145" y2="70" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="15" y="50" font-size="11" fill="#828282">A</text>
+  <text x="15" y="90" font-size="11" fill="#828282">B</text>
+  <text x="145" y="65" font-size="12" fill="#111111">vero solo se</text>
+  <text x="145" y="80" font-size="12" fill="#111111">A e B veri</text>
+
+  <!-- OR gate -->
+  <text x="330" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">A || B</text>
+  <line x1="260" y1="55" x2="285" y2="55" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="260" y1="85" x2="285" y2="85" stroke="#2a7ae2" stroke-width="2"/>
+  <path d="M285 40 C 300 40 310 50 320 70 C 310 90 300 100 285 100 C 295 85 295 55 285 40 Z" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="322" y1="70" x2="360" y2="70" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="255" y="50" font-size="11" fill="#828282">A</text>
+  <text x="255" y="90" font-size="11" fill="#828282">B</text>
+  <text x="368" y="65" font-size="12" fill="#111111">vero se</text>
+  <text x="368" y="80" font-size="12" fill="#111111">A o B vero</text>
+
+  <!-- NOT gate -->
+  <text x="90" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">!A</text>
+  <line x1="20" y1="190" x2="55" y2="190" stroke="#f66a0a" stroke-width="2"/>
+  <polygon points="55,170 55,210 100,190" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <circle cx="107" cy="190" r="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="113" y1="190" x2="150" y2="190" stroke="#f66a0a" stroke-width="2"/>
+  <text x="15" y="185" font-size="11" fill="#828282">A</text>
+  <text x="160" y="195" font-size="12" fill="#111111">inverte A</text>
+
+  <!-- short circuit note -->
+  <rect x="230" y="150" width="200" height="80" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="330" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">corto circuito</text>
+  <text x="240" y="192" font-size="11" fill="#111111">n != 0 &amp;&amp; 10/n &gt; 2</text>
+  <text x="240" y="210" font-size="11" fill="#828282">se n==0, il secondo</text>
+  <text x="240" y="224" font-size="11" fill="#828282">test non viene valutato</text>
+
+  <text x="230" y="270" text-anchor="middle" font-size="13" fill="#828282">&amp;&amp; = AND, || = OR, ! = NOT</text>
+  <text x="230" y="290" text-anchor="middle" font-size="12" fill="#828282">le forme simboliche hanno priorità più alta</text>
+</svg>

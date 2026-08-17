@@ -1,0 +1,40 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">HTML + CSS</text>
+
+  <!-- HTML box -->
+  <rect x="20" y="46" width="200" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="120" y="66" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">HTML</text>
+  <text x="30" y="88" font-size="11" font-family="monospace" fill="#111111">&lt;p id="primoparagrafo"&gt;</text>
+  <text x="30" y="104" font-size="11" font-family="monospace" fill="#828282">Questo è il testo</text>
+
+  <!-- CSS box -->
+  <rect x="260" y="46" width="200" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="360" y="66" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">CSS</text>
+  <text x="270" y="86" font-size="11" font-family="monospace" fill="#2a7ae2">#primoparagrafo {</text>
+  <text x="278" y="100" font-size="10" font-family="monospace" fill="#111111">text-align: right;</text>
+  <text x="278" y="114" font-size="10" font-family="monospace" fill="#111111">font-weight: bold;</text>
+  <text x="270" y="128" font-size="11" font-family="monospace" fill="#2a7ae2">}</text>
+
+  <!-- selettore label connecting id -->
+  <path d="M170,80 C210,80 220,80 260,80" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="215" y="72" text-anchor="middle" font-size="10" fill="#f66a0a">selettore #id</text>
+
+  <!-- arrow down to rendered result -->
+  <line x1="240" y1="136" x2="240" y2="170" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="290" y="158" font-size="11" fill="#2a7ae2">applica lo stile</text>
+
+  <!-- rendered result -->
+  <rect x="90" y="180" width="300" height="90" rx="6" fill="white" stroke="#828282" stroke-width="2"/>
+  <text x="105" y="204" font-size="12" fill="#828282">risultato nel browser:</text>
+  <text x="375" y="240" text-anchor="end" font-size="15" font-weight="bold" fill="#111111">Questo è il testo</text>
+  <text x="375" y="258" text-anchor="end" font-size="15" font-weight="bold" fill="#111111">del mio paragrafo</text>
+
+  <text x="240" y="300" text-anchor="middle" font-size="12" fill="#828282">HTML definisce il contenuto, CSS la presentazione grafica</text>
+  <text x="240" y="318" text-anchor="middle" font-size="12" fill="#828282">selettore → proprietà: valore</text>
+</svg>

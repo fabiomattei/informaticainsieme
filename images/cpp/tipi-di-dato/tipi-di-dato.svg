@@ -1,0 +1,30 @@
+<svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#111111">tipi fondamentali — dimensione fissa in byte</text>
+
+  <g stroke="#2a7ae2" stroke-width="2" fill="#eef2f7">
+    <rect x="20" y="40"  width="120" height="36" rx="6"/>
+    <rect x="20" y="84"  width="120" height="36" rx="6"/>
+    <rect x="20" y="128" width="120" height="36" rx="6"/>
+    <rect x="20" y="172" width="120" height="36" rx="6"/>
+  </g>
+  <rect x="20" y="216" width="120" height="36" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+
+  <g font-size="13" fill="#111111">
+    <text x="30" y="63">int</text>
+    <text x="30" y="107">double</text>
+    <text x="30" y="151">bool</text>
+    <text x="30" y="195">char</text>
+    <text x="30" y="239" fill="#f66a0a" font-weight="bold">string</text>
+  </g>
+
+  <g font-size="12" fill="#828282">
+    <text x="150" y="63">4 byte  →  a = 42</text>
+    <text x="150" y="107">8 byte  →  d = 3.14</text>
+    <text x="150" y="151">1 byte  →  true / false</text>
+    <text x="150" y="195">1 byte  →  'A' (ASCII 65)</text>
+    <text x="150" y="239" fill="#f66a0a">non primitivo — classe della std lib</text>
+  </g>
+
+  <line x1="0" y1="270" x2="420" y2="270" stroke="#828282" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="20" y="292" font-size="12" fill="#828282">sizeof(int)=4  sizeof(double)=8  sizeof(char)=1</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Funzione come black box: parametri tipizzati in ingresso, valore di ritorno in uscita](/images/cpp/funzioni/funzioni.svg){:class="aside-image"}
+
 ## Dividere il programma in blocchi riutilizzabili
 
 Una **funzione** è un blocco di codice con un nome che può essere chiamato

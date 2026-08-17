@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Funzione come scatola nera: argomenti in ingresso, valore di ritorno in uscita](/images/ruby/funzioni/funzioni.svg){:class="aside-image"}
+
 ## Funzioni
 
 In Ruby una funzione si definisce con la parola chiave `def` e si chiude con `end`.

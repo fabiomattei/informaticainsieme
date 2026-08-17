@@ -1,0 +1,44 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Parte 1: spedire e ricevere dati</text>
+
+  <!-- server -->
+  <rect x="30" y="50" width="150" height="110" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="105" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">server.py</text>
+  <text x="105" y="90" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">s.bind((host,1234))</text>
+  <text x="105" y="106" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">s.listen(5)</text>
+  <text x="105" y="122" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">s.accept()</text>
+  <text x="105" y="138" text-anchor="middle" font-size="10" font-family="monospace" fill="#f66a0a">clientsocket.send(...)</text>
+
+  <!-- client -->
+  <rect x="300" y="50" width="150" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="375" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">client.py</text>
+  <text x="375" y="90" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">s.connect((host,1234))</text>
+  <text x="375" y="106" text-anchor="middle" font-size="10" font-family="monospace" fill="#f66a0a">s.recv(1024)</text>
+
+  <path d="M180,105 L300,105" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="98" text-anchor="middle" font-size="10" fill="#2a7ae2">connect()</text>
+
+  <!-- message flowing through buffer -->
+  <path d="M105,160 L105,190" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M180,205 L300,205" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="105" y="182" text-anchor="middle" font-size="10" fill="#828282">"Ciao amico!!"</text>
+
+  <!-- buffer box -->
+  <rect x="30" y="192" width="150" height="46" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="105" y="212" text-anchor="middle" font-size="10" fill="#f66a0a" font-family="monospace">buffer: 1024 byte</text>
+  <text x="105" y="228" text-anchor="middle" font-size="9" fill="#f66a0a" font-family="monospace">Ciao amico!!</text>
+
+  <rect x="300" y="192" width="150" height="46" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="375" y="212" text-anchor="middle" font-size="10" fill="#f66a0a" font-family="monospace">recv(1024)</text>
+  <text x="375" y="228" text-anchor="middle" font-size="9" fill="#f66a0a" font-family="monospace">"Ciao amico!!"</text>
+
+  <text x="240" y="270" text-anchor="middle" font-size="12" fill="#828282">bind + listen + accept sul server, connect sul client</text>
+  <text x="240" y="290" text-anchor="middle" font-size="12" fill="#828282">send() scrive nel buffer, recv() lo legge dall'altra parte</text>
+</svg>

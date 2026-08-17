@@ -1,0 +1,36 @@
+<svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="210" y="26" text-anchor="middle" font-size="15" fill="#111111" font-weight="bold">persona = { nome: "Mario", cognome: "Rossi", eta: 25 }</text>
+
+  <!-- row 1 -->
+  <rect x="30" y="55" width="120" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="90" y="81" text-anchor="middle" font-size="14" fill="#111111">:nome</text>
+  <line x1="150" y1="76" x2="205" y2="76" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="205" y="55" width="150" height="42" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="280" y="81" text-anchor="middle" font-size="14" fill="#111111">"Mario"</text>
+
+  <!-- row 2 -->
+  <rect x="30" y="115" width="120" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="90" y="141" text-anchor="middle" font-size="14" fill="#111111">:cognome</text>
+  <line x1="150" y1="136" x2="205" y2="136" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="205" y="115" width="150" height="42" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="280" y="141" text-anchor="middle" font-size="14" fill="#111111">"Rossi"</text>
+
+  <!-- row 3 highlighted -->
+  <rect x="30" y="175" width="120" height="42" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="90" y="201" text-anchor="middle" font-size="14" fill="#111111">:eta</text>
+  <line x1="150" y1="196" x2="205" y2="196" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="205" y="175" width="150" height="42" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="280" y="201" text-anchor="middle" font-size="14" fill="#111111" font-weight="bold">25</text>
+
+  <text x="90" y="245" text-anchor="middle" font-size="12" fill="#828282">chiave</text>
+  <text x="280" y="245" text-anchor="middle" font-size="12" fill="#828282">valore</text>
+
+  <text x="210" y="280" text-anchor="middle" font-size="13" fill="#828282">persona[:eta]  →  25</text>
+  <text x="210" y="300" text-anchor="middle" font-size="13" fill="#828282">persona[:arte] → nil (chiave assente)</text>
+</svg>

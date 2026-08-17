@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un sentiero a tappe numerate che rappresenta il percorso del libro](/images/ia/come-pensano-le-reti-neurali-prefazione/come-pensano-le-reti-neurali-prefazione.svg){:class="aside-image"}
+
 Hai mai sentito dire che un'intelligenza artificiale "impara dai dati" e ti sei chiesto cosa significhi davvero? Non in senso vago — cosa succede, passo per passo, dentro una rete neurale mentre passa dall'essere un ammasso di numeri casuali a qualcosa che riconosce un gatto in una foto, prevede una parola, o distingue una mail vera da una truffa?
 
 Questo libro apre il cofano di quel motore. Non del motore più famoso di tutti — i chatbot che rispondono in linguaggio naturale hanno un libro tutto loro, *Come Pensano le Macchine che Parlano* — ma del motore più generale che sta sotto: la rete neurale, in tutte le forme che ha preso prima che qualcuno inventasse un chatbot. Come riconosce un'immagine. Come "ricorda" una sequenza. E soprattutto: come impara, correggendo i propri errori un po' alla volta, invece di essere programmata a mano istruzione per istruzione.

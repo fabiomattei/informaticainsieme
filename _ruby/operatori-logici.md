@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Porte logiche AND, OR e NOT con esempio di corto circuito](/images/ruby/operatori-logici/operatori-logici.svg){:class="aside-image"}
+
 ## Operatori logici
 
 Gli operatori logici permettono di **combinare più condizioni** in un'unica

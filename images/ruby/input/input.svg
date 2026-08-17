@@ -1,0 +1,35 @@
+<svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <!-- three sources -->
+  <rect x="15" y="20" width="120" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="75" y="48" text-anchor="middle" font-size="13" fill="#111111">tastiera</text>
+
+  <rect x="170" y="20" width="120" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="48" text-anchor="middle" font-size="13" fill="#111111">mouse</text>
+
+  <rect x="325" y="20" width="120" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="385" y="48" text-anchor="middle" font-size="13" fill="#111111">controller</text>
+
+  <!-- converge -->
+  <path d="M75 66 L 210 140" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M230 66 L 230 140" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M385 66 L 250 140" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- args.inputs box -->
+  <rect x="130" y="140" width="200" height="60" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="230" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">args.inputs</text>
+  <text x="230" y="185" text-anchor="middle" font-size="12" fill="#828282">keyboard.key_down.g</text>
+
+  <line x1="230" y1="200" x2="230" y2="230" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- tick args -->
+  <rect x="130" y="230" width="200" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="260" text-anchor="middle" font-size="14" fill="#111111">def tick args ... end</text>
+
+  <text x="230" y="305" text-anchor="middle" font-size="12" fill="#828282">letto una volta per frame all'interno di tick</text>
+</svg>

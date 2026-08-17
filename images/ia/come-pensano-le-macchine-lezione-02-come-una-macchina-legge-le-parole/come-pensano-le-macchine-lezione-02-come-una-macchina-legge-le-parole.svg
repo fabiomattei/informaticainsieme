@@ -1,0 +1,80 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l2-title l2-desc">
+  <title id="l2-title">Da parola a numeri: tokenizzazione ed embedding</title>
+  <desc id="l2-desc">La parola "castello" entra in un tokenizzatore a imbuto, ne escono tre token (cas, tel, lo), e ciascun token viene trasformato in un vettore di numeri, la sua posizione sulla mappa dei significati.</desc>
+  <defs>
+    <marker id="l2Arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#828282" />
+    </marker>
+  </defs>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+    <!-- parola in ingresso -->
+    <rect x="170" y="16" width="140" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="45" fill="#111111" font-size="15" text-anchor="middle">"castello"</text>
+
+    <path d="M 240,62 L 240,86" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+
+    <!-- imbuto tokenizzatore -->
+    <path d="M 130,88 L 350,88 L 280,140 L 200,140 Z" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+    <text x="240" y="118" fill="#111111" font-size="12" font-weight="bold" text-anchor="middle">tokenizzatore</text>
+
+    <path d="M 175,150 L 155,172" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+    <path d="M 240,150 L 240,172" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+    <path d="M 305,150 L 325,172" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+
+    <!-- token risultanti -->
+    <rect x="90" y="174" width="90" height="46" rx="6" fill="#2a7ae2" stroke="#1d5eb8" stroke-width="2" />
+    <text x="135" y="203" fill="#fdfdfd" font-size="15" font-weight="bold" text-anchor="middle">cas</text>
+
+    <rect x="195" y="174" width="90" height="46" rx="6" fill="#2a7ae2" stroke="#1d5eb8" stroke-width="2" />
+    <text x="240" y="203" fill="#fdfdfd" font-size="15" font-weight="bold" text-anchor="middle">tel</text>
+
+    <rect x="300" y="174" width="90" height="46" rx="6" fill="#2a7ae2" stroke="#1d5eb8" stroke-width="2" />
+    <text x="345" y="203" fill="#fdfdfd" font-size="15" font-weight="bold" text-anchor="middle">lo</text>
+
+    <text x="240" y="240" fill="#828282" font-size="11" text-anchor="middle">token: pezzetti, non sempre parole intere</text>
+
+    <path d="M 135,220 L 135,260" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+    <path d="M 240,220 L 240,260" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+    <path d="M 345,220 L 345,260" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l2Arrow)" />
+
+    <!-- vettori numerici -->
+    <g>
+      <rect x="80" y="262" width="110" height="92" rx="6" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+      <text x="135" y="280" fill="#828282" font-size="10" text-anchor="middle">vettore "cas"</text>
+      <text x="135" y="300" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">[ 2.1</text>
+      <text x="135" y="316" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">-0.7</text>
+      <text x="135" y="332" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">3.4 ...]</text>
+    </g>
+
+    <g>
+      <rect x="185" y="262" width="110" height="92" rx="6" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+      <text x="240" y="280" fill="#828282" font-size="10" text-anchor="middle">vettore "tel"</text>
+      <text x="240" y="300" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">[ 0.4</text>
+      <text x="240" y="316" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">1.9</text>
+      <text x="240" y="332" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">-2.2 ...]</text>
+    </g>
+
+    <g>
+      <rect x="290" y="262" width="110" height="92" rx="6" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+      <text x="345" y="280" fill="#828282" font-size="10" text-anchor="middle">vettore "lo"</text>
+      <text x="345" y="300" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">[-1.5</text>
+      <text x="345" y="316" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">0.2</text>
+      <text x="345" y="332" fill="#111111" font-size="11" text-anchor="middle" font-family="monospace">4.0 ...]</text>
+    </g>
+
+    <text x="240" y="376" fill="#111111" font-size="12" font-weight="bold" text-anchor="middle">ogni token diventa un punto</text>
+    <text x="240" y="392" fill="#111111" font-size="12" font-weight="bold" text-anchor="middle">sulla mappa dei significati</text>
+
+    <!-- piccola mappa in basso -->
+    <g stroke="#e3e3e3" stroke-width="1">
+      <line x1="150" y1="410" x2="330" y2="410" />
+      <line x1="150" y1="410" x2="150" y2="460" />
+    </g>
+    <circle cx="200" cy="440" r="5" fill="#2a7ae2" />
+    <circle cx="225" cy="430" r="5" fill="#2a7ae2" />
+    <circle cx="290" cy="450" r="5" fill="#f66a0a" />
+    <text x="240" y="474" fill="#828282" font-size="10" text-anchor="middle">token simili → punti vicini</text>
+  </g>
+</svg>

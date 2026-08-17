@@ -1,0 +1,39 @@
+<svg viewBox="0 0 460 280" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+
+  <!-- user -->
+  <circle cx="70" cy="90" r="24" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="70" y="96" text-anchor="middle" font-size="20" fill="#2a7ae2">☺</text>
+  <text x="70" y="135" text-anchor="middle" font-size="13" fill="#828282">utente</text>
+
+  <!-- program box -->
+  <rect x="170" y="55" width="140" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="105" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">programma</text>
+
+  <!-- terminal -->
+  <rect x="360" y="55" width="80" height="90" rx="6" fill="#111111" stroke="#111111" stroke-width="2"/>
+  <text x="400" y="105" text-anchor="middle" font-size="24" fill="#ffffff">▮</text>
+  <text x="400" y="165" text-anchor="middle" font-size="13" fill="#828282">console</text>
+
+  <!-- input arrow: user -> program -->
+  <path d="M96 75 C 130 60 150 65 170 75" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="130" y="55" text-anchor="middle" font-size="12" fill="#2a7ae2">gets.chomp</text>
+
+  <!-- output arrow: program -> terminal -->
+  <path d="M310 90 L 358 90" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="334" y="80" text-anchor="middle" font-size="11" fill="#f66a0a">puts</text>
+
+  <!-- print stays on line -->
+  <path d="M310 120 L 358 120" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="334" y="138" text-anchor="middle" font-size="11" fill="#f66a0a">print</text>
+
+  <text x="240" y="200" text-anchor="middle" font-size="13" fill="#828282">gets restituisce sempre una String</text>
+  <text x="240" y="220" text-anchor="middle" font-size="13" fill="#828282">.to_i / .to_f convertono l'input in numero</text>
+</svg>

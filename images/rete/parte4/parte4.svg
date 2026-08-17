@@ -1,0 +1,44 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Parte 4: il server della chat</text>
+
+  <!-- server box with select -->
+  <rect x="160" y="46" width="160" height="80" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">server.py</text>
+  <text x="240" y="86" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">select.select(</text>
+  <text x="240" y="100" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">sockets_list, [], ...)</text>
+  <text x="240" y="116" text-anchor="middle" font-size="9" fill="#828282">clients = { socket: user }</text>
+
+  <!-- three clients -->
+  <rect x="30" y="180" width="110" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="85" y="210" text-anchor="middle" font-size="11" fill="#111111">Mario</text>
+
+  <rect x="185" y="180" width="110" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="210" text-anchor="middle" font-size="11" fill="#111111">Giulia</text>
+
+  <rect x="340" y="180" width="110" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="395" y="210" text-anchor="middle" font-size="11" fill="#111111">Luca</text>
+
+  <!-- Mario sends message up to server -->
+  <path d="M85,180 C85,150 160,120 200,110" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="90" y="150" text-anchor="middle" font-size="9" fill="#2a7ae2">invia messaggio</text>
+
+  <!-- server broadcasts to Giulia and Luca (not sender) -->
+  <path d="M260,126 C260,150 240,165 240,178" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M300,120 C340,145 380,160 390,178" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="240" y="248" text-anchor="middle" font-size="11" fill="#f66a0a">broadcast a tutti tranne il mittente</text>
+
+  <!-- select monitors many sockets -->
+  <rect x="60" y="266" width="360" height="60" rx="6" fill="#111111" stroke="#828282" stroke-width="1.5"/>
+  <text x="240" y="288" text-anchor="middle" font-size="10" fill="#828282" font-family="monospace">sockets_list = [server, mario, giulia, luca]</text>
+  <text x="240" y="304" text-anchor="middle" font-size="10" fill="#828282">select() dice quali socket sono pronte</text>
+  <text x="240" y="318" text-anchor="middle" font-size="10" fill="#828282">senza dover controllarle una per una</text>
+
+  <text x="240" y="348" text-anchor="middle" font-size="12" fill="#828282">select() gestisce tante connessioni contemporaneamente</text>
+</svg>

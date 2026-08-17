@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Anatomia di un tag HTML e struttura ad albero della pagina](/images/web/html/html.svg){:class="aside-image"}
+
 HTML (Hyper text markup language – Linguaggio ipertestuale a marcatori) è un linguaggio inventato da **Tim Berners Lee** nel 1989 e diffuso al pubblico nel 1993 per avere la *libertà di pubblicare le sue ricerche senza dover passare attraverso il controllo degli editori delle riviste scientifiche*. 
 Tim era un ricercatore che lavorava al CERN di Ginevra ed aveva difficoltà a far pubblicare i suoi articoli. Nella sua ricerca di libertà inventò il WEB.
 

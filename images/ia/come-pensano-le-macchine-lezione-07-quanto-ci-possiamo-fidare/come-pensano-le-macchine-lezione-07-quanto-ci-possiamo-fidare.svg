@@ -1,0 +1,26 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cover-title cover-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="cover-title">Un misuratore di affidabilità</title>
+  <desc id="cover-desc">Un quadrante a semicerchio diviso in tre fasce colorate, da "poco affidabile" a "molto affidabile", con una lancetta ferma a metà a indicare che la fiducia dipende dal tipo di domanda, e una nota sui modi di misurarla: benchmark, giudici, arene.</desc>
+
+  <text x="240" y="28" fill="#111111" font-size="17" font-weight="bold" text-anchor="middle">Quanto possiamo fidarci?</text>
+
+  <path d="M 100,210 A 140,140 0 0,1 170,88.8" fill="none" stroke="#f66a0a" stroke-width="20" stroke-linecap="round" />
+  <path d="M 170,88.8 A 140,140 0 0,1 310,88.8" fill="none" stroke="#c9c9c9" stroke-width="20" stroke-linecap="round" />
+  <path d="M 310,88.8 A 140,140 0 0,1 380,210" fill="none" stroke="#2a7ae2" stroke-width="20" stroke-linecap="round" />
+
+  <line x1="240" y1="210" x2="215.7" y2="72.1" stroke="#111111" stroke-width="4" stroke-linecap="round" />
+  <circle cx="240" cy="210" r="11" fill="#111111" />
+
+  <text x="105" y="240" fill="#c85506" font-size="12" text-anchor="middle">poco</text>
+  <text x="105" y="255" fill="#c85506" font-size="12" text-anchor="middle">affidabile</text>
+
+  <text x="240" y="240" fill="#666666" font-size="12" text-anchor="middle">dipende</text>
+  <text x="240" y="255" fill="#666666" font-size="12" text-anchor="middle">dal caso</text>
+
+  <text x="375" y="240" fill="#1d5eb8" font-size="12" text-anchor="middle">molto</text>
+  <text x="375" y="255" fill="#1d5eb8" font-size="12" text-anchor="middle">affidabile</text>
+
+  <rect x="90" y="290" width="300" height="56" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+  <text x="240" y="313" fill="#111111" font-size="12" text-anchor="middle">benchmark, giudici, arene:</text>
+  <text x="240" y="331" fill="#111111" font-size="12" text-anchor="middle">tre modi di misurarlo, nessuno perfetto</text>
+</svg>

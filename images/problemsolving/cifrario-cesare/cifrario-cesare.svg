@@ -1,0 +1,45 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Cifrario di Cesare: scorrimento di 3</text>
+
+  <!-- plain alphabet row -->
+  <g font-size="14" fill="#111111">
+    <rect x="20" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="38" y="78" text-anchor="middle">A</text>
+    <rect x="60" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="78" y="78" text-anchor="middle">B</text>
+    <rect x="100" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="118" y="78" text-anchor="middle">C</text>
+    <rect x="140" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="158" y="78" text-anchor="middle">D</text>
+    <rect x="180" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="198" y="78" text-anchor="middle">E</text>
+    <rect x="220" y="55" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="238" y="78" text-anchor="middle">F</text>
+  </g>
+  <text x="18" y="47" font-size="12" fill="#828282">testo in chiaro</text>
+
+  <!-- shifted alphabet row -->
+  <g font-size="14" fill="#111111">
+    <rect x="100" y="145" width="36" height="36" rx="6" fill="white" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="118" y="168" text-anchor="middle">A</text>
+    <rect x="140" y="145" width="36" height="36" rx="6" fill="white" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="158" y="168" text-anchor="middle">B</text>
+    <rect x="180" y="145" width="36" height="36" rx="6" fill="white" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="198" y="168" text-anchor="middle">C</text>
+  </g>
+  <text x="240" y="205" font-size="12" fill="#828282">testo cifrato (traslato di 3 posizioni)</text>
+
+  <!-- arrows showing shift -->
+  <path d="M 38 93 C 38 120, 118 130, 118 143" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 78 93 C 78 120, 158 130, 158 143" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 118 93 C 118 120, 198 130, 198 143" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="240" y="250" text-anchor="middle" font-size="13" fill="#828282">ogni lettera viene sostituita con quella che si trova</text>
+  <text x="240" y="268" text-anchor="middle" font-size="13" fill="#828282">N posizioni più avanti nell'alfabeto (qui N=3: A&#8594;D)</text>
+</svg>

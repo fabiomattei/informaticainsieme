@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart del ciclo until con condizione invertita](/images/ruby/il-ciclo-until/il-ciclo-until.svg){:class="aside-image"}
+
 ## Il ciclo until
 
 Ruby è uno dei pochi linguaggi a disporre della parola chiave `until`.

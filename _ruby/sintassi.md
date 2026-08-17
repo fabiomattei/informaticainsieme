@@ -5,6 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Anatomia di una definizione di metodo e prefissi di visibilità](/images/ruby/sintassi/sintassi.svg){:class="aside-image"}
 
 ## Tipi di dato
 

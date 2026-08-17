@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tipi fondamentali di C++ con la loro dimensione in byte](/images/cpp/tipi-di-dato/tipi-di-dato.svg){:class="aside-image"}
+
 ## Tipizzazione statica
 
 In C++ ogni variabile ha un tipo **fisso** stabilito al momento della

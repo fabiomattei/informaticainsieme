@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=20'
 ---
 
+![Finestra di gioco vuota pronta per essere riempita con la logica del videogioco](/images/videogames/template-vuoto/template-vuoto.svg){:class="aside-image"}
+
 Il seguente codice è un template vuoto, un modello da riempire nella costruzione di un videogioco. Rimedia alla fase tediosa di cercare nella libreria le basi per partire e toglie il programmatore dal empasse della pagine bianca
 
 {% highlight shell %}

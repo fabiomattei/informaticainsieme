@@ -1,0 +1,30 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Personalizzare il Prompt</text>
+
+  <!-- terminal window with custom title/color -->
+  <rect x="40" y="50" width="400" height="150" rx="6" fill="#001a33"/>
+  <rect x="40" y="50" width="400" height="26" rx="6" fill="#2a7ae2"/>
+  <rect x="40" y="66" width="400" height="10" fill="#2a7ae2"/>
+  <circle cx="58" cy="63" r="4" fill="#ffffff"/>
+  <circle cx="72" cy="63" r="4" fill="#ffffff"/>
+  <circle cx="86" cy="63" r="4" fill="#ffffff"/>
+  <text x="240" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff">Il mio Prompt</text>
+
+  <text x="58" y="105" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f66a0a">C:\&gt; title Il mio Prompt</text>
+  <text x="58" y="130" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#7fd97f">C:\&gt; color 0A</text>
+  <text x="58" y="155" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">C:\&gt; start notepad.exe</text>
+  <text x="58" y="180" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">C:\&gt; attrib +h appunti.txt</text>
+
+  <!-- doskey history -->
+  <rect x="40" y="225" width="190" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="135" y="245" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">doskey /history</text>
+  <text x="55" y="265" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">dir /w</text>
+  <text x="55" y="282" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">cls</text>
+  <text x="55" y="299" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">elenco=dir /w</text>
+
+  <!-- exit box -->
+  <rect x="250" y="225" width="190" height="90" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="345" y="245" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">exit / exit /b</text>
+  <text x="345" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">chiude il Prompt</text>
+  <text x="345" y="290" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">o solo lo script</text>
+</svg>

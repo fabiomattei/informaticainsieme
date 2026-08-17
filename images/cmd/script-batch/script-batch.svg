@@ -1,0 +1,47 @@
+<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Uno script batch (.bat)</text>
+
+  <!-- bat file box -->
+  <rect x="40" y="50" width="180" height="230" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="130" y="75" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">saluto.bat</text>
+
+  <circle cx="60" cy="100" r="10" fill="#2a7ae2"/>
+  <text x="60" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff">1</text>
+  <text x="80" y="105" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#111111">@echo off</text>
+
+  <circle cx="60" cy="140" r="10" fill="#2a7ae2"/>
+  <text x="60" y="145" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff">2</text>
+  <text x="80" y="145" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">echo Ciao!</text>
+
+  <circle cx="60" cy="180" r="10" fill="#2a7ae2"/>
+  <text x="60" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff">3</text>
+  <text x="80" y="185" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#111111">pause</text>
+
+  <line x1="60" y1="110" x2="60" y2="130" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="60" y1="150" x2="60" y2="170" stroke="#2a7ae2" stroke-width="2"/>
+
+  <text x="130" y="220" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">eseguiti in sequenza,</text>
+  <text x="130" y="238" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">uno dopo l'altro</text>
+
+  <!-- arrow to terminal -->
+  <line x1="220" y1="150" x2="280" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- terminal -->
+  <rect x="280" y="70" width="160" height="160" rx="6" fill="#1e1e1e"/>
+  <circle cx="296" cy="85" r="4" fill="#828282"/>
+  <circle cx="308" cy="85" r="4" fill="#828282"/>
+  <circle cx="320" cy="85" r="4" fill="#828282"/>
+  <text x="296" y="112" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">C:\&gt; saluto.bat</text>
+  <text x="296" y="140" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">Ciao!</text>
+  <text x="296" y="165" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">Premere un tasto</text>
+  <text x="296" y="180" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">per continuare . . .</text>
+
+  <rect x="40" y="300" width="400" height="70" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="325" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">if · for · goto · call · errorlevel</text>
+  <text x="240" y="348" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">controllano l'ordine di esecuzione</text>
+</svg>

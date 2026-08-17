@@ -5,6 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart del ciclo for: inizializzazione, condizione, corpo e incremento](/images/problemsolving/pseudo-for/pseudo-for.svg){:class="aside-image"}
 
 {::options parse_block_html="true" /}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j0GejU_FFHQ?si=g03JbynX884JhjaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

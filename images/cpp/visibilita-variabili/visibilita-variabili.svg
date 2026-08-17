@@ -1,0 +1,22 @@
+<svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="10" y="10" width="360" height="320" rx="8" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="24" y="32" font-size="12" fill="#f66a0a" font-weight="bold">scope globale</text>
+  <text x="24" y="50" font-size="12" fill="#828282">int contatore = 0;</text>
+
+  <rect x="30" y="64" width="320" height="240" rx="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="44" y="86" font-size="12" fill="#2a7ae2" font-weight="bold">int main() { ... }  — scope di funzione</text>
+  <text x="44" y="104" font-size="12" fill="#828282">int x = 5;</text>
+
+  <rect x="50" y="118" width="280" height="80" rx="8" fill="#ffffff" stroke="#2a7ae2" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="64" y="140" font-size="12" fill="#111111" font-weight="bold">{ ... }  — scope di blocco</text>
+  <text x="64" y="158" font-size="12" fill="#828282">int x = 100;  // shadowing</text>
+  <text x="64" y="176" font-size="11" fill="#828282">visibile solo qui dentro</text>
+
+  <text x="44" y="222" font-size="12" fill="#828282">// qui x torna a valere 5</text>
+
+  <rect x="50" y="234" width="280" height="56" rx="8" fill="#ffffff" stroke="#2a7ae2" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="64" y="256" font-size="12" fill="#111111" font-weight="bold">for (int i = 0; ...) { }</text>
+  <text x="64" y="274" font-size="11" fill="#828282">i esiste solo dentro il ciclo</text>
+
+  <text x="24" y="322" font-size="11" fill="#828282">più interno = vita più breve, visibilità più ristretta</text>
+</svg>

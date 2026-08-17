@@ -1,0 +1,48 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="200" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Movimento del robot sulla griglia</text>
+
+  <!-- grid -->
+  <g stroke="#828282" stroke-width="1">
+    <line x1="60" y1="60" x2="340" y2="60"/>
+    <line x1="60" y1="130" x2="340" y2="130"/>
+    <line x1="60" y1="200" x2="340" y2="200"/>
+    <line x1="60" y1="270" x2="340" y2="270"/>
+    <line x1="60" y1="340" x2="340" y2="340"/>
+    <line x1="60" y1="60" x2="60" y2="340"/>
+    <line x1="130" y1="60" x2="130" y2="340"/>
+    <line x1="200" y1="60" x2="200" y2="340"/>
+    <line x1="270" y1="60" x2="270" y2="340"/>
+    <line x1="340" y1="60" x2="340" y2="340"/>
+  </g>
+
+  <!-- path -->
+  <polyline points="95,305 95,235 165,235 165,165 235,165" fill="none" stroke="#f66a0a" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+  <!-- start marker -->
+  <circle cx="95" cy="305" r="6" fill="#828282"/>
+  <text x="95" y="325" text-anchor="middle" font-size="11" fill="#828282">start</text>
+
+  <!-- robot icon at final cell -->
+  <g transform="translate(235,165)">
+    <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+    <circle cx="-7" cy="-4" r="3" fill="#2a7ae2"/>
+    <circle cx="7" cy="-4" r="3" fill="#2a7ae2"/>
+    <rect x="-8" y="6" width="16" height="4" fill="#2a7ae2"/>
+    <line x1="0" y1="-30" x2="0" y2="-18" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- direction labels -->
+  <text x="95" y="270" text-anchor="middle" font-size="12" fill="#2a7ae2">avanti</text>
+  <text x="130" y="230" text-anchor="middle" font-size="12" fill="#2a7ae2">destra</text>
+  <text x="165" y="200" text-anchor="middle" font-size="12" fill="#2a7ae2">avanti</text>
+  <text x="200" y="160" text-anchor="middle" font-size="12" fill="#2a7ae2">destra</text>
+
+  <text x="200" y="375" text-anchor="middle" font-size="13" fill="#828282">i comandi (avanti, sinistra, destra) muovono</text>
+  <text x="200" y="393" text-anchor="middle" font-size="13" fill="#828282">il robot cella per cella sulla griglia</text>
+</svg>

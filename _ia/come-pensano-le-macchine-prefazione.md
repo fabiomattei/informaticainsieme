@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![La mappa del percorso del libro, dalla prefazione alla lezione 6, con le lezioni successive che proseguono](/images/ia/come-pensano-le-macchine-prefazione/come-pensano-le-macchine-prefazione.svg){:class="aside-image"}
+
 Hai mai parlato con un chatbot — per farti spiegare un compito, per farti scrivere una mail, o solo per curiosità — e ti sei chiesto cosa succede *davvero* dentro, tra il momento in cui premi invio e quello in cui appare la risposta?
 
 La spiegazione che senti più spesso è: "indovina la parola successiva". Vera, ma quasi inutile da sola — un po' come dire che un'auto "si muove bruciando benzina". Giusto, ma non spiega perché serve un motore, una trasmissione, quattro ruote invece di due. Questo libro vuole aprire il cofano, senza però chiederti di avere già una laurea in ingegneria per capire cosa vedi.

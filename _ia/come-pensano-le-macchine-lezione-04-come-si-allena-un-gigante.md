@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Miliardi di pagine di testo che entrano in un grande modello, con un ciclo di correzione che aggiusta i suoi parametri](/images/ia/come-pensano-le-macchine-lezione-04-come-si-allena-un-gigante/come-pensano-le-macchine-lezione-04-come-si-allena-un-gigante.svg){:class="aside-image"}
+
 ### 4.1 Il gioco del testo bucherellato
 
 Immagina un esercizio scolastico enorme: ti danno milioni di pagine di testo — libri, articoli, siti web, forum — ma con parole a caso cancellate e sostituite da uno spazio vuoto. Il tuo compito, per ogni spazio vuoto, è indovinare quale parola mancava. Sbagli, ti viene detto qual era la parola giusta, correggi leggermente il tuo modo di ragionare, e passi al buco successivo. Ripeti questo per miliardi di buchi.

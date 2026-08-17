@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un messaggio ricevuto composto da header e dati di username e testo](/images/rete/parte5/parte5.svg){:class="aside-image"}
+
 Andiamo ora a costruire il client del nostro sistema di chat.
 
 {% highlight python %}

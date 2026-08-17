@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Le clausole SELECT, FROM e WHERE annotate su una tabella](/images/database/il-linguaggio-sql/il-linguaggio-sql.svg){:class="aside-image"}
+
 Il linguaggio SQL permette al database administrator di operare sui database. Il linguaggio è di per sé molto semplice e conta pochi comandi. Le possibili combinazioni di comandi danno però luogo ad una ricchissima potenzialità espressiva.
 
 #### CREATE TABLE 

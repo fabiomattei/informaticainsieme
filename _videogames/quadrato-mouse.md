@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=15'
 ---
 
+![Pallina nella finestra di gioco che segue il movimento del mouse](/images/videogames/quadrato-mouse/quadrato-mouse.svg){:class="aside-image"}
+
 {% highlight shell %}
 
 """

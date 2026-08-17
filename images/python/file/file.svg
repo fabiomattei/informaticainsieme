@@ -1,0 +1,31 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Ciclo di vita di un file</text>
+
+  <rect x="20" y="110" width="100" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="70" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">open()</text>
+  <text x="70" y="153" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">"r" / "w" / "a"</text>
+
+  <line x1="120" y1="140" x2="150" y2="140" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="155" y="110" width="150" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">read / write</text>
+  <text x="230" y="153" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">readlines() / write()</text>
+
+  <line x1="305" y1="140" x2="335" y2="140" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="340" y="110" width="110" height="60" rx="6" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="395" y="135" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">close()</text>
+  <text x="395" y="153" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">chiude il file</text>
+
+  <!-- file icon under read/write -->
+  <path d="M205,200 h30 l12,12 v38 h-42 z" fill="#ffffff" stroke="#828282" stroke-width="1.5"/>
+  <path d="M235,200 v12 h12" fill="none" stroke="#828282" stroke-width="1.5"/>
+  <text x="230" y="264" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">dati.txt</text>
+
+  <text x="240" y="290" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">f = open(...) → f.readlines() / f.write(...) → f.close()</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di Venn con due Set e la loro intersezione](/images/ruby/set/set.svg){:class="aside-image"}
+
 ## Un insieme senza duplicati
 
 Un **Set** è una collezione di elementi **non ordinata** e **senza

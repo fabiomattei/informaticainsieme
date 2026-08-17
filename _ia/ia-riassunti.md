@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un testo lungo viene condensato in un riassunto breve](/images/ia/ia-riassunti/ia-riassunti.svg){:class="aside-image"}
+
 ## Cos'è la sintesi tramite IA?
 
 La sintesi tramite IA prevede l'utilizzo di tecnologie di intelligenza artificiale per condensare grandi quantità di dati testuali, audio o video in una forma più gestibile e coerente. Questo processo conserva (auspicabilmente) le informazioni o i temi principali, consentendo una comprensione più semplice e un assorbimento più rapido di informazioni.

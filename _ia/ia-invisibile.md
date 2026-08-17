@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Telefono, barra di ricerca e feed: l'IA incorporata negli strumenti quotidiani](/images/ia/ia-invisibile/ia-invisibile.svg){:class="aside-image"}
+
 ## L'IA che non si vede
 
 Quando si parla di intelligenza artificiale il pensiero va subito a ChatGPT, a Midjourney o ai robot. Ma la maggior parte dell'IA con cui interagiamo ogni giorno non si presenta così: non ha un'interfaccia, non risponde a domande, non chiede un prompt. Semplicemente **fa cose**, in silenzio, incorporata negli strumenti che usiamo già.

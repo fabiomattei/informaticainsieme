@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Ciclo non bloccante del client: invia, prova a ricevere, continua](/images/rete/client/client.svg){:class="aside-image"}
+
 # Socket Chatroom client - Creating chat application with sockets in Python
 
 Welcome to part 5 of the sockets tutorial, in this tutorial we're going to build the client's code for our chatroom application.

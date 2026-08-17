@@ -1,0 +1,37 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="210" y="26" text-anchor="middle" font-size="15" fill="#111111" font-weight="bold">saluto = "ciao"</text>
+
+  <g stroke="#2a7ae2" stroke-width="2" fill="#eef2f7">
+    <rect x="60"  y="55" width="70" height="55" rx="6"/>
+    <rect x="130" y="55" width="70" height="55" rx="6" fill="#fff3ea" stroke="#f66a0a"/>
+    <rect x="200" y="55" width="70" height="55" rx="6"/>
+    <rect x="270" y="55" width="70" height="55" rx="6"/>
+  </g>
+
+  <g font-size="20" text-anchor="middle" fill="#111111" font-family="monospace">
+    <text x="95"  y="92">c</text>
+    <text x="165" y="92" fill="#f66a0a" font-weight="bold">i</text>
+    <text x="235" y="92">a</text>
+    <text x="305" y="92">o</text>
+  </g>
+
+  <g font-size="13" text-anchor="middle" fill="#828282">
+    <text x="95"  y="128">0</text>
+    <text x="165" y="128" fill="#f66a0a" font-weight="bold">1</text>
+    <text x="235" y="128">2</text>
+    <text x="305" y="128">3</text>
+  </g>
+
+  <g font-size="13" text-anchor="middle" fill="#828282">
+    <text x="95"  y="45">-4</text>
+    <text x="165" y="45">-3</text>
+    <text x="235" y="45">-2</text>
+    <text x="305" y="45">-1</text>
+  </g>
+
+  <path d="M165 110 L165 150" stroke="#f66a0a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="165" y="170" text-anchor="middle" font-size="13" fill="#f66a0a" font-weight="bold">saluto[1] → 'i'</text>
+
+  <text x="210" y="205" text-anchor="middle" font-size="13" fill="#828282">'i'.ord → 105   105.chr → 'i'</text>
+  <text x="210" y="228" text-anchor="middle" font-size="12" fill="#828282">ogni carattere ha un indice e un codice ASCII</text>
+</svg>

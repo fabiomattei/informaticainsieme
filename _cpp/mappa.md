@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Coppie chiave-valore di una std::map](/images/cpp/mappa/mappa.svg){:class="aside-image"}
+
 ## Associare chiavi a valori
 
 `std::map` è un contenitore che associa ogni **chiave** a un **valore**.

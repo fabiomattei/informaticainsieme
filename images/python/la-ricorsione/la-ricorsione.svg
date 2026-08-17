@@ -1,0 +1,38 @@
+<svg viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+  <text x="210" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">fattoriale(3): pila delle chiamate</text>
+
+  <rect x="60" y="45" width="300" height="55" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">fattoriale(3) = 3 * fattoriale(2)</text>
+
+  <line x1="210" y1="100" x2="210" y2="120" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="85" y="120" width="250" height="55" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="153" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">fattoriale(2) = 2 * fattoriale(1)</text>
+
+  <line x1="210" y1="175" x2="210" y2="195" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="195" width="200" height="55" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">fattoriale(1) = 1 * fattoriale(0)</text>
+
+  <line x1="210" y1="250" x2="210" y2="270" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- base case highlighted -->
+  <rect x="135" y="270" width="150" height="55" rx="6" fill="#f66a0a" fill-opacity="0.15" stroke="#f66a0a" stroke-width="2"/>
+  <text x="210" y="298" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">fattoriale(0) = 1</text>
+  <text x="210" y="315" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#f66a0a">passo base</text>
+
+  <!-- return path -->
+  <path d="M310,290 C395,290 395,240 320,220" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <text x="210" y="360" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">le chiamate scendono fino al caso base,</text>
+  <text x="210" y="383" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">poi i risultati risalgono moltiplicandosi</text>
+  <text x="210" y="406" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">risultato finale: 3! = 6</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 460 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="230" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Glossario</text>
+
+  <!-- alphabet strip -->
+  <line x1="60" y1="55" x2="60" y2="235" stroke="#c9c9c9" stroke-width="1.5"/>
+  <g font-size="10" fill="#828282">
+    <line x1="56" y1="60" x2="64" y2="60" stroke="#c9c9c9" stroke-width="1.5"/><text x="46" y="63">A</text>
+    <line x1="56" y1="82" x2="64" y2="82" stroke="#c9c9c9" stroke-width="1.5"/>
+    <line x1="56" y1="104" x2="64" y2="104" stroke="#c9c9c9" stroke-width="1.5"/><text x="46" y="107">C</text>
+    <line x1="56" y1="126" x2="64" y2="126" stroke="#c9c9c9" stroke-width="1.5"/>
+    <line x1="56" y1="148" x2="64" y2="148" stroke="#c9c9c9" stroke-width="1.5"/><text x="46" y="151">E</text>
+    <line x1="56" y1="170" x2="64" y2="170" stroke="#c9c9c9" stroke-width="1.5"/>
+    <line x1="56" y1="192" x2="64" y2="192" stroke="#c9c9c9" stroke-width="1.5"/><text x="46" y="195">G</text>
+    <line x1="56" y1="214" x2="64" y2="214" stroke="#c9c9c9" stroke-width="1.5"/>
+  </g>
+  <circle cx="60" cy="82" r="5" fill="#f66a0a"/>
+  <text x="45" y="86" font-size="11" font-weight="bold" fill="#c85506">B</text>
+
+  <!-- stacked index cards -->
+  <rect x="110" y="70" width="280" height="180" rx="8" fill="#f7f7f7" stroke="#c9c9c9" stroke-width="1.5"/>
+  <rect x="100" y="60" width="280" height="180" rx="8" fill="#fbfbfb" stroke="#c9c9c9" stroke-width="1.5"/>
+  <rect x="90" y="50" width="280" height="185" rx="8" fill="white" stroke="#2a7ae2" stroke-width="2"/>
+
+  <text x="115" y="90" font-size="16" font-weight="bold" fill="#1d5eb8">Backpropagation</text>
+  <line x1="115" y1="98" x2="255" y2="98" stroke="#2a7ae2" stroke-width="1.5"/>
+
+  <g font-size="12" fill="#111111">
+    <text x="115" y="122">la colpa di un errore finale</text>
+    <text x="115" y="140">viene fatta risalire, un piano</text>
+    <text x="115" y="158">alla volta, dall'ultimo strato</text>
+    <text x="115" y="176">fino al primo, per correggere</text>
+    <text x="115" y="194">ogni peso della rete.</text>
+  </g>
+
+  <rect x="270" y="205" width="86" height="24" rx="12" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="313" y="221" text-anchor="middle" font-size="11" fill="#c85506">Lezione 6</text>
+
+  <text x="230" y="290" text-anchor="middle" font-size="13" fill="#828282">termini in ordine alfabetico,</text>
+  <text x="230" y="308" text-anchor="middle" font-size="13" fill="#828282">con rimando alla lezione dove sono spiegati</text>
+</svg>

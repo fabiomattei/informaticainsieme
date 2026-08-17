@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di una funzione come scatola nera con parametri in ingresso e valore di ritorno in uscita](/images/python/funzioni/funzioni.svg){:class="aside-image"}
+
 Python è un linguaggio e in quanto tale è costituito da un vocabolario che comprente molte parole, tra queste ricordiamo input, print, if, while e for. Attraverso queste parole il programmatore comunica all’interprete, e quest’ultimo al computer, le operazioni da svolgere.
 
 Il vocabolario di Python non è fisso ma estensibile possiamo cioè definire nuove parole con nuovi significati. Queste vengono chiamte funzioni e raggruppano al loro interno una sequenza di istruzioni ordinata (algoritmo) da eseguire quando vengono invocate.

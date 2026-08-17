@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Codice sorgente tradotto in eseguibile tramite compilatore o interprete](/images/codifica/la-codifica-del-software/la-codifica-del-software.svg){:class="aside-image"}
+
 Anche il software, cioè i programmi che il computer esegue, deve essere codificato in 0 e 1, esattamente come abbiamo visto per i numeri, il testo, le immagini e i video.
 
 Un programma esiste però in due forme molto diverse tra loro: il **codice sorgente** e il **file eseguibile**.

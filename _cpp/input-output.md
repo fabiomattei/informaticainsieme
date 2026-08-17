@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flusso di cin e cout tra il programma e il terminale](/images/cpp/input-output/input-output.svg){:class="aside-image"}
+
 ## cout e cin
 
 In C++ l'output avviene tramite lo **stream** `cout` (character output) e

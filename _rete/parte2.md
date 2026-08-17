@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un pacchetto con header di lunghezza fissa seguito dai dati](/images/rete/parte2/parte2.svg){:class="aside-image"}
+
 Nella lezione precedente abbiamo imparato come mandare e ricevere dati attraverso un socket e abbiamo sollevato il problema di cosa succede quando il nostro messaggio è più grande della dimensione del nostro buffer. Ora risolveremo questo problema.
 
 Come detto in precedenza ci sono delle strate per gestire la cosa a livello logico. La soluzione più gettonata consiste nel cominciare tutti i messaggi con un header che contiene la lunghezza del messaggio che sta per arrivare. La sfida successiva consiste nel normalizzare questo header in qualche modo. Potremmo considerare di usare una serie di caratteri per dividerlo dal resto del messaggio ma poi si corre il rischio che gli utenti non interpretino bene oppure modifichino questa informazione di proposito. Si può risolvere la cosa con un header di lunghezza fissa, sempre uguale, dove i primi n byte contengono i dati dell'header cioè la lunghezza del messaggio che sta per arrivare.

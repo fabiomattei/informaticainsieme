@@ -6,6 +6,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di una variabile associata a diversi tipi di dato: int, float, str, complex](/images/python/tipi-di-variabile/tipi-di-variabile.svg){:class="aside-image"}
+
 Una informazione, conservata in una variabile, ha sempre un tipo associato. **Il tipo della variabile determina l’insieme di valori che una variabile può assumere e le operazioni che possono manipolare tali valori**.
 
 - interi (int) Es: 1, 5, 7, 1983, 20003

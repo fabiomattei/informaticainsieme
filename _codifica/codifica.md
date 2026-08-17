@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Testi, immagini, filmati e suoni trasformati in 0 e 1](/images/codifica/codifica/codifica.svg){:class="aside-image"}
+
 Il computer memorizza ed elabora informazioni. Le informazioni possono essere di diversa natura: 
 
 * testi: brevi come un messaggio o lunghi come un libro; 

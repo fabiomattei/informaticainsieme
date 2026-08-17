@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Ricerca sequenziale con puntatore e dimezzamento dell'intervallo nella ricerca binaria](/images/algoritmi/ricerca/ricerca.svg){:class="aside-image"}
+
 ## Ricerca lineare o sequenziale
 
 L'algoritmo controlla in sequenza gli elementi dell'insieme arrestandosi quando ne trova uno che soddisfa il criterio di ricerca. Non potendosi avvalere di alcun ordinamento tra gli elementi l'algoritmo può concludere con certezza che l'insieme non contiene alcun elemento corrispondente solo dopo averli verificati tutti, richiedendo pertanto un numero di controlli, nel caso peggiore, pari alla cardinalità dell'intero insieme. 

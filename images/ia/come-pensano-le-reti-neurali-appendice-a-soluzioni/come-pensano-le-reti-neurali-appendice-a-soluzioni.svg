@@ -1,0 +1,41 @@
+<svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="210" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Soluzioni ai giochi</text>
+
+  <rect x="40" y="50" width="340" height="345" rx="10" fill="white" stroke="#2a7ae2" stroke-width="2"/>
+
+  <g font-size="14" fill="#111111">
+    <rect x="62" y="72" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,85 L73,91 L82,77" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="90">Lezione 1 — interruttore</text>
+
+    <rect x="62" y="110" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,123 L73,129 L82,115" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="128">Lezione 2 — XOR</text>
+
+    <rect x="62" y="148" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,161 L73,167 L82,153" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="166">Lezione 3 — lo stencil</text>
+
+    <rect x="62" y="186" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,199 L73,205 L82,191" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="204">Lezione 4 — telefono senza fili</text>
+
+    <rect x="62" y="224" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,237 L73,243 L82,229" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="242">Lezione 5 — sicuri al 70%</text>
+
+    <rect x="62" y="262" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,275 L73,281 L82,267" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="280">Lezione 6 — la colpa risale</text>
+
+    <rect x="62" y="300" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,313 L73,319 L82,305" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="318">Lezione 7 — capito o a memoria</text>
+
+    <rect x="62" y="338" width="24" height="24" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M67,351 L73,357 L82,343" fill="none" stroke="#f66a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="356">Lezione 8 — distanza e attenzione</text>
+  </g>
+
+  <text x="210" y="410" text-anchor="middle" font-size="12" fill="#828282">otto giochi, otto soluzioni ragionate</text>
+</svg>

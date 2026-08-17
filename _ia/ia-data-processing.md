@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Pipeline dei dati grezzi che diventano previsioni o segnalazioni di anomalia](/images/ia/ia-data-processing/ia-data-processing.svg){:class="aside-image"}
+
 Si tratta di algoritmi che analizzano dati specifici per estrapolare informazioni e compiere azioni in conseguenza. 
 In questa categoria rientrano diversi utilizzi, come l’Analisi Predittiva (analisi di dati per fornire previsioni 
 sull’andamento futuro di un determinato fenomeno) e il Rilevamento di frodi (identificazione di elementi non conformi 

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Testo e voce, nei due sensi</text>
+
+  <!-- TTS row -->
+  <text x="240" y="54" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#2a7ae2" font-weight="600">Text-to-Speech</text>
+  <rect x="30" y="66" width="150" height="56" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="105" y="99" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">"Ciao, come stai?"</text>
+  <line x1="190" y1="94" x2="288" y2="94" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- speaker icon -->
+  <g>
+    <polygon points="300,80 320,80 340,64 340,124 320,108 300,108" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M350,74 Q362,94 350,114" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+    <path d="M362,64 Q382,94 362,124" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  </g>
+  <text x="330" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">Voce sintetica</text>
+
+  <!-- divider -->
+  <line x1="30" y1="176" x2="450" y2="176" stroke="#828282" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- STT row -->
+  <text x="240" y="204" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#f66a0a" font-weight="600">Speech-to-Text</text>
+
+  <!-- mic / waveform icon -->
+  <g>
+    <rect x="40" y="222" width="24" height="40" rx="12" fill="#fdf1e7" stroke="#f66a0a" stroke-width="2"/>
+    <path d="M30,250 Q52,272 74,250" fill="none" stroke="#f66a0a" stroke-width="2"/>
+    <line x1="52" y1="272" x2="52" y2="284" stroke="#f66a0a" stroke-width="2"/>
+    <line x1="90" y1="234" x2="90" y2="264" stroke="#f66a0a" stroke-width="3"/>
+    <line x1="102" y1="222" x2="102" y2="276" stroke="#f66a0a" stroke-width="3"/>
+    <line x1="114" y1="240" x2="114" y2="258" stroke="#f66a0a" stroke-width="3"/>
+  </g>
+  <text x="75" y="298" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">Voce registrata</text>
+
+  <line x1="140" y1="246" x2="288" y2="246" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="300" y="218" width="150" height="56" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="375" y="251" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">"Ciao, come stai?"</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Frecce di input e output tra utente, programma e console](/images/ruby/input-output/input-output.svg){:class="aside-image"}
+
 ## Scrivere sulla console: puts e print
 
 In Ruby esistono tre modi per scrivere un valore sulla console.

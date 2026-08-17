@@ -1,0 +1,40 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Anatomia di un tag HTML</text>
+
+  <!-- the tag line -->
+  <text x="40" y="80" font-size="20" font-family="monospace" fill="#2a7ae2" font-weight="bold">&lt;h1&gt;</text>
+  <text x="115" y="80" font-size="20" font-family="monospace" fill="#111111">Il modello atomico</text>
+  <text x="40" y="112" font-size="20" font-family="monospace" fill="#2a7ae2" font-weight="bold">&lt;/h1&gt;</text>
+
+  <!-- annotations -->
+  <line x1="55" y1="88" x2="55" y2="120" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="55" y="136" text-anchor="middle" font-size="11" fill="#2a7ae2">tag di apertura</text>
+
+  <line x1="220" y1="88" x2="220" y2="150" stroke="#828282" stroke-width="1.5"/>
+  <text x="220" y="164" text-anchor="middle" font-size="11" fill="#828282">contenuto</text>
+
+  <line x1="65" y1="120" x2="65" y2="150" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="65" y="182" text-anchor="middle" font-size="11" fill="#2a7ae2">tag di</text>
+  <text x="65" y="196" text-anchor="middle" font-size="11" fill="#2a7ae2">chiusura</text>
+
+  <!-- DOM tree sketch -->
+  <text x="240" y="222" text-anchor="middle" font-size="12" fill="#828282">struttura ad albero della pagina</text>
+
+  <rect x="200" y="234" width="80" height="30" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="254" text-anchor="middle" font-size="11" font-family="monospace" fill="#111111">html</text>
+
+  <line x1="240" y1="264" x2="150" y2="284" stroke="#2a7ae2" stroke-width="1.5"/>
+  <line x1="240" y1="264" x2="330" y2="284" stroke="#2a7ae2" stroke-width="1.5"/>
+
+  <rect x="110" y="286" width="80" height="28" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="150" y="304" text-anchor="middle" font-size="11" font-family="monospace" fill="#111111">head</text>
+
+  <rect x="290" y="286" width="80" height="28" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="330" y="304" text-anchor="middle" font-size="11" font-family="monospace" fill="#111111">body</text>
+</svg>

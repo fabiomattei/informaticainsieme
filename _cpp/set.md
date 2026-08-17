@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di Venn di due std::set con la loro intersezione](/images/cpp/set/set.svg){:class="aside-image"}
+
 ## Un insieme senza duplicati
 
 `std::set` è un contenitore che memorizza elementi **unici** in ordine

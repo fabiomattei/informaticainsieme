@@ -1,0 +1,32 @@
+<svg viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="230" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Sottosequenza in una lista</text>
+
+  <g font-size="15" fill="#111111">
+    <rect x="20" y="60" width="46" height="42" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="43" y="86" text-anchor="middle">2</text>
+    <rect x="70" y="60" width="46" height="42" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="93" y="86" text-anchor="middle">5</text>
+
+    <rect x="120" y="55" width="46" height="52" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="143" y="86" text-anchor="middle">7</text>
+    <rect x="170" y="55" width="46" height="52" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="193" y="86" text-anchor="middle">3</text>
+    <rect x="220" y="55" width="46" height="52" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="243" y="86" text-anchor="middle">9</text>
+    <rect x="270" y="55" width="46" height="52" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+    <text x="293" y="86" text-anchor="middle">4</text>
+
+    <rect x="320" y="60" width="46" height="42" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="343" y="86" text-anchor="middle">1</text>
+    <rect x="370" y="60" width="46" height="42" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="393" y="86" text-anchor="middle">6</text>
+  </g>
+
+  <path d="M 120 50 L 266 50" stroke="#f66a0a" stroke-width="2"/>
+  <text x="193" y="40" text-anchor="middle" font-size="12" fill="#f66a0a">sottosequenza contigua: 7, 3, 9, 4</text>
+
+  <text x="230" y="140" text-anchor="middle" font-size="13" fill="#828282">S = [2, 5, 7, 3, 9, 4, 1, 6]</text>
+
+  <text x="230" y="180" text-anchor="middle" font-size="13" fill="#828282">una sottosequenza è una porzione</text>
+  <text x="230" y="198" text-anchor="middle" font-size="13" fill="#828282">continua (o selezionata) della lista originale</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowFwd6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowBwd6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">La colpa che risale la catena</text>
+
+  <!-- forward arrow -->
+  <line x1="50" y1="88" x2="435" y2="88" stroke="#2a7ae2" stroke-width="2.5" marker-end="url(#arrowFwd6)"/>
+  <text x="245" y="74" text-anchor="middle" font-size="12" fill="#1d5eb8">forward pass: calcola l'output</text>
+
+  <!-- nodes and edges -->
+  <line x1="64" y1="170" x2="162" y2="170" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="198" y1="170" x2="292" y2="170" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="328" y1="170" x2="426" y2="170" stroke="#2a7ae2" stroke-width="2"/>
+
+  <text x="113" y="160" text-anchor="middle" font-size="12" fill="#2a7ae2">w1</text>
+  <text x="245" y="160" text-anchor="middle" font-size="12" fill="#2a7ae2">w2</text>
+  <text x="377" y="160" text-anchor="middle" font-size="12" fill="#2a7ae2">w3</text>
+
+  <circle cx="50" cy="170" r="14" fill="white" stroke="#828282" stroke-width="2"/>
+  <text x="50" y="200" text-anchor="middle" font-size="11" fill="#828282">input</text>
+
+  <circle cx="180" cy="170" r="18" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="310" cy="170" r="18" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+
+  <circle cx="440" cy="170" r="14" fill="white" stroke="#828282" stroke-width="2"/>
+  <text x="440" y="200" text-anchor="middle" font-size="11" fill="#828282">errore</text>
+
+  <!-- backward arrow -->
+  <line x1="435" y1="250" x2="50" y2="250" stroke="#f66a0a" stroke-width="2.5" marker-end="url(#arrowBwd6)"/>
+  <text x="245" y="268" text-anchor="middle" font-size="12" fill="#c85506">backward pass: la colpa risale</text>
+
+  <!-- correction tags -->
+  <line x1="113" y1="250" x2="113" y2="282" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="245" y1="250" x2="245" y2="282" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="377" y1="250" x2="377" y2="282" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+  <rect x="88" y="284" width="50" height="26" rx="6" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="113" y="301" text-anchor="middle" font-size="11" fill="#111111">Δw1</text>
+  <rect x="220" y="284" width="50" height="26" rx="6" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="245" y="301" text-anchor="middle" font-size="11" fill="#111111">Δw2</text>
+  <rect x="352" y="284" width="50" height="26" rx="6" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="377" y="301" text-anchor="middle" font-size="11" fill="#111111">Δw3</text>
+</svg>

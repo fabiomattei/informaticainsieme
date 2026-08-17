@@ -1,0 +1,28 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">print() manda testo sullo schermo</text>
+
+  <!-- program box -->
+  <rect x="40" y="70" width="150" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="115" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">programma</text>
+  <text x="115" y="128" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">print("Ciao",</text>
+  <text x="115" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">end=" ")</text>
+
+  <line x1="190" y1="115" x2="270" y2="115" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- monitor -->
+  <rect x="280" y="60" width="160" height="110" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="292" y="72" width="136" height="70" rx="3" fill="#111111"/>
+  <text x="300" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#f66a0a">Ciao Come stai?</text>
+  <text x="300" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#f66a0a">Mela---Ciliegia</text>
+  <rect x="330" y="150" width="40" height="8" fill="#828282"/>
+  <text x="360" y="188" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">console</text>
+
+  <!-- sep/end annotation -->
+  <text x="240" y="230" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">sep = separatore tra oggetti</text>
+  <text x="240" y="252" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">end = simbolo finale (default: a capo)</text>
+</svg>

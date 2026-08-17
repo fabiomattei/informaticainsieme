@@ -1,0 +1,35 @@
+<svg viewBox="0 0 480 450" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">I cinque elementi di un prompt efficace</text>
+
+  <!-- RUOLO -->
+  <rect x="40" y="44" width="400" height="62" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="40" y="44" width="400" height="22" rx="6" fill="#2a7ae2"/>
+  <text x="60" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="600">RUOLO</text>
+  <text x="60" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">"Sei un copywriter esperto di e-commerce"</text>
+
+  <!-- CONTESTO -->
+  <rect x="40" y="118" width="400" height="62" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="40" y="118" width="400" height="22" rx="6" fill="#2a7ae2"/>
+  <text x="60" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="600">CONTESTO</text>
+  <text x="60" y="162" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">Zaino da viaggio per nomadi digitali, €120</text>
+
+  <!-- COMPITO (emphasis, orange) -->
+  <rect x="40" y="192" width="400" height="62" rx="6" fill="#fdf1e7" stroke="#f66a0a" stroke-width="2"/>
+  <rect x="40" y="192" width="400" height="22" rx="6" fill="#f66a0a"/>
+  <text x="60" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="600">COMPITO</text>
+  <text x="60" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">Scrivi 3 varianti di descrizione prodotto</text>
+
+  <!-- FORMATO -->
+  <rect x="40" y="266" width="400" height="62" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="40" y="266" width="400" height="22" rx="6" fill="#2a7ae2"/>
+  <text x="60" y="282" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="600">FORMATO</text>
+  <text x="60" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">Max 60 parole, con titolo accattivante</text>
+
+  <!-- VINCOLI -->
+  <rect x="40" y="340" width="400" height="62" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="40" y="340" width="400" height="22" rx="6" fill="#2a7ae2"/>
+  <text x="60" y="356" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" font-weight="600">VINCOLI</text>
+  <text x="60" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">Tono ironico, niente claim non verificabili</text>
+
+  <text x="240" y="428" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">Compito, contesto e formato bastano per iniziare</text>
+</svg>

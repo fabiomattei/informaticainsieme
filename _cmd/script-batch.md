@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![File .bat con comandi eseguiti in sequenza numerata dal terminale](/images/cmd/script-batch/script-batch.svg){:class="aside-image"}
+
 Un file **batch** è un file di testo con estensione `.bat` (o `.cmd`) che contiene una sequenza di comandi da eseguire uno dopo l'altro, esattamente come se fossero digitati a mano nel Prompt dei comandi. È l'equivalente Windows degli script di shell in ambiente Linux.
 
 ## Il primo script batch

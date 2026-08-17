@@ -5,6 +5,7 @@ author: Fabio Mattei
 layout: page
 ---
 
+![L'acqua in arrivo ad una sorgente si ripartisce equamente nei canali uscenti](/images/problemsolving/canali/canali.svg){:class="aside-image"}
 
 Sul fianco di una montagna esistono numerose sorgenti. L’acqua di una sorgente, che si suppone fluire in
 modo continuo e costante, può scorrere a valle attraverso uno o più canali. Può avvenire che uno o più canali

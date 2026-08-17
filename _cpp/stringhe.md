@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Struttura interna di una std::string indicizzata carattere per carattere](/images/cpp/stringhe/stringhe.svg){:class="aside-image"}
+
 ## std::string
 
 In C++ le stringhe di testo si rappresentano con il tipo `string` della

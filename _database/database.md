@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tabelle di un database collegate da chiavi](/images/database/database/database.svg){:class="aside-image"}
+
 L’archiviazione e il reperimento delle informazioni rappresentano una delle maggiori risposte che l’informatica ha saputo dare alle aziende e alle istituzioni.
 
 Possiamo soltanto immaginare come fossero gli archivi delle banche o degli istituti anagrafici fino a pochi decenni fa e possiamo soltanto rabbrividire pensando al lavoro richiesto per generare un estratto conto con le transazioni degli ultimi 5 anni prima dell’invenzione dei database.

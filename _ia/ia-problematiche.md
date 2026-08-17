@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Quattro problemi aperti dell'IA generativa: diritti d'autore, proprietà, energia, hardware](/images/ia/ia-problematiche/ia-problematiche.svg){:class="aside-image"}
+
 L'intelligenza artificiale, ed in particolare l'IA generativa, non solleva soltanto questioni tecniche ma anche economiche, legali, ambientali e industriali. Di seguito quattro problematiche aperte che accompagnano lo sviluppo di questi sistemi.
 
 ## Diritti di sfruttamento delle opere

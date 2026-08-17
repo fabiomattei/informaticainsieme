@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cover-title cover-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="cover-title">Un elenco di soluzioni spuntate</title>
+  <desc id="cover-desc">Una lavagnetta con dieci righe, una per ciascuna lezione del libro, ciascuna spuntata con un segno di verifica a indicare che la soluzione dell'esercizio di quella lezione è disponibile.</desc>
+
+  <rect x="30" y="20" width="340" height="420" rx="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5" />
+  <rect x="150" y="6" width="100" height="28" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2" />
+
+  <text x="200" y="58" fill="#111111" font-size="15" font-weight="bold" text-anchor="middle">Soluzioni ai giochi</text>
+  <line x1="55" y1="70" x2="345" y2="70" stroke="#828282" stroke-width="1" />
+
+  <g font-size="12.5" fill="#111111">
+    <text x="60" y="94">Lezione 1 — il modello a bigrammi</text>
+    <text x="60" y="118">Lezione 2 — il cruciverba dei vettori</text>
+    <text x="60" y="142">Lezione 3 — le frecce dell'attenzione</text>
+    <text x="60" y="166">Lezione 4 — rendimenti decrescenti</text>
+    <text x="60" y="190">Lezione 5 — fai l'annotatore</text>
+    <text x="60" y="214">Lezione 6 — l'urna a due temperature</text>
+    <text x="60" y="238">Lezione 7 — il quiz-trappola</text>
+    <text x="60" y="262">Lezione 8 — fai il fact-checker</text>
+    <text x="60" y="286">Lezione 9 — quale strumento?</text>
+    <text x="60" y="310">Lezione 10 — le tue previsioni</text>
+  </g>
+
+  <g stroke="#2a7ae2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 330,88 L 335,93 L 344,80" />
+    <path d="M 330,112 L 335,117 L 344,104" />
+    <path d="M 330,136 L 335,141 L 344,128" />
+    <path d="M 330,160 L 335,165 L 344,152" />
+    <path d="M 330,184 L 335,189 L 344,176" />
+    <path d="M 330,208 L 335,213 L 344,200" />
+    <path d="M 330,232 L 335,237 L 344,224" />
+    <path d="M 330,256 L 335,261 L 344,248" />
+    <path d="M 330,280 L 335,285 L 344,272" />
+    <path d="M 330,304 L 335,309 L 344,296" />
+  </g>
+
+  <line x1="55" y1="326" x2="345" y2="326" stroke="#828282" stroke-width="1" />
+  <text x="200" y="352" fill="#666666" font-size="11.5" text-anchor="middle">Prova prima tu, poi confronta.</text>
+  <text x="200" y="370" fill="#666666" font-size="11.5" text-anchor="middle">Il valore è nel ragionamento,</text>
+  <text x="200" y="388" fill="#666666" font-size="11.5" text-anchor="middle">non nella risposta esatta.</text>
+
+  <rect x="140" y="404" width="120" height="34" rx="6" fill="#dceafc" stroke="#2a7ae2" stroke-width="1.5" />
+  <text x="200" y="426" fill="#1d5eb8" font-size="12" font-weight="bold" text-anchor="middle">Appendice A</text>
+</svg>

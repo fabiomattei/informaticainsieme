@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una variabile che punta a valori di tipi diversi in memoria](/images/ruby/tipi-di-dato/tipi-di-dato.svg){:class="aside-image"}
+
 ## Tipi di dato
 
 Un'informazione conservata in una variabile ha sempre un **tipo** associato.

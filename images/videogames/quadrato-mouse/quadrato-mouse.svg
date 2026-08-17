@@ -1,0 +1,38 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">La palla segue il mouse</text>
+
+  <!-- game window -->
+  <rect x="40" y="50" width="400" height="220" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="40" y="50" width="400" height="24" rx="6" fill="#2a7ae2"/>
+  <circle cx="56" cy="62" r="4" fill="#ffffff"/>
+  <circle cx="70" cy="62" r="4" fill="#ffffff"/>
+  <circle cx="84" cy="62" r="4" fill="#ffffff"/>
+  <text x="240" y="67" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff">Move Mouse Example</text>
+
+  <!-- movement path -->
+  <path d="M100,220 Q220,120 340,110" fill="none" stroke="#828282" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- old position ball faded -->
+  <circle cx="100" cy="220" r="14" fill="#eef2f7" stroke="#f66a0a" stroke-width="2" opacity="0.5"/>
+
+  <!-- arrow to new position -->
+  <line x1="118" y1="205" x2="320" y2="118" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)" opacity="0.6" stroke-dasharray="0"/>
+
+  <!-- current ball at cursor -->
+  <circle cx="340" cy="110" r="16" fill="#f66a0a"/>
+
+  <!-- mouse cursor icon -->
+  <g transform="translate(325,95)">
+    <polygon points="15,0 15,45 27,33 35,53 43,49 33,29 50,29" fill="#111111"/>
+  </g>
+
+  <text x="240" y="240" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">on_mouse_motion aggiorna x, y della palla</text>
+
+  <rect x="90" y="285" width="300" height="34" rx="6" fill="#1e1e1e"/>
+  <text x="240" y="307" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">self.ball.position_x = x</text>
+</svg>

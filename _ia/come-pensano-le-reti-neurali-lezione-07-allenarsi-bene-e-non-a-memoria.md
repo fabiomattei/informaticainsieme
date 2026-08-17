@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![L'errore di allenamento scende sempre, l'errore di validazione risale quando inizia l'overfitting](/images/ia/come-pensano-le-reti-neurali-lezione-07-allenarsi-bene-e-non-a-memoria/come-pensano-le-reti-neurali-lezione-07-allenarsi-bene-e-non-a-memoria.svg){:class="aside-image"}
+
 ### 7.1 Non basta sapere la direzione, conta anche il passo
 
 La Lezione 6 ha mostrato come far risalire la colpa lungo la catena e capire *in che direzione* correggere ogni peso. Ma sapere la direzione giusta non basta: bisogna anche decidere *quanto* muoversi in quella direzione a ogni correzione, e con quale strategia. Questa sezione e le due successive raccontano tre accorgimenti pratici che rendono l'allenamento molto più efficace di una correzione "ingenua" — un piccolo passo alla volta, sempre della stessa dimensione, senza mai guardare la propria storia recente.

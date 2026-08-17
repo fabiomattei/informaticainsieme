@@ -1,0 +1,26 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Diagnostica del sistema</text>
+
+  <!-- terminal -->
+  <rect x="30" y="45" width="420" height="230" rx="6" fill="#1e1e1e"/>
+  <circle cx="48" cy="60" r="4" fill="#828282"/>
+  <circle cx="62" cy="60" r="4" fill="#828282"/>
+  <circle cx="76" cy="60" r="4" fill="#828282"/>
+
+  <text x="48" y="90" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#f66a0a">C:\&gt; tasklist</text>
+
+  <text x="48" y="118" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#828282">Nome immagine        PID   Memoria</text>
+  <text x="48" y="138" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">chrome.exe          1234    120 MB</text>
+  <text x="48" y="156" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">notepad.exe         5678     12 MB</text>
+  <text x="48" y="174" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">explorer.exe         910     80 MB</text>
+
+  <rect x="200" y="127" width="60" height="18" rx="4" fill="none" stroke="#f66a0a" stroke-width="2"/>
+
+  <text x="48" y="205" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#f66a0a">C:\&gt; whoami</text>
+  <text x="48" y="225" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#ffffff">computer\utente</text>
+
+  <text x="48" y="255" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#f66a0a">C:\&gt; taskkill /pid 1234 /f</text>
+
+  <text x="240" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">systeminfo · chkdsk · sfc · shutdown</text>
+  <text x="240" y="330" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">ogni processo ha un PID univoco</text>
+</svg>

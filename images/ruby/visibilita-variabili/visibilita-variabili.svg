@@ -1,0 +1,33 @@
+<svg viewBox="0 0 420 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <!-- global scope -->
+  <rect x="15" y="15" width="390" height="310" rx="8" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="30" y="36" font-size="13" font-weight="bold" fill="#f66a0a">$variabile_globale — visibile ovunque</text>
+
+  <!-- class scope -->
+  <rect x="35" y="55" width="350" height="245" rx="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="50" y="76" font-size="13" font-weight="bold" fill="#2a7ae2">class Persona</text>
+  <text x="50" y="94" font-size="12" fill="#111111" font-family="monospace">@@variabile_di_classe</text>
+  <text x="270" y="94" font-size="10" fill="#828282">condivisa tra istanze</text>
+
+  <!-- instance scope 1 -->
+  <rect x="55" y="110" width="150" height="90" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="70" y="130" font-size="12" font-weight="bold" fill="#111111">mario (istanza)</text>
+  <text x="70" y="150" font-size="12" font-family="monospace" fill="#111111">@nome = "Mario"</text>
+  <text x="70" y="170" font-size="10" fill="#828282">visibile solo</text>
+  <text x="70" y="184" font-size="10" fill="#828282">dentro l'oggetto</text>
+
+  <!-- instance scope 2 -->
+  <rect x="220" y="110" width="150" height="90" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="235" y="130" font-size="12" font-weight="bold" fill="#111111">rita (istanza)</text>
+  <text x="235" y="150" font-size="12" font-family="monospace" fill="#111111">@nome = "Rita"</text>
+  <text x="235" y="170" font-size="10" fill="#828282">valore proprio,</text>
+  <text x="235" y="184" font-size="10" fill="#828282">diverso da mario</text>
+
+  <!-- local scope box -->
+  <rect x="55" y="215" width="315" height="70" rx="6" fill="#ffffff" stroke="#828282" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="70" y="235" font-size="12" font-weight="bold" fill="#111111">def saluta ... end (blocco locale)</text>
+  <text x="70" y="255" font-size="12" font-family="monospace" fill="#111111">una_semplice_variabile</text>
+  <text x="70" y="272" font-size="10" fill="#828282">nasce e muore dentro il metodo</text>
+
+  <text x="220" y="318" text-anchor="middle" font-size="11" fill="#828282">COSTANTE — visibile ma non dovrebbe essere modificata</text>
+</svg>

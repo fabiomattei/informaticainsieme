@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Testo che diventa voce e voce che diventa testo](/images/ia/ia-text-speech/ia-text-speech.svg){:class="aside-image"}
+
 ## La sintesi vocale (text to speech)
 
 La sintesi vocale (in inglese speech synthesis) è la tecnica per la riproduzione artificiale della voce umana. Un sistema usato per questo scopo è detto sintetizzatore vocale e può essere realizzato tramite software o hardware. I sistemi di sintesi vocale sono noti anche come sistemi text-to-speech (TTS) (in italiano: da testo a voce) per la loro possibilità di convertire il testo in parlato.

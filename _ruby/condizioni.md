@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart delle condizioni if / elsif / else](/images/ruby/condizioni/condizioni.svg){:class="aside-image"}
+
 ## Il costrutto if
 
 Il costrutto **if** consente di cambiare la sequenza logica di istruzioni da eseguire in un programma.

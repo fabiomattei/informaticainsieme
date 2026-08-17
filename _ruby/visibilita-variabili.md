@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Scope annidati: globale, di classe, di istanza e locale](/images/ruby/visibilita-variabili/visibilita-variabili.svg){:class="aside-image"}
+
 ## Visibilità delle variabili
 
 Il linguaggio Ruby rende la visibilità delle variabili immediatamente riconoscibile dal nome stesso.

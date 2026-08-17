@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un prompt testuale genera una sequenza coerente di fotogrammi video](/images/ia/ia-generazione-video/ia-generazione-video.svg){:class="aside-image"}
+
 ## Introduzione
 
 La generazione di video tramite intelligenza artificiale è una delle frontiere più recenti e più dirompenti del campo. Fino a pochi anni fa creare un video richiedeva telecamere, attori, luci, montaggio e un intero team di professionisti. Oggi esistono sistemi che, a partire da una semplice descrizione testuale, producono sequenze video di diversi secondi — o addirittura minuti — con personaggi, ambienti e movimenti di camera fotorealistici.

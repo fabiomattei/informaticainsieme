@@ -1,0 +1,52 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="conv-title conv-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="conv-title">Uno stencil che scorre sull'immagine</title>
+  <desc id="conv-desc">Un piccolo stencil 2 per 2 scorre su tre posizioni lungo la riga in alto di una griglia 4 per 4 che rappresenta l'immagine, producendo via via i valori di una mappa delle caratteristiche più piccola sulla destra.</desc>
+
+  <defs>
+    <marker id="arrowConv" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#828282" />
+    </marker>
+  </defs>
+
+  <text x="240" y="26" fill="#111111" font-size="16" font-weight="bold" text-anchor="middle">Uno stencil che scorre sull'immagine</text>
+
+  <text x="120" y="54" fill="#828282" font-size="12" text-anchor="middle">immagine</text>
+
+  <!-- 4x4 grid -->
+  <g stroke="#c9c9c9" stroke-width="1">
+    <line x1="30" y1="70" x2="210" y2="70" /><line x1="30" y1="115" x2="210" y2="115" />
+    <line x1="30" y1="160" x2="210" y2="160" /><line x1="30" y1="205" x2="210" y2="205" /><line x1="30" y1="250" x2="210" y2="250" />
+    <line x1="30" y1="70" x2="30" y2="250" /><line x1="75" y1="70" x2="75" y2="250" />
+    <line x1="120" y1="70" x2="120" y2="250" /><line x1="165" y1="70" x2="165" y2="250" /><line x1="210" y1="70" x2="210" y2="250" />
+  </g>
+
+  <!-- three stencil positions along the top row, with motion arrows -->
+  <rect x="30" y="70" width="90" height="45" fill="none" stroke="#f66a0a" stroke-width="3" />
+  <rect x="75" y="70" width="90" height="45" fill="none" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.7" />
+  <rect x="120" y="70" width="90" height="45" fill="none" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.4" />
+
+  <path d="M 122,92 L 168,92" fill="none" stroke="#c85506" stroke-width="2" marker-end="url(#arrowConv)" />
+  <path d="M 167,92 L 213,92" fill="none" stroke="#c85506" stroke-width="2" marker-end="url(#arrowConv)" opacity="0.6" />
+
+  <text x="120" y="278" fill="#c85506" font-size="11" text-anchor="middle">stesso stencil, riusato a ogni casella</text>
+
+  <!-- main arrow to feature map -->
+  <path d="M 222,150 Q 280,150 320,150" fill="none" stroke="#828282" stroke-width="2" marker-end="url(#arrowConv)" />
+
+  <text x="400" y="54" fill="#828282" font-size="11" text-anchor="middle">mappa delle</text>
+  <text x="400" y="68" fill="#828282" font-size="11" text-anchor="middle">caratteristiche</text>
+
+  <!-- 3x1 (growing) feature map, 3 wide x 2 tall grid, first row partly filled -->
+  <g stroke="#c9c9c9" stroke-width="1">
+    <line x1="340" y1="90" x2="460" y2="90" /><line x1="340" y1="130" x2="460" y2="130" /><line x1="340" y1="170" x2="460" y2="170" />
+    <line x1="340" y1="90" x2="340" y2="170" /><line x1="380" y1="90" x2="380" y2="170" /><line x1="420" y1="90" x2="420" y2="170" /><line x1="460" y1="90" x2="460" y2="170" />
+  </g>
+  <rect x="340" y="90" width="40" height="40" fill="#f66a0a" opacity="0.85" />
+  <rect x="380" y="90" width="40" height="40" fill="#f66a0a" opacity="0.5" />
+  <rect x="420" y="90" width="40" height="40" fill="#f66a0a" opacity="0.25" />
+
+  <text x="400" y="200" fill="#828282" font-size="11" text-anchor="middle">un numero per ogni</text>
+  <text x="400" y="214" fill="#828282" font-size="11" text-anchor="middle">posizione dello stencil</text>
+
+  <text x="240" y="380" fill="#828282" font-size="12" text-anchor="middle">lo stesso motivo viene riconosciuto ovunque appaia</text>
+</svg>

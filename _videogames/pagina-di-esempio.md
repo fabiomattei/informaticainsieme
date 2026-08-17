@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=2'
 ---
 
+![Finestra di gioco arcade con alcuni esempi di sprite disponibili](/images/videogames/pagina-di-esempio/pagina-di-esempio.svg){:class="aside-image"}
+
 In queste pagine troverai le basi per lavorare con la libreria arcade scritta per Python.
 
 Se hai bisogno di informazioni dettagliate ti esorto a guardare la [documentazione ufficiale](http://arcade.academy/) della libreria.

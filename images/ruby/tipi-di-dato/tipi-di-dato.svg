@@ -1,0 +1,57 @@
+<svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="230" y="24" text-anchor="middle" font-size="14" fill="#828282">ogni valore ha un .class</text>
+
+  <!-- variable -->
+  <rect x="15" y="45" width="90" height="40" rx="6" fill="#111111" stroke="#111111" stroke-width="2"/>
+  <text x="60" y="70" text-anchor="middle" font-size="14" fill="#ffffff" font-family="monospace">x</text>
+
+  <line x1="105" y1="65" x2="140" y2="65" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Integer -->
+  <rect x="140" y="45" width="130" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="205" y="62" text-anchor="middle" font-size="10" fill="#828282">Integer</text>
+  <text x="205" y="78" text-anchor="middle" font-size="14" fill="#111111" font-weight="bold">42</text>
+
+  <text x="60" y="120" text-anchor="middle" font-size="12" fill="#828282">x = 42</text>
+
+  <!-- second state -->
+  <rect x="15" y="140" width="90" height="40" rx="6" fill="#111111" stroke="#111111" stroke-width="2"/>
+  <text x="60" y="165" text-anchor="middle" font-size="14" fill="#ffffff" font-family="monospace">x</text>
+  <line x1="105" y1="160" x2="140" y2="160" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="140" y="140" width="130" height="40" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="205" y="157" text-anchor="middle" font-size="10" fill="#828282">String</text>
+  <text x="205" y="173" text-anchor="middle" font-size="14" fill="#111111" font-weight="bold">"ciao"</text>
+  <text x="60" y="200" text-anchor="middle" font-size="12" fill="#828282">x = "ciao"</text>
+  <text x="230" y="200" text-anchor="middle" font-size="11" fill="#828282">il tipo segue il valore, non la variabile</text>
+
+  <!-- type gallery -->
+  <line x1="15" y1="225" x2="445" y2="225" stroke="#828282" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <g font-size="11" text-anchor="middle" font-family="monospace">
+    <rect x="15"  y="245" width="80" height="40" rx="5" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5"/>
+    <text x="55" y="269" fill="#111111">3.14</text>
+    <text x="55" y="298" fill="#828282" font-family="-apple-system, sans-serif">Float</text>
+
+    <rect x="105" y="245" width="80" height="40" rx="5" fill="#fff3ea" stroke="#f66a0a" stroke-width="1.5"/>
+    <text x="145" y="269" fill="#111111">true</text>
+    <text x="145" y="298" fill="#828282" font-family="-apple-system, sans-serif">TrueClass</text>
+
+    <rect x="195" y="245" width="80" height="40" rx="5" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5"/>
+    <text x="235" y="269" fill="#111111">:nome</text>
+    <text x="235" y="298" fill="#828282" font-family="-apple-system, sans-serif">Symbol</text>
+
+    <rect x="285" y="245" width="80" height="40" rx="5" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5"/>
+    <text x="325" y="269" fill="#111111">[1,2,3]</text>
+    <text x="325" y="298" fill="#828282" font-family="-apple-system, sans-serif">Array</text>
+
+    <rect x="375" y="245" width="70" height="40" rx="5" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5"/>
+    <text x="410" y="269" fill="#111111">{a:1}</text>
+    <text x="410" y="298" fill="#828282" font-family="-apple-system, sans-serif">Hash</text>
+  </g>
+</svg>

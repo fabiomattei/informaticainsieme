@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">if / elif / else</text>
+
+  <!-- diamond 1 -->
+  <polygon points="240,50 320,95 240,140 160,95" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="99" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">b &gt; a ?</text>
+
+  <line x1="240" y1="140" x2="240" y2="170" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">falso</text>
+
+  <!-- diamond 2 -->
+  <polygon points="240,165 320,210 240,255 160,210" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="214" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">a == b ?</text>
+
+  <!-- branch: b > a -->
+  <line x1="320" y1="95" x2="400" y2="95" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="360" y="85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">vero</text>
+  <rect x="330" y="75" width="130" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="395" y="100" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">"b maggiore"</text>
+
+  <!-- branch: a == b -->
+  <line x1="320" y1="210" x2="400" y2="210" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="360" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">vero</text>
+  <rect x="330" y="190" width="130" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="395" y="215" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">"a e b uguali"</text>
+
+  <!-- branch: else -->
+  <line x1="240" y1="255" x2="240" y2="290" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">falso</text>
+  <rect x="150" y="295" width="180" height="40" rx="6" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="320" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">else: "a maggiore"</text>
+
+  <text x="240" y="360" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">viene eseguito un solo ramo</text>
+</svg>

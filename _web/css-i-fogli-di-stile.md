@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un tag HTML collegato a una regola CSS che ne definisce lo stile](/images/web/css-i-fogli-di-stile/css-i-fogli-di-stile.svg){:class="aside-image"}
+
 L’acronimo **CSS** ha come significato **Cascading Style Sheets** (fogli di stile a cascata). Questo indica un linguaggio che permette di formattare lo sitle cioè le decorazioni grafiche di un documento web (HTML). 
 
 Se da un lato l’HTML suddivide e compone i contenuti dal punto di vista **semantico**, la sua sezione **CSS** contiene indicazioni su come ciascuno di questi contenuti debba essere composto dal punto di vista **grafico**, 

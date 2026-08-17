@@ -6,6 +6,8 @@ layout: page
 modified_date: '2026-07-25T00:00:00+02:00'
 ---
 
+![Un prompt testuale attraversa un modello di diffusione e diventa un'immagine](/images/ia/ia-generazione-immagini/ia-generazione-immagini.svg){:class="aside-image"}
+
 ## Introduzione
 
 L'intelligenza artificiale sta cambiando il modo di produrre contenuti visivi: da una semplice descrizione testuale

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Dai sensori alla guida</text>
+
+  <!-- 4 sensors -->
+  <rect x="20" y="38" width="100" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="70" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">Videocamere</text>
+
+  <rect x="140" y="38" width="100" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="190" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">LiDAR</text>
+
+  <rect x="260" y="38" width="100" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="310" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">Radar</text>
+
+  <rect x="380" y="38" width="80" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="420" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">GPS/HD map</text>
+
+  <line x1="70" y1="84" x2="190" y2="118" stroke="#2a7ae2" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="84" x2="220" y2="118" stroke="#2a7ae2" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="310" y1="84" x2="270" y2="118" stroke="#2a7ae2" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="84" x2="330" y2="118" stroke="#2a7ae2" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="130" y="120" width="220" height="50" rx="6" fill="#fdf1e7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Sensor fusion</text>
+
+  <line x1="240" y1="170" x2="240" y2="200" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="202" width="260" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="232" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Percezione</text>
+
+  <line x1="240" y1="252" x2="240" y2="282" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="284" width="260" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="314" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Pianificazione</text>
+
+  <line x1="240" y1="334" x2="240" y2="364" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="110" y="366" width="260" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="392" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Controllo (sterzo, freno)</text>
+</svg>

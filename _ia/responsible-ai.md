@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Gerarchia della governance AI, dai principi interni agli standard internazionali](/images/ia/responsible-ai/responsible-ai.svg){:class="aside-image"}
+
 ## Dal Manifesto Etico alla Macchina Operativa
 
 Per molti anni parlare di etica nell'intelligenza artificiale significava scrivere manifesti, dichiarare principi, pubblicare white paper. Erano documenti importanti, ma raramente cambiavano qualcosa nei processi reali di chi sviluppava e distribuiva i sistemi. Fra il 2020 e il 2024 qualcosa è cambiato in modo sostanziale: i principi etici hanno cominciato a diventare strumenti di lavoro, policy interne, standard verificabili e controlli ripetibili. La Responsible AI è passata dall'ufficio comunicazione all'ufficio rischi.

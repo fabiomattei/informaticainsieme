@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Quando un nuovo massimo viene trovato, il vecchio campA diventa campB](/images/olimpiadiinformatica/doppiocampione/doppiocampione.svg){:class="aside-image"}
+
 In una lista di numeri interi S devo trovare due coppie di numeri più grandi.
 
 ## Algoritmo del campione

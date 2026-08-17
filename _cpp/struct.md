@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Record struct con campi tipizzati e vettore di record](/images/cpp/struct/struct.svg){:class="aside-image"}
+
 ## Raggruppare dati correlati
 
 Una **struct** (struttura) raggruppa più variabili di tipi diversi sotto

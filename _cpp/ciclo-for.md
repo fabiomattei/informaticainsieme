@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart del ciclo for: inizializzazione, condizione, corpo, aggiornamento](/images/cpp/ciclo-for/ciclo-for.svg){:class="aside-image"}
+
 ## Iterare un numero noto di volte
 
 Il ciclo `for` è la scelta naturale quando si conosce in anticipo quante

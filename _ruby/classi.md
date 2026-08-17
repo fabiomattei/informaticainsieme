@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Classe Alunno con attributi, metodi e due istanze](/images/ruby/classi/classi.svg){:class="aside-image"}
+
 ## Introduzione
 
 Nella programmazione procedurale dati e funzioni sono entità separate: le

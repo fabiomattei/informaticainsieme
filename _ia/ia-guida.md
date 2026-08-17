@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Dai sensori del veicolo a percezione, pianificazione e controllo](/images/ia/ia-guida/ia-guida.svg){:class="aside-image"}
+
 ## Introduzione
 
 La guida autonoma è uno degli obiettivi più ambiziosi dell'intelligenza artificiale applicata. Un veicolo che guida da solo deve percepire l'ambiente circostante, interpretarlo, prendere decisioni in tempo reale e agire — tutto senza intervento umano, in un contesto fisico caotico e imprevedibile come il traffico stradale.

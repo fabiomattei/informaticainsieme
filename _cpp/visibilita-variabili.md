@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Scope annidati: globale, di funzione e di blocco](/images/cpp/visibilita-variabili/visibilita-variabili.svg){:class="aside-image"}
+
 ## Dove "vive" una variabile
 
 La **visibilità** (o *scope*) di una variabile è la porzione di codice in

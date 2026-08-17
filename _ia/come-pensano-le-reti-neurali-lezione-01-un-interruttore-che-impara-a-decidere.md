@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tre ingressi pesati che convergono in un neurone e producono una decisione binaria](/images/ia/come-pensano-le-reti-neurali-lezione-01-un-interruttore-che-impara-a-decidere/come-pensano-le-reti-neurali-lezione-01-un-interruttore-che-impara-a-decidere.svg){:class="aside-image"}
+
 ### 1.1 Un interruttore con un'opinione
 
 Immagina un interruttore un po' speciale. Non si limita ad accendere o spegnere una luce a comando: guarda alcuni indizi, li soppesa, e decide da solo se "accendersi" oppure no. Facciamo un esempio concreto: devi decidere se prendere l'ombrello uscendo di casa. Guardi due indizi — quanto è nuvoloso il cielo (da 0 a 10) e quanto è umida l'aria (da 0 a 10) — e ti fai un'idea sommandoli, ma non allo stesso modo: magari il cielo nuvoloso conta doppio rispetto all'umidità, perché è l'indizio più affidabile. Se il totale pesato supera una certa soglia, prendi l'ombrello; altrimenti no.

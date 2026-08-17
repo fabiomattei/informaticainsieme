@@ -1,0 +1,58 @@
+<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="26" font-size="15" font-weight="bold" fill="#111111">int numeri[5]  — array C</text>
+
+  <g stroke="#2a7ae2" stroke-width="2" fill="#eef2f7">
+    <rect x="20"  y="40" width="80" height="50" rx="6"/>
+    <rect x="100" y="40" width="80" height="50" rx="6"/>
+    <rect x="180" y="40" width="80" height="50" rx="6"/>
+    <rect x="260" y="40" width="80" height="50" rx="6"/>
+    <rect x="340" y="40" width="80" height="50" rx="6"/>
+  </g>
+  <g font-size="15" fill="#111111" text-anchor="middle">
+    <text x="60"  y="70">10</text>
+    <text x="140" y="70">20</text>
+    <text x="220" y="70">30</text>
+    <text x="300" y="70">40</text>
+    <text x="380" y="70">50</text>
+  </g>
+  <g font-size="12" fill="#828282" text-anchor="middle">
+    <text x="60"  y="106">[0]</text>
+    <text x="140" y="106">[1]</text>
+    <text x="220" y="106">[2]</text>
+    <text x="300" y="106">[3]</text>
+    <text x="380" y="106">[4]</text>
+  </g>
+
+  <rect x="20" y="122" width="400" height="26" rx="6" fill="none" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="220" y="140" font-size="13" fill="#828282" text-anchor="middle">dimensione fissa: 5 posizioni, decise a compile-time</text>
+
+  <line x1="20" y1="172" x2="420" y2="172" stroke="#828282" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <text x="20" y="200" font-size="15" font-weight="bold" fill="#111111">vector&lt;int&gt; v  — dimensione dinamica</text>
+
+  <g stroke="#2a7ae2" stroke-width="2" fill="#eef2f7">
+    <rect x="20"  y="214" width="80" height="50" rx="6"/>
+    <rect x="100" y="214" width="80" height="50" rx="6"/>
+    <rect x="180" y="214" width="80" height="50" rx="6"/>
+  </g>
+  <rect x="260" y="214" width="80" height="50" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2" stroke-dasharray="5 3"/>
+
+  <g font-size="15" fill="#111111" text-anchor="middle">
+    <text x="60"  y="244">1</text>
+    <text x="140" y="244">2</text>
+    <text x="220" y="244">3</text>
+    <text x="300" y="244" fill="#f66a0a" font-weight="bold">4</text>
+  </g>
+
+  <path d="M 300 320 L 300 270" stroke="#f66a0a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="300" y="336" font-size="13" fill="#f66a0a" text-anchor="middle">v.push_back(4)</text>
+
+  <rect x="20" y="352" width="400" height="26" rx="6" fill="none" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="220" y="370" font-size="13" fill="#828282" text-anchor="middle">cresce e si ridimensiona automaticamente</text>
+</svg>

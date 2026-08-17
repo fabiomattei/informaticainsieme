@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![La parola castello che entra in un tokenizzatore, ne escono i token cas-tel-lo, trasformati poi in vettori di numeri](/images/ia/come-pensano-le-macchine-lezione-02-come-una-macchina-legge-le-parole/come-pensano-le-macchine-lezione-02-come-una-macchina-legge-le-parole.svg){:class="aside-image"}
+
 ### 2.1 Un computer non sa cosa sia "gatto"
 
 Prova a fermarti un attimo su un fatto scomodo: un computer non ha idea di cosa significhi la parola "gatto". Non ha mai visto un gatto, non ha mai sentito le fusa, non collega quella parola a niente — a meno che tu non gliela traduca in qualcosa che sa maneggiare davvero: i **numeri**. Tutto quello che un LLM fa, in fondo, è aritmetica su numeri. Il primo problema pratico, allora, è: come si trasforma un testo — fatto di lettere, spazi, punteggiatura — in numeri, senza perdere per strada il significato?

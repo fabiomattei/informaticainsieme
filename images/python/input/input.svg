@@ -1,0 +1,37 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+  <text x="240" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">input() legge dati da tastiera</text>
+
+  <!-- user -->
+  <circle cx="80" cy="110" r="22" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="80" cy="102" r="8" fill="#2a7ae2"/>
+  <path d="M64,124 a16,14 0 0,1 32,0 z" fill="#2a7ae2"/>
+  <text x="80" y="155" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">utente</text>
+
+  <text x="80" y="185" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">digita "Ezio"</text>
+
+  <line x1="105" y1="110" x2="175" y2="110" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- program box -->
+  <rect x="180" y="75" width="150" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="255" y="103" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">nome = input(</text>
+  <text x="255" y="121" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">'Nome: ')</text>
+
+  <line x1="330" y1="110" x2="395" y2="110" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- variable box -->
+  <rect x="400" y="85" width="70" height="50" rx="6" fill="#ffffff" stroke="#f66a0a" stroke-width="2"/>
+  <text x="435" y="106" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">nome</text>
+  <text x="435" y="124" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">"Ezio"</text>
+
+  <text x="240" y="220" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">input() restituisce SEMPRE una stringa</text>
+  <text x="240" y="245" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">il valore va salvato in una variabile</text>
+  <text x="240" y="270" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">altrimenti viene dimenticato</text>
+</svg>

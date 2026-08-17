@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di flusso del ciclo for su una lista](/images/python/il-ciclo-for/il-ciclo-for.svg){:class="aside-image"}
+
 {::options parse_block_html="true" /}
 <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/9ZTyZnUvYqM?feature=oembed" title="Il ciclo for in python: variabile contatore e variabile accumulatore" width="580"></iframe>
 {::options parse_block_html="false" /}

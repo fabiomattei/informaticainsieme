@@ -1,0 +1,33 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Parte 2: header e buffering</text>
+
+  <text x="240" y="56" text-anchor="middle" font-size="12" fill="#828282">messaggio con lunghezza dichiarata in testa</text>
+
+  <!-- packet: header + payload -->
+  <rect x="60" y="72" width="90" height="60" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="105" y="98" text-anchor="middle" font-size="11" fill="#f66a0a" font-weight="bold">HEADER</text>
+  <text x="105" y="116" text-anchor="middle" font-size="10" fill="#f66a0a">10 byte</text>
+
+  <rect x="150" y="72" width="270" height="60" rx="6" fill="#111111" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="285" y="98" text-anchor="middle" font-size="11" fill="#2a7ae2" font-weight="bold">DATA</text>
+  <text x="285" y="116" text-anchor="middle" font-size="10" fill="#2a7ae2">"The time is 1552068299.01783"</text>
+
+  <text x="105" y="150" text-anchor="middle" font-size="10" fill="#828282">contiene "29        "</text>
+  <text x="105" y="164" text-anchor="middle" font-size="10" fill="#828282">(lunghezza allineata a 10 char)</text>
+
+  <!-- flow: recv 16 bytes at a time -->
+  <line x1="240" y1="180" x2="240" y2="204" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="196" text-anchor="middle" font-size="10" fill="#2a7ae2">s.recv(16) più volte</text>
+
+  <rect x="60" y="208" width="360" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="228" text-anchor="middle" font-size="11" fill="#111111">full_msg accumula i pezzi finché</text>
+  <text x="240" y="244" text-anchor="middle" font-size="11" font-family="monospace" fill="#f66a0a">len(full_msg) - HEADERSIZE == msglen</text>
+
+  <text x="240" y="282" text-anchor="middle" font-size="12" fill="#828282">l'header dice quanto è lungo il messaggio in arrivo</text>
+</svg>

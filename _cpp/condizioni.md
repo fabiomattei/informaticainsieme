@@ -17,6 +17,8 @@ Il blocco di codice da eseguire è racchiuso tra **parentesi graffe** `{ }`.
 
 ## if semplice
 
+![Flowchart di un if senza else: se falso il blocco viene saltato](/images/cpp/condizioni/if-semplice.svg){:class="aside-image"}
+
 #### Esercizio 1
 Copia il seguente codice nell'editor e fallo eseguire.
 
@@ -43,6 +45,8 @@ Il blocco dentro `{ }` viene eseguito solo se la condizione tra `( )` è vera.
 
 ## if / else
 
+![Flowchart di if / else: uno dei due blocchi viene sempre eseguito](/images/cpp/condizioni/if-else.svg){:class="aside-image"}
+
 #### Esercizio 2
 Copia il seguente codice nell'editor e fallo eseguire.
 
@@ -68,6 +72,8 @@ int main() {
 ---
 
 ## if / else if / else
+
+![Flowchart a rombo con i rami if / else if / else](/images/cpp/condizioni/condizioni.svg){:class="aside-image"}
 
 Quando le alternative sono più di due si concatenano `else if`.
 

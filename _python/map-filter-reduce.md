@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma delle pipeline di map, filter e reduce su una lista](/images/python/map-filter-reduce/map-filter-reduce.svg){:class="aside-image"}
+
 ## La funzione map
 
 La funzione map() prende come parametri una funzione e una o più strutture dati di tipo iterable (list, tuple etc.) 

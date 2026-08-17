@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart di while (condizione prima) e do-while (corpo prima)](/images/cpp/ciclo-while/ciclo-while.svg){:class="aside-image"}
+
 ## Ripetere finché una condizione è vera
 
 Il ciclo `while` esegue un blocco di codice ripetutamente finché la sua

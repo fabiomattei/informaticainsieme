@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Linea numerica con range inclusivo ed esclusivo evidenziati](/images/ruby/range/range.svg){:class="aside-image"}
+
 ## Una sequenza continua di valori
 
 Un **range** rappresenta un intervallo continuo di valori compresi tra un

@@ -6,6 +6,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Il numero binario 1011 convertito in decimale con le potenze di 2](/images/codifica/la-codifica-dei-numeri/la-codifica-dei-numeri.svg){:class="aside-image"}
+
 Il computer, come abbiamo visto, riesce a rappresentare qualsiasi informazione utilizzando soltanto due simboli: **0** e **1**.
 
 Anche i numeri, quindi, devono essere codificati usando esclusivamente questi due simboli. Il sistema che permette di farlo si chiama **sistema binario**.

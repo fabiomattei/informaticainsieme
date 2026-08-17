@@ -1,0 +1,35 @@
+<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cover-title cover-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="cover-title">Stessa sicurezza, esiti diversi</title>
+  <desc id="cover-desc">Una domanda si biforca in due risposte scritte con lo stesso identico tono sicuro. Il ramo di sinistra porta a una risposta corretta perché il modello lo sa davvero, quello di destra a un'allucinazione perché il modello sta solo indovinando in modo plausibile.</desc>
+
+  <defs>
+    <marker id="arrowH" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 z" fill="#828282" /></marker>
+  </defs>
+
+  <text x="240" y="28" fill="#111111" font-size="17" font-weight="bold" text-anchor="middle">Perché a volte sbaglia</text>
+
+  <rect x="150" y="45" width="180" height="50" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2" />
+  <text x="240" y="66" fill="#111111" font-size="12" text-anchor="middle">Una domanda,</text>
+  <text x="240" y="82" fill="#111111" font-size="12" text-anchor="middle">stesso tono sicuro</text>
+
+  <circle cx="240" cy="120" r="13" fill="#ffffff" stroke="#828282" stroke-width="2" />
+  <text x="240" y="125" fill="#828282" font-size="14" font-weight="bold" text-anchor="middle">?</text>
+
+  <path d="M 232,130 Q 170,155 130,180" fill="none" stroke="#828282" stroke-width="2" marker-end="url(#arrowH)" />
+  <path d="M 248,130 Q 310,155 350,180" fill="none" stroke="#828282" stroke-width="2" marker-end="url(#arrowH)" />
+
+  <text x="130" y="200" fill="#666666" font-size="11" text-anchor="middle">il modello lo sa davvero</text>
+  <rect x="55" y="210" width="150" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+  <text x="130" y="236" fill="#111111" font-size="13" font-weight="bold" text-anchor="middle">"Parigi."</text>
+  <text x="130" y="256" fill="#1d5eb8" font-size="12" text-anchor="middle">✓ risposta corretta</text>
+
+  <text x="350" y="200" fill="#666666" font-size="11" text-anchor="middle">il modello sta indovinando</text>
+  <rect x="275" y="210" width="150" height="60" rx="6" fill="#fde8d6" stroke="#f66a0a" stroke-width="2" />
+  <text x="350" y="236" fill="#111111" font-size="13" font-weight="bold" text-anchor="middle">"Nel 1997."</text>
+  <text x="350" y="256" fill="#c85506" font-size="12" text-anchor="middle">⚠ allucinazione</text>
+
+  <rect x="70" y="300" width="340" height="70" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="1.5" />
+  <text x="240" y="325" fill="#111111" font-size="12" text-anchor="middle">Dal tono non si distingue: entrambe</text>
+  <text x="240" y="343" fill="#111111" font-size="12" text-anchor="middle">le risposte suonano ugualmente sicure.</text>
+  <text x="240" y="361" fill="#111111" font-size="12" text-anchor="middle">Serve verificare i fatti, sempre.</text>
+</svg>

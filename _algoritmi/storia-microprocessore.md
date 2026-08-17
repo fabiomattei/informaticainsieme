@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Linea del tempo dell'evoluzione del microprocessore](/images/algoritmi/storia-microprocessore/storia-microprocessore.svg){:class="aside-image"}
+
 Il processore (o CPU - Central Processing Unit) è il **cervello** del computer, responsabile dell'elaborazione di dati, istruzioni e programmi. Esegue calcoli logici e aritmetici, coordina le periferiche e gestisce il flusso di informazioni tra i vari tipi di memoria e sistema operativo.
 
 I processori si sono evoluti nell'arco del tempo.

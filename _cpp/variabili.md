@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Variabile con nome, tipo fisso e valore in memoria](/images/cpp/variabili/variabili.svg){:class="aside-image"}
+
 ## Un cassetto etichettato con nome e tipo
 
 In C++ ogni variabile ha un **nome**, un **tipo** e un **valore**. Il tipo deve

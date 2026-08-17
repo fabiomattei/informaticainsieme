@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flask che unisce template e dati in una pagina HTML inviata al browser](/images/flask/flask-templates/flask-templates.svg){:class="aside-image"}
+
 E’ comodo in una applicazione web, dividere la logica dall’interfaccia. Nella precedente lezione abbiamo scritto i tag HTML che andavano a comporre l’interfaccia come stringhe di testo da restituire al chiamante. Ora andremo a dividere le due parti.
 
 Per seguire questa lezione scarica il [file contenente gli script](https://www.esercizidiinformatica.it/progetti/flask/miosito2.zip).

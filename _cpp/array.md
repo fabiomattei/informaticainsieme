@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Array a dimensione fissa a confronto con vector dinamico](/images/cpp/array/array.svg){:class="aside-image"}
+
 ## Collezioni di elementi dello stesso tipo
 
 Un **array** in C++ è una sequenza di elementi dello stesso tipo, allocati

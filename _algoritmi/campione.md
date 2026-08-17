@@ -5,4 +5,6 @@ author: Fabio Mattei
 layout: page
 ---
 
+![L'algoritmo del campione confronta ogni valore con il migliore trovato finora](/images/algoritmi/campione/campione.svg){:class="aside-image"}
+
 

@@ -6,6 +6,8 @@ layout: page
 modified_date: '2026-07-26T00:00:00+02:00'
 ---
 
+![Un gate Zero Trust verifica ogni richiesta prima di autorizzare o bloccare l'azione](/images/ia/sicurezza-ai/sicurezza-ai.svg){:class="aside-image"}
+
 Quando un sistema di intelligenza artificiale entra in un'organizzazione, porta con sé capacità nuove — e superfici di attacco nuove. Alcune di queste superfici sono varianti di problemi già noti nella sicurezza informatica tradizionale; altre sono specifiche dei modelli linguistici e dei sistemi agentici, e richiedono modi di pensare che i framework classici non coprono del tutto.
 
 ## I Rischi dei Sistemi AI Attuali

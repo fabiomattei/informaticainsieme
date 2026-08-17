@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Frecce di spessore diverso dalla parola gli verso le parole precedenti della frase, a indicare quanto le ascolta](/images/ia/come-pensano-le-macchine-lezione-03-il-segreto-dellattenzione/come-pensano-le-macchine-lezione-03-il-segreto-dellattenzione.svg){:class="aside-image"}
+
 ### 3.1 A chi presti attenzione mentre leggi
 
 Leggi questa frase: *"Marco ha detto a Luca che gli avrebbe prestato il libro."*

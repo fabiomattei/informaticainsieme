@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Proprietà di una label DragonRuby e il testo che produce sullo schermo](/images/ruby/labels/labels.svg){:class="aside-image"}
+
 Le labels sono utile per avere delle scritte sullo schermo. 
 
 Vediamo subito un esempio:

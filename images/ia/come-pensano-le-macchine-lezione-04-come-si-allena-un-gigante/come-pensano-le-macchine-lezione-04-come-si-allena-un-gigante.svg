@@ -1,0 +1,55 @@
+<svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l4-title l4-desc">
+  <title id="l4-title">Miliardi di pagine dentro un gigante di manopole</title>
+  <desc id="l4-desc">Una pila di pagine di testo entra in un grande modello pieno di piccoli cerchi che rappresentano i parametri. Un ciclo di correzione, ripetuto miliardi di volte, aggiusta i parametri, e dal modello esce testo via via più coerente.</desc>
+  <defs>
+    <marker id="l4Arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#828282" />
+    </marker>
+  </defs>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="240" y="24" fill="#111111" font-size="14" font-weight="bold" text-anchor="middle">Allenare un gigante</text>
+
+    <!-- pila di testi -->
+    <g>
+      <rect x="150" y="42" width="120" height="20" rx="3" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+      <rect x="158" y="36" width="120" height="20" rx="3" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+      <rect x="166" y="30" width="120" height="20" rx="3" fill="#eef2f7" stroke="#828282" stroke-width="1.5" />
+      <text x="226" y="44" fill="#111111" font-size="11" text-anchor="middle">miliardi di pagine</text>
+    </g>
+
+    <path d="M 226,64 L 226,92" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l4Arrow)" />
+
+    <!-- modello grande con pesi -->
+    <rect x="70" y="94" width="340" height="180" rx="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5" />
+    <text x="240" y="116" fill="#111111" font-size="13" font-weight="bold" text-anchor="middle">modello: miliardi di "manopole"</text>
+
+    <g fill="#2a7ae2" opacity="0.75">
+      <circle cx="100" cy="140" r="4" /><circle cx="130" cy="150" r="4" /><circle cx="160" cy="135" r="4" /><circle cx="190" cy="155" r="4" />
+      <circle cx="220" cy="140" r="4" /><circle cx="250" cy="152" r="4" /><circle cx="280" cy="138" r="4" /><circle cx="310" cy="150" r="4" />
+      <circle cx="340" cy="142" r="4" /><circle cx="370" cy="155" r="4" />
+      <circle cx="110" cy="175" r="4" /><circle cx="145" cy="185" r="4" /><circle cx="175" cy="170" r="4" /><circle cx="205" cy="188" r="4" />
+      <circle cx="235" cy="175" r="4" /><circle cx="265" cy="185" r="4" /><circle cx="295" cy="172" r="4" /><circle cx="325" cy="188" r="4" />
+      <circle cx="355" cy="176" r="4" /><circle cx="385" cy="182" r="4" />
+      <circle cx="95" cy="215" r="4" /><circle cx="125" cy="225" r="4" /><circle cx="155" cy="210" r="4" /><circle cx="185" cy="225" r="4" />
+      <circle cx="215" cy="212" r="4" /><circle cx="245" cy="222" r="4" /><circle cx="275" cy="208" r="4" /><circle cx="305" cy="224" r="4" />
+      <circle cx="335" cy="214" r="4" /><circle cx="365" cy="220" r="4" />
+    </g>
+    <text x="240" y="255" fill="#828282" font-size="11" text-anchor="middle">i parametri (pesi) si spostano un poco a ogni errore</text>
+
+    <!-- ciclo di correzione (loop attorno al modello) -->
+    <path d="M 410,140 C 450,140 450,230 410,230" fill="none" stroke="#f66a0a" stroke-width="2.5" marker-end="url(#l4Arrow)" />
+    <text x="455" y="188" fill="#c85506" font-size="10" text-anchor="middle" transform="rotate(90 455 188)">correzione ripetuta</text>
+
+    <path d="M 240,274 L 240,302" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#l4Arrow)" />
+
+    <!-- output -->
+    <rect x="120" y="304" width="240" height="50" rx="8" fill="#f66a0a" stroke="#c85506" stroke-width="2" />
+    <text x="240" y="325" fill="#fdfdfd" font-size="12" font-weight="bold" text-anchor="middle">testo via via più coerente</text>
+    <text x="240" y="342" fill="#fdfdfd" font-size="11" text-anchor="middle">dal rumore iniziale a frasi sensate</text>
+
+    <text x="240" y="386" fill="#111111" font-size="12" text-anchor="middle">più testo + più "manopole", in equilibrio,</text>
+    <text x="240" y="404" fill="#111111" font-size="12" text-anchor="middle">danno il modello migliore (leggi di scala)</text>
+    <text x="240" y="430" fill="#828282" font-size="11" text-anchor="middle">ma ogni miglioramento in più costa sempre di più</text>
+  </g>
+</svg>

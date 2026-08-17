@@ -1,0 +1,43 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">La codifica dell'informazione</text>
+
+  <!-- 4 information type boxes -->
+  <g>
+    <rect x="30" y="54" width="90" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="75" y="84" text-anchor="middle" font-size="13" fill="#111111">testo</text>
+  </g>
+  <g>
+    <rect x="130" y="54" width="90" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="175" y="84" text-anchor="middle" font-size="13" fill="#111111">immagini</text>
+  </g>
+  <g>
+    <rect x="230" y="54" width="90" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="275" y="84" text-anchor="middle" font-size="13" fill="#111111">filmati</text>
+  </g>
+  <g>
+    <rect x="330" y="54" width="90" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="375" y="84" text-anchor="middle" font-size="13" fill="#111111">suoni</text>
+  </g>
+
+  <!-- converging arrows -->
+  <path d="M75,104 C75,150 200,160 240,175" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M175,104 C175,140 210,160 240,175" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M275,104 C275,140 270,160 240,175" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M375,104 C375,150 280,160 240,175" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="240" y="150" text-anchor="middle" font-size="11" fill="#828282">qualsiasi informazione</text>
+
+  <!-- binary result box -->
+  <rect x="90" y="190" width="300" height="80" rx="8" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="222" text-anchor="middle" font-size="20" font-family="monospace" fill="#f66a0a" font-weight="bold">01001101</text>
+  <text x="240" y="248" text-anchor="middle" font-size="20" font-family="monospace" fill="#f66a0a" font-weight="bold">01100001</text>
+
+  <text x="240" y="296" text-anchor="middle" font-size="13" fill="#111111">Il computer usa solo due simboli:</text>
+  <text x="240" y="316" text-anchor="middle" font-size="13" fill="#111111">0 e 1</text>
+</svg>

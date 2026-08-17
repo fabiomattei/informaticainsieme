@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Terminale con tasklist e whoami per la diagnostica del sistema](/images/cmd/comandi-di-sistema/comandi-di-sistema.svg){:class="aside-image"}
+
 Questa pagina raccoglie i comandi più utili per ottenere informazioni sul sistema, sui processi in esecuzione e sull'utente collegato.
 
 ## whoami - chi sono

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tabelle di verità per gli operatori logici and e or](/images/python/operatori-logici/operatori-logici.svg){:class="aside-image"}
+
 E’ possibile combinare tra loro le espressioni logiche attraverso gli operatori logici
 
 | A | B | A and B |

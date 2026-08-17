@@ -1,0 +1,42 @@
+<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="28" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Ogni valore ha un tipo</text>
+
+  <!-- source variable M -->
+  <rect x="200" y="55" width="80" height="44" rx="6" fill="#ffffff" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="82" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#111111">M</text>
+
+  <!-- 4 typed boxes -->
+  <line x1="230" y1="99" x2="90" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="238" y1="99" x2="200" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="248" y1="99" x2="310" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="258" y1="99" x2="410" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="30" y="150" width="120" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="90" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">int</text>
+  <text x="90" y="196" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#111111">3</text>
+
+  <rect x="170" y="150" width="120" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">float</text>
+  <text x="230" y="196" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#111111">3.0</text>
+
+  <rect x="280" y="150" width="120" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="340" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">str</text>
+  <text x="340" y="196" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#111111">"Prova"</text>
+
+  <rect x="330" y="150" width="120" height="60" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="390" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">complex</text>
+  <text x="390" y="196" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#111111">3+1j</text>
+
+  <text x="240" y="250" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">il tipo determina i valori e le operazioni possibili</text>
+
+  <!-- operations table small -->
+  <rect x="60" y="280" width="360" height="90" rx="6" fill="#ffffff" stroke="#828282" stroke-width="1.5"/>
+  <text x="240" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Operazioni tipiche</text>
+  <text x="80" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">numeri: + - * / // % **</text>
+  <text x="80" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">stringhe: + (concatena)  * (ripete)  len()</text>
+</svg>

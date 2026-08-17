@@ -1,0 +1,56 @@
+<svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Knapsack greedy: rapporto valore/peso</text>
+
+  <!-- objects sorted by v/p ratio -->
+  <g font-size="12" fill="#111111">
+    <rect x="15" y="45" width="80" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="55" y="63" text-anchor="middle" font-weight="bold">m1</text>
+    <text x="55" y="78" text-anchor="middle" fill="#828282">p=1 v=2</text>
+
+    <rect x="105" y="45" width="80" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="145" y="63" text-anchor="middle" font-weight="bold">m4</text>
+    <text x="145" y="78" text-anchor="middle" fill="#828282">p=3 v=5</text>
+
+    <rect x="195" y="45" width="80" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="235" y="63" text-anchor="middle" font-weight="bold">m5</text>
+    <text x="235" y="78" text-anchor="middle" fill="#828282">p=2 v=4</text>
+
+    <rect x="285" y="45" width="80" height="46" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="325" y="63" text-anchor="middle" font-weight="bold" fill="#828282">m3</text>
+    <text x="325" y="78" text-anchor="middle" fill="#828282">p=2 v=3</text>
+
+    <rect x="375" y="45" width="80" height="46" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+    <text x="415" y="63" text-anchor="middle" font-weight="bold" fill="#828282">m2</text>
+    <text x="415" y="78" text-anchor="middle" fill="#828282">p=3 v=4</text>
+  </g>
+  <text x="15" y="108" font-size="12" fill="#828282">oggetti ordinati per rapporto v/p decrescente &#8594;</text>
+
+  <!-- arrows into knapsack for selected items -->
+  <line x1="55" y1="91" x2="130" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="145" y1="91" x2="175" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="235" y1="91" x2="230" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- knapsack shape -->
+  <path d="M 90 160 L 90 260 Q 90 280 110 280 L 250 280 Q 270 280 270 260 L 270 160 Z"
+        fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+  <path d="M 145 160 L 145 140 Q 145 120 180 120 Q 215 120 215 140 L 215 160"
+        fill="none" stroke="#2a7ae2" stroke-width="2.5"/>
+  <text x="180" y="230" text-anchor="middle" font-size="14" fill="#111111">capienza = 5</text>
+  <text x="180" y="250" text-anchor="middle" font-size="13" fill="#f66a0a">selezionati: m1, m4, m5</text>
+
+  <text x="180" y="320" text-anchor="middle" font-size="13" fill="#828282">si riempie lo zaino iniziando dagli oggetti</text>
+  <text x="180" y="338" text-anchor="middle" font-size="13" fill="#828282">col miglior rapporto valore/peso</text>
+
+  <rect x="330" y="150" width="130" height="130" rx="6" fill="white" stroke="#828282" stroke-width="1"/>
+  <text x="395" y="170" text-anchor="middle" font-size="12" fill="#828282">peso tot: 1+3+2=6</text>
+  <text x="395" y="190" text-anchor="middle" font-size="12" fill="#f66a0a">supera cap=5!</text>
+  <text x="395" y="215" text-anchor="middle" font-size="12" fill="#828282">si scarta l'ultimo</text>
+  <text x="395" y="233" text-anchor="middle" font-size="12" fill="#828282">oggetto in eccesso</text>
+  <text x="395" y="258" text-anchor="middle" font-size="12" fill="#111111">valore tot = 6</text>
+</svg>

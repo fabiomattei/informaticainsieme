@@ -1,0 +1,32 @@
+<svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="210" y="24" text-anchor="middle" font-size="14" fill="#828282">contatore = 0</text>
+
+  <!-- drawer / cassetto with label -->
+  <rect x="60" y="45" width="130" height="20" rx="4" fill="#2a7ae2"/>
+  <text x="125" y="60" text-anchor="middle" font-size="12" fill="#ffffff" font-family="monospace">contatore</text>
+  <rect x="60" y="65" width="130" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="125" y="112" text-anchor="middle" font-size="26" fill="#111111" font-weight="bold">0</text>
+
+  <text x="125" y="155" text-anchor="middle" font-size="12" fill="#828282">assegnazione iniziale</text>
+
+  <!-- arrow to next state -->
+  <line x1="220" y1="100" x2="260" y2="100" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="88" text-anchor="middle" font-size="11" fill="#f66a0a">contatore += 1</text>
+
+  <!-- second drawer -->
+  <rect x="270" y="45" width="130" height="20" rx="4" fill="#f66a0a"/>
+  <text x="335" y="60" text-anchor="middle" font-size="12" fill="#ffffff" font-family="monospace">contatore</text>
+  <rect x="270" y="65" width="130" height="70" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="335" y="112" text-anchor="middle" font-size="26" fill="#111111" font-weight="bold">1</text>
+
+  <text x="335" y="155" text-anchor="middle" font-size="12" fill="#828282">lo stesso cassetto, nuovo valore</text>
+
+  <text x="210" y="200" text-anchor="middle" font-size="13" fill="#828282">il nome è l'etichetta del cassetto,</text>
+  <text x="210" y="222" text-anchor="middle" font-size="13" fill="#828282">il valore è il contenuto: può cambiare nel tempo</text>
+</svg>

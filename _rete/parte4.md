@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Il server della chat che usa select() per gestire più client e diffondere i messaggi](/images/rete/parte4/parte4.svg){:class="aside-image"}
+
 Ora che abbiamo fatto tutto questo percorso proviamo a costruire qualcosa: una chat che funziona su console.
 
 ## Cominciamo con il server

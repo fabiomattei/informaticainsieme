@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Lente di ingrandimento su un file di testo per cercare una stringa](/images/cmd/cercare-e-filtrare-testo/cercare-e-filtrare-testo.svg){:class="aside-image"}
+
 Windows mette a disposizione alcuni comandi pensati per cercare, filtrare e ordinare testo, spesso usati in combinazione con la [pipe]({{ site.baseurl }}{% link _cmd/pipe-e-redirect.md %}.html) per elaborare l'output di altri comandi.
 
 ## find - cerca una stringa esatta

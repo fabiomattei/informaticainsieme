@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Confronto tra le curve di crescita O(1), O(n) e O(n^2)](/images/algoritmi/laboratorio-complessita/laboratorio-complessita.svg){:class="aside-image"}
+
 Proviamo a cercare una evidenza sperimentale di quanto studiato sulla complessità.
 
 Faremo questo andando a popolare la seguente tabella che riserva una riga ad ogni algoritmo che sappiamo appartenere

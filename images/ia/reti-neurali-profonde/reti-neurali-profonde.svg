@@ -1,0 +1,70 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Una rete neurale profonda</text>
+
+  <!-- connections: input(4) -> h1(5) -->
+  <g stroke="#828282" stroke-width="1" opacity="0.6">
+    <!-- input y: 70,120,170,220 at x=70 ; h1 y:50,100,150,200,250 at x=190 -->
+    <line x1="70" y1="70" x2="190" y2="50"/><line x1="70" y1="70" x2="190" y2="100"/><line x1="70" y1="70" x2="190" y2="150"/><line x1="70" y1="70" x2="190" y2="200"/><line x1="70" y1="70" x2="190" y2="250"/>
+    <line x1="70" y1="120" x2="190" y2="50"/><line x1="70" y1="120" x2="190" y2="100"/><line x1="70" y1="120" x2="190" y2="150"/><line x1="70" y1="120" x2="190" y2="200"/><line x1="70" y1="120" x2="190" y2="250"/>
+    <line x1="70" y1="170" x2="190" y2="50"/><line x1="70" y1="170" x2="190" y2="100"/><line x1="70" y1="170" x2="190" y2="150"/><line x1="70" y1="170" x2="190" y2="200"/><line x1="70" y1="170" x2="190" y2="250"/>
+    <line x1="70" y1="220" x2="190" y2="50"/><line x1="70" y1="220" x2="190" y2="100"/><line x1="70" y1="220" x2="190" y2="150"/><line x1="70" y1="220" x2="190" y2="200"/><line x1="70" y1="220" x2="190" y2="250"/>
+  </g>
+
+  <!-- h1(5) -> h2(4): h2 y:80,140,200,260 at x=310 -->
+  <g stroke="#828282" stroke-width="1" opacity="0.6">
+    <line x1="190" y1="50" x2="310" y2="80"/><line x1="190" y1="50" x2="310" y2="140"/><line x1="190" y1="50" x2="310" y2="200"/><line x1="190" y1="50" x2="310" y2="260"/>
+    <line x1="190" y1="100" x2="310" y2="80"/><line x1="190" y1="100" x2="310" y2="140"/><line x1="190" y1="100" x2="310" y2="200"/><line x1="190" y1="100" x2="310" y2="260"/>
+    <line x1="190" y1="150" x2="310" y2="80"/><line x1="190" y1="150" x2="310" y2="140"/><line x1="190" y1="150" x2="310" y2="200"/><line x1="190" y1="150" x2="310" y2="260"/>
+    <line x1="190" y1="200" x2="310" y2="80"/><line x1="190" y1="200" x2="310" y2="140"/><line x1="190" y1="200" x2="310" y2="200"/><line x1="190" y1="200" x2="310" y2="260"/>
+    <line x1="190" y1="250" x2="310" y2="80"/><line x1="190" y1="250" x2="310" y2="140"/><line x1="190" y1="250" x2="310" y2="200"/><line x1="190" y1="250" x2="310" y2="260"/>
+  </g>
+
+  <!-- h2(4) -> output(4): output y:80,140,200,260 at x=420 -->
+  <g stroke="#828282" stroke-width="1" opacity="0.6">
+    <line x1="310" y1="80" x2="420" y2="80"/><line x1="310" y1="80" x2="420" y2="140"/><line x1="310" y1="80" x2="420" y2="200"/><line x1="310" y1="80" x2="420" y2="260"/>
+    <line x1="310" y1="140" x2="420" y2="80"/><line x1="310" y1="140" x2="420" y2="140"/><line x1="310" y1="140" x2="420" y2="200"/><line x1="310" y1="140" x2="420" y2="260"/>
+    <line x1="310" y1="200" x2="420" y2="80"/><line x1="310" y1="200" x2="420" y2="140"/><line x1="310" y1="200" x2="420" y2="200"/><line x1="310" y1="200" x2="420" y2="260"/>
+    <line x1="310" y1="260" x2="420" y2="80"/><line x1="310" y1="260" x2="420" y2="140"/><line x1="310" y1="260" x2="420" y2="200"/><line x1="310" y1="260" x2="420" y2="260"/>
+  </g>
+
+  <!-- input nodes -->
+  <circle cx="70" cy="70" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="70" cy="120" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="70" cy="170" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="70" cy="220" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+
+  <!-- hidden1 nodes -->
+  <circle cx="190" cy="50" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="190" cy="100" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="190" cy="150" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="190" cy="200" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="190" cy="250" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+
+  <!-- hidden2 nodes -->
+  <circle cx="310" cy="80" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="310" cy="140" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="310" cy="200" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="310" cy="260" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+
+  <!-- output nodes, one highlighted as prediction -->
+  <circle cx="420" cy="80" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="420" cy="140" r="11" fill="#f66a0a" stroke="#f66a0a" stroke-width="2"/>
+  <circle cx="420" cy="200" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="420" cy="260" r="10" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+
+  <!-- layer labels -->
+  <text x="70" y="300" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">Input</text>
+  <text x="70" y="318" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">784 pixel</text>
+
+  <text x="190" y="300" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">Nascosto 1</text>
+  <text x="190" y="318" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">128, ReLU</text>
+
+  <text x="310" y="300" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">Nascosto 2</text>
+  <text x="310" y="318" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">64, ReLU</text>
+
+  <text x="420" y="300" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">Output</text>
+  <text x="420" y="318" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">10, softmax</text>
+
+  <text x="240" y="360" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">Ogni strato impara caratteristiche più astratte</text>
+  <text x="240" y="382" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">il nodo arancione è la cifra predetta</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una variabile come cassetto etichettato che cambia contenuto](/images/ruby/variabili/variabili.svg){:class="aside-image"}
+
 ## Contenitori di informazioni
 
 Le variabili sono **contenitori di informazioni**. Possiamo pensare a una

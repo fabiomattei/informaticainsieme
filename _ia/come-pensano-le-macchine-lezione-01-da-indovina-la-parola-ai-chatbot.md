@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Evoluzione dai bigrammi alla rete ricorrente al Transformer con attenzione, fino al chatbot moderno](/images/ia/come-pensano-le-macchine-lezione-01-da-indovina-la-parola-ai-chatbot/come-pensano-le-macchine-lezione-01-da-indovina-la-parola-ai-chatbot.svg){:class="aside-image"}
+
 ### 1.1 L'amico che finisce le tue frasi
 
 Conosci quella persona che, ogni volta che inizi una frase, la finisce al posto tuo? A volte indovina, a volte no, ma ci prova sempre. Ecco: un modello linguistico (in inglese *Large Language Model*, LLM — modello linguistico di grandi dimensioni) è esattamente questo, portato a un livello quasi assurdo. Legge quello che hai scritto finora e prova a indovinare cosa viene dopo. Una parola alla volta. Poi un'altra. Poi un'altra ancora — e mettendo insieme tutte queste piccole previsioni, una via l'altra, viene fuori un'intera risposta.

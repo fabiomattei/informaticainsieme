@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Le famiglie di operatori Ruby raggruppate intorno al concetto centrale](/images/ruby/operatori/operatori.svg){:class="aside-image"}
+
 ## Operatori
 
 ### Assegnamento

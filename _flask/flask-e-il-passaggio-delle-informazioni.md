@@ -6,6 +6,8 @@ layout: post
 guid: 'https://www.esercizidiinformatica.it/?p=806'
 ---
 
+![Browser che invia una richiesta POST con dati form a un server Flask](/images/flask/flask-e-il-passaggio-delle-informazioni/flask-e-il-passaggio-delle-informazioni.svg){:class="aside-image"}
+
 Quando sviluppiamo una applicazione abbiamo due modi di passare le infomazioni che coincidono con due diversi tipi di chiamate: **GET** e **POST**.
 
 Abbiamo già visto la chiamata GET che consiste nel passare le informazioni attraverso la URL ora vediamo le chiamate POST.

@@ -1,0 +1,66 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Anatomia di una query SQL</text>
+
+  <!-- query box -->
+  <rect x="30" y="44" width="420" height="86" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="46" y="70" font-size="15" font-family="monospace" fill="#2a7ae2" font-weight="bold">SELECT</text>
+  <text x="130" y="70" font-size="15" font-family="monospace" fill="#111111">nome, cognome</text>
+  <text x="46" y="94" font-size="15" font-family="monospace" fill="#2a7ae2" font-weight="bold">FROM</text>
+  <text x="130" y="94" font-size="15" font-family="monospace" fill="#111111">alunni</text>
+  <text x="46" y="118" font-size="15" font-family="monospace" fill="#2a7ae2" font-weight="bold">WHERE</text>
+  <text x="130" y="118" font-size="15" font-family="monospace" fill="#111111">cognome LIKE 'R%'</text>
+
+  <!-- result table -->
+  <text x="30" y="164" font-size="13" font-weight="bold" fill="#111111">tabella alunni</text>
+  <rect x="30" y="172" width="200" height="110" rx="6" fill="white" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="30" y1="196" x2="230" y2="196" stroke="#2a7ae2" stroke-width="1.5"/>
+  <line x1="30" y1="218" x2="230" y2="218" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="30" y1="240" x2="230" y2="240" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="30" y1="262" x2="230" y2="262" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="90" y1="172" x2="90" y2="282" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="160" y1="172" x2="160" y2="282" stroke="#2a7ae2" stroke-width="1"/>
+  <text x="36" y="189" font-size="10" font-weight="bold" fill="#111111">id</text>
+  <text x="96" y="189" font-size="10" font-weight="bold" fill="#111111">nome</text>
+  <text x="166" y="189" font-size="10" font-weight="bold" fill="#111111">cognome</text>
+  <text x="36" y="211" font-size="10" fill="#828282">1</text>
+  <text x="96" y="211" font-size="10" fill="#828282">Anna</text>
+  <text x="166" y="211" font-size="10" fill="#f66a0a" font-weight="bold">Rossi</text>
+  <text x="36" y="233" font-size="10" fill="#828282">2</text>
+  <text x="96" y="233" font-size="10" fill="#828282">Luca</text>
+  <text x="166" y="233" font-size="10" fill="#828282">Verdi</text>
+  <text x="36" y="255" font-size="10" fill="#828282">3</text>
+  <text x="96" y="255" font-size="10" fill="#828282">Elio</text>
+  <text x="166" y="255" font-size="10" fill="#f66a0a" font-weight="bold">Renzi</text>
+  <text x="36" y="277" font-size="10" fill="#828282">4</text>
+  <text x="96" y="277" font-size="10" fill="#828282">Sara</text>
+  <text x="166" y="277" font-size="10" fill="#828282">Bruni</text>
+
+  <!-- annotation arrows -->
+  <path d="M100,68 C260,68 260,150 230,190" fill="none" stroke="#2a7ae2" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <path d="M160,92 C260,92 260,150 230,196" fill="none" stroke="#2a7ae2" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <path d="M220,116 C230,150 226,190 226,206" fill="none" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- result -->
+  <text x="260" y="164" font-size="13" font-weight="bold" fill="#111111">risultato</text>
+  <rect x="260" y="172" width="190" height="66" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="260" y1="196" x2="450" y2="196" stroke="#f66a0a" stroke-width="1.5"/>
+  <line x1="260" y1="218" x2="450" y2="218" stroke="#f66a0a" stroke-width="1"/>
+  <line x1="355" y1="172" x2="355" y2="238" stroke="#f66a0a" stroke-width="1"/>
+  <text x="266" y="189" font-size="10" font-weight="bold" fill="#111111">nome</text>
+  <text x="361" y="189" font-size="10" font-weight="bold" fill="#111111">cognome</text>
+  <text x="266" y="211" font-size="10" fill="#828282">Anna</text>
+  <text x="361" y="211" font-size="10" fill="#828282">Rossi</text>
+  <text x="266" y="233" font-size="10" fill="#828282">Elio</text>
+  <text x="361" y="233" font-size="10" fill="#828282">Renzi</text>
+
+  <text x="355" y="256" text-anchor="middle" font-size="11" fill="#828282">solo colonne SELECT,</text>
+  <text x="355" y="270" text-anchor="middle" font-size="11" fill="#828282">solo righe che soddisfano WHERE</text>
+
+  <text x="240" y="310" text-anchor="middle" font-size="12" fill="#828282">SELECT sceglie le colonne, FROM la tabella, WHERE filtra le righe</text>
+</svg>

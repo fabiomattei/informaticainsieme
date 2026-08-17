@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un modello grezzo che, attraversato da frecce di feedback umano, diventa un assistente allineato e ben educato](/images/ia/come-pensano-le-macchine-lezione-05-insegnargli-le-buone-maniere/come-pensano-le-macchine-lezione-05-insegnargli-le-buone-maniere.svg){:class="aside-image"}
+
 ### 5.1 Un modello che completa, non un assistente che risponde
 
 C'è una sorpresa, per chi scopre per la prima volta come funziona davvero un LLM: il modello uscito "grezzo" dal pre-training della lezione precedente — quello che ha letto miliardi di pagine imparando a indovinare la parola successiva — **non è ancora un assistente**. Se gli scrivi "Qual è la capitale della Francia?", un modello solo pre-addestrato potrebbe tanto rispondere "Parigi" quanto continuare con "è una domanda che viene spesso posta agli esami di quinta elementare, insieme a..." — perché ha imparato a *completare testo simile a quello letto*, non a *essere utile a chi gli scrive*. Sul web ci sono tanto elenchi di domande d'esame quanto risposte dirette: il modello, da solo, non sa quale dei due comportamenti vuoi tu in questo momento.

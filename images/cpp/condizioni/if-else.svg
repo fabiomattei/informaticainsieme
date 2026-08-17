@@ -1,0 +1,40 @@
+<svg viewBox="0 0 470 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#828282"/>
+    </marker>
+  </defs>
+
+  <rect x="165" y="10" width="140" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="235" y="35" font-size="13" text-anchor="middle" fill="#111111">numero letto</text>
+
+  <path d="M 235 50 L 235 78" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <polygon points="235,80 295,120 235,160 175,120" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="235" y="114" font-size="11" text-anchor="middle" fill="#111111">numero % 2</text>
+  <text x="235" y="129" font-size="11" text-anchor="middle" fill="#111111">== 0?</text>
+
+  <path d="M 295 120 L 353 120" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="324" y="112" font-size="11" text-anchor="middle" fill="#2a7ae2">vero</text>
+
+  <rect x="355" y="100" width="105" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="407" y="125" font-size="12" text-anchor="middle" fill="#111111">"pari"</text>
+
+  <path d="M 175 120 L 117 120" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#arrow-grey)"/>
+  <text x="146" y="112" font-size="11" text-anchor="middle" fill="#828282">falso</text>
+
+  <rect x="10" y="100" width="107" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="63" y="125" font-size="12" text-anchor="middle" fill="#111111">"dispari"</text>
+
+  <path d="M 407 140 C 407 190, 300 190, 270 220" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 63 140 C 63 190, 170 190, 200 220" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#arrow-grey)"/>
+
+  <rect x="160" y="220" width="150" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="235" y="245" font-size="12" text-anchor="middle" fill="#111111">prosegue</text>
+
+  <text x="20" y="300" font-size="12" fill="#828282">con else, uno dei due blocchi</text>
+  <text x="20" y="318" font-size="12" fill="#828282">viene eseguito sempre.</text>
+</svg>

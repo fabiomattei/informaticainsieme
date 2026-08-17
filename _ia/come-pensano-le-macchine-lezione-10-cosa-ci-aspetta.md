@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una freccia parte da "oggi" e attraversa alcune tappe future fino a un punto interrogativo all'orizzonte](/images/ia/come-pensano-le-macchine-lezione-10-cosa-ci-aspetta/come-pensano-le-macchine-lezione-10-cosa-ci-aspetta.svg){:class="aside-image"}
+
 ### 10.1 Un gigante non entra in tasca
 
 I modelli più capaci di cui senti parlare sono enormi — servono computer specializzati grandi come armadi, non certo lo smartphone in tasca. Ma molti usi pratici (un assistente vocale sempre acceso sul telefono, un correttore che funziona anche senza connessione internet) hanno bisogno esattamente del contrario: qualcosa di piccolo, veloce, capace di girare su un dispositivo con poca memoria e poca batteria. Da qui nasce un intero filone di tecniche per **rendere un modello più piccolo senza perdere troppo delle sue capacità** — un compromesso che, come vedremo, richiama da vicino i rendimenti decrescenti della Lezione 4: si può alleggerire parecchio prima che le prestazioni comincino a peggiorare sul serio.

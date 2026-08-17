@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un piccolo stencil che scorre su una griglia immagine producendo una mappa delle caratteristiche](/images/ia/come-pensano-le-reti-neurali-lezione-03-uno-stencil-che-scorre-sullimmagine/come-pensano-le-reti-neurali-lezione-03-uno-stencil-che-scorre-sullimmagine.svg){:class="aside-image"}
+
 ### 3.1 Il problema: un'immagine non è un elenco di numeri qualsiasi
 
 La rete a più piani della Lezione 2 tratta il proprio input come un elenco piatto di numeri, senza distinzioni. Va benissimo per due indizi come "quanto è nuvoloso" e "quanto è umido" — ma cosa succede se l'input è un'immagine, diciamo un quadrato di 256 per 256 puntini di colore (pixel)? Una rete come quella della Lezione 2 la vedrebbe come un unico elenco di oltre 65mila numeri in fila, senza alcuna nozione che il puntino in una certa posizione sia spazialmente vicino al puntino appena accanto. Questo crea due problemi seri.

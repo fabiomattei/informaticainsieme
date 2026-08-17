@@ -6,6 +6,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma delle conversioni di tipo in Python: str, int e float](/images/python/conversioni-di-tipo/conversioni-di-tipo.svg){:class="aside-image"}
+
 ## Perché convertire i tipi
 
 In Python ogni valore ha un tipo: `int`, `float`, `str`, `bool` e così via.

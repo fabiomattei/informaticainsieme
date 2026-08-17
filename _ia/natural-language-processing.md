@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una frase scomposta in token e trasformata in un vettore numerico](/images/ia/natural-language-processing/natural-language-processing.svg){:class="aside-image"}
+
 # Che cosa significa NLP?
 
 Il Natural language processing (NLP) si occupa di sviluppare applicazioni e servizi in grado di lavorare con il linguaggio umano. Esempi pratici sono i software di speech recognition: google voice search, siri, alexa. L’NLP si può anche utilizzare per fare delle sentiment analysis.

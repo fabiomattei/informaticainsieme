@@ -1,0 +1,49 @@
+<svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="110" y="24" font-size="14" font-weight="bold" text-anchor="middle" fill="#111111">while</text>
+
+  <!-- condition first -->
+  <polygon points="110,36 175,76 110,116 45,76" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="110" y="72" font-size="12" text-anchor="middle" fill="#111111">i &lt;= 5 ?</text>
+  <text x="110" y="88" font-size="10" text-anchor="middle" fill="#828282">testata prima</text>
+
+  <path d="M 110 116 L 110 144" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="124" y="134" font-size="11" fill="#2a7ae2">vero</text>
+
+  <rect x="35" y="144" width="150" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="110" y="170" font-size="13" text-anchor="middle" fill="#111111">corpo; i++;</text>
+
+  <path d="M 35 165 C -10 165, -10 76, 45 76" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <path d="M 175 76 L 220 76" stroke="#f66a0a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="197" y="68" font-size="11" fill="#f66a0a">falso</text>
+  <rect x="220" y="55" width="80" height="42" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="260" y="81" font-size="12" text-anchor="middle" fill="#111111">esce subito</text>
+  <text x="110" y="215" font-size="11" text-anchor="middle" fill="#828282">se falsa da subito, corpo mai eseguito</text>
+
+  <line x1="0" y1="245" x2="460" y2="245" stroke="#828282" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <text x="110" y="270" font-size="14" font-weight="bold" text-anchor="middle" fill="#111111">do-while</text>
+
+  <rect x="35" y="282" width="150" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="110" y="308" font-size="13" text-anchor="middle" fill="#111111">corpo</text>
+  <text x="110" y="278" font-size="10" text-anchor="middle" fill="#828282">eseguito almeno 1 volta</text>
+
+  <path d="M 110 324 L 110 340" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <polygon points="110,340 175,368 110,396 45,368" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="110" y="372" font-size="12" text-anchor="middle" fill="#111111">condizione?</text>
+
+  <path d="M 45 368 C -10 368, -10 303, 35 303" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="0" y="340" font-size="11" fill="#2a7ae2">vero</text>
+
+  <path d="M 175 368 L 220 368" stroke="#f66a0a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="197" y="360" font-size="11" fill="#f66a0a">falso</text>
+  <rect x="220" y="347" width="80" height="42" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="260" y="373" font-size="12" text-anchor="middle" fill="#111111">esce</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Ciclo di generazione: mazzo di probabilità, estrazione di una parola, aggiunta al contesto, e si ricomincia](/images/ia/come-pensano-le-macchine-lezione-06-come-nasce-una-risposta/come-pensano-le-macchine-lezione-06-come-nasce-una-risposta.svg){:class="aside-image"}
+
 ### 6.1 Non una risposta, ma un mazzo di probabilità
 
 Ecco un fraintendimento comune da sfatare subito: quando chiedi qualcosa a un chatbot, il modello **non calcola una risposta e basta**. A ogni singolo passo — per ogni singola parola che sta per scrivere — il modello produce internamente qualcosa di più simile a un mazzo di carte, dove ogni carta è una parola possibile e ha scritto sopra quanto è probabile che sia quella giusta. Per continuare "Il gatto si è arrampicato su un...", il mazzo potrebbe avere in cima "albero" con una probabilità alta, "tetto" poco più sotto, "armadio" ancora più giù, e così via fino a migliaia di parole con probabilità infinitesima ("frigorifero", "sottomarino"...).

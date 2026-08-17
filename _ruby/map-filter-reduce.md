@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Pipeline di map, select e reduce su un array](/images/ruby/map-filter-reduce/map-filter-reduce.svg){:class="aside-image"}
+
 ## Trasformare, filtrare, ridurre
 
 Quando si lavora con gli array, tre operazioni tornano continuamente:

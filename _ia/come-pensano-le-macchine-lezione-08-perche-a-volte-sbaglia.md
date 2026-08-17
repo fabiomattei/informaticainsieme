@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una domanda si biforca in due risposte scritte con lo stesso tono sicuro: una corretta, l'altra un'allucinazione](/images/ia/come-pensano-le-macchine-lezione-08-perche-a-volte-sbaglia/come-pensano-le-macchine-lezione-08-perche-a-volte-sbaglia.svg){:class="aside-image"}
+
 ### 8.1 Inventare non è un guasto — è il meccanismo stesso
 
 Hai già sentito parlare di chatbot che "inventano" fonti, citazioni, o persino eventi storici mai accaduti, presentandoli con la stessa sicurezza con cui direbbero un fatto vero. Questo fenomeno si chiama **allucinazione**, ma il nome è un po' fuorviante: fa pensare a un guasto occasionale, un bug da correggere. La realtà è più scomoda: un LLM **non ha, da nessuna parte al suo interno, un archivio di "fatti verificati" separato dal resto**. Tutto quello che fa — l'abbiamo visto fin dalla Lezione 1 — è indovinare la parola più plausibile visto il contesto. Quando la domanda riguarda qualcosa che il modello ha visto scritto migliaia di volte durante l'addestramento (la capitale della Francia), indovinare la parola plausibile e dire il vero coincidono quasi sempre. Quando la domanda riguarda qualcosa che il modello non ha mai visto — un dettaglio troppo specifico, un evento troppo recente, una fonte che semplicemente non esiste — il modello continua comunque a fare l'unica cosa che sa fare: produrre la continuazione più plausibile *nello stile* di una risposta corretta, anche se il contenuto è inventato di sana pianta.

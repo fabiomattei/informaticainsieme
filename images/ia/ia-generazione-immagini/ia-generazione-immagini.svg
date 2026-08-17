@@ -1,0 +1,27 @@
+<svg viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="230" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Dal testo all'immagine</text>
+
+  <rect x="40" y="44" width="380" height="58" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">"Un lago con alberi in autunno"</text>
+  <text x="230" y="88" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">prompt testuale</text>
+
+  <line x1="230" y1="102" x2="230" y2="150" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="248" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">text encoder</text>
+
+  <rect x="110" y="150" width="240" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="178" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">Modello di diffusione</text>
+  <text x="230" y="198" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">rumore ripulito passo dopo passo</text>
+
+  <line x1="230" y1="220" x2="230" y2="264" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="266" width="160" height="90" rx="6" fill="#fdf1e7" stroke="#f66a0a" stroke-width="2"/>
+  <polygon points="165,340 205,296 235,326 255,306 295,340" fill="none" stroke="#f66a0a" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="270" cy="288" r="10" fill="none" stroke="#f66a0a" stroke-width="2"/>
+
+  <text x="230" y="378" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#828282">Immagine generata pixel per pixel, non copiata</text>
+</svg>

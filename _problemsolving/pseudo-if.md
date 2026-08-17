@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart del costrutto if/else con i due rami then ed else](/images/problemsolving/pseudo-if/pseudo-if.svg){:class="aside-image"}
+
 {::options parse_block_html="true" /}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/js6Pw_JzmHI?si=c_SQoS3EeyAmTxRL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {::options parse_block_html="false" /}

@@ -1,0 +1,48 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Reticolo di sorgenti e canali</text>
+
+  <!-- source a -->
+  <circle cx="80" cy="90" r="28" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+  <text x="80" y="86" text-anchor="middle" font-size="14" fill="#111111">a</text>
+  <text x="80" y="102" text-anchor="middle" font-size="11" fill="#828282">12 l</text>
+
+  <!-- source b -->
+  <circle cx="80" cy="230" r="28" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+  <text x="80" y="226" text-anchor="middle" font-size="14" fill="#111111">b</text>
+  <text x="80" y="242" text-anchor="middle" font-size="11" fill="#828282">8 l</text>
+
+  <!-- convergence node c -->
+  <circle cx="260" cy="160" r="28" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+  <text x="260" y="156" text-anchor="middle" font-size="14" fill="#111111">c</text>
+  <text x="260" y="172" text-anchor="middle" font-size="11" fill="#828282">7 l</text>
+
+  <!-- outlets d, e -->
+  <circle cx="420" cy="100" r="26" fill="white" stroke="#f66a0a" stroke-width="2.5"/>
+  <text x="420" y="105" text-anchor="middle" font-size="13" fill="#111111">d</text>
+
+  <circle cx="420" cy="220" r="26" fill="white" stroke="#f66a0a" stroke-width="2.5"/>
+  <text x="420" y="225" text-anchor="middle" font-size="13" fill="#111111">e</text>
+
+  <!-- channels a->c, b->c -->
+  <line x1="103" y1="105" x2="240" y2="145" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="165" y="112" text-anchor="middle" font-size="11" fill="#828282">6 l</text>
+
+  <line x1="103" y1="215" x2="240" y2="175" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="165" y="212" text-anchor="middle" font-size="11" fill="#828282">6 l</text>
+
+  <!-- channels c->d, c->e -->
+  <line x1="284" y1="147" x2="398" y2="112" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="345" y="118" text-anchor="middle" font-size="11" fill="#f66a0a">9,5 l</text>
+
+  <line x1="284" y1="173" x2="398" y2="208" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="345" y="210" text-anchor="middle" font-size="11" fill="#f66a0a">9,5 l</text>
+
+  <text x="240" y="300" text-anchor="middle" font-size="13" fill="#828282">l'acqua in arrivo alla sorgente c (12+8=... porzioni)</text>
+  <text x="240" y="318" text-anchor="middle" font-size="13" fill="#828282">si somma alla sua e si ripartisce equamente nei canali uscenti</text>
+</svg>

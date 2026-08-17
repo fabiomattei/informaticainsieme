@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Ad ogni passo l'algoritmo Greedy sceglie il ramo localmente migliore](/images/algoritmi/greedy/greedy.svg){:class="aside-image"}
+
 Gli algoritmi di tipo Greedy sono una classe di algoritmi che hanno una logica di fondo comune. Gli algoritmo di tipo Greedy mirano a trovare una soluzione ottima globale cercando di fare la scelta migliore ad ogni passo.
 Quando si presenta una scelta l'algoritmo sceglie la strada che permette di avere il massimo vantaggio senza cercare di intepretare il futuro e senza rimettere in discussione
 le scelte fatte in passato.

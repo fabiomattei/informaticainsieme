@@ -1,0 +1,45 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">SQLite e Python</text>
+
+  <!-- python program box -->
+  <rect x="30" y="60" width="170" height="150" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="115" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#111111">programma.py</text>
+  <rect x="44" y="94" width="142" height="20" rx="3" fill="white" stroke="#828282" stroke-width="1"/>
+  <text x="50" y="108" font-size="9" font-family="monospace" fill="#111111">import sqlite3</text>
+  <rect x="44" y="118" width="142" height="20" rx="3" fill="white" stroke="#828282" stroke-width="1"/>
+  <text x="50" y="132" font-size="9" font-family="monospace" fill="#111111">db.cursor()</text>
+  <rect x="44" y="142" width="142" height="20" rx="3" fill="white" stroke="#828282" stroke-width="1"/>
+  <text x="50" y="156" font-size="9" font-family="monospace" fill="#111111">cursor.execute(...)</text>
+  <rect x="44" y="166" width="142" height="20" rx="3" fill="white" stroke="#828282" stroke-width="1"/>
+  <text x="50" y="180" font-size="9" font-family="monospace" fill="#111111">db.commit()</text>
+
+  <!-- file / db icon -->
+  <g>
+    <path d="M320,70 L400,70 L400,190 L320,190 Z" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+    <ellipse cx="360" cy="80" rx="40" ry="10" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+    <path d="M320,180 A40,10 0 0 0 400,180" fill="none" stroke="#f66a0a" stroke-width="2"/>
+    <path d="M320,140 A40,10 0 0 0 400,140" fill="none" stroke="#f66a0a" stroke-width="1.5"/>
+    <path d="M320,110 A40,10 0 0 0 400,110" fill="none" stroke="#f66a0a" stroke-width="1.5"/>
+    <text x="360" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">ilmiodatabase.db</text>
+    <text x="360" y="228" text-anchor="middle" font-size="10" fill="#828282">un unico file</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M200,110 C250,110 270,110 315,100" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="98" text-anchor="middle" font-size="10" fill="#2a7ae2">sqlite3.connect()</text>
+
+  <path d="M200,150 C250,150 270,150 315,150" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="146" text-anchor="middle" font-size="10" fill="#2a7ae2">INSERT / UPDATE</text>
+
+  <path d="M315,175 C270,175 250,175 200,175" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="192" text-anchor="middle" font-size="10" fill="#f66a0a">SELECT → fetchall()</text>
+
+  <text x="240" y="270" text-anchor="middle" font-size="12" fill="#828282">il modulo sqlite3 collega il programma al file del database</text>
+  <text x="240" y="288" text-anchor="middle" font-size="12" fill="#828282">cursor.execute() invia comandi, fetchall() legge i risultati</text>
+</svg>

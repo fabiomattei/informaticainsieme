@@ -1,0 +1,38 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+
+  <!-- String box -->
+  <rect x="20" y="40" width="130" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="85" y="65" text-anchor="middle" font-size="13" fill="#828282">String</text>
+  <text x="85" y="90" text-anchor="middle" font-size="17" fill="#111111" font-weight="bold">"3.14"</text>
+
+  <!-- Float box -->
+  <rect x="180" y="40" width="130" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="245" y="65" text-anchor="middle" font-size="13" fill="#828282">Float</text>
+  <text x="245" y="90" text-anchor="middle" font-size="17" fill="#111111" font-weight="bold">3.14</text>
+
+  <!-- Integer box -->
+  <rect x="340" y="40" width="130" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="405" y="65" text-anchor="middle" font-size="13" fill="#828282">Integer</text>
+  <text x="405" y="90" text-anchor="middle" font-size="17" fill="#111111" font-weight="bold">3</text>
+
+  <line x1="150" y1="75" x2="178" y2="75" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="164" y="63" text-anchor="middle" font-size="12" fill="#2a7ae2">.to_f</text>
+
+  <line x1="310" y1="75" x2="338" y2="75" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="324" y="63" text-anchor="middle" font-size="12" fill="#2a7ae2">.to_i</text>
+
+  <!-- back to string -->
+  <path d="M405 110 C 405 200 85 200 85 112" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="245" y="215" text-anchor="middle" font-size="12" fill="#f66a0a">.to_s → "3"</text>
+
+  <text x="240" y="255" text-anchor="middle" font-size="13" fill="#828282">ogni conversione è un metodo chiamato sul valore</text>
+  <text x="240" y="275" text-anchor="middle" font-size="12" fill="#828282">.class per conoscere il tipo corrente</text>
+</svg>

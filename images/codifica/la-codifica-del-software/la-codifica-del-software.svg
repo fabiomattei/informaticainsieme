@@ -1,0 +1,47 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Dal sorgente all'esecuzione</text>
+
+  <!-- source code box -->
+  <rect x="150" y="46" width="180" height="66" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="66" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">codice sorgente</text>
+  <text x="240" y="84" text-anchor="middle" font-size="11" font-family="monospace" fill="#828282">print("Ciao mondo")</text>
+  <text x="240" y="100" text-anchor="middle" font-size="10" fill="#828282">testo leggibile · .py .c .java</text>
+
+  <line x1="240" y1="112" x2="240" y2="140" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- branch: compilazione / interpretazione -->
+  <text x="150" y="156" text-anchor="middle" font-size="12" font-weight="bold" fill="#2a7ae2">compilazione</text>
+  <text x="330" y="156" text-anchor="middle" font-size="12" font-weight="bold" fill="#2a7ae2">interpretazione</text>
+
+  <path d="M240,140 C240,150 150,150 150,166" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M240,140 C240,150 330,150 330,166" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="170" width="160" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="150" y="197" text-anchor="middle" font-size="12" fill="#111111">compilatore (C, C++)</text>
+
+  <rect x="250" y="170" width="160" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="330" y="197" text-anchor="middle" font-size="12" fill="#111111">interprete (Python)</text>
+
+  <line x1="150" y1="216" x2="150" y2="244" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="330" y1="216" x2="330" y2="244" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- executable box -->
+  <rect x="70" y="248" width="160" height="60" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="150" y="272" text-anchor="middle" font-size="12" font-weight="bold" fill="#f66a0a">eseguibile</text>
+  <text x="150" y="288" text-anchor="middle" font-size="10" font-family="monospace" fill="#f66a0a">01001011 0110...</text>
+  <text x="150" y="302" text-anchor="middle" font-size="9" fill="#f66a0a">.exe</text>
+
+  <!-- execution box for interpreter (runs line by line, no separate file) -->
+  <rect x="250" y="248" width="160" height="60" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="330" y="272" text-anchor="middle" font-size="12" font-weight="bold" fill="#f66a0a">esecuzione diretta</text>
+  <text x="330" y="290" text-anchor="middle" font-size="10" fill="#f66a0a">riga per riga, nessun file</text>
+
+  <text x="240" y="336" text-anchor="middle" font-size="12" fill="#828282">la CPU comprende solo il linguaggio macchina (0 e 1)</text>
+  <text x="240" y="354" text-anchor="middle" font-size="12" fill="#828282">il sorgente resta leggibile e modificabile dall'uomo</text>
+</svg>

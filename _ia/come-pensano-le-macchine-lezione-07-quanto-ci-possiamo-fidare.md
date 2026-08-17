@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un quadrante a semicerchio mostra l'affidabilità di un chatbot, con la lancetta ferma a metà tra poco e molto affidabile](/images/ia/come-pensano-le-macchine-lezione-07-quanto-ci-possiamo-fidare/come-pensano-le-macchine-lezione-07-quanto-ci-possiamo-fidare.svg){:class="aside-image"}
+
 ### 7.1 Come si dà un voto a un chatbot?
 
 Se due aziende dicono entrambe "il nostro modello è il più bravo", come si stabilisce chi ha ragione? Serve un modo oggettivo di misurare le capacità di un LLM — esattamente come si fa un'interrogazione a scuola per misurare quanto uno studente ha imparato. La soluzione più diffusa sono i **benchmark**: enormi raccolte di domande con risposta nota (problemi di matematica, quesiti di cultura generale, esercizi di programmazione, domande a scelta multipla su decine di materie), su cui si fa "sostenere l'esame" al modello e si conta quante risposte azzecca.

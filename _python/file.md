@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma del ciclo di vita di un file: apertura, lettura/scrittura, chiusura](/images/python/file/file.svg){:class="aside-image"}
+
 ## Caricare i dati da file
 
 Fino ad oggi abbiamo ricevuto dati dall'utente utilizzando la funzione **input()** ma la console non rappresenta l'unico canale di input possibile, in effetti è possibile ricevere in input informazioni da un file di testo. Un file di testo altro non è che una sequenza di simboli ASCII, riconosciamo questi file dall'estensione del file **.txt**.

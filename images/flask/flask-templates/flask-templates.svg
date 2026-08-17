@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">render_template()</text>
+
+  <!-- template file -->
+  <rect x="20" y="55" width="130" height="80" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="85" y="75" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111" font-weight="600">home.html</text>
+  <text x="30" y="95" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#828282">{extends base}</text>
+  <text x="30" y="112" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#f66a0a">{{ nomeutente }}</text>
+
+  <!-- data variable -->
+  <rect x="20" y="150" width="130" height="55" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="85" y="172" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111" font-weight="600">nomeutente =</text>
+  <text x="85" y="190" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#f66a0a">"Anna Bolena"</text>
+
+  <!-- arrows into flask -->
+  <line x1="150" y1="90" x2="200" y2="120" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="150" y1="175" x2="200" y2="140" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- flask server -->
+  <rect x="205" y="90" width="150" height="90" rx="6" fill="#1e1e1e"/>
+  <text x="280" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="600">Flask</text>
+  <text x="222" y="135" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#7fd9ff">render_template(</text>
+  <text x="232" y="150" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#ffffff">'home.html',</text>
+  <text x="232" y="165" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#ffffff">nomeutente=...)</text>
+
+  <!-- arrow to browser -->
+  <line x1="355" y1="135" x2="410" y2="135" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- output html to browser -->
+  <rect x="385" y="70" width="80" height="130" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="425" y="90" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#111111" font-weight="600">Browser</text>
+  <text x="425" y="115" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#111111">Benvenuto</text>
+  <text x="425" y="130" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#111111" font-weight="600">Anna Bolena</text>
+  <line x1="400" y1="145" x2="450" y2="145" stroke="#828282" stroke-width="1"/>
+  <text x="425" y="165" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" fill="#828282">Il mio</text>
+  <text x="425" y="178" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="9" fill="#828282">contenuto</text>
+
+  <!-- base.html blocks -->
+  <rect x="60" y="235" width="360" height="120" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="258" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#111111" font-weight="600">base.html</text>
+  <rect x="80" y="270" width="320" height="30" rx="4" fill="#ffffff" stroke="#828282" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="240" y="290" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">{% block header %}{% endblock %}</text>
+  <rect x="80" y="308" width="320" height="30" rx="4" fill="#ffffff" stroke="#828282" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="240" y="328" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#828282">{% block content %}{% endblock %}</text>
+</svg>

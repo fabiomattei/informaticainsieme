@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Client e server collegati da un socket con buffer di invio e ricezione](/images/rete/parte1/parte1.svg){:class="aside-image"}
+
 La libreria socket, che utlizzeremo per fare servizi di rete, fa parte della libreria standard di python.
 
 {% highlight python %}

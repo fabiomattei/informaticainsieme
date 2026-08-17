@@ -1,0 +1,46 @@
+<svg viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="210" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Ciclo del client chat (non-blocking)</text>
+
+  <rect x="120" y="46" width="180" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="70" text-anchor="middle" font-size="12" fill="#111111">client_socket.setblocking(False)</text>
+
+  <line x1="210" y1="86" x2="210" y2="110" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="112" width="240" height="42" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="130" text-anchor="middle" font-size="12" fill="#111111">message = input(f'{my_username} &gt; ')</text>
+  <text x="210" y="146" text-anchor="middle" font-size="10" fill="#828282">invia se non vuoto: client_socket.send()</text>
+
+  <line x1="210" y1="154" x2="210" y2="178" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="180" width="280" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="200" text-anchor="middle" font-size="12" fill="#111111">try: client_socket.recv(...) in loop</text>
+  <text x="210" y="217" text-anchor="middle" font-size="10" fill="#828282">legge header + username + header + messaggio</text>
+
+  <line x1="210" y1="226" x2="210" y2="250" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- decision diamond -->
+  <polygon points="210,252 300,292 210,332 120,292" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="210" y="288" text-anchor="middle" font-size="11" fill="#111111">IOError</text>
+  <text x="210" y="304" text-anchor="middle" font-size="11" fill="#111111">EAGAIN?</text>
+
+  <path d="M120,292 L60,292" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="30" y="286" text-anchor="middle" font-size="10" fill="#2a7ae2">sì</text>
+  <path d="M60,292 L60,140 L90,133" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="45" y="200" text-anchor="middle" font-size="10" fill="#2a7ae2" transform="rotate(-90 45 200)">nessun dato: continua</text>
+
+  <path d="M300,292 L360,292" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="335" y="286" text-anchor="middle" font-size="10" fill="#f66a0a">no</text>
+
+  <rect x="240" y="360" width="150" height="50" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="315" y="382" text-anchor="middle" font-size="11" fill="#f66a0a">errore reale:</text>
+  <text x="315" y="398" text-anchor="middle" font-size="11" fill="#f66a0a">sys.exit()</text>
+  <path d="M360,292 L360,360" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="210" y="440" text-anchor="middle" font-size="12" fill="#828282">invia, prova a ricevere, e se non c'è nulla continua senza bloccarsi</text>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma del flusso di print() dal programma alla console](/images/python/print/print.svg){:class="aside-image"}
+
 La funzione print stampa un messaggio sulla console sullo schermo.
 
 {% highlight python %}

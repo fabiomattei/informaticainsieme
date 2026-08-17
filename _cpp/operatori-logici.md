@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tavole di verità di AND e OR](/images/cpp/operatori-logici/operatori-logici.svg){:class="aside-image"}
+
 ## Combinare condizioni
 
 Gli operatori logici combinano espressioni booleane per formare condizioni

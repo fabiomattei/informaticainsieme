@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Tastiera, mouse e controller confluiscono in args.inputs](/images/ruby/input/input.svg){:class="aside-image"}
+
 Per permettere all'utente di interagire con il nostro gioco dobbiamo raccogliere il suo input.
 Dragonruby mette a disposizione il dizionario **inputs** contenuto nel dizionario **args**
 a questo proposito.

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Dal binario al decimale</text>
+
+  <!-- binary number 1011 with place values -->
+  <text x="240" y="56" text-anchor="middle" font-size="13" fill="#828282">numero binario 1011</text>
+
+  <g>
+    <!-- 4 boxes for bit positions -->
+    <rect x="40" y="66" width="90" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="85" y="86" text-anchor="middle" font-size="12" fill="#828282">2³ = 8</text>
+    <text x="85" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#f66a0a">1</text>
+
+    <rect x="140" y="66" width="90" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="185" y="86" text-anchor="middle" font-size="12" fill="#828282">2² = 4</text>
+    <text x="185" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#111111">0</text>
+
+    <rect x="240" y="66" width="90" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="285" y="86" text-anchor="middle" font-size="12" fill="#828282">2¹ = 2</text>
+    <text x="285" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#f66a0a">1</text>
+
+    <rect x="340" y="66" width="90" height="70" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="385" y="86" text-anchor="middle" font-size="12" fill="#828282">2⁰ = 1</text>
+    <text x="385" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#f66a0a">1</text>
+  </g>
+
+  <!-- sum arrows -->
+  <path d="M85,136 L85,170" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M285,136 L200,170" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M385,136 L230,170" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="240" y="185" text-anchor="middle" font-size="15" font-family="monospace" fill="#f66a0a" font-weight="bold">8 + 0 + 2 + 1 = 11</text>
+
+  <!-- result box -->
+  <rect x="180" y="200" width="120" height="60" rx="8" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="238" text-anchor="middle" font-size="26" font-family="monospace" fill="#f66a0a" font-weight="bold">11</text>
+
+  <text x="240" y="284" text-anchor="middle" font-size="12" fill="#828282">1011 in base 2 = 11 in base 10</text>
+  <text x="240" y="302" text-anchor="middle" font-size="12" fill="#828282">con 8 bit si rappresentano 256 numeri (0-255)</text>
+</svg>

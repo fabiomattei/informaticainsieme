@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![L'algoritmo greedy sceglie ad ogni passo la moneta più grande disponibile](/images/algoritmi/resto/resto.svg){:class="aside-image"}
+
 Immaginiamo di dover scrivere l'algoritmo di restituzione del resto per una macchinetta del caffé. Un caffé costa 70 centesimi e noi inseriamo una moneta da un euro.
 Dobbiamo restituire il resto utilizzando monete da 5, 10, 20 o 50 centesimi. Come calcoliamo quali e quante monete restituire?
 

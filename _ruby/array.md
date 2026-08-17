@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Array indicizzato con indici positivi e negativi](/images/ruby/array/array.svg){:class="aside-image"}
+
 ## Una sequenza di elementi
 
 Un **array** è una struttura dati che contiene una sequenza ordinata di

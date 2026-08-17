@@ -1,0 +1,52 @@
+<svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <rect x="170" y="10" width="120" height="40" rx="20" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="35" text-anchor="middle" font-size="14" fill="#111111">inizio</text>
+  <line x1="230" y1="50" x2="230" y2="75" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- if diamond -->
+  <polygon points="230,75 300,115 230,155 160,115" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="112" text-anchor="middle" font-size="13" fill="#111111">b &gt; a ?</text>
+  <text x="230" y="128" text-anchor="middle" font-size="10" fill="#828282">if</text>
+
+  <line x1="230" y1="155" x2="230" y2="180" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="248" y="170" font-size="12" fill="#828282">falsa</text>
+
+  <!-- elsif diamond -->
+  <polygon points="230,180 300,220 230,260 160,220" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="217" text-anchor="middle" font-size="13" fill="#111111">a == b ?</text>
+  <text x="230" y="233" text-anchor="middle" font-size="10" fill="#828282">elsif</text>
+
+  <line x1="230" y1="260" x2="230" y2="285" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="248" y="275" font-size="12" fill="#828282">falsa</text>
+
+  <!-- else box -->
+  <rect x="150" y="285" width="160" height="45" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="230" y="312" text-anchor="middle" font-size="13" fill="#111111">"a è più grande di b"</text>
+  <text x="395" y="315" font-size="11" fill="#828282">else</text>
+
+  <!-- branch from if diamond: true -->
+  <path d="M300 115 C 380 115 380 90 380 90" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="315" y="105" font-size="12" fill="#828282">vera</text>
+  <rect x="330" y="65" width="150" height="45" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="405" y="92" text-anchor="middle" font-size="13" fill="#111111">"b è più grande"</text>
+
+  <!-- branch from elsif diamond: true -->
+  <path d="M300 220 C 380 220 380 195 380 195" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="315" y="210" font-size="12" fill="#828282">vera</text>
+  <rect x="330" y="170" width="150" height="45" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="405" y="197" text-anchor="middle" font-size="13" fill="#111111">"a e b sono uguali"</text>
+
+  <!-- converge to fine -->
+  <line x1="230" y1="330" x2="230" y2="360" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M405 110 C 405 380 260 375 230 375" fill="none" stroke="#2a7ae2" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M405 215 C 405 380 260 375 230 375" fill="none" stroke="#2a7ae2" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <rect x="170" y="375" width="120" height="35" rx="17" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="230" y="397" text-anchor="middle" font-size="13" fill="#111111">fine</text>
+</svg>

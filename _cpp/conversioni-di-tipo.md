@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Conversione implicita int-double ed esplicita con static_cast](/images/cpp/conversioni-di-tipo/conversioni-di-tipo.svg){:class="aside-image"}
+
 ## Conversioni implicite ed esplicite
 
 In C++ è possibile passare da un tipo a un altro in due modi:

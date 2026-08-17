@@ -1,0 +1,61 @@
+<svg viewBox="0 0 470 500" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#828282"/>
+    </marker>
+  </defs>
+
+  <rect x="110" y="10" width="140" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="180" y="35" font-size="13" text-anchor="middle" fill="#111111">voto letto</text>
+
+  <path d="M 180 50 L 180 78" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <polygon points="180,80 240,120 180,160 120,120" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="180" y="117" font-size="12" text-anchor="middle" fill="#111111">voto &gt;= 9?</text>
+  <text x="180" y="133" font-size="10" text-anchor="middle" fill="#828282">if</text>
+
+  <path d="M 240 120 L 298 120" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="269" y="112" font-size="11" text-anchor="middle" fill="#2a7ae2">vero</text>
+
+  <rect x="300" y="100" width="150" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="375" y="125" font-size="12" text-anchor="middle" fill="#111111">"Ottimo"</text>
+
+  <path d="M 180 160 L 180 178" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#arrow-grey)"/>
+  <text x="196" y="172" font-size="10" fill="#828282">falso</text>
+
+  <polygon points="180,180 240,220 180,260 120,220" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="180" y="217" font-size="12" text-anchor="middle" fill="#111111">voto &gt;= 7?</text>
+  <text x="180" y="233" font-size="10" text-anchor="middle" fill="#828282">else if</text>
+
+  <path d="M 240 220 L 298 220" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="269" y="212" font-size="11" text-anchor="middle" fill="#2a7ae2">vero</text>
+
+  <rect x="300" y="200" width="150" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="375" y="225" font-size="12" text-anchor="middle" fill="#111111">"Buono"</text>
+
+  <path d="M 180 260 L 180 278" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#arrow-grey)"/>
+  <text x="196" y="272" font-size="10" fill="#828282">falso</text>
+
+  <polygon points="180,280 240,320 180,360 120,320" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="180" y="317" font-size="12" text-anchor="middle" fill="#111111">voto &gt;= 6?</text>
+  <text x="180" y="333" font-size="10" text-anchor="middle" fill="#828282">else if</text>
+
+  <path d="M 240 320 L 298 320" stroke="#2a7ae2" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="269" y="312" font-size="11" text-anchor="middle" fill="#2a7ae2">vero</text>
+
+  <rect x="300" y="300" width="150" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="375" y="325" font-size="12" text-anchor="middle" fill="#111111">"Sufficiente"</text>
+
+  <path d="M 180 360 L 180 398" stroke="#828282" stroke-width="2" fill="none" marker-end="url(#arrow-grey)"/>
+  <text x="196" y="392" font-size="10" fill="#828282">falso</text>
+
+  <rect x="105" y="400" width="150" height="40" rx="6" fill="#fff5ec" stroke="#f66a0a" stroke-width="2"/>
+  <text x="180" y="425" font-size="12" text-anchor="middle" fill="#111111">"Insufficiente"</text>
+  <text x="263" y="425" font-size="10" fill="#828282">else</text>
+
+  <text x="20" y="470" font-size="12" fill="#828282">le condizioni si valutano dall'alto in basso:</text>
+  <text x="20" y="488" font-size="12" fill="#828282">appena una è vera, il resto viene saltato.</text>
+</svg>

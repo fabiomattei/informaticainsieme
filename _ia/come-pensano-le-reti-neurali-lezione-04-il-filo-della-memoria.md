@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un filo che attraversa una fila di stati, ciascuno alimentato da un nuovo elemento della sequenza](/images/ia/come-pensano-le-reti-neurali-lezione-04-il-filo-della-memoria/come-pensano-le-reti-neurali-lezione-04-il-filo-della-memoria.svg){:class="aside-image"}
+
 ### 4.1 Il problema: sequenze che non hanno una lunghezza fissa
 
 Sia la rete a più piani della Lezione 2 sia lo stencil della Lezione 3 si aspettano un input di dimensione fissa: un certo numero di indizi, un'immagine di una certa grandezza. Il testo, il parlato, una serie di misurazioni nel tempo non hanno questa comodità: una frase può avere cinque parole o cinquecento, e niente in una rete come quelle viste finora gestisce naturalmente input di lunghezza variabile, né tiene conto esplicitamente dell'ordine in cui le cose arrivano. Una rete della Lezione 2 applicata a una frase tratterebbe la prima e la cinquantesima parola come due numeri indipendenti in un elenco, non come due momenti di un racconto che si svolge nel tempo. Serve un'architettura pensata apposta per questo tipo di dato: le **reti neurali ricorrenti**.

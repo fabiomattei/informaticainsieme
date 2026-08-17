@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un nodo centrale che rappresenta il modello collegato a quattro riquadri: cercare sul web, usare strumenti, vedere immagini, agire da solo](/images/ia/come-pensano-le-macchine-lezione-09-oltre-la-chat/come-pensano-le-macchine-lezione-09-oltre-la-chat.svg){:class="aside-image"}
+
 ### 9.1 I limiti di una memoria congelata
 
 Tutto quello che un LLM "sa" viene da ciò che ha letto durante il pre-training della Lezione 4 — un processo lungo e costoso, che si conclude a una certa data e non riprende automaticamente ogni giorno. Questo crea due limiti pratici evidenti: il modello non sa nulla di eventi accaduti dopo la fine del suo addestramento, e non ha accesso a informazioni private o specifiche che semplicemente non erano su internet (i tuoi appunti di scuola, i documenti interni di un'azienda, il meteo di domani). Chiedere a un modello "che tempo farà domani" è come chiedere a un enciclopedia cartacea: per quanto ben scritta, un libro stampato non si aggiorna da solo.

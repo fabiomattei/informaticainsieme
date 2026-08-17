@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una schedina del glossario in primo piano su una pila di altre schede, con termine, definizione e rimando alla lezione](/images/ia/come-pensano-le-macchine-appendice-b-glossario/come-pensano-le-macchine-appendice-b-glossario.svg){:class="aside-image"}
+
 Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per la prima volta. Nessuna definizione qui contiene formule: per la versione tecnica e formale di ciascun termine, vedi il glossario del libro "Come Funzionano i Large Language Model".
 
 **Agente** — un LLM che, invece di rispondere in un colpo solo, ripete un ciclo di "pensa, agisci, osserva il risultato, decidi il prossimo passo", incatenando ricerche e strumenti in autonomia. Lezione 9.

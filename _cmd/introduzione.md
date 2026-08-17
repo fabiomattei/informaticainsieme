@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Struttura di un comando nel Prompt: comando, parametro e opzione](/images/cmd/introduzione/introduzione.svg){:class="aside-image"}
+
 Il **Prompt dei comandi** (in inglese *Command Prompt*, eseguibile `cmd.exe`) è l'interprete a riga di comando di Windows. Permette di impartire istruzioni al sistema operativo digitando comandi testuali, senza passare dall'interfaccia grafica.
 
 È l'erede del **MS-DOS** (il sistema operativo a riga di comando che Microsoft distribuiva prima di Windows) e ne conserva ancora oggi molti comandi e molte convenzioni.

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un oggetto Python serializzato con pickle, inviato su socket e ricostruito](/images/rete/parte3/parte3.svg){:class="aside-image"}
+
 Fino ad ora abbiamo scambiato messaggi di testo tra client e server. Andiamo a vedere cosa bisogna fare per scambiarsi oggetti attraverso la tecnica di serializzazione con la libreria pinkle.
 
 In Python ogni cosa è un oggetto e ogni oggetto più essere serializzato utilizzando Pickle. Serializzare significa convertire le informazioni contenuti nelle proprietà di un oggetto in byte.

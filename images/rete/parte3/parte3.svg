@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Parte 3: oggetti Python via socket</text>
+
+  <!-- python object -->
+  <rect x="20" y="54" width="130" height="54" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="85" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#111111">oggetto Python</text>
+  <text x="85" y="94" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">{1:"hi", 2:"there"}</text>
+
+  <path d="M150,81 L188,81" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="169" y="72" text-anchor="middle" font-size="9" fill="#2a7ae2">dumps()</text>
+
+  <!-- bytes -->
+  <rect x="190" y="54" width="130" height="54" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="255" y="76" text-anchor="middle" font-size="11" font-weight="bold" fill="#f66a0a">bytes</text>
+  <text x="255" y="94" text-anchor="middle" font-size="9" font-family="monospace" fill="#f66a0a">b'\x80\x03}q\x00...'</text>
+
+  <path d="M320,81 L358,81" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="339" y="72" text-anchor="middle" font-size="9" fill="#2a7ae2">send()</text>
+
+  <!-- socket -->
+  <rect x="360" y="54" width="100" height="54" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="410" y="86" text-anchor="middle" font-size="12" font-weight="bold" fill="#111111">socket</text>
+
+  <!-- down arrow to client side -->
+  <path d="M410,108 L410,150 L410,150" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  <path d="M410,108 C410,140 100,150 100,150" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="255" y="140" text-anchor="middle" font-size="10" fill="#2a7ae2">recv() sul client</text>
+
+  <!-- bytes received -->
+  <rect x="20" y="160" width="150" height="54" rx="6" fill="#111111" stroke="#f66a0a" stroke-width="2"/>
+  <text x="95" y="182" text-anchor="middle" font-size="11" font-weight="bold" fill="#f66a0a">bytes ricevuti</text>
+  <text x="95" y="200" text-anchor="middle" font-size="9" font-family="monospace" fill="#f66a0a">b'\x80\x03}q\x00...'</text>
+
+  <path d="M170,187 L208,187" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="189" y="178" text-anchor="middle" font-size="9" fill="#2a7ae2">loads()</text>
+
+  <!-- python object rebuilt -->
+  <rect x="210" y="160" width="150" height="54" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="285" y="182" text-anchor="middle" font-size="11" font-weight="bold" fill="#111111">oggetto Python</text>
+  <text x="285" y="200" text-anchor="middle" font-size="10" font-family="monospace" fill="#828282">{1:"hi", 2:"there"}</text>
+
+  <text x="240" y="252" text-anchor="middle" font-size="12" fill="#828282">pickle.dumps() serializza, pickle.loads() ricostruisce</text>
+  <text x="240" y="270" text-anchor="middle" font-size="12" fill="#828282">l'header di lunghezza precede sempre i byte, come in parte 2</text>
+</svg>

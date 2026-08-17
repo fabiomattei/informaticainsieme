@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![I cinque elementi di un prompt efficace: ruolo, contesto, compito, formato, vincoli](/images/ia/anatomia-prompt-efficace/anatomia-prompt-efficace.svg){:class="aside-image"}
+
 Quando si chiede qualcosa a un modello linguistico e la risposta arriva vaga, generica o completamente fuori bersaglio, la tentazione è di pensare che "l'AI non funziona". Quasi sempre, però, il problema non è il modello: è il prompt. Imparare a costruire un prompt efficace è un'abilità pratica, non un'arte oscura, e si impara in fretta una volta che si capisce di cosa è fatto.
 
 ## I Cinque Elementi di un Buon Prompt

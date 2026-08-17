@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Flowchart del ciclo while con controllo in testa](/images/ruby/il-ciclo-while/il-ciclo-while.svg){:class="aside-image"}
+
 ## Il ciclo while
 
 Il costrutto `while` permette di eseguire un blocco di istruzioni più volte.

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">map, filter e reduce</text>
+
+  <!-- MAP row -->
+  <text x="30" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">map</text>
+  <rect x="90" y="45" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="107" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">1</text>
+  <rect x="128" y="45" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="145" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">2</text>
+  <rect x="166" y="45" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="183" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">3</text>
+
+  <line x1="205" y1="62" x2="245" y2="62" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#2a7ae2">x+x</text>
+
+  <rect x="250" y="45" width="34" height="34" rx="4" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="267" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">2</text>
+  <rect x="288" y="45" width="34" height="34" rx="4" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="305" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">4</text>
+  <rect x="326" y="45" width="34" height="34" rx="4" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="343" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">6</text>
+  <text x="400" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">trasforma</text>
+
+  <!-- FILTER row -->
+  <text x="30" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">filter</text>
+  <rect x="90" y="125" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="107" y="148" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">1</text>
+  <rect x="128" y="125" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="145" y="148" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">2</text>
+  <rect x="166" y="125" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="183" y="148" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">3</text>
+
+  <line x1="205" y1="142" x2="245" y2="142" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#2a7ae2">x%2==0</text>
+
+  <rect x="250" y="125" width="34" height="34" rx="4" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="267" y="148" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">2</text>
+  <text x="400" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">seleziona</text>
+
+  <!-- REDUCE row -->
+  <text x="30" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111" font-weight="600">reduce</text>
+  <rect x="90" y="205" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="107" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">1</text>
+  <rect x="128" y="205" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="145" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">2</text>
+  <rect x="166" y="205" width="34" height="34" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="183" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">3</text>
+
+  <line x1="205" y1="222" x2="245" y2="222" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="212" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#2a7ae2">a+b</text>
+
+  <rect x="255" y="205" width="46" height="34" rx="4" fill="#f66a0a" fill-opacity="0.12" stroke="#f66a0a" stroke-width="2"/>
+  <text x="278" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">6</text>
+  <text x="400" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">accumula</text>
+
+  <rect x="40" y="280" width="400" height="110" rx="6" fill="#ffffff" stroke="#828282" stroke-width="1.5"/>
+  <text x="240" y="305" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">In sintesi</text>
+  <text x="60" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">map: applica una funzione a ogni elemento</text>
+  <text x="60" y="352" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">filter: mantiene solo gli elementi che superano un test</text>
+  <text x="60" y="374" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">reduce: combina tutti gli elementi in un unico valore</text>
+</svg>

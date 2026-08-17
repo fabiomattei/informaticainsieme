@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Pipeline filter-map-reduce con transform, copy_if e accumulate](/images/cpp/map-filter-reduce/map-filter-reduce.svg){:class="aside-image"}
+
 ## Trasformare, filtrare, ridurre
 
 Le tre operazioni fondamentali sulle collezioni sono:

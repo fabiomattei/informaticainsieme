@@ -1,0 +1,31 @@
+<svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="210" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">Punto = Struct.new(:x, :y)</text>
+
+  <!-- struct definition box -->
+  <rect x="30" y="50" width="150" height="90" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="105" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Punto</text>
+  <line x1="40" y1="82" x2="170" y2="82" stroke="#2a7ae2" stroke-width="1"/>
+  <text x="50" y="102" font-size="13" font-family="monospace" fill="#111111">x</text>
+  <text x="50" y="122" font-size="13" font-family="monospace" fill="#111111">y</text>
+  <text x="105" y="155" text-anchor="middle" font-size="11" fill="#828282">campi nominati</text>
+
+  <line x1="180" y1="95" x2="230" y2="95" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="205" y="83" text-anchor="middle" font-size="11" fill="#828282">.new(3, 4)</text>
+
+  <!-- instance -->
+  <rect x="230" y="50" width="160" height="90" rx="6" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="310" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">p1 :Punto</text>
+  <line x1="240" y1="82" x2="380" y2="82" stroke="#f66a0a" stroke-width="1"/>
+  <text x="250" y="102" font-size="13" font-family="monospace" fill="#111111">x = 3</text>
+  <text x="250" y="122" font-size="13" font-family="monospace" fill="#111111">y = 4</text>
+
+  <text x="210" y="175" text-anchor="middle" font-size="13" fill="#828282">p1.x → 3     p1.y → 4</text>
+  <text x="210" y="197" text-anchor="middle" font-size="13" fill="#828282">costruttore, getter e setter generati automaticamente</text>
+  <text x="210" y="219" text-anchor="middle" font-size="12" fill="#828282">a metà strada tra un Hash e una Classe</text>
+</svg>

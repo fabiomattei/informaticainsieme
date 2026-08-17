@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Coppia nome/valore di una variabile di ambiente accessibile a più programmi](/images/cmd/variabili-di-ambiente/variabili-di-ambiente.svg){:class="aside-image"}
+
 Le **variabili di ambiente** sono valori memorizzati dal sistema operativo e accessibili da qualsiasi programma o script. Vengono usate per configurare il comportamento del sistema (percorsi di ricerca, cartelle temporanee, ecc.).
 
 ## set - visualizza o imposta una variabile

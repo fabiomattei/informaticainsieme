@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Rete neurale profonda con due strati nascosti e uscita softmax a 10 classi](/images/ia/reti-neurali-profonde/reti-neurali-profonde.svg){:class="aside-image"}
+
 ## Perché aggiungere strati?
 
 La rete della pagina precedente aveva un solo strato nascosto. Aggiungere strati permette alla rete di imparare caratteristiche sempre più astratte: il primo strato potrebbe individuare bordi e contrasti nei pixel, il secondo forme geometriche elementari, il terzo parti riconoscibili di un oggetto. Ogni strato costruisce su ciò che lo strato precedente ha imparato.

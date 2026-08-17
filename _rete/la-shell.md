@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una finestra del prompt con un comando di rete annotato](/images/rete/la-shell/la-shell.svg){:class="aside-image"}
+
 ## Il comando ping
 
 {% highlight shell %}

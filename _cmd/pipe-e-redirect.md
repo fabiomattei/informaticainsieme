@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Pipe che collega due comandi e redirect che scrive l'output in un file](/images/cmd/pipe-e-redirect/pipe-e-redirect.svg){:class="aside-image"}
+
 Ogni comando del Prompt riceve normalmente l'input da tastiera e scrive il proprio output (e gli eventuali errori) a schermo. Windows permette di **rediregere** questi tre canali verso file, oppure di collegare l'output di un comando all'input di un altro tramite una **pipe**.
 
 I tre canali si chiamano, con la terminologia classica:

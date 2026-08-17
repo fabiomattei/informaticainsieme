@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di una lista indicizzata con indici positivi e negativi](/images/python/esercizi-sulle-liste/esercizi-sulle-liste.svg){:class="aside-image"}
+
 {::options parse_block_html="true" /}
 <figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="326" loading="lazy" src="https://www.youtube.com/embed/Ustzf00v2IY?feature=oembed" title="Le liste in Python, prima parte" width="580"></iframe></div>
 {::options parse_block_html="false" /}

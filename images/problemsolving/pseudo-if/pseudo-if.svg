@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="200" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Costrutto if / else</text>
+
+  <line x1="200" y1="40" x2="200" y2="65" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- condition diamond -->
+  <polygon points="200,65 285,115 200,165 115,115" fill="white" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="200" y="120" text-anchor="middle" font-size="13" fill="#111111">condizione?</text>
+
+  <!-- true branch -->
+  <line x1="285" y1="115" x2="330" y2="115" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="105" font-size="11" fill="#828282">vero</text>
+  <line x1="330" y1="115" x2="330" y2="160" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="270" y="163" width="120" height="46" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+  <text x="330" y="191" text-anchor="middle" font-size="13" fill="#111111">ramo then</text>
+
+  <!-- false branch -->
+  <line x1="115" y1="115" x2="70" y2="115" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="90" y="105" font-size="11" fill="#828282">falso</text>
+  <line x1="70" y1="115" x2="70" y2="160" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="10" y="163" width="120" height="46" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="70" y="191" text-anchor="middle" font-size="13" fill="#111111">ramo else</text>
+
+  <!-- merge -->
+  <line x1="330" y1="209" x2="330" y2="245" stroke="#828282" stroke-width="1.5"/>
+  <line x1="70" y1="209" x2="70" y2="245" stroke="#828282" stroke-width="1.5"/>
+  <line x1="70" y1="245" x2="330" y2="245" stroke="#828282" stroke-width="1.5"/>
+  <line x1="200" y1="245" x2="200" y2="265" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="140" y="268" width="120" height="36" rx="6" fill="white" stroke="#828282" stroke-width="1.5"/>
+  <text x="200" y="291" text-anchor="middle" font-size="12" fill="#828282">prosegue</text>
+
+  <text x="200" y="330" text-anchor="middle" font-size="13" fill="#828282">si esegue solo uno dei due rami, poi si prosegue</text>
+</svg>

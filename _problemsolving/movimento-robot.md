@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![I comandi di movimento spostano il robot cella per cella sulla griglia](/images/problemsolving/movimento-robot/movimento-robot.svg){:class="aside-image"}
+
 {::options parse_block_html="true" /}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1sxT2iUDKPY?si=FwLYFWaQECS0hOkn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {::options parse_block_html="false" /}

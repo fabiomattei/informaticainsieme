@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Piramide di precedenza degli operatori aritmetici e di confronto](/images/cpp/operatori/operatori.svg){:class="aside-image"}
+
 ## Operatori aritmetici
 
 Gli operatori aritmetici di C++ funzionano come in matematica, con una

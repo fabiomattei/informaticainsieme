@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma di una tupla indicizzata e immutabile](/images/python/esercizi-sulle-tuple/esercizi-sulle-tuple.svg){:class="aside-image"}
+
 Le tuple sono strutture dati analoghe alle liste. La differenza tra tuple e liste risiede nel fatto che una lista è mutabile, possono dunque modificarla aggiungendo e rimuovendo un elemento da questa, una tupla al contrario, una volta definita non può essere modificata non è possibile aggiungere o rimuovere elementi ad una tupla in un secondo momento. Tutti gli operatori che abbiamo visto per le liste (min, max, len, in, not in) sono utilizzabili anche con le tuple. Ovviamente non potremo utilizzare l’operatore del.
 
 Viene spontaneo chiedersi che senso abbiamo per un linguaggio definire due strutture dati analoghe ma una con meno potenzialità dell’altra. La risposta risiede nel bisogno di prestazioni, una struttura che ha meno po- tenzialità risulta molto più snella per un elaboratore dunque occupa meno memoria ed offre prestazioni migliori in termini di computabilità.

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un errore piccolo produce una loss bassa, un errore grande una loss alta](/images/ia/come-pensano-le-reti-neurali-lezione-05-quanto-costa-sbagliare/come-pensano-le-reti-neurali-lezione-05-quanto-costa-sbagliare.svg){:class="aside-image"}
+
 ### 5.1 Prima di correggersi, serve un numero
 
 Le lezioni precedenti hanno mostrato come costruire una rete — interruttori, piani, stencil, bigliettini che si aggiornano — e come farle produrre un output a partire da un input. Manca ancora la domanda più importante di tutte: come si capisce se la rete sta imparando bene? Il primo passo è mettere un numero preciso su quanto la rete stia sbagliando in questo momento — una **funzione di perdita** (o *loss*), che deve essere piccola quando la rete va bene e grande quando va male. Le prossime due sezioni ne descrivono le due forme più comuni, ciascuna pensata per un tipo diverso di compito.

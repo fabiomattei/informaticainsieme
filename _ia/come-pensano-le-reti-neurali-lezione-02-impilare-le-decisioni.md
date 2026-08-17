@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Due ingressi collegati a due strati nascosti che convergono in un output](/images/ia/come-pensano-le-reti-neurali-lezione-02-impilare-le-decisioni/come-pensano-le-reti-neurali-lezione-02-impilare-le-decisioni.svg){:class="aside-image"}
+
 ### 2.1 Un solo controllore non basta
 
 La Lezione 1 ha lasciato un problema in sospeso: le quattro palline ai quattro angoli del quadrato, rosse in diagonale e blu in diagonale, che nessuna linea retta riesce a separare. Un solo interruttore, per quanto ben allenato, non ce la fa — è un limite geometrico, non una questione di allenamento migliore. Ma Minsky e Papert stessi, nel bel mezzo di un libro che elencava limiti, avevano lasciato cadere un suggerimento: e se, invece di un solo controllore, ne mettessimo più di uno in fila?

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Client e server TCP che si scambiano richieste e risposte](/images/rete/client-server/client-server.svg){:class="aside-image"}
+
 In questa lezione dedicata ai socket faremo comunicare una coppia Server-Client TCP da noi creata.
 
 Utilizzeremo i moduli socket per la connessione, subprocess per l'elaborazione delle richieste e sys in caso di errore per uscire dal sistema. Il client potrà effettuare richieste al server, che risponderà dopo aver processato la richiesta effettuata tramite il modulo subprocess.

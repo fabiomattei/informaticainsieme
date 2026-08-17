@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Amministrazione del sistema</text>
+
+  <!-- users box -->
+  <rect x="30" y="48" width="130" height="100" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="95" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">net user</text>
+  <circle cx="65" cy="95" r="11" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  <path d="M52,120 q13,-16 26,0" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="120" cy="95" r="11" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  <path d="M107,120 q13,-16 26,0" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+
+  <!-- groups box -->
+  <rect x="175" y="48" width="130" height="100" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">net localgroup</text>
+  <rect x="195" y="82" width="90" height="24" rx="4" fill="#ffffff" stroke="#f66a0a" stroke-width="2"/>
+  <text x="240" y="98" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">Administrators</text>
+  <rect x="195" y="112" width="90" height="24" rx="4" fill="#ffffff" stroke="#828282" stroke-width="2"/>
+  <text x="240" y="128" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">Users</text>
+
+  <!-- scheduled tasks box -->
+  <rect x="320" y="48" width="130" height="100" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="385" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111" font-weight="600">schtasks</text>
+  <circle cx="385" cy="105" r="26" fill="none" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="385" y1="105" x2="385" y2="88" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="385" y1="105" x2="398" y2="110" stroke="#2a7ae2" stroke-width="2"/>
+
+  <text x="240" y="175" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">utenti · gruppi · attività pianificate</text>
+
+  <!-- terminal -->
+  <rect x="30" y="195" width="420" height="165" rx="6" fill="#1e1e1e"/>
+  <circle cx="48" cy="210" r="4" fill="#828282"/>
+  <circle cx="62" cy="210" r="4" fill="#828282"/>
+  <circle cx="76" cy="210" r="4" fill="#828282"/>
+  <text x="48" y="238" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">C:\&gt; net user Marco Password123 /add</text>
+  <text x="48" y="262" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">C:\&gt; net localgroup Administrators Marco /add</text>
+  <text x="48" y="286" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">C:\&gt; schtasks /create /tn "Backup" /tr</text>
+  <text x="66" y="306" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">backup.bat /sc daily /st 08:00</text>
+  <text x="48" y="335" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">richiede il Prompt come amministratore</text>
+</svg>

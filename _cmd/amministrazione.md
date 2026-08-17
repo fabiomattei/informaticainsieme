@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Utenti, gruppi e attività pianificate gestiti da riga di comando](/images/cmd/amministrazione/amministrazione.svg){:class="aside-image"}
+
 I comandi di questa pagina servono a gestire gli **account utente** del computer e a **pianificare** l'esecuzione automatica di programmi o script. Sono comandi pensati per chi amministra un computer: molti richiedono di aprire il Prompt **come amministratore** (tasto destro sull'icona → "Esegui come amministratore").
 
 ## net user - gestire gli account utente

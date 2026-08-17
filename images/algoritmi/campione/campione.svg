@@ -1,0 +1,56 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Algoritmo del campione</text>
+
+  <!-- list S -->
+  <g>
+    <rect x="15" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="36" y="74" text-anchor="middle" font-size="14" fill="#111111">4</text>
+    <rect x="60" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="81" y="74" text-anchor="middle" font-size="14" fill="#111111">5</text>
+    <rect x="105" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="126" y="74" text-anchor="middle" font-size="14" fill="#111111">7</text>
+    <rect x="150" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="171" y="74" text-anchor="middle" font-size="14" fill="#111111">3</text>
+    <rect x="195" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="216" y="74" text-anchor="middle" font-size="14" fill="#111111">9</text>
+    <rect x="240" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="261" y="74" text-anchor="middle" font-size="14" fill="#111111">3</text>
+    <rect x="285" y="50" width="42" height="38" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="306" y="74" text-anchor="middle" font-size="14" fill="#111111">6</text>
+    <text x="20" y="42" font-size="12" fill="#828282">S</text>
+  </g>
+
+  <!-- comparisons pointing down to campA -->
+  <line x1="126" y1="88" x2="126" y2="130" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="216" y1="88" x2="216" y2="130" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="216" y="105" text-anchor="middle" font-size="11" fill="#f66a0a">9 &gt; campA</text>
+
+  <!-- campA box -->
+  <rect x="150" y="135" width="140" height="60" rx="6" fill="white" stroke="#f66a0a" stroke-width="2"/>
+  <text x="220" y="158" text-anchor="middle" font-size="12" fill="#828282">campA (miglior valore finora)</text>
+  <text x="220" y="180" text-anchor="middle" font-size="18" fill="#111111">9</text>
+
+  <text x="240" y="230" text-anchor="middle" font-size="13" fill="#828282">scorrendo la lista, ogni valore</text>
+  <text x="240" y="248" text-anchor="middle" font-size="13" fill="#828282">più grande del campione lo sostituisce</text>
+
+  <!-- mini timeline of campA updates -->
+  <g>
+    <rect x="40" y="270" width="70" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="75" y="292" text-anchor="middle" font-size="13" fill="#111111">campA=4</text>
+    <line x1="110" y1="288" x2="135" y2="288" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="140" y="270" width="70" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="175" y="292" text-anchor="middle" font-size="13" fill="#111111">campA=5</text>
+    <line x1="210" y1="288" x2="235" y2="288" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="240" y="270" width="70" height="36" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+    <text x="275" y="292" text-anchor="middle" font-size="13" fill="#111111">campA=7</text>
+    <line x1="310" y1="288" x2="335" y2="288" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="340" y="270" width="70" height="36" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+    <text x="375" y="292" text-anchor="middle" font-size="13" fill="#111111">campA=9</text>
+  </g>
+</svg>

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Stringa come sequenza di caratteri indicizzati](/images/ruby/stringhe/stringhe.svg){:class="aside-image"}
+
 ## Una sequenza di caratteri
 
 Una stringa di testo è una **sequenza ordinata di caratteri**. Il computer

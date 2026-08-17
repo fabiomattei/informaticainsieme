@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Albero di cartelle e file con i comandi per copiarli, spostarli ed eliminarli](/images/cmd/gestione-file-e-cartelle/gestione-file-e-cartelle.svg){:class="aside-image"}
+
 I comandi seguenti permettono di creare, copiare, spostare ed eliminare file e cartelle direttamente da riga di comando.
 
 ## mkdir (o md) - crea una cartella

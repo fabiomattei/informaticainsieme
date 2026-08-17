@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Selezione greedy degli oggetti per rapporto valore/peso nello zaino](/images/algoritmi/knapsack/knapsack.svg){:class="aside-image"}
+
 ## L'approccio greedy al problema di Knapsack
 
 E' possibile approcciare il problema di knapsack con approccio greedy. Questo vuol dire trovare una buona soluzione ammissibile, non necessariamente ottima, attraverso un numero di passi limitato.

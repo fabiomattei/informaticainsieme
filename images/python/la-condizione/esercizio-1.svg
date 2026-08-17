@@ -1,0 +1,31 @@
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#111111" font-weight="600">Esercizio 1: if senza else</text>
+
+  <!-- diamond -->
+  <polygon points="240,50 320,95 240,140 160,95" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="99" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#111111">b &gt; a ?</text>
+
+  <!-- vero: branch to print box -->
+  <line x1="320" y1="95" x2="395" y2="95" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="358" y="85" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">vero</text>
+  <rect x="335" y="75" width="120" height="40" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="395" y="100" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">"b maggiore di a"</text>
+
+  <!-- vero box down into Fine -->
+  <polyline points="395,115 395,215 280,215" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- falso: branch straight to Fine -->
+  <line x1="240" y1="140" x2="240" y2="203" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="258" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">falso</text>
+
+  <!-- Fine -->
+  <ellipse cx="240" cy="225" rx="50" ry="22" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="240" y="230" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#111111">Fine</text>
+
+  <text x="240" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">se falso, non viene stampato nulla</text>
+</svg>

@@ -7,6 +7,8 @@ layout: page
 guid: 'https://www.esercizidiinformatica.it/?page_id=886'
 ---
 
+![Array di char terminato dal carattere \0](/images/cpp/c-le-stringhe/c-le-stringhe.svg){:class="aside-image"}
+
 In C e in C++ non esiste un vero e proprio tipo stringa. Una stringa é vista come una sequenza di caratteri
 che come ultimo carattere ha il quello che si indica come terminatore: \\0.
 Una stringa, contenuta in uno spazio in memoria (array). La gestione delle stringhe in standard C é facilitata da

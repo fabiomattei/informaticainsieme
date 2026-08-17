@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una tabella ridondante normalizzata in due tabelle collegate da una chiave](/images/database/forme-normali/forme-normali.svg){:class="aside-image"}
+
 Le **forme normali** sono un insieme di regole per valutare la qualità di un database relazionale. Seguirle riduce la **ridondanza** — lo stesso dato memorizzato in più posti — e previene le **anomalie** che ne derivano.
 
 ### Le anomalie della ridondanza

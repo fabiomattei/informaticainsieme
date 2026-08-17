@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Un elenco di spunte, una per ogni lezione con soluzione risolta](/images/ia/come-pensano-le-reti-neurali-appendice-a-soluzioni/come-pensano-le-reti-neurali-appendice-a-soluzioni.svg){:class="aside-image"}
+
 Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esiste un'unica risposta "corretta" — il valore dell'esercizio sta nel ragionamento, non nel risultato. Leggile solo dopo aver provato tu stesso: sbirciare prima toglie gran parte del divertimento.
 
 ### Soluzione — Lezione 1: correggi l'interruttore dell'ombrello

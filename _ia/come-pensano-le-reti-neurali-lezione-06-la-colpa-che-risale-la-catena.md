@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Il forward pass scorre in avanti, il backward pass fa risalire la colpa correggendo ogni peso](/images/ia/come-pensano-le-reti-neurali-lezione-06-la-colpa-che-risale-la-catena/come-pensano-le-reti-neurali-lezione-06-la-colpa-che-risale-la-catena.svg){:class="aside-image"}
+
 ### 6.1 Il forward pass da solo non basta
 
 La Lezione 2 ha mostrato come una fila di controllori — uno strato dopo l'altro — trasformi un input in un output, passando l'informazione in avanti, piano per piano. Ma nel "Prova tu" di quella lezione i pesi erano già dati, scelti a tavolino perché il risultato tornasse giusto. Nella realtà nessuno sceglie i pesi a mano: la rete deve trovarli da sola, correggendosi progressivamente in base agli errori commessi, esattamente come l'interruttore-ombrello della Lezione 1. La domanda di questa lezione è: quando l'errore finale viene misurato (Lezione 5) su una rete con centinaia o migliaia di pesi sparsi su più piani, *come si distribuisce la colpa* fra tutti quei pesi, capendo di quanto e in che direzione correggere ciascuno?

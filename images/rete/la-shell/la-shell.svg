@@ -1,0 +1,37 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">La shell e i comandi di rete</text>
+
+  <!-- terminal window -->
+  <rect x="30" y="46" width="420" height="220" rx="8" fill="#111111" stroke="#2a7ae2" stroke-width="2"/>
+  <!-- title bar -->
+  <rect x="30" y="46" width="420" height="28" rx="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <rect x="30" y="60" width="420" height="14" fill="#eef2f7"/>
+  <circle cx="50" cy="60" r="6" fill="#f66a0a"/>
+  <circle cx="70" cy="60" r="6" fill="#828282"/>
+  <circle cx="90" cy="60" r="6" fill="#2a7ae2"/>
+  <text x="240" y="65" text-anchor="middle" font-size="11" fill="#111111">prompt dei comandi</text>
+
+  <!-- prompt line with labeled parts -->
+  <text x="46" y="106" font-size="14" font-family="monospace" fill="#2a7ae2" font-weight="bold">C:\Users\User1&gt;</text>
+  <text x="200" y="106" font-size="14" font-family="monospace" fill="#f66a0a" font-weight="bold">ping</text>
+  <text x="248" y="106" font-size="14" font-family="monospace" fill="white">www.google.com</text>
+
+  <!-- annotation lines -->
+  <line x1="80" y1="112" x2="80" y2="136" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="80" y="150" text-anchor="middle" font-size="10" fill="#2a7ae2">prompt</text>
+
+  <line x1="212" y1="112" x2="212" y2="136" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="212" y="150" text-anchor="middle" font-size="10" fill="#f66a0a">comando</text>
+
+  <line x1="320" y1="112" x2="320" y2="136" stroke="#828282" stroke-width="1.5"/>
+  <text x="320" y="150" text-anchor="middle" font-size="10" fill="#828282">argomento</text>
+
+  <!-- output lines -->
+  <text x="46" y="182" font-size="11" font-family="monospace" fill="#828282">Esecuzione di Ping www.google.com [142.250.180.4]</text>
+  <text x="46" y="198" font-size="11" font-family="monospace" fill="#828282">Risposta da 142.250.180.4: byte=32 durata=12ms</text>
+  <text x="46" y="214" font-size="11" font-family="monospace" fill="#828282">Risposta da 142.250.180.4: byte=32 durata=11ms</text>
+  <text x="46" y="230" font-size="11" font-family="monospace" fill="#828282">Pacchetti: inviati = 4, ricevuti = 4, persi = 0</text>
+
+  <text x="240" y="288" text-anchor="middle" font-size="12" fill="#828282">ping, tracert, ipconfig, arp: comandi per esplorare la rete</text>
+</svg>

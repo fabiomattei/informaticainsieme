@@ -1,0 +1,36 @@
+<svg viewBox="0 0 420 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+
+  <rect x="150" y="10" width="120" height="40" rx="20" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="35" text-anchor="middle" font-size="14" fill="#111111">inizio</text>
+  <line x1="210" y1="50" x2="210" y2="80" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- condition diamond -->
+  <polygon points="210,80 300,140 210,200 120,140" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="135" text-anchor="middle" font-size="14" fill="#111111">cont &lt; 10 ?</text>
+  <text x="210" y="153" text-anchor="middle" font-size="11" fill="#828282">while (controllo in testa)</text>
+
+  <!-- vera -> continua -->
+  <line x1="210" y1="200" x2="210" y2="230" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="228" y="218" font-size="13" fill="#2a7ae2" font-weight="bold">vera</text>
+
+  <rect x="130" y="230" width="160" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="210" y="255" text-anchor="middle" font-size="14" fill="#111111">cont += 1</text>
+  <text x="210" y="275" text-anchor="middle" font-size="14" fill="#111111">puts cont</text>
+
+  <path d="M130 260 C60 260 60 140 118 140" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- falsa -> fine -->
+  <line x1="300" y1="140" x2="330" y2="140" stroke="#f66a0a" stroke-width="2"/>
+  <path d="M330 140 L330 375 L270 375" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="345" y="130" font-size="13" fill="#f66a0a" font-weight="bold">falsa</text>
+
+  <rect x="150" y="355" width="120" height="40" rx="20" fill="#fff3ea" stroke="#f66a0a" stroke-width="2"/>
+  <text x="210" y="380" text-anchor="middle" font-size="14" fill="#111111">fine</text>
+
+  <text x="210" y="425" text-anchor="middle" font-size="12" fill="#828282">la condizione è valutata prima di ogni iterazione</text>
+</svg>

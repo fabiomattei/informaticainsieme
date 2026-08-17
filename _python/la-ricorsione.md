@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Diagramma della pila di chiamate ricorsive di fattoriale con il passo base evidenziato](/images/python/la-ricorsione/la-ricorsione.svg){:class="aside-image"}
+
 Problema: devo lavare una pila di 15 piatti.   
 Soluzione:
 

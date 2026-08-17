@@ -1,0 +1,29 @@
+<svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cover-title cover-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="cover-title">Un percorso verso l'orizzonte</title>
+  <desc id="cover-desc">Una freccia orizzontale che parte da "oggi" e attraversa tre tappe etichettate: modelli più piccoli ed efficienti, aprire la scatola nera, e un punto interrogativo all'orizzonte a rappresentare ciò che ancora non sappiamo.</desc>
+
+  <defs>
+    <marker id="arrowRoad" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4.5 L0,9 z" fill="#2a7ae2" /></marker>
+  </defs>
+
+  <text x="240" y="28" fill="#111111" font-size="17" font-weight="bold" text-anchor="middle">Cosa ci aspetta</text>
+
+  <line x1="40" y1="180" x2="393" y2="180" stroke="#2a7ae2" stroke-width="3" marker-end="url(#arrowRoad)" />
+  <text x="40" y="205" fill="#828282" font-size="12" text-anchor="start">oggi</text>
+  <text x="430" y="205" fill="#828282" font-size="12" text-anchor="end">domani</text>
+
+  <circle cx="140" cy="180" r="6" fill="#2a7ae2" />
+  <line x1="140" y1="180" x2="140" y2="120" stroke="#828282" stroke-width="1.5" stroke-dasharray="3 2" />
+  <rect x="60" y="70" width="160" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+  <text x="140" y="90" fill="#111111" font-size="11" text-anchor="middle">Modelli più piccoli</text>
+  <text x="140" y="106" fill="#111111" font-size="11" text-anchor="middle">ed efficienti</text>
+
+  <circle cx="290" cy="180" r="6" fill="#2a7ae2" />
+  <line x1="290" y1="180" x2="290" y2="238" stroke="#828282" stroke-width="1.5" stroke-dasharray="3 2" />
+  <rect x="210" y="240" width="160" height="50" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2" />
+  <text x="290" y="260" fill="#111111" font-size="11" text-anchor="middle">Aprire la</text>
+  <text x="290" y="276" fill="#111111" font-size="11" text-anchor="middle">scatola nera</text>
+
+  <circle cx="420" cy="180" r="22" fill="#fde8d6" stroke="#f66a0a" stroke-width="2" stroke-dasharray="4 3" />
+  <text x="420" y="188" fill="#c85506" font-size="20" font-weight="bold" text-anchor="middle">?</text>
+</svg>

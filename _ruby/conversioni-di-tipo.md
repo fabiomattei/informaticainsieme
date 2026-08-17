@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Valore che si sposta tra String, Float e Integer](/images/ruby/conversioni-di-tipo/conversioni-di-tipo.svg){:class="aside-image"}
+
 ## Perché convertire i tipi
 
 In Ruby ogni valore ha un tipo. A volte è necessario trasformare un valore

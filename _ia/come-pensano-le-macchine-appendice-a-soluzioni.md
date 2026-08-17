@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Una lavagnetta con dieci righe, una per lezione, ciascuna spuntata con un segno di verifica](/images/ia/come-pensano-le-macchine-appendice-a-soluzioni/come-pensano-le-macchine-appendice-a-soluzioni.svg){:class="aside-image"}
+
 Le soluzioni qui sotto sono organizzate per lezione. Per molti giochi non esiste un'unica risposta "corretta" — il valore dell'esercizio sta nel ragionamento, non nel risultato. Leggile solo dopo aver provato tu stesso: sbirciare prima toglie gran parte del divertimento.
 
 ### Soluzione — Lezione 1: il modello a bigrammi improvvisato

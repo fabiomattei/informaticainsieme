@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![La lettura pagina per pagina si scontra col vincolo sequenziale, l'attenzione salta direttamente al bersaglio](/images/ia/come-pensano-le-reti-neurali-lezione-08-perche-serviva-unidea-nuova/come-pensano-le-reti-neurali-lezione-08-perche-serviva-unidea-nuova.svg){:class="aside-image"}
+
 ### 8.1 Due problemi, uno più profondo dell'altro
 
 La Lezione 4 ha lasciato in sospeso due problemi distinti del "bigliettino che si aggiorna pagina per pagina", ed è arrivato il momento di tenerli ben separati, perché richiedono rimedi molto diversi. Il primo — il bigliettino che si sporca su sequenze lunghe — è in parte curato dal diario più furbo di LSTM e GRU (Sezione 4.5): un problema di *qualità* della memoria, alleviabile con un meccanismo migliore. Il secondo, più profondo, è che il tuo amico deve leggere una pagina alla volta, in ordine, senza scorciatoie: un vincolo che discende direttamente da *cosa significa* leggere in sequenza, non da un difetto correggibile con un diario più intelligente. Questa lezione si concentra sul secondo problema, perché è quello che ha davvero motivato l'abbandono di questo tipo di lettura pagina-per-pagina, non solo la sua correzione.
