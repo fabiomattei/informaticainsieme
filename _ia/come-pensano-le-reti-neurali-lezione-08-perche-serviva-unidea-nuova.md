@@ -30,7 +30,65 @@ La capacità di "tornare a guardare indietro" della Sezione 8.2, presa da sola �
 
 Prova a immaginare un libro di 500 pagine, e la necessità di collegare un indizio nascosto a pagina 10 con una rivelazione a pagina 490 — 480 pagine di distanza. Con un lettore pagina-per-pagina, quell'indizio deve attraversare tutte e 480 le pagine di mezzo, indebolendosi un po' a ogni passaggio (il bigliettino che si sporca, Sezione 4.4) — più le due pagine sono lontane, più il collegamento fatica a sopravvivere. Con la capacità di guardare-ovunque del Transformer, lo stesso collegamento si calcola con un confronto diretto fra le due pagine — un percorso di lunghezza sempre uguale, che la distanza sia di 480 pagine o di 2.
 
+<figure style="margin: 2rem 0; text-align: center;">
+<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="collegamento-title collegamento-desc" style="width: 100%; max-width: 480px; height: auto; font-family: inherit;">
+  <title id="collegamento-title">Collegamento diretto contro catena lunga</title>
+  <desc id="collegamento-desc">A sinistra, la lettura pagina per pagina deve attraversare ogni pagina intermedia fra la 10 e la 490, un passaggio alla volta. A destra, l'attenzione del Transformer collega le due pagine direttamente, con un percorso di lunghezza sempre uguale.</desc>
+
+  <text x="120" y="30" fill="#111" font-size="13" font-weight="bold" text-anchor="middle">lettura pagina-per-pagina</text>
+  <g fill="#dceafc" stroke="#2a7ae2" stroke-width="1.5">
+    <rect x="20" y="100" width="22" height="30" /><rect x="202" y="100" width="22" height="30" />
+  </g>
+  <g fill="#f3f3f3" stroke="#c9c9c9" stroke-width="1.5">
+    <rect x="46" y="100" width="22" height="30" /><rect x="72" y="100" width="22" height="30" /><rect x="98" y="100" width="22" height="30" />
+    <rect x="124" y="100" width="22" height="30" /><rect x="150" y="100" width="22" height="30" /><rect x="176" y="100" width="22" height="30" />
+  </g>
+  <text x="31" y="120" fill="#1d5eb8" font-size="9" text-anchor="middle">10</text>
+  <text x="213" y="120" fill="#1d5eb8" font-size="9" text-anchor="middle">490</text>
+  <g stroke="#f66a0a" stroke-width="1.5"><path d="M42,115 L46,115 M68,115 L72,115 M94,115 L98,115 M120,115 L124,115 M146,115 L150,115 M172,115 L176,115 M198,115 L202,115" /></g>
+  <text x="120" y="150" fill="#c85506" font-size="11" text-anchor="middle">480 passaggi, uno alla volta</text>
+
+  <text x="400" y="30" fill="#111" font-size="13" font-weight="bold" text-anchor="middle">attenzione (Transformer)</text>
+  <circle cx="320" cy="115" r="16" fill="#dceafc" stroke="#2a7ae2" stroke-width="1.5" />
+  <text x="320" y="119" fill="#1d5eb8" font-size="9" text-anchor="middle">10</text>
+  <circle cx="480" cy="115" r="16" fill="#dceafc" stroke="#2a7ae2" stroke-width="1.5" />
+  <text x="480" y="119" fill="#1d5eb8" font-size="9" text-anchor="middle">490</text>
+  <line x1="336" y1="115" x2="464" y2="115" stroke="#2a7ae2" stroke-width="2.5" />
+  <text x="400" y="150" fill="#1d5eb8" font-size="11" text-anchor="middle">1 passaggio, qualunque sia la distanza</text>
+</svg>
+<figcaption style="color: #828282; font-size: 0.9rem; margin-top: 0.5rem;">La stessa distanza, due percorsi di lunghezza radicalmente diversa.</figcaption>
+</figure>
+
 E sul fronte del tempo necessario a leggere: un lettore pagina-per-pagina impiega necessariamente 500 passaggi in sequenza per l'intero libro, uno alla volta, nessuno saltabile. Un modello basato sulla sola attenzione, senza alcun obbligo di ordine fra le pagine, può elaborare tutte e 500 le pagine **contemporaneamente**, in un solo passaggio — non perché faccia meno calcoli in totale, ma perché nessuno di quei calcoli deve aspettare che un altro sia finito prima di cominciare. Ed è proprio questo, più di ogni altro fattore, a determinare quanto tempo reale serve per allenare un modello su quantità di testo enormi.
+
+<figure style="margin: 2rem 0; text-align: center;">
+<svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tempo-title tempo-desc" style="width: 100%; max-width: 440px; height: auto; font-family: inherit;">
+  <title id="tempo-title">Sequenziale contro parallelo</title>
+  <desc id="tempo-desc">A sinistra, 500 passaggi in fila, uno dopo l'altro, nessuno saltabile. A destra, le stesse pagine elaborate tutte insieme, in un solo passaggio nel tempo.</desc>
+
+  <text x="115" y="25" fill="#111" font-size="13" font-weight="bold" text-anchor="middle">sequenziale</text>
+  <g fill="#fde8d6" stroke="#f66a0a" stroke-width="1.2">
+    <rect x="20" y="100" width="18" height="18" /><rect x="42" y="100" width="18" height="18" /><rect x="64" y="100" width="18" height="18" />
+    <rect x="86" y="100" width="18" height="18" /><rect x="108" y="100" width="18" height="18" /><rect x="130" y="100" width="18" height="18" />
+    <rect x="152" y="100" width="18" height="18" /><rect x="174" y="100" width="18" height="18" /><rect x="196" y="100" width="18" height="18" /><rect x="218" y="100" width="18" height="18" />
+  </g>
+  <path d="M20,140 L232,140" stroke="#828282" stroke-width="1.5" />
+  <text x="230" y="144" fill="#828282" font-size="10">tempo →</text>
+  <text x="115" y="170" fill="#c85506" font-size="11" text-anchor="middle">500 passaggi in fila,</text>
+  <text x="115" y="184" fill="#c85506" font-size="11" text-anchor="middle">nessuno saltabile</text>
+
+  <text x="370" y="25" fill="#111" font-size="13" font-weight="bold" text-anchor="middle">parallelo</text>
+  <g fill="#dceafc" stroke="#2a7ae2" stroke-width="1.2">
+    <rect x="340" y="50" width="60" height="16" /><rect x="340" y="72" width="60" height="16" /><rect x="340" y="94" width="60" height="16" />
+    <rect x="340" y="116" width="60" height="16" /><rect x="340" y="138" width="60" height="16" />
+  </g>
+  <path d="M410,50 L410,154" stroke="#828282" stroke-width="1.5" />
+  <text x="418" y="105" fill="#828282" font-size="10">tempo →</text>
+  <text x="370" y="184" fill="#1d5eb8" font-size="11" text-anchor="middle">tutte insieme,</text>
+  <text x="370" y="198" fill="#1d5eb8" font-size="11" text-anchor="middle">un solo passaggio</text>
+</svg>
+<figcaption style="color: #828282; font-size: 0.9rem; margin-top: 0.5rem;">Non meno calcoli in totale — ma nessuno di quei calcoli deve aspettare gli altri per cominciare.</figcaption>
+</figure>
 
 ### 8.6 Dove andare da qui
 
