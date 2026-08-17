@@ -1,6 +1,6 @@
 ---
 title: 'CRUD: eliminare libri e autori'
-date: '2026-08-17T20:20:00+01:00'
+date: '2026-08-17T11:20:00+01:00'
 author: Fabio Mattei
 layout: page
 ---

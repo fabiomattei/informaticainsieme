@@ -1,6 +1,6 @@
 ---
 title: 'CRUD: modificare un libro'
-date: '2026-08-17T20:15:00+01:00'
+date: '2026-08-17T11:15:00+01:00'
 author: Fabio Mattei
 layout: page
 ---

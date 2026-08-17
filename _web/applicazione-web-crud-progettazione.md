@@ -1,6 +1,6 @@
 ---
 title: 'Una applicazione web CRUD: progettiamo libri e autori'
-date: '2026-08-17T20:00:00+01:00'
+date: '2026-08-17T11:00:00+01:00'
 author: Fabio Mattei
 layout: page
 ---

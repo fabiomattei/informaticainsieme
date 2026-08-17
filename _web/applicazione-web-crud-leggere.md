@@ -1,6 +1,6 @@
 ---
 title: 'CRUD: leggere i dati (elenco libri e autori)'
-date: '2026-08-17T20:05:00+01:00'
+date: '2026-08-17T11:05:00+01:00'
 author: Fabio Mattei
 layout: page
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'CRUD: creare autori e libri'
-date: '2026-08-17T20:10:00+01:00'
+date: '2026-08-17T11:10:00+01:00'
 author: Fabio Mattei
 layout: page
 ---
