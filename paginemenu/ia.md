@@ -84,3 +84,29 @@ Una guida curiosa a come una macchina impara, senza formule.
 * [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-appendice-a-soluzioni.md %}.html)
 * [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-appendice-b-glossario.md %}.html)
 
+## Informatica Agentica
+
+L'**informatica agentica** è la branca dell'intelligenza artificiale applicata che si occupa di costruire sistemi capaci non solo di rispondere, ma di **agire**: pianificare una sequenza di passi, usare strumenti esterni, osservare il risultato delle proprie azioni e correggere la strategia, fino a portare a termine un obiettivo assegnato da un essere umano. È l'evoluzione naturale del chatbot verso qualcosa di più simile a un collaboratore digitale autonomo.
+
+### Concetti di base
+
+* [Cos'è un agente AI]({{ site.baseurl }}{% link _agentica/cosa-e-un-agente-ai.md %}.html)
+* [Agenti vs chatbot e assistenti]({{ site.baseurl }}{% link _agentica/agenti-vs-chatbot.md %}.html)
+
+### Come agisce un agente
+
+* [Tool use e function calling]({{ site.baseurl }}{% link _agentica/tool-use-function-calling.md %}.html)
+* [Il protocollo MCP (Model Context Protocol)]({{ site.baseurl }}{% link _agentica/protocollo-mcp.md %}.html)
+
+### Sistemi più complessi
+
+* [Orchestrazione multi-agente]({{ site.baseurl }}{% link _agentica/orchestrazione-multi-agente.md %}.html)
+
+### Rischi e responsabilità
+
+* [Rischi e sicurezza degli agenti AI]({{ site.baseurl }}{% link _agentica/rischi-sicurezza-agenti.md %}.html)
+
+### Esempi pratici
+
+* [Un agente da zero: l'esempio con Ollama]({{ site.baseurl }}{% link _agentica/agente-da-zero-ollama.md %}.html)
+
