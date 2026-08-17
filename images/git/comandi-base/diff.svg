@@ -1,0 +1,25 @@
+<svg viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="230" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#111111">git diff vs git diff --staged</text>
+
+  <rect x="20" y="46" width="110" height="44" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="75" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#111111">working dir</text>
+
+  <rect x="175" y="46" width="110" height="44" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="230" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#111111">staging</text>
+
+  <rect x="330" y="46" width="110" height="44" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="385" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#111111">ultimo commit</text>
+
+  <path d="M75,90 C75,140 230,140 230,90" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#2a7ae2">git diff</text>
+
+  <path d="M230,90 C230,175 385,175 385,90" fill="none" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="307" y="196" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">git diff --staged</text>
+
+  <text x="230" y="234" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">ognuno confronta due punti diversi della catena</text>
+</svg>

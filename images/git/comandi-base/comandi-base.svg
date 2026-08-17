@@ -1,0 +1,36 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Il ciclo quotidiano</text>
+
+  <rect x="20" y="46" width="120" height="52" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="80" y="77" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">file modificati</text>
+
+  <line x1="140" y1="72" x2="185" y2="72" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="162" y="63" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#2a7ae2">git add</text>
+
+  <rect x="190" y="46" width="120" height="52" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="250" y="77" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">staging area</text>
+
+  <line x1="310" y1="72" x2="355" y2="72" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="332" y="63" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#2a7ae2">git commit</text>
+
+  <rect x="360" y="46" width="100" height="52" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="410" y="77" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">cronologia</text>
+
+  <text x="240" y="122" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">git status mostra sempre in che punto ci si trova</text>
+
+  <rect x="30" y="145" width="420" height="30" rx="6" fill="#ffffff" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="240" y="165" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#828282">git status · git diff · git diff --staged</text>
+
+  <!-- terminal recap -->
+  <rect x="30" y="195" width="420" height="130" rx="6" fill="#1e1e1e"/>
+  <text x="48" y="220" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f66a0a">$ git status</text>
+  <text x="48" y="242" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">$ git add index.html</text>
+  <text x="48" y="264" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#ffffff">$ git commit -m "Aggiunto il footer"</text>
+  <text x="48" y="288" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f66a0a">$ git log --oneline</text>
+  <text x="48" y="308" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">a3f5c9e Aggiunto il footer</text>
+</svg>

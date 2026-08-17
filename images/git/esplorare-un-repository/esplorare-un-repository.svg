@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Cronologia e branch su GitHub</text>
+
+  <text x="40" y="70" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">main</text>
+  <line x1="70" y1="66" x2="440" y2="66" stroke="#2a7ae2" stroke-width="2.5"/>
+  <circle cx="90" cy="66" r="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="150" cy="66" r="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="410" cy="66" r="9" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+
+  <line x1="150" y1="73" x2="220" y2="130" stroke="#f66a0a" stroke-width="2"/>
+  <text x="40" y="140" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">v1-fix</text>
+  <line x1="220" y1="136" x2="320" y2="136" stroke="#f66a0a" stroke-width="2.5"/>
+  <circle cx="220" cy="136" r="8" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <circle cx="320" cy="136" r="8" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="320" y1="130" x2="400" y2="74" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <text x="240" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">Insights → Network mostra questo grafico</text>
+
+  <line x1="0" y1="196" x2="480" y2="196" stroke="#eef2f7" stroke-width="2"/>
+
+  <!-- commit detail card -->
+  <rect x="40" y="214" width="400" height="60" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="1.5"/>
+  <text x="56" y="236" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111" font-weight="600">a3f5c9e</text>
+  <text x="130" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">Corretto il calcolo del totale</text>
+  <text x="56" y="256" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">Mario Rossi · 2 giorni fa · 1 file modificato</text>
+
+  <!-- diff -->
+  <rect x="40" y="286" width="400" height="40" rx="6" fill="#1e1e1e"/>
+  <text x="56" y="303" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">- totale = prezzo * 1.20</text>
+  <text x="56" y="320" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#3fb950">+ totale = prezzo * (1 + iva)</text>
+</svg>

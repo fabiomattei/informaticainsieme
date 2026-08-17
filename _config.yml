@@ -58,6 +58,9 @@ collections:
   flask:
     output: true
     permalink: /flask/:path
+  git:
+    output: true
+    permalink: /git/:path
   ia:
     output: true
     permalink: /ia/:path	

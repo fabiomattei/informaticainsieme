@@ -1,0 +1,26 @@
+<svg viewBox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+  <text x="230" y="22" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#111111">GitHub Flow</text>
+
+  <text x="40" y="60" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#2a7ae2" font-weight="600">main</text>
+  <line x1="75" y1="56" x2="420" y2="56" stroke="#2a7ae2" stroke-width="2.5"/>
+  <circle cx="90" cy="56" r="7" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <circle cx="200" cy="56" r="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+  <circle cx="330" cy="56" r="8" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2.5"/>
+
+  <line x1="90" y1="63" x2="140" y2="110" stroke="#f66a0a" stroke-width="2"/>
+  <text x="40" y="120" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#f66a0a">feature-a</text>
+  <line x1="140" y1="116" x2="195" y2="116" stroke="#f66a0a" stroke-width="2.5"/>
+  <circle cx="140" cy="116" r="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <circle cx="195" cy="116" r="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="195" y1="110" x2="198" y2="63" stroke="#f66a0a" stroke-width="2"/>
+
+  <line x1="200" y1="63" x2="250" y2="150" stroke="#f66a0a" stroke-width="2"/>
+  <text x="285" y="160" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#f66a0a">feature-b</text>
+  <line x1="250" y1="156" x2="285" y2="156" stroke="#f66a0a" stroke-width="2.5"/>
+  <circle cx="250" cy="156" r="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <circle cx="285" cy="156" r="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="285" y1="150" x2="325" y2="63" stroke="#f66a0a" stroke-width="2"/>
+
+  <text x="230" y="200" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">main è sempre pronto per la produzione</text>
+  <text x="230" y="218" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">ogni funzionalità nasce e si sviluppa su un branch dedicato</text>
+</svg>

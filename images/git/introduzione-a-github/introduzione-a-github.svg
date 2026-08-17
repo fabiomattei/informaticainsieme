@@ -1,0 +1,38 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">La pagina di un repository</text>
+
+  <rect x="30" y="46" width="420" height="264" rx="6" fill="#ffffff" stroke="#828282" stroke-width="2"/>
+
+  <!-- tab bar -->
+  <rect x="30" y="46" width="420" height="34" rx="6" fill="#eef2f7"/>
+  <text x="60" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#f66a0a">Code</text>
+  <text x="105" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">Issues</text>
+  <text x="165" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">Pull requests</text>
+  <text x="235" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">Actions</text>
+  <text x="290" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#111111">Settings</text>
+  <line x1="30" y1="80" x2="105" y2="80" stroke="#f66a0a" stroke-width="2"/>
+
+  <!-- branch selector -->
+  <rect x="46" y="92" width="80" height="26" rx="4" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="86" y="109" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">main ▾</text>
+
+  <!-- file list -->
+  <rect x="46" y="128" width="388" height="26" rx="4" fill="#f7f7f7"/>
+  <text x="56" y="145" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">_config.yml</text>
+  <text x="420" y="145" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">2 giorni fa</text>
+
+  <rect x="46" y="156" width="388" height="26" rx="4" fill="#ffffff"/>
+  <text x="56" y="173" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">_layouts/</text>
+  <text x="420" y="173" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">1 settimana fa</text>
+
+  <rect x="46" y="184" width="388" height="26" rx="4" fill="#f7f7f7"/>
+  <text x="56" y="201" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">README.md</text>
+  <text x="420" y="201" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">oggi</text>
+
+  <!-- README preview -->
+  <rect x="46" y="222" width="388" height="76" rx="4" fill="#eef2f7" stroke="#828282" stroke-width="1"/>
+  <text x="56" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">README.md</text>
+  <line x1="56" y1="252" x2="400" y2="252" stroke="#d3d3d3" stroke-width="1"/>
+  <text x="56" y="270" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">Descrizione del progetto, come</text>
+  <text x="56" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">installarlo e come usarlo.</text>
+</svg>

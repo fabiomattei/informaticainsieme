@@ -1,0 +1,43 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Branch e merge</text>
+
+  <text x="40" y="70" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#828282">main</text>
+  <line x1="75" y1="66" x2="440" y2="66" stroke="#2a7ae2" stroke-width="2.5"/>
+  <circle cx="90" cy="66" r="9" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="90" y="70" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">A</text>
+  <circle cx="150" cy="66" r="9" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="150" y="70" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">B</text>
+  <circle cx="350" cy="66" r="9" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="350" y="70" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">E</text>
+  <circle cx="420" cy="66" r="10" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+  <text x="420" y="70" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">M</text>
+
+  <line x1="150" y1="75" x2="220" y2="140" stroke="#f66a0a" stroke-width="2"/>
+  <text x="40" y="150" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#f66a0a">feature</text>
+  <line x1="220" y1="146" x2="320" y2="146" stroke="#f66a0a" stroke-width="2.5"/>
+  <circle cx="220" cy="146" r="9" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="220" y="150" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">C</text>
+  <circle cx="320" cy="146" r="9" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="320" y="150" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="9" fill="#111111">D</text>
+  <line x1="320" y1="140" x2="410" y2="76" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <text x="420" y="94" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">merge</text>
+
+  <text x="240" y="182" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">git switch -c feature → si lavora in parallelo → git merge feature</text>
+
+  <!-- conflict box -->
+  <rect x="30" y="205" width="420" height="115" rx="6" fill="#1e1e1e"/>
+  <text x="48" y="230" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+  <text x="48" y="250" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">versione sul branch corrente</text>
+  <text x="48" y="270" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">=======</text>
+  <text x="48" y="290" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">versione sul branch feature</text>
+  <text x="48" y="310" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</text>
+</svg>

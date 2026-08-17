@@ -1,0 +1,55 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a7ae2"/>
+    </marker>
+  </defs>
+  <text x="240" y="26" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Le tre aree di lavoro</text>
+
+  <rect x="20" y="60" width="120" height="60" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="80" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">Working</text>
+  <text x="80" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">directory</text>
+
+  <line x1="140" y1="90" x2="185" y2="90" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="162" y="80" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#2a7ae2">add</text>
+
+  <rect x="190" y="60" width="120" height="60" rx="6" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="250" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">Staging</text>
+  <text x="250" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">area</text>
+
+  <line x1="310" y1="90" x2="355" y2="90" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="332" y="80" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#2a7ae2">commit</text>
+
+  <rect x="360" y="60" width="100" height="60" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="410" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">Repository</text>
+  <text x="410" y="102" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">(cronologia)</text>
+
+  <text x="80" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">i file sul disco</text>
+  <text x="250" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">pronti per il commit</text>
+  <text x="410" y="140" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">salvati per sempre</text>
+
+  <!-- commit chain -->
+  <line x1="0" y1="170" x2="480" y2="170" stroke="#eef2f7" stroke-width="2"/>
+  <text x="240" y="194" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#828282">la cronologia è una catena di commit</text>
+
+  <circle cx="90" cy="230" r="18" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="90" y="234" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">A</text>
+  <line x1="108" y1="230" x2="152" y2="230" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="170" cy="230" r="18" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="170" y="234" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">B</text>
+  <line x1="188" y1="230" x2="232" y2="230" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="250" cy="230" r="18" fill="#eef2f7" stroke="#2a7ae2" stroke-width="2"/>
+  <text x="250" y="234" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">C</text>
+  <line x1="268" y1="230" x2="312" y2="230" stroke="#2a7ae2" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="330" cy="230" r="18" fill="#eef2f7" stroke="#f66a0a" stroke-width="2.5"/>
+  <text x="330" y="234" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">D</text>
+
+  <rect x="300" y="256" width="60" height="24" rx="4" fill="#ffffff" stroke="#f66a0a" stroke-width="1.5"/>
+  <text x="330" y="272" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#f66a0a" font-weight="600">HEAD</text>
+  <line x1="330" y1="256" x2="330" y2="250" stroke="#f66a0a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="240" y="320" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">HEAD indica il commit su cui ci si trova ora</text>
+</svg>

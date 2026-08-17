@@ -1,0 +1,44 @@
+<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+  <text x="240" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#111111">Il file .gitignore</text>
+
+  <!-- project folder -->
+  <rect x="30" y="46" width="180" height="220" rx="6" fill="#eef2f7" stroke="#828282" stroke-width="2"/>
+  <text x="120" y="68" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">progetto/</text>
+
+  <rect x="46" y="80" width="148" height="26" rx="4" fill="#ffffff" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="120" y="97" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">index.html</text>
+
+  <rect x="46" y="112" width="148" height="26" rx="4" fill="#ffffff" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="120" y="129" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#111111">.gitignore</text>
+
+  <rect x="46" y="144" width="148" height="26" rx="4" fill="#ffffff" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="120" y="161" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">node_modules/</text>
+
+  <rect x="46" y="176" width="148" height="26" rx="4" fill="#ffffff" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="120" y="193" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">.env</text>
+
+  <rect x="46" y="208" width="148" height="26" rx="4" fill="#ffffff" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="120" y="225" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282">.DS_Store</text>
+
+  <!-- legend -->
+  <rect x="47" y="242" width="14" height="14" rx="3" fill="#ffffff" stroke="#2a7ae2" stroke-width="1.5"/>
+  <text x="68" y="253" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#111111">tracciato da Git</text>
+  <rect x="47" y="256" width="14" height="14" rx="3" fill="#ffffff" stroke="#828282" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="68" y="267" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">ignorato</text>
+
+  <!-- gitignore content -->
+  <rect x="240" y="46" width="210" height="140" rx="6" fill="#1e1e1e"/>
+  <text x="256" y="70" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#828282"># .gitignore</text>
+  <text x="256" y="94" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">node_modules/</text>
+  <text x="256" y="116" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">.env</text>
+  <text x="256" y="138" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">.DS_Store</text>
+  <text x="256" y="160" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ffffff">*.log</text>
+
+  <rect x="240" y="200" width="210" height="90" rx="6" fill="#eef2f7" stroke="#f66a0a" stroke-width="2"/>
+  <text x="345" y="224" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#111111">buon commit</text>
+  <text x="345" y="246" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">"Aggiungi il controllo</text>
+  <text x="345" y="262" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10" fill="#111111">sull'email"</text>
+  <text x="345" y="280" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#828282">breve, imperativo, chiaro</text>
+
+  <text x="240" y="316" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#828282">crea .gitignore prima di git add</text>
+</svg>
