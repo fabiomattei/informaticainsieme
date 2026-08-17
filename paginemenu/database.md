@@ -7,8 +7,10 @@ layout: page
 
 - [Database introduzione]({{ site.baseurl }}{% link _database/database.md %}.html)
 - [Il modello entità relazione]({{ site.baseurl }}{% link _database/modello-entita-relazione.md %}.html)
+- [La relazione]({{ site.baseurl }}{% link _database/la-relazione.md %}.html)
 - [Il linguaggio SQL]({{ site.baseurl }}{% link _database/il-linguaggio-sql.md %}.html)
 - [Le forme normali]({{ site.baseurl }}{% link _database/forme-normali.md %}.html)
 - [MS Access]({{ site.baseurl }}{% link _database/ms-access.md %}.html)
 - [SQLite e python]({{ site.baseurl }}{% link _database/sqlite-e-python.md %}.html)
+- [MySQL]({{ site.baseurl }}{% link _database/mysql.md %}.html)
 

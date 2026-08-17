@@ -99,6 +99,8 @@ Se non si riesce a trovare una chiave che soddisfa questi requisiti è possibile
 
 Nell’esempio precedente abbiamo utilizzato gli attributi Codice Meccanografico e Codice Fiscale come chiavi primarie.
 
+Le chiavi appena viste servono anche a un altro scopo, che vedremo nella prossima pagina: sono lo strumento con cui una relazione — il rombo del diagramma ER — viene tradotta in un legame concreto tra tabelle. Vedi [La relazione]({{ site.baseurl }}{% link _database/la-relazione.md %}.html).
+
 ## Esercizi
 
 Si vuole organizzare il campionato di calcetto tra i **comuni** appartenente all’area di Castel Di Sangro. Le **squadre** che si sfideranno apparterranno ai vari comuni ma i **giocatori** avranno la possibilità di iscriversi ad una sola squadra.

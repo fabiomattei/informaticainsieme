@@ -1,0 +1,56 @@
+<svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f66a0a"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Lo schema della mini-biblioteca</text>
+
+  <!-- autori table -->
+  <text x="40" y="52" font-size="13" font-weight="bold" fill="#111111">autori</text>
+  <rect x="40" y="60" width="180" height="94" rx="6" fill="white" stroke="#2a7ae2" stroke-width="2"/>
+  <line x1="40" y1="84" x2="220" y2="84" stroke="#2a7ae2" stroke-width="1.5"/>
+  <line x1="40" y1="106" x2="220" y2="106" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="40" y1="130" x2="220" y2="130" stroke="#2a7ae2" stroke-width="1"/>
+  <line x1="90" y1="60" x2="90" y2="154" stroke="#2a7ae2" stroke-width="1"/>
+  <text x="46" y="77" font-size="10" font-weight="bold" fill="#2a7ae2">id (PK)</text>
+  <text x="96" y="77" font-size="10" font-weight="bold" fill="#111111">nome, cognome</text>
+  <text x="46" y="99" font-size="10" fill="#828282">1</text>
+  <text x="96" y="99" font-size="10" fill="#828282">Italo Calvino</text>
+  <text x="46" y="123" font-size="10" fill="#828282">2</text>
+  <text x="96" y="123" font-size="10" fill="#828282">Primo Levi</text>
+  <text x="46" y="147" font-size="10" fill="#828282">3</text>
+  <text x="96" y="147" font-size="10" fill="#828282">Elsa Morante</text>
+
+  <!-- libri table -->
+  <text x="260" y="52" font-size="13" font-weight="bold" fill="#111111">libri</text>
+  <rect x="260" y="60" width="180" height="118" rx="6" fill="white" stroke="#f66a0a" stroke-width="2"/>
+  <line x1="260" y1="84" x2="440" y2="84" stroke="#f66a0a" stroke-width="1.5"/>
+  <line x1="260" y1="106" x2="440" y2="106" stroke="#f66a0a" stroke-width="1"/>
+  <line x1="260" y1="130" x2="440" y2="130" stroke="#f66a0a" stroke-width="1"/>
+  <line x1="260" y1="154" x2="440" y2="154" stroke="#f66a0a" stroke-width="1"/>
+  <line x1="322" y1="60" x2="322" y2="178" stroke="#f66a0a" stroke-width="1"/>
+  <text x="266" y="77" font-size="10" font-weight="bold" fill="#111111">titolo</text>
+  <text x="328" y="77" font-size="10" font-weight="bold" fill="#f66a0a">autore_id (FK)</text>
+  <text x="266" y="99" font-size="10" fill="#828282">Il barone rampante</text>
+  <text x="328" y="99" font-size="10" fill="#f66a0a" font-weight="bold">1</text>
+  <text x="266" y="123" font-size="10" fill="#828282">Se questo è un uomo</text>
+  <text x="328" y="123" font-size="10" fill="#f66a0a" font-weight="bold">2</text>
+  <text x="266" y="147" font-size="10" fill="#828282">Il sentiero dei nidi</text>
+  <text x="328" y="147" font-size="10" fill="#f66a0a" font-weight="bold">1</text>
+  <text x="266" y="171" font-size="10" fill="#828282">La tregua</text>
+  <text x="328" y="171" font-size="10" fill="#f66a0a" font-weight="bold">2</text>
+
+  <!-- right-angle connector from FK column to PK column, routed below both tables -->
+  <path d="M381,178 L381,204 L65,204 L65,154" fill="none" stroke="#f66a0a" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrowR)"/>
+  <text x="223" y="218" text-anchor="middle" font-size="11" fill="#f66a0a">autore_id punta a id</text>
+
+  <text x="240" y="246" text-anchor="middle" font-size="12" fill="#828282">più righe di libri possono avere lo stesso autore_id: relazione 1:N</text>
+
+  <!-- key legend -->
+  <rect x="90" y="270" width="14" height="14" rx="2" fill="#2a7ae2"/>
+  <text x="112" y="281" font-size="11" fill="#111111">chiave primaria (PK) — identifica la riga nella propria tabella</text>
+  <rect x="90" y="294" width="14" height="14" rx="2" fill="#f66a0a"/>
+  <text x="112" y="305" font-size="11" fill="#111111">chiave esterna (FK) — punta alla chiave primaria di un'altra tabella</text>
+</svg>

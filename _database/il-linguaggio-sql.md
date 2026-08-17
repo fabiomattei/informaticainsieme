@@ -7,7 +7,12 @@ layout: page
 
 ![Le clausole SELECT, FROM e WHERE annotate su una tabella](/images/database/il-linguaggio-sql/il-linguaggio-sql.svg){:class="aside-image"}
 
-Il linguaggio SQL permette al database administrator di operare sui database. Il linguaggio è di per sé molto semplice e conta pochi comandi. Le possibili combinazioni di comandi danno però luogo ad una ricchissima potenzialità espressiva.
+Il linguaggio SQL (Structured Query Language) permette di operare su un database relazionale: creare la struttura delle tabelle, popolarle di dati e interrogarle per ottenere le informazioni che servono. Il linguaggio è di per sé molto semplice e conta pochi comandi. Le possibili combinazioni di comandi danno però luogo ad una ricchissima potenzialità espressiva.
+
+I comandi SQL si dividono in due grandi famiglie, a seconda di cosa vanno a modificare:
+
+* **DDL** (Data Definition Language) — comandi che definiscono la *struttura* del database: CREATE TABLE e DROP TABLE. Si usano una tantum, quando si progetta o si modifica lo schema.
+* **DML** (Data Manipulation Language) — comandi che operano sui *dati* contenuti nelle tabelle: INSERT, UPDATE, DELETE per modificarli, SELECT per leggerli. Sono i comandi che si usano quotidianamente, una volta che lo schema è già stato creato.
 
 #### CREATE TABLE 
 
@@ -45,10 +50,35 @@ nome TEXT,
 cognome TEXT);
 {% endhighlight %}
 
+##### Le chiavi esterne (FOREIGN KEY)
+
+Abbiamo detto che le **relazioni** tra entità si concretizzano tramite chiavi esterne. In SQL una chiave esterna si dichiara con la clausola FOREIGN KEY, che indica quale colonna della tabella corrente fa riferimento alla chiave primaria di un'altra tabella:
+
+{% highlight sql %}
+CREATE TABLE nome_tabella (
+<nome_colonna><tipo_dato>[attributi],
+...,
+FOREIGN KEY (colonna_locale) REFERENCES altra_tabella(colonna_riferita)
+);
+{% endhighlight %}
+
+Esempio: la tabella `voti` fa riferimento a uno studente già presente nella tabella `alunni`:
+
+{% highlight sql %}
+CREATE TABLE voti (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+id_alunno INTEGER NOT NULL,
+materia TEXT,
+voto REAL,
+FOREIGN KEY (id_alunno) REFERENCES alunni(id)
+);
+{% endhighlight %}
+
+Questo vincolo garantisce che in `voti.id_alunno` non possa mai comparire un id che non esiste nella tabella `alunni`: è il database stesso, non il programmatore, a impedire di creare un voto "orfano". Nota che in SQLite il controllo dei vincoli FOREIGN KEY va abilitato esplicitamente con `PRAGMA foreign_keys = ON;` prima di eseguire le query, perché per motivi storici di compatibilità è disattivato di default.
+
 #### DROP TABLE 
 
-Il comando consente di cancellare una tabella dal database.
-
+Il comando consente di cancellare **l'intera tabella** dal database: non solo i dati che contiene, ma anche la sua struttura (colonne, tipi, chiavi). È un comando DDL, da non confondere con DELETE, che invece rimuove solo le righe lasciando intatta la tabella. L'operazione è irreversibile: una volta eseguita, l'unico modo per recuperare i dati è ripristinare un backup.
 
 {% highlight sql %}
 DROP TABLE nome_tabella;
@@ -63,7 +93,7 @@ DROP TABLE alunni;
 
 #### INSERT 
 
-Il comando consente di inserire dati in una tabella esistente
+Il comando consente di inserire una nuova riga (una tupla) in una tabella esistente.
 
 {% highlight sql %}
 INSERT INTO nome_tabella
@@ -71,7 +101,7 @@ INSERT INTO nome_tabella
 VALUES (valore1, valore2, valore3);
 {% endhighlight %}
 
-Attenzione: i valori da inserire vanno elencati nello stesso ordine delle colonne. I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ‘ oppure doppi apici “.
+Attenzione: i valori da inserire vanno elencati nello stesso ordine delle colonne. I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ‘ oppure doppi apici “. L'elenco delle colonne dopo il nome della tabella è facoltativo: se viene omesso, SQL si aspetta un valore per ciascuna colonna della tabella, nello stesso ordine in cui sono state definite con CREATE TABLE. È comunque buona norma indicarlo sempre esplicitamente, così la query resta corretta anche se in futuro la struttura della tabella cambia.
 
 Esempio:
 
@@ -90,7 +120,7 @@ A questo punto la tabella alunni conterrà una tupla avente id = 1, il campo nom
 
 #### UPDATE 
 
-Il comando consente di modificare i dati già presenti in una tabella.
+Il comando consente di modificare i dati già presenti in una o più righe di una tabella.
 
 {% highlight sql %}
 UPDATE nome_tabella
@@ -100,6 +130,8 @@ WHERE predicato;
 
 I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
 
+**Attenzione**: la clausola WHERE è facoltativa dal punto di vista sintattico, ma quasi sempre indispensabile. Se viene omessa, l'UPDATE modifica **tutte** le righe della tabella, non una sola. Prima di eseguire un UPDATE è buona abitudine eseguire prima una SELECT con lo stesso WHERE, per controllare quali righe verranno effettivamente coinvolte.
+
 Esempio:
 
 {% highlight sql %}
@@ -108,7 +140,7 @@ UPDATE alunni SET nome = "Annabella" WHERE id = 1;
 
 #### DELETE 
 
-Il comando consente di cancellare i dati da una tabella
+Il comando consente di cancellare una o più righe da una tabella, lasciandone intatta la struttura (per eliminare l'intera tabella si usa DROP TABLE, visto sopra).
 
 
 {% highlight sql %}
@@ -116,6 +148,8 @@ DELETE FROM nome_tabella WHERE predicato;
 {% endhighlight %}
 
 I valori numerici si inseriscono senza particolari accortezze, mentre i valori di tipo stringa vanno racchiusi tra semplici apici ’ oppure doppi apici “.
+
+**Attenzione**: vale lo stesso avvertimento dell'UPDATE. Omettendo il WHERE, DELETE FROM nome_tabella; cancella **tutte** le righe della tabella, svuotandola completamente.
 
 Esempio:
 
@@ -144,6 +178,14 @@ Questo comando permette di reperire dati da una o più tabelle.
 
 * di confronto: =, &lt;&gt;, &lt;=, &gt;=, &lt;, &gt;
 * pattern matching (confronto di schema) tra stringhe: LIKE seguita da caratteri jolly \_ per un solo carattere, % per uno o più caratteri.
+
+Esempio di LIKE: trovare tutti i film il cui titolo contiene la parola "chiamavano", ovunque essa compaia nel testo:
+
+{% highlight sql %}
+SELECT Titolo FROM film WHERE Titolo LIKE '%chiamavano%';
+{% endhighlight %}
+
+Il carattere % prima e dopo la parola significa "qualsiasi sequenza di caratteri, anche vuota": senza il % iniziale la ricerca troverebbe solo i titoli che *iniziano* con "chiamavano".
 
 I predicati si combinano tra loro utilizzando gli operatori logici AND, OR, NOT.
 
@@ -218,6 +260,8 @@ SELECT COUNT(*) FROM film;
 SELECT SUM(Incasso) FROM proiezioni;
 SELECT AVG(Incasso) FROM proiezioni WHERE IdSala = 1;
 {% endhighlight %}
+
+Da notare: COUNT(\*) conta tutte le righe, comprese quelle con valori NULL. Tutte le altre funzioni aggregate (SUM, AVG, MIN, MAX), invece, ignorano i valori NULL nella colonna su cui operano: se su 10 proiezioni 3 non hanno ancora un incasso registrato (NULL), AVG(Incasso) calcola la media sulle 7 righe rimanenti, non su tutte e 10.
 
 #### GROUP BY e HAVING
 
@@ -307,6 +351,15 @@ LEFT JOIN Ordini ON Clienti.IdCliente = Ordini.IdCliente;
 | Mario Girotti | 10308 |
 | Sergio Leone | 10310 |
 | Luigi Diberti | NULL |
+
+**JOIN su più tabelle.** Non ci si deve fermare a due tabelle: si possono concatenare tanti JOIN quante sono le tabelle da collegare, aggiungendo una clausola JOIN...ON per ogni collegamento. Ad esempio, per ottenere il titolo dei brani insieme al nome dell'artista che li ha incisi, passando per la tabella intermedia ALBUM:
+
+{% highlight sql %}
+SELECT Brani.Titolo, Artisti.Nome
+FROM Brani
+JOIN Album ON Brani.IdAlbum = Album.IdAlbum
+JOIN Artisti ON Album.IdArtista = Artisti.IdArtista;
+{% endhighlight %}
 
 ### Esercizi
 

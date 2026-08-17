@@ -19,3 +19,11 @@ layout: page
 ### Content management system
 
 * [Creiamo un sito web con wordpress]({{ site.baseurl }}{% link _web/creiamo-sito-con-wordpress.md %}.html)
+
+### Una applicazione web CRUD (PHP + MySQL)
+
+* [Progettiamo libri e autori]({{ site.baseurl }}{% link _web/applicazione-web-crud-progettazione.md %}.html)
+* [Leggere i dati (elenco libri e autori)]({{ site.baseurl }}{% link _web/applicazione-web-crud-leggere.md %}.html)
+* [Creare autori e libri]({{ site.baseurl }}{% link _web/applicazione-web-crud-creare.md %}.html)
+* [Modificare un libro]({{ site.baseurl }}{% link _web/applicazione-web-crud-modificare.md %}.html)
+* [Eliminare libri e autori]({{ site.baseurl }}{% link _web/applicazione-web-crud-eliminare.md %}.html)

@@ -7,7 +7,7 @@ layout: page
 
 ![Un programma Python collegato a un file di database SQLite](/images/database/sqlite-e-python/sqlite-e-python.svg){:class="aside-image"}
 
-SQLite è un database semplificato, utilizzato molto per le applicazioni su telefonino con il fine di salvare e accedere ai dati. È spesso utilizzato nei videogiochi, lo si utilizza in Adobe Lightroom, in Apple iTunes, in Dropbox, in Firefox e in molte altre applicazioni. SQLite è piccolo ma contiene molto del linguaggio SQL standard ed è ACID, questo significa che ogni query è Atomica, Consistente, Isolata e Durevole.
+SQLite è un database semplificato, utilizzato molto per le applicazioni su telefonino con il fine di salvare e accedere ai dati. È spesso utilizzato nei videogiochi, lo si utilizza in Adobe Lightroom, in Apple iTunes, in Dropbox, in Firefox e in molte altre applicazioni. SQLite è piccolo ma contiene molto del linguaggio SQL standard ed è ACID, questo significa che ogni query è Atomica, Consistente, Isolata e Durevole. È un database **embedded**: non richiede un server separato, a differenza di [MySQL]({{ site.baseurl }}{% link _database/mysql.md %}.html), pensato invece per applicazioni con più utenti connessi in rete.
 
 #### Sqlite e i file
 

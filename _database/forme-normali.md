@@ -9,6 +9,10 @@ layout: page
 
 Le **forme normali** sono un insieme di regole per valutare la qualità di un database relazionale. Seguirle riduce la **ridondanza** — lo stesso dato memorizzato in più posti — e previene le **anomalie** che ne derivano.
 
+La normalizzazione si colloca a metà tra la progettazione concettuale e la scrittura effettiva delle query: si parte da un modello entità-relazione o da una prima bozza di tabelle, e si applicano le forme normali per verificare — e correggere — la struttura delle tabelle *prima* di popolarle con i dati. Farlo dopo, quando le tabelle contengono già migliaia di righe, è molto più costoso.
+
+Negli esempi di questa pagina le chiavi esterne (contrassegnate con \*) rappresentano i legami che, una volta tradotti in SQL, si dichiarano con la clausola FOREIGN KEY spiegata in [Il linguaggio SQL]({{ site.baseurl }}{% link _database/il-linguaggio-sql.md %}.html#create-table): è quel vincolo a impedire concretamente, ad esempio, che nella tabella ESAMI compaia un IdMateria che non esiste nella tabella MATERIE.
+
 ### Le anomalie della ridondanza
 
 Quando un dato è duplicato in più righe possono verificarsi tre tipi di anomalie:
@@ -149,7 +153,9 @@ Ora la coppia Città → Regione esiste in un solo posto e non può diventare in
 | 2FN | Ogni attributo non chiave dipende dall'intera chiave primaria |
 | 3FN | Nessun attributo non chiave dipende da un altro attributo non chiave |
 
-Il processo di portare un database alle forme normali si chiama **normalizzazione**. La 3FN è il traguardo pratico per la maggior parte dei database reali.
+Il processo di portare un database alle forme normali si chiama **normalizzazione**. La 3FN è il traguardo pratico per la maggior parte dei database reali. Esistono forme normali più avanzate, come la **forma normale di Boyce-Codd (BCNF)**, che risolvono alcuni casi particolari di chiavi candidate multiple non coperti dalla 3FN, ma raramente servono al di fuori di contesti accademici o di schemi particolarmente complessi.
+
+Va detto anche che normalizzare non è sempre l'obiettivo finale: nei sistemi pensati soprattutto per la lettura di grandi moli di dati (report, statistiche, data warehouse) si ricorre a volte alla **denormalizzazione**, cioè si reintroduce deliberatamente un po' di ridondanza per evitare troppi JOIN e velocizzare le interrogazioni. È una scelta consapevole, fatta dopo aver normalizzato lo schema e aver misurato un reale problema di prestazioni — non un modo per evitare di imparare le forme normali.
 
 ### Esercizi
 
