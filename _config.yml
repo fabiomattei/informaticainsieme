@@ -67,6 +67,9 @@ collections:
   pandas:
     output: true
     permalink: /pandas/:path
+  php:
+    output: true
+    permalink: /php/:path
   problemsolving:
     output: true
     permalink: /problemsolving/:path

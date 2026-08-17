@@ -223,6 +223,8 @@ SELECT AVG(Incasso) FROM proiezioni WHERE IdSala = 1;
 
 **GROUP BY** raggruppa le righe che condividono lo stesso valore in una o più colonne, permettendo di applicare le funzioni aggregate a ciascun gruppo separatamente.
 
+![GROUP BY raggruppa le righe per Nazionalità, HAVING filtra i gruppi risultanti](/images/database/il-linguaggio-sql/group-by-having.svg){:class="half-image"}
+
 {% highlight sql %}
 SELECT colonna, COUNT(*)
 FROM nome_tabella
@@ -255,6 +257,8 @@ L’istruzione JOIN combina tuple di due o più tabelle basandosi su una colonna
 **INNER JOIN** (o semplicemente JOIN) — restituisce solo le righe che hanno una corrispondenza in entrambe le tabelle. Le righe senza corrispondenza vengono escluse dal risultato.
 
 **LEFT JOIN** — restituisce tutte le righe della tabella di sinistra, anche quelle senza corrispondenza nella tabella di destra. Le colonne mancanti della tabella di destra vengono riempite con NULL.
+
+![Confronto tra INNER JOIN e LEFT JOIN come diagrammi di Venn](/images/database/il-linguaggio-sql/join-venn.svg){:class="half-image"}
 
 Vediamo un esempio con le seguenti tabelle:
 
