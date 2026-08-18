@@ -68,6 +68,35 @@ end
 {% endhighlight %}
 
 E' importante tenere a mente che ad ogni frame, quindi ogni sessantesimo di secondo, 
-vanno ricarlcolate tutte le possibili interazioni tra tutti gli sprite prensenti nel videgioco.
+vanno ricalcolate tutte le possibili interazioni tra tutti gli sprite presenti nel videogioco.
 Con l'aumentare degli sprite la cosa diventa computazionalmente onerosa.
+
+## Cosa fare quando due sprite collidono
+
+Rilevare la collisione è solo metà del lavoro: bisogna anche decidere cosa succede quando
+avviene. Un pattern comune è marcare gli sprite da rimuovere e poi eliminarli tutti insieme
+alla fine del tick, invece di modificare le liste mentre le si sta ancora leggendo.
+
+{% highlight ruby %}
+def tick args
+    args.state.proiettili ||= []
+    args.state.nemici ||= []
+
+    args.state.proiettili.each do |proiettile|
+        args.state.nemici.each do |nemico|
+            if args.geometry.intersect_rect? proiettile, nemico
+                proiettile.morto = true
+                nemico.morto = true
+            end
+        end
+    end
+
+    # rimuovi dalle liste tutti gli sprite marcati come morti
+    args.state.proiettili.reject! { |p| p.morto }
+    args.state.nemici.reject! { |n| n.morto }
+
+    args.outputs.sprites << args.state.proiettili
+    args.outputs.sprites << args.state.nemici
+end
+{% endhighlight %}
 

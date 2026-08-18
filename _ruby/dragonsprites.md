@@ -33,13 +33,13 @@ mysprite = {
 
   # capovolgi il rendering orizzontalmente o verticalmente
   flip_horizontally: false,
-  flip_vertically: false
+  flip_vertically: false,
 
   # proprietà di uno sprite sheet per ritagliare un rettangolo (utilizzando l'angolo in alto a sinistra come origine)
   tile_x: 0,
   tile_y: 0,
   tile_w: 20,
-  tile_h: 20
+  tile_h: 20,
 
   # proprietà di uno sprite sheet per ritagliare un rettangolo (utilizzando l'angolo in basso a sinistra come origine)
   source_x: 0,
@@ -72,20 +72,20 @@ in basso a sinistra della sua immagine.
 Questo punto di ancoraggio viene utilizzato come punto da tenere in considerazione quando vado a posizionare
 lo sprite sullo schermo. 
 
-![Il loop](/images/ruby/dragonruby/sprite00.png)
+![Punto di ancoraggio in basso a sinistra: anchor_x e anchor_y a 0](/images/ruby/dragonruby/sprite00.png)
 
 Il punto di ancoraggio viene fissato in modo proporzionale alle dimensioni dell'immagine facendo variare
 i valori di **anchor_x e anchor_y** tra 0 e 1
 
-![Il loop](/images/ruby/dragonruby/sprite55.png)
+![Punto di ancoraggio al centro: anchor_x e anchor_y a 0.5](/images/ruby/dragonruby/sprite55.png)
 
 ## Capovolgi (flip)
 
-I flag flip_horizontally e flip_vertically sono variabili booleane che servono per far capovolegere una immagine
+I flag flip_horizontally e flip_vertically sono variabili booleane che servono per far capovolgere una immagine
 rispetto ad un asse oppure ad un altro.
-In basso un esempio di flip_horizzontally settato a True
+In basso un esempio di flip_horizontally impostato a true
 
-![Il loop](/images/ruby/dragonruby/spriteflip.png)
+![Sprite capovolto orizzontalmente con flip_horizontally: true](/images/ruby/dragonruby/spriteflip.png)
 
 ## Sprite sheet
 
@@ -94,7 +94,7 @@ Si chiama **sprite sheet** un foglio che si concretizza in un file, contenente m
 Dato che vogliamo visualizzare una sola immagine per volta, localizziamo la porzione da rendere visibile
 attraverso le sue coordinate e le sue dimensioni.
 
-![Sprite Sheet](/images/ruby/dragonruby/spritesheet.png)
+![Uno sprite sheet con più fotogrammi affiancati](/images/ruby/dragonruby/spritesheet.png)
 
 Se utilizzo le coordinate che utilizzano l'angolo in alto a sinistra come origine ed hanno l'asse delle ordinate orientato 
 verso il basso si utilizzano le seguenti proprietà:
@@ -110,4 +110,41 @@ Se utilizzo le coordinate che utilizzano l'angolo in basso a sinistra come origi
 * source_y: ordinata dell'inizio del ritaglio
 * source_w: larghezza del ritaglio
 * source_h: altezza del ritaglio
-  
+
+## Animare uno sprite
+
+Per dare l'illusione del movimento, ad esempio far correre un personaggio, dobbiamo cambiare 
+l'immagine mostrata più volte al secondo, seguendo in ordine i fotogrammi dello sprite sheet.
+
+Il modo più semplice è mettere i percorsi delle immagini in un array e scegliere quale mostrare
+in base al numero di tick trascorsi, contenuto nella variabile globale **Kernel.tick_count**.
+
+{% highlight ruby %}
+def tick args
+    fotogrammi = [
+        'sprites/dragon-0.png',
+        'sprites/dragon-1.png',
+        'sprites/dragon-2.png',
+        'sprites/dragon-3.png'
+    ]
+
+    # cambia fotogramma ogni 6 tick (10 fotogrammi al secondo)
+    indice = (Kernel.tick_count / 6) % fotogrammi.length
+
+    args.outputs.sprites << {
+        x: 120,
+        y: 280,
+        w: 100,
+        h: 80,
+        path: fotogrammi[indice]
+    }
+end
+{% endhighlight %}
+
+L'operatore **%** (modulo) fa in modo che l'indice torni a 0 una volta raggiunta la fine
+dell'array, così l'animazione si ripete in loop.
+
+Dragonruby offre anche un oggetto pensato apposta per questo scopo: **Sprite Animation**,
+che si occupa automaticamente di calcolare il fotogramma corrente a partire da una lista di
+immagini e dalla durata di ciascun fotogramma, semplificando il codice visto sopra.
+

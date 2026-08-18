@@ -26,7 +26,7 @@ del gioco, aggiornamento dei suoni del gioco, aggiornamento della grafica.
 
 ![Il loop](/images/ruby/dragonruby/loop.png)
 
-Questo piccolo loop la frase "Ciao 4C!" nelle coordinate 
+Questo piccolo esempio scrive la frase "Ciao 4C!" nelle coordinate 
 x=120, y=120 del piano cartesiano che abbiamo indicato in precedenza.
 
 La scrive 60 volte al secondo, sempre uguale, sempre nello stesso punto. 

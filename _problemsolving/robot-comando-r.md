@@ -71,3 +71,39 @@ Ogni volta che si incontra il comando **a** si ruota in senso antiorario (N→W�
 Un robot parte dallo stato `[6,2,S]` ed esegue la lista di comandi `[f, r2<f,o,f,f>, a]`.
 
 Determina lo stato finale del robot (suggerimento: espandi prima la lista sostituendo il comando r con le sue copie).
+
+## Esercizio dalla gara OPS
+
+Il problema seguente è tratto (e adattato) dalla Gara 1 delle gare a squadre delle Olimpiadi di Problem Solving (OPS) 2026, categoria Secondaria di secondo grado. Prova a risolverlo da solo prima di aprire la soluzione.
+
+L'esploratrice Beanne si è addentrata in una zona inesplorata della giungla alla ricerca di rari campioni botanici. Nella zona si trovano quattro oggetti:
+
+* un fiore raro nella casella [6,6];
+* una radice curativa nella casella [6,5];
+* un fungo blu nella casella [5,5];
+* una foglia d'argento nella casella [4,5].
+
+Beanne parte dalla posizione [6,3] ed è inizialmente rivolta verso Nord (N). Esegue la seguente lista di comandi: `L1 = [r3<f>, o, r2<f,a>, a, f]`.
+
+Determina:
+
+1. lo stato S1 di Beanne dopo aver eseguito i comandi della lista L1 fino al **primo comando r incluso**;
+2. la lista L2 di tutti gli stati assunti dall'esploratrice durante il percorso (compresi lo stato iniziale e quello finale);
+3. il numero K di oggetti che Beanne riesce a raccogliere lungo il percorso (un oggetto viene raccolto se Beanne transita sulla sua casella).
+
+<details markdown="1">
+<summary>Soluzione</summary>
+
+**S1 = [6,6,N]**
+
+**L2 = [[6,3,N],[6,4,N],[6,5,N],[6,6,N],[6,6,E],[7,6,E],[7,6,N],[7,7,N],[7,7,W],[7,7,S],[7,6,S]]**
+
+**K = 2**
+
+Espandendo la lista comandi (`r3<f>` diventa `f,f,f`, `r2<f,a>` diventa `f,a,f,a`) si ottiene: `f,f,f,o,f,a,f,a,a,f`.
+
+Beanne parte da [6,3,N]. Il comando `r3<f>` la porta, un passo alla volta, in [6,4,N], [6,5,N] (qui trova la radice curativa) e [6,6,N] (qui trova anche il fiore raro): questo è lo stato **S1**. Il comando `o` la ruota in [6,6,E]. Il comando `r2<f,a>` esegue due volte `f,a`: prima `f` la porta in [7,6,E], poi `a` la ruota in [7,6,N]; di nuovo `f` la porta in [7,7,N], poi `a` la ruota in [7,7,W]. Il comando `a` finale la ruota in [7,7,S], e l'ultimo comando `f` la porta in [7,6,S], lo stato finale.
+
+Le caselle [5,5] (fungo) e [4,5] (foglia) non vengono mai attraversate: Beanne raccoglie quindi solo la radice curativa e il fiore raro, **K = 2**.
+
+</details>

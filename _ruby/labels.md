@@ -13,7 +13,7 @@ Vediamo subito un esempio:
 
 {% highlight ruby %}
 mylabel = {
-    +x: 320,
+    x: 320,
     y: 640,
     text: "Text",
     font: "fonts/font.ttf",
@@ -30,7 +30,7 @@ mylabel = {
 
 * x e y rappresentano le coordinate sul piano cartesiano in cui posizionare la label
 * text contiene il testo che andrà ad essere visualizzato
-* font contiene il path, nella caretella mygame, del font che si utilizzerà per la scritta
+* font contiene il path, nella cartella mygame, del font che si utilizzerà per la scritta
 * anchor_x e anchor_y contengono la posizione dell'ancora della scritta
 * r g e b contengono i valori da 0 a 255 per determinare il colore della scritta
 * a contiene l'opacità della scritta

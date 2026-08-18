@@ -81,3 +81,88 @@ Nel VILLAGGIO sono posizionati inizialmente i seguenti elementi (usa sempre A, C
 | R4 | N | | A | |
 
 Completa lo schema e scrivi la soluzione in forma di lista L.
+
+## Esercizi dalle gare OPS
+
+I problemi seguenti sono tratti (e adattati) dalle gare a squadre delle Olimpiadi di Problem Solving (OPS) 2026, categoria Secondaria di secondo grado. Prova a risolverli da solo prima di aprire la soluzione (usa sempre le stesse regole: ogni riga, colonna e quartiere deve contenere una sola volta ciascuno dei quattro elementi).
+
+### Gara 2
+
+Nel VILLAGGIO sono posizionati inizialmente i seguenti elementi: **drago → D** in R1-C1, **castello → C** in R3-C3, **torre → T** in R2-C4, **ponte → P** in R4-C2.
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | D | | | |
+| R2 | | | | T |
+| R3 | | | C | |
+| R4 | | P | | |
+
+Scrivi il VILLAGGIO completato in forma di lista L, usando per ogni elemento la sua sigla (D, C, T, P).
+
+<details markdown="1">
+<summary>Soluzione</summary>
+
+**L = [[D,T,P,C],[P,C,D,T],[T,D,C,P],[C,P,T,D]]**
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | D | T | P | C |
+| R2 | P | C | D | T |
+| R3 | T | D | C | P |
+| R4 | C | P | T | D |
+
+</details>
+
+### Gara 3
+
+Nel VILLAGGIO sono posizionati inizialmente i seguenti elementi: **albero → A** in R1-C3, **casa → C** in R2-C1, **cane → N** in R4-C1, **gatto → G** in R3-C3.
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | | | A | |
+| R2 | C | | | |
+| R3 | | | G | |
+| R4 | N | | | |
+
+Scrivi il VILLAGGIO completato in forma di lista L, usando per ogni elemento la sua sigla (A, C, N, G).
+
+<details markdown="1">
+<summary>Soluzione</summary>
+
+**L = [[G,N,A,C],[C,A,N,G],[A,C,G,N],[N,G,C,A]]**
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | G | N | A | C |
+| R2 | C | A | N | G |
+| R3 | A | C | G | N |
+| R4 | N | G | C | A |
+
+</details>
+
+### Gara 4 (Finale)
+
+Nel VILLAGGIO sono posizionati inizialmente i seguenti elementi: **rosa → R** in R1-C1 e in R2-C3, **verde → V** in R4-C4, **blu → B** in R1-C4, **giallo → G** in R3-C1.
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | R | | | B |
+| R2 | | | R | |
+| R3 | G | | | |
+| R4 | | | | V |
+
+Scrivi il VILLAGGIO completato in forma di lista L, usando per ogni elemento la sua sigla (R, V, B, G).
+
+<details markdown="1">
+<summary>Soluzione</summary>
+
+**L = [[R,G,V,B],[V,B,R,G],[G,V,B,R],[B,R,G,V]]**
+
+| | C1 | C2 | C3 | C4 |
+|---|---|---|---|---|
+| R1 | R | G | V | B |
+| R2 | V | B | R | G |
+| R3 | G | V | B | R |
+| R4 | B | R | G | V |
+
+</details>

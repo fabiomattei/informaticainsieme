@@ -85,3 +85,28 @@ Si noti la differenza rispetto alla coda: lì si usava `pop(0)` (si estrae il **
 Un bibliotecario deve restituire dei libri a quattro persone, che si presenteranno in quest'ordine: **Marco**, **Sofia**, **Luigi**, **Elena**. Il bibliotecario tiene i libri impilati su un carrello (una pila).
 
 Scrivi la lista L dell'ordine in cui il bibliotecario deve impilare (push) i libri sul carrello, in modo da poterli consegnare (pop) esattamente nell'ordine di arrivo delle persone.
+
+## Esercizio dalla gara OPS
+
+Il problema seguente è tratto (e adattato) dalla Gara 1 delle gare a squadre delle Olimpiadi di Problem Solving (OPS) 2026, categoria Secondaria di secondo grado. Prova a risolverlo da solo prima di aprire la soluzione.
+
+Un fuochista sta preparando uno spettacolo pirotecnico. L'obiettivo è inserire i colori nell'ordine giusto all'interno della scatola pirotecnica, che verrà poi accesa durante lo spettacolo in modo da ottenere la sequenza cromatica desiderata (in uscita, cioè in ordine di pop).
+
+I colori sono contenuti in confezioni etichettate con un codice:
+
+`colore(001,verde)`, `colore(002,ciano)`, `colore(004,magenta)`, `colore(003,arancione)`, `colore(007,giallo)`, `colore(008,stellato)`, `colore(006,rosso)`, `colore(005,blu)`
+
+Il cliente ha richiesto che la sequenza cromatica vista in cielo sia, in quest'ordine: **rosso, ciano, verde, blu, magenta, arancione, giallo**, e per concludere lo **stellato**.
+
+Scrivi la lista L di caricamento (push) della scatola pirotecnica, usando i codici dei colori.
+
+<details markdown="1">
+<summary>Soluzione</summary>
+
+**L = [008,007,003,004,005,001,002,006]**
+
+Essendo la scatola una pila, l'ordine di uscita (pop) è l'inverso dell'ordine di ingresso (push). Per ottenere in uscita rosso, ciano, verde, blu, magenta, arancione, giallo, stellato, la scatola va caricata nell'ordine opposto: stellato (008), giallo (007), arancione (003), magenta (004), blu (005), verde (001), ciano (002), rosso (006).
+
+Verifica: caricando (push) 008, 007, 003, 004, 005, 001, 002, 006 e poi scaricando (pop) via via l'elemento in cima, si estraggono nell'ordine 006 (rosso), 002 (ciano), 001 (verde), 005 (blu), 004 (magenta), 003 (arancione), 007 (giallo), 008 (stellato): esattamente la sequenza richiesta.
+
+</details>

@@ -120,20 +120,20 @@ Per ciasun controller può controllare la pressione dei tasti per le quattro dir
 
 {% highlight ruby %}
 def tick args
-    args.state.giocatore.x , , = 600
-    args.state.giocatore.y , , = 400
-	
+    args.state.giocatore.x ||= 600
+    args.state.giocatore.y ||= 400
+
     if args.inputs.controller_one.left
-	   args.state.giocatore.x -= 10
-	elsif args.inputs.controller_one.right
-	   args.state.giocatore.x += 10
-	end 
-	
+       args.state.giocatore.x -= 10
+    elsif args.inputs.controller_one.right
+       args.state.giocatore.x += 10
+    end
+
     if args.inputs.controller_one.up
-	   args.state.giocatore.x += 10
-	elsif args.inputs.controller_one.down
-	   args.state.giocatore.x -= 10
-	end
+       args.state.giocatore.y += 10
+    elsif args.inputs.controller_one.down
+       args.state.giocatore.y -= 10
+    end
 end
 {% endhighlight %}
 
