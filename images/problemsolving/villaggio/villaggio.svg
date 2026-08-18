@@ -1,0 +1,68 @@
+<svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="170" y="24" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Il VILLAGGIO: quattro quartieri 2x2</text>
+
+  <!-- quartiere 1: top-left -->
+  <rect x="40" y="50" width="120" height="120" fill="#eef2f7"/>
+  <!-- quartiere 2: top-right -->
+  <rect x="160" y="50" width="120" height="120" fill="#e9f7ee"/>
+  <!-- quartiere 4: bottom-left -->
+  <rect x="40" y="170" width="120" height="120" fill="#fff3e8"/>
+  <!-- quartiere 3: bottom-right -->
+  <rect x="160" y="170" width="120" height="120" fill="#f2eefb"/>
+
+  <!-- grid lines -->
+  <g stroke="#828282" stroke-width="1.5" fill="none">
+    <line x1="40" y1="50" x2="280" y2="50"/>
+    <line x1="40" y1="110" x2="280" y2="110"/>
+    <line x1="40" y1="170" x2="280" y2="170"/>
+    <line x1="40" y1="230" x2="280" y2="230"/>
+    <line x1="40" y1="290" x2="280" y2="290"/>
+    <line x1="40" y1="50" x2="40" y2="290"/>
+    <line x1="100" y1="50" x2="100" y2="290"/>
+    <line x1="160" y1="50" x2="160" y2="290"/>
+    <line x1="220" y1="50" x2="220" y2="290"/>
+    <line x1="280" y1="50" x2="280" y2="290"/>
+  </g>
+  <!-- thicker block borders -->
+  <g stroke="#2a7ae2" stroke-width="3" fill="none">
+    <rect x="40" y="50" width="120" height="120"/>
+    <rect x="160" y="50" width="120" height="120"/>
+    <rect x="40" y="170" width="120" height="120"/>
+    <rect x="160" y="170" width="120" height="120"/>
+  </g>
+
+  <!-- column labels -->
+  <text x="70" y="42" text-anchor="middle" font-size="12" fill="#828282">C1</text>
+  <text x="130" y="42" text-anchor="middle" font-size="12" fill="#828282">C2</text>
+  <text x="190" y="42" text-anchor="middle" font-size="12" fill="#828282">C3</text>
+  <text x="250" y="42" text-anchor="middle" font-size="12" fill="#828282">C4</text>
+
+  <!-- row labels -->
+  <text x="28" y="84" text-anchor="middle" font-size="12" fill="#828282">R1</text>
+  <text x="28" y="144" text-anchor="middle" font-size="12" fill="#828282">R2</text>
+  <text x="28" y="204" text-anchor="middle" font-size="12" fill="#828282">R3</text>
+  <text x="28" y="264" text-anchor="middle" font-size="12" fill="#828282">R4</text>
+
+  <!-- example solution letters -->
+  <text x="70" y="84" text-anchor="middle" font-size="18" fill="#111111">A</text>
+  <text x="130" y="84" text-anchor="middle" font-size="18" fill="#111111">C</text>
+  <text x="190" y="84" text-anchor="middle" font-size="18" fill="#111111">N</text>
+  <text x="250" y="84" text-anchor="middle" font-size="18" fill="#111111">G</text>
+
+  <text x="70" y="144" text-anchor="middle" font-size="18" fill="#111111">N</text>
+  <text x="130" y="144" text-anchor="middle" font-size="18" fill="#111111">G</text>
+  <text x="190" y="144" text-anchor="middle" font-size="18" fill="#111111">A</text>
+  <text x="250" y="144" text-anchor="middle" font-size="18" fill="#111111">C</text>
+
+  <text x="70" y="204" text-anchor="middle" font-size="18" fill="#111111">C</text>
+  <text x="130" y="204" text-anchor="middle" font-size="18" fill="#111111">A</text>
+  <text x="190" y="204" text-anchor="middle" font-size="18" fill="#111111">G</text>
+  <text x="250" y="204" text-anchor="middle" font-size="18" fill="#111111">N</text>
+
+  <text x="70" y="264" text-anchor="middle" font-size="18" fill="#111111">G</text>
+  <text x="130" y="264" text-anchor="middle" font-size="18" fill="#111111">N</text>
+  <text x="190" y="264" text-anchor="middle" font-size="18" fill="#111111">C</text>
+  <text x="250" y="264" text-anchor="middle" font-size="18" fill="#111111">A</text>
+
+  <text x="170" y="318" text-anchor="middle" font-size="13" fill="#828282">ogni riga, colonna e quartiere contiene A, C, N, G una sola volta</text>
+</svg>
