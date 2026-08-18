@@ -37,9 +37,22 @@ layout: page
 * [Forme e primitive grafiche]({{ site.baseurl }}{% link _ruby/forme.md %}.html)
 * [Suoni]({{ site.baseurl }}{% link _ruby/suoni.md %}.html)
 * [Input]({{ site.baseurl }}{% link _ruby/input.md %}.html) 
+* [Raccogliere il testo digitato]({{ site.baseurl }}{% link _ruby/testo.md %}.html)
+* [Pulsanti cliccabili]({{ site.baseurl }}{% link _ruby/pulsanti.md %}.html)
 * [Collisioni]({{ site.baseurl }}{% link _ruby/collisioni.md %}.html) 
 * [Geometria]({{ site.baseurl }}{% link _ruby/geometria.md %}.html)
 * [Un semplice sistema di particelle]({{ site.baseurl }}{% link _ruby/particelle.md %}.html)
+* [Far apparire i nemici nel tempo]({{ site.baseurl }}{% link _ruby/spawn.md %}.html)
 * [La telecamera]({{ site.baseurl }}{% link _ruby/telecamera.md %}.html)
 * [Stato del gioco e scene]({{ site.baseurl }}{% link _ruby/scene.md %}.html)
 * [Salvare e caricare i dati]({{ site.baseurl }}{% link _ruby/salvataggio.md %}.html)
+
+### Esempi
+
+* [Esempio: la pallina che rimbalza]({{ site.baseurl }}{% link _ruby/pallina.md %}.html)
+* [Esempio completo: Pong]({{ site.baseurl }}{% link _ruby/pong.md %}.html)
+* [Esempio completo: Breakout]({{ site.baseurl }}{% link _ruby/breakout.md %}.html)
+* [Esempio completo: uno space shooter]({{ site.baseurl }}{% link _ruby/sparatutto.md %}.html)
+* [Esempio completo: Snake]({{ site.baseurl }}{% link _ruby/snake.md %}.html)
+* [Esempio completo: un platform con salto]({{ site.baseurl }}{% link _ruby/piattaforme.md %}.html)
+* [Esempio completo: il tris]({{ site.baseurl }}{% link _ruby/tris.md %}.html)

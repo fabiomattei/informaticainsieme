@@ -106,6 +106,9 @@ collections:
   ruby:
     output: true
     permalink: /ruby/:path
+  godot:
+    output: true
+    permalink: /godot/:path
 
 # Build settings
 theme: minima
