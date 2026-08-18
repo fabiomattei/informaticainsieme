@@ -63,7 +63,10 @@ collections:
     permalink: /git/:path
   ia:
     output: true
-    permalink: /ia/:path	
+    permalink: /ia/:path
+  javascript:
+    output: true
+    permalink: /javascript/:path
   olimpiadiinformatica:
     output: true
     permalink: /olimpiadiinformatica/:path	
