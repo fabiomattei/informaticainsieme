@@ -7,6 +7,32 @@ layout: page
 
 Fino ad ora abbiamo visto separatamente come costruire pagine con [HTML e CSS]({{ site.baseurl }}{% link _web/html.md %}.html), come programmare in [PHP]({{ site.baseurl }}{% link paginemenu/php.md %}), e come funziona un database relazionale come [MySQL]({{ site.baseurl }}{% link _database/mysql.md %}.html). In questa piccola serie di pagine mettiamo insieme questi tre pezzi per costruire una vera applicazione web: una **applicazione CRUD**.
 
+### Client e server
+
+Prima di scrivere il primo file PHP conviene chiarire un punto che altrimenti resta confuso: **dove vive** questa applicazione e **chi la esegue**.
+
+In un'applicazione web ci sono sempre due attori distinti:
+
+* il **client** — è il browser (Chrome, Firefox...) che usa l'utente sul proprio computer. Il client fa una richiesta e mostra il risultato;
+* il **server** — è un altro computer, spesso lontano e sempre acceso, dove vive fisicamente l'applicazione: i file `.php`, e il database MySQL con le tabelle `autori` e `libri`.
+
+I file `.php` non vengono **mai** inviati al browser così come sono. Quando il client chiede una pagina come `index.php`, succede questo:
+
+1. il browser invia una richiesta al server (tramite il protocollo **HTTP**, lo stesso visto in [Client server]({{ site.baseurl }}{% link _rete/client-server.md %}.html) a proposito dei socket);
+2. sul server, un programma chiamato **PHP** legge il file `index.php`, lo esegue riga per riga (comprese le query verso MySQL), e produce in output del semplice **HTML**;
+3. il server rimanda questo HTML al client, che lo interpreta e lo disegna a schermo.
+
+Per questo si dice che PHP è un linguaggio **lato server** (*server-side*): il codice PHP gira solo sul server e non è mai visibile all'utente, che riceve esclusivamente HTML già "pronto". È una differenza fondamentale rispetto a JavaScript, che invece gira **lato client**, dentro il browser stesso. Durante lo sviluppo, il "server" può benissimo essere il tuo stesso computer (con `php -S localhost:8000` oppure con XAMPP/MAMP): il meccanismo client-server resta identico, cambia solo che client e server coincidono fisicamente nella stessa macchina.
+
+### Le richieste GET e POST
+
+Quando il client contatta il server, deve anche dirgli **come** vuole i dati. Il protocollo HTTP prevede diversi **metodi** di richiesta; nella nostra applicazione ne useremo due:
+
+* **GET** — è il metodo usato per **chiedere** una pagina o dei dati, senza modificare nulla sul server. È il metodo che il browser usa automaticamente ogni volta che digiti un indirizzo o clicchi un link: i parametri eventuali viaggiano **dentro l'URL**, dopo il punto interrogativo, ad esempio `autore.php?id=3`. Essendo nell'URL, questi parametri sono visibili, si possono salvare nei preferiti e restano nella cronologia. In PHP si leggono con l'array superglobale `$_GET`, come in `$_GET["id"]`.
+* **POST** — è il metodo usato per **inviare** dati al server, tipicamente il contenuto di un form (un nuovo autore, un libro da modificare...). I dati viaggiano nel **corpo** della richiesta, non nell'URL: non sono visibili né salvabili come indirizzo, e non c'è (in pratica) limite di lunghezza. In PHP si leggono con l'array superglobale `$_POST`, come in `$_POST["nome"]`.
+
+Nelle prossime pagine vedremo che questa distinzione ricalca esattamente le operazioni CRUD: le pagine che **leggono** dati (`index.php`, `autore.php`) useranno GET, mentre le pagine che **creano, modificano o cancellano** dati riceveranno i loro dati tramite form inviati in POST. Un file PHP può anche scoprire con quale metodo è stato chiamato leggendo `$_SERVER["REQUEST_METHOD"]`, cosa che useremo per far gestire allo stesso file sia la visualizzazione di un form (GET) sia il salvataggio dei suoi dati (POST).
+
 **CRUD** è un acronimo che riassume le quattro operazioni che (quasi) ogni applicazione che gestisce dati deve saper fare:
 
 * **C**reate — creare un nuovo dato (INSERT)
