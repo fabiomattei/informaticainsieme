@@ -13,8 +13,6 @@ chiave sono `if`, `else if`, `else` e `switch`.
 
 Il blocco di codice da eseguire è racchiuso tra **parentesi graffe** `{ }`.
 
----
-
 ## if semplice
 
 ![Flowchart di un if senza else: se falso il blocco viene saltato](/images/cpp/condizioni/if-semplice.svg){:class="aside-image"}
@@ -39,9 +37,12 @@ int main() {
 }
 {% endhighlight %}
 
-Il blocco dentro `{ }` viene eseguito solo se la condizione tra `( )` è vera.
+Il programma, mandato in esecuzione, si aspetta che l'utente inserisca un input. 
+L'input deve essere un numero, altrimenti il programma restituisce un errore e si blocca. 
+Il valore inserito in input dall'utente viene assegnato alla variabile di tipo **int** chiamata **numero**.
+L'espressione booleana numero > 0 ha come risultato il valore True se il numero inserito dall'utente è maggiore di zero, e False in caso il numero inserito ha valore uguale a zero o minore di zero.
 
----
+Il blocco, cioè le istruzioni, inserite all'interno delle parentesi graffe `{ }` vengono eseguite soltanto se la condizione tra `( )` è vera.
 
 ## if / else
 
@@ -68,8 +69,6 @@ int main() {
     return 0;
 }
 {% endhighlight %}
-
----
 
 ## if / else if / else
 
@@ -106,8 +105,6 @@ int main() {
 Le condizioni vengono valutate dall'alto verso il basso: appena una è vera,
 il relativo blocco viene eseguito e le successive vengono saltate.
 
----
-
 ## switch / case
 
 `switch` è utile quando si devono confrontare un valore intero o `char`
@@ -143,8 +140,6 @@ int main() {
 
 `default` è il caso che scatta quando nessun `case` corrisponde.
 
----
-
 ## L'operatore ternario
 
 Per assegnare un valore in base a una condizione si può usare l'operatore
@@ -168,8 +163,6 @@ int main() {
     return 0;
 }
 {% endhighlight %}
-
----
 
 ## Esercizi
 
