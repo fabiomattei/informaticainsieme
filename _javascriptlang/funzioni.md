@@ -113,7 +113,7 @@ const raddoppiaFreccia = (numero) => {
 const raddoppiaCompatta = numero => numero * 2;
 {% endhighlight %}
 
-Le tre versioni si comportano in modo identico: `raddoppia(5)`, `raddoppiaFreccia(5)` e `raddoppiaCompatta(5)` restituiscono tutte `10`. Le arrow function sono particolarmente comode per funzioni brevi, come quelle passate a `map`, `filter` e `reduce`, già viste nella pagina [Gli array]({{ site.baseurl }}{% link _javascript/gli-array.md %}.html):
+Le tre versioni si comportano in modo identico: `raddoppia(5)`, `raddoppiaFreccia(5)` e `raddoppiaCompatta(5)` restituiscono tutte `10`. Le arrow function sono particolarmente comode per funzioni brevi, come quelle passate a `map`, `filter` e `reduce`, già viste nella pagina [Gli array]({{ site.baseurl }}{% link _javascriptlang/gli-array.md %}.html):
 
 {% highlight javascript %}
 const numeri = [1, 2, 3, 4, 5];

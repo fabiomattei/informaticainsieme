@@ -21,7 +21,7 @@ const lettere = ['a', 'b', 'c', 'd', 'e']; // array di 5 elementi di tipo string
 const parole = ['mattina', 'pomeriggio'];  // array di 2 elementi di tipo stringa
 {% endhighlight %}
 
-Nota l'uso di `const`: come già visto nella pagina sulle [variabili]({{ site.baseurl }}{% link _javascript/variabili.md %}.html), `const` impedisce di riassegnare la variabile `numeri` ad un array diverso, ma **non impedisce affatto** di modificarne il contenuto (aggiungere, togliere o cambiare elementi): per questo, in JavaScript, gli array si dichiarano quasi sempre con `const`.
+Nota l'uso di `const`: come già visto nella pagina sulle [variabili]({{ site.baseurl }}{% link _javascriptlang/variabili.md %}.html), `const` impedisce di riassegnare la variabile `numeri` ad un array diverso, ma **non impedisce affatto** di modificarne il contenuto (aggiungere, togliere o cambiare elementi): per questo, in JavaScript, gli array si dichiarano quasi sempre con `const`.
 
 #### Cosa posso fare con un array?
 
@@ -109,7 +109,7 @@ Nota `...numeri`: è l'operatore **spread**, che "spacchetta" gli elementi di un
 
 ## Visitiamo il nostro array
 
-Visitare o percorrere l'array significa **prendere ad uno ad uno ciascuno degli elementi che lo compongono e applicare dei comandi a ciascuno di questi**. Il modo più diretto è il ciclo `for...of`, visto in [Il ciclo for]({{ site.baseurl }}{% link _javascript/il-ciclo-for.md %}.html):
+Visitare o percorrere l'array significa **prendere ad uno ad uno ciascuno degli elementi che lo compongono e applicare dei comandi a ciascuno di questi**. Il modo più diretto è il ciclo `for...of`, visto in [Il ciclo for]({{ site.baseurl }}{% link _javascriptlang/il-ciclo-for.md %}.html):
 
 {% highlight javascript %}
 const lettere = ['a', 'b', 'c', 'd', 'e'];
@@ -141,7 +141,7 @@ const quadrati = numeri.map(n => n ** 2);
 console.log(quadrati); // [1, 4, 9, 16, 25]
 {% endhighlight %}
 
-`n => n ** 2` è una **arrow function** (funzione anonima), che vedremo nel dettaglio nella pagina sulle [funzioni]({{ site.baseurl }}{% link _javascript/funzioni.md %}.html): per ora leggila come "presa una `n`, restituisce `n ** 2`".
+`n => n ** 2` è una **arrow function** (funzione anonima), che vedremo nel dettaglio nella pagina sulle [funzioni]({{ site.baseurl }}{% link _javascriptlang/funzioni.md %}.html): per ora leggila come "presa una `n`, restituisce `n ** 2`".
 
 `filter()` crea un **nuovo array** contenente solo gli elementi che soddisfano una condizione:
 
@@ -188,7 +188,7 @@ Inizializza due array di numeri interi a caso a tua scelta quindi scrivi una pic
 Scrivi un programma JavaScript che trovi il penultimo elemento più piccolo in un array.
 
 #### Esercizio 9:
-Scrivi un programma JavaScript che calcoli la frequenza di elementi di un array (conta il ripetersi di ciascun valore), usando un oggetto come accumulatore (li vedremo nella prossima pagina, [Gli oggetti]({{ site.baseurl }}{% link _javascript/gli-oggetti.md %}.html)).
+Scrivi un programma JavaScript che calcoli la frequenza di elementi di un array (conta il ripetersi di ciascun valore), usando un oggetto come accumulatore (li vedremo nella prossima pagina, [Gli oggetti]({{ site.baseurl }}{% link _javascriptlang/gli-oggetti.md %}.html)).
 
 #### Esercizio 10:
 Scrivi un programma JavaScript che converta un array di numeri interi in un singolo intero, concatenando le loro cifre.

@@ -44,7 +44,7 @@ Crea un file chiamato `prova.html` contenente il seguente codice:
 </html>
 {% endhighlight %}
 
-Apri il file con il browser e guarda la Console (F12): vedrai il messaggio stampato lì, **non** sulla pagina. `console.log()` scrive nella console degli strumenti per sviluppatori, non nel corpo visibile della pagina: per quello serve manipolare il **DOM**, argomento che vedremo in [Il DOM]({{ site.baseurl }}{% link _javascript/il-dom.md %}.html).
+Apri il file con il browser e guarda la Console (F12): vedrai il messaggio stampato lì, **non** sulla pagina. `console.log()` scrive nella console degli strumenti per sviluppatori, non nel corpo visibile della pagina: per quello serve manipolare il **DOM**, argomento che vedremo in [Il DOM]({{ site.baseurl }}{% link _javascriptlang/il-dom.md %}.html).
 
 ## Modo 3: Node.js, da riga di comando
 

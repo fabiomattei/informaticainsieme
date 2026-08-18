@@ -63,7 +63,7 @@ let nomeVisualizzato = nomeUtente || "Ospite";
 console.log(nomeVisualizzato);   // "Ospite", perché nomeUtente è una stringa vuota (falsy)
 {% endhighlight %}
 
-Nelle condizioni degli `if`, però, il comportamento pratico è identico a PHP: il risultato viene comunque interpretato come `true` o `false` secondo le regole di truthiness viste nella pagina sulle [conversioni di tipo]({{ site.baseurl }}{% link _javascript/conversioni-di-tipo.md %}.html).
+Nelle condizioni degli `if`, però, il comportamento pratico è identico a PHP: il risultato viene comunque interpretato come `true` o `false` secondo le regole di truthiness viste nella pagina sulle [conversioni di tipo]({{ site.baseurl }}{% link _javascriptlang/conversioni-di-tipo.md %}.html).
 
 #### Esercizio 1:
 Al fine di calcolare le imposte da versare al fisco lo stato italiano predispone 5 scaglioni. La tassazione viene calcolata limitatamente alla porzione di reddito che ricade in ciascuno scaglione IRPEF.

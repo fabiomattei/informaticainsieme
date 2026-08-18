@@ -7,7 +7,7 @@ layout: page
 
 ## Perché convertire i tipi
 
-In JavaScript ogni valore ha un tipo: `number`, `string`, `boolean` e così via, come visto nella pagina sui [tipi di variabile]({{ site.baseurl }}{% link _javascript/tipi-di-variabile.md %}.html). A volte è necessario trasformare un valore da un tipo a un altro. Il caso più comune riguarda i dati che arrivano da fuori il programma (un form HTML, come vedremo in [Il DOM]({{ site.baseurl }}{% link _javascript/il-dom.md %}.html)): sono **sempre stringhe**, anche se rappresentano un numero.
+In JavaScript ogni valore ha un tipo: `number`, `string`, `boolean` e così via, come visto nella pagina sui [tipi di variabile]({{ site.baseurl }}{% link _javascriptlang/tipi-di-variabile.md %}.html). A volte è necessario trasformare un valore da un tipo a un altro. Il caso più comune riguarda i dati che arrivano da fuori il programma (un form HTML, come vedremo in [Il DOM]({{ site.baseurl }}{% link _javascriptlang/il-dom.md %}.html)): sono **sempre stringhe**, anche se rappresentano un numero.
 
 {% highlight javascript %}
 let testo = "42";
@@ -68,7 +68,7 @@ console.log("Ho " + eta + " anni");          // Ho 25 anni (conversione automati
 console.log("Ho " + String(eta) + " anni");  // stesso risultato, conversione esplicita
 {% endhighlight %}
 
-A differenza di Python, dove `"Ho " + 25 + " anni"` genera un `TypeError`, in JavaScript l'operatore `+` converte automaticamente i numeri in stringa quando almeno uno dei due operandi è già una stringa. Questo rende la conversione a `string` meno indispensabile che in Python, esattamente come avviene per `.` in PHP, ma è comunque buona pratica renderla esplicita quando il tipo non è ovvio a chi legge il codice. Meglio ancora: usare i **template literal** visti nella pagina sulle [stringhe]({{ site.baseurl }}{% link _javascript/stringhe.md %}.html), che rendono la conversione ancora più leggibile:
+A differenza di Python, dove `"Ho " + 25 + " anni"` genera un `TypeError`, in JavaScript l'operatore `+` converte automaticamente i numeri in stringa quando almeno uno dei due operandi è già una stringa. Questo rende la conversione a `string` meno indispensabile che in Python, esattamente come avviene per `.` in PHP, ma è comunque buona pratica renderla esplicita quando il tipo non è ovvio a chi legge il codice. Meglio ancora: usare i **template literal** visti nella pagina sulle [stringhe]({{ site.baseurl }}{% link _javascriptlang/stringhe.md %}.html), che rendono la conversione ancora più leggibile:
 
 {% highlight javascript %}
 let eta = 25;

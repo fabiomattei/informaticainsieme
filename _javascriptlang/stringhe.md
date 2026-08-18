@@ -35,7 +35,7 @@ console.log(`${a} + ${b} = ${a + b}`);   // 3 + 4 = 7 (l'espressione viene calco
 
 # Lunghezza di una stringa
 
-Dato che una stringa è composta da caratteri può capitare di voler contare i caratteri che la compongono. In JavaScript questo si ottiene tramite la **proprietà** `length` (non una funzione, quindi senza parentesi, come già visto nella pagina sui [tipi di variabile]({{ site.baseurl }}{% link _javascript/tipi-di-variabile.md %}.html)):
+Dato che una stringa è composta da caratteri può capitare di voler contare i caratteri che la compongono. In JavaScript questo si ottiene tramite la **proprietà** `length` (non una funzione, quindi senza parentesi, come già visto nella pagina sui [tipi di variabile]({{ site.baseurl }}{% link _javascriptlang/tipi-di-variabile.md %}.html)):
 
 {% highlight javascript %}
 let numeroCaratteri = "ciao".length;
@@ -65,7 +65,7 @@ console.log(saluto.at(-1));           // o (at() supporta anche gli indici negat
 
 Gli operatori di confronto per le stringhe di testo sono gli stessi visti per i numeri:
 
-* `==` e `===` (uguale — vedremo la differenza nella pagina sulla [condizione]({{ site.baseurl }}{% link _javascript/la-condizione.md %}.html))
+* `==` e `===` (uguale — vedremo la differenza nella pagina sulla [condizione]({{ site.baseurl }}{% link _javascriptlang/la-condizione.md %}.html))
 * `>` (viene dopo di)
 * `>=` (viene dopo di o è uguale a)
 * `<` (viene prima di)
@@ -99,7 +99,7 @@ while (indice < saluto.length) {
 }
 {% endhighlight %}
 
-A differenza di PHP, dove una stringa non è un array e serve `str_split()`, in JavaScript una stringa **è già iterabile direttamente**: possiamo scandirla con `for...of` (che vedremo nella pagina sui [cicli for]({{ site.baseurl }}{% link _javascript/il-ciclo-for.md %}.html)), in modo molto simile al `for` di Python:
+A differenza di PHP, dove una stringa non è un array e serve `str_split()`, in JavaScript una stringa **è già iterabile direttamente**: possiamo scandirla con `for...of` (che vedremo nella pagina sui [cicli for]({{ site.baseurl }}{% link _javascriptlang/il-ciclo-for.md %}.html)), in modo molto simile al `for` di Python:
 
 {% highlight javascript %}
 let saluto = "ciao";
@@ -174,7 +174,7 @@ Scrivi un programma JavaScript che, data una stringa di testo, crei una nuova st
 Scrivi un programma che, letto un numero, calcoli la somma delle cifre che lo compongono.
 Es input = 124 output = 7
 
-Suggerimento: puoi trasformare un numero in stringa con `String(numero)`, argomento della prossima pagina sulle [conversioni di tipo]({{ site.baseurl }}{% link _javascript/conversioni-di-tipo.md %}.html).
+Suggerimento: puoi trasformare un numero in stringa con `String(numero)`, argomento della prossima pagina sulle [conversioni di tipo]({{ site.baseurl }}{% link _javascriptlang/conversioni-di-tipo.md %}.html).
 
 #### Esercizio 12:
 Scrivi un programma che lette una stringa di testo `messaggio` ed un numero intero `k` (compreso tra 1 e 25) applichi alla stringa di testo `messaggio` l'algoritmo del cifrario di Cesare con chiave k.

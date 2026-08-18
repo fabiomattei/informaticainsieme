@@ -64,9 +64,9 @@ collections:
   ia:
     output: true
     permalink: /ia/:path
-  javascript:
+  javascriptlang:
     output: true
-    permalink: /javascript/:path
+    permalink: /javascriptlang/:path
   olimpiadiinformatica:
     output: true
     permalink: /olimpiadiinformatica/:path	

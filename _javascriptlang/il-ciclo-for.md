@@ -57,11 +57,11 @@ for (const n of seq) {
 }
 {% endhighlight %}
 
-Nota l'uso di `const` invece di `let`: ad ogni iterazione viene creata una nuova variabile `n`, che non viene mai riassegnata all'interno del ciclo, quindi `const` è la scelta più corretta (esattamente come per le variabili viste in [Variabili]({{ site.baseurl }}{% link _javascript/variabili.md %}.html)).
+Nota l'uso di `const` invece di `let`: ad ogni iterazione viene creata una nuova variabile `n`, che non viene mai riassegnata all'interno del ciclo, quindi `const` è la scelta più corretta (esattamente come per le variabili viste in [Variabili]({{ site.baseurl }}{% link _javascriptlang/variabili.md %}.html)).
 
 ## Il ciclo for...in
 
-`for...in`, nonostante il nome simile, scandisce le **chiavi** (gli indici numerici, nel caso di un array) invece che i valori. Lo useremo soprattutto con gli oggetti, nella pagina [Gli oggetti]({{ site.baseurl }}{% link _javascript/gli-oggetti.md %}.html); su un array è raramente la scelta giusta, ma è bene conoscerne la differenza:
+`for...in`, nonostante il nome simile, scandisce le **chiavi** (gli indici numerici, nel caso di un array) invece che i valori. Lo useremo soprattutto con gli oggetti, nella pagina [Gli oggetti]({{ site.baseurl }}{% link _javascriptlang/gli-oggetti.md %}.html); su un array è raramente la scelta giusta, ma è bene conoscerne la differenza:
 
 {% highlight javascript %}
 const lettere = ["a", "b", "c"];

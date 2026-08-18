@@ -34,7 +34,7 @@ Creiamo un file `pagina.html`:
 </html>
 {% endhighlight %}
 
-Apri il file nel browser e guarda la Console (F12, come già visto in [Come eseguire JavaScript]({{ site.baseurl }}{% link _javascript/come-eseguire-javascript.md %}.html)).
+Apri il file nel browser e guarda la Console (F12, come già visto in [Come eseguire JavaScript]({{ site.baseurl }}{% link _javascriptlang/come-eseguire-javascript.md %}.html)).
 
 ## Selezionare un elemento
 
@@ -46,7 +46,7 @@ const descrizione = document.querySelector('.descrizione'); // seleziona per cla
 const bottone = document.querySelector('button');        // seleziona per tag
 {% endhighlight %}
 
-`querySelector()` restituisce il **primo** elemento che corrisponde al selettore. Se serve selezionare **tutti** gli elementi che corrispondono, si usa `document.querySelectorAll()`, che restituisce una collezione su cui si può iterare con `for...of` (come visto in [Il ciclo for]({{ site.baseurl }}{% link _javascript/il-ciclo-for.md %}.html)):
+`querySelector()` restituisce il **primo** elemento che corrisponde al selettore. Se serve selezionare **tutti** gli elementi che corrispondono, si usa `document.querySelectorAll()`, che restituisce una collezione su cui si può iterare con `for...of` (come visto in [Il ciclo for]({{ site.baseurl }}{% link _javascriptlang/il-ciclo-for.md %}.html)):
 
 {% highlight javascript %}
 const paragrafi = document.querySelectorAll('p');
@@ -120,7 +120,7 @@ La funzione passata come secondo argomento non viene eseguita subito: viene **re
 </html>
 {% endhighlight %}
 
-Ad ogni click, la funzione registrata con `addEventListener` viene eseguita: incrementa la variabile `conteggio` (una variabile globale del nostro script, letta e modificata liberamente dalla funzione, come visto in [Funzioni]({{ site.baseurl }}{% link _javascript/funzioni.md %}.html)) e aggiorna il testo dello `<span>` con il nuovo valore. Nota che **non serve ricaricare la pagina**: è esattamente questo il problema che JavaScript, nato nel browser, risolve.
+Ad ogni click, la funzione registrata con `addEventListener` viene eseguita: incrementa la variabile `conteggio` (una variabile globale del nostro script, letta e modificata liberamente dalla funzione, come visto in [Funzioni]({{ site.baseurl }}{% link _javascriptlang/funzioni.md %}.html)) e aggiorna il testo dello `<span>` con il nuovo valore. Nota che **non serve ricaricare la pagina**: è esattamente questo il problema che JavaScript, nato nel browser, risolve.
 
 ## Client-side vs server-side, ancora una volta
 

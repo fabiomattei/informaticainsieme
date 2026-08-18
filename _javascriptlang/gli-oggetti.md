@@ -125,7 +125,7 @@ console.log(d);  // { b: 2, c: 3 }
 
 Visitare un oggetto significa utilizzare un ciclo per scandire tutte le proprietà che sono al suo interno al fine di fare con queste delle operazioni.
 
-Per visitare **solo le chiavi**, usiamo il ciclo `for...in`, già introdotto in [Il ciclo for]({{ site.baseurl }}{% link _javascript/il-ciclo-for.md %}.html) — a differenza degli array, dove `for...in` è quasi sempre sconsigliato, sugli oggetti è l'uso più comune e corretto:
+Per visitare **solo le chiavi**, usiamo il ciclo `for...in`, già introdotto in [Il ciclo for]({{ site.baseurl }}{% link _javascriptlang/il-ciclo-for.md %}.html) — a differenza degli array, dove `for...in` è quasi sempre sconsigliato, sugli oggetti è l'uso più comune e corretto:
 
 {% highlight javascript %}
 const statiECapitali = {

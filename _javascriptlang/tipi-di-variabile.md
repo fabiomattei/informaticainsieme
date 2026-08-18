@@ -19,7 +19,7 @@ A differenza di PHP e Python, che distinguono `int` e `float`, JavaScript ha **u
 
 ## Operazioni sui numeri
 
-Per assegnare un numero ad una variabile basta utilizzare l'operatore `=` come visto nella pagina dedicata alle [variabili]({{ site.baseurl }}{% link _javascript/variabili.md %}.html).
+Per assegnare un numero ad una variabile basta utilizzare l'operatore `=` come visto nella pagina dedicata alle [variabili]({{ site.baseurl }}{% link _javascriptlang/variabili.md %}.html).
 
 {% highlight javascript %}
 let m = 3;      // number
