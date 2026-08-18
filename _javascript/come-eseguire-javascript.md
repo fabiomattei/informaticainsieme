@@ -5,9 +5,9 @@ author: Fabio Mattei
 layout: page
 ---
 
-JavaScript è nato nel 1995, creato da **Brendan Eich** in soli dieci giorni per il browser Netscape. A differenza di PHP, che è pensato principalmente per il server, e a differenza di Python, che è un linguaggio general-purpose, JavaScript nasce con uno scopo molto specifico: rendere interattive le pagine web, **dentro il browser** dell'utente (il "client", come visto nella sezione dedicata alle [applicazioni web]({{ site.baseurl }}{% link _web/applicazione-web-crud-progettazione.md %}.html#client-e-server)).
+JavaScript è nato nel 1995, creato da **Brendan Eich** in soli dieci giorni per il browser Netscape. A differenza di PHP, che è pensato principalmente per il server, e a differenza di Python, che è un linguaggio general-purpose, JavaScript nasce con uno scopo molto specifico: rendere interattive le pagine web. Ricordiamo che le pagine web si basano sul linguaggio HTML, il javascript rende interattive gli elementi definiti attraverso l'HTML e viene eseguito dal **browser** dell'utente (il "client", come visto nella sezione dedicata alle [applicazioni web]({{ site.baseurl }}{% link _web/applicazione-web-crud-progettazione.md %}.html#client-e-server)).
 
-Con gli anni JavaScript è "evaso" dal browser: oggi, grazie a **Node.js**, lo stesso linguaggio può girare anche da riga di comando o su un server, esattamente come PHP o Python. In questo corso useremo entrambi i modi, ma inizieremo dal più semplice: il browser, che non richiede alcuna installazione.
+Con in tempo, JavaScript si è evoluto, è stato adottato da una grande comunità di sviluppatori, ed è "evaso" dal browser. Oggi, grazie a **Node.js**, è possibile avere codice javascript che gira da linea di comando oppure che si comporta da vero e propio linguaggio server, esattamente come PHP, Python o Ruby. In questo corso useremo entrambi i modi, ma inizieremo dal più semplice: il browser, che non richiede alcuna installazione.
 
 ## Modo 1: la console del browser (nessuna installazione richiesta)
 
@@ -21,11 +21,13 @@ Ogni browser moderno (Chrome, Firefox, Edge...) include un **interprete JavaScri
 console.log("JavaScript funziona!");
 {% endhighlight %}
 
-Se sulla console compare la scritta **JavaScript funziona!**, l'interprete è attivo e pronto. Questo modo è perfetto per fare rapidi esperimenti, ma le istruzioni digitate non vengono salvate in nessun file.
+Se sulla console compare la scritta **JavaScript funziona!**, l'interprete è attivo e pronto. Questa modalità di scrittura del codice è perfetta per fare rapidi esperimenti, ma noi vogliamo essere in grado di salvare le istruzioni all'interno di un file per poterci lavorare nel tempo. Per questo motivo andiamo a posizionare il codice javascript nel suo luogo naturale: all'interno di una pagina HTML.
 
 ## Modo 2: dentro una pagina HTML, con il tag `<script>`
 
-JavaScript può essere inserito direttamente in una pagina HTML tramite il tag `<script>`, come visto in [HTML e CSS]({{ site.baseurl }}{% link _web/html.md %}.html). Crea un file chiamato `prova.html`:
+JavaScript può essere inserito al'interno di in una pagina HTML utilizzando il tag `<script>`, come visto in [HTML e CSS]({{ site.baseurl }}{% link _web/html.md %}.html). 
+
+Crea un file chiamato `prova.html` contenente il seguente codice:
 
 {% highlight html %}
 <!DOCTYPE html>
