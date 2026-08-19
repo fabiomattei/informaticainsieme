@@ -35,16 +35,16 @@ bundle exec jekyll clean
 The site uses Jekyll 4.3.3 with the Minima theme. It generates static HTML from Markdown content and Liquid templates.
 
 ### Content Organization: Collections
-All educational content is organized into 17 Jekyll collections (defined in `_config.yml`), each with its own URL prefix:
+All educational content is organized into 18 Jekyll collections (defined in `_config.yml`), each with its own URL prefix:
 
-- **Programming Languages**: `_python` (22 files), `_ruby` (6 files), `_cpp` (2 files)
+- **Programming Languages**: `_python` (22 files), `_ruby` (27 files), `_cpp` (20 files)
 - **Algorithms & Problem Solving**: `_algoritmi` (15 files), `_problemsolving` (12 files)
-- **Data & Databases**: `_database` (5 files), `_pandas` (1 file), `_codifica` (5 files)
+- **Data & Databases**: `_database` (6 files), `_pandas` (1 file), `_codifica` (5 files)
 - **Web Development**: `_web` (10 files), `_rete` (8 files)
-- **Machine Learning & AI**: `_ia` (19 files), `_pythonmath` (2 files)
-- **Specialized Topics**: `_flask` (8 files), `_videogames` (11 files), `_arduino` (1 file), `_olimpiadiinformatica` (3 files), `_storia` (1 file)
+- **Machine Learning & AI**: `_ia` (24 files), `_pythonmath` (2 files)
+- **Specialized Topics**: `_flask` (9 files), `_videogames` (11 files), `_arduino` (1 file), `_olimpiadiinformatica` (3 files), `_storia` (6 files), `_cmd` (6 files, Windows CMD shell commands)
 
-Total: ~152 educational pages across all collections.
+Total: ~186 educational pages across all collections. File counts drift as content is added — treat these as approximate, not authoritative.
 
 ### Directory Layout
 
@@ -59,7 +59,8 @@ informaticainsieme/
 ├── _[collection]/           # Content directories for each collection (e.g., _python, _ruby, _ia)
 ├── paginemenu/              # Menu pages (index/landing pages for collections)
 ├── script/                  # Utility scripts (dateloader.js, getdate.php)
-├── dati/                    # Data files
+├── dati/                    # Data files (CSVs referenced by pandas/database tutorials)
+├── archivio/                # Legacy content carried over from a prior WordPress site (_drafts, wp-content); not part of the active collections
 ├── images/                  # Static image assets
 ├── Gemfile                  # Ruby dependencies (Jekyll, minima, jekyll-feed)
 ├── package.json             # Node dependencies (simple-jekyll-search)

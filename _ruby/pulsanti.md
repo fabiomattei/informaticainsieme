@@ -5,16 +5,18 @@ author: Fabio Mattei
 layout: page
 ---
 
+Le interfacce dei videogiochi sono fatte da pulsanti o bottoni da premere. 
 Nel menu del nostro [stato del gioco]({{ site.baseurl }}{% link _ruby/scene.md %}.html)
-abbiamo finora chiesto al giocatore di premere un tasto della tastiera. Su computer con
+abbiamo finora chiesto al giocatore di premere un tasto della tastiera ma sui computer con
 mouse, e soprattutto su dispositivi touch, è più naturale offrire dei veri pulsanti da
-cliccare. Dragonruby non fornisce un widget "pulsante" già pronto, ma possiamo costruirlo
-facilmente con quello che già conosciamo: un rettangolo, una label, e il rilevamento del
+premere o cliccare. Dragonruby non fornisce un widget "pulsante" già pronto, ma possiamo costruirlo
+facilmente con quello che già conosciamo: un rettangolo, una label sovrapposta al rettangolo, e il rilevamento del
 click del mouse visto nella pagina sull'[input]({{ site.baseurl }}{% link _ruby/input.md %}.html).
 
 ## Disegnare un pulsante
 
 Un pulsante è semplicemente un rettangolo con una scritta sovrapposta al centro.
+Definirlo graficamente è una cosa abbastanza semplice.
 
 {% highlight ruby %}
 def disegna_pulsante args, pulsante
@@ -43,10 +45,11 @@ end
 
 ## Capire se il pulsante è stato cliccato
 
-Un click va considerato valido solo se accade nell'istante stesso in cui il tasto del mouse
-viene premuto (**key_down**, non semplicemente **button_left**, che resterebbe vero per
-tutta la durata della pressione) e se in quell'istante il puntatore si trova dentro al
-rettangolo del pulsante.
+Un click va considerato valido solo se viene effettuato all'interno al rettangolo del pulsante.
+Per questo non ci basta monitorare l'evento **button_left** che restituisce True per tutto il tempo
+in cui il bottone del mouse viene premuto. 
+Noi dobbiamo sapere se il bottone viene premuto quando si trova dentro al rettangolo, per questo
+monitoriamo l'evento **key_down** e lo facciamo nel modo seguente:
 
 {% highlight ruby %}
 def pulsante_cliccato? args, pulsante
@@ -74,9 +77,9 @@ end
 
 ## Un effetto al passaggio del mouse
 
-Un piccolo tocco che rende l'interfaccia più viva è cambiare il colore del pulsante quando
-il puntatore ci passa sopra, anche senza cliccare, così il giocatore capisce che quell'area
-dello schermo è cliccabile.
+Diamo alla nostra interfaccia un piccolo tocco di originalità facendo in modo che,
+quando il puntatore del mouse passa sopra il pulsante, questo cambia di colore, anche se non viene
+premuto, così il giocatore capisce che quell'area dello schermo è cliccabile.
 
 {% highlight ruby %}
 def disegna_pulsante args, pulsante
