@@ -22,8 +22,6 @@ estremo iniziale e uno finale. In Ruby si scrive con l'operatore `..`
 I range sono molto usati nei cicli `for`, per controllare se un valore
 rientra in un intervallo e per generare sequenze.
 
----
-
 ## Creare e usare un range
 
 #### Esercizio 1
@@ -45,8 +43,6 @@ puts r1.count  # 5
 
 Il metodo `.to_a` converte il range in un array di tutti i suoi elementi.
 
----
-
 ## Range nei cicli
 
 #### Esercizio 2
@@ -65,7 +61,11 @@ end
 puts
 {% endhighlight %}
 
----
+Quelle che abbiamo visto sono in effetti due modalità di scrivere il ciclo for. La prima è
+quella più semplice da comprendere la seconda, non meno utile, ha una scrittura che può
+generare confusione. In pratica si chiama il metodo each del tipo range che si occupa di assegnare
+uno ad uno i valori che vengono generati dal range alla variabile i. Questa viene poi
+utilizzata come in precedenza. 
 
 ## Verificare se un valore è nel range
 
@@ -96,8 +96,6 @@ end
 I range si usano spesso nei `case/when` come alternativa più leggibile
 a una catena di `elsif`.
 
----
-
 ## Range di caratteri
 
 I range funzionano anche con le lettere, seguendo l'ordine alfabetico.
@@ -113,8 +111,6 @@ if ('a'..'z').include?('m')
   puts "m è una lettera minuscola"
 end
 {% endhighlight %}
-
----
 
 ## Range con step
 
@@ -137,8 +133,6 @@ end
 puts
 {% endhighlight %}
 
----
-
 ## Metodi utili
 
 | Metodo          | Significato                                      |
@@ -154,8 +148,6 @@ puts
 | `.step(n) { }`  | itera avanzando di `n` alla volta                |
 | `.first(n)`     | primi `n` elementi                               |
 | `.last(n)`      | ultimi `n` elementi                              |
-
----
 
 ## Esercizi
 
