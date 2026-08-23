@@ -76,7 +76,9 @@ L'idea di Stallman non è rimasta confinata a GNU: oggi gran parte dell'infrastr
 - [Come installare Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-installazione.md %}.html) — chiavetta live, macchina virtuale, dual boot con Windows.
 - [Il terminale]({{ site.baseurl }}{% link _sistemioperativi/linux-terminale.md %}.html) — cos'è un terminale, la shell, la struttura di un comando, pipe, sudo, variabili d'ambiente e alias.
 - [Editor di testo da terminale: nano e vim]({{ site.baseurl }}{% link _sistemioperativi/linux-editor.md %}.html) — le scorciatoie di nano e le modalità di vim.
-- [Gestione dei file in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-gestione-file.md %}.html) — il file system unico, navigazione, copia/spostamento/eliminazione, permessi, link simbolici, archivi.
+- [Gestione dei file in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-gestione-file.md %}.html) — il file system unico, navigazione, copia/spostamento/eliminazione, link simbolici, archivi, lettura e confronto file.
+- [Permessi dei file in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-permessi.md %}.html) — permessi base, ACL, chattr, permessi speciali, umask.
+- [Elaborazione del testo da terminale]({{ site.baseurl }}{% link _sistemioperativi/linux-elaborazione-testo.md %}.html) — grep, sed, awk, wc, sort, uniq, cut, tr.
 - [Gestione della rete in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-gestione-rete.md %}.html) — stato delle interfacce, indirizzo IP, connettività, firewall, SSH.
 - [Gestione dei pacchetti in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-pacchetti.md %}.html) — APT, DNF, Pacman, Snap e Flatpak.
 - [Gestione dei processi in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-processi.md %}.html) — ps, top, kill, foreground/background, systemd.
