@@ -43,7 +43,15 @@ Nonostante le differenze, tutte condividono lo stesso kernel Linux e gli stessi 
 
 ### Un antenato comune: Unix
 
-Sia Linux sia macOS derivano concettualmente da **Unix**, un sistema operativo sviluppato nei laboratori Bell a partire dal 1969 da Ken Thompson e Dennis Ritchie. Unix introdusse per primo molte idee che oggi diamo per scontate: il file system ad albero con un'unica radice, la filosofia "tutto è un file", la possibilità di collegare più programmi semplici tramite le pipe, e un linguaggio di sistema portabile (il C, scritto proprio per riscrivere Unix). Linux non contiene codice originale di Unix, ma ne reimplementa da zero le stesse idee ed è compatibile con i suoi standard (POSIX); per questo si dice "Unix-like".
+Sia Linux sia macOS derivano concettualmente da **Unix**, un sistema operativo sviluppato nei laboratori Bell a partire dal 1969 da Ken Thompson e Dennis Ritchie. Unix introdusse per primo molte idee che oggi diamo per scontate: il file system ad albero con un'unica radice, la filosofia "tutto è un file", la possibilità di collegare più programmi semplici tramite le pipe, e un linguaggio di sistema portabile (il C, scritto proprio per riscrivere Unix). Nel corso degli anni '70 e '80 Unix si diffuse al di fuori dei laboratori Bell, dando origine a numerose varianti incompatibili tra loro (System V, BSD, e le versioni proprietarie di produttori come IBM, Sun e HP): un programma scritto per una variante non era garantito funzionare su un'altra.
+
+### POSIX: lo standard che rende Unix (e Linux) compatibili
+
+Per porre rimedio a questa frammentazione, alla fine degli anni '80 l'IEEE definisce **POSIX** (Portable Operating System Interface), uno standard che specifica in modo preciso e indipendente dal produttore come un sistema operativo "in stile Unix" deve comportarsi: quali comandi da shell devono esistere, come devono chiamarsi le funzioni di sistema che i programmi usano per aprire file o creare processi, come deve essere strutturato il file system, quale sintassi deve avere lo script di shell. Un sistema che rispetta questi requisiti si dice **conforme a POSIX** (*POSIX-compliant*).
+
+L'obiettivo pratico di POSIX è la **portabilità**: un programma scritto rispettando solo le funzionalità previste dallo standard, e uno script di shell che usa solo la sintassi POSIX, dovrebbero funzionare senza modifiche su qualsiasi sistema conforme, che sia Linux, un BSD, macOS o persino sistemi commerciali come AIX o Solaris. Per questo motivo gli script d'installazione di molti programmi (i vari `configure` visti nella pagina sulla [gestione dei pacchetti]({{ site.baseurl }}{% link _sistemioperativi/linux-pacchetti.md %}.html)) sono scritti deliberatamente in una sintassi di shell compatibile con POSIX, invece di usare le estensioni specifiche di bash, proprio per poter girare ovunque.
+
+Linux non deriva da codice Unix originale, ma è stato progettato fin dall'inizio per rispettare lo standard POSIX: è per questo che si definisce un sistema **"Unix-like"** (simile a Unix nel comportamento) pur senza esserne una discendenza diretta come invece lo sono i sistemi BSD.
 
 ### BSD: un'altra famiglia di sistemi liberi
 
@@ -65,6 +73,7 @@ L'idea di Stallman non è rimasta confinata a GNU: oggi gran parte dell'infrastr
 
 ### Le sottopagine
 
+- [Come installare Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-installazione.md %}.html) — chiavetta live, macchina virtuale, dual boot con Windows.
 - [Il terminale]({{ site.baseurl }}{% link _sistemioperativi/linux-terminale.md %}.html) — cos'è un terminale, la shell, la struttura di un comando, pipe, sudo, variabili d'ambiente e alias.
 - [Editor di testo da terminale: nano e vim]({{ site.baseurl }}{% link _sistemioperativi/linux-editor.md %}.html) — le scorciatoie di nano e le modalità di vim.
 - [Gestione dei file in Linux]({{ site.baseurl }}{% link _sistemioperativi/linux-gestione-file.md %}.html) — il file system unico, navigazione, copia/spostamento/eliminazione, permessi, link simbolici, archivi.

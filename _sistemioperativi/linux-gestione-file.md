@@ -54,6 +54,57 @@ chmod 644 appunti.txt   # lettura/scrittura per il proprietario, sola lettura pe
 chown fabio appunti.txt # cambia il proprietario del file
 {% endhighlight %}
 
+La sintassi completa di `chmod` (notazione numerica e simbolica) e di `chown` è approfondita nella pagina [Utenti, gruppi e permessi]({{ site.baseurl }}{% link _sistemioperativi/linux-utenti.md %}.html). Qui vediamo alcuni aspetti pratici che riguardano più da vicino il lavoro quotidiano con i file.
+
+### Cosa significa "esecuzione" su una cartella
+
+Il permesso di esecuzione (`x`) ha un significato diverso a seconda che si applichi a un file o a una cartella:
+
+* Su un **file**, `x` permette di eseguirlo come un programma o uno script.
+* Su una **cartella**, `x` non ha nulla a che fare con l'"esecuzione": permette di **entrarci** (con `cd`) e di accedere ai file al suo interno conoscendone il nome. Senza `x`, anche avendo il permesso di lettura (`r`) su una cartella, non è possibile aprirla con `cd` né accedere al contenuto dei file che contiene.
+
+Il permesso di lettura (`r`) su una cartella, da solo, permette solo di **elencarne il contenuto** (`ls`), non di entrarci. Per questo le cartelle hanno quasi sempre sia `r` sia `x` insieme: l'una senza l'altra è raramente utile.
+
+### Applicare permessi e proprietario in modo ricorsivo
+
+Per modificare permessi o proprietario non solo di una cartella, ma anche di tutto il suo contenuto, si usa l'opzione `-R` (*recursive*):
+
+{% highlight shell %}
+chmod -R 755 progetti/          # applica i permessi a "progetti" e a tutto ciò che contiene
+sudo chown -R fabio:fabio progetti/  # cambia proprietario e gruppo ricorsivamente
+{% endhighlight %}
+
+Va usata con attenzione: applicare lo stesso permesso `755` in modo ricorsivo assegna il bit di esecuzione anche ai file "normali" che non dovrebbero averlo (un file di testo non ha bisogno di `x`). Per gestire file e cartelle in modo differenziato in un solo comando si usa `find` insieme a `-exec`, già visto in precedenza:
+
+{% highlight shell %}
+find progetti/ -type d -exec chmod 755 {} \;   # 755 solo alle cartelle
+find progetti/ -type f -exec chmod 644 {} \;   # 644 solo ai file
+{% endhighlight %}
+
+### Oltre proprietario/gruppo/altri: le ACL
+
+Il modello classico (proprietario, gruppo, altri) permette di assegnare permessi a **un solo** utente e **un solo** gruppo per volta. Quando serve dare permessi differenziati a più utenti o gruppi sullo stesso file, senza doverli aggiungere tutti allo stesso gruppo, si usano le **ACL** (Access Control List), un'estensione del file system che permette regole più granulari:
+
+{% highlight shell %}
+sudo setfacl -m u:marco:rw appunti.txt   # concede a "marco" permessi di lettura/scrittura, oltre ai permessi normali
+getfacl appunti.txt                       # mostra tutte le regole ACL attive su un file
+sudo setfacl -x u:marco appunti.txt       # rimuove la regola ACL per "marco"
+{% endhighlight %}
+
+Un file con ACL attive mostra un `+` alla fine della stringa dei permessi in `ls -l` (es. `-rw-r--r--+`), a segnalare che esistono regole aggiuntive oltre a quelle visibili nella forma classica.
+
+### Rendere un file immutabile: chattr
+
+Oltre ai permessi tradizionali, il file system ext4 supporta alcuni **attributi** aggiuntivi, indipendenti da chi possiede il file. Il più usato è l'attributo immutabile, che impedisce qualsiasi modifica al file, anche da parte del proprietario o di root:
+
+{% highlight shell %}
+sudo chattr +i file_importante.conf   # rende il file immutabile: non può essere modificato né eliminato
+lsattr file_importante.conf            # mostra gli attributi attivi su un file
+sudo chattr -i file_importante.conf    # rimuove l'attributo immutabile
+{% endhighlight %}
+
+Utile per proteggere file di configurazione critici da modifiche accidentali, anche involontarie da parte di root stesso: per rimuovere l'attributo bisogna prima disattivarlo esplicitamente con `chattr -i`.
+
 ### Trovare i file
 
 {% highlight shell %}
