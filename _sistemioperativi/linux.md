@@ -85,3 +85,4 @@ L'idea di Stallman non è rimasta confinata a GNU: oggi gran parte dell'infrastr
 - [Utenti, gruppi e permessi]({{ site.baseurl }}{% link _sistemioperativi/linux-utenti.md %}.html) — root e sudo, creazione utenti e gruppi, permessi in dettaglio.
 - [Shell scripting]({{ site.baseurl }}{% link _sistemioperativi/linux-shell-scripting.md %}.html) — variabili, argomenti, condizioni e cicli in un file .sh.
 - [Gestione di dischi e mount]({{ site.baseurl }}{% link _sistemioperativi/linux-dischi.md %}.html) — mount/umount, /etc/fstab, spazio libero, UUID.
+- [Diagnostica hardware]({{ site.baseurl }}{% link _sistemioperativi/linux-diagnostica-hardware.md %}.html) — lspci, lsusb, dmesg, moduli del kernel, sensori.
