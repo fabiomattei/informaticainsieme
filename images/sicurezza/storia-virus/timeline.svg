@@ -1,0 +1,68 @@
+<svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Tappe della storia dei virus</text>
+
+  <line x1="90" y1="50" x2="90" y2="490" stroke="#2a7ae2" stroke-width="2.5"/>
+
+  <g>
+    <circle cx="90" cy="60" r="6" fill="#f66a0a"/>
+    <text x="60" y="64" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">1971</text>
+    <text x="106" y="58" font-size="12" font-weight="bold" fill="#111111">Creeper</text>
+    <text x="106" y="72" font-size="10.5" fill="#828282">primo programma auto-replicante</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="115" r="6" fill="#f66a0a"/>
+    <text x="60" y="119" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">1982</text>
+    <text x="106" y="113" font-size="12" font-weight="bold" fill="#111111">Elk Cloner</text>
+    <text x="106" y="127" font-size="10.5" fill="#828282">primo virus diffuso "in the wild"</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="170" r="6" fill="#f66a0a"/>
+    <text x="60" y="174" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">1986</text>
+    <text x="106" y="168" font-size="12" font-weight="bold" fill="#111111">Brain</text>
+    <text x="106" y="182" font-size="10.5" fill="#828282">primo virus per PC MS-DOS</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="225" r="6" fill="#f66a0a"/>
+    <text x="60" y="229" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">1988</text>
+    <text x="106" y="223" font-size="12" font-weight="bold" fill="#111111">Morris Worm</text>
+    <text x="106" y="237" font-size="10.5" fill="#828282">primo worm su Internet</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="280" r="6" fill="#f66a0a"/>
+    <text x="60" y="284" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">2000</text>
+    <text x="106" y="278" font-size="12" font-weight="bold" fill="#111111">ILOVEYOU</text>
+    <text x="106" y="292" font-size="10.5" fill="#828282">worm via email, milioni di PC infetti</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="335" r="6" fill="#f66a0a"/>
+    <text x="60" y="339" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">2003</text>
+    <text x="106" y="333" font-size="12" font-weight="bold" fill="#111111">SQL Slammer</text>
+    <text x="106" y="347" font-size="10.5" fill="#828282">il worm a diffusione più rapida</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="390" r="6" fill="#f66a0a"/>
+    <text x="60" y="394" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">2010</text>
+    <text x="106" y="388" font-size="12" font-weight="bold" fill="#111111">Stuxnet</text>
+    <text x="106" y="402" font-size="10.5" fill="#828282">la prima cyberweapon di stato</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="445" r="6" fill="#f66a0a"/>
+    <text x="60" y="449" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">2017</text>
+    <text x="106" y="443" font-size="12" font-weight="bold" fill="#111111">WannaCry / NotPetya</text>
+    <text x="106" y="457" font-size="10.5" fill="#828282">l'era del ransomware globale</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="480" r="6" fill="#2a7ae2"/>
+    <text x="60" y="484" text-anchor="end" font-size="12" font-weight="bold" fill="#111111">oggi</text>
+    <text x="106" y="478" font-size="12" font-weight="bold" fill="#111111">Ransomware-as-a-Service</text>
+    <text x="106" y="492" font-size="10.5" fill="#828282">criminalità informatica industrializzata</text>
+  </g>
+</svg>

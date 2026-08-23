@@ -1,0 +1,29 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <text x="240" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">La triade CIA</text>
+
+  <polygon points="240,60 90,330 390,330" fill="none" stroke="#2a7ae2" stroke-width="2.5"/>
+
+  <circle cx="240" cy="60" r="6" fill="#f66a0a"/>
+  <circle cx="90" cy="330" r="6" fill="#f66a0a"/>
+  <circle cx="390" cy="330" r="6" fill="#f66a0a"/>
+
+  <text x="240" y="46" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Riservatezza</text>
+  <text x="240" y="356" text-anchor="middle" font-size="10" fill="#828282">Confidentiality</text>
+
+  <text x="60" y="358" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Integrità</text>
+  <text x="60" y="374" text-anchor="middle" font-size="10" fill="#828282">Integrity</text>
+
+  <text x="420" y="358" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Disponibilità</text>
+  <text x="420" y="374" text-anchor="middle" font-size="10" fill="#828282">Availability</text>
+
+  <text x="240" y="220" text-anchor="middle" font-size="12" fill="#2a7ae2" font-weight="bold">CIA</text>
+
+  <text x="150" y="120" text-anchor="middle" font-size="10.5" fill="#555555">solo chi è autorizzato</text>
+  <text x="150" y="134" text-anchor="middle" font-size="10.5" fill="#555555">legge i dati</text>
+
+  <text x="330" y="120" text-anchor="middle" font-size="10.5" fill="#555555">i dati restano</text>
+  <text x="330" y="134" text-anchor="middle" font-size="10.5" fill="#555555">accurati e non alterati</text>
+
+  <text x="240" y="300" text-anchor="middle" font-size="10.5" fill="#555555">i dati e i servizi sono</text>
+  <text x="240" y="314" text-anchor="middle" font-size="10.5" fill="#555555">accessibili quando servono</text>
+</svg>

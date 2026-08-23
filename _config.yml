@@ -88,6 +88,9 @@ collections:
   regolamenti:
     output: true
     permalink: /regolamenti/:path
+  sicurezza:
+    output: true
+    permalink: /sicurezza/:path
   rete:
     output: true
     permalink: /rete/:path
