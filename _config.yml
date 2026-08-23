@@ -91,6 +91,9 @@ collections:
   sicurezza:
     output: true
     permalink: /sicurezza/:path
+  sistemioperativi:
+    output: true
+    permalink: /sistemioperativi/:path
   rete:
     output: true
     permalink: /rete/:path
