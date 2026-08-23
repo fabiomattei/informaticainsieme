@@ -19,4 +19,5 @@ name: Storia
 * [Bill Gates: Microsoft e la standardizzazione del software per PC]({{ site.baseurl }}{% link _storia/bill-gates.md %}.html)
 * [Richard Stallman: il Progetto GNU e il software libero]({{ site.baseurl }}{% link _storia/richard-stallman.md %}.html)
 * [Linus Torvalds: Linux e il movimento open source]({{ site.baseurl }}{% link _storia/linus-torvalds.md %}.html)
+* [Claude Shannon: il padre della teoria dell'informazione]({{ site.baseurl }}{% link _storia/shannon.md %}.html)
 

@@ -5,6 +5,8 @@ author: Fabio Mattei
 layout: page
 ---
 
+![Claude Shannon (foto di Konrad Jacobs, MFO, CC BY-SA 2.0 DE)](/images/storia/shannon/claude-shannon.jpg){:class="aside-image" style="max-width: 35%;"}
+
 Nel 1948, un trentaduenne che lavorava nei laboratori Bell pubblicò un articolo che nessuno capì in pieno.
 Gli ingegneri lo trovarono troppo matematico. I matematici lo trovarono troppo incentrato sull’ingegneria. Un eminente matematico lo recensì negativamente.
 Quel documento, **Una teoria matematica della comunicazione**, divenne **il documento fondante dell'era digitale**.
