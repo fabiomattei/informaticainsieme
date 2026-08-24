@@ -91,6 +91,9 @@ collections:
   regolamenti:
     output: true
     permalink: /regolamenti/:path
+  rust:
+    output: true
+    permalink: /rust/:path
   sicurezza:
     output: true
     permalink: /sicurezza/:path
