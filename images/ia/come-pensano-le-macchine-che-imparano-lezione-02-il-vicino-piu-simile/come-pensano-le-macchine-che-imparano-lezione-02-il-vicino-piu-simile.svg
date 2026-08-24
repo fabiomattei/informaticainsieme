@@ -1,0 +1,20 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l2a-title l2a-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="l2a-title">Un punto nuovo circondato dai suoi vicini più simili</title>
+  <desc id="l2a-desc">Una mappa di punti colorati con un punto nuovo al centro, e un cerchio tratteggiato che racchiude i pochi vicini più vicini usati per decidere il suo colore.</desc>
+
+  <rect x="20" y="20" width="440" height="220" rx="10" fill="#fdfdfd" stroke="#e3e3e3" stroke-width="1.5" />
+
+  <circle cx="240" cy="130" r="55" fill="none" stroke="#828282" stroke-width="1.5" stroke-dasharray="5 4" />
+
+  <g fill="#c85506">
+    <circle cx="150" cy="80" r="7" /><circle cx="120" cy="150" r="7" /><circle cx="200" cy="180" r="7" /><circle cx="270" cy="90" r="7" />
+  </g>
+  <g fill="#fdfdfd" stroke="#2a7ae2" stroke-width="2">
+    <circle cx="350" cy="70" r="7" /><circle cx="380" cy="140" r="7" /><circle cx="330" cy="190" r="7" /><circle cx="410" cy="100" r="7" />
+  </g>
+
+  <circle cx="240" cy="130" r="9" fill="none" stroke="#111" stroke-width="2.5" />
+  <text x="240" y="118" fill="#111" font-size="11" text-anchor="middle" font-weight="bold">?</text>
+
+  <text x="240" y="252" fill="#828282" font-size="12" text-anchor="middle">il punto "?" prende il colore più frequente fra i suoi vicini più vicini</text>
+</svg>

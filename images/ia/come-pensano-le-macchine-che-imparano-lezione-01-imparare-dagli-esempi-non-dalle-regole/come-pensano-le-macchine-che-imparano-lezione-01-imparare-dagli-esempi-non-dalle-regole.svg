@@ -1,0 +1,28 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l1-title l1-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="l1-title">Regole scritte a mano contro esempi che insegnano</title>
+  <desc id="l1-desc">A sinistra un elenco di regole scritte a mano che porta a un output fisso. A destra un mucchio di esempi etichettati che, passati attraverso un algoritmo di apprendimento, producono un modello.</desc>
+
+  <text x="115" y="30" fill="#111" font-size="14" font-weight="bold" text-anchor="middle">programmazione classica</text>
+  <rect x="30" y="50" width="170" height="70" rx="8" fill="#fdfdfd" stroke="#828282" stroke-width="1.5" />
+  <text x="115" y="80" fill="#111" font-size="12" text-anchor="middle">regole scritte</text>
+  <text x="115" y="98" fill="#111" font-size="12" text-anchor="middle">a mano</text>
+  <path d="M 115,120 L 115,150" fill="none" stroke="#828282" stroke-width="2" marker-end="url(#a1)" />
+  <rect x="55" y="154" width="120" height="46" rx="8" fill="#eef2f7" stroke="#828282" stroke-width="1.5" />
+  <text x="115" y="182" fill="#111" font-size="12" text-anchor="middle">output fisso</text>
+
+  <text x="365" y="30" fill="#111" font-size="14" font-weight="bold" text-anchor="middle">machine learning</text>
+  <rect x="280" y="50" width="170" height="70" rx="8" fill="#fdfdfd" stroke="#2a7ae2" stroke-width="1.5" />
+  <text x="365" y="76" fill="#111" font-size="12" text-anchor="middle">tanti esempi</text>
+  <text x="365" y="94" fill="#111" font-size="12" text-anchor="middle">già etichettati</text>
+  <text x="365" y="112" fill="#111" font-size="12" text-anchor="middle">↓ algoritmo</text>
+  <path d="M 365,120 L 365,150" fill="none" stroke="#2a7ae2" stroke-width="2" marker-end="url(#a2)" />
+  <rect x="305" y="154" width="120" height="46" rx="8" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5" />
+  <text x="365" y="182" fill="#111" font-size="12" text-anchor="middle">modello imparato</text>
+
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 z" fill="#828282" /></marker>
+    <marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 z" fill="#2a7ae2" /></marker>
+  </defs>
+
+  <text x="240" y="240" fill="#828282" font-size="12" text-anchor="middle">la regola nasce dai dati, non dalla penna del programmatore</text>
+</svg>

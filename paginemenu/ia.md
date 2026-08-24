@@ -50,6 +50,22 @@ l'adozione dell'intelligenza artificiale, rendendolo un argomento di grande rile
 * [Responsible AI]({{ site.baseurl }}{% link _ia/responsible-ai.md %}.html)
 * [Sicurezza AI]({{ site.baseurl }}{% link _ia/sicurezza-ai.md %}.html)
 
+## Come Pensano le Macchine che Imparano
+
+Una guida curiosa al machine learning, senza formule.
+
+* [Prefazione]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-prefazione.md %}.html)
+* [Lezione 01 — Imparare dagli esempi, non dalle regole]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-01-imparare-dagli-esempi-non-dalle-regole.md %}.html)
+* [Lezione 02 — Il vicino più simile]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-02-il-vicino-piu-simile.md %}.html)
+* [Lezione 03 — Un albero di domande]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-03-un-albero-di-domande.md %}.html)
+* [Lezione 04 — Tracciare la retta migliore]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-04-tracciare-la-retta-migliore.md %}.html)
+* [Lezione 05 — Memorizzare non è capire]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-05-memorizzare-non-e-capire.md %}.html)
+* [Lezione 06 — Quanto è bravo, davvero?]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-06-quanto-e-bravo-davvero.md %}.html)
+* [Lezione 07 — Trovare gruppi senza etichette]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-07-trovare-gruppi-senza-etichette.md %}.html)
+* [Lezione 08 — Tante opinioni valgono più di una]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-08-tante-opinioni-valgono-piu-di-una.md %}.html)
+* [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-a-soluzioni.md %}.html)
+* [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)
+
 ## Come Pensano le Macchine che Parlano
 
 Una guida curiosa ai Large Language Model, senza formule.

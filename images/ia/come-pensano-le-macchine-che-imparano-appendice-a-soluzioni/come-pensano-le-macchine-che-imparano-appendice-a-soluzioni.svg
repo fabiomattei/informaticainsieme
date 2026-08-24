@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="apA-title apA-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="apA-title">Un elenco di spunte, una per lezione risolta</title>
+  <desc id="apA-desc">Otto righe con un segno di spunta ciascuna, numerate da 1 a 8, a rappresentare le soluzioni delle otto lezioni del libro.</desc>
+
+  <g font-size="13" fill="#111">
+    <text x="60" y="35">Lezione 1</text><text x="60" y="60">Lezione 2</text><text x="60" y="85">Lezione 3</text><text x="60" y="110">Lezione 4</text>
+    <text x="60" y="135">Lezione 5</text><text x="60" y="160">Lezione 6</text><text x="60" y="185">Lezione 7</text><text x="60" y="210">Lezione 8</text>
+  </g>
+  <g stroke="#3aa655" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 190,30 L 197,37 L 212,20" /><path d="M 190,55 L 197,62 L 212,45" />
+    <path d="M 190,80 L 197,87 L 212,70" /><path d="M 190,105 L 197,112 L 212,95" />
+    <path d="M 190,130 L 197,137 L 212,120" /><path d="M 190,155 L 197,162 L 212,145" />
+    <path d="M 190,180 L 197,187 L 212,170" /><path d="M 190,205 L 197,212 L 212,195" />
+  </g>
+</svg>

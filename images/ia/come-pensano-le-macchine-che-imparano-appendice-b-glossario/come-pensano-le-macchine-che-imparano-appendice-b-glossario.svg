@@ -1,0 +1,20 @@
+<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="apB-title apB-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="apB-title">Una scheda del glossario indicizzata alfabeticamente</title>
+  <desc id="apB-desc">Una scheda con una lettera dell'alfabeto, un termine e una breve riga di definizione, a rappresentare l'organizzazione del glossario.</desc>
+
+  <rect x="40" y="20" width="400" height="180" rx="10" fill="#fdfdfd" stroke="#e3e3e3" stroke-width="1.5" />
+
+  <circle cx="80" cy="60" r="20" fill="#eef2f7" stroke="#2a7ae2" stroke-width="1.5" />
+  <text x="80" y="67" fill="#2a7ae2" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+
+  <text x="120" y="55" fill="#111" font-size="14" font-weight="bold">Overfitting</text>
+  <line x1="120" y1="70" x2="400" y2="70" stroke="#e3e3e3" stroke-width="1" />
+  <line x1="120" y1="86" x2="380" y2="86" stroke="#e3e3e3" stroke-width="1" />
+  <line x1="120" y1="102" x2="340" y2="102" stroke="#e3e3e3" stroke-width="1" />
+
+  <circle cx="80" cy="140" r="20" fill="#fde8d6" stroke="#f66a0a" stroke-width="1.5" />
+  <text x="80" y="147" fill="#f66a0a" font-size="18" font-weight="bold" text-anchor="middle">K</text>
+  <text x="120" y="135" fill="#111" font-size="14" font-weight="bold">k-means</text>
+  <line x1="120" y1="150" x2="400" y2="150" stroke="#e3e3e3" stroke-width="1" />
+  <line x1="120" y1="166" x2="360" y2="166" stroke="#e3e3e3" stroke-width="1" />
+</svg>
