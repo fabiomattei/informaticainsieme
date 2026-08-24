@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 07 — Trovare gruppi senza etichette'
+title: 'Lezione 07, Trovare gruppi senza etichette'
 date: '2026-08-24T00:00:00+02:00'
 author: Fabio Mattei
 layout: page
@@ -9,13 +9,13 @@ layout: page
 
 ### 7.1 Il barattolo di bottoni
 
-Immagina un barattolo pieno di centinaia di bottoni mischiati alla rinfusa — di colori, dimensioni e forme diverse — e il compito di ordinarli in mucchietti, senza che nessuno ti abbia detto in anticipo quante categorie esistono né come si chiamano. Non hai un elenco di etichette da assegnare, come "matura/non matura" nelle lezioni precedenti: hai solo i bottoni stessi, e il tuo unico strumento è notare quali si somigliano fra loro più che con gli altri.
+Immagina un barattolo pieno di centinaia di bottoni mischiati alla rinfusa, di colori, dimensioni e forme diverse, e il compito di ordinarli in mucchietti, senza che nessuno ti abbia detto in anticipo quante categorie esistono né come si chiamano. Non hai un elenco di etichette da assegnare, come "matura/non matura" nelle lezioni precedenti: hai solo i bottoni stessi, e il tuo unico strumento è notare quali si somigliano fra loro più che con gli altri.
 
-Con ogni probabilità, li smisteresti comunque in gruppi sensati — tutti i bottoni grandi e scuri da una parte, tutti i piccoli e chiari dall'altra — semplicemente osservando quali si assomigliano. Questo è esattamente il compito dell'**apprendimento non supervisionato** introdotto nella Lezione 1: trovare una struttura nascosta dentro dati che non hanno etichette, invece di prevedere un'etichetta già nota. Il compito specifico di raggruppare esempi simili si chiama **clustering** (letteralmente, "raggruppamento in ammassi").
+Con ogni probabilità, li smisteresti comunque in gruppi sensati, tutti i bottoni grandi e scuri da una parte, tutti i piccoli e chiari dall'altra, semplicemente osservando quali si assomigliano. Questo è esattamente il compito dell'**apprendimento non supervisionato** introdotto nella Lezione 1: trovare una struttura nascosta dentro dati che non hanno etichette, invece di prevedere un'etichetta già nota. Il compito specifico di raggruppare esempi simili si chiama **clustering** (letteralmente, "raggruppamento in ammassi").
 
 ### 7.2 Un caso concreto: i prezzi di un mercatino dell'usato
 
-Facciamo un esempio più vicino al filo conduttore di questo libro. Gestisci un banchetto a un mercatino dell'usato e hai messo in vendita una trentina di oggetti diversi, ciascuno con il proprio prezzo. Non hai etichettato in anticipo nessuna "fascia di prezzo" — economico, medio, caro — ma osservando i prezzi ti accorgi che non sono distribuiti in modo uniforme: sembrano addensarsi in due o tre gruppi naturali, con vuoti evidenti fra un gruppo e l'altro. Il clustering è lo strumento che identifica automaticamente questi gruppi, senza che nessuno debba tracciare a mano i confini fra "economico" e "caro".
+Facciamo un esempio più vicino al filo conduttore di questo libro. Gestisci un banchetto a un mercatino dell'usato e hai messo in vendita una trentina di oggetti diversi, ciascuno con il proprio prezzo. Non hai etichettato in anticipo nessuna "fascia di prezzo", economico, medio, caro, ma osservando i prezzi ti accorgi che non sono distribuiti in modo uniforme: sembrano addensarsi in due o tre gruppi naturali, con vuoti evidenti fra un gruppo e l'altro. Il clustering è lo strumento che identifica automaticamente questi gruppi, senza che nessuno debba tracciare a mano i confini fra "economico" e "caro".
 
 Questo tipo di analisi ha applicazioni molto concrete: un negozio online può raggruppare i propri clienti in base alle abitudini d'acquisto (chi compra spesso ma poco alla volta, chi compra raramente ma molto) senza conoscere in anticipo quali "tipi" di cliente esistono; un biologo può raggruppare geni che si comportano in modo simile, senza sapere ancora a cosa servano.
 
@@ -26,8 +26,8 @@ L'algoritmo di clustering più diffuso si chiama **k-means** ("k medie"), e la s
 Il procedimento è iterativo, cioè si ripete più volte fino a stabilizzarsi:
 
 1. **Inizio**: scegli k punti a caso (spesso presi direttamente fra gli esempi stessi) come centri di partenza.
-2. **Assegnazione**: per ogni punto dell'insieme, guarda quale dei k centri è il più vicino, e assegnalo a quel gruppo — esattamente come k-NN cercava il vicino più prossimo, ma qui confrontando ogni punto solo con i pochi centri, non con tutti gli altri punti.
-3. **Aggiornamento**: per ogni gruppo appena formato, calcola la sua **media** — la posizione ottenuta facendo la media delle coordinate di tutti i punti assegnati a quel gruppo — e sposta il centro esattamente lì. È da questo passaggio che l'algoritmo prende il nome.
+2. **Assegnazione**: per ogni punto dell'insieme, guarda quale dei k centri è il più vicino, e assegnalo a quel gruppo, esattamente come k-NN cercava il vicino più prossimo, ma qui confrontando ogni punto solo con i pochi centri, non con tutti gli altri punti.
+3. **Aggiornamento**: per ogni gruppo appena formato, calcola la sua **media**, la posizione ottenuta facendo la media delle coordinate di tutti i punti assegnati a quel gruppo, e sposta il centro esattamente lì. È da questo passaggio che l'algoritmo prende il nome.
 4. **Ripeti**: torna al passo 2 con i centri aggiornati, e continua finché i centri smettono di spostarsi in modo significativo (o, equivalentemente, finché nessun punto cambia più gruppo da un giro all'altro).
 
 <figure style="margin: 2rem 0; text-align: center;">
@@ -59,17 +59,17 @@ Il procedimento è iterativo, cioè si ripete più volte fino a stabilizzarsi:
 
 ### 7.4 Scegliere k: un'arte, non una scienza esatta
 
-C'è un dettaglio che k-means, a differenza degli algoritmi delle lezioni precedenti, non può risolvere da solo: quanti gruppi cercare, cioè il valore di k, va deciso *prima* di far partire l'algoritmo, e nessun calcolo automatico ti dice con certezza il numero "giusto" — perché, semplicemente, potrebbe non esserci un numero oggettivamente corretto. I bottoni del barattolo potrebbero essere ragionevolmente divisi in 2 mucchi grossi (chiari e scuri) oppure in 6 mucchi più fini (per ogni combinazione di colore e dimensione): entrambe le scelte sono "corrette", rispondono solo a domande diverse.
+C'è un dettaglio che k-means, a differenza degli algoritmi delle lezioni precedenti, non può risolvere da solo: quanti gruppi cercare, cioè il valore di k, va deciso *prima* di far partire l'algoritmo, e nessun calcolo automatico ti dice con certezza il numero "giusto", perché, semplicemente, potrebbe non esserci un numero oggettivamente corretto. I bottoni del barattolo potrebbero essere ragionevolmente divisi in 2 mucchi grossi (chiari e scuri) oppure in 6 mucchi più fini (per ogni combinazione di colore e dimensione): entrambe le scelte sono "corrette", rispondono solo a domande diverse.
 
-Un trucco pratico diffuso è provare diversi valori di k (2, 3, 4, 5...) e osservare quanto, per ciascun valore, i punti restano compatti attorno al proprio centro: aumentando k questa compattezza migliora sempre (con k pari al numero di punti, ogni punto è il proprio centro, compattezza perfetta ma inutile — un caso limite di overfitting non troppo diverso da quello incontrato nella Lezione 5), ma spesso il miglioramento rallenta bruscamente dopo un certo valore, formando un gomito ben visibile su un grafico: quel gomito è un buon indizio, anche se non una prova matematica, di quale k rifletta davvero una struttura presente nei dati.
+Un trucco pratico diffuso è provare diversi valori di k (2, 3, 4, 5...) e osservare quanto, per ciascun valore, i punti restano compatti attorno al proprio centro: aumentando k questa compattezza migliora sempre (con k pari al numero di punti, ogni punto è il proprio centro, compattezza perfetta ma inutile, un caso limite di overfitting non troppo diverso da quello incontrato nella Lezione 5), ma spesso il miglioramento rallenta bruscamente dopo un certo valore, formando un gomito ben visibile su un grafico: quel gomito è un buon indizio, anche se non una prova matematica, di quale k rifletta davvero una struttura presente nei dati.
 
 ### 7.5 Un limite da tenere a mente
 
-Proprio perché non esistono etichette di riferimento, valutare "quanto è bravo" un risultato di clustering è intrinsecamente più sfumato di valutare un modello supervisionato con la matrice di confusione della Lezione 6: non c'è una risposta giusta nota in anticipo con cui confrontarsi. I gruppi trovati da k-means sono utili nella misura in cui aiutano *te*, che li interpreti, a scoprire qualcosa di sensato nei dati — due fasce di prezzo che riflettono davvero due tipi diversi di oggetti in vendita, per esempio — non perché l'algoritmo garantisca in astratto di aver trovato "la verità".
+Proprio perché non esistono etichette di riferimento, valutare "quanto è bravo" un risultato di clustering è intrinsecamente più sfumato di valutare un modello supervisionato con la matrice di confusione della Lezione 6: non c'è una risposta giusta nota in anticipo con cui confrontarsi. I gruppi trovati da k-means sono utili nella misura in cui aiutano *te*, che li interpreti, a scoprire qualcosa di sensato nei dati, due fasce di prezzo che riflettono davvero due tipi diversi di oggetti in vendita, per esempio, non perché l'algoritmo garantisca in astratto di aver trovato "la verità".
 
 ---
 
-> **Prova tu — Un giro di k-means a mano**
+> **Prova tu, Un giro di k-means a mano**
 >
 > Cinque oggetti del tuo banchetto, con il solo prezzo in euro: 3, 4, 15, 18, 20.
 >
@@ -77,8 +77,8 @@ Proprio perché non esistono etichette di riferimento, valutare "quanto è bravo
 >
 > 1. Assegna ciascuno dei cinque prezzi (3, 4, 15, 18, 20) al centro più vicino fra A e B, guardando semplicemente quale dei due dista di meno da ciascun prezzo.
 > 2. Calcola la media dei prezzi assegnati al gruppo A, e la media dei prezzi assegnati al gruppo B: questi diventano i nuovi centri.
-> 3. Con i centri aggiornati, riassegna ciascuno dei cinque prezzi al centro più vicino. È cambiato qualcosa rispetto al punto 1? Se le assegnazioni sono rimaste identiche, l'algoritmo è arrivato a convergenza — non c'è più bisogno di ripetere il procedimento.
+> 3. Con i centri aggiornati, riassegna ciascuno dei cinque prezzi al centro più vicino. È cambiato qualcosa rispetto al punto 1? Se le assegnazioni sono rimaste identiche, l'algoritmo è arrivato a convergenza, non c'è più bisogno di ripetere il procedimento.
 
 ---
 
-*Continua con la [Lezione 08 — Tante opinioni valgono più di una]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-08-tante-opinioni-valgono-piu-di-una.md %}.html)*
+*Continua con la [Lezione 08, Tante opinioni valgono più di una]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-08-tante-opinioni-valgono-piu-di-una.md %}.html)*

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 06 — Quanto è bravo, davvero?'
+title: 'Lezione 06, Quanto è bravo, davvero?'
 date: '2026-08-24T00:00:00+02:00'
 author: Fabio Mattei
 layout: page
@@ -9,13 +9,13 @@ layout: page
 
 ### 6.1 Un modello che ha ragione il 99% delle volte
 
-Immagina un modello pensato per individuare una malattia rara, che colpisce circa una persona su cento, a partire da alcuni esami del sangue. Un collega ti annuncia con entusiasmo di aver costruito un modello che ha ragione nel 99% dei casi. Sembra un risultato eccezionale — finché non scopri che il modello, in realtà, si limita a dire sempre "sano", per chiunque, senza nemmeno guardare gli esami.
+Immagina un modello pensato per individuare una malattia rara, che colpisce circa una persona su cento, a partire da alcuni esami del sangue. Un collega ti annuncia con entusiasmo di aver costruito un modello che ha ragione nel 99% dei casi. Sembra un risultato eccezionale, finché non scopri che il modello, in realtà, si limita a dire sempre "sano", per chiunque, senza nemmeno guardare gli esami.
 
-Dato che solo una persona su cento è davvero malata, un modello che dice sempre "sano" ha ragione esattamente nel 99% dei casi — sbagliando però ogni singola volta che conta davvero, cioè su ogni paziente effettivamente malato. Questo modello non serve a nulla, eppure la sua **accuratezza** (la percentuale di previsioni corrette sul totale) è altissima. Questa lezione spiega perché l'accuratezza, da sola, può ingannare — e cosa guardare al suo posto.
+Dato che solo una persona su cento è davvero malata, un modello che dice sempre "sano" ha ragione esattamente nel 99% dei casi, sbagliando però ogni singola volta che conta davvero, cioè su ogni paziente effettivamente malato. Questo modello non serve a nulla, eppure la sua **accuratezza** (la percentuale di previsioni corrette sul totale) è altissima. Questa lezione spiega perché l'accuratezza, da sola, può ingannare, e cosa guardare al suo posto.
 
 ### 6.2 La matrice di confusione: quattro modi di avere ragione o torto
 
-Per capire davvero come si comporta un modello di classificazione, non basta un unico numero: serve distinguere fra i diversi *tipi* di errore che può commettere. Per un problema con due sole categorie — malato/sano, spam/non spam — esistono quattro combinazioni possibili fra ciò che il modello prevede e ciò che è vero:
+Per capire davvero come si comporta un modello di classificazione, non basta un unico numero: serve distinguere fra i diversi *tipi* di errore che può commettere. Per un problema con due sole categorie, malato/sano, spam/non spam, esistono quattro combinazioni possibili fra ciò che il modello prevede e ciò che è vero:
 
 - **Vero positivo**: il modello dice "malato", ed effettivamente lo è. Ha ragione.
 - **Vero negativo**: il modello dice "sano", ed effettivamente lo è. Ha ragione.
@@ -28,9 +28,9 @@ Organizzare il conteggio di questi quattro casi in una tabella due per due si ch
 
 Da questi quattro numeri nascono due misure più utili dell'accuratezza da sola, ciascuna con un nome preciso.
 
-La **precisione** risponde alla domanda: "fra tutte le volte che il modello ha detto 'malato', quante volte aveva davvero ragione?". Si calcola guardando solo le previsioni positive del modello — i veri positivi e i falsi positivi — e chiedendosi quale frazione era corretta. Una precisione alta significa che, quando il modello suona l'allarme, ci si può fidare: raramente è un falso allarme.
+La **precisione** risponde alla domanda: "fra tutte le volte che il modello ha detto 'malato', quante volte aveva davvero ragione?". Si calcola guardando solo le previsioni positive del modello, i veri positivi e i falsi positivi, e chiedendosi quale frazione era corretta. Una precisione alta significa che, quando il modello suona l'allarme, ci si può fidare: raramente è un falso allarme.
 
-Il **richiamo** (in inglese *recall*) risponde a una domanda diversa e complementare: "fra tutti i pazienti davvero malati, quanti il modello è riuscito a individuare?". Si calcola guardando tutti i casi realmente positivi — i veri positivi e i falsi negativi — e chiedendosi quale frazione il modello ha effettivamente trovato. Un richiamo alto significa che il modello si lascia sfuggire pochi casi reali.
+Il **richiamo** (in inglese *recall*) risponde a una domanda diversa e complementare: "fra tutti i pazienti davvero malati, quanti il modello è riuscito a individuare?". Si calcola guardando tutti i casi realmente positivi, i veri positivi e i falsi negativi, e chiedendosi quale frazione il modello ha effettivamente trovato. Un richiamo alto significa che il modello si lascia sfuggire pochi casi reali.
 
 Il modello "dice sempre sano" del paragrafo 6.1 ha un richiamo pari a zero: non individua *nessuno* dei pazienti davvero malati, anche se la sua accuratezza resta al 99%. È proprio guardando il richiamo, non l'accuratezza, che il problema salta immediatamente all'occhio.
 
@@ -62,15 +62,15 @@ Il modello "dice sempre sano" del paragrafo 6.1 ha un richiamo pari a zero: non 
 
 Precisione e richiamo tendono a tirare in direzioni opposte, ed è raro ottenere entrambe altissime allo stesso tempo. Un modello che, per timore di mancare un solo caso di malattia, etichettasse "malato" quasi chiunque, otterrebbe un richiamo molto alto (troverebbe quasi tutti i malati reali) ma una precisione bassa (la maggior parte dei suoi allarmi sarebbero falsi allarmi). Un modello che, all'opposto, etichettasse "malato" solo nei casi in cui è praticamente certo, otterrebbe una precisione molto alta (quando lo dice, ha quasi sempre ragione) ma un richiamo basso (si lascerebbe sfuggire diversi casi reali più dubbi).
 
-Quale dei due compromessi è preferibile dipende interamente dal contesto, non esiste una risposta universale. In uno screening per una malattia grave, mancare un caso reale (falso negativo) è di solito considerato molto peggio di un falso allarme che verrà poi smentito da un esame più approfondito: si preferisce quindi un richiamo alto, accettando qualche falso allarme in più. In un filtro antispam, al contrario, un falso positivo — un'email importante finita per errore nello spam — è spesso considerato più fastidioso di un falso negativo — qualche spam che sfugge e finisce comunque nella posta in arrivo: si preferisce quindi una precisione alta, accettando che qualche spam passi.
+Quale dei due compromessi è preferibile dipende interamente dal contesto, non esiste una risposta universale. In uno screening per una malattia grave, mancare un caso reale (falso negativo) è di solito considerato molto peggio di un falso allarme che verrà poi smentito da un esame più approfondito: si preferisce quindi un richiamo alto, accettando qualche falso allarme in più. In un filtro antispam, al contrario, un falso positivo, un'email importante finita per errore nello spam, è spesso considerato più fastidioso di un falso negativo, qualche spam che sfugge e finisce comunque nella posta in arrivo: si preferisce quindi una precisione alta, accettando che qualche spam passi.
 
 ### 6.5 Scegliere la misura giusta per il problema giusto
 
-La lezione più importante di questo capitolo non è memorizzare le definizioni di precisione e richiamo, ma interiorizzare l'abitudine a chiedersi, davanti a un qualunque numero di accuratezza dichiarato per un modello: *quanto sono sbilanciate le categorie in questo problema, e quali dei due tipi di errore mi costano di più?* Ogni volta che una categoria è molto più rara dell'altra — malattie rare, transazioni fraudolente, guasti industriali — l'accuratezza da sola è quasi sempre una misura fuorviante, e la matrice di confusione, con precisione e richiamo calcolati separatamente, racconta una storia molto più onesta di quanto il modello sia davvero utile.
+La lezione più importante di questo capitolo non è memorizzare le definizioni di precisione e richiamo, ma interiorizzare l'abitudine a chiedersi, davanti a un qualunque numero di accuratezza dichiarato per un modello: *quanto sono sbilanciate le categorie in questo problema, e quali dei due tipi di errore mi costano di più?* Ogni volta che una categoria è molto più rara dell'altra, malattie rare, transazioni fraudolente, guasti industriali, l'accuratezza da sola è quasi sempre una misura fuorviante, e la matrice di confusione, con precisione e richiamo calcolati separatamente, racconta una storia molto più onesta di quanto il modello sia davvero utile.
 
 ---
 
-> **Prova tu — Leggi una matrice di confusione**
+> **Prova tu, Leggi una matrice di confusione**
 >
 > Un modello per individuare email di spam è stato testato su 200 email, di cui 20 erano davvero spam e 180 erano legittime. Ecco i risultati:
 >
@@ -85,4 +85,4 @@ La lezione più importante di questo capitolo non è memorizzare le definizioni 
 
 ---
 
-*Continua con la [Lezione 07 — Trovare gruppi senza etichette]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-07-trovare-gruppi-senza-etichette.md %}.html)*
+*Continua con la [Lezione 07, Trovare gruppi senza etichette]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-07-trovare-gruppi-senza-etichette.md %}.html)*
