@@ -1,0 +1,18 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l13a-title l13a-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="l13a-title">Un gruppo fitto di punti simili, con un punto isolato e diverso a distanza</title>
+  <desc id="l13a-desc">Molti punti blu ravvicinati a sinistra, e un singolo punto arancione isolato a destra, cerchiato per evidenziarlo come anomalia.</desc>
+
+  <rect x="20" y="20" width="440" height="220" rx="10" fill="#fdfdfd" stroke="#e3e3e3" stroke-width="1.5" />
+
+  <g fill="#2a7ae2">
+    <circle cx="100" cy="120" r="6" /><circle cx="120" cy="100" r="6" /><circle cx="90" cy="90" r="6" /><circle cx="130" cy="140" r="6" />
+    <circle cx="110" cy="150" r="6" /><circle cx="140" cy="110" r="6" /><circle cx="80" cy="130" r="6" /><circle cx="150" cy="90" r="6" />
+    <circle cx="100" cy="160" r="6" /><circle cx="70" cy="105" r="6" />
+  </g>
+
+  <circle cx="380" cy="160" r="14" fill="none" stroke="#c85506" stroke-width="2" stroke-dasharray="4 3" />
+  <circle cx="380" cy="160" r="6" fill="#f66a0a" />
+
+  <text x="115" y="200" fill="#828282" font-size="11" text-anchor="middle">molti dati simili fra loro</text>
+  <text x="380" y="200" fill="#c85506" font-size="11" text-anchor="middle" font-weight="bold">il dato che non torna</text>
+</svg>

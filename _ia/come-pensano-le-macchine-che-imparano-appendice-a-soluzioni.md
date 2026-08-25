@@ -81,6 +81,12 @@ Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esist
 2. Confidenza = scontrini con entrambi (5) diviso scontrini con pane (7) = 5/7, circa **71%**.
 3. Il latte da solo compare già nel 70% di tutti gli scontrini (7 su 10), con o senza pane. La confidenza della regola (71%) è appena superiore a questa frequenza di base (70%): il pane sposta la probabilità di comprare anche latte solo di un punto percentuale, quasi nulla. La regola "pane implica latte" non dice quasi niente di nuovo: entrambi i prodotti sono semplicemente molto comuni per conto proprio, ed è questo, più che una vera relazione fra i due, a spiegare l'alta confidenza.
 
+### Soluzione, Lezione 13: trova il dato che non torna
+
+1. I valori 18, 19, 20, 21, 22 hanno tutti un vicino a distanza 1 o 2 da loro, formano un gruppo fitto. Il valore 95 ha invece il vicino più prossimo (22) a ben 73 di distanza: è chiaramente il dato isolato, il candidato anomalia.
+2. Con un taglio a 50, il valore 95 resta subito isolato da solo in un gruppo (**1 taglio** basta). Per isolare il valore 19, sepolto fra 18, 20, 21 e 22, servono invece diversi tagli successivi, per esempio uno fra 18 e 19, poi uno fra 19 e 20, prima di restare con 19 da solo: **più di un taglio**, perché è circondato da vicini quasi indistinguibili da lui.
+3. Non serve sapere in anticipo quali transazioni siano fraudolente perché il ragionamento si basa solo su quanto un punto è "isolabile" rispetto alla struttura dei dati stessi, non su un confronto con esempi di frode già etichettati in passato. È un vantaggio enorme nella pratica, perché le frodi vere sono rare, spesso inedite nel loro meccanismo, e un modello che dovesse imparare solo dagli esempi di frode già visti rischierebbe di non riconoscere mai un tipo di frode nuovo, mai capitato prima.
+
 ---
 
 *Continua con l'[Appendice B, Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)*

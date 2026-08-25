@@ -51,6 +51,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Insieme di validazione**, un insieme di esempi, distinto sia dal training sia dal test, usato per confrontare più modelli o più impostazioni durante lo sviluppo, senza consumare l'insieme di test. Lezione 5.
 
+**Isolation Forest**, un algoritmo di rilevamento di anomalie che stima quanto un punto è anomalo in base a quanti tagli casuali servono, in media, per isolarlo da tutti gli altri: pochi tagli indicano un'anomalia. Lezione 13.
+
 **Kernel trick**, la tecnica usata da SVM per separare categorie non divisibili con una linea dritta, proiettando i punti in uno spazio con più dimensioni dove il confine torna dritto. Lezione 10.
 
 **k (in k-NN)**, il numero di vicini più prossimi consultati per fare una previsione: piccolo lo rende sensibile a singoli esempi anomali, grande lo rende insensibile alla posizione specifica del punto nuovo. Lezione 2.
@@ -92,6 +94,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 **Regressione lineare**, un modello di regressione che prevede un numero come combinazione pesata delle caratteristiche in ingresso, rappresentabile come una retta (o un piano, con più caratteristiche) tracciata per adattarsi il più possibile ai dati noti. Lezione 4.
 
 **Richiamo (recall)**, fra tutti gli esempi realmente positivi, la frazione che il modello è riuscito a individuare. Lezione 6.
+
+**Rilevamento di anomalie**, il compito di riconoscere esempi che si discostano molto dal comportamento normale, tipicamente senza avere molti esempi etichettati della categoria anomala su cui allenarsi. Lezione 13.
 
 **Spazio delle caratteristiche**, la mappa immaginaria in cui ogni esempio diventa un punto, e ogni caratteristica diventa una coordinata; la base geometrica su cui si misura la distanza fra esempi. Lezione 2.
 
