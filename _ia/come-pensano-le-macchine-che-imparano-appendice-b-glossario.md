@@ -59,6 +59,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Modello**, la regola, trovata automaticamente da un algoritmo di apprendimento a partire dagli esempi, usata poi per fare previsioni su casi nuovi. Lezione 1.
 
+**Naive Bayes**, un algoritmo di classificazione che combina molti indizi deboli, ciascuno trattato come indipendente dagli altri (l'assunzione "naive"), sommandone il contributo per decidere quale categoria è più probabile. Lezione 9.
+
 **Nodo radice**, il primo nodo, in cima a un albero decisionale, che pone la prima domanda a ogni esempio. Lezione 3.
 
 **Overfitting**, quando un modello smette di imparare la regola generale e comincia a memorizzare le particolarità specifiche degli esempi di addestramento, riconoscibile da un errore di test molto più alto di quello di addestramento. Lezione 5.

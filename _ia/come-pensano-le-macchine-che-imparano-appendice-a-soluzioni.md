@@ -57,6 +57,12 @@ Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esist
 2. L'Albero 3, da solo, risponde: no (X, sbagliato), no (Y, corretto), sì (Z, corretto) → **2 su 3** corrette. L'Albero 2, da solo, risponde: sì (X, corretto), sì (Y, sbagliato), no (Z, sbagliato) → **1 su 3** corrette, il peggiore fra i cinque.
 3. Il voto di maggioranza ottiene 3 corrette su 3 (100%), mentre il singolo albero meno accurato (l'Albero 2) ne indovina solo 1 su 3 (33%). Anche se ogni singolo albero, preso da solo, commette diversi errori, gli errori dei cinque alberi cadono su angurie diverse: dove l'Albero 2 sbaglia (Y e Z), gli altri quattro alberi in maggioranza hanno ragione, e viceversa. È esattamente il principio del concorso del bue di Galton della Sezione 8.1: combinare più opinioni imperfette, ma che sbagliano in modo diverso, produce un risultato più affidabile di qualunque opinione singola.
 
+### Soluzione, Lezione 9: classifica tre email nuove
+
+1. "gratis" (70% spam contro 5% normali) pende fortemente verso lo spam; "click" (60% contro 8%) pende anch'esso verso lo spam, con un divario un po' meno estremo ma comunque netto. Entrambi gli indizi presenti puntano nella stessa direzione: l'email va classificata come **spam**.
+2. Con solo "fattura" presente (10% spam contro 40% normali), l'unico indizio disponibile pende verso il non spam: l'email va classificata come **non spam**.
+3. Il divario di "gratis" è 70−5 = 65 punti percentuali; il divario di "fattura" è 40−10 = 30 punti percentuali. "Gratis" ha un divario più che doppio rispetto a "fattura", quindi è l'indizio più forte fra i due, e tipicamente basta a far pendere la classificazione complessiva verso lo **spam**, nonostante la presenza di "fattura" che, da sola, spingerebbe nella direzione opposta.
+
 ---
 
 *Continua con l'[Appendice B, Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)*

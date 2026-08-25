@@ -63,6 +63,7 @@ Una guida curiosa al machine learning, senza formule.
 * [Lezione 06 — Quanto è bravo, davvero?]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-06-quanto-e-bravo-davvero.md %}.html)
 * [Lezione 07 — Trovare gruppi senza etichette]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-07-trovare-gruppi-senza-etichette.md %}.html)
 * [Lezione 08 — Tante opinioni valgono più di una]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-08-tante-opinioni-valgono-piu-di-una.md %}.html)
+* [Lezione 09 — La somma degli indizi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-09-la-somma-degli-indizi.md %}.html)
 * [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-a-soluzioni.md %}.html)
 * [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)
 
