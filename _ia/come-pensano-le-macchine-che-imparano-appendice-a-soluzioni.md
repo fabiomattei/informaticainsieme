@@ -75,6 +75,12 @@ Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esist
 2. Tutti e cinque i punti giacciono quasi esattamente sulla linea diagonale, quindi la loro distanza dalla diagonale (la coordinata lungo la direzione perpendicolare) è quasi zero per ognuno di essi: proiettandoli su quella direzione, finirebbero tutti ammassati quasi nello stesso punto, indistinguibili l'uno dall'altro.
 3. Con punti sparsi senza una direzione preferita, come (2,5), (5,2), (4,6), (6,4), (3,3), non esiste una singola direzione che conservi la maggior parte della variazione: comprimerli in una sola dimensione farebbe perdere una quantità di informazione molto maggiore rispetto al caso dei punti allineati, perché la loro "diffusione" è distribuita più o meno ugualmente in tutte le direzioni, non concentrata in una sola.
 
+### Soluzione, Lezione 12: leggi dieci scontrini
+
+1. Il pane compare negli scontrini 1, 2, 3, 5, 6, 8, 10, cioè **7 su 10**. Il latte compare negli scontrini 1, 3, 4, 5, 6, 8, 9, cioè anch'esso **7 su 10**. Entrambi insieme compaiono negli scontrini 1, 3, 5, 6, 8, cioè **5 su 10**: il supporto della combinazione "pane e latte" è quindi **50%**.
+2. Confidenza = scontrini con entrambi (5) diviso scontrini con pane (7) = 5/7, circa **71%**.
+3. Il latte da solo compare già nel 70% di tutti gli scontrini (7 su 10), con o senza pane. La confidenza della regola (71%) è appena superiore a questa frequenza di base (70%): il pane sposta la probabilità di comprare anche latte solo di un punto percentuale, quasi nulla. La regola "pane implica latte" non dice quasi niente di nuovo: entrambi i prodotti sono semplicemente molto comuni per conto proprio, ed è questo, più che una vera relazione fra i due, a spiegare l'alta confidenza.
+
 ---
 
 *Continua con l'[Appendice B, Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)*

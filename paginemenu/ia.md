@@ -66,6 +66,7 @@ Una guida curiosa al machine learning, senza formule.
 * [Lezione 09 — La somma degli indizi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-09-la-somma-degli-indizi.md %}.html)
 * [Lezione 10 — La strada più larga]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-10-la-strada-piu-larga.md %}.html)
 * [Lezione 11 — Trovare l'ombra giusta]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-11-trovare-lombra-giusta.md %}.html)
+* [Lezione 12 — Cosa finisce insieme nel carrello]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-12-cosa-finisce-insieme-nel-carrello.md %}.html)
 * [Appendice A — Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-a-soluzioni.md %}.html)
 * [Appendice B — Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)
 

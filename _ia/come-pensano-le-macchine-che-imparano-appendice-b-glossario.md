@@ -31,6 +31,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Componente principale**, una delle direzioni trovate dalla PCA, ordinate da quella con più variazione dei dati a quella con meno; è una combinazione delle caratteristiche originali, non una caratteristica presa da sola. Lezione 11.
 
+**Confidenza**, in una regola di associazione, la frazione di transazioni contenenti il primo elemento che contiene anche il secondo. Lezione 12.
+
 **Distanza**, una misura di quanto due esempi, rappresentati come punti nello spazio delle caratteristiche, sono diversi fra loro; più due punti sono vicini, più gli esempi si somigliano. Lezione 2.
 
 **Etichetta (label)**, la risposta giusta che un modello supervisionato deve imparare a prevedere, nota per ogni esempio di addestramento ma non per gli esempi nuovi. Lezione 1.
@@ -59,6 +61,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **k-NN (k-Nearest Neighbors)**, un algoritmo di classificazione che prevede l'etichetta di un punto nuovo guardando le etichette dei suoi k vicini più prossimi nello spazio delle caratteristiche, e votando a maggioranza. Lezione 2.
 
+**Lift**, in una regola di associazione, il rapporto fra la confidenza della regola e la frequenza generale del secondo elemento da solo; vicino a 1 indica una regola poco informativa, molto maggiore di 1 indica una relazione reale. Lezione 12.
+
 **Machine learning (apprendimento automatico)**, l'insieme di tecniche che permettono a un algoritmo di trovare da solo una regola a partire da esempi, invece di riceverla scritta a mano da un programmatore. Lezione 1.
 
 **Margine**, la larghezza dello spazio libero, senza esempi noti dentro, che separa il confine trovato da SVM dai punti più vicini di ciascuna categoria; SVM cerca il confine con il margine più ampio possibile. Lezione 10.
@@ -81,6 +85,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Random forest**, una raccolta di alberi decisionali allenati con bagging, a cui si aggiunge una seconda casualità: a ogni nodo, ogni albero considera solo un sottoinsieme casuale delle caratteristiche disponibili. Lezione 8.
 
+**Regole di associazione**, tecniche che scoprono combinazioni di elementi che tendono a comparire insieme più spesso del previsto, come nell'analisi del carrello della spesa. Lezione 12.
+
 **Regressione**, il compito di prevedere un numero (un prezzo, una temperatura), non una categoria. Lezione 1, Lezione 4.
 
 **Regressione lineare**, un modello di regressione che prevede un numero come combinazione pesata delle caratteristiche in ingresso, rappresentabile come una retta (o un piano, con più caratteristiche) tracciata per adattarsi il più possibile ai dati noti. Lezione 4.
@@ -90,6 +96,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 **Spazio delle caratteristiche**, la mappa immaginaria in cui ogni esempio diventa un punto, e ogni caratteristica diventa una coordinata; la base geometrica su cui si misura la distanza fra esempi. Lezione 2.
 
 **Support Vector Machine (SVM)**, un algoritmo di classificazione che traccia il confine con il margine più ampio possibile fra due categorie, usando eventualmente il kernel trick per confini non dritti. Lezione 10.
+
+**Supporto**, in una regola di associazione, la frazione di transazioni che contiene una data combinazione di elementi. Lezione 12.
 
 **Underfitting**, quando un modello è troppo semplice per catturare nemmeno i pattern presenti negli esempi di addestramento, riconoscibile da un errore alto sia in addestramento sia in test. Lezione 5.
 
