@@ -7,6 +7,18 @@ layout: page
 
 ![Regole scritte a mano contro un mucchio di esempi che, passati per un algoritmo, producono un modello](/images/ia/come-pensano-le-macchine-che-imparano-lezione-01-imparare-dagli-esempi-non-dalle-regole/come-pensano-le-macchine-che-imparano-lezione-01-imparare-dagli-esempi-non-dalle-regole.svg){:class="aside-image"}
 
+## Dall'informatica deterministica all'informatica non deterministica
+
+Fino ad oggi abbiamo conosciuto una informatica fondata su algoritmi. Questi rappresentano un insieme
+di istruzioni che la macchina deve seguire pedissequamente per arrivare al risultato voluto. 
+Abbiamo parlato di programmazione imperativa perché il programmatore dava **ordini** attraverso
+il linguaggio di programmazione che la macchina avrebbe dovuto eseguire. 
+
+L'approccio che adiamo a vedere ora è diverso. In questo caso le macchine **imparano** le regole
+direttamente dai dati. In questo modo non c'è bisogno di scrivere un algoritmo per risolvere
+un problema, si danno alla macchina dei dati e si lascia che questa estragga dai dati una regola
+che può essere più o meno generale. Questo è il dominio dell'informatica non deterministica.
+
 ### 1.1 L'apprendista del fruttivendolo
 
 Immagina di fare l'apprendista da un fruttivendolo che ti deve insegnare a riconoscere un'anguria matura. Potrebbe provare a dettarti una regola precisa: "se, bussando con le nocche, il suono è cupo e profondo, e se il puntino giallo sulla scorza è bello acceso, allora è matura". Il problema è che una regola così, messa per iscritto, è più difficile da formulare bene di quanto sembri: quanto deve essere "cupo" il suono? Quanto "acceso" il giallo? E se il suono è cupo ma il puntino è pallido?
