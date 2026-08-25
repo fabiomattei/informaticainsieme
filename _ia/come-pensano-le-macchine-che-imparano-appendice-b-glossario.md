@@ -13,6 +13,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Albero decisionale**, un modello che classifica un esempio ponendo una sequenza di domande sì/no, una alla volta, scelte automaticamente per separare al meglio gli esempi noti. Lezione 3.
 
+**Analisi delle componenti principali (PCA)**, una tecnica che trova le direzioni lungo cui i dati variano di più, permettendo di rappresentarli con meno caratteristiche mantenendo la maggior parte dell'informazione originale. Lezione 11.
+
 **Apprendimento non supervisionato**, la famiglia di problemi in cui gli esempi non hanno un'etichetta nota, e il compito è trovare una struttura nascosta nei dati, come i gruppi trovati dal clustering. Lezione 1, Lezione 7.
 
 **Apprendimento supervisionato**, la famiglia di problemi in cui ogni esempio di addestramento ha già una risposta giusta nota, usata per insegnare al modello a prevederla anche su casi nuovi. Lezione 1.
@@ -26,6 +28,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 **Classificazione**, il compito di prevedere un'etichetta a categorie (matura o non matura, spam o non spam), non un numero. Lezione 1.
 
 **Clustering**, il compito di raggruppare esempi simili fra loro senza etichette di riferimento. Lezione 7.
+
+**Componente principale**, una delle direzioni trovate dalla PCA, ordinate da quella con più variazione dei dati a quella con meno; è una combinazione delle caratteristiche originali, non una caratteristica presa da sola. Lezione 11.
 
 **Distanza**, una misura di quanto due esempi, rappresentati come punti nello spazio delle caratteristiche, sono diversi fra loro; più due punti sono vicini, più gli esempi si somigliano. Lezione 2.
 

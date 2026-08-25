@@ -1,0 +1,23 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="l11a-title l11a-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title id="l11a-title">Lo stesso oggetto proietta un'ombra chiara da un lato, e informe dall'altro</title>
+  <desc id="l11a-desc">Due pannelli affiancati: a sinistra un oggetto illuminato proietta un'ombra lunga e riconoscibile; a destra lo stesso oggetto, illuminato da un altro lato, proietta un'ombra tonda e poco informativa.</desc>
+
+  <text x="110" y="24" fill="#3aa655" font-size="12" text-anchor="middle" font-weight="bold">ombra informativa</text>
+  <ellipse cx="150" cy="60" rx="34" ry="18" fill="none" stroke="#2a7ae2" stroke-width="2" transform="rotate(-25 150 60)" />
+  <path d="M 40,40 L 116,52" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 40,60 L 120,58" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 40,80 L 118,66" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <circle cx="30" cy="60" r="8" fill="#f66a0a" />
+  <ellipse cx="150" cy="200" rx="70" ry="14" fill="#828282" opacity="0.5" />
+
+  <text x="370" y="24" fill="#c85506" font-size="12" text-anchor="middle" font-weight="bold">ombra povera</text>
+  <ellipse cx="370" cy="60" rx="34" ry="18" fill="none" stroke="#2a7ae2" stroke-width="2" />
+  <path d="M 370,10 L 370,42" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 350,14 L 358,44" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <path d="M 390,14 L 382,44" stroke="#828282" stroke-width="1" stroke-dasharray="3 3" />
+  <circle cx="370" cy="10" r="8" fill="#f66a0a" />
+  <ellipse cx="370" cy="200" rx="20" ry="18" fill="#828282" opacity="0.5" />
+
+  <text x="150" y="234" fill="#828282" font-size="11" text-anchor="middle">si distingue ancora la forma</text>
+  <text x="370" y="234" fill="#828282" font-size="11" text-anchor="middle">quasi solo un punto</text>
+</svg>

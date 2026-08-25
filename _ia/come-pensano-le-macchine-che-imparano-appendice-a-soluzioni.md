@@ -69,6 +69,12 @@ Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esist
 2. Il confine a uguale distanza da entrambi i lati sta esattamente a metà fra 4 e 9, cioè alla posizione **6,5**.
 3. Il nuovo negozio economico in posizione 7 è più vicino al gruppo "cari" di quanto lo fosse il precedente punto più a destra (4): ora il punto più a destra fra gli economici è 7, non più 4. Il nuovo margine va da 7 a 9, largo solo **2**, molto più stretto di prima. I nuovi vettori di supporto sono **7** ed **9**: i punti 1, 2, 4 e 11, tutti più lontani dal confine, non influenzano più in alcun modo la strada tracciata.
 
+### Soluzione, Lezione 11: la direzione giusta
+
+1. La direzione diagonale, quella lungo cui i punti vanno da (1,1) a (5,5), conserva quasi tutta l'informazione: i cinque punti restano ben distanziati fra loro anche proiettati su quella singola direzione.
+2. Tutti e cinque i punti giacciono quasi esattamente sulla linea diagonale, quindi la loro distanza dalla diagonale (la coordinata lungo la direzione perpendicolare) è quasi zero per ognuno di essi: proiettandoli su quella direzione, finirebbero tutti ammassati quasi nello stesso punto, indistinguibili l'uno dall'altro.
+3. Con punti sparsi senza una direzione preferita, come (2,5), (5,2), (4,6), (6,4), (3,3), non esiste una singola direzione che conservi la maggior parte della variazione: comprimerli in una sola dimensione farebbe perdere una quantità di informazione molto maggiore rispetto al caso dei punti allineati, perché la loro "diffusione" è distribuita più o meno ugualmente in tutte le direzioni, non concentrata in una sola.
+
 ---
 
 *Continua con l'[Appendice B, Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)*
