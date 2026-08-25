@@ -63,6 +63,12 @@ Le soluzioni qui sotto sono organizzate per lezione. Per alcuni giochi non esist
 2. Con solo "fattura" presente (10% spam contro 40% normali), l'unico indizio disponibile pende verso il non spam: l'email va classificata come **non spam**.
 3. Il divario di "gratis" è 70−5 = 65 punti percentuali; il divario di "fattura" è 40−10 = 30 punti percentuali. "Gratis" ha un divario più che doppio rispetto a "fattura", quindi è l'indizio più forte fra i due, e tipicamente basta a far pendere la classificazione complessiva verso lo **spam**, nonostante la presenza di "fattura" che, da sola, spingerebbe nella direzione opposta.
 
+### Soluzione, Lezione 10: traccia la strada più larga
+
+1. Il punto più a destra fra gli "economici" è 4; il punto più a sinistra fra i "cari" è 9. Lo spazio libero fra i due gruppi va quindi da 4 a 9, largo **5**.
+2. Il confine a uguale distanza da entrambi i lati sta esattamente a metà fra 4 e 9, cioè alla posizione **6,5**.
+3. Il nuovo negozio economico in posizione 7 è più vicino al gruppo "cari" di quanto lo fosse il precedente punto più a destra (4): ora il punto più a destra fra gli economici è 7, non più 4. Il nuovo margine va da 7 a 9, largo solo **2**, molto più stretto di prima. I nuovi vettori di supporto sono **7** ed **9**: i punti 1, 2, 4 e 11, tutti più lontani dal confine, non influenzano più in alcun modo la strada tracciata.
+
 ---
 
 *Continua con l'[Appendice B, Glossario]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-b-glossario.md %}.html)*

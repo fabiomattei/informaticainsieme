@@ -45,6 +45,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Insieme di validazione**, un insieme di esempi, distinto sia dal training sia dal test, usato per confrontare più modelli o più impostazioni durante lo sviluppo, senza consumare l'insieme di test. Lezione 5.
 
+**Kernel trick**, la tecnica usata da SVM per separare categorie non divisibili con una linea dritta, proiettando i punti in uno spazio con più dimensioni dove il confine torna dritto. Lezione 10.
+
 **k (in k-NN)**, il numero di vicini più prossimi consultati per fare una previsione: piccolo lo rende sensibile a singoli esempi anomali, grande lo rende insensibile alla posizione specifica del punto nuovo. Lezione 2.
 
 **k (in k-means)**, il numero di gruppi che l'algoritmo di clustering deve cercare, scelto in anticipo da chi usa l'algoritmo. Lezione 7.
@@ -54,6 +56,8 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 **k-NN (k-Nearest Neighbors)**, un algoritmo di classificazione che prevede l'etichetta di un punto nuovo guardando le etichette dei suoi k vicini più prossimi nello spazio delle caratteristiche, e votando a maggioranza. Lezione 2.
 
 **Machine learning (apprendimento automatico)**, l'insieme di tecniche che permettono a un algoritmo di trovare da solo una regola a partire da esempi, invece di riceverla scritta a mano da un programmatore. Lezione 1.
+
+**Margine**, la larghezza dello spazio libero, senza esempi noti dentro, che separa il confine trovato da SVM dai punti più vicini di ciascuna categoria; SVM cerca il confine con il margine più ampio possibile. Lezione 10.
 
 **Matrice di confusione**, una tabella che incrocia le previsioni di un modello con la realtà, distinguendo veri positivi, falsi positivi, veri negativi e falsi negativi. Lezione 6.
 
@@ -81,8 +85,12 @@ Termini in ordine alfabetico, con un rimando alla lezione dove sono spiegati per
 
 **Spazio delle caratteristiche**, la mappa immaginaria in cui ogni esempio diventa un punto, e ogni caratteristica diventa una coordinata; la base geometrica su cui si misura la distanza fra esempi. Lezione 2.
 
+**Support Vector Machine (SVM)**, un algoritmo di classificazione che traccia il confine con il margine più ampio possibile fra due categorie, usando eventualmente il kernel trick per confini non dritti. Lezione 10.
+
 **Underfitting**, quando un modello è troppo semplice per catturare nemmeno i pattern presenti negli esempi di addestramento, riconoscibile da un errore alto sia in addestramento sia in test. Lezione 5.
 
 **Vero negativo**, un esempio realmente negativo, previsto correttamente come negativo dal modello. Lezione 6.
 
 **Vero positivo**, un esempio realmente positivo, previsto correttamente come positivo dal modello. Lezione 6.
+
+**Vettore di supporto**, uno degli esempi più vicini al confine trovato da SVM, l'unico tipo di esempio che ne determina posizione e larghezza del margine. Lezione 10.
