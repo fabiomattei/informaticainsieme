@@ -75,4 +75,14 @@ Proprio per questo, PCA è uno strumento da usare con criterio, non un passaggio
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue l'analogia dell'ombra della chiave inglese, e come si collega all'idea di trovare la direzione che conserva più informazione possibile.
+2. Elenca un problema reale, diverso da quelli citati nel testo, in cui potresti avere decine o centinaia di caratteristiche, e spiega perché visualizzare quei dati su un grafico sarebbe altrimenti impossibile.
+3. Spiega perché le componenti principali, una volta trovate, non sono più direttamente interpretabili come "il peso" o "il prezzo", ma diventano combinazioni di più caratteristiche originali.
+4. Descrivi un caso in cui applicare PCA potrebbe peggiorare le prestazioni di un modello invece di migliorarle, collegandolo a quanto detto nella Sezione 11.5.
+5. Immagina cinque caratteristiche molto correlate fra loro, per esempio altezza in centimetri, altezza in pollici, lunghezza del passo, lunghezza del braccio e taglia delle scarpe di un gruppo di persone. Spiega perché queste cinque caratteristiche potrebbero probabilmente essere compresse in una sola componente principale senza perdere quasi nessuna informazione.
+
+---
+
 *Continua con la [Lezione 12, Cosa finisce insieme nel carrello]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-12-cosa-finisce-insieme-nel-carrello.md %}.html)*

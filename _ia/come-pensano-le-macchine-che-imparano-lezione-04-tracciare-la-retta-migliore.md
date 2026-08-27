@@ -88,4 +88,14 @@ Il nostro esempio ha usato una sola caratteristica, l'età, ma quasi nessun prob
 
 ---
 
+## Esercizi
+
+1. Pensa a un problema di regressione diverso da quello delle biciclette (per esempio, prevedere il tempo di consegna di un pacco, il consumo di benzina di un'auto, il voto di un tema in base al numero di pagine scritte). Descrivi quale caratteristica useresti e che forma ti aspetteresti abbia la relazione, crescente o decrescente.
+2. Spiega perché sommare gli errori al quadrato, invece di sommarli così come sono, penalizza di più le rette che sbagliano molto su pochi punti piuttosto che quelle che sbagliano un po' su tutti.
+3. Descrivi, anche solo a parole, una nuvola di cinque punti e due rette candidate diverse: una che passa vicino a tutti i punti, una che si allontana molto da uno di essi. Quale delle due avrebbe una funzione di perdita più bassa?
+4. Nella Sezione 4.5 si parla di regressione lineare multipla, che usa più caratteristiche insieme. Elenca almeno tre caratteristiche che potresti usare, oltre all'età, per prevedere il prezzo di una bicicletta usata, e spiega brevemente perché ciascuna potrebbe essere utile.
+5. Un amico ti mostra una retta di regressione che passa esattamente su ogni singolo punto del suo insieme di addestramento, con errore totale pari a zero. Dovresti essere impressionato o preoccupato? Prova a motivare la tua risposta, anche solo intuitivamente (la Lezione 5 approfondirà questo punto).
+
+---
+
 *Continua con la [Lezione 05, Memorizzare non è capire]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-05-memorizzare-non-e-capire.md %}.html)*

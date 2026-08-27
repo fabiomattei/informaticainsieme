@@ -77,4 +77,14 @@ Il limite principale di questa famiglia di tecniche è che una regola trovata, p
 
 ---
 
+## Esercizi
+
+1. Pensa a due prodotti, o due elementi qualsiasi, per esempio due app che usi spesso insieme, che secondo te avrebbero un supporto alto se qualcuno analizzasse i tuoi acquisti o le tue abitudini. Spiega perché.
+2. Un negozio scopre che la regola "chi compra il caffè, compra anche i filtri di carta" ha una confidenza del 90%. Spiega quale altro numero dovresti conoscere prima di dire che questa regola è davvero interessante, e perché.
+3. Spiega, con parole tue, cosa significa un lift vicino a 1, un lift molto maggiore di 1, e un lift minore di 1, usando un esempio a tua scelta per ciascun caso.
+4. Perché una regola di associazione, per quanto statisticamente solida, non spiega necessariamente *perché* due prodotti compaiono spesso insieme? Fai un esempio in cui la vera spiegazione potrebbe essere diversa da quella più ovvia.
+5. Immagina di gestire un negozio online: descrivi come useresti le regole di associazione per decidere quali prodotti "consigliati" mostrare a un cliente che ha appena messo nel carrello un paio di scarpe da corsa.
+
+---
+
 *Continua con la [Lezione 13, Il dato che non torna]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-13-il-dato-che-non-torna.md %}.html)*

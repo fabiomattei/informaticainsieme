@@ -195,4 +195,14 @@ Un'ultima osservazione utile riguarda un trucco molto semplice quanto efficace: 
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue cosa significa "contaminazione del test" per un benchmark di un LLM, usando l'analogia dell'interrogazione con le domande già viste.
+2. Descrivi la differenza fra usare un secondo LLM come giudice e usare un'arena con persone vere per confrontare due chatbot. Quale dei due limiti principali, la velocità contro i pregiudizi ereditati, ti sembra più preoccupante, e perché?
+3. Spiega, con parole tue, perché alcune "capacità emergenti" potrebbero essere un'illusione dovuta al modo in cui vengono misurate, piuttosto che un vero salto improvviso nel comportamento del modello.
+4. Descrivi cosa significa la tecnica della "catena di pensiero" (chain-of-thought), e perché chiedere al modello di ragionare passo passo spesso migliora l'accuratezza su problemi complessi.
+5. Pensa a una domanda che ritieni "genuina" (poco probabile che un modello l'abbia già vista identica durante l'addestramento) e a una che ritieni "sospetta" (probabilmente già vista). Scrivile entrambe e spiega il tuo ragionamento.
+
+---
+
 *Continua con la [Lezione 08, Perché a volte sbaglia]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-08-perche-a-volte-sbaglia.md %}.html)*

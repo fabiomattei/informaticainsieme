@@ -72,4 +72,14 @@ C'è però un limite condiviso da tutti questi algoritmi, che vale la pena rende
 
 ---
 
+## Esercizi
+
+1. Spiega perché il rilevamento di anomalie è un problema diverso dalla classificazione supervisionata vista nelle lezioni precedenti, e quale ostacolo pratico rende difficile applicare direttamente gli stessi strumenti.
+2. Pensa a un contesto reale, diverso da frodi bancarie, guasti industriali o sicurezza informatica, in cui riconoscere "il dato che non torna" potrebbe essere utile. Descrivi brevemente cosa considereresti "normale" in quel contesto.
+3. Spiega, con parole tue, l'idea di Isolation Forest: perché un punto anomalo richiede in media pochi tagli casuali per essere isolato, mentre un punto in mezzo a un gruppo fitto ne richiede molti di più?
+4. Confronta l'approccio basato sulla distanza (Sezione 13.3) con quello di Isolation Forest (Sezione 13.4): in che modo sono simili nell'idea di fondo, e in cosa differiscono nel modo di misurare quanto un punto è anomalo?
+5. La Sezione 13.6 chiude il libro spiegando che tutti gli algoritmi visti lavorano su caratteristiche già scelte da un essere umano. Spiega con parole tue questo limite, e fai un esempio di un tipo di dato, oltre a immagini e testo, per cui sarebbe difficile stabilire a mano "le caratteristiche giuste".
+
+---
+
 *Continua con l'[Appendice A, Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-appendice-a-soluzioni.md %}.html)*

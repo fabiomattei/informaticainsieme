@@ -110,4 +110,14 @@ Questo limite non è un difetto da correggere: è la natura stessa dello strumen
 
 ---
 
+## Esercizi
+
+1. Pensa a un compito che sai fare bene ma che faresti fatica a spiegare con una regola scritta (riconoscere una faccia familiare, capire se un frutto è maturo dall'odore, capire se qualcuno è di cattivo umore). Descrivi il compito e spiega perché sarebbe difficile scrivere la regola esplicita.
+2. Per il problema "prevedere se un'email è spam", elenca almeno tre caratteristiche (feature) che useresti, e spiega perché ciascuna potrebbe essere un indizio utile.
+3. Classifica ciascuno dei seguenti problemi come classificazione, regressione, o apprendimento non supervisionato: (a) prevedere il voto di un esame; (b) capire se una recensione è positiva o negativa; (c) raggruppare i clienti di un negozio in base alle loro abitudini d'acquisto, senza sapere in anticipo quanti gruppi esistono.
+4. Un amico ti dice: "Il mio modello ha capito benissimo cos'è un gatto, sa proprio riconoscerlo." Alla luce di quanto letto nella Sezione 1.5, cosa risponderesti per correggere, con gentilezza, questa affermazione?
+5. Immagina di dover costruire un insieme di addestramento per insegnare a un modello a distinguere una pizza margherita da una quattro stagioni. Descrivi che aspetto avrebbe un esempio completo (caratteristiche più etichetta), e spiega perché un insieme piccolo e poco vario, per esempio foto scattate sempre nella stessa pizzeria, potrebbe essere un problema.
+
+---
+
 *Continua con la [Lezione 02, Il vicino più simile]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-02-il-vicino-piu-simile.md %}.html)*

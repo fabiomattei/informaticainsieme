@@ -145,4 +145,14 @@ Più piani e più controllori per piano significano più impostazioni regolabili
 
 ---
 
+## Esercizi
+
+1. Segui l'esempio della Sezione 2.2 e verifica a mano, per una combinazione di X e Y a tua scelta diversa da quelle già risolte nel "Prova tu", che il controllore A (OR), B (NAND) e finale (AND) diano il risultato atteso.
+2. Spiega, con parole tue, perché uno "strato nascosto" si chiama così, e cosa lo differenzia dall'input e dall'output di una rete.
+3. Descrivi la differenza fra rendere una rete più "profonda" (più piani) e più "larga" (più controllori per piano), e perché aggiungere piani è spesso più efficiente.
+4. Spiega perché una rete con troppa capacità rispetto al problema rischia di memorizzare invece di generalizzare, collegando la tua risposta al confine che "si contorce" della Sezione 2.6.
+5. Immagina un problema di classificazione diverso dall'XOR che pensi richieda più di una linea retta per essere risolto. Descrivilo e spiega perché una singola linea non basterebbe.
+
+---
+
 *Continua con la [Lezione 03, Uno stencil che scorre sull'immagine]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-03-uno-stencil-che-scorre-sullimmagine.md %}.html)*

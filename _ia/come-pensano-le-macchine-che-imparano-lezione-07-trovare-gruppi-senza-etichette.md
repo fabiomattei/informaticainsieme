@@ -81,4 +81,14 @@ Proprio perché non esistono etichette di riferimento, valutare "quanto è bravo
 
 ---
 
+## Esercizi
+
+1. Pensa a un insieme di oggetti che potresti raggruppare senza etichette pre-esistenti, per esempio le canzoni della tua libreria musicale, i libri di uno scaffale, gli amici di una chat di gruppo. Descrivi quali caratteristiche useresti per confrontarli.
+2. Descrivi, passo per passo con parole tue, cosa succede in un ciclo dell'algoritmo k-means, usando l'esempio di tre centri scelti a caso su un gruppo di punti.
+3. Spiega perché scegliere k pari al numero totale di punti disponibili renderebbe la compattezza perfetta, ma il risultato sarebbe comunque inutile.
+4. Nella Sezione 7.4 si parla del "metodo del gomito" per scegliere k. Spiega con parole tue cosa significa che il miglioramento della compattezza "rallenta bruscamente" dopo un certo valore di k.
+5. A differenza della classificazione della Lezione 6, valutare un risultato di clustering è più soggettivo. Descrivi un caso in cui due persone diverse potrebbero ragionevolmente preferire due valori diversi di k per lo stesso insieme di dati, senza che nessuna delle due abbia necessariamente torto.
+
+---
+
 *Continua con la [Lezione 08, Tante opinioni valgono più di una]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-08-tante-opinioni-valgono-piu-di-una.md %}.html)*

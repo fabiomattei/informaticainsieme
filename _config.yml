@@ -115,6 +115,9 @@ collections:
   arduino:
     output: true
     permalink: /arduino/:path
+  raspberrypi:
+    output: true
+    permalink: /raspberrypi/:path
   ruby:
     output: true
     permalink: /ruby/:path

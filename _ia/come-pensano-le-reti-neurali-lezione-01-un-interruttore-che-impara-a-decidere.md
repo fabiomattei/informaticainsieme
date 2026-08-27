@@ -176,4 +176,14 @@ Quanto complicati, esattamente? Un risultato matematico sorprendente, che qui ci
 
 ---
 
+## Esercizi
+
+1. Costruisci il tuo interruttore-ombrello con due indizi a tua scelta diversi da cielo e umidità, per esempio "quanto sei stanco" e "quanto è tardi" per decidere se andare a dormire, assegna un peso a ciascuno e una soglia, e verifica cosa deciderebbe in un caso concreto che inventi.
+2. Spiega, con parole tue, la regola di correzione del percettrone: cosa fa quando sbaglia dicendo "no" invece di "sì", e cosa fa quando sbaglia nella direzione opposta.
+3. Descrivi il problema XOR con quattro palline agli angoli di un quadrato, e spiega perché nessuna linea retta può separare correttamente le due rosse dalle due blu.
+4. Racconta con parole tue perché la scoperta del limite XOR portò al "primo inverno dell'intelligenza artificiale", e cosa mancava ancora, all'epoca, per superarlo.
+5. Spiega la differenza fra un interruttore a scatto netto e una funzione di attivazione sfumata, a "S" o ReLU, e perché la sfumatura è necessaria per correggere una fila di interruttori impilati.
+
+---
+
 *Continua con la [Lezione 02, Impilare le decisioni: la rete a più piani]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-02-impilare-le-decisioni.md %}.html)*

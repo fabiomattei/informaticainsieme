@@ -185,4 +185,14 @@ Chiudiamo con onestà: nessuno, nemmeno chi costruisce questi modelli, ha oggi u
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue la tecnica della distillazione, usando l'analogia del maestro e dell'allievo, e perché un modello "allievo" può comportarsi bene pur avendo una frazione delle dimensioni del maestro.
+2. Descrivi la differenza fra potatura e quantizzazione: cosa viene rimosso nell'una, e cosa viene arrotondato nell'altra?
+3. Spiega, con parole tue, cosa fa la tecnica LoRA, usando l'analogia del post-it attaccato a un libro già stampato, e perché costa molto meno di un nuovo addestramento completo.
+4. Racconta con parole tue l'esperimento "Golden Gate Claude", e spiega cosa ha dimostrato sull'esistenza di concetti isolabili dentro un modello.
+5. Scegli una delle tre domande della sezione "Prova tu" di questa lezione e scrivi la tua risposta motivata in due o tre frasi, come richiesto, per poterla poi rileggere fra qualche anno.
+
+---
+
 *Continua con l'[Appendice A, Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-appendice-a-soluzioni.md %}.html)*

@@ -89,4 +89,14 @@ Il suo punto debole emerge quando l'assunzione di indipendenza viene tradita in 
 
 ---
 
+## Esercizi
+
+1. Pensa a un contesto diverso dallo spam in cui potresti classificare qualcosa "sommando indizi deboli", per esempio capire se la recensione di un ristorante è positiva o negativa guardando le singole parole usate. Elenca tre parole o indizi che useresti, e verso quale categoria pensi che ciascuno penderebbe.
+2. Spiega, con parole tue, cosa significa l'assunzione "naive" (ingenua) di indipendenza fra le parole, e fai un esempio concreto di due parole che, nella realtà, non sono affatto indipendenti fra loro in un'email di spam.
+3. Perché, nonostante l'assunzione di indipendenza sia quasi sempre falsa nella realtà, Naive Bayes funziona comunque bene in pratica per molti problemi di classificazione di testo?
+4. Descrivi una situazione in cui la violazione dell'assunzione di indipendenza potrebbe far sì che Naive Bayes "conti due volte" la stessa informazione, e spiega quale effetto avrebbe sul punteggio finale.
+5. Confronta Naive Bayes con l'albero decisionale della Lezione 3: in che modo il modo di "usare gli indizi" è diverso fra i due algoritmi, in sequenza contro sommati insieme?
+
+---
+
 *Continua con la [Lezione 10, La strada più larga]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-10-la-strada-piu-larga.md %}.html)*

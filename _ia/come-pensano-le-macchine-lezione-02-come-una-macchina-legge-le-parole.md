@@ -285,4 +285,14 @@ Un ultimo dettaglio, facile da dimenticare: "il cane morde il postino" e "il pos
 
 ---
 
+## Esercizi
+
+1. Scegli una parola rara o inventata, per esempio un nome proprio poco comune o una parola straniera, e prova a immaginare come un tokenizzatore potrebbe spezzarla in pezzi più piccoli, come "cas" + "tel" + "lo" per "castello".
+2. Su una mappa dei significati immaginaria a due coordinate, colloca, anche solo a parole con coordinate plausibili, quattro parole a tua scelta legate fra loro da un tema comune, per esempio quattro sport o quattro strumenti musicali, motivando quali finiscono più vicine e quali più lontane.
+3. Spiega, con parole tue, perché nessuno "disegna a mano" la mappa dei significati, e come fa il modello a costruirla da solo durante l'addestramento.
+4. Prova a costruire una tua analogia in stile "re − uomo + donna = regina", usando quattro parole diverse legate dalla stessa relazione, per esempio un mestiere e il suo equivalente al femminile o maschile. Spiega perché ti aspetteresti che funzioni.
+5. Spiega perché le frasi "il cane morde il postino" e "il postino morde il cane" devono essere rappresentate in modo diverso dal modello, pur essendo fatte esattamente delle stesse cinque parole, e quale informazione aggiuntiva permette di distinguerle.
+
+---
+
 *Continua con la [Lezione 03, Il segreto dell'attenzione]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-03-il-segreto-dellattenzione.md %}.html)*

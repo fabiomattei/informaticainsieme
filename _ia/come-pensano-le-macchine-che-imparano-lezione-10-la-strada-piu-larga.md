@@ -47,4 +47,14 @@ SVM è particolarmente efficace quando gli esempi di addestramento sono relativa
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue perché, fra tutte le linee che separano correttamente due gruppi di punti, SVM preferisce quella che lascia il margine più ampio possibile, usando l'analogia della strada fra due quartieri.
+2. Cosa sono i vettori di supporto, e perché la maggior parte dei punti di addestramento, in SVM, può essere rimossa senza cambiare affatto il confine trovato? Confronta questo comportamento con la regressione lineare della Lezione 4.
+3. Descrivi, con parole tue, l'idea del kernel trick usando l'immagine della collina che si solleva sotto i punti del cerchio centrale. Perché proiettare i punti in più dimensioni può rendere possibile un confine dritto che non esisteva nello spazio originale?
+4. In quali situazioni SVM è particolarmente utile, e perché diventa invece poco pratica su insiemi di addestramento con milioni di esempi?
+5. Pensa a un problema di classificazione a tua scelta in cui ti aspetteresti che i due gruppi non siano separabili con una linea dritta nello spazio delle caratteristiche originali. Descrivi la forma che immagini abbiano i due gruppi.
+
+---
+
 *Continua con la [Lezione 11, Trovare l'ombra giusta]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-11-trovare-lombra-giusta.md %}.html)*

@@ -198,4 +198,14 @@ Da qui in avanti, ogni volta che pensi a un LLM, tienilo a mente: un motore che 
 
 ---
 
+## Esercizi
+
+1. Prendi una frase a tua scelta di almeno dieci parole e prova a giocare al modello a bigrammi: coprila e, guardando solo l'ultima parola scritta finora, prova a indovinare la parola successiva partendo dall'inizio. Quante volte ci prendi, quante no?
+2. Spiega con parole tue perché un modello a bigrammi fatica particolarmente con frasi come "il computer che Sara aveva comprato... si è spento", dove il soggetto è lontano dal verbo.
+3. Descrivi la differenza fra una rete neurale ricorrente e un Transformer nel modo in cui gestiscono le informazioni lontane in una frase lunga. Perché si dice che il "bigliettino mentale" della rete ricorrente "sbiadisce"?
+4. Trova o inventa una frase di almeno quindici parole in cui capire una singola parola, per esempio un pronome, richiede tornare a guardare una parola molto lontana nella frase. Indica quale parola andrebbe "guardata" con attenzione per interpretarla correttamente.
+5. Spiega, con parole tue, perché un Transformer piccolo e uno grande, di fronte alla stessa domanda aritmetica semplice, possono comportarsi in modo molto diverso, pur facendo entrambi, in fondo, la stessa identica operazione: indovinare la parola più plausibile.
+
+---
+
 *Continua con la [Lezione 02, Come una macchina legge le parole]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-02-come-una-macchina-legge-le-parole.md %}.html)*

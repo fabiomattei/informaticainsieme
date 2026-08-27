@@ -107,4 +107,14 @@ A differenza di k-NN, che non spiega mai *perché* prevede una certa etichetta, 
 
 ---
 
+## Esercizi
+
+1. Pensa al gioco "Indovina chi?" (o un gioco simile a domande sì/no che conosci) e descrivi due domande che faresti all'inizio: una che "divide bene" i candidati rimasti, e una inutile perché non separa quasi nulla. Spiega la differenza in termini di purezza.
+2. Descrivi, anche solo a parole, un piccolo albero decisionale a due livelli per decidere se portare l'ombrello, usando come caratteristiche "cielo nuvoloso?" e "hai sentito le previsioni?". Indica chiaramente radice, rami e foglie.
+3. Perché un albero decisionale è considerato più "interpretabile" di k-NN? Fai un esempio di un contesto reale, diverso da quello del prestito bancario citato nel testo, in cui questa interpretabilità sarebbe particolarmente importante.
+4. Spiega cosa succede, in linea di principio, se si lascia crescere un albero decisionale senza alcun limite di profondità su un insieme di addestramento con qualche esempio anomalo o etichettato per errore.
+5. Immagina un gruppo di dieci studenti, sei promossi e quattro no, con due caratteristiche: "ha consegnato tutti i compiti?" e "porta gli occhiali?". Spiega, senza fare calcoli precisi, quale delle due pensi sarebbe una domanda migliore per il nodo radice, e perché.
+
+---
+
 *Continua con la [Lezione 04, Tracciare la retta migliore]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-04-tracciare-la-retta-migliore.md %}.html)*

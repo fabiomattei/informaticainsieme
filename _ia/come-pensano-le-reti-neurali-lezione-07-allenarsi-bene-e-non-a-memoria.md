@@ -163,4 +163,14 @@ Infine, due tecniche più dirette: l'**early stopping** monitora la curva di val
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, l'analogia dello skateboard che prende velocità in discesa per il momentum, e perché ignorare la direzione delle correzioni recenti sarebbe uno spreco.
+2. Descrivi la differenza fra momentum e Adam: cosa fa Adam in più, calibrando il ritmo di correzione per ciascun peso separatamente?
+3. Spiega perché inizializzare tutti i pesi di una rete a zero è un errore grave, usando l'analogia dei "gemelli identici" della Sezione 7.4.
+4. Descrivi, con parole tue, il segnale diagnostico che distingue overfitting da underfitting guardando le curve di errore di allenamento e di validazione.
+5. Scegli due delle tecniche della Sezione 7.7, fra regolarizzazione, dropout, early stopping e data augmentation, e spiega, con parole tue, come ciascuna aiuta a evitare l'overfitting, usando un'analogia diversa da quella del libro.
+
+---
+
 *Continua con la [Lezione 08, Perché serviva un'idea completamente nuova]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-08-perche-serviva-unidea-nuova.md %}.html)*

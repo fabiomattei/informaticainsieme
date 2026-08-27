@@ -209,4 +209,14 @@ Un ultimo salto: i modelli più recenti non leggono solo testo, ma anche **immag
 
 ---
 
+## Esercizi
+
+1. Spiega perché un LLM, da solo, non può rispondere correttamente a "che tempo farà domani" o "chi ha vinto la partita di ieri sera", e come la tecnica RAG risolve questo limite.
+2. Descrivi un compito in cui converrebbe che un modello "chiamasse uno strumento esterno" invece di provare a risolverlo da solo, e spiega perché.
+3. Spiega, con parole tue, il ciclo pensa-agisce-osserva-decide di un agente, usando un esempio a tua scelta diverso da quello del volo e dell'hotel citato nel testo.
+4. Cos'è la prompt injection, e perché rappresenta un rischio particolare per un agente che legge automaticamente contenuti da fonti esterne come pagine web o email?
+5. Spiega, con parole tue, come un modello multimodale riesce a "far dialogare" un'immagine con una domanda scritta, collegando questa idea alla mappa dei significati vista nella Lezione 2.
+
+---
+
 *Continua con la [Lezione 10, Cosa ci aspetta]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-10-cosa-ci-aspetta.md %}.html)*

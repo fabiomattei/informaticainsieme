@@ -25,7 +25,3 @@ name: Home
 * [Il ciclo for]({{ site.baseurl }}{% link _cpp/ciclo-for.md %}.html)
 * [Funzioni]({{ site.baseurl }}{% link _cpp/funzioni.md %}.html)
 * [Classi]({{ site.baseurl }}{% link _cpp/classi.md %}.html)
-
-## Arduino
-
-* [Blink di un led]({{ site.baseurl }}{% link _arduino/blink.md %}.html)

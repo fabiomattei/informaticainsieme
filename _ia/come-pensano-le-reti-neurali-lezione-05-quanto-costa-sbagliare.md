@@ -134,4 +134,14 @@ Vale la pena anticipare un'osservazione che tornerà utile più avanti: pensata 
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, perché l'errore quadratico medio penalizza un errore doppio quattro volte tanto, e non semplicemente il doppio.
+2. Usando la tabella della Sezione 5.3, individua i punti di sorpresa per una predizione che assegna il 50% di sicurezza alla risposta corretta, e confrontali con quelli di una predizione che le assegna il 90%.
+3. Spiega perché il test a crocette (cross-entropy) è una scelta più adatta dell'errore quadratico medio per un problema di classificazione fra categorie, e viceversa perché l'errore quadratico medio è più adatto per prevedere un numero continuo.
+4. Descrivi, con parole tue, perché la loss e l'ultimo strato della rete "vanno scelti in coppia", e cosa rischia di succedere se si sceglie la combinazione sbagliata.
+5. Spiega, con parole tue, cosa significa che la funzione di perdita di una rete ha "più di una valle buona", e perché due reti allenate con punti di partenza diversi possono arrivare a impostazioni interne diverse pur avendo un errore finale simile.
+
+---
+
 *Continua con la [Lezione 06, La colpa che risale la catena]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-06-la-colpa-che-risale-la-catena.md %}.html)*

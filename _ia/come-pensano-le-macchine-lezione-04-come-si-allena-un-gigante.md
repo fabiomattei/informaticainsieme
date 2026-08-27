@@ -186,4 +186,14 @@ Lo stesso succede a un LLM durante il pre-training: le prime ore di addestrament
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue il "gioco del testo bucherellato" descritto nella Sezione 4.1, e in che senso imparare in questo modo assomiglia a come impari tu il significato di una parola nuova leggendo molti libri.
+2. Cosa sono i "parametri" o "pesi" di un modello, e cosa succede quando il modello sbaglia a indovinare una parola cancellata durante il pre-training?
+3. Spiega, con parole tue, perché un modello enorme allenato su troppo poco testo rischia di memorizzare invece di generalizzare, e perché un modello piccolo, per quanto testo gli dai, ha comunque un limite di "capacità".
+4. Racconta un esempio, anche dalla tua esperienza di studio, di rendimenti decrescenti: una situazione in cui i primi sforzi hanno portato miglioramenti grandi, e quelli successivi miglioramenti sempre più piccoli.
+5. Se avessi a disposizione il doppio della potenza di calcolo per allenare un nuovo modello, secondo le leggi di scala della Sezione 4.3, cosa dovresti fare insieme a rendere il modello più grande, per non sprecare quel potenziale in più?
+
+---
+
 *Continua con la [Lezione 05, Insegnargli le buone maniere]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-05-insegnargli-le-buone-maniere.md %}.html)*

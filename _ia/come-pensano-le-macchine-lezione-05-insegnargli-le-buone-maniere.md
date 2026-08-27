@@ -197,4 +197,14 @@ Un'ultima cosa da tenere a mente: se il premio viene inseguito con troppo zelo, 
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, perché un modello appena uscito dal pre-training non è ancora un buon assistente, anche se ha già letto miliardi di pagine di testo.
+2. Descrivi la differenza fra l'addestramento supervisionato per istruzioni (SFT) e l'apprendimento per rinforzo da feedback umano (RLHF), usando l'analogia del manuale di esempi contro quella dell'allenamento a premi.
+3. Spiega, con parole tue, la differenza fra RLHF e DPO: cosa salta DPO rispetto a RLHF, e perché questo lo rende più diretto?
+4. Perché il "giudice del gusto" di RLHF può premiare risposte sbagliate ma sicure di sé, invece di risposte corrette ma caute? Collega la tua risposta al fenomeno dell'adulazione (sycophancy).
+5. Immagina di dover scrivere tu stesso un esempio di addestramento supervisionato per insegnare a un modello a rispondere in modo gentile ma diretto a una domanda scolastica. Scrivi una coppia domanda-risposta che useresti come esempio.
+
+---
+
 *Continua con la [Lezione 06, Come nasce una risposta, parola per parola]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-06-come-nasce-una-risposta.md %}.html)*

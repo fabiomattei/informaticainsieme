@@ -111,4 +111,14 @@ Se vuoi vedere questi stessi meccanismi raccontati con le formule vere, i pesi c
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, la differenza fra i due problemi lasciati in sospeso dalla Lezione 4: il "bigliettino che si sporca" e il "vincolo di leggere una pagina alla volta". Perché richiedono rimedi diversi?
+2. Descrivi le due proprietà che, secondo la Sezione 8.3, servirebbero per eliminare del tutto l'obbligo di leggere in ordine, mantenendo comunque la capacità di collegare pagine lontane.
+3. Spiega, con parole tue, perché il Transformer del 2017 non è "un miglioramento incrementale" della capacità di tornare a guardare indietro, ma un cambiamento di categoria.
+4. Immagina un testo lungo a tua scelta, un libro o un articolo, con un dettaglio all'inizio che diventa rilevante solo alla fine. Descrivi la differenza fra come un lettore pagina-per-pagina e un lettore basato sulla sola attenzione gestirebbero quel collegamento.
+5. Spiega, con parole tue, perché l'elaborazione in parallelo di un Transformer, più che il numero totale di calcoli, è ciò che ha reso possibile allenare modelli su quantità di testo enormi.
+
+---
+
 *Continua con l'[Appendice A, Soluzioni ai giochi]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-appendice-a-soluzioni.md %}.html)*

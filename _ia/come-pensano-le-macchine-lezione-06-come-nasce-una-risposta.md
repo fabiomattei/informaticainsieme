@@ -209,4 +209,14 @@ Mettendo insieme i pezzi: ogni parola della risposta di un chatbot nasce da (1) 
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, perché la scelta "golosa" (prendere sempre la parola più probabile) rischia di produrre testo ripetitivo, e perché questo significherebbe anche che la stessa domanda avrebbe sempre la stessa identica risposta.
+2. Descrivi con parole tue cosa significa "campionare" da un mazzo di probabilità, usando l'analogia dell'urna con le palline pesate.
+3. Spiega la differenza fra temperatura bassa e temperatura alta, e per quale dei due tipi di compito, un calcolo preciso o una poesia creativa, useresti ciascuna delle due.
+4. Perché restringere il mazzo alle sole carte più plausibili, prima di pescare, aiuta a evitare risposte completamente assurde, anche a temperatura alta?
+5. Descrivi, anche solo a parole, il ciclo di generazione della Sezione 6.5: elenca i quattro passi in ordine e spiega perché il modello non "sa" in anticipo l'intera frase che sta per scrivere.
+
+---
+
 *Continua con la [Lezione 07, Quanto ci possiamo fidare]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-07-quanto-ci-possiamo-fidare.md %}.html)*

@@ -91,4 +91,14 @@ Restano ancora alcune idee, altrettanto diffuse nella pratica, che completano qu
 
 ---
 
+## Esercizi
+
+1. Racconta con parole tue l'esperimento del bue di Galton, e spiega perché la media di tante stime imprecise può risultare più accurata di quasi ogni singola stima.
+2. Spiega la differenza principale fra bagging e random forest: cosa aggiunge la random forest rispetto al semplice bagging, e perché questo aiuta quando esiste una caratteristica molto informativa che quasi tutti gli alberi sceglierebbero alla radice.
+3. Spiega perché il boosting è intrinsecamente sequenziale, mentre bagging e random forest possono essere addestrati in parallelo su computer diversi.
+4. Descrivi, con parole tue, in che modo il boosting somiglia al lavoro di un insegnante che, dopo aver corretto un compito, concentra la lezione successiva sugli errori più comuni.
+5. Perché, in generale, combinare molti modelli semplici tende a generalizzare meglio di un singolo modello molto complesso? Collega la tua risposta al concetto di overfitting visto nella Lezione 5.
+
+---
+
 *Continua con la [Lezione 09, La somma degli indizi]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-09-la-somma-degli-indizi.md %}.html)*

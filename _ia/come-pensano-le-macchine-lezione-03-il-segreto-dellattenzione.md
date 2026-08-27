@@ -411,4 +411,14 @@ Ecco uno schema di partenza per il punto 1 dell'esercizio: la frase divisa in ca
 
 ---
 
+## Esercizi
+
+1. Scrivi una frase ambigua a tua scelta, diversa da quelle del libro, in cui una singola parola, un pronome o un aggettivo, può riferirsi a due candidati diversi. Spiega quale dei due ti sembra più naturale, e perché.
+2. Spiega con parole tue l'analogia dei "cartellini" e delle "domande" nell'aula di lavoro di gruppo: cosa rappresenta, nel meccanismo di attenzione, il cartellino di una parola, e cosa rappresenta la sua domanda?
+3. Spiega perché il mascheramento causale impedisce a una parola di "guardare" quelle che vengono dopo di lei, e quale vantaggio pratico questo vincolo offre durante l'addestramento.
+4. Perché servono più "teste" di attenzione in parallelo invece di una sola? Fai un esempio di due domande diverse che uno stesso testo potrebbe richiedere di porsi contemporaneamente.
+5. Spiega, con parole tue, la differenza fra ciò che imparano a cogliere gli strati più bassi, vicini all'inizio, e quelli più alti, vicini alla fine, di un modello con attenzione, usando l'analogia della rilettura di un tema.
+
+---
+
 *Continua con la [Lezione 04, Come si allena un gigante]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-04-come-si-allena-un-gigante.md %}.html)*

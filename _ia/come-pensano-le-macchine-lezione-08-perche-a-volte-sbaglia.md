@@ -216,4 +216,14 @@ Per questo, chi costruisce questi modelli investe tempo apposta a cercare le pro
 
 ---
 
+## Esercizi
+
+1. Spiega perché il testo definisce l'allucinazione non un "guasto occasionale" ma una conseguenza diretta del modo in cui un LLM funziona.
+2. Descrivi l'analogia del "ricordo d'infanzia sfocato" usata nella Sezione 8.2, e spiega come si collega al problema dell'adulazione (sycophancy) del modello.
+3. Spiega, con parole tue, perché il pregiudizio di un LLM non può essere corretto "spegnendo una singola manopola difettosa", ma è invece distribuito su moltissimi parametri insieme.
+4. Descrivi un esempio, anche inventato da te, di come una piccola modifica ininfluente per un umano, per esempio l'ordine delle opzioni in una domanda a scelta multipla, potrebbe far cambiare risposta a un modello.
+5. Spiega, con parole tue, cosa sono un jailbreak e il red teaming, e perché il secondo è utile per contrastare il primo prima del rilascio pubblico di un modello.
+
+---
+
 *Continua con la [Lezione 09, Oltre la chat]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-lezione-09-oltre-la-chat.md %}.html)*

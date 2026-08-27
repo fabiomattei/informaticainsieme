@@ -122,4 +122,14 @@ Vale la pena notare un fatto pratico, che tornerà utile più avanti quando parl
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, l'analogia della catena di artigiani nella linea di montaggio, e cosa rappresenta, in questa analogia, il forward pass e cosa il backward pass.
+2. Perché un interruttore a scatto netto, senza la manopola sfumata della Lezione 1, non si sarebbe mai potuto correggere in una catena di più di un piano? Collega la tua risposta al concetto di "reattività locale".
+3. Segui l'esempio numerico del "Prova tu" di questa lezione ma con numeri diversi a tua scelta, un peso di collegamento e una reattività locale diversi per ciascun anello, e calcola come si distribuisce la colpa lungo una catena di tre piani.
+4. Spiega, con parole tue, perché allenare una rete costa circa 2-3 volte il costo di farle semplicemente produrre una risposta, e non un costo molto più grande.
+5. Collegando questa lezione alla Lezione 4, spiega perché la colpa che risale una catena di trenta anelli rischia di "sparire" quasi quanto il bigliettino che si sporca in una sequenza lunga.
+
+---
+
 *Continua con la [Lezione 07, Allenarsi bene (e non a memoria)]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-07-allenarsi-bene-e-non-a-memoria.md %}.html)*

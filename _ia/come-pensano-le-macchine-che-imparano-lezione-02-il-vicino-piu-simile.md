@@ -99,4 +99,14 @@ Il secondo è più sottile e riguarda proprio la nozione di "vicinanza": funzion
 
 ---
 
+## Esercizi
+
+1. Spiega con parole tue perché k-NN viene definito un algoritmo "pigro" (*lazy learning*), e cosa lo distingue, da questo punto di vista, da un albero decisionale, di cui hai già un'idea intuitiva.
+2. Prendi tre oggetti di uso quotidiano (per esempio tre libri, tre bevande, tre app sul telefono) e descrivi ciascuno con due caratteristiche numeriche a tua scelta. Stabilisci, ragionando sulle coordinate, quali due fra i tre risultano "più vicini" fra loro.
+3. Spiega, con un esempio concreto diverso dalle angurie, cosa può succedere se scegli k = 1 e nel tuo insieme di addestramento c'è un singolo esempio etichettato per errore.
+4. Perché k-NN diventa lento quando l'insieme di addestramento contiene milioni di esempi? Cosa deve fare l'algoritmo per ogni singola previsione che rende il calcolo costoso?
+5. Immagina di voler prevedere se una persona è idonea a un prestito usando due caratteristiche: reddito annuo (da 0 a 100.000 euro) e numero di carte di credito possedute (da 0 a 10). Spiega perché calcolare la distanza direttamente su questi numeri, senza alcun accorgimento, rischierebbe di far dominare una caratteristica sull'altra, e quale delle due dominerebbe.
+
+---
+
 *Continua con la [Lezione 03, Un albero di domande]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-03-un-albero-di-domande.md %}.html)*

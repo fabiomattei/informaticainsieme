@@ -71,4 +71,14 @@ Il punto in cui l'errore di validazione smette di scendere e comincia a risalire
 
 ---
 
+## Esercizi
+
+1. Racconta, con parole tue, un esempio di overfitting tratto dalla vita reale, diverso da quello dello studente delle tremila domande, per esempio uno studente che impara a memoria le soluzioni di un libro di esercizi senza capire il procedimento.
+2. Spiega la differenza fra insieme di addestramento, insieme di validazione e insieme di test, e perché usare l'insieme di test troppe volte durante lo sviluppo rischia di comprometterne l'utilità.
+3. Un modello ha l'1% di errore sull'insieme di addestramento e il 2% sull'insieme di test. Un secondo modello ha il 15% di errore sull'insieme di addestramento e il 16% sul test. Quale dei due preferiresti usare, e quale problema, fra overfitting e underfitting, pensi che nessuno dei due stia mostrando in modo grave?
+4. Descrivi, per ciascuno dei tre algoritmi visti nelle Lezioni 2, 3 e 4 (k-NN, alberi decisionali, regressione lineare), una scelta concreta che, se esagerata, porta più facilmente a overfitting.
+5. Spiega con parole tue cosa rappresenta il punto in cui la curva dell'errore di validazione smette di scendere e ricomincia a salire, e perché quel punto è utile per scegliere la complessità giusta di un modello.
+
+---
+
 *Continua con la [Lezione 06, Quanto è bravo, davvero?]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-06-quanto-e-bravo-davvero.md %}.html)*

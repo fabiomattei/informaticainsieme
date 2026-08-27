@@ -85,4 +85,14 @@ La lezione più importante di questo capitolo non è memorizzare le definizioni 
 
 ---
 
+## Esercizi
+
+1. Spiega perché un modello che dice sempre "sano" può avere un'accuratezza del 99% pur essendo completamente inutile per individuare una malattia rara.
+2. Costruisci una piccola matrice di confusione inventata, con numeri a tua scelta, per un problema diverso dallo spam o dalla malattia, e calcola accuratezza, precisione e richiamo a partire dai tuoi numeri.
+3. Per ciascuno dei seguenti contesti, indica se preferiresti privilegiare la precisione o il richiamo, motivando la scelta: (a) un sistema che segnala possibili tumori in una radiografia; (b) un sistema che blocca automaticamente le transazioni con carta di credito sospette; (c) un sistema che consiglia video su una piattaforma di streaming.
+4. Spiega, con parole tue, perché precisione e richiamo tendono a "tirare in direzioni opposte", e cosa succede a ciascuna delle due se un modello diventa estremamente cauto nel dichiarare la categoria positiva.
+5. Trova, o inventa in modo plausibile, un titolo di giornale che citi solo l'accuratezza di un sistema di intelligenza artificiale senza menzionare precisione o richiamo. Spiega quale domanda faresti per capire se quel numero racconta davvero tutta la storia.
+
+---
+
 *Continua con la [Lezione 07, Trovare gruppi senza etichette]({{ site.baseurl }}{% link _ia/come-pensano-le-macchine-che-imparano-lezione-07-trovare-gruppi-senza-etichette.md %}.html)*

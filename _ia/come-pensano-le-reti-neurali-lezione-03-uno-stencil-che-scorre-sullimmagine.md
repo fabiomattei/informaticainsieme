@@ -167,4 +167,14 @@ Impilando più coppie stencil-e-riassunto, una rete convoluzionale costruisce ti
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, i due problemi che nascerebbero se si desse in pasto un'immagine, pixel per pixel, a una rete come quella della Lezione 2, senza usare stencil.
+2. Descrivi cosa significa "invarianza traslazionale", e perché uno stencil riusato su tutta l'immagine la garantisce quasi automaticamente.
+3. Prendi una mini-immagine 4×4 a tua scelta (fatta di 0 e 1) e uno stencil 3×3 diverso da quello dell'esercizio della lezione, e calcola a mano il risultato dello stencil appoggiato in una posizione.
+4. Spiega, con parole tue, cosa fa il max pooling e perché rende la rete un po' più tollerante a piccoli spostamenti del motivo cercato.
+5. Descrivi, con parole tue, la gerarchia di motivi che una rete convoluzionale costruisce piano dopo piano, dai bordi elementari fino al riconoscimento di un oggetto intero.
+
+---
+
 *Continua con la [Lezione 04, Il filo della memoria]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-04-il-filo-della-memoria.md %}.html)*

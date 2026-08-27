@@ -152,4 +152,14 @@ C'è però un secondo limite, distinto dal primo, che nessuna variante di gating
 
 ---
 
+## Esercizi
+
+1. Spiega, con parole tue, perché una rete come quella della Lezione 2 o lo stencil della Lezione 3 non è adatta a gestire una frase di lunghezza variabile.
+2. Descrivi l'analogia dell'amico che riassume un libro pagina per pagina, e cosa rappresenta esattamente lo "stato nascosto" in questa analogia.
+3. Spiega perché il "bigliettino che si sporca" (vanishing gradient nel tempo) è un problema particolarmente serio per sequenze lunghe, e come LSTM e GRU lo alleviano con il meccanismo di gating.
+4. Gioca, o immagina di giocare, al telefono senza fili con una frase a tua scelta di almeno dodici parole, e descrivi quali parti ti aspetti sopravvivano meglio dopo sei passaggi.
+5. Spiega, con parole tue, la differenza fra il problema del "bigliettino che si sporca" e il problema della "lettura obbligatoriamente una pagina alla volta": perché nessun diario, per quanto ben tenuto, può risolvere il secondo?
+
+---
+
 *Continua con la [Lezione 05, Quanto costa sbagliare]({{ site.baseurl }}{% link _ia/come-pensano-le-reti-neurali-lezione-05-quanto-costa-sbagliare.md %}.html)*
