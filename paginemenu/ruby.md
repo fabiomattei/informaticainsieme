@@ -28,6 +28,29 @@ layout: page
 * [Funzioni]({{ site.baseurl }}{% link _ruby/funzioni.md %}.html)
 * [Classi]({{ site.baseurl }}{% link _ruby/classi.md %}.html)
 
+## Ruby on Rails: piccolo manuale introduttivo
+
+* [Introduzione]({{ site.baseurl }}{% link _ruby/rails-introduzione.md %}.html)
+* [Struttura di un progetto]({{ site.baseurl }}{% link _ruby/rails-struttura.md %}.html)
+* [Il routing]({{ site.baseurl }}{% link _ruby/rails-routing.md %}.html)
+* [Controller e azioni]({{ site.baseurl }}{% link _ruby/rails-controller.md %}.html)
+* [Viste, layout ed helper]({{ site.baseurl }}{% link _ruby/rails-viste.md %}.html)
+* [ActiveRecord e i modelli]({{ site.baseurl }}{% link _ruby/rails-activerecord.md %}.html)
+* [Migrazioni e database]({{ site.baseurl }}{% link _ruby/rails-migrazioni.md %}.html)
+* [Associazioni tra modelli]({{ site.baseurl }}{% link _ruby/rails-associazioni.md %}.html)
+* [Le validazioni]({{ site.baseurl }}{% link _ruby/rails-validazioni.md %}.html)
+* [Form e CRUD completo]({{ site.baseurl }}{% link _ruby/rails-form-crud.md %}.html)
+* [I messaggi flash]({{ site.baseurl }}{% link _ruby/rails-flash.md %}.html)
+* [Popolare il database con i seed]({{ site.baseurl }}{% link _ruby/rails-seeds.md %}.html)
+* [Autenticazione degli utenti]({{ site.baseurl }}{% link _ruby/rails-autenticazione.md %}.html)
+* [I test automatici]({{ site.baseurl }}{% link _ruby/rails-testing.md %}.html)
+* [Caricare file con ActiveStorage]({{ site.baseurl }}{% link _ruby/rails-activestorage.md %}.html)
+* [Inviare email con ActionMailer]({{ site.baseurl }}{% link _ruby/rails-actionmailer.md %}.html)
+* [Job in background con ActiveJob]({{ site.baseurl }}{% link _ruby/rails-activejob.md %}.html)
+* [Creare una API in JSON]({{ site.baseurl }}{% link _ruby/rails-api.md %}.html)
+* [Mettere online la applicazione (deploy)]({{ site.baseurl }}{% link _ruby/rails-deploy.md %}.html)
+* [La stessa applicazione, scritta in PHP puro]({{ site.baseurl }}{% link _ruby/rails-php-confronto.md %}.html)
+
 ## Creiamo un videogioco utilizzando Dragonruby
 
 * [Introduzione]({{ site.baseurl }}{% link _ruby/sprites.md %}.html)
