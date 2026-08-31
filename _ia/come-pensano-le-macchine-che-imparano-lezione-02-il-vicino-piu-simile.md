@@ -15,11 +15,13 @@ Questa idea, applicata a un mucchio di esempi già etichettati, è uno degli alg
 
 ### 2.2 Trasformare gli esempi in punti su una mappa
 
-Per far funzionare questa idea serve un modo preciso di dire "quanto si somigliano" due esempi, non basta un'impressione, serve un numero. L'idea alla base è trasformare ogni esempio in un punto su una mappa, usando le sue caratteristiche come coordinate.
+Per far funzionare questa idea serve un modo preciso di dire **quanto si somigliano** due esempi, non basta un'impressione, serve un numero. In fondo dobbiamo sempre tenere a mente che i computer sono macchine brave a lavorare con i numeri. 
+L'idea alla base è trasformare ogni esempio in un punto su una mappa (piano cartesiano), usando le sue caratteristiche come coordinate.
 
-Riprendiamo le angurie della Lezione 1, ma questa volta con caratteristiche numeriche invece che a categorie: al posto di "cupo o acuto" usiamo un punteggio di gravità del suono da 0 a 10, e al posto di "intenso o pallido" un punteggio di intensità del giallo da 0 a 10. Ogni anguria diventa così una coppia di numeri, per esempio (7, 8) per un suono piuttosto cupo e un giallo piuttosto intenso, che puoi disegnare come un punto su un piano, esattamente come le coordinate di un punto su una cartina. Questo piano immaginario, dove ogni caratteristica è un asse e ogni esempio è un punto, si chiama **spazio delle caratteristiche**.
+Riprendiamo le angurie della lezione precedente, ma questa volta consideriamo caratteristiche numeriche invece che categorie: al posto di "cupo o acuto" usiamo un punteggio di gravità del suono da 0 a 10, e al posto di "intenso o pallido" un punteggio di intensità del giallo da 0 a 10. Ogni anguria diventa così una coppia di numeri, per esempio (7, 8) per un suono piuttosto cupo e un giallo piuttosto intenso, che puoi disegnare come un punto su un piano, esattamente come le coordinate di un punto su una cartina. 
+Questo piano immaginario, dove ogni caratteristica è un asse e ogni esempio è un punto, si chiama **spazio delle caratteristiche**.
 
-Una volta che gli esempi sono punti su questa mappa, "quanto si somigliano due angurie" diventa qualcosa di molto concreto: quanto sono vicini i loro due punti sulla mappa. Due angurie con punteggi simili di suono e di giallo finiscono vicine; due angurie molto diverse finiscono lontane. La **distanza** fra due punti si misura esattamente come la distanza fra due località su una cartina stradale, più le coordinate differiscono, più i punti sono lontani.
+Una volta che gli esempi sono punti su questa mappa, **quanto si somigliano due angurie** diventa qualcosa di molto concreto: quanto sono vicini i loro due punti sulla mappa. Due angurie con punteggi simili di suono e di giallo finiscono vicine; due angurie molto diverse finiscono lontane. La **distanza** fra due punti si misura esattamente come la distanza fra due località su una cartina stradale, più le coordinate differiscono, più i punti sono lontani.
 
 <figure style="margin: 2rem 0; text-align: center;">
 <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="spazio-title spazio-desc" style="width: 100%; max-width: 440px; height: auto; font-family: inherit;">
@@ -67,15 +69,17 @@ Se scegli **k = 1**, il punto nuovo prende semplicemente l'etichetta del suo uni
 
 Se scegli un **k molto grande**, diciamo, pari a tutto l'insieme di addestramento, succede l'opposto: ogni previsione diventa semplicemente "l'etichetta più comune in assoluto", sempre la stessa per qualunque punto nuovo, ignorando completamente dove si trova sulla mappa. Un k enorme annega il segnale locale (chi sono davvero i vicini di questo punto specifico) dentro la media generale di tutto il dataset.
 
-La scelta pratica sta nel mezzo: un k abbastanza piccolo da restare sensibile alla zona specifica della mappa dove cade il punto nuovo, ma abbastanza grande da non farsi ingannare da un singolo esempio anomalo. Non esiste un valore di k giusto in assoluto, dipende da quanto sono "rumorosi" i dati e da quanti esempi hai, ed è un tema a cui torneremo con più precisione nella Lezione 5, quando parleremo di come misurare se un modello sta generalizzando bene oppure no.
+La scelta pratica sta nel mezzo: un k abbastanza piccolo da restare sensibile alla zona specifica della mappa dove cade il punto nuovo, ma abbastanza grande da non farsi ingannare da un singolo esempio anomalo. Non esiste un valore di k giusto in assoluto, dipende da quanto sono **rumorosi** i dati e da quanti esempi hai, ed è un tema a cui torneremo con più precisione nella Lezione 5, quando parleremo di come essere in grado di **misurare** se un modello sta **generalizzando** 
+bene oppure no.
 
 ### 2.5 Il prezzo della semplicità
 
 k-NN ha un pregio enorme, è facile da capire e da spiegare, non nasconde nulla dentro una scatola nera, ma anche due limiti pratici che vale la pena conoscere fin da subito, perché motiveranno gli algoritmi delle prossime lezioni.
 
-Il primo è il costo: per ogni singola previsione, k-NN deve calcolare la distanza dal punto nuovo a *tutti* gli esempi noti. Con dieci angurie non è un problema; con dieci milioni di transazioni bancarie, ricalcolare tutte quelle distanze ogni volta diventa lento.
+Il primo è il **costo**: per ogni singola previsione, k-NN deve calcolare la distanza dal punto nuovo a *tutti* gli esempi noti. Con dieci angurie non è un problema; con dieci milioni di transazioni bancarie, ricalcolare tutte quelle distanze ogni volta diventa lento.
 
-Il secondo è più sottile e riguarda proprio la nozione di "vicinanza": funziona bene quando le caratteristiche numeriche sono comparabili e ben scelte, ma se una caratteristica è misurata su una scala molto più ampia delle altre (il peso in grammi, da 2000 a 9000, contro un punteggio di giallo da 0 a 10), finisce per dominare da sola il calcolo della distanza, schiacciando il contributo di tutte le altre. È un problema pratico, risolvibile riportando tutte le caratteristiche sulla stessa scala prima di calcolare le distanze, un dettaglio tecnico che qui basta conoscere di nome, senza approfondirlo.
+Il secondo è più sottile e riguarda proprio la nozione di **vicinanza**: funziona bene quando le caratteristiche numeriche sono comparabili e ben scelte, ma se una caratteristica è misurata su una scala molto più ampia delle altre (il peso in grammi, da 2000 a 9000, contro un punteggio di giallo da 0 a 10), finisce per **dominare** da sola il calcolo della distanza, schiacciando il contributo di tutte le altre. È un problema pratico, risolvibile riportando tutte le caratteristiche sulla stessa scala prima di calcolare le distanze (normalizzazione), 
+un dettaglio tecnico che qui basta conoscere di nome, senza approfondirlo.
 
 ---
 

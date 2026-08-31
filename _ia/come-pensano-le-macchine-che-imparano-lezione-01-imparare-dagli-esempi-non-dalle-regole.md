@@ -11,25 +11,28 @@ layout: page
 
 Fino ad oggi abbiamo conosciuto una informatica fondata su algoritmi. Questi rappresentano un insieme
 di istruzioni che la macchina deve seguire pedissequamente per arrivare al risultato voluto. 
-Abbiamo parlato di programmazione imperativa perché il programmatore dava **ordini** attraverso
+Abbiamo parlato di **programmazione imperativa** perché il programmatore dava **ordini** attraverso
 il linguaggio di programmazione che la macchina avrebbe dovuto eseguire. 
 
-L'approccio che adiamo a vedere ora è diverso. In questo caso le macchine **imparano** le regole
-direttamente dai dati. In questo modo non c'è bisogno di scrivere un algoritmo per risolvere
-un problema, si danno alla macchina dei dati e si lascia che questa estragga dai dati una regola
-che può essere più o meno generale. Questo è il dominio dell'informatica non deterministica.
+L'approccio che andiamo a vedere ora è diverso. Le macchine diventano in grado di **imparare** le regole
+direttamente dai dati. Il programmatore non dovrà più scrivere un algoritmo per risolvere
+un problema, ma sottoporrà alla macchina dei dati e lascerà che questa estragga in autonomia una regola
+che potrà essere più o meno generale. Questo è il dominio dell'informatica **non deterministica**.
 
 ### 1.1 L'apprendista del fruttivendolo
 
-Immagina di fare l'apprendista da un fruttivendolo che ti deve insegnare a riconoscere un'anguria matura. Potrebbe provare a dettarti una regola precisa: "se, bussando con le nocche, il suono è cupo e profondo, e se il puntino giallo sulla scorza è bello acceso, allora è matura". Il problema è che una regola così, messa per iscritto, è più difficile da formulare bene di quanto sembri: quanto deve essere "cupo" il suono? Quanto "acceso" il giallo? E se il suono è cupo ma il puntino è pallido?
+Immagina di essere l'apprendista di un fruttivendolo e che questi ti debba insegnare a riconoscere un'anguria matura. 
+Il fruttivendolo potrebbe provare a dettarti una regola precisa: "se, bussando con le nocche, il suono è cupo e profondo, e se il puntino giallo sulla scorza è bello acceso, allora è matura". 
+Il problema è che una regola così, messa per iscritto, è più difficile da formulare bene di quanto sembri: quanto deve essere "cupo" il suono? Quanto "acceso" il giallo? E se il suono è cupo ma il puntino è pallido?
 
-La strada che il fruttivendolo sceglie davvero, quasi sempre, è un'altra: ti mette davanti dieci angurie, ne apre alcune per farti vedere quali erano davvero mature e quali no, e ti lascia bussare, guardare, confrontare. Dopo qualche decina di angurie osservate, alcune giuste, alcune sbagliate, con lui che ti corregge ogni volta, inizi a "sentire" la differenza, senza che nessuno ti abbia mai scritto la regola esatta su un foglio. Hai imparato dagli esempi, non dalle istruzioni.
+La strada che il fruttivendolo sceglie davvero, quasi sempre, è un'altra: ti mette davanti dieci angurie, ne apre alcune per farti vedere quali erano davvero mature e quali no, e ti lascia bussare, guardare, confrontare. Dopo qualche decina di angurie osservate, alcune giuste, alcune sbagliate, con lui che ti corregge ogni volta, inizi a "sentire" la differenza, senza che nessuno ti abbia mai scritto la regola esatta su un foglio. **Hai imparato dagli esempi, non dalle istruzioni**.
 
 ### 1.2 Programmazione classica contro machine learning
 
 Questa differenza è precisamente ciò che separa la programmazione tradizionale dal **machine learning** (apprendimento automatico). Nella programmazione classica, il programmatore scrive a mano le regole, "se il totale del carrello supera 50 euro, applica lo sconto", e il computer si limita a eseguirle alla lettera, sempre uguali, su ogni input che riceve.
 
-Nel machine learning il programmatore non scrive la regola finale. Scrive invece un **algoritmo di apprendimento**: una procedura che, messa di fronte a un mucchio di esempi già risolti, trova da sola una regola che li spiega il più possibile bene. Il risultato di questo processo, la regola trovata, si chiama **modello**. Non è il programmatore a decidere se il puntino deve essere "abbastanza giallo": è il modello, guardando centinaia di angurie passate, a scoprire da solo quanto giallo è "abbastanza".
+Nel machine learning il programmatore non scrive la regola finale. Scrive invece un **algoritmo di apprendimento**: una procedura che, messa di fronte a un mucchio di esempi già risolti, trova da sola una regola che li spiega nel modo migliore possibile. 
+Il risultato di questo processo, la regola trovata, si chiama **modello**. Non è il programmatore a decidere se il puntino deve essere "abbastanza giallo": è il modello, guardando centinaia di angurie passate, a scoprire da solo quanto giallo è "abbastanza".
 
 Questa è la ragione per cui il machine learning è utile proprio nei casi in cui scrivere la regola a mano è difficile o impossibile: riconoscere uno spam, stimare il prezzo giusto di una casa usata, prevedere se un cliente lascerà un abbonamento. Nessuno sa scrivere con precisione la regola "questa è un'email spam"; ma esistono milioni di email già etichettate come "spam" o "non spam", ed è da quelle che un modello può imparare.
 
@@ -37,9 +40,9 @@ Questa è la ragione per cui il machine learning è utile proprio nei casi in cu
 
 Per far funzionare l'apprendimento del fruttivendolo servono due ingredienti, ed è utile dargli un nome preciso perché torneranno in ogni lezione di questo libro.
 
-Il primo sono le **caratteristiche** (in inglese *feature*): gli indizi che osservi su ogni esempio. Per l'anguria: il tono del suono al tocco (cupo o acuto), l'intensità del colore del puntino giallo, magari il peso. Ogni anguria diventa così una piccola scheda di numeri o categorie, non più "un'anguria", ma "suono: cupo, giallo: intenso, peso: 6 kg".
+Primo ingrediente: le **caratteristiche** (in inglese *feature*), gli indizi che osservi su ogni esempio. Per l'anguria: il tono del suono al tocco (cupo o acuto), l'intensità del colore del puntino giallo, magari il peso. Ogni anguria diventa così una piccola scheda di numeri o categorie, non più "un'anguria", ma "suono: cupo, giallo: intenso, peso: 6 kg".
 
-Il secondo è l'**etichetta** (in inglese *label*): la risposta giusta che vuoi imparare a prevedere. Per l'anguria: "matura" oppure "non matura". Un esempio completo, nel machine learning, è sempre questa coppia: le caratteristiche osservabili subito, più l'etichetta che di solito si scopre solo dopo (aprendo l'anguria) e che nella vita reale, quando il modello dovrà essere usato su un frutto nuovo, non è ancora disponibile, è proprio quella che vogliamo indovinare.
+Secondo ingrediente: l'**etichetta** (in inglese *label*): la risposta giusta che vuoi imparare a prevedere. Per l'anguria: "matura" oppure "non matura". Un esempio completo, nel machine learning, è sempre questa coppia: le caratteristiche osservabili subito, più l'etichetta che di solito si scopre solo dopo (aprendo l'anguria) e che nella vita reale, quando il modello dovrà essere usato su un frutto nuovo, non è ancora disponibile, è proprio quella che vogliamo indovinare.
 
 L'insieme di tutti gli esempi già risolti, usato per far imparare il modello, si chiama **insieme di addestramento** (in inglese *training set*). Più è ampio e vario, angurie di stagioni diverse, di provenienze diverse, comprate in negozi diversi, più il modello avrà visto casi sufficienti per generalizzare bene, invece di imparare stranezze legate a un solo fornitore.
 
@@ -80,13 +83,17 @@ L'insieme di tutti gli esempi già risolti, usato per far imparare il modello, s
 
 Non tutti gli esempi arrivano con un'etichetta pronta. Questo divide il machine learning in due grandi famiglie, che percorreremo entrambe in questo libro.
 
-Nell'**apprendimento supervisionato** ogni esempio ha già la sua risposta giusta, come le angurie aperte dal fruttivendolo, dove sai già se erano mature. Il compito del modello è imparare a prevedere quella risposta anche su frutti nuovi, mai visti, di cui non conosci ancora l'etichetta. La maggior parte di questo libro, dalla Lezione 2 alla Lezione 6, riguarda questa famiglia, che a sua volta si divide in due casi: prevedere una categoria (matura o non matura: lo vedremo nelle Lezioni 2 e 3) si chiama **classificazione**; prevedere un numero (il prezzo giusto di una casa: lo vedremo nella Lezione 4) si chiama **regressione**.
+Nell'**apprendimento supervisionato** ogni esempio ha già la sua risposta giusta, come le angurie aperte dal fruttivendolo, dove sai già quali fossero mature.
+Il compito del modello è imparare a prevedere quella risposta anche su frutti nuovi, mai visti, di cui non conosci ancora l'etichetta. La maggior parte di questo libro, dalla Lezione 2 alla Lezione 6, riguarda questa famiglia, che a sua volta si divide in due casi: prevedere una categoria (matura o non matura: lo vedremo nelle Lezioni 2 e 3) si chiama **classificazione**; prevedere un numero (il prezzo giusto di una casa: lo vedremo nella Lezione 4) si chiama **regressione**.
 
 Nell'**apprendimento non supervisionato**, invece, gli esempi non hanno alcuna etichetta: hai solo un mucchio di frutti, senza che nessuno ti abbia mai detto quali sono maturi. Quello che un modello può fare in questo caso non è "indovinare una risposta", non esiste, ma trovare una **struttura nascosta**: per esempio, accorgersi che i frutti si raggruppano naturalmente in due mucchi ben distinti (probabilmente maturi e non maturi, anche se nessuno lo ha scritto da nessuna parte). Ne parleremo nella Lezione 7.
 
 ### 1.5 Cosa NON fa il machine learning
 
-Vale la pena chiudere questa prima lezione con un chiarimento che eviterà confusioni più avanti. Un modello di machine learning non "capisce" un'anguria nel modo in cui la capisci tu: non sa cosa sia un frutto, non ha mai visto un'anguria vera, non collega il suono cupo a una nozione fisica di maturazione interna. Vede soltanto numeri, il tono del suono codificato come un valore, l'intensità del giallo come un altro, e trova, tra questi numeri e l'etichetta, delle regolarità statistiche che spesso funzionano sorprendentemente bene, ma che restano, nella sostanza, pattern trovati nei dati, non comprensione nel senso in cui la intendiamo noi.
+Vale la pena chiudere questa prima lezione con un chiarimento che eviterà confusioni più avanti. Un modello di machine learning non **comprende** un'anguria nel modo in cui la **comprendi** tu: non sa cosa sia un frutto, non ha mai visto un'anguria vera, non collega il suono cupo a una nozione fisica di maturazione interna. 
+Un modello è in grado di vedere soltanto numeri. Il tono del suono viene codificato come un valore, 
+l'intensità del giallo come un altro. Il modello trova, tra questi numeri e l'etichetta a questi associata, delle regolarità statistiche e nulla più. 
+Queste regolarità statistiche spesso funzionano sorprendentemente bene, ma restano, nella sostanza, pattern trovati nei dati, non comprensione nel senso in cui la intendiamo noi.
 
 Questo limite non è un difetto da correggere: è la natura stessa dello strumento, ed è importante tenerlo a mente proprio perché lo strumento funziona così bene da far dimenticare, a volte, che dietro non c'è nessuna vera comprensione, solo un pattern trovato in centinaia o migliaia di esempi passati.
 
