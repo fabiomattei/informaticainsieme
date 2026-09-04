@@ -9,7 +9,7 @@ layout: page
 
 ### 4.1 Non più sì o no, ma un numero
 
-Le lezioni 2 e 3 hanno affrontato un solo tipo di domanda: matura o non matura, sì o no. Ma moltissime domande interessanti chiedono invece un **numero**: quanto vale una bicicletta usata? Quanti gradi farà domani? Quanto tempo impiegherà un pacco ad arrivare? Prevedere un numero, invece di scegliere fra un gruppo ristretto di categorie, si chiama **regressione**, l'abbiamo già nominata nella Lezione 1, ed è ora di vedere come funziona davvero.
+Le lezioni 2 e 3 hanno affrontato un solo tipo di domanda: **l'anguria è matura o non matura**, **sì o no**. Ma moltissime domande interessanti hanno una risposta che non consiste in un valore booleano (Vero o Falso) ma si risolve in una grandezza misurabile e descrivibile attraverso un **numero**: quanto vale una bicicletta usata? Quanti gradi di temperatura ci saranno domani alle 8 del mattino? Quanto tempo impiegherà un pacco ad arrivare? Prevedere un numero, invece di scegliere fra un gruppo ristretto di categorie, si chiama **regressione**, l'abbiamo già nominata nella Lezione 1, ed è ora di vedere come funziona davvero.
 
 Prendiamo un esempio concreto: vuoi stimare il prezzo giusto per rivendere una bicicletta usata, e l'unico indizio che hai è la sua età in anni. Hai a disposizione i prezzi a cui altre biciclette simili sono state vendute di recente, in funzione della loro età: una specie di listino osservato, non scritto da nessuno a priori.
 
