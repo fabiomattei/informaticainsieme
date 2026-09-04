@@ -117,11 +117,47 @@ vettore.
 
 ## Indicizzazione: [] vs get()
 
-Come per gli array, l'operatore `[]` su un `Vec<T>` va in **panic**
-se l'indice non esiste. Il metodo `.get(i)` restituisce invece un
-`Option<&T>`, senza mai crashare.
+Ci sono due modi per leggere l'elemento a un certo indice di un
+`Vec<T>`, e si comportano in modo molto diverso quando l'indice non
+esiste.
+
+**L'operatore `[]`** è il più diretto, ma è anche il più "fragile":
+se l'indice richiesto è fuori dai limiti del vettore, il programma
+va in **panic** e termina immediatamente. Vale la stessa regola già
+vista per gli array: nessun comportamento indefinito come in C, ma
+comunque un arresto brusco del programma.
 
 #### Esercizio 3
+Copia il seguente codice nell'editor e osserva l'errore a runtime.
+
+{% highlight rust %}
+fn main() {
+    let frutti = vec!["mela", "pera", "banana"];
+    println!("{}", frutti[10]);  // panic: index out of bounds
+}
+{% endhighlight %}
+
+Il messaggio (`index out of bounds: the len is 3 but the index is
+10`) è chiaro, ma a quel punto è **troppo tardi**: il programma si è
+già fermato. `[]` va bene solo quando sei sicuro che l'indice esista
+(ad esempio perché lo hai appena controllato con `.len()`, o perché
+viene da un ciclo `for i in 0..v.len()`).
+
+**Il metodo `.get(i)`**, al contrario, non va mai in panic: restituisce
+sempre un valore, di tipo `Option<&T>`, che può essere di due forme:
+
+- `Some(riferimento)` — l'indice esiste, e il riferimento punta
+  all'elemento trovato;
+- `None` — l'indice non esiste, senza alcun errore o crash: è un
+  valore "normale" da gestire come qualsiasi altro.
+
+In altre parole, `.get()` trasforma un possibile errore a runtime in
+un caso da gestire esplicitamente nel codice, con `match` (o con `if
+let`, come vedremo). È lo stesso `Option<T>` restituito da `.pop()`,
+visto in un esercizio precedente: Rust lo usa sistematicamente ogni
+volta che un'operazione potrebbe "non trovare" un risultato.
+
+#### Esercizio 4
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -145,6 +181,58 @@ fn main() {
 }
 {% endhighlight %}
 
+Qui `f` è solo un nome di variabile a scelta (poteva chiamarsi `x`,
+`valore`, come preferisci): il pattern `Some(f)` fa scattare quel
+ramo del `match` **solo se** il valore è `Some(...)`, ed estrae ciò
+che c'è dentro assegnandolo a `f`. Se `frutti.get(1)` vale
+`Some(&"pera")`, allora dentro quel ramo `f` vale `&"pera"`: è per
+questo che `println!("{}", f)` stampa `pera`. Questo "estrarre il
+valore da dentro `Some`" è il punto centrale del pattern matching:
+non stai leggendo una proprietà di `Option`, stai scomponendo il
+valore stesso in base a quale variante (`Some` o `None`) è.
+
+Quando interessa gestire solo il caso `Some` (ignorando `None`, o
+trattandolo in modo molto semplice), `match` è spesso più verboso del
+necessario. `if let` permette di scrivere lo stesso controllo in modo
+più compatto:
+
+{% highlight rust %}
+fn main() {
+    let frutti = vec!["mela", "pera", "banana"];
+
+    if let Some(f) = frutti.get(1) {
+        println!("Trovato: {}", f);
+    } else {
+        println!("Indice non valido");
+    }
+}
+{% endhighlight %}
+
+Un'altra alternativa comoda è `.unwrap_or()`, che restituisce il
+valore dentro `Some`, oppure un valore di **default** indicato da te
+se è `None` — utile quando basta un valore "di ripiego" invece di un
+messaggio:
+
+{% highlight rust %}
+fn main() {
+    let frutti = vec!["mela", "pera", "banana"];
+
+    let f1 = frutti.get(1).unwrap_or(&"sconosciuto");
+    let f2 = frutti.get(10).unwrap_or(&"sconosciuto");
+
+    println!("{}", f1);  // pera
+    println!("{}", f2);  // sconosciuto
+}
+{% endhighlight %}
+
+Riepilogo:
+
+| Espressione       | Se l'indice esiste       | Se l'indice NON esiste          |
+|--------------------|----------------------------|-----------------------------------|
+| `v[i]`             | restituisce il valore       | **panic**, il programma termina    |
+| `v.get(i)`         | `Some(&valore)`             | `None`, nessun crash               |
+| `v.get(i).unwrap_or(&default)` | il valore trovato | il valore di default indicato       |
+
 Regola pratica: usa `[]` quando sei certo che l'indice esista (ad
 esempio dopo un controllo su `.len()`), usa `.get(i)` quando l'indice
 può ragionevolmente non esistere (input dell'utente, calcolo, ecc.).
@@ -164,7 +252,7 @@ un posto in più a ogni `.push()`: alloca **più spazio di quanto
 serva subito**, così le push successive sono immediate finché c'è
 capacità libera.
 
-#### Esercizio 4
+#### Esercizio 5
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -211,7 +299,7 @@ subito lo spazio giusto ed evitare riallocazioni inutili.
 
 ## Ordinamento con sort
 
-#### Esercizio 5
+#### Esercizio 6
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -238,7 +326,7 @@ Ci sono tre modi principali per scorrere un vettore, a seconda che si
 voglia solo leggere, leggere e modificare, oppure "consumare" il
 vettore prendendone la proprietà degli elementi.
 
-#### Esercizio 6
+#### Esercizio 7
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -303,7 +391,7 @@ fn main() {
 
 ## Leggere un vettore da input
 
-#### Esercizio 7
+#### Esercizio 8
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -342,7 +430,7 @@ Così come un array può contenere altri array, un `Vec` può contenere
 altri `Vec`, ottenendo una struttura a griglia le cui righe (e
 colonne) possono avere dimensioni decise a runtime.
 
-#### Esercizio 8
+#### Esercizio 9
 Copia il seguente codice nell'editor e fallo eseguire.
 
 {% highlight rust %}
@@ -382,26 +470,26 @@ fn main() {
 
 ## Esercizi
 
-#### Esercizio 9
+#### Esercizio 10
 Leggi N numeri in un `Vec<f64>` e calcola la media aritmetica.
 
-#### Esercizio 10
+#### Esercizio 11
 Leggi N interi in un vettore e stampa separatamente i pari e i dispari.
 
-#### Esercizio 11
+#### Esercizio 12
 Leggi N stringhe in un `Vec<String>`, ordinale con `.sort()` e stampale
 in ordine alfabetico.
 
-#### Esercizio 12
+#### Esercizio 13
 Implementa la ricerca lineare: leggi N interi, poi un valore da
 cercare; stampa l'indice della prima occorrenza o -1 se non trovato.
 (Suggerimento: puoi anche usare `.iter().position(|&x| x == valore)`.)
 
-#### Esercizio 13
+#### Esercizio 14
 Scrivi una funzione `fn inverti(v: &mut Vec<i32>)` che inverte l'ordine
 degli elementi in-place (senza usare `.reverse()`).
 
-#### Esercizio 14
+#### Esercizio 15
 Scrivi un programma che crei un `Vec::with_capacity(10)` vuoto,
 stampi `len()` e `capacity()` subito dopo la creazione, poi aggiunga
 10 elementi con `.push()` e stampi di nuovo `len()` e `capacity()`.
