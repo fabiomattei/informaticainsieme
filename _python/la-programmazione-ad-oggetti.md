@@ -600,18 +600,23 @@ L’esempio che abbiamo appena visto ci dà idea su come gestire il codice in mo
 
 #### Esercizio 1:
 
-Crea una classe Python nominata Impiegato con gli attributi matricola, nome, salario e dipartimento e metodi come calcola_salario, imposta_dipartimento e descrivi_impiegato
+Crea una classe Python nominata Impiegato con gli attributi nome, matricola, salario e dipartimento e i metodi imposta_dipartimento, descrivi_impiegato e calcola_salario.
 
-Istanze:
-"ADAMS", "E7876", 50000, "ACCOUNTING"
-"JONES", "E7499", 45000, "RESEARCH"
-"MARTIN", "E7900", 50000, "SALES"
-"SMITH", "E7698", 55000, "OPERATIONS"
-Crea 'imposta_dipartimento' per cambiare l'attributo dipartimento dell'impiegato
-Crea 'print_employee_details' per scrivere il contenuto di tutti gli attributi di un impiegato
-Crea 'calculate_emp_salary' per calcolare l'ammontare del salario prendendo come parametro le ore lavorate dall'impiegate e aggiungendo se necessario lo straordinario:
+Crea il metodo **imposta_dipartimento** per cambiare l'attributo dipartimento dell'impiegato.
+Crea il metodo **descrivi_impiegato** per scrivere il contenuto di tutti gli attributi di un impiegato.
+Crea il metodo **calcola_salario** per calcolare l'ammontare del salario prendendo come parametro le ore lavorate dall'impiegato e aggiungendo, se le ore lavorate superano 50, lo straordinario:
+
+{% highlight python %}
 straordinario = ore_lavorate - 50
-ammontare_straordinario = (straordinario * (salario / 50))
+ammontare_straordinario = straordinario * (salario / 50)
+{% endhighlight %}
+
+Crea le Istanze:
+
+* "ADAMS", "E7876", 50000, "ACCOUNTING"
+* "JONES", "E7499", 45000, "RESEARCH"
+* "MARTIN", "E7900", 50000, "SALES"
+* "SMITH", "E7698", 55000, "OPERATIONS"
 
 #### Esercizio 2:
 
