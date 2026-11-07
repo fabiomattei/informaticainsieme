@@ -67,6 +67,171 @@ Un trucco pratico diffuso è provare diversi valori di k (2, 3, 4, 5...) e osser
 
 Proprio perché non esistono etichette di riferimento, valutare "quanto è bravo" un risultato di clustering è intrinsecamente più sfumato di valutare un modello supervisionato con la matrice di confusione della Lezione 6: non c'è una risposta giusta nota in anticipo con cui confrontarsi. I gruppi trovati da k-means sono utili nella misura in cui aiutano *te*, che li interpreti, a scoprire qualcosa di sensato nei dati, due fasce di prezzo che riflettono davvero due tipi diversi di oggetti in vendita, per esempio, non perché l'algoritmo garantisca in astratto di aver trovato "la verità".
 
+### 7.6 k-means in Python
+
+Il programma applica k-means ai prezzi di un banchetto, una sola caratteristica per volta così da poter leggere facilmente il risultato. La funzione `k_means` segue i passi del paragrafo 7.3, e alla fine viene provato il metodo del gomito del paragrafo 7.4.
+
+{% highlight python %}
+import random
+
+
+def valore_assoluto(numero):
+    """ Il valore assoluto è il numero senza segno.
+    parametro numero: int o float
+    return: int o float, il numero reso positivo
+    Esempio: valore_assoluto(-7) restituisce 7
+    """
+    if numero < 0:
+        return -numero
+    return numero
+
+
+def scegli_centri(punti, k):
+    """ Inizio: k punti diversi, scelti a caso fra gli esempi, fanno da centri di partenza.
+    random.randrange(n) restituisce una posizione a caso fra 0 e n - 1.
+    parametro punti: list di numeri, i prezzi
+    parametro k: int, quanti gruppi vogliamo
+    return: list di k prezzi diversi presi dalla lista.
+    Il risultato dipende dal caso: per esempio scegli_centri([2, 3, 18, 20], 2)
+    potrebbe restituire [18, 3]
+    """
+    centri = []
+    while len(centri) < k:
+        punto = punti[random.randrange(len(punti))]
+        if punto not in centri:
+            centri.append(punto)
+    return centri
+
+
+def assegna(punti, centri):
+    """ Passo di assegnazione: ogni prezzo finisce nel gruppo del centro più vicino.
+    parametro punti: list di numeri, i prezzi
+    parametro centri: list di numeri, un centro per gruppo
+    return: list di list: il gruppo i contiene i prezzi più vicini al centro i
+    Esempio: assegna([1, 2, 10, 11], [1, 10]) restituisce [[1, 2], [10, 11]]
+    """
+    gruppi = []
+    for centro in centri:
+        gruppi.append([])
+    for punto in punti:
+        piu_vicino = 0
+        for i in range(len(centri)):
+            if valore_assoluto(punto - centri[i]) < valore_assoluto(punto - centri[piu_vicino]):
+                piu_vicino = i
+        gruppi[piu_vicino].append(punto)
+    return gruppi
+
+
+def media(valori):
+    """ La media dei valori: la loro somma divisa per quanti sono.
+    parametro valori: list di numeri, non vuota
+    return: float
+    Esempio: media([10, 11]) restituisce 10.5
+    """
+    somma = 0
+    for valore in valori:
+        somma = somma + valore
+    return somma / len(valori)
+
+
+def k_means(punti, k):
+    """ L'algoritmo k-means: assegna i punti ai centri, sposta ogni centro
+    sulla media del suo gruppo, e ripete finché i centri non si muovono più.
+    parametro punti: list di numeri, i prezzi
+    parametro k: int, quanti gruppi vogliamo
+    return: tuple (centri, gruppi): la list dei centri finali
+            e la list dei gruppi, come quella restituita da assegna.
+    Il risultato dipende dai centri di partenza scelti a caso: per esempio
+    k_means([1, 2, 10, 11], 2) potrebbe restituire ([1.5, 10.5], [[1, 2], [10, 11]])
+    oppure gli stessi gruppi in ordine inverso.
+    """
+    centri = scegli_centri(punti, k)
+    fermo = False
+    while fermo == False:
+        gruppi = assegna(punti, centri)
+        # Un gruppo rimasto vuoto conserva il centro che aveva.
+        nuovi_centri = []
+        for i in range(k):
+            if len(gruppi[i]) > 0:
+                nuovi_centri.append(media(gruppi[i]))
+            else:
+                nuovi_centri.append(centri[i])
+        # Se i centri non si muovono più, l'algoritmo è arrivato a convergenza.
+        if nuovi_centri == centri:
+            fermo = True
+        centri = nuovi_centri
+    return centri, gruppi
+
+
+def lontananza(centri, gruppi):
+    """ Somma delle distanze al quadrato di ogni punto dal proprio centro:
+    più è bassa, più i gruppi sono compatti.
+    parametro centri: list di numeri
+    parametro gruppi: list di list, il gruppo i appartiene al centro i
+    return: float
+    Esempio: lontananza([1.5, 10.5], [[1, 2], [10, 11]]) restituisce 1.0
+    (ogni punto dista 0.5 dal suo centro: 4 * 0.5 ** 2 = 1.0)
+    """
+    somma = 0
+    for i in range(len(centri)):
+        for punto in gruppi[i]:
+            somma = somma + (punto - centri[i]) ** 2
+    return somma
+
+
+def migliore(punti, k, tentativi):
+    """ Il risultato di k_means dipende dai centri di partenza: facciamo più
+    tentativi e teniamo quello con i gruppi più compatti.
+    parametro punti: list di numeri, i prezzi
+    parametro k: int, quanti gruppi vogliamo
+    parametro tentativi: int, quante volte eseguire k_means
+    return: tuple (centri, gruppi), come per k_means, con la lontananza più bassa.
+    Per esempio migliore([1, 2, 3, 10, 11], 2, 10) restituisce quasi sicuramente
+    i gruppi [1, 2, 3] e [10, 11], con centri 2.0 e 10.5
+    """
+    centri_migliori, gruppi_migliori = k_means(punti, k)
+    for tentativo in range(tentativi - 1):
+        centri, gruppi = k_means(punti, k)
+        if lontananza(centri, gruppi) < lontananza(centri_migliori, gruppi_migliori):
+            centri_migliori = centri
+            gruppi_migliori = gruppi
+    return centri_migliori, gruppi_migliori
+
+
+# I prezzi degli oggetti del banchetto: nessuna fascia è indicata in anticipo.
+prezzi = [2, 3, 4, 5, 6, 18, 20, 21, 23, 47, 50, 52, 55]
+
+# Fissare il seme rende i numeri casuali sempre uguali a ogni esecuzione.
+random.seed(42)
+
+centri, gruppi = migliore(prezzi, 3, 10)
+for i in range(len(centri)):
+    print("centro", round(centri[i], 2), ":", gruppi[i])
+
+# Il metodo del gomito: osserviamo quanto migliora la compattezza al crescere di k.
+print()
+for k in range(1, 7):
+    centri, gruppi = migliore(prezzi, k, 10)
+    print("k =", k, " lontananza", round(lontananza(centri, gruppi), 1))
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+centro 51.0 : [47, 50, 52, 55]
+centro 20.5 : [18, 20, 21, 23]
+centro 4.0 : [2, 3, 4, 5, 6]
+
+k = 1  lontananza 5019.2
+k = 2  lontananza 662.0
+k = 3  lontananza 57.0
+k = 4  lontananza 32.0
+k = 5  lontananza 24.5
+k = 6  lontananza 16.2
+{% endhighlight %}
+
+L'algoritmo ha trovato le tre fasce di prezzo senza che nessuno le avesse indicate. Anche il gomito è ben visibile: da k = 1 a k = 3 la lontananza crolla, da 5019,2 a 57,0, mentre dopo k = 3 i miglioramenti diventano piccoli. In questo caso è un indizio chiaro perché i dati sono stati scelti con tre gruppi ben distinti: con dati reali il gomito è spesso molto meno netto.
+
 ---
 
 > **Prova tu, Un giro di k-means a mano**

@@ -63,6 +63,140 @@ Nessuna compressione è gratuita, ed è onesto chiudere questa lezione ricordand
 
 Proprio per questo, PCA è uno strumento da usare con criterio, non un passaggio automatico da applicare sempre: quando tutte le caratteristiche originali portano informazione genuinamente diversa e importante, comprimerle può addirittura peggiorare le prestazioni di un modello, buttando via segnale utile insieme al rumore.
 
+### 11.6 PCA in Python
+
+Il programma cerca la prima componente principale di otto pacchi descritti da peso e volume, due caratteristiche ridondanti come quelle citate nel paragrafo 11.2. Per trovare la direzione usa un metodo a passi ripetuti, adatto a mostrare l'idea con poche righe. Dato che peso e volume hanno scale simili, non serve riportarli alla stessa scala, un accorgimento che altrimenti è di solito necessario.
+
+{% highlight python %}
+# In tutto il programma un punto è una tupla (peso, volume) e una direzione
+# è una tupla (x, y) lunga 1, per esempio (0.6, 0.8).
+
+
+def centra(punti):
+    """ Sposta la nuvola di punti in modo che il suo centro cada nell'origine:
+    a ogni punto toglie la media delle x e la media delle y.
+    parametro punti: list di tuple (x, y)
+    return: list di tuple (x, y), i punti spostati
+    Esempio: centra([(1, 2), (3, 6)]) restituisce [(-1.0, -2.0), (1.0, 2.0)]
+    (il centro era (2, 4))
+    """
+    somma_x = 0
+    somma_y = 0
+    for punto in punti:
+        somma_x = somma_x + punto[0]
+        somma_y = somma_y + punto[1]
+    media_x = somma_x / len(punti)
+    media_y = somma_y / len(punti)
+    centrati = []
+    for punto in punti:
+        centrati.append((punto[0] - media_x, punto[1] - media_y))
+    return centrati
+
+
+def covarianze(punti):
+    """ Quanto varia ogni caratteristica (xx, yy) e quanto variano insieme (xy).
+    parametro punti: list di tuple (x, y), già centrati
+    return: tuple (xx, xy, yy) di float
+    Esempio: covarianze([(-1, -2), (1, 2)]) restituisce (1.0, 2.0, 4.0)
+    (xy è positivo: quando x cresce, cresce anche y)
+    """
+    xx = 0
+    yy = 0
+    xy = 0
+    for punto in punti:
+        x, y = punto
+        xx = xx + x * x
+        yy = yy + y * y
+        xy = xy + x * y
+    n = len(punti)
+    return xx / n, xy / n, yy / n
+
+
+def prima_componente(xx, xy, yy, giri):
+    """ Parte da una direzione qualsiasi e la fa ruotare ripetutamente:
+    a ogni giro si avvicina alla direzione in cui i punti variano di più.
+    parametri xx, xy, yy: float, le covarianze restituite da covarianze
+    parametro giri: int, quante volte ripetere la correzione, per esempio 100
+    return: tuple (x, y), la direzione trovata, lunga 1
+    Esempio: prima_componente(1.0, 2.0, 4.0, 100) restituisce circa (0.447, 0.894)
+    (i punti (-1, -2) e (1, 2) stanno sulla retta che sale di 2 per ogni passo a destra)
+    """
+    x = 1.0
+    y = 0.0
+    for giro in range(giri):
+        nuova_x = xx * x + xy * y
+        nuova_y = xy * x + yy * y
+        # Teniamo la direzione lunga 1: conta dove punta, non quanto è lunga.
+        lunghezza = (nuova_x ** 2 + nuova_y ** 2) ** 0.5
+        x = nuova_x / lunghezza
+        y = nuova_y / lunghezza
+    return x, y
+
+
+def proietta(punto, direzione):
+    """ L'ombra del punto lungo la direzione: un solo numero al posto di due.
+    parametro punto: tuple (x, y)
+    parametro direzione: tuple (x, y) lunga 1
+    return: float
+    Esempio: proietta((3, 4), (0.6, 0.8)) restituisce circa 5.0
+    """
+    return punto[0] * direzione[0] + punto[1] * direzione[1]
+
+
+def varianza(valori):
+    """ Quanto i valori si allontanano dallo zero, in media.
+    I valori sono già centrati, quindi basta la media dei quadrati.
+    parametro valori: list di numeri
+    return: float
+    Esempio: varianza([-1, 1, -3, 3]) restituisce 5.0
+    """
+    somma = 0
+    for valore in valori:
+        somma = somma + valore ** 2
+    return somma / len(valori)
+
+
+# Peso e volume di otto pacchi: due caratteristiche che crescono quasi insieme.
+pacchi = [(1.0, 1.3), (2.1, 1.9), (3.0, 3.4), (3.9, 3.8),
+          (5.2, 5.5), (6.1, 5.8), (7.0, 7.3), (8.1, 7.8)]
+
+centrati = centra(pacchi)
+xx, xy, yy = covarianze(centrati)
+
+direzione = prima_componente(xx, xy, yy, 100)
+# In due dimensioni la seconda componente è semplicemente la perpendicolare.
+perpendicolare = (-direzione[1], direzione[0])
+
+ombre = []
+ombre_perpendicolari = []
+for punto in centrati:
+    ombre.append(proietta(punto, direzione))
+    ombre_perpendicolari.append(proietta(punto, perpendicolare))
+
+totale = varianza(ombre) + varianza(ombre_perpendicolari)
+print("Prima componente:", (round(direzione[0], 3), round(direzione[1], 3)))
+print("Variazione conservata dalla prima: " + str(round(100 * varianza(ombre) / totale, 1)) + "%")
+print("Variazione lungo la perpendicolare: "
+      + str(round(100 * varianza(ombre_perpendicolari) / totale, 1)) + "%")
+
+# Ogni pacco è ora descritto da un solo numero invece che da due.
+compressi = []
+for ombra in ombre:
+    compressi.append(round(ombra, 2))
+print("Pacchi compressi:", compressi)
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+Prima componente: (0.719, 0.695)
+Variazione conservata dalla prima: 99.6%
+Variazione lungo la perpendicolare: 0.4%
+Pacchi compressi: [-4.85, -3.64, -1.95, -1.02, 1.09, 1.95, 3.64, 4.78]
+{% endhighlight %}
+
+La direzione trovata è quasi la diagonale, e da sola conserva il 99,6% della variazione: possiamo descrivere ogni pacco con un solo numero perdendo pochissimo. Quel numero, però, non è più né il peso né il volume, ma un mescolamento dei due, esattamente il prezzo da pagare descritto nel paragrafo 11.5.
+
 ---
 
 > **Prova tu, La direzione giusta**

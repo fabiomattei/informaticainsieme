@@ -69,6 +69,146 @@ Naive Bayes resta oggi uno degli algoritmi più usati per problemi con moltissim
 
 Il suo punto debole emerge quando l'assunzione di indipendenza viene tradita in modo troppo vistoso: se due indizi sono fortemente collegati fra loro e portano, di fatto, la stessa informazione ripetuta due volte, Naive Bayes rischia di "contarla due volte", dando più peso di quanto meriterebbe a quell'informazione duplicata. È un limite da conoscere, non un motivo per scartare l'algoritmo: nella pratica, specialmente con indizi numerosi come le parole di un testo, il vantaggio della semplicità e della velocità supera quasi sempre lo svantaggio dell'assunzione semplificata.
 
+### 9.6 Naive Bayes in Python
+
+Il programma impara da undici email di esempio, contando in quante compare ogni parola, e assegna poi un punteggio a ogni categoria come descritto nel paragrafo 9.4. Ogni indizio moltiplica il punteggio di una categoria per un numero fra 0 e 1, tanto più piccolo quanto meno l'indizio è tipico di quella categoria: alla fine i punteggi sono numeri piccolissimi, perciò il programma stampa quante volte il punteggio vincente supera l'altro.
+
+{% highlight python %}
+def parole_diverse(testo):
+    """ Spezza il testo nelle sue parole, separate da spazi, tenendo
+    ogni parola una sola volta anche se compare più volte.
+    parametro testo: string
+    return: list di string, le parole nell'ordine in cui compaiono
+    Esempio: parole_diverse("click qui click") restituisce ["click", "qui"]
+    """
+    parole = []
+    parola = ""
+    for carattere in testo + " ":
+        if carattere == " ":
+            if parola != "" and parola not in parole:
+                parole.append(parola)
+            parola = ""
+        else:
+            parola = parola + carattere
+    return parole
+
+
+def addestra(email):
+    """ L'addestramento è solo un conteggio: per ogni categoria, quante email
+    ci sono e in quante di queste compare ogni parola.
+    parametro email: list di tuple (testo, categoria), per esempio
+                     [("offerta gratis", "spam"), ("ti invio la fattura", "normale")]
+    return: tuple (totali, conteggi, vocabolario), il modello:
+            totali è un dict categoria -> numero di email,
+            conteggi è un dict categoria -> dict parola -> in quante email compare,
+            vocabolario è la list di tutte le parole viste.
+    Esempio: addestra([("gratis click", "spam"), ("fattura", "normale")])
+             restituisce ({"spam": 1, "normale": 1},
+                          {"spam": {"gratis": 1, "click": 1}, "normale": {"fattura": 1}},
+                          ["gratis", "click", "fattura"])
+    """
+    totali = {}
+    conteggi = {}
+    vocabolario = []
+    for esempio in email:
+        testo, categoria = esempio
+        if categoria not in totali:
+            totali[categoria] = 0
+            conteggi[categoria] = {}
+        totali[categoria] = totali[categoria] + 1
+        for parola in parole_diverse(testo):
+            if parola in conteggi[categoria]:
+                conteggi[categoria][parola] = conteggi[categoria][parola] + 1
+            else:
+                conteggi[categoria][parola] = 1
+            if parola not in vocabolario:
+                vocabolario.append(parola)
+    return totali, conteggi, vocabolario
+
+
+def punteggi(modello, testo):
+    """ Assegna un punteggio a ogni categoria: si parte da quanto è comune la
+    categoria e lo si moltiplica per un fattore per ogni parola del vocabolario.
+    parametro modello: tuple (totali, conteggi, vocabolario) restituita da addestra
+    parametro testo: string, l'email da classificare
+    return: dict categoria -> punteggio (float): vince il più alto
+    Esempio: punteggi(addestra([("gratis click", "spam"), ("fattura", "normale")]),
+                      "gratis") restituisce circa {"spam": 0.074, "normale": 0.037}
+    (per lo spam: 1/2 delle email, poi "gratis" presente 2/3, "click" assente 1/3,
+    "fattura" assente 2/3, e 1/2 * 2/3 * 1/3 * 2/3 = 0.074)
+    """
+    totali, conteggi, vocabolario = modello
+    parole = parole_diverse(testo)
+    numero_email = 0
+    for categoria in totali:
+        numero_email = numero_email + totali[categoria]
+
+    risultato = {}
+    for categoria in totali:
+        # Si parte da quanto è comune la categoria in generale.
+        punteggio = totali[categoria] / numero_email
+        for parola in vocabolario:
+            presenze = 0
+            if parola in conteggi[categoria]:
+                presenze = conteggi[categoria][parola]
+            # Quanto spesso la parola compare in questa categoria. Il +1 e il +2
+            # evitano che una parola mai vista in una categoria la escluda del tutto.
+            p = (presenze + 1) / (totali[categoria] + 2)
+            # Ecco l'ingenuità: ogni indizio viene combinato con gli altri come se
+            # fosse indipendente. Un indizio tipico della categoria moltiplica il
+            # punteggio per un numero vicino a 1, uno raro lo rimpicciolisce molto.
+            # Conta anche l'assenza di una parola, non solo la presenza.
+            if parola in parole:
+                punteggio = punteggio * p
+            else:
+                punteggio = punteggio * (1 - p)
+        risultato[categoria] = punteggio
+    return risultato
+
+
+email = [
+    ("vinci subito un premio gratis", "spam"),
+    ("offerta gratis click qui", "spam"),
+    ("click qui per il tuo premio", "spam"),
+    ("sconto incredibile offerta click", "spam"),
+    ("gratis solo oggi vinci sconto", "spam"),
+    ("ti invio la fattura di marzo", "normale"),
+    ("riunione di lavoro domani mattina", "normale"),
+    ("domani ti mando la fattura", "normale"),
+    ("il verbale della riunione di oggi", "normale"),
+    ("ci vediamo domani per il pranzo", "normale"),
+    ("grazie per il pranzo di oggi", "normale"),
+]
+
+modello = addestra(email)
+
+for testo in ["vinci subito un premio",
+              "verbale della riunione di domani",
+              "un premio per la riunione"]:
+    risultato = punteggi(modello, testo)
+    spam = risultato["spam"]
+    normale = risultato["normale"]
+    print(testo)
+    # I punteggi sono numeri piccolissimi: confrontiamo quante volte uno supera l'altro.
+    if spam > normale:
+        print("  spam, " + str(round(spam / normale, 1)) + " volte più probabile di normale")
+    else:
+        print("  normale, " + str(round(normale / spam, 1)) + " volte più probabile di spam")
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+vinci subito un premio
+  spam, 250.8 volte più probabile di normale
+verbale della riunione di domani
+  normale, 744.4 volte più probabile di spam
+un premio per la riunione
+  normale, 1.1 volte più probabile di spam
+{% endhighlight %}
+
+Nei primi due casi gli indizi puntano tutti nella stessa direzione, e il distacco è netto. Nel terzo, "premio" spinge verso lo spam e "riunione" verso le email normali: i due indizi quasi si annullano e i due punteggi risultano praticamente uguali. Con così pochi esempi i numeri sono solo dimostrativi, un filtro vero ne conta milioni.
+
 ---
 
 > **Prova tu, Classifica tre email nuove**

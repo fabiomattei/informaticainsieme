@@ -60,6 +60,170 @@ Le tredici lezioni di questo libro hanno percorso, un pezzo alla volta, gli stru
 
 C'è però un limite condiviso da tutti questi algoritmi, che vale la pena rendere esplicito proprio ora che il libro si chiude: ciascuno di essi lavora su **caratteristiche già scelte da un essere umano**, il suono, il colore del puntino, il peso, il prezzo, la parola presente o assente. Funzionano magnificamente quando qualcuno sa già quali indizi contano e sa misurarli. Ma cosa succede quando i dati non sono una tabella ordinata di numeri, bensì i milioni di pixel di una fotografia, o il flusso grezzo di parole di un testo, dati dove nessuno saprebbe elencare a mano "le caratteristiche giuste" da misurare? È esattamente a questo punto che il testimone passa alle reti neurali di *Come Pensano le Reti Neurali*: un modo di imparare *anche le caratteristiche stesse* direttamente dai dati grezzi, invece di riceverle già pronte, l'ultimo, decisivo passo che avvicina il machine learning ai chatbot di *Come Pensano le Macchine che Parlano*.
 
+### 13.7 Trovare le anomalie in Python
+
+Il programma applica i due modi di questa lezione alle letture di due sensori. Il secondo è una versione semplificata dell'idea di Isolation Forest: invece di costruire una foresta di alberi, per ogni punto ripete molte volte i tagli casuali e ne fa la media.
+
+{% highlight python %}
+import random
+
+# In tutto il programma una lettura è una tupla (temperatura, vibrazione),
+# per esempio (21, 6).
+
+
+def distanza(a, b):
+    """ La distanza in linea d'aria fra due punti, con il teorema di Pitagora:
+    elevare alla 0.5 equivale a fare la radice quadrata.
+    parametri a, b: tuple (temperatura, vibrazione)
+    return: float
+    Esempio: distanza((20, 5), (23, 9)) restituisce 5.0
+    (la radice quadrata di 3 ** 2 + 4 ** 2 = 25)
+    """
+    return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
+
+
+def distanza_dal_vicinato(punti, punto, k):
+    """ Primo modo: la distanza dal k-esimo vicino più prossimo.
+    Un punto isolato non ha nessuno vicino, quindi ottiene un valore alto.
+    Le distanze vengono messe in ordine crescente: ognuna è aggiunta in fondo
+    e fatta scivolare indietro finché quella prima non è più piccola.
+    parametro punti: list di letture
+    parametro punto: tuple, la lettura da giudicare, presente in punti
+    parametro k: int, quale vicino guardare: 1 il più vicino, 2 il secondo...
+    return: float
+    Esempio: distanza_dal_vicinato([(0, 0), (1, 0), (3, 0), (10, 0)], (0, 0), 2)
+             restituisce 3.0
+    Esempio: distanza_dal_vicinato([(0, 0), (1, 0), (3, 0), (10, 0)], (10, 0), 2)
+             restituisce 9.0
+    """
+    distanze = []
+    for altro in punti:
+        if altro != punto:
+            distanze.append(distanza(punto, altro))
+            i = len(distanze) - 1
+            while i > 0 and distanze[i - 1] > distanze[i]:
+                temp = distanze[i]
+                distanze[i] = distanze[i - 1]
+                distanze[i - 1] = temp
+                i = i - 1
+    return distanze[k - 1]
+
+
+def quanti_diversi(gruppo):
+    """ Letture identiche non si possono separare: contiamo solo quelle diverse.
+    parametro gruppo: list di letture
+    return: int
+    Esempio: quanti_diversi([(20, 5), (20, 5), (21, 6)]) restituisce 2
+    """
+    diversi = []
+    for punto in gruppo:
+        if punto not in diversi:
+            diversi.append(punto)
+    return len(diversi)
+
+
+def tagli_per_isolare(punti, punto):
+    """ Secondo modo: quanti tagli casuali servono per lasciare il punto da solo?
+    A ogni giro sceglie a caso una caratteristica e un punto in cui tagliarla,
+    e tiene solo il pezzo in cui si trova il punto che stiamo isolando.
+    parametro punti: list di letture
+    parametro punto: tuple, la lettura da isolare, presente in punti
+    return: int, il numero di tagli; cambia da una volta all'altra,
+            ma un punto isolato richiede di solito pochi tagli.
+    Esempio: tagli_per_isolare([(0, 0), (10, 0)], (10, 0)) restituisce 1
+    (qualunque taglio fra 0 e 10 sulla temperatura separa i due punti)
+    """
+    gruppo = punti
+    tagli = 0
+    while quanti_diversi(gruppo) > 1:
+        # Sceglie a caso una caratteristica: 0 è la temperatura, 1 la vibrazione.
+        c = random.randrange(2)
+        minimo = gruppo[0][c]
+        massimo = gruppo[0][c]
+        for p in gruppo:
+            if p[c] < minimo:
+                minimo = p[c]
+            if p[c] > massimo:
+                massimo = p[c]
+        # Se su questa caratteristica i valori sono tutti uguali, il taglio
+        # non separerebbe nulla: si riprova con un'altra scelta.
+        if minimo < massimo:
+            taglio = minimo + random.random() * (massimo - minimo)
+            pezzo = []
+            for p in gruppo:
+                if punto[c] < taglio and p[c] < taglio:
+                    pezzo.append(p)
+                elif punto[c] >= taglio and p[c] >= taglio:
+                    pezzo.append(p)
+            gruppo = pezzo
+            tagli = tagli + 1
+    return tagli
+
+
+def tagli_medi(punti, punto, tentativi):
+    """ Un taglio casuale può essere fortunato: la media su molti tentativi
+    è l'equivalente della "foresta" di Isolation Forest.
+    parametro punti: list di letture
+    parametro punto: tuple, la lettura da isolare
+    parametro tentativi: int, quante volte ripetere i tagli, per esempio 500
+    return: float, il numero medio di tagli: più è basso, più il punto è sospetto
+    Esempio: tagli_medi([(0, 0), (10, 0)], (10, 0), 5) restituisce 1.0
+    """
+    somma = 0
+    for tentativo in range(tentativi):
+        somma = somma + tagli_per_isolare(punti, punto)
+    return somma / tentativi
+
+
+# Temperatura e vibrazione di una macchina, misurate da due sensori.
+# Non serve nessuna etichetta: l'algoritmo non sa quali letture siano anomale.
+letture = [(20, 5), (21, 5), (20, 6), (22, 6), (21, 7), (23, 6), (22, 5),
+           (21, 6), (23, 7), (20, 7), (22, 7), (35, 18)]
+
+# Fissare il seme rende i numeri casuali sempre uguali a ogni esecuzione.
+random.seed(42)
+
+# Per ogni lettura calcoliamo la distanza dal terzo vicino più prossimo.
+# Un dizionario può usare una tupla come chiave.
+vicinato = {}
+for punto in letture:
+    vicinato[punto] = distanza_dal_vicinato(letture, punto, 3)
+
+# Ordiniamo mettendo per prime le letture più sospette, cioè più lontane dal vicinato.
+ordinate = []
+for punto in letture:
+    ordinate.append(punto)
+    i = len(ordinate) - 1
+    while i > 0 and vicinato[ordinate[i - 1]] < vicinato[ordinate[i]]:
+        temp = ordinate[i]
+        ordinate[i] = ordinate[i - 1]
+        ordinate[i - 1] = temp
+        i = i - 1
+
+for punto in ordinate:
+    print(str(punto) + ": distanza " + str(round(vicinato[punto], 2))
+          + ", tagli medi " + str(round(tagli_medi(letture, punto, 500), 2)))
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+(35, 18): distanza 17.03, tagli medi 1.19
+(20, 5): distanza 1.41, tagli medi 4.0
+(23, 6): distanza 1.41, tagli medi 4.36
+(22, 5): distanza 1.41, tagli medi 4.38
+(23, 7): distanza 1.41, tagli medi 4.16
+(20, 7): distanza 1.41, tagli medi 4.17
+(21, 5): distanza 1.0, tagli medi 4.65
+(20, 6): distanza 1.0, tagli medi 4.71
+(22, 6): distanza 1.0, tagli medi 5.38
+(21, 7): distanza 1.0, tagli medi 4.93
+(21, 6): distanza 1.0, tagli medi 5.37
+(22, 7): distanza 1.0, tagli medi 4.97
+{% endhighlight %}
+
+I due metodi concordano. La lettura (35, 18) ha una distanza dal vicinato di oltre dieci volte superiore alle altre e viene isolata in poco più di un taglio, contro i quattro o cinque necessari per le letture normali. Il programma non ha mai saputo quale lettura fosse anomala: lo ha ricavato solo da ciò che le altre hanno in comune.
+
 ---
 
 > **Prova tu, Trova il dato che non torna**

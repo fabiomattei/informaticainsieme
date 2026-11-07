@@ -84,6 +84,232 @@ Questo secondo tipo di limite non è un dettaglio marginale: un albero lasciato 
 
 A differenza di k-NN, che non spiega mai *perché* prevede una certa etichetta, si limita a votare fra i vicini, un albero decisionale, una volta costruito, può essere letto e capito riga per riga, esattamente come una ricetta o un diagramma di flusso: "se il suono è cupo e il puntino giallo è pallido, allora non matura". Questa qualità si chiama **interpretabilità**, ed è la ragione per cui gli alberi decisionali restano popolari in settori dove serve poter spiegare una decisione, per esempio, perché una banca ha rifiutato un prestito, non solo prenderla correttamente.
 
+### 3.6 Un albero decisionale in Python
+
+Il programma qui sotto costruisce un albero come descritto nel paragrafo 3.4. Per misurare la purezza usa l'impurità di Gini, il calcolo citato nel paragrafo 3.3, e la funzione `costruisci` chiama se stessa per ripetere la ricerca della domanda migliore dentro ogni gruppo.
+
+{% highlight python %}
+# In tutto il programma un esempio è una tupla (scheda, etichetta):
+# la scheda è un dizionario con le caratteristiche dell'anguria, per esempio
+# ({"suono": "cupo", "giallo": "intenso"}, "sì").
+
+
+def conta_etichette(esempi):
+    """ Conta quante volte compare ogni etichetta.
+    parametro esempi: list di tuple (scheda, etichetta)
+    return: dict etichetta -> numero di esempi con quell'etichetta
+    Esempio: conta_etichette([({"suono": "cupo"}, "sì"), ({"suono": "acuto"}, "no"),
+                              ({"suono": "cupo"}, "sì")]) restituisce {"sì": 2, "no": 1}
+    """
+    conteggi = {}
+    for esempio in esempi:
+        etichetta = esempio[1]
+        if etichetta in conteggi:
+            conteggi[etichetta] = conteggi[etichetta] + 1
+        else:
+            conteggi[etichetta] = 1
+    return conteggi
+
+
+def piu_frequente(esempi):
+    """ L'etichetta che compare più volte fra gli esempi.
+    parametro esempi: list di tuple (scheda, etichetta)
+    return: string, l'etichetta più frequente (a parità, quella vista per prima)
+    Esempio: piu_frequente([({"suono": "cupo"}, "sì"), ({"suono": "acuto"}, "no"),
+                            ({"suono": "cupo"}, "sì")]) restituisce "sì"
+    """
+    conteggi = conta_etichette(esempi)
+    vincitrice = ""
+    for etichetta in conteggi:
+        if vincitrice == "" or conteggi[etichetta] > conteggi[vincitrice]:
+            vincitrice = etichetta
+    return vincitrice
+
+
+def impurita(esempi):
+    """ Impurità di Gini: vale 0 se tutti gli esempi hanno la stessa etichetta,
+    e cresce quanto più le etichette sono mescolate.
+    Si calcola come 1 meno la somma dei quadrati delle frazioni di ogni etichetta.
+    parametro esempi: list di tuple (scheda, etichetta)
+    return: float fra 0 e 1
+    Esempio: impurita([({"suono": "cupo"}, "sì"), ({"suono": "cupo"}, "sì")]) restituisce 0
+    Esempio: impurita([({"suono": "cupo"}, "sì"), ({"suono": "acuto"}, "no")]) restituisce 0.5
+    (metà sì e metà no: 1 - (0.5 ** 2 + 0.5 ** 2) = 0.5)
+    """
+    conteggi = conta_etichette(esempi)
+    risultato = 1
+    for etichetta in conteggi:
+        frazione = conteggi[etichetta] / len(esempi)
+        risultato = risultato - frazione ** 2
+    return risultato
+
+
+def dividi(esempi, caratteristica, valore):
+    """ Pone una domanda sì/no, per esempio "suono è cupo?", e separa gli esempi.
+    parametro esempi: list di tuple (scheda, etichetta)
+    parametro caratteristica: string, per esempio "suono"
+    parametro valore: string, per esempio "cupo"
+    return: tuple di due list: gli esempi che rispondono sì e quelli che rispondono no
+    Esempio: dividi([({"suono": "cupo"}, "sì"), ({"suono": "acuto"}, "no")], "suono", "cupo")
+             restituisce ([({"suono": "cupo"}, "sì")], [({"suono": "acuto"}, "no")])
+    """
+    si = []
+    no = []
+    for esempio in esempi:
+        if esempio[0][caratteristica] == valore:
+            si.append(esempio)
+        else:
+            no.append(esempio)
+    return si, no
+
+
+def domanda_migliore(esempi):
+    """ Prova tutte le domande possibili e tiene quella che lascia i gruppi più puri.
+    parametro esempi: list di tuple (scheda, etichetta)
+    return: tuple (caratteristica, valore) della domanda migliore,
+            oppure None se nessuna domanda rende i gruppi più puri
+    Esempio: domanda_migliore([({"suono": "cupo", "peso": "pesante"}, "sì"),
+                               ({"suono": "acuto", "peso": "pesante"}, "no")])
+             restituisce ("suono", "cupo")
+    (il peso è uguale per entrambe e non aiuta a distinguerle)
+    """
+    migliore = None
+    impurita_minima = impurita(esempi)
+    for caratteristica in esempi[0][0]:
+        # Raccoglie i valori possibili di questa caratteristica, senza doppioni.
+        valori = []
+        for esempio in esempi:
+            if esempio[0][caratteristica] not in valori:
+                valori.append(esempio[0][caratteristica])
+        for valore in valori:
+            si, no = dividi(esempi, caratteristica, valore)
+            # Una domanda che lascia vuoto uno dei due gruppi non divide nulla.
+            if len(si) > 0 and len(no) > 0:
+                # Media delle due impurità, pesata sulla grandezza dei gruppi.
+                impurita_dopo = (len(si) * impurita(si) + len(no) * impurita(no)) / len(esempi)
+                if impurita_dopo < impurita_minima:
+                    impurita_minima = impurita_dopo
+                    migliore = (caratteristica, valore)
+    return migliore
+
+
+def costruisci(esempi, profondita):
+    """ Costruisce l'albero: cerca la domanda migliore, divide gli esempi
+    e ripete lo stesso procedimento dentro ciascuno dei due gruppi.
+    Si ferma se il limite di profondità è raggiunto o se nessuna domanda
+    aumenta la purezza: la foglia contiene l'etichetta più frequente.
+    parametro esempi: list di tuple (scheda, etichetta)
+    parametro profondita: int, quante domande al massimo una dopo l'altra
+    return: dict, un nodo dell'albero. Una foglia è {"foglia": etichetta};
+            un nodo con una domanda ha le chiavi "caratteristica", "valore",
+            "si" e "no", dove "si" e "no" sono a loro volta nodi.
+    Esempio: costruisci([({"suono": "cupo"}, "sì"), ({"suono": "acuto"}, "no")], 1)
+             restituisce {"caratteristica": "suono", "valore": "cupo",
+                          "si": {"foglia": "sì"}, "no": {"foglia": "no"}}
+    """
+    domanda = None
+    if profondita > 0:
+        domanda = domanda_migliore(esempi)
+    if domanda == None:
+        return {"foglia": piu_frequente(esempi)}
+
+    caratteristica, valore = domanda
+    si, no = dividi(esempi, caratteristica, valore)
+    return {"caratteristica": caratteristica,
+            "valore": valore,
+            "si": costruisci(si, profondita - 1),
+            "no": costruisci(no, profondita - 1)}
+
+
+def prevedi(nodo, scheda):
+    """ Scende dalla radice seguendo le risposte, finché non arriva a una foglia.
+    parametro nodo: dict, la radice dell'albero restituito da costruisci
+    parametro scheda: dict con le caratteristiche dell'anguria da classificare
+    return: string, l'etichetta della foglia raggiunta
+    Esempio: prevedi({"caratteristica": "suono", "valore": "cupo",
+                      "si": {"foglia": "sì"}, "no": {"foglia": "no"}},
+                     {"suono": "acuto"}) restituisce "no"
+    """
+    while "foglia" not in nodo:
+        if scheda[nodo["caratteristica"]] == nodo["valore"]:
+            nodo = nodo["si"]
+        else:
+            nodo = nodo["no"]
+    return nodo["foglia"]
+
+
+def stampa(nodo, rientro):
+    """ Un albero si può leggere: lo stampiamo come un diagramma.
+    parametro nodo: dict, un nodo dell'albero restituito da costruisci
+    parametro rientro: string di spazi messa davanti a ogni riga;
+                       si parte da "" e cresce a ogni livello dell'albero
+    return: niente, scrive l'albero sul video.
+    Per esempio stampa({"caratteristica": "suono", "valore": "cupo",
+    "si": {"foglia": "sì"}, "no": {"foglia": "no"}}, "") scrive:
+        suono è cupo?
+          se sì:
+            matura? sì
+          se no:
+            matura? no
+    """
+    if "foglia" in nodo:
+        print(rientro + "matura? " + nodo["foglia"])
+    else:
+        print(rientro + nodo["caratteristica"] + " è " + nodo["valore"] + "?")
+        print(rientro + "  se sì:")
+        stampa(nodo["si"], rientro + "    ")
+        print(rientro + "  se no:")
+        stampa(nodo["no"], rientro + "    ")
+
+
+def anguria(suono, giallo, peso, etichetta):
+    """ Prepara un esempio, per scrivere la lista delle angurie in modo più corto.
+    parametri suono, giallo, peso, etichetta: string
+    return: tuple (scheda, etichetta)
+    Esempio: anguria("cupo", "intenso", "pesante", "sì")
+             restituisce ({"suono": "cupo", "giallo": "intenso", "peso": "pesante"}, "sì")
+    """
+    return ({"suono": suono, "giallo": giallo, "peso": peso}, etichetta)
+
+
+angurie = [
+    anguria("cupo", "intenso", "pesante", "sì"),
+    anguria("cupo", "intenso", "leggero", "sì"),
+    anguria("cupo", "intenso", "pesante", "sì"),
+    anguria("cupo", "intenso", "leggero", "sì"),
+    anguria("cupo", "pallido", "pesante", "no"),
+    anguria("cupo", "pallido", "leggero", "no"),
+    anguria("acuto", "intenso", "pesante", "no"),
+    anguria("acuto", "intenso", "leggero", "no"),
+    anguria("acuto", "pallido", "pesante", "no"),
+    anguria("acuto", "pallido", "leggero", "no"),
+]
+
+# Il limite di profondità, qui 3, è il freno di cui parla il paragrafo 3.4.
+albero = costruisci(angurie, 3)
+stampa(albero, "")
+
+nuova = {"suono": "cupo", "giallo": "pallido", "peso": "pesante"}
+print("Anguria nuova, matura?", prevedi(albero, nuova))
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+suono è cupo?
+  se sì:
+    giallo è intenso?
+      se sì:
+        matura? sì
+      se no:
+        matura? no
+  se no:
+    matura? no
+Anguria nuova, matura? no
+{% endhighlight %}
+
+L'albero ha scelto da solo le domande, e ha ignorato il peso perché su questi esempi non aiuta a separare le etichette. L'albero stampato si legge come una ricetta: è l'interpretabilità di cui parla il paragrafo 3.5.
+
 ---
 
 > **Prova tu, Costruisci la radice dell'albero**

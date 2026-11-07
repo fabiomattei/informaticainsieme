@@ -81,6 +81,118 @@ Il primo è il **costo**: per ogni singola previsione, k-NN deve calcolare la di
 Il secondo è più sottile e riguarda proprio la nozione di **vicinanza**: funziona bene quando le caratteristiche numeriche sono comparabili e ben scelte, ma se una caratteristica è misurata su una scala molto più ampia delle altre (il peso in grammi, da 2000 a 9000, contro un punteggio di giallo da 0 a 10), finisce per **dominare** da sola il calcolo della distanza, schiacciando il contributo di tutte le altre. È un problema pratico, risolvibile riportando tutte le caratteristiche sulla stessa scala prima di calcolare le distanze (normalizzazione), 
 un dettaglio tecnico che qui basta conoscere di nome, senza approfondirlo.
 
+### 2.6 k-NN in Python
+
+I tre passi del paragrafo 2.3 si scrivono in Python usando solo liste, dizionari, cicli e funzioni. Nel programma qui sotto ogni anguria è una coppia di numeri, suono e giallo, accompagnata dalla sua etichetta, e i commenti spiegano cosa fa ogni passaggio.
+
+{% highlight python %}
+def valore_assoluto(numero):
+    """ Il valore assoluto è il numero senza segno.
+    parametro numero: int o float
+    return: int o float, il numero reso positivo
+    Esempio: valore_assoluto(-5) restituisce 5
+    Esempio: valore_assoluto(3) restituisce 3
+    """
+    if numero < 0:
+        return -numero
+    return numero
+
+
+def distanza(a, b):
+    """ Misura quanto sono lontani due punti: per ogni caratteristica calcola
+    il valore assoluto della differenza, poi somma i risultati.
+    parametro a: tuple (suono, giallo), per esempio (8, 7)
+    parametro b: tuple (suono, giallo), per esempio (3, 4)
+    return: int o float, la distanza fra i due punti
+    Esempio: distanza((8, 7), (3, 4)) restituisce 8
+    (infatti |8 - 3| + |7 - 4| = 5 + 3 = 8)
+    """
+    suono_a, giallo_a = a
+    suono_b, giallo_b = b
+    return valore_assoluto(suono_a - suono_b) + valore_assoluto(giallo_a - giallo_b)
+
+
+def etichette_dei_vicini(esempi, nuovo, k):
+    """ Cerca k volte l'esempio più vicino fra quelli non ancora scelti
+    e ne raccoglie l'etichetta.
+    parametro esempi: list di tuple ((suono, giallo), etichetta),
+                      per esempio [((8, 7), "sì"), ((2, 3), "no")]
+    parametro nuovo: tuple (suono, giallo), il punto da classificare
+    parametro k: int, quanti vicini considerare
+    return: list delle k etichette, dalla più vicina alla più lontana
+    Esempio: etichette_dei_vicini([((8, 7), "sì"), ((2, 3), "no"), ((3, 1), "no")], (3, 4), 2)
+             restituisce ["no", "no"]
+    """
+    # esempi[i][0] sono le coordinate dell'esempio, esempi[i][1] la sua etichetta.
+    scelti = []
+    etichette = []
+    for giro in range(k):
+        piu_vicino = -1
+        for i in range(len(esempi)):
+            if i not in scelti:
+                d = distanza(esempi[i][0], nuovo)
+                if piu_vicino == -1 or d < distanza_minima:
+                    piu_vicino = i
+                    distanza_minima = d
+        scelti.append(piu_vicino)
+        etichette.append(esempi[piu_vicino][1])
+    return etichette
+
+
+def piu_votata(etichette):
+    """ Conta i voti in un dizionario (etichetta -> numero di voti) e cerca
+    l'etichetta con più voti, come si cerca il massimo in una lista.
+    parametro etichette: list di string, per esempio ["no", "sì", "no"]
+    return: string, l'etichetta più frequente (a parità, quella vista per prima)
+    Esempio: piu_votata(["no", "sì", "no"]) restituisce "no"
+    """
+    voti = {}
+    for etichetta in etichette:
+        if etichetta in voti:
+            voti[etichetta] = voti[etichetta] + 1
+        else:
+            voti[etichetta] = 1
+    vincitrice = ""
+    for etichetta in voti:
+        if vincitrice == "" or voti[etichetta] > voti[vincitrice]:
+            vincitrice = etichetta
+    return vincitrice
+
+
+def prevedi(esempi, nuovo, k):
+    """ L'algoritmo k-NN: fa votare i k esempi più vicini al punto nuovo.
+    parametro esempi: list di tuple ((suono, giallo), etichetta)
+    parametro nuovo: tuple (suono, giallo)
+    parametro k: int, quanti vicini fanno votare
+    return: string, l'etichetta prevista
+    Esempio: prevedi([((8, 7), "sì"), ((2, 3), "no"), ((3, 1), "no")], (3, 4), 1)
+             restituisce "no"
+    """
+    vicini = etichette_dei_vicini(esempi, nuovo, k)
+    return piu_votata(vicini)
+
+
+# Gli esempi già noti: k-NN non fa altro che tenerli in memoria.
+# Ogni esempio è formato dalle coordinate (suono, giallo) e dall'etichetta.
+angurie = [
+    ((8, 7), "sì"),
+    ((7, 9), "sì"),
+    ((2, 3), "no"),
+    ((3, 1), "no"),
+    ((9, 8), "sì"),
+]
+
+# L'anguria nuova, di cui vogliamo prevedere l'etichetta.
+nuova = (3, 4)
+
+# Tutto il calcolo avviene qui, al momento della previsione:
+# è il motivo per cui k-NN si dice "pigro".
+print("k = 3:", prevedi(angurie, nuova, 3))  # stampa: k = 3: no
+print("k = 5:", prevedi(angurie, nuova, 5))  # stampa: k = 5: sì
+{% endhighlight %}
+
+Il risultato mostra bene quanto conta la scelta di k, di cui abbiamo parlato nel paragrafo 2.4. Con k = 3 i vicini sono due angurie non mature, le più prossime, e una matura, quindi vince il "no". Con k = 5 votano tutte le angurie note: quelle mature sono la maggioranza, e la previsione diventa "sì" anche se il punto nuovo si trova nella zona delle non mature.
+
 ---
 
 > **Prova tu, Trova i vicini più vicini**

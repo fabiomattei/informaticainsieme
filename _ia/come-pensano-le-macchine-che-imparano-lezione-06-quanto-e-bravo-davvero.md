@@ -68,6 +68,100 @@ Quale dei due compromessi è preferibile dipende interamente dal contesto, non e
 
 La lezione più importante di questo capitolo non è memorizzare le definizioni di precisione e richiamo, ma interiorizzare l'abitudine a chiedersi, davanti a un qualunque numero di accuratezza dichiarato per un modello: *quanto sono sbilanciate le categorie in questo problema, e quali dei due tipi di errore mi costano di più?* Ogni volta che una categoria è molto più rara dell'altra, malattie rare, transazioni fraudolente, guasti industriali, l'accuratezza da sola è quasi sempre una misura fuorviante, e la matrice di confusione, con precisione e richiamo calcolati separatamente, racconta una storia molto più onesta di quanto il modello sia davvero utile.
 
+### 6.6 Calcolare le misure in Python
+
+Il programma confronta due modelli su una malattia rara: quello del paragrafo 6.1, che dice sempre "sano", e uno che prova davvero a individuare i malati. Costruisce la matrice di confusione e ne ricava le tre misure.
+
+{% highlight python %}
+def matrice_di_confusione(reali, previsti):
+    """ Conta i quattro casi confrontando ogni valore reale con la sua previsione.
+    Le due liste hanno la stessa lunghezza: la posizione i indica lo stesso paziente.
+    parametro reali: list di string, "malato" o "sano", com'è davvero ogni paziente
+    parametro previsti: list di string, "malato" o "sano", cosa dice il modello
+    return: tuple (vp, vn, fp, fn) di int: veri positivi, veri negativi,
+            falsi positivi e falsi negativi
+    Esempio: matrice_di_confusione(["malato", "malato", "sano", "sano"],
+                                   ["malato", "sano", "malato", "sano"])
+             restituisce (1, 1, 1, 1)
+    """
+    vp = 0
+    vn = 0
+    fp = 0
+    fn = 0
+    for i in range(len(reali)):
+        if previsti[i] == "malato" and reali[i] == "malato":
+            vp = vp + 1  # vero positivo
+        elif previsti[i] == "sano" and reali[i] == "sano":
+            vn = vn + 1  # vero negativo
+        elif previsti[i] == "malato":
+            fp = fp + 1  # falso positivo: un falso allarme
+        else:
+            fn = fn + 1  # falso negativo: una malattia mancata
+    return vp, vn, fp, fn
+
+
+def percentuale(parte, totale):
+    """ Calcola che percentuale è la parte rispetto al totale.
+    Se il totale è zero la percentuale non è definita:
+    per evitare una divisione per zero la consideriamo 0.
+    parametro parte: int
+    parametro totale: int
+    return: float, arrotondato a una cifra decimale
+    Esempio: percentuale(8, 48) restituisce 16.7
+    Esempio: percentuale(0, 0) restituisce 0.0
+    """
+    if totale == 0:
+        return 0.0
+    return round(100 * parte / totale, 1)
+
+
+def valuta(nome, reali, previsti):
+    """ Calcola e stampa matrice di confusione, accuratezza, precisione e richiamo.
+    parametro nome: string, il nome del modello da scrivere in testa
+    parametro reali: list di string, come per matrice_di_confusione
+    parametro previsti: list di string, come per matrice_di_confusione
+    return: niente, scrive i risultati sul video.
+    Per esempio valuta("Prova", ["malato", "sano"], ["malato", "malato"]) scrive:
+        Prova
+          VP = 1, VN = 0, FP = 1, FN = 0
+          accuratezza 50.0%, precisione 50.0%, richiamo 100.0%
+    """
+    vp, vn, fp, fn = matrice_di_confusione(reali, previsti)
+    accuratezza = percentuale(vp + vn, vp + vn + fp + fn)
+    precisione = percentuale(vp, vp + fp)
+    richiamo = percentuale(vp, vp + fn)
+    print(nome)
+    print("  VP = " + str(vp) + ", VN = " + str(vn) + ", FP = " + str(fp) + ", FN = " + str(fn))
+    print("  accuratezza " + str(accuratezza) + "%, precisione " + str(precisione)
+          + "%, richiamo " + str(richiamo) + "%")
+
+
+# Mille pazienti, dei quali dieci davvero malati: la malattia è rara.
+reali = ["malato"] * 10 + ["sano"] * 990
+
+# Il primo modello dice sempre "sano", senza guardare gli esami.
+sempre_sano = ["sano"] * 1000
+
+# Il secondo trova 8 malati su 10, ma dà anche 40 falsi allarmi.
+attento = ["malato"] * 8 + ["sano"] * 2 + ["malato"] * 40 + ["sano"] * 950
+
+valuta("Modello che dice sempre sano", reali, sempre_sano)
+valuta("Modello attento", reali, attento)
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+Modello che dice sempre sano
+  VP = 0, VN = 990, FP = 0, FN = 10
+  accuratezza 99.0%, precisione 0.0%, richiamo 0.0%
+Modello attento
+  VP = 8, VN = 950, FP = 40, FN = 2
+  accuratezza 95.8%, precisione 16.7%, richiamo 80.0%
+{% endhighlight %}
+
+Guardando solo l'accuratezza vincerebbe il modello inutile, con il 99% contro il 95,8%. Il richiamo rivela invece che non trova nessun malato, mentre il modello attento ne trova 8 su 10. Quest'ultimo ha però una precisione bassa: solo un allarme su sei circa è fondato. È il compromesso del paragrafo 6.4.
+
 ---
 
 > **Prova tu, Leggi una matrice di confusione**

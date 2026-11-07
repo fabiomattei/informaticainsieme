@@ -64,6 +64,119 @@ Questo secondo approccio, per piccoli aggiustamenti ripetuti, potrebbe suonarti 
 
 Il nostro esempio ha usato una sola caratteristica, l'età, ma quasi nessun problema reale si accontenta di un solo indizio. Il prezzo di una bicicletta dipende anche dal chilometraggio, dalla marca, dallo stato dei freni. Quando le caratteristiche in ingresso sono più di una, il principio resta identico, trovare la combinazione di pesi, uno per ogni caratteristica, che minimizza l'errore totale sui dati noti, ma non si parla più di una singola "retta" su un grafico bidimensionale: con due caratteristiche il modello traccia un intero **piano** inclinato in uno spazio a tre dimensioni, e con più caratteristiche ancora una superficie che nessun disegno riesce più a mostrare direttamente. La logica di fondo, però, non cambia di una virgola rispetto al caso con una sola caratteristica: si chiama **regressione lineare multipla**, ed è semplicemente la stessa idea applicata a più indizi contemporaneamente.
 
+### 4.6 La retta migliore in Python
+
+Il programma trova la retta migliore nei due modi descritti nel paragrafo 4.4: con il calcolo diretto e per piccoli aggiustamenti ripetuti. La funzione `perdita` è la somma degli errori al quadrato del paragrafo 4.3.
+
+{% highlight python %}
+# In tutto il programma un esempio è una tupla (età, prezzo),
+# per esempio (2, 270): una bicicletta di 2 anni venduta a 270 euro.
+# La retta "prezzo = inclinazione * età + altezza" è descritta da due numeri.
+
+
+def perdita(esempi, inclinazione, altezza):
+    """ Funzione di perdita: somma degli errori elevati al quadrato.
+    parametro esempi: list di tuple (età, prezzo)
+    parametro inclinazione: float, di quanto cambia il prezzo per ogni anno
+    parametro altezza: float, il prezzo previsto per una bicicletta nuova
+    return: float, più è piccola, più la retta passa vicino agli esempi
+    Esempio: perdita([(1, 310), (2, 270)], -40, 350) restituisce 0
+    (la retta passa esattamente per entrambi i punti)
+    Esempio: perdita([(1, 310), (2, 270)], -30, 330) restituisce 100
+    (la retta prevede 300 e 270, gli errori sono 10 e 0: 10 ** 2 + 0 ** 2 = 100)
+    """
+    somma = 0
+    for esempio in esempi:
+        eta, prezzo = esempio
+        errore = prezzo - (inclinazione * eta + altezza)
+        somma = somma + errore ** 2
+    return somma
+
+
+def retta_diretta(esempi):
+    """ Il calcolo diretto, possibile con una sola caratteristica:
+    trova la retta migliore in un unico passaggio, senza tentativi.
+    parametro esempi: list di tuple (età, prezzo)
+    return: tuple (inclinazione, altezza) della retta migliore
+    Esempio: retta_diretta([(1, 310), (2, 270), (3, 230)]) restituisce (-40.0, 350.0)
+    """
+    somma_eta = 0
+    somma_prezzi = 0
+    for esempio in esempi:
+        eta, prezzo = esempio
+        somma_eta = somma_eta + eta
+        somma_prezzi = somma_prezzi + prezzo
+    media_eta = somma_eta / len(esempi)
+    media_prezzo = somma_prezzi / len(esempi)
+
+    sopra = 0
+    sotto = 0
+    for esempio in esempi:
+        eta, prezzo = esempio
+        sopra = sopra + (eta - media_eta) * (prezzo - media_prezzo)
+        sotto = sotto + (eta - media_eta) ** 2
+    inclinazione = sopra / sotto
+    # La retta migliore passa sempre dal punto medio della nuvola.
+    altezza = media_prezzo - inclinazione * media_eta
+    return inclinazione, altezza
+
+
+def retta_per_tentativi(esempi, passo, giri):
+    """ Parte da una retta qualsiasi e la corregge un po' alla volta.
+    parametro esempi: list di tuple (età, prezzo)
+    parametro passo: float, quanto è grande ogni correzione, per esempio 0.01
+    parametro giri: int, quante correzioni fare, per esempio 20000
+    return: tuple (inclinazione, altezza), vicina alla retta migliore
+    se il passo è abbastanza piccolo e i giri abbastanza numerosi
+    Esempio: retta_per_tentativi([(1, 310), (2, 270), (3, 230)], 0.01, 20000)
+             restituisce circa (-40, 350)
+    """
+    inclinazione = 0.0
+    altezza = 0.0
+    for giro in range(giri):
+        # Calcola in che direzione cambiare i due valori per far scendere la perdita.
+        verso_inclinazione = 0.0
+        verso_altezza = 0.0
+        for esempio in esempi:
+            eta, prezzo = esempio
+            errore = prezzo - (inclinazione * eta + altezza)
+            verso_inclinazione = verso_inclinazione + errore * eta
+            verso_altezza = verso_altezza + errore
+        # Il passo piccolo evita di scavalcare la soluzione con correzioni troppo grandi.
+        inclinazione = inclinazione + passo * verso_inclinazione / len(esempi)
+        altezza = altezza + passo * verso_altezza / len(esempi)
+    return inclinazione, altezza
+
+
+# Ogni esempio è una coppia: età in anni e prezzo di vendita in euro.
+biciclette = [(1, 310), (2, 270), (3, 255), (5, 190), (6, 170), (8, 100)]
+
+# round(valore, 2) arrotonda alla seconda cifra decimale.
+inclinazione, altezza = retta_diretta(biciclette)
+print("Calcolo diretto: prezzo =", round(altezza, 2), round(inclinazione, 2), "x età")
+print("Perdita:", round(perdita(biciclette, inclinazione, altezza), 2))
+
+# Un passo di 0.01 ripetuto per 20000 giri.
+inclinazione2, altezza2 = retta_per_tentativi(biciclette, 0.01, 20000)
+print("Per tentativi:   prezzo =", round(altezza2, 2), round(inclinazione2, 2), "x età")
+print("Perdita:", round(perdita(biciclette, inclinazione2, altezza2), 2))
+
+# Per fare una previsione basta leggere la retta in corrispondenza dell'età.
+print("Bicicletta di 4 anni:", round(inclinazione * 4 + altezza, 2), "euro")
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+Calcolo diretto: prezzo = 336.75 -29.02 x età
+Perdita: 187.32
+Per tentativi:   prezzo = 336.75 -29.02 x età
+Perdita: 187.32
+Bicicletta di 4 anni: 220.67 euro
+{% endhighlight %}
+
+Le due strade arrivano alla stessa retta e quindi alla stessa perdita: ogni anno di età toglie circa 29 euro al prezzo. Il metodo per tentativi ha però bisogno di due scelte in più, l'ampiezza del passo e il numero di giri, e di molte più operazioni: con una sola caratteristica il calcolo diretto è più comodo, ma è l'idea dei tentativi quella che ritroverai nelle reti neurali.
+
 ---
 
 > **Prova tu, Confronta due regole di prezzo**

@@ -97,6 +97,96 @@ Queste regolarità statistiche spesso funzionano sorprendentemente bene, ma rest
 
 Questo limite non è un difetto da correggere: è la natura stessa dello strumento, ed è importante tenerlo a mente proprio perché lo strumento funziona così bene da far dimenticare, a volte, che dietro non c'è nessuna vera comprensione, solo un pattern trovato in centinaia o migliaia di esempi passati.
 
+### 1.6 Imparare una regola in Python
+
+Vediamo la differenza del paragrafo 1.2 in un piccolo programma. Per restare sull'essenziale usiamo una sola caratteristica, l'intensità del giallo da 0 a 10: una regola scritta a mano stabilisce in anticipo quanto giallo è "abbastanza", mentre l'algoritmo di apprendimento lo scopre guardando gli esempi. I commenti spiegano ogni passaggio.
+
+{% highlight python %}
+def regola_a_mano(giallo):
+    """ Programmazione classica: la regola la scrive il programmatore,
+    scegliendo a sentimento quanto giallo è "abbastanza".
+    parametro giallo: int, l'intensità del giallo da 0 a 10
+    return: string, "sì" se l'anguria è considerata matura, altrimenti "no"
+    Esempio: regola_a_mano(6) restituisce "sì"
+    Esempio: regola_a_mano(3) restituisce "no"
+    """
+    if giallo >= 5:
+        return "sì"
+    else:
+        return "no"
+
+
+def conta_errori(esempi, soglia):
+    """ Conta su quanti esempi sbaglierebbe la regola "matura se giallo >= soglia".
+    parametro esempi: list di tuple (giallo, etichetta), per esempio [(2, "no"), (8, "sì")]
+    parametro soglia: int, il giallo minimo perché la regola dica "sì"
+    return: int, il numero di esempi classificati male
+    Esempio: conta_errori([(2, "no"), (6, "no"), (8, "sì")], 5) restituisce 1
+    (con soglia 5 l'anguria con giallo 6 viene detta matura, ma non lo è)
+    Esempio: conta_errori([(2, "no"), (6, "no"), (8, "sì")], 7) restituisce 0
+    """
+    errori = 0
+    for esempio in esempi:
+        giallo, etichetta = esempio
+        if giallo >= soglia:
+            previsione = "sì"
+        else:
+            previsione = "no"
+        if previsione != etichetta:
+            errori = errori + 1
+    return errori
+
+
+def impara_soglia(esempi):
+    """ Algoritmo di apprendimento: prova tutte le soglie da 0 a 10
+    e restituisce quella che sbaglia di meno sugli esempi.
+    parametro esempi: list di tuple (giallo, etichetta), come per conta_errori
+    return: int, la soglia con meno errori (a parità di errori, la più piccola)
+    Esempio: impara_soglia([(2, "no"), (6, "no"), (8, "sì")]) restituisce 7
+    """
+    soglia_migliore = 0
+    errori_minimi = conta_errori(esempi, 0)
+    for soglia in range(1, 11):
+        errori = conta_errori(esempi, soglia)
+        if errori < errori_minimi:
+            errori_minimi = errori
+            soglia_migliore = soglia
+    return soglia_migliore
+
+
+# Insieme di addestramento: ogni esempio è formato da una caratteristica,
+# l'intensità del giallo, e dall'etichetta, scoperta aprendo l'anguria.
+angurie = [(2, "no"), (3, "no"), (4, "no"), (5, "no"), (6, "no"),
+           (7, "sì"), (8, "sì"), (9, "sì"), (10, "sì")]
+
+# Il modello è la regola trovata: in questo caso un solo numero.
+soglia = impara_soglia(angurie)
+
+print("Soglia imparata dagli esempi:", soglia)
+print("Errori della regola imparata:", conta_errori(angurie, soglia))
+print("Errori della regola scritta a mano:", conta_errori(angurie, 5))
+
+# Usiamo il modello su un'anguria nuova, di cui non conosciamo l'etichetta.
+giallo_nuova = 6
+print("Previsione a mano per giallo = 6:", regola_a_mano(giallo_nuova))
+if giallo_nuova >= soglia:
+    print("Previsione imparata per giallo = 6: sì")
+else:
+    print("Previsione imparata per giallo = 6: no")
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+Soglia imparata dagli esempi: 7
+Errori della regola imparata: 0
+Errori della regola scritta a mano: 2
+Previsione a mano per giallo = 6: sì
+Previsione imparata per giallo = 6: no
+{% endhighlight %}
+
+La regola scritta a mano sbaglia su due esempi, mentre quella imparata li classifica tutti correttamente, e su un'anguria nuova le due regole danno risposte diverse. Nota che il programma non contiene da nessuna parte il numero 7: il modello lo ha ricavato dai dati. Un algoritmo vero lavora con molte caratteristiche insieme, ma il principio è questo: cercare, fra tante regole possibili, quella che spiega meglio gli esempi.
+
 ---
 
 > **Prova tu, Impara a riconoscere l'anguria matura**

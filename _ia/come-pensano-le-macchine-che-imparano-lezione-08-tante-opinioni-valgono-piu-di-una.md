@@ -73,6 +73,265 @@ Le otto lezioni percorse finora hanno costruito, un pezzo alla volta, il nucleo 
 
 Restano ancora alcune idee, altrettanto diffuse nella pratica, che completano questo nucleo prima di chiudere il libro: classificare sommando tanti indizi deboli invece di porli in sequenza (Lezione 9), separare due categorie tracciando il confine più sicuro possibile (Lezione 10), semplificare tanti indizi in pochi senza perdere l'essenziale (Lezione 11), scoprire quali eventi tendono a presentarsi insieme (Lezione 12), e riconoscere ciò che non assomiglia a nulla di già visto (Lezione 13). Con quest'ultima si chiuderà anche il discorso, rimandato fin dalla prefazione, sul limite condiviso da tutti gli algoritmi di questo libro, e su dove porta il passo successivo.
 
+### 8.7 Bagging e random forest in Python
+
+Il programma confronta un solo albero, il bagging e la random forest sulle stesse angurie inventate. Le etichette contengono un po' di rumore, e due caratteristiche su quattro non servono a nulla. L'unica differenza fra bagging e random forest è il parametro `quante_caratteristiche`. Il boosting del paragrafo 8.4 non è incluso, per non allungare troppo il programma.
+
+{% highlight python %}
+import random
+
+# In tutto il programma un esempio è una tupla (punto, etichetta): il punto
+# è una lista di quattro caratteristiche, per esempio ([7.2, 4.1, 0.5, 9.9], "sì").
+# Un albero è fatto di nodi: una foglia è {"foglia": etichetta}, un nodo con una
+# domanda ha le chiavi "caratteristica", "soglia", "sinistra" e "destra".
+
+
+def piu_frequente(etichette):
+    """ Conta i voti in un dizionario e restituisce l'etichetta più votata.
+    parametro etichette: list di string
+    return: string, l'etichetta più frequente (a parità, quella vista per prima)
+    Esempio: piu_frequente(["sì", "no", "sì"]) restituisce "sì"
+    """
+    voti = {}
+    for etichetta in etichette:
+        if etichetta in voti:
+            voti[etichetta] = voti[etichetta] + 1
+        else:
+            voti[etichetta] = 1
+    vincitrice = ""
+    for etichetta in voti:
+        if vincitrice == "" or voti[etichetta] > voti[vincitrice]:
+            vincitrice = etichetta
+    return vincitrice
+
+
+def impurita(etichette):
+    """ L'impurità di Gini della Lezione 3: 0 se le etichette sono tutte uguali,
+    più alta quanto più sono mescolate.
+    parametro etichette: list di string
+    return: float fra 0 e 1
+    Esempio: impurita(["sì", "sì", "sì"]) restituisce 0
+    Esempio: impurita(["sì", "no", "sì", "no"]) restituisce 0.5
+    """
+    voti = {}
+    for etichetta in etichette:
+        if etichetta in voti:
+            voti[etichetta] = voti[etichetta] + 1
+        else:
+            voti[etichetta] = 1
+    risultato = 1
+    for etichetta in voti:
+        risultato = risultato - (voti[etichetta] / len(etichette)) ** 2
+    return risultato
+
+
+def scegli_caratteristiche(quante_in_tutto, quante):
+    """ Il cuore della random forest: sceglie a caso, senza ripetizioni,
+    quali caratteristiche un nodo può usare per porre la domanda.
+    parametro quante_in_tutto: int, quante caratteristiche ha ogni punto
+    parametro quante: int, quante sceglierne
+    return: list di int, le posizioni delle caratteristiche scelte.
+    Il risultato dipende dal caso: per esempio scegli_caratteristiche(4, 2)
+    potrebbe restituire [3, 0]
+    """
+    scelte = []
+    while len(scelte) < quante:
+        c = random.randrange(quante_in_tutto)
+        if c not in scelte:
+            scelte.append(c)
+    return scelte
+
+
+def costruisci_albero(esempi, quante_caratteristiche, profondita):
+    """ Costruisce un albero con domande del tipo "la caratteristica c è minore
+    della soglia?", scegliendo a ogni nodo la domanda che lascia i gruppi più puri.
+    parametro esempi: list di tuple (punto, etichetta)
+    parametro quante_caratteristiche: int, fra quante caratteristiche scelte a caso
+                                      ogni nodo può cercare la domanda
+    parametro profondita: int, quante domande al massimo una dopo l'altra
+    return: dict, la radice dell'albero
+    Esempio: costruisci_albero([([1], "no"), ([9], "sì")], 1, 5)
+             restituisce {"caratteristica": 0, "soglia": 9,
+                          "sinistra": {"foglia": "no"}, "destra": {"foglia": "sì"}}
+    (la domanda è "la caratteristica 0 è minore di 9?")
+    """
+    etichette = []
+    for esempio in esempi:
+        etichette.append(esempio[1])
+    if impurita(etichette) == 0 or profondita == 0:
+        return {"foglia": piu_frequente(etichette)}
+
+    migliore = None
+    impurita_minima = impurita(etichette)
+    for c in scegli_caratteristiche(len(esempi[0][0]), quante_caratteristiche):
+        # Ogni valore della caratteristica può fare da soglia.
+        soglie = []
+        for esempio in esempi:
+            if esempio[0][c] not in soglie:
+                soglie.append(esempio[0][c])
+        for soglia in soglie:
+            sinistra = []
+            destra = []
+            for esempio in esempi:
+                if esempio[0][c] < soglia:
+                    sinistra.append(esempio[1])
+                else:
+                    destra.append(esempio[1])
+            if len(sinistra) > 0 and len(destra) > 0:
+                valore = (len(sinistra) * impurita(sinistra)
+                          + len(destra) * impurita(destra)) / len(esempi)
+                if valore < impurita_minima:
+                    impurita_minima = valore
+                    migliore = (c, soglia)
+
+    if migliore == None:
+        return {"foglia": piu_frequente(etichette)}
+
+    c, soglia = migliore
+    esempi_sinistra = []
+    esempi_destra = []
+    for esempio in esempi:
+        if esempio[0][c] < soglia:
+            esempi_sinistra.append(esempio)
+        else:
+            esempi_destra.append(esempio)
+    return {"caratteristica": c,
+            "soglia": soglia,
+            "sinistra": costruisci_albero(esempi_sinistra, quante_caratteristiche, profondita - 1),
+            "destra": costruisci_albero(esempi_destra, quante_caratteristiche, profondita - 1)}
+
+
+def prevedi_albero(nodo, punto):
+    """ Scende dalla radice finché non arriva a una foglia.
+    parametro nodo: dict, la radice dell'albero
+    parametro punto: list di caratteristiche
+    return: string, l'etichetta della foglia raggiunta
+    Esempio: prevedi_albero({"caratteristica": 0, "soglia": 9,
+                             "sinistra": {"foglia": "no"}, "destra": {"foglia": "sì"}},
+                            [4]) restituisce "no"
+    """
+    while "foglia" not in nodo:
+        if punto[nodo["caratteristica"]] < nodo["soglia"]:
+            nodo = nodo["sinistra"]
+        else:
+            nodo = nodo["destra"]
+    return nodo["foglia"]
+
+
+def costruisci_foresta(esempi, quanti_alberi, quante_caratteristiche):
+    """ Costruisce molti alberi, ognuno su una fetta casuale degli esempi
+    estratta con reinserimento: lo stesso esempio può uscire più volte.
+    parametro esempi: list di tuple (punto, etichetta)
+    parametro quanti_alberi: int
+    parametro quante_caratteristiche: int, come per costruisci_albero:
+                                      con tutte si ottiene il bagging,
+                                      con meno la random forest
+    return: list di alberi (dict), uno per ogni albero costruito.
+    Il risultato dipende dal caso: per esempio
+    costruisci_foresta([([1], "no"), ([9], "sì")], 2, 1) potrebbe restituire
+    [{"foglia": "no"}, {"caratteristica": 0, "soglia": 9, ...}],
+    se nella prima fetta è uscito due volte lo stesso esempio.
+    """
+    foresta = []
+    for albero in range(quanti_alberi):
+        fetta = []
+        for i in range(len(esempi)):
+            fetta.append(esempi[random.randrange(len(esempi))])
+        foresta.append(costruisci_albero(fetta, quante_caratteristiche, 20))
+    return foresta
+
+
+def prevedi_foresta(foresta, punto):
+    """ Il voto a maggioranza fra tutti gli alberi.
+    parametro foresta: list di alberi (dict)
+    parametro punto: list di caratteristiche
+    return: string, l'etichetta che ha ricevuto più voti
+    Esempio: prevedi_foresta([{"foglia": "sì"}, {"foglia": "no"}, {"foglia": "sì"}],
+                             [5, 5, 5, 5]) restituisce "sì"
+    """
+    voti = []
+    for albero in foresta:
+        voti.append(prevedi_albero(albero, punto))
+    return piu_frequente(voti)
+
+
+def percentuale_giusti(previsioni, esempi):
+    """ Confronta le previsioni con le etichette vere.
+    parametro previsioni: list di string, una per esempio
+    parametro esempi: list di tuple (punto, etichetta), nello stesso ordine
+    return: float, la percentuale di previsioni giuste, con una cifra decimale
+    Esempio: percentuale_giusti(["sì", "no", "no"],
+                                [([1], "sì"), ([2], "no"), ([3], "sì")]) restituisce 66.7
+    """
+    giusti = 0
+    for i in range(len(esempi)):
+        if previsioni[i] == esempi[i][1]:
+            giusti = giusti + 1
+    return round(100 * giusti / len(esempi), 1)
+
+
+def crea_angurie(quante):
+    """ Inventa delle angurie con quattro caratteristiche fra 0 e 10: solo le
+    prime due influenzano davvero l'etichetta, e il 15% delle etichette viene
+    invertito per simulare il rumore.
+    parametro quante: int, quante angurie creare
+    return: list di tuple (punto, etichetta).
+    Il risultato dipende dal caso: per esempio crea_angurie(1) potrebbe
+    restituire [([6.4, 0.3, 2.8, 2.2], "no")]
+    """
+    angurie = []
+    for i in range(quante):
+        punto = []
+        for c in range(4):
+            punto.append(random.random() * 10)
+        if punto[0] + punto[1] > 10:
+            etichetta = "sì"
+        else:
+            etichetta = "no"
+        if random.random() < 0.15:
+            if etichetta == "sì":
+                etichetta = "no"
+            else:
+                etichetta = "sì"
+        angurie.append((punto, etichetta))
+    return angurie
+
+
+# Fissare il seme rende i numeri casuali sempre uguali a ogni esecuzione.
+random.seed(42)
+addestramento = crea_angurie(200)
+test = crea_angurie(500)
+
+# Un solo albero, su tutti i dati e senza freni: tende all'overfitting.
+albero = costruisci_albero(addestramento, 4, 20)
+# Bagging: fette casuali, ma ogni nodo vede tutte e quattro le caratteristiche.
+bagging = costruisci_foresta(addestramento, 25, 4)
+# Random forest: fette casuali e, a ogni nodo, solo due caratteristiche a caso.
+foresta = costruisci_foresta(addestramento, 25, 2)
+
+previsioni_albero = []
+previsioni_bagging = []
+previsioni_foresta = []
+for esempio in test:
+    previsioni_albero.append(prevedi_albero(albero, esempio[0]))
+    previsioni_bagging.append(prevedi_foresta(bagging, esempio[0]))
+    previsioni_foresta.append(prevedi_foresta(foresta, esempio[0]))
+
+print("Un solo albero: " + str(percentuale_giusti(previsioni_albero, test)) + "%")
+print("Bagging:        " + str(percentuale_giusti(previsioni_bagging, test)) + "%")
+print("Random forest:  " + str(percentuale_giusti(previsioni_foresta, test)) + "%")
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+Un solo albero: 65.4%
+Bagging:        78.6%
+Random forest:  78.0%
+{% endhighlight %}
+
+Combinare gli alberi migliora il risultato: qui di oltre dieci punti percentuali rispetto al singolo albero. Questa esecuzione è particolarmente favorevole: cambiando il seme casuale il vantaggio resta, ma di solito è più piccolo, fra i tre e i dodici punti nelle prove fatte con altri semi. Fra bagging e random forest, invece, la differenza qui è minima, e cambiando il seme casuale può anche invertirsi: in questi dati non c'è una sola caratteristica dominante che renda gli alberi troppo simili, il caso descritto nel paragrafo 8.3 in cui la random forest dà il vantaggio maggiore.
+
 ---
 
 > **Prova tu, Il voto di cinque alberi**

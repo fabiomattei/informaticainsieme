@@ -52,6 +52,171 @@ Le regole di associazione restano lo strumento standard dietro molti sistemi di 
 
 Il limite principale di questa famiglia di tecniche è che una regola trovata, per quanto statisticamente solida, resta comunque una **correlazione**, non necessariamente una spiegazione: sapere che pannolini e birra compaiono spesso nello stesso scontrino (un aneddoto famoso, vero o inventato che sia, nella storia di questo campo) non dice *perché* accade, solo che accade più spesso di quanto ci si aspetterebbe dal caso.
 
+### 12.6 Le regole di associazione in Python
+
+Il programma calcola supporto, confidenza e lift per tutte le regole fra coppie di prodotti, scartando le coppie troppo rare, e mostra per prime quelle con il lift più alto.
+
+{% highlight python %}
+# In tutto il programma uno scontrino è una lista di prodotti, per esempio
+# ["pasta", "sugo", "acqua"]. Negli esempi qui sotto usiamo quattro scontrini:
+# [["pasta", "sugo"], ["pasta"], ["acqua"], ["pasta", "sugo"]]
+
+
+def supporto(scontrini, prodotti):
+    """ Frazione degli scontrini che contengono tutti i prodotti indicati.
+    parametro scontrini: list di scontrini
+    parametro prodotti: list di string
+    return: float fra 0 e 1
+    Esempio: supporto([["pasta", "sugo"], ["pasta"], ["acqua"], ["pasta", "sugo"]],
+                      ["pasta", "sugo"]) restituisce 0.5
+    (pasta e sugo sono insieme in 2 scontrini su 4)
+    """
+    quanti = 0
+    for scontrino in scontrini:
+        ci_sono_tutti = True
+        for prodotto in prodotti:
+            if prodotto not in scontrino:
+                ci_sono_tutti = False
+        if ci_sono_tutti:
+            quanti = quanti + 1
+    return quanti / len(scontrini)
+
+
+def confidenza(scontrini, primo, secondo):
+    """ Fra gli scontrini con il primo prodotto, quanti contengono anche il secondo.
+    parametro scontrini: list di scontrini
+    parametri primo, secondo: string, la regola "primo -> secondo"
+    return: float fra 0 e 1
+    Esempio: confidenza([["pasta", "sugo"], ["pasta"], ["acqua"], ["pasta", "sugo"]],
+                        "pasta", "sugo") restituisce circa 0.667
+    (la pasta è in 3 scontrini, e in 2 di questi c'è anche il sugo)
+    """
+    return supporto(scontrini, [primo, secondo]) / supporto(scontrini, [primo])
+
+
+def lift(scontrini, primo, secondo):
+    """ Confronta la confidenza con la frequenza generale del secondo prodotto:
+    sopra 1 il primo prodotto rende il secondo più probabile, sotto 1 meno.
+    parametro scontrini: list di scontrini
+    parametri primo, secondo: string, la regola "primo -> secondo"
+    return: float
+    Esempio: lift([["pasta", "sugo"], ["pasta"], ["acqua"], ["pasta", "sugo"]],
+                  "pasta", "sugo") restituisce circa 1.333
+    (confidenza 0.667 diviso 0.5, perché il sugo è in metà degli scontrini)
+    """
+    return confidenza(scontrini, primo, secondo) / supporto(scontrini, [secondo])
+
+
+def trova_regole(scontrini, supporto_minimo):
+    """ Calcola supporto, confidenza e lift per tutte le regole fra due prodotti,
+    scartando le coppie che compaiono insieme troppo di rado.
+    parametro scontrini: list di scontrini
+    parametro supporto_minimo: float, per esempio 0.2 per scartare le coppie
+                               presenti in meno del 20% degli scontrini
+    return: list di tuple (primo, secondo, supporto, confidenza, lift)
+    Esempio: trova_regole([["pasta", "sugo"], ["pasta", "sugo"], ["pasta"], ["acqua", "pasta"]], 0.5)
+             restituisce [("pasta", "sugo", 0.5, 0.5, 1.0), ("sugo", "pasta", 0.5, 1.0, 1.0)]
+    (pasta e acqua sono insieme solo in uno scontrino su quattro, sotto il minimo,
+    e la coppia viene scartata; il lift 1.0 dice che la pasta, presente in tutti
+    gli scontrini, non rende il sugo né più né meno probabile)
+    """
+    # Raccoglie tutti i prodotti, senza doppioni.
+    prodotti = []
+    for scontrino in scontrini:
+        for prodotto in scontrino:
+            if prodotto not in prodotti:
+                prodotti.append(prodotto)
+
+    regole = []
+    # Ogni coppia di prodotti diversi viene considerata una volta sola.
+    for i in range(len(prodotti)):
+        for j in range(i + 1, len(prodotti)):
+            a = prodotti[i]
+            b = prodotti[j]
+            if supporto(scontrini, [a, b]) >= supporto_minimo:
+                # "pasta implica sugo" e "sugo implica pasta" sono due regole diverse.
+                for primo, secondo in [(a, b), (b, a)]:
+                    regole.append((primo, secondo,
+                                   supporto(scontrini, [primo, secondo]),
+                                   confidenza(scontrini, primo, secondo),
+                                   lift(scontrini, primo, secondo)))
+    return regole
+
+
+def ordina_per_lift(regole):
+    """ Mette in cima le regole con il lift più alto: ogni regola viene aggiunta
+    in fondo e fatta risalire finché quella prima non ha un lift almeno uguale.
+    regola[4] è il lift.
+    parametro regole: list di tuple (primo, secondo, supporto, confidenza, lift)
+    return: list delle stesse regole, dal lift più alto al più basso
+    Esempio: ordina_per_lift([("acqua", "caffè", 0.3, 0.37, 1.25),
+                              ("pasta", "sugo", 0.4, 0.8, 2.0)])
+             restituisce [("pasta", "sugo", 0.4, 0.8, 2.0),
+                          ("acqua", "caffè", 0.3, 0.37, 1.25)]
+    """
+    ordinate = []
+    for regola in regole:
+        ordinate.append(regola)
+        i = len(ordinate) - 1
+        while i > 0 and ordinate[i - 1][4] < ordinate[i][4]:
+            temp = ordinate[i]
+            ordinate[i] = ordinate[i - 1]
+            ordinate[i - 1] = temp
+            i = i - 1
+    return ordinate
+
+
+def percentuale(frazione):
+    """ Trasforma una frazione in una percentuale da stampare.
+    parametro frazione: float fra 0 e 1
+    return: string
+    Esempio: percentuale(0.25) restituisce "25%"
+    """
+    return str(round(100 * frazione)) + "%"
+
+
+# Ogni scontrino è una lista di prodotti: un prodotto c'è oppure non c'è.
+scontrini = [
+    ["pasta", "sugo", "acqua"],
+    ["pasta", "sugo"],
+    ["pasta", "sugo", "acqua", "caffè"],
+    ["acqua", "caffè"],
+    ["torta", "candeline", "acqua"],
+    ["torta", "candeline"],
+    ["pasta", "acqua"],
+    ["acqua", "caffè", "torta"],
+    ["sugo", "pasta", "acqua"],
+    ["acqua", "candeline", "torta"],
+]
+
+# Il supporto minimo 0.2 scarta le coppie presenti in meno del 20% degli scontrini.
+for regola in ordina_per_lift(trova_regole(scontrini, 0.2)):
+    primo, secondo, sup, conf, lft = regola
+    print(primo + " -> " + secondo + ": supporto " + percentuale(sup)
+          + ", confidenza " + percentuale(conf) + ", lift " + str(round(lft, 2)))
+{% endhighlight %}
+
+Eseguendo il programma si ottiene:
+
+{% highlight text %}
+candeline -> torta: supporto 30%, confidenza 100%, lift 2.5
+torta -> candeline: supporto 30%, confidenza 75%, lift 2.5
+pasta -> sugo: supporto 40%, confidenza 80%, lift 2.0
+sugo -> pasta: supporto 40%, confidenza 100%, lift 2.0
+caffè -> acqua: supporto 30%, confidenza 100%, lift 1.25
+acqua -> caffè: supporto 30%, confidenza 37%, lift 1.25
+pasta -> acqua: supporto 40%, confidenza 80%, lift 1.0
+acqua -> pasta: supporto 40%, confidenza 50%, lift 1.0
+sugo -> acqua: supporto 30%, confidenza 75%, lift 0.94
+acqua -> sugo: supporto 30%, confidenza 37%, lift 0.94
+acqua -> torta: supporto 30%, confidenza 37%, lift 0.94
+torta -> acqua: supporto 30%, confidenza 75%, lift 0.94
+acqua -> candeline: supporto 20%, confidenza 25%, lift 0.83
+candeline -> acqua: supporto 20%, confidenza 67%, lift 0.83
+{% endhighlight %}
+
+La tabella mostra la trappola del paragrafo 12.4. La regola "pasta -> acqua" ha una confidenza dell'80%, che sembra alta, ma il suo lift è 1: l'acqua compare comunque nell'80% degli scontrini, quindi la regola non dice nulla di nuovo. "pasta -> sugo" ha la stessa confidenza, ma un lift di 2: comprare la pasta raddoppia davvero la probabilità di trovare il sugo nel carrello. Il lift è uguale nei due versi di una coppia, mentre la confidenza no.
+
 ---
 
 > **Prova tu, Leggi dieci scontrini**
